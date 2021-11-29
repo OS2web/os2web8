@@ -59,6 +59,7 @@
 }
 
 a.entity-teaser--os2web-event {
+  cursor: pointer;
 
   &, &:hover, &:focus, &:active {
     color: $color-text;

@@ -130,3 +130,14 @@ function fds_ballerup_theme_preprocess_node(array &$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function fds_ballerup_theme_preprocess_menu(&$variables, $hook) {
+  if ($hook == 'menu') {
+    if (!empty($variables['attributes']['block'])) {
+      unset($variables['attributes']['block']);
+    }
+  }
+}

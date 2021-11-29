@@ -11,7 +11,7 @@
   {% set timestamp = node.field_os2web_m_start_date.date|date('U') %}
 {% endif %}
 
-<a href="{{ url }}" {{ attributes.addClass(classes) }}>
+<a onclick="window.location='{{ url }}'" {{ attributes.addClass(classes) }}>
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date">
     <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__month">
     {% if timestamp %}

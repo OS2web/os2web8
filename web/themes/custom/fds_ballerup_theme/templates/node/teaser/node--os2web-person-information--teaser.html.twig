@@ -17,7 +17,7 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes)|without('role') }}>
 
   {{ title_prefix }}
   <h3{{ title_attributes }}>{{ label }}</h3>

@@ -9,7 +9,7 @@
 ]
 %}
 <div class="col-12 col-sm-6 col-md-4">
-  <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
+  <a onclick="window.location='{{ url }}'" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
     <div class="entity-{{ view_mode|clean_class }}__image">
       {{ content.field_os2web_news_primaryimage }}
     </div>
@@ -18,7 +18,7 @@
       {{ content.field_os2web_news_article_date }}
       {{ content.field_os2web_news_heading }}
 
-      {% set text = content.field_os2web_news_description | render %}
+      {% set text = content.field_os2web_news_intro | render %}
       <div class="field field--type-body">{{ text | striptags }}</div>
 
       <div class="field--type-link">

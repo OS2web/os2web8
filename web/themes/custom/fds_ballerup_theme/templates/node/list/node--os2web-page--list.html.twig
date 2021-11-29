@@ -8,7 +8,7 @@
 ]
 %}
 <div class="col-12">
-  <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
+  <a onclick="window.location='{{ url }}'" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
     {{ content.field_os2web_page_heading }}
   </a>
 </div>

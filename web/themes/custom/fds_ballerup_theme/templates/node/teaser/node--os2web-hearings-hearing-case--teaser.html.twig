@@ -9,7 +9,7 @@
 %}
 {% set timestamp = node.field_os2web_hearings_end_date.date|date('U') %}
 
-<a href="{{ url }}" {{ attributes.addClass(classes) }}>
+<a onclick="window.location='{{ url }}'" {{ attributes.addClass(classes) }}>
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date">
     <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__month">
       {{ timestamp | date('M') | trans }}

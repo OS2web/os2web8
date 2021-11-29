@@ -8,7 +8,7 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-<a href="{{ node.field_os2web_event_url.value }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_event_heading.value }}">
+<a onclick="window.location='{{ node.field_os2web_event_url.value }}'" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_event_heading.value }}">
   <div class="entity-{{ view_mode|clean_class }}__image">
     {{ content.field_os2web_evnet_image }}
   </div>

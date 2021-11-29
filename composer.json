@@ -112,6 +112,7 @@
         "drupal/stage_file_proxy": "^1.0",
         "drupal/upgrade_rector": "^1.0@alpha",
         "drupal/upgrade_status": "^3.5",
+        "drupal/webform": "^6.1",
         "drupal/workbench": "^1.3",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "mglaman/drupal-check": "^1.1",
@@ -131,6 +132,7 @@
         "os2web/os2web_news": "dev-master",
         "os2web/os2web_pagebuilder": "dev-master",
         "os2web/os2web_person_information": "dev-master",
+        "os2web/os2web_postlister": "dev-master",
         "os2web/os2web_rest_api": "0.*",
         "os2web/os2web_search": "dev-master",
         "os2web/os2web_spotbox": "dev-master",
@@ -206,6 +208,9 @@
             "drupal/printable": {
                 "3214729 PDF filename is generated with it's location" : "https://git.drupalcode.org/issue/printable-3214729/-/commit/cbc98dbe864f82b4cc1da110d88097d0c4740bb9.patch",
                 "#3193531, Drupal 9 errors from submodule": "https://git.drupalcode.org/issue/printable-3193531/-/commit/9b4d5fa8b6a713da671ab3143c8580fce45ca6fb.diff"
+            },
+            "drupal/scheduler_content_moderation_integration" : {
+                "Widget error when field is overridden - undefined offset 0 in $form['publish_state']" : "https://www.drupal.org/files/issues/2020-06-30/3077147-28.patch"
             }
         }
     }
