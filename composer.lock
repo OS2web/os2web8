@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80199f491ed5a73df9c96bb0b7110592",
+    "content-hash": "6187b5b8f710aaa95801a4af35ae5f84",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2096,7 +2096,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/anonymous_subscriptions.git",
-                "reference": "74209563a7a274a20196ea7066372b519764b977"
+                "reference": "dcd62f1eeec5bb2276525ee19e7fe9825aef4eb2"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -2107,8 +2107,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha+9-dev",
-                    "datestamp": "1631787606",
+                    "version": "8.x-1.0-alpha+14-dev",
+                    "datestamp": "1638290221",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3708,6 +3708,66 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/crop",
                 "issues": "https://www.drupal.org/project/issues/crop"
+            }
+        },
+        {
+            "name": "drupal/csv_importer",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/csv_importer.git",
+                "reference": "8.x-1.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/csv_importer-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "4f0c46e3d40f57a65663ab8dace166278b896357"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.12",
+                    "datestamp": "1635013304",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\csv_importer\\": "./src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Drupal\\Tests\\csv_importer\\": "./tests/src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Lasha Badashvili",
+                    "homepage": "https://www.drupal.org/user/3382242",
+                    "email": "lashabp@gmail.com"
+                }
+            ],
+            "description": "CSV Importer.",
+            "homepage": "https://www.drupal.org/project/csv_importer",
+            "keywords": [
+                "csv",
+                "drupal",
+                "import"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/csv_importer"
             }
         },
         {

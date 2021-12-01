@@ -93,6 +93,7 @@
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
         "drupal/core-recommended": "^9.1",
+        "drupal/csv_importer": "^1.12",
         "drupal/editor_file": "^1.6",
         "drupal/entity_clone": "^1.0@beta",
         "drupal/fancy_file_delete": "^2.0",
@@ -211,6 +212,9 @@
             },
             "drupal/scheduler_content_moderation_integration" : {
                 "Widget error when field is overridden - undefined offset 0 in $form['publish_state']" : "https://www.drupal.org/files/issues/2020-06-30/3077147-28.patch"
+            },
+            "drupal/csv_importer" : {
+                "Custom patch to get anonymous subscription support on csv_import" : "./patches/anonymous_subscriptions_csv_import.patch"
             }
         }
     }
