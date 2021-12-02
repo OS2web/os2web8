@@ -12772,12 +12772,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_person_information.git",
-                "reference": "e3bfe6fb01b63b43bc24fad876d291694c23602b"
+                "reference": "b69df7e2963fe124aa70a47201e4011b1ddbe4fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_person_information/zipball/e3bfe6fb01b63b43bc24fad876d291694c23602b",
-                "reference": "e3bfe6fb01b63b43bc24fad876d291694c23602b",
+                "url": "https://api.github.com/repos/OS2web/os2web_person_information/zipball/b69df7e2963fe124aa70a47201e4011b1ddbe4fd",
+                "reference": "b69df7e2963fe124aa70a47201e4011b1ddbe4fd",
                 "shasum": ""
             },
             "require": {
@@ -12799,7 +12799,7 @@
                 "issues": "https://github.com/OS2web/os2web_person_information/issues",
                 "source": "https://github.com/OS2web/os2web_person_information/tree/master"
             },
-            "time": "2021-06-04T13:53:46+00:00"
+            "time": "2021-12-02T09:35:15+00:00"
         },
         {
             "name": "os2web/os2web_postlister",
