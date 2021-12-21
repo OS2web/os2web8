@@ -138,9 +138,6 @@
             "drupal/field_group": {
                 "HTML5 Validation Prevents Submission in Tabs" : "https://www.drupal.org/files/issues/2019-10-04/field_group-HTML5_validation_prevents_submission_in_tabs-2969051-9.patch"
             },
-            "drupal/rules": {
-                "2927132-15-remove-other-conditions-from-ui" : "https://www.drupal.org/files/issues/2020-07-23/2927132-15-remove-other-conditions-from-ui.patch"
-            },
             "drupal/better_exposed_filters": {
                 "allow the date format to be set from the bef interface": "https://www.drupal.org/files/issues/2020-12-21/better_exposed_filters_allow_the_date_format-2858610-23_1.patch"
             },
