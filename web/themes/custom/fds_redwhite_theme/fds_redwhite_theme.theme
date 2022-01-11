@@ -74,7 +74,7 @@ function fds_redwhite_theme_preprocess_swiftmailer(&$variables) {
   $theme_settings = _fds_base_theme_collect_theme_settings();
   $variables['current_language'] = $language;
   $variables['base_url'] = $GLOBALS['base_url'] . '/';
-  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.svg';
+  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
   $variables['theme_settings'] = $theme_settings;
 
   // Header logo.
