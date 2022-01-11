@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a720c8e17b26e0156ad054c8cdd530ee",
+    "content-hash": "fd06206be79840aed07d2ed9a3492743",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7233,6 +7233,53 @@
             "homepage": "https://www.drupal.org/project/pdf_api",
             "support": {
                 "source": "https://git.drupalcode.org/project/pdf_api"
+            }
+        },
+        {
+            "name": "drupal/popular_search_keywords",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/popular_search_keywords.git",
+                "reference": "1.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/popular_search_keywords-1.0.7.zip",
+                "reference": "1.0.7",
+                "shasum": "5c398138fcbab4c5b5887338997ca7d986e3db80"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.7",
+                    "datestamp": "1627038973",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "poorva",
+                    "homepage": "https://www.drupal.org/u/poorva",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This produle provides a block with a list of the popular search keywords in the site.",
+            "homepage": "https://www.drupal.org/project/popular_search_keywords",
+            "support": {
+                "source": "https://cgit.drupalcode.org/popular_search_keywords",
+                "issues": "https://www.drupal.org/project/issues/popular_search_keywords"
             }
         },
         {

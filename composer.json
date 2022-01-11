@@ -110,6 +110,7 @@
         "drupal/modules_weight": "^1.9",
         "drupal/monitoring": "^1.9",
         "drupal/pdf_api": "^2.0",
+        "drupal/popular_search_keywords": "^1.0",
         "drupal/queue_mail": "^1.4",
         "drupal/queue_ui": "^2.2",
         "drupal/quick_node_clone": "^1.14",
