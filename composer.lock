@@ -12948,12 +12948,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_search.git",
-                "reference": "b938b9f51ee18580a369c2777a436d83d8de85fa"
+                "reference": "400e70323ae7e5569407118727604358b240ba2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_search/zipball/b938b9f51ee18580a369c2777a436d83d8de85fa",
-                "reference": "b938b9f51ee18580a369c2777a436d83d8de85fa",
+                "url": "https://api.github.com/repos/OS2web/os2web_search/zipball/400e70323ae7e5569407118727604358b240ba2e",
+                "reference": "400e70323ae7e5569407118727604358b240ba2e",
                 "shasum": ""
             },
             "require": {
@@ -12974,9 +12974,9 @@
             "description": "Search functionality powered by SOLR",
             "support": {
                 "issues": "https://github.com/OS2web/os2web_search/issues",
-                "source": "https://github.com/OS2web/os2web_search/tree/drupal9"
+                "source": "https://github.com/OS2web/os2web_search/tree/master"
             },
-            "time": "2021-03-15T10:49:20+00:00"
+            "time": "2022-01-12T14:22:22+00:00"
         },
         {
             "name": "os2web/os2web_simplesaml",
