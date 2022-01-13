@@ -103,6 +103,7 @@
         "drupal/entity_clone": "^1.0@beta",
         "drupal/fancy_file_delete": "^2.0",
         "drupal/file_management": "1.x-dev@dev",
+        "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
         "drupal/mailchimp": "^2.0",
