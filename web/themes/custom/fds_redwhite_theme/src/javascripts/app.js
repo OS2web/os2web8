@@ -62,6 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Activate search on search page
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    if ($('.view-display-id-os2web_search_page').length) {
+      $('.js-toggle-searchy').click();
+    }
+  });
+})(jQuery);
+
 // Footer menu dropdowns.
 document.addEventListener('DOMContentLoaded', function() {
   function toggle(event) {
