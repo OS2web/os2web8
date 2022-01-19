@@ -40,7 +40,7 @@
 {% set classes = [
   'eu-cookie-compliance-banner',
   'eu-cookie-compliance-banner-info',
-  ['eu-cookie-compliance-banner--', method|replace('_', '-')]|join,
+  ['eu-cookie-compliance-banner--', method|replace({'_': '-'})]|join,
 ] %}
 <div{{ attributes.addClass(classes) }}>
   <div class="container">
