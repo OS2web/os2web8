@@ -2096,12 +2096,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "feb94d13fc4180a3f6882df4947d9df862010842"
+                "reference": "46d69a7bcd4e5d48690be05105ea093362e9a883"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/feb94d13fc4180a3f6882df4947d9df862010842",
-                "reference": "feb94d13fc4180a3f6882df4947d9df862010842",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/46d69a7bcd4e5d48690be05105ea093362e9a883",
+                "reference": "46d69a7bcd4e5d48690be05105ea093362e9a883",
                 "shasum": ""
             },
             "default-branch": true,
@@ -2114,7 +2114,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/8.x-1.x",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2022-01-21T10:25:47+00:00"
+            "time": "2022-01-21T12:56:34+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
