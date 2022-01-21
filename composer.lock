@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de44bc13e03d8a00c471c183e8670d7a",
+    "content-hash": "f5bcb0a831331856f5964f03c74a3b5c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2096,12 +2096,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "a917716638200d354541dec13526c42f4ddde1e5"
+                "reference": "feb94d13fc4180a3f6882df4947d9df862010842"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/a917716638200d354541dec13526c42f4ddde1e5",
-                "reference": "a917716638200d354541dec13526c42f4ddde1e5",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/feb94d13fc4180a3f6882df4947d9df862010842",
+                "reference": "feb94d13fc4180a3f6882df4947d9df862010842",
                 "shasum": ""
             },
             "default-branch": true,
@@ -2114,7 +2114,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/8.x-1.x",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2022-01-17T12:37:01+00:00"
+            "time": "2022-01-21T10:25:47+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
@@ -9353,6 +9353,80 @@
             "homepage": "https://www.drupal.org/project/user_delete_reassign",
             "support": {
                 "source": "https://git.drupalcode.org/project/user_delete_reassign"
+            }
+        },
+        {
+            "name": "drupal/video",
+            "version": "1.5.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/video.git",
+                "reference": "8.x-1.5-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/video-8.x-1.5-alpha1.zip",
+                "reference": "8.x-1.5-alpha1",
+                "shasum": "18f3985611224903c7fabd6cc0e28ea01b41f6d1"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.x",
+                    "datestamp": "1610098268",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    },
+                    "package": "Field types"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Heshan Wanigasooriya",
+                    "homepage": "https://www.drupal.org/u/heshanlk",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "abhishek-anand",
+                    "homepage": "https://www.drupal.org/user/468982"
+                },
+                {
+                    "name": "brycefisherfleig",
+                    "homepage": "https://www.drupal.org/user/1300764"
+                },
+                {
+                    "name": "chaitanya17",
+                    "homepage": "https://www.drupal.org/user/1998300"
+                },
+                {
+                    "name": "heshanlk",
+                    "homepage": "https://www.drupal.org/user/199102"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                }
+            ],
+            "description": "Video module allows you to embedded videos from YouTube, Vimeo, Facebook, Vine etc (Drupal 8 only) and upload videos and play using HTML5 video player.",
+            "homepage": "https://www.drupal.org/project/video",
+            "keywords": [
+                "Drupal",
+                "embed",
+                "media",
+                "transcode",
+                "video"
+            ],
+            "support": {
+                "source": "https://www.drupal.org/project/video",
+                "issues": "https://www.drupal.org/project/issues/video"
             }
         },
         {
@@ -24106,6 +24180,7 @@
         "drupal/gdpr": 15,
         "drupal/gin_login": 5,
         "drupal/upgrade_rector": 15,
+        "drupal/video": 15,
         "os2web/os2web": 20,
         "os2web/os2web_banner": 20,
         "os2web/os2web_borgerdk": 20,
