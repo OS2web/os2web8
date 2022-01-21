@@ -12586,12 +12586,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "0b4cc2e299cec840ed7889106c34804ae220fdf5"
+                "reference": "761690e7218f1af076c91ffd75ce2656db94d6f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/0b4cc2e299cec840ed7889106c34804ae220fdf5",
-                "reference": "0b4cc2e299cec840ed7889106c34804ae220fdf5",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/761690e7218f1af076c91ffd75ce2656db94d6f0",
+                "reference": "761690e7218f1af076c91ffd75ce2656db94d6f0",
                 "shasum": ""
             },
             "require": {
@@ -12608,7 +12608,7 @@
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
                 "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2022-01-11T14:26:05+00:00"
+            "time": "2022-01-21T12:28:47+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
@@ -24133,5 +24133,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
