@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6187b5b8f710aaa95801a4af35ae5f84",
+    "content-hash": "de44bc13e03d8a00c471c183e8670d7a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2092,52 +2092,29 @@
         },
         {
             "name": "drupal/anonymous_subscriptions",
-            "version": "dev-1.x",
+            "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/anonymous_subscriptions.git",
-                "reference": "dcd62f1eeec5bb2276525ee19e7fe9825aef4eb2"
+                "url": "https://github.com/bellcom/anonymous_subscriptions.git",
+                "reference": "a917716638200d354541dec13526c42f4ddde1e5"
             },
-            "require": {
-                "drupal/core": "^8.7.7 || ^9"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/a917716638200d354541dec13526c42f4ddde1e5",
+                "reference": "a917716638200d354541dec13526c42f4ddde1e5",
+                "shasum": ""
             },
+            "default-branch": true,
             "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha+14-dev",
-                    "datestamp": "1638290221",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "authors": [
-                {
-                    "name": "andr1yun",
-                    "homepage": "https://www.drupal.org/user/1277538"
-                },
-                {
-                    "name": "pkil",
-                    "homepage": "https://www.drupal.org/user/2327222"
-                },
-                {
-                    "name": "wiifm",
-                    "homepage": "https://www.drupal.org/user/358731"
-                }
-            ],
-            "description": "Provide Subscription functionality to anonymous users",
-            "homepage": "https://www.drupal.org/project/anonymous_subscriptions",
+            "description": "Provide Subscription functionality to anonymous users.",
             "support": {
-                "source": "https://git.drupalcode.org/project/anonymous_subscriptions"
-            }
+                "source": "https://github.com/bellcom/anonymous_subscriptions/tree/8.x-1.x",
+                "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
+            },
+            "time": "2022-01-17T12:37:01+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
@@ -5441,6 +5418,121 @@
             }
         },
         {
+            "name": "drupal/gdpr",
+            "version": "3.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gdpr.git",
+                "reference": "3.0.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gdpr-3.0.0-alpha5.zip",
+                "reference": "3.0.0-alpha5",
+                "shasum": "770564ad2f864d3bda55ffcdcaa8f8d777f0b6ab"
+            },
+            "require": {
+                "drupal/checklistapi": "~2.0",
+                "drupal/core": "^8 || ^9",
+                "drupal/entity": "^1.0",
+                "drupal/entity_reference_revisions": "^1.8",
+                "drupal/message": "^1.0",
+                "drupal/token": "^1.7"
+            },
+            "require-dev": {
+                "drupal/anonymizer": "*",
+                "drupal/entity": "*",
+                "drupal/entity_reference_revisions": "*",
+                "drupal/gdpr_fields": "*",
+                "drupal/message": "*",
+                "drupal/token": "*"
+            },
+            "suggest": {
+                "drush/drush": "GDPR Dump requires Drush ^9 || ^10",
+                "ext-zip": "GDPR Tasks requires the PHP zip extension",
+                "fzaninotto/faker": "Required for the anonymizer submodule (which is required by multiple submodules)."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-alpha5",
+                    "datestamp": "1640287403",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mhavelant",
+                    "homepage": "https://www.drupal.org/user/1086292",
+                    "email": "mhavelant@brainsum.com"
+                },
+                {
+                    "name": "Kosa Ilma",
+                    "homepage": "https://www.drupal.org/user/3435475"
+                },
+                {
+                    "name": "alexdmccabe",
+                    "homepage": "https://www.drupal.org/user/1358588"
+                },
+                {
+                    "name": "andrewbelcher",
+                    "homepage": "https://www.drupal.org/user/655282"
+                },
+                {
+                    "name": "back-2-95",
+                    "homepage": "https://www.drupal.org/user/327328"
+                },
+                {
+                    "name": "bfr",
+                    "homepage": "https://www.drupal.org/user/369262"
+                },
+                {
+                    "name": "dj1999",
+                    "homepage": "https://www.drupal.org/user/387119"
+                },
+                {
+                    "name": "golddragon007",
+                    "homepage": "https://www.drupal.org/user/2723471"
+                },
+                {
+                    "name": "lbesenyei",
+                    "homepage": "https://www.drupal.org/user/2626013"
+                },
+                {
+                    "name": "leymannx",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                },
+                {
+                    "name": "mhavelant",
+                    "homepage": "https://www.drupal.org/user/3331139"
+                },
+                {
+                    "name": "pedrop",
+                    "homepage": "https://www.drupal.org/user/1043368"
+                },
+                {
+                    "name": "szato",
+                    "homepage": "https://www.drupal.org/user/389677"
+                },
+                {
+                    "name": "yanniboi",
+                    "homepage": "https://www.drupal.org/user/1837556"
+                }
+            ],
+            "description": "Helps with making a site GDPR-compliant.",
+            "homepage": "https://www.drupal.org/project/gdpr",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gdpr"
+            }
+        },
+        {
             "name": "drupal/gin",
             "version": "3.0.0-alpha37",
             "source": {
@@ -6521,6 +6613,69 @@
             }
         },
         {
+            "name": "drupal/message",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/message.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/message-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "f1494d8c482840b01f8d1dcc4ed572d5844a3873"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1607017386",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Grayside",
+                    "homepage": "https://www.drupal.org/user/346868"
+                },
+                {
+                    "name": "RoySegall",
+                    "homepage": "https://www.drupal.org/user/1812910"
+                },
+                {
+                    "name": "amitaibu",
+                    "homepage": "https://www.drupal.org/user/57511"
+                },
+                {
+                    "name": "itamar",
+                    "homepage": "https://www.drupal.org/user/1757910"
+                },
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                }
+            ],
+            "description": "Message",
+            "homepage": "https://www.drupal.org/project/message",
+            "support": {
+                "source": "https://git.drupalcode.org/project/message"
+            }
+        },
+        {
             "name": "drupal/metatag",
             "version": "1.16.0",
             "source": {
@@ -7256,6 +7411,53 @@
             "homepage": "https://www.drupal.org/project/pdf_api",
             "support": {
                 "source": "https://git.drupalcode.org/project/pdf_api"
+            }
+        },
+        {
+            "name": "drupal/popular_search_keywords",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/popular_search_keywords.git",
+                "reference": "1.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/popular_search_keywords-1.0.7.zip",
+                "reference": "1.0.7",
+                "shasum": "5c398138fcbab4c5b5887338997ca7d986e3db80"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.7",
+                    "datestamp": "1627038973",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "poorva",
+                    "homepage": "https://www.drupal.org/u/poorva",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This produle provides a block with a list of the popular search keywords in the site.",
+            "homepage": "https://www.drupal.org/project/popular_search_keywords",
+            "support": {
+                "source": "https://cgit.drupalcode.org/popular_search_keywords",
+                "issues": "https://www.drupal.org/project/issues/popular_search_keywords"
             }
         },
         {
@@ -12127,12 +12329,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web.git",
-                "reference": "0347ff129d35580a50611dffd0922966d5123164"
+                "reference": "11502c8befa701ff859dd985e18e7f72b2e3505f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web/zipball/0347ff129d35580a50611dffd0922966d5123164",
-                "reference": "0347ff129d35580a50611dffd0922966d5123164",
+                "url": "https://api.github.com/repos/OS2web/os2web/zipball/11502c8befa701ff859dd985e18e7f72b2e3505f",
+                "reference": "11502c8befa701ff859dd985e18e7f72b2e3505f",
                 "shasum": ""
             },
             "require": {
@@ -12160,7 +12362,7 @@
                 "issues": "https://github.com/OS2web/os2web/issues",
                 "source": "https://github.com/OS2web/os2web/tree/master"
             },
-            "time": "2021-10-27T12:54:41+00:00"
+            "time": "2021-12-14T13:26:27+00:00"
         },
         {
             "name": "os2web/os2web_banner",
@@ -12227,17 +12429,47 @@
             "time": "2021-10-21T08:37:13+00:00"
         },
         {
+            "name": "os2web/os2web_citizen_proposals",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OS2web/os2web_citizen_proposals.git",
+                "reference": "e419a68a37a383f00c19748fbfe3e885701088b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OS2web/os2web_citizen_proposals/zipball/e419a68a37a383f00c19748fbfe3e885701088b1",
+                "reference": "e419a68a37a383f00c19748fbfe3e885701088b1",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.2"
+            ],
+            "description": "Adds Citizen proposal functionality",
+            "support": {
+                "issues": "https://github.com/OS2web/os2web_citizen_proposals/issues",
+                "source": "https://github.com/OS2web/os2web_citizen_proposals/tree/master"
+            },
+            "time": "2022-01-13T11:06:12+00:00"
+        },
+        {
             "name": "os2web/os2web_contact",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_contact.git",
-                "reference": "0aa6a828182345037818f4ee4d8e103abe34029d"
+                "reference": "78ca1b7d50abcc1c44089e35f184c66639567399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/0aa6a828182345037818f4ee4d8e103abe34029d",
-                "reference": "0aa6a828182345037818f4ee4d8e103abe34029d",
+                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/78ca1b7d50abcc1c44089e35f184c66639567399",
+                "reference": "78ca1b7d50abcc1c44089e35f184c66639567399",
                 "shasum": ""
             },
             "require": {
@@ -12256,7 +12488,7 @@
                 "issues": "https://github.com/OS2web/os2web_contact/issues",
                 "source": "https://github.com/OS2web/os2web_contact/tree/master"
             },
-            "time": "2021-11-24T11:30:27+00:00"
+            "time": "2022-01-05T12:05:24+00:00"
         },
         {
             "name": "os2web/os2web_datalookup",
@@ -12322,12 +12554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_events.git",
-                "reference": "9af72e98d284d6abb6c66434261403ca2d63b041"
+                "reference": "d5ebe922f04b17ac596b7bc380aa4919c29f15a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_events/zipball/9af72e98d284d6abb6c66434261403ca2d63b041",
-                "reference": "9af72e98d284d6abb6c66434261403ca2d63b041",
+                "url": "https://api.github.com/repos/OS2web/os2web_events/zipball/d5ebe922f04b17ac596b7bc380aa4919c29f15a2",
+                "reference": "d5ebe922f04b17ac596b7bc380aa4919c29f15a2",
                 "shasum": ""
             },
             "require": {
@@ -12346,7 +12578,7 @@
                 "issues": "https://github.com/OS2web/os2web_events/issues",
                 "source": "https://github.com/OS2web/os2web_events/tree/master"
             },
-            "time": "2021-11-09T14:07:09+00:00"
+            "time": "2021-12-27T12:24:47+00:00"
         },
         {
             "name": "os2web/os2web_hearings",
@@ -12354,12 +12586,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "65736204a9f29e77e4241f1af14dbdc2742563d4"
+                "reference": "0b4cc2e299cec840ed7889106c34804ae220fdf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/65736204a9f29e77e4241f1af14dbdc2742563d4",
-                "reference": "65736204a9f29e77e4241f1af14dbdc2742563d4",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/0b4cc2e299cec840ed7889106c34804ae220fdf5",
+                "reference": "0b4cc2e299cec840ed7889106c34804ae220fdf5",
                 "shasum": ""
             },
             "require": {
@@ -12376,7 +12608,7 @@
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
                 "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2021-12-01T11:42:41+00:00"
+            "time": "2022-01-11T14:26:05+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
@@ -12384,12 +12616,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hjemmeside.git",
-                "reference": "0b72b1cccd6ed33af48b52f2c3909a7022b33485"
+                "reference": "7dad88c14949b04ca829317ed3ae9713de5f664c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/0b72b1cccd6ed33af48b52f2c3909a7022b33485",
-                "reference": "0b72b1cccd6ed33af48b52f2c3909a7022b33485",
+                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/7dad88c14949b04ca829317ed3ae9713de5f664c",
+                "reference": "7dad88c14949b04ca829317ed3ae9713de5f664c",
                 "shasum": ""
             },
             "require": {
@@ -12402,6 +12634,7 @@
                 "drupal/linkit": "^5.0.0-beta10",
                 "drupal/metatag": "^1.13",
                 "drupal/pathauto": "^1.5",
+                "drupal/redirect": "*",
                 "drupal/save_edit": "^1.3",
                 "drupal/textfield_counter": "*"
             },
@@ -12416,7 +12649,7 @@
                 "issues": "https://github.com/OS2web/os2web_hjemmeside/issues",
                 "source": "https://github.com/OS2web/os2web_hjemmeside/tree/master"
             },
-            "time": "2021-09-29T11:24:51+00:00"
+            "time": "2021-12-13T15:32:17+00:00"
         },
         {
             "name": "os2web/os2web_kle",
@@ -12456,12 +12689,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_logging.git",
-                "reference": "cc022f753a9100036a37a9bbd92b39f2c55d20ee"
+                "reference": "f3843fecb975140328243fb9eaab4a464738cbba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/cc022f753a9100036a37a9bbd92b39f2c55d20ee",
-                "reference": "cc022f753a9100036a37a9bbd92b39f2c55d20ee",
+                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/f3843fecb975140328243fb9eaab4a464738cbba",
+                "reference": "f3843fecb975140328243fb9eaab4a464738cbba",
                 "shasum": ""
             },
             "require": {
@@ -12479,7 +12712,7 @@
                 "issues": "https://github.com/OS2web/os2web_logging/issues",
                 "source": "https://github.com/OS2web/os2web_logging/tree/master"
             },
-            "time": "2021-10-04T07:02:46+00:00"
+            "time": "2021-12-27T15:04:33+00:00"
         },
         {
             "name": "os2web/os2web_meetings",
@@ -12726,17 +12959,47 @@
             "time": "2021-11-05T15:15:35+00:00"
         },
         {
+            "name": "os2web/os2web_newsletter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OS2web/os2web_newsletter.git",
+                "reference": "590b45e0b6c3292bcc589954d69fe5a2cd271f8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OS2web/os2web_newsletter/zipball/590b45e0b6c3292bcc589954d69fe5a2cd271f8c",
+                "reference": "590b45e0b6c3292bcc589954d69fe5a2cd271f8c",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.2"
+            ],
+            "description": "Newsletter handler",
+            "support": {
+                "issues": "https://github.com/OS2web/os2web_newsletter/issues",
+                "source": "https://github.com/OS2web/os2web_newsletter/tree/master"
+            },
+            "time": "2021-12-17T20:40:53+00:00"
+        },
+        {
             "name": "os2web/os2web_pagebuilder",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "334cbae2588586c68ae3a81aa7fd2cde6903eabf"
+                "reference": "0da4bdde3baf7ed46716bcfa9c554baa334c715b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/334cbae2588586c68ae3a81aa7fd2cde6903eabf",
-                "reference": "334cbae2588586c68ae3a81aa7fd2cde6903eabf",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/0da4bdde3baf7ed46716bcfa9c554baa334c715b",
+                "reference": "0da4bdde3baf7ed46716bcfa9c554baa334c715b",
                 "shasum": ""
             },
             "require": {
@@ -12764,7 +13027,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2021-11-29T12:38:47+00:00"
+            "time": "2022-01-13T13:20:44+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
@@ -12863,12 +13126,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_search.git",
-                "reference": "b938b9f51ee18580a369c2777a436d83d8de85fa"
+                "reference": "400e70323ae7e5569407118727604358b240ba2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_search/zipball/b938b9f51ee18580a369c2777a436d83d8de85fa",
-                "reference": "b938b9f51ee18580a369c2777a436d83d8de85fa",
+                "url": "https://api.github.com/repos/OS2web/os2web_search/zipball/400e70323ae7e5569407118727604358b240ba2e",
+                "reference": "400e70323ae7e5569407118727604358b240ba2e",
                 "shasum": ""
             },
             "require": {
@@ -12889,9 +13152,9 @@
             "description": "Search functionality powered by SOLR",
             "support": {
                 "issues": "https://github.com/OS2web/os2web_search/issues",
-                "source": "https://github.com/OS2web/os2web_search/tree/drupal9"
+                "source": "https://github.com/OS2web/os2web_search/tree/master"
             },
-            "time": "2021-03-15T10:49:20+00:00"
+            "time": "2022-01-12T14:22:22+00:00"
         },
         {
             "name": "os2web/os2web_simplesaml",
@@ -12958,12 +13221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_spotbox.git",
-                "reference": "0f8e9acaa0df3e423c73e5d54e5775fdaaa0c4c9"
+                "reference": "081fd7b227258a57be1c33bf0a79a4b7a0c3675b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_spotbox/zipball/0f8e9acaa0df3e423c73e5d54e5775fdaaa0c4c9",
-                "reference": "0f8e9acaa0df3e423c73e5d54e5775fdaaa0c4c9",
+                "url": "https://api.github.com/repos/OS2web/os2web_spotbox/zipball/081fd7b227258a57be1c33bf0a79a4b7a0c3675b",
+                "reference": "081fd7b227258a57be1c33bf0a79a4b7a0c3675b",
                 "shasum": ""
             },
             "require": {
@@ -23840,11 +24103,13 @@
         "drupal/ckeditor_balloonpanel": 20,
         "drupal/entity_clone": 10,
         "drupal/file_management": 20,
+        "drupal/gdpr": 15,
         "drupal/gin_login": 5,
         "drupal/upgrade_rector": 15,
         "os2web/os2web": 20,
         "os2web/os2web_banner": 20,
         "os2web/os2web_borgerdk": 20,
+        "os2web/os2web_citizen_proposals": 20,
         "os2web/os2web_events": 20,
         "os2web/os2web_hearings": 20,
         "os2web/os2web_logging": 20,
@@ -23855,6 +24120,7 @@
         "os2web/os2web_meetings_edoc_fujitsu": 20,
         "os2web/os2web_meetings_sbsys": 20,
         "os2web/os2web_news": 20,
+        "os2web/os2web_newsletter": 20,
         "os2web/os2web_pagebuilder": 20,
         "os2web/os2web_person_information": 20,
         "os2web/os2web_postlister": 20,

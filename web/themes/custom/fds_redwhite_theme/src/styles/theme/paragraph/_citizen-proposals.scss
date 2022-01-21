@@ -1,0 +1,17 @@
+.os2web-citizen-proposals--create-new-block {
+  margin-bottom: 40px;
+  a {
+    &.os2web-citizen-proposals--create-new-link {
+      color: var(--primary);
+      padding-right: 0;
+      font-weight: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted var(--dark-gray1);
+    }
+  }
+}
+.new-proposal-form {
+  border-top: 1px solid var(--dark-gray2);
+  padding-top: 40px;
+}
+

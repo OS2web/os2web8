@@ -51,6 +51,15 @@
   }
 }
 
+.node--type-os2web-page {
+  .node-updated {
+     display: block;
+     font-size: $small-text;
+     margin-top: 40px;
+     margin-bottom: 60px;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -60,16 +69,62 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(xs) {
+
+}
 
 // Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
+@include media-breakpoint-only(xs, $grid-breakpoints) {
 
+}
+// Tablet - and up
+@include media-breakpoint-down(sm, $grid-breakpoints) {
+  .path-frontpage {
+    .field--name-field-os2web-column-1 {
+      .paragraph--type--os2web-section-paragraph {
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+
+      .news {
+        &.open {
+          .readmore {
+            display: block;
+          }
+         &:after {
+           content: "";
+         }
+        }
+        &:after {
+          position: absolute;
+          top: 5px;
+          right: 0;
+          font-family: FontAwesome;
+          content: "\f105";
+          color: var(--primary);
+          transform: rotate(
+              0deg);
+          font-size: 50px;
+          -webkit-transform: rotate(
+              0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
 // Tablet - and up
 @include media-breakpoint-up(sm) {}
 
 // Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
+@include media-breakpoint-only(sm, $grid-breakpoints) {
+
+}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {}

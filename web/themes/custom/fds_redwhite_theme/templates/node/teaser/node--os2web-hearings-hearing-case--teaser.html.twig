@@ -7,29 +7,16 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-{% set timestamp = node.field_os2web_hearings_end_date.value|date('U') %}
+{% set timestampstart = node.field_os2web_hearings_start_date.value|date('U') %}
+{% set timestampend = node.field_os2web_hearings_end_date.value|date('U') %}
 
-<a href="{{ url }}" {{ attributes.addClass(classes) }}>
-  <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date">
-    <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__month">
-      {{ timestamp | date('M') }}
-    </span>
-    <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__date">
-      {{ timestamp | date('d') }}
-    </span>
-    <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__title">
-      {{ 'Frist' | trans }}
-    </span>
-  </div>
-
+<div {{ attributes.addClass(classes) }}>
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__content">
-    {{ content.field_os2web_hearings_heading }}
-    {{ content.body }}
+    <a href="{{ url }}"><{{ content.field_os2web_hearings_heading }}</a>
   </div>
-
-  <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__actions">
-    <span class="material-icons icon">
-      keyboard_backspace
-    </span>
+  <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date">
+    <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__date">{{ timestampstart | date('d') }}.{{ timestampstart | date('m') }}.{{ timestampstart | date('Y') }}</span>
+    <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__til">til</span>
+    <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__date">{{ timestampend | date('d') }}.{{ timestampend | date('m') }}.{{ timestampend | date('Y') }}</span>
   </div>
-</a>
+</div>

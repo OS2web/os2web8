@@ -59,3 +59,13 @@
     }
   }
 })();
+// Menu
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    $('.custom-header__button--toggle-megamenu').on('click', function (evt) {
+      $(this).parent().find('.region-header__below').toggleClass('expand-collaps');
+    });
+  });
+})(jQuery);
+

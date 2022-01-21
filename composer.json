@@ -45,7 +45,8 @@
         },
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": ["drupal/anonymous_subscriptions"]
         },
         {
             "type": "vcs",
@@ -76,6 +77,10 @@
                     "reference": "8.x-1.x"
                 }
             }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/bellcom/anonymous_subscriptions"
         }
     ],
     "require": {
@@ -84,7 +89,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/access_latest": "^0.0.1",
-        "drupal/anonymous_subscriptions": "1.x-dev@dev",
+        "drupal/anonymous_subscriptions": "dev-8.x-1.x",
         "drupal/ckeditor_balloonpanel": "1.x-dev@dev",
         "drupal/ckeditor_iframe": "^2.1",
         "drupal/coder": "^8.3",
@@ -98,6 +103,7 @@
         "drupal/entity_clone": "^1.0@beta",
         "drupal/fancy_file_delete": "^2.0",
         "drupal/file_management": "1.x-dev@dev",
+        "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
         "drupal/mailchimp": "^2.0",
@@ -105,6 +111,7 @@
         "drupal/modules_weight": "^1.9",
         "drupal/monitoring": "^1.9",
         "drupal/pdf_api": "^2.0",
+        "drupal/popular_search_keywords": "^1.0",
         "drupal/queue_mail": "^1.4",
         "drupal/queue_ui": "^2.2",
         "drupal/quick_node_clone": "^1.14",
@@ -120,6 +127,7 @@
         "os2web/os2web": "dev-master",
         "os2web/os2web_banner": "dev-master",
         "os2web/os2web_borgerdk": "dev-master",
+        "os2web/os2web_citizen_proposals": "dev-master",
         "os2web/os2web_embedded_code": "^0.0.1",
         "os2web/os2web_events": "dev-master",
         "os2web/os2web_hearings": "dev-master",
@@ -131,6 +139,7 @@
         "os2web/os2web_meetings_edoc_fujitsu": "dev-master",
         "os2web/os2web_meetings_sbsys": "dev-master",
         "os2web/os2web_news": "dev-master",
+        "os2web/os2web_newsletter": "dev-master",
         "os2web/os2web_pagebuilder": "dev-master",
         "os2web/os2web_person_information": "dev-master",
         "os2web/os2web_postlister": "dev-master",
@@ -194,6 +203,9 @@
         "patches": {
             "drupal/textfield_counter" : {
                 "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch"
+            },
+            "drupal/easy_breadcrumb" : {
+                "Fix frontpage page as part of the breadcrumb path" :  "./patches/easy-breadcrumb-include-frontpage.patch"
             },
             "drupal/field_group": {
                 "HTML5 Validation Prevents Submission in Tabs" : "https://www.drupal.org/files/issues/2019-10-04/field_group-HTML5_validation_prevents_submission_in_tabs-2969051-9.patch"

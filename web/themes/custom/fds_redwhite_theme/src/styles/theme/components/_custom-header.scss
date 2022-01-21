@@ -14,7 +14,8 @@
 // Mixins
 // --------------------------------------------------
 
-@mixin custom-header-mixin() {}
+@mixin custom-header-mixin() {
+}
 
 // --------------------------------------------------
 // Styling
@@ -29,11 +30,11 @@
   button,
   a {
 
-    &:focus{
+    &:focus {
       outline-color: $color-orange-004;
     }
 
-    &:hover{
+    &:hover {
       outline: 2px solid $color-orange-004;
       outline-offset: 1px;
     }
@@ -52,6 +53,7 @@
     .action-button__icon--orange {
       display: none;
     }
+
     .action-button__icon--white {
       display: inline-block;
     }
@@ -85,43 +87,17 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  background: rgb(0,102,50);
-  background: linear-gradient(90deg, rgba(0,102,50,1) 0%, rgba(0,102,50,0.75) 50%, rgba(0,102,50,0) 100%);
-}
-
-.path-frontpage {
-
-  &, &.toolbar-fixed {
-    padding-top: 0 !important;
-
-    &:not(.gin--vertical-toolbar) {
-
-      &.toolbar-horizontal {
-        padding-top: 39px !important;
-
-        &.toolbar-tray-open {
-          padding-top: 79px !important;
-        }
-      }
-    }
-  }
+  background: rgb(0, 102, 50);
+  background: linear-gradient(90deg, rgba(0, 102, 50, 1) 0%, rgba(0, 102, 50, 0.75) 50%, rgba(0, 102, 50, 0) 100%);
 }
 
 body {
-
   &, &.toolbar-fixed {
     padding-top: 74px !important;
+  }
 
-    &:not(.gin--vertical-toolbar) {
-
-      &.toolbar-horizontal {
-        padding-top: 74px + 39px !important;
-
-        &.toolbar-tray-open {
-          padding-top: 74px + 79px !important;
-        }
-      }
-    }
+  &.toolbar-tray-open {
+    padding-top: 79px !important;
   }
 }
 
@@ -158,28 +134,6 @@ body {
   }
 }
 
-.custom-header--fixed {
-  position: fixed;
-
-  top: 0;
-  left: 0;
-  right: 0;
-
-  z-index: 300;
-
-  .toolbar-horizontal:not(.gin--vertical-toolbar) {
-    top: 39px;
-  }
-
-  .toolbar-horizontal.toolbar-tray-open:not(.gin--vertical-toolbar) & {
-    top: 79px; // Height of toolbar tray.
-  }
-
-  .path-frontpage & {
-    display: none;
-  }
-}
-
 .custom-header__button {
   padding: 10px; // For fat thumbs.
 
@@ -201,6 +155,7 @@ body {
     color: #fff;
   }
 }
+
 .searchy {
 
   + .custom-header__button {
@@ -208,7 +163,8 @@ body {
   }
 }
 
-.custom-header__button--toggle-megamenu {}
+.custom-header__button--toggle-megamenu {
+}
 
 .custom-header__button--toggle-search {
 
@@ -376,10 +332,39 @@ body {
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(xs) {
+}
 
 // Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
+@include media-breakpoint-only(xs, $grid-breakpoints) {
+  .custom-header {
+    .menuwrapper {
+      position: relative;
+
+      .region-header__below {
+        &.expand-collaps {
+          display: block;
+        }
+        .block-menu.menu--main {
+          position: absolute;
+          top: 50px;
+          text-align: left;
+          left: -5%;
+          margin: 0;
+          width: 100%;
+          z-index: 40;
+          .menu-item--active-trail a {
+            background: var(--white) !important;
+            font-weight: bold;
+          }
+          .menu li {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
@@ -396,7 +381,7 @@ body {
     padding-top: 100px;
     padding-bottom: 40px;
 
-    background: linear-gradient(90deg, rgba(0,102,50,1) 0%, rgba(0,102,50,0.75) 30%, rgba(0,102,50,0) 100%);
+    background: linear-gradient(90deg, rgba(0, 102, 50, 1) 0%, rgba(0, 102, 50, 0.75) 30%, rgba(0, 102, 50, 0) 100%);
   }
 
   .custom-header__meta {
@@ -458,29 +443,11 @@ body {
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
+@include media-breakpoint-only(sm, $grid-breakpoints) {
+}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  body {
-
-    &, &.toolbar-fixed {
-      padding-top: 132px !important; // Height of .custom-header--fixed (recalculated by JS)
-
-      &:not(.gin--vertical-toolbar) {
-
-        &.toolbar-horizontal {
-          padding-top: 132px + 39px !important;
-
-          &.toolbar-tray-open {
-            padding-top: 132px + 79px !important;
-          }
-        }
-      }
-    }
-  }
-
   .custom-header {
 
     .views-exposed-form {
@@ -511,16 +478,20 @@ body {
 }
 
 // Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {}
+@include media-breakpoint-only(md, $grid-breakpoints) {
+}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
 // Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {}
+@include media-breakpoint-only(lg, $grid-breakpoints) {
+}
 
 // Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+}
 
 // Print
 @media print {
@@ -543,7 +514,9 @@ body {
 }
 
 // Touch
-.touchevents {}
+.touchevents {
+}
 
 // No touch
-.no-touchevents {}
+.no-touchevents {
+}

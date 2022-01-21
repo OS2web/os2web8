@@ -47,10 +47,10 @@ jQuery(function ($) {
 // Search.
 document.addEventListener('DOMContentLoaded', function() {
   function toggle(event) {
-    var element = this;
-    var parent = element.closest('.searchy');
-
-    parent.classList.toggle('searchy--visible-form');
+    var parent = document.querySelectorAll('.searchy');
+    parent[0].classList.toggle('searchy--visible-form');
+    var main = document.querySelectorAll('body');
+    main[0].classList.toggle('search-active');
   }
 
   var buttons = document.querySelectorAll('.js-toggle-searchy');
@@ -59,6 +59,55 @@ document.addEventListener('DOMContentLoaded', function() {
     var button = buttons[i];
 
     button.addEventListener('click', toggle);
+  }
+});
+
+// Activate search on search page
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    if ($('.view-display-id-os2web_search_page').length) {
+      $('.js-toggle-searchy').click();
+    }
+  });
+})(jQuery);
+
+// Footer menu dropdowns.
+document.addEventListener('DOMContentLoaded', function() {
+  function toggle(event) {
+    var button = event.target;
+    var parent = button.parentNode;
+    var list = parent.querySelector('.menu');
+    if (list) {
+      list.classList.toggle('show');
+      parent.classList.toggle('active');
+    }
+  }
+
+  var buttons = document.querySelectorAll('.footer .block-menu.navigation .menu-item--expanded');
+
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+
+    button.addEventListener('click', toggle);
+  }
+});
+
+// Cover arrow adjustments.
+document.addEventListener('DOMContentLoaded', function() {
+  var coverArrow = document.querySelector('.rk_cover_arrow_button_wrapper');
+
+  if (coverArrow) {
+    coverArrow.parentNode.setAttribute('style', 'position: relative;');
+    coverArrow.addEventListener('click', scroll);
+  }
+
+  function scroll(event) {
+    var scroll_to = jQuery(event.target)
+
+    jQuery([document.documentElement, document.body]).animate({
+      scrollTop: scroll_to.offset().top - 200
+    }, 1000);
   }
 });
 
@@ -140,5 +189,57 @@ document.addEventListener('DOMContentLoaded', function() {
     if (primaryImage && insertInto) {
       insertInto.insertAdjacentElement('afterbegin', primaryImage);
     }
+  }
+})();
+
+// Tiny Slider for news slideshow.
+(function() {
+  var selector = '.view-id-os2web_page_content.view-display-id-slider .view-content';
+
+  if (document.querySelector(selector) !== null) {
+
+    // Run tiny slider.
+    tns({
+      container: selector,
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      autoplayHoverPause: true,
+      mouseDrag: true,
+      gutter: 32,
+      rewind: false,
+      responsive: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+      },
+    });
+  }
+})();
+
+// Tiny Slider for spotboxes slideshow.
+(function() {
+  var selector = '.paragraph--type--os2web-spotbox-reference.paragraph--slider .field__items';
+
+  if (document.querySelector(selector) !== null) {
+
+    // Run tiny slider.
+    tns({
+      container: selector,
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      autoplayHoverPause: true,
+      mouseDrag: true,
+      gutter: 32,
+      rewind: false,
+      responsive: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+      },
+    });
   }
 })();

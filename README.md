@@ -14,7 +14,18 @@ git clone git@github.com:OS2web/os2web8.git
 ```
 composer install
 ```
-
+* Go to project folder:
+```
+cd /var/www/web/sites/default
+```
+* Make a copy of ```env.example.settings.php```
+```
+cp env.example.settings.php env.settings.php
+```
+* Modify ```env.settings.php``` and set a correct envrironment
+```
+$settings['project_env'] = DEV_ENV;
+```
 * Follow the regular install process to install drupal using `drush` or UI 
   * select ```OS2Web``` as install profile
 * Enable and set default drupal theme from available list on `/admin/appearance`

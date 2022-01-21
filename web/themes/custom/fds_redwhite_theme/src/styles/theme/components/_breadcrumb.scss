@@ -41,17 +41,6 @@
 
       color: $color-orange-004;
     }
-
-    &:first-child {
-      display: none;
-    }
-
-    &:nth-child(2) {
-
-      &:before {
-        display: none;
-      }
-    }
   }
 
   a {
