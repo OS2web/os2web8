@@ -49,19 +49,22 @@
         <div>
           {{ message }}
         </div>
-
-        {% for key, category in cookie_categories %}
-          <div class="eu-cookie-compliance-category">
-            <div>
-              <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}"
-                     value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
-              <label for="cookie-category-{{ key }}">{{ category.label }}</label>
-            </div>
-            {% if category.description %}
-              <div class="eu-cookie-compliance-category-description">{{ category.description }}</div>
-            {% endif %}
+        {% if cookie_categories %}
+          <div id="eu-cookie-compliance-categories" class="eu-cookie-compliance-categories">
+          {% for key, category in cookie_categories %}
+              <div class="eu-cookie-compliance-category">
+                <div>
+                  <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}"
+                         value="{{ key }}" {% if fix_first_cookie_category and loop.first %} checked disabled{% endif %}>
+                  <label for="cookie-category-{{ key }}">{{ category.label }}</label>
+                </div>
+                {% if category.description %}
+                  <div class="eu-cookie-compliance-category-description">{{ category.description }}</div>
+                {% endif %}
+              </div>
+            {% endfor %}
           </div>
-        {% endfor %}
+        {% endif %}
 
         {% if disagree_button %}
           <div class="field--type-link">
