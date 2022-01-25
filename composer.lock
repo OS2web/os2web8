@@ -2096,12 +2096,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "46d69a7bcd4e5d48690be05105ea093362e9a883"
+                "reference": "ac698ee65ed7bfb1b12e27f93ace731596869318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/46d69a7bcd4e5d48690be05105ea093362e9a883",
-                "reference": "46d69a7bcd4e5d48690be05105ea093362e9a883",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/ac698ee65ed7bfb1b12e27f93ace731596869318",
+                "reference": "ac698ee65ed7bfb1b12e27f93ace731596869318",
                 "shasum": ""
             },
             "default-branch": true,
@@ -2114,7 +2114,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/8.x-1.x",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2022-01-21T12:56:34+00:00"
+            "time": "2022-01-25T13:55:54+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
@@ -13160,12 +13160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_newsletter.git",
-                "reference": "590b45e0b6c3292bcc589954d69fe5a2cd271f8c"
+                "reference": "ed0108e144d2d55309ea28d3c0c95aa14943ff40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_newsletter/zipball/590b45e0b6c3292bcc589954d69fe5a2cd271f8c",
-                "reference": "590b45e0b6c3292bcc589954d69fe5a2cd271f8c",
+                "url": "https://api.github.com/repos/OS2web/os2web_newsletter/zipball/ed0108e144d2d55309ea28d3c0c95aa14943ff40",
+                "reference": "ed0108e144d2d55309ea28d3c0c95aa14943ff40",
                 "shasum": ""
             },
             "require": {
@@ -13182,7 +13182,7 @@
                 "issues": "https://github.com/OS2web/os2web_newsletter/issues",
                 "source": "https://github.com/OS2web/os2web_newsletter/tree/master"
             },
-            "time": "2021-12-17T20:40:53+00:00"
+            "time": "2022-01-25T13:57:01+00:00"
         },
         {
             "name": "os2web/os2web_pagebuilder",
