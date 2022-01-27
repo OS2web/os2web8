@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31363b707be17cc2cab79fe495c17336",
+    "content-hash": "bef942c3f768375bcc7977e0c01e6db9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -12782,12 +12782,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "761690e7218f1af076c91ffd75ce2656db94d6f0"
+                "reference": "eeb27ed354aed5d7d3c1be8c16583cd413867501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/761690e7218f1af076c91ffd75ce2656db94d6f0",
-                "reference": "761690e7218f1af076c91ffd75ce2656db94d6f0",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/eeb27ed354aed5d7d3c1be8c16583cd413867501",
+                "reference": "eeb27ed354aed5d7d3c1be8c16583cd413867501",
                 "shasum": ""
             },
             "require": {
@@ -12804,7 +12804,7 @@
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
                 "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2022-01-21T12:28:47+00:00"
+            "time": "2022-01-27T08:45:43+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
@@ -13128,12 +13128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_news.git",
-                "reference": "1ba6e080a36ec10db6cf4f207e6557e7f7633210"
+                "reference": "ca8c015852f63f4abd18929db28c78649dc38e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_news/zipball/1ba6e080a36ec10db6cf4f207e6557e7f7633210",
-                "reference": "1ba6e080a36ec10db6cf4f207e6557e7f7633210",
+                "url": "https://api.github.com/repos/OS2web/os2web_news/zipball/ca8c015852f63f4abd18929db28c78649dc38e29",
+                "reference": "ca8c015852f63f4abd18929db28c78649dc38e29",
                 "shasum": ""
             },
             "require": {
@@ -13152,7 +13152,7 @@
                 "issues": "https://github.com/OS2web/os2web_news/issues",
                 "source": "https://github.com/OS2web/os2web_news/tree/master"
             },
-            "time": "2021-11-05T15:15:35+00:00"
+            "time": "2022-01-27T08:44:32+00:00"
         },
         {
             "name": "os2web/os2web_newsletter",
@@ -13190,12 +13190,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "8f9908fba724bab732be74da337f88f98e808118"
+                "reference": "1f8f8a563f9e0c909c2c2014ae8f03829a302a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/8f9908fba724bab732be74da337f88f98e808118",
-                "reference": "8f9908fba724bab732be74da337f88f98e808118",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/1f8f8a563f9e0c909c2c2014ae8f03829a302a23",
+                "reference": "1f8f8a563f9e0c909c2c2014ae8f03829a302a23",
                 "shasum": ""
             },
             "require": {
@@ -13223,7 +13223,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2022-01-26T10:07:58+00:00"
+            "time": "2022-01-27T08:43:24+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
@@ -13266,12 +13266,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_postlister.git",
-                "reference": "83c2992c65a9f9ce9361e46050c18019788b5155"
+                "reference": "71d68a8d0e6df351bc8dcc7c469a70fcb71aa8d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_postlister/zipball/83c2992c65a9f9ce9361e46050c18019788b5155",
-                "reference": "83c2992c65a9f9ce9361e46050c18019788b5155",
+                "url": "https://api.github.com/repos/OS2web/os2web_postlister/zipball/71d68a8d0e6df351bc8dcc7c469a70fcb71aa8d2",
+                "reference": "71d68a8d0e6df351bc8dcc7c469a70fcb71aa8d2",
                 "shasum": ""
             },
             "default-branch": true,
@@ -13285,7 +13285,7 @@
                 "issues": "https://github.com/OS2web/os2web_postlister/issues",
                 "source": "https://github.com/OS2web/os2web_postlister/tree/master"
             },
-            "time": "2021-11-17T10:41:25+00:00"
+            "time": "2022-01-27T08:47:04+00:00"
         },
         {
             "name": "os2web/os2web_rest_api",
