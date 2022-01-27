@@ -23,16 +23,16 @@ $icons-folder-path:             "../images/svg-icons" !default;
 // Typography
 // Typography font-size and line-height
 
-$h1-font-size:                3.6rem !default;
+$h1-font-size:                2.5rem !default;
 $h1-line-height:              4.2rem !default;
 
-$h2-font-size:                2.4rem !default;
+$h2-font-size:                1.8rem !default;
 $h2-line-height:              3.0rem !default;
 
-$h3-font-size:                1.8rem !default;
+$h3-font-size:                1.6rem !default;
 $h3-line-height:              2.4rem !default;
 
-$h4-font-size:                2.0rem !default;
+$h4-font-size:                1.6rem !default;
 $h4-line-height:              2.4rem;
 
 $h5-font-size:                1.6rem !default;
@@ -132,8 +132,8 @@ $color-green-001:             #00502D;
 $color-green-002:             #648F14;
 $color-green-021:             #233614 !default;
 $color-green-003:             #358000 !default;
-$color-green-004:             #eeffe2  !default;
-$color-green-005:             #358000 !default;
+$color-green-004:             #E1EBDD  !default;
+$color-green-005:             #F3F5F2 !default;
 
 //orange
 //$color-orange-001:          #b4630c !default;
@@ -295,6 +295,7 @@ $color-data-violet-low-opacity:       $color-data-violet-004 !default;
 // Header, footer & navigation colors
 $color-header-background:     $color-gray-006 !default;
 $color-footer-background:     $color-white !default;
+$color-footer-background2:    $color-gray-pale;
 $color-topmenu-background:    $color-gray-002!default;
 $color-subnav-background:     $color-gray-002!default;
 $color-page:                  $color-base-001 !default;

@@ -20,12 +20,20 @@
 // Styling
 // --------------------------------------------------
 
+.region-action-buttons {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
 .action-buttons {
 
   .flexy-list {
 
     > * {
       padding: 0 20px 0 0;
+    }
+    div:last-of-type {
+      padding-right: 0;
     }
   }
 
@@ -34,7 +42,7 @@
     font-weight: $font-weight-bold;
     text-decoration: none;
 
-    color: $color-text;
+    color: $color-primary;
   }
 }
 
@@ -52,7 +60,7 @@
 // Variants
 // --------------------------------------------------
 
-.action-button__icon--orange {
+.action-button__icon--green {
 
   /* Show orange variant as default. */
   display: inline-block;

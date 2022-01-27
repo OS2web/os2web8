@@ -70,9 +70,9 @@
     height: auto;
     overflow: initial;
 
-    > li:nth-child(n+3) {
+/*     > li:nth-child(n+3) {
       display: none;
-    }
+    } */
   }
   .limited-height--overridden {}
   ul.limited-height--overridden {
@@ -83,7 +83,7 @@
   }
 
   .limited-height__toggle {
-    display: block !important;
+    display: none !important;
   }
 }
 

@@ -24,15 +24,15 @@
   position: relative;
   display: block;
 
-  padding: 14px 0 14px ($sidenav-list-spacing-left + 35px);
+  padding: 14px 0 14px 35px;
 
   font-size: $large-font-size;
   font-weight: $font-weight-bold;
   line-height: 1.1;
 
-  background-image: url("../images/arrow-back.svg");
+  background-image: url("../images/Tilbagepil.svg");
   background-repeat: no-repeat;
-  background-position: $sidenav-list-spacing-left center;
+  background-position: 0 center;
 
   &, &:hover, &:active, &:focus, &:visited {
     text-decoration: none;

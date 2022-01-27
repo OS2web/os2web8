@@ -11,7 +11,7 @@
 // --------------------------------------------------
 
 $sidenav-list-spacing-left: 25px;
-$sidenav-list-dot-spacing: 22px;
+$sidenav-list-dot-spacing: 25px;
 
 // --------------------------------------------------
 // Mixins
@@ -35,15 +35,23 @@ $sidenav-list-dot-spacing: 22px;
     border-bottom: 0;
 
     > li {
-      order: 2;
+      border-top: 1px solid $color-green-004;
 
-      border-top: 1px solid $color-neutral;
+      background-color: rgba($color-green-005, 1);
 
-      background-color: rgba($color-neutral, .3);
+      &:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      &:nth-last-child(2) {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
 
       > .sidenav-sub_list {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 0;
+        padding-bottom: 25px;
       }
 
       &.current {
@@ -54,19 +62,34 @@ $sidenav-list-dot-spacing: 22px;
 
             > a {
               padding-left: $sidenav-list-spacing-left + $sidenav-list-dot-spacing;
+              &:hover,
+              &:focus {
+                font-weight: $font-weight-bold;
+              }
+
+              &.is-active::before {
+                top: calc(50% - 1px);
+                left: $sidenav-list-spacing-left;
+                width: 18px;
+                height: 2px;
+                background: $color-white;
+                content: "" !important;
+                display: block;
+                position: absolute;
+              }
             }
           }
         }
       }
 
       > a {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 19px;
+        padding-bottom: 19px;
         padding-left: $sidenav-list-spacing-left;
 
         font-weight: $font-weight-bold;
 
-        color: $color-text;
+        color: $color-primary;
       }
 
       &.current {
@@ -79,27 +102,27 @@ $sidenav-list-dot-spacing: 22px;
       &.current {
         display: block !important;
 
-        order: 1;
-
         border-top: 0;
 
         background-color: $color-primary;
 
         > a {
           color: #fff;
+          padding-bottom: 5px;
         }
       }
     }
   }
 
   .sidenav-sub_list {
-    background-color: $color-green-002;
+    background-color: $color-primary;
 
     > li {
       border-top: 0;
 
       > a {
         padding-left: $sidenav-list-spacing-left + $sidenav-list-dot-spacing;
+        font-size: 1.4rem !important;
       }
 
       &.active {
@@ -107,17 +130,6 @@ $sidenav-list-dot-spacing: 22px;
         > a {
           font-weight: $font-weight-bold;
         }
-      }
-
-      &:before {
-        top: 4px;
-        left: $sidenav-list-spacing-left;
-
-        content: "\2022" !important;
-
-        font-size: 22px;
-
-        color: $color-orange-004;
       }
 
       &:hover {
@@ -137,7 +149,7 @@ $sidenav-list-dot-spacing: 22px;
 
         font-size: $base-font-size;
 
-        color: $color-text;
+        color: $color-white;
       }
     }
 
@@ -145,7 +157,7 @@ $sidenav-list-dot-spacing: 22px;
 
       li {
 
-        &:before {
+        &::before {
           content: "\FE63" !important;
         }
       }
@@ -193,7 +205,27 @@ $sidenav-list-dot-spacing: 22px;
 @include media-breakpoint-only(sm, $grid-breakpoints) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+  .region-sidebar-first,
+  .region-sidebar-second {
+
+    .sidenav-list {
+
+      > li {
+
+        &:first-child {
+          border-top-left-radius: 0;
+          border-top-right-radius: 10px;
+        }
+
+        &:nth-last-child(2) {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+  }
+}
 
 // Desktop - only
 @include media-breakpoint-only(md, $grid-breakpoints) {}
