@@ -8,9 +8,9 @@
 ]
 %}
 <div {{ attributes.addClass(classes) }}>
-  {{ node.getCreatedTime()|date("d M Y") }}
+  <span class="createdtime">{{ node.getCreatedTime()|date("d M Y") }}</span>
 
-  <h4>{{ label }}</h4>
+  <h4><a href="{{ url }}">{{ label }}</a></h4>
 
   <div>
     {{ content }}
@@ -18,13 +18,7 @@
 
   <br>
 
-  <div class="text-align-left">
+  <div class="search-content-type">
     {{ node.type.entity.label }}
-  </div>
-
-  <div class="field--type-link text-align-right">
-    <a href="{{ url }}">
-      {{ 'Read more' | trans }}
-    </a>
   </div>
 </div>
