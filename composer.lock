@@ -12719,12 +12719,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_contact.git",
-                "reference": "c8c14e59bb291df569fd2fdc3a71f62c90d7f794"
+                "reference": "8d58e493bc0b846ea1adae86b6e6c468925e1002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/c8c14e59bb291df569fd2fdc3a71f62c90d7f794",
-                "reference": "c8c14e59bb291df569fd2fdc3a71f62c90d7f794",
+                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/8d58e493bc0b846ea1adae86b6e6c468925e1002",
+                "reference": "8d58e493bc0b846ea1adae86b6e6c468925e1002",
                 "shasum": ""
             },
             "require": {
@@ -12744,7 +12744,7 @@
                 "issues": "https://github.com/OS2web/os2web_contact/issues",
                 "source": "https://github.com/OS2web/os2web_contact/tree/master"
             },
-            "time": "2022-01-28T08:54:39+00:00"
+            "time": "2022-01-28T11:28:57+00:00"
         },
         {
             "name": "os2web/os2web_datalookup",
