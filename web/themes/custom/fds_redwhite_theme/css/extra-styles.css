@@ -1437,6 +1437,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   margin: 30px 0 30px;
   font-size: 30px;
 }
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a {
   color: var(--primary);
   display: block;
@@ -1446,9 +1447,11 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   text-decoration: none;
   position: relative;
 }
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item:last-of-type a,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item:last-of-type a {
   border-bottom: 1px solid var(--gray1);
 }
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a::after {
   content: "";
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -47px;
@@ -1459,10 +1462,13 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   width: 19px;
   height: 19px;
 }
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:hover::after,
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:hover::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after  {
   background-position: -19px -47px;
 }
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3 {
   margin: 0;
   font-size: inherit;
