@@ -870,7 +870,11 @@ a.entity-teaser--os2web-meetings-meeting:focus {
   -ms-transition: all 0.2S ease-in-out;
   -o-transition: all 0.2S ease-in-out;
 }
-.page-alert #block-alert {
+.page-alert article.node--type-os2web-system-page .field--name-title {
+  display: none;
+}
+.page-alert #block-alert,
+.page-alert article {
   padding: 30px 0;
 }
 .page-alert .custom-alert {
