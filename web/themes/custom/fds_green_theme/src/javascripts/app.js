@@ -142,3 +142,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 })();
+
+// Search.
+document.addEventListener('DOMContentLoaded', function() {
+  function toggle(event) {
+    var parent = document.querySelectorAll('.searchy');
+    parent[0].classList.toggle('searchy--visible-form');
+    var main = document.querySelectorAll('body');
+    main[0].classList.toggle('search-active');
+  }
+
+  var buttons = document.querySelectorAll('.js-toggle-searchy');
+
+  for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+
+    button.addEventListener('click', toggle);
+  }
+});

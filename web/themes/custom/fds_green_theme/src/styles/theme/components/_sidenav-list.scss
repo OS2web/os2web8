@@ -47,6 +47,10 @@ $sidenav-list-dot-spacing: 25px;
       &:nth-last-child(2) {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+        .sidenav-sub_list {
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
       }
 
       > .sidenav-sub_list {
@@ -221,6 +225,10 @@ $sidenav-list-dot-spacing: 25px;
         &:nth-last-child(2) {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 10px;
+          .sidenav-sub_list {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 10px;
+          }
         }
       }
     }
