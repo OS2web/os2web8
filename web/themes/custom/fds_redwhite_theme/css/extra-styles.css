@@ -1461,7 +1461,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item:last-of-type a {
   border-bottom: 1px solid var(--gray1);
 }
-#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a::after,
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a::after {
   content: "";
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -47px;
@@ -1471,6 +1471,10 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   right: 0;
   width: 19px;
   height: 19px;
+}
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after{
+  transform:none;
+  margin-top: 0;
 }
 #block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a:hover::after,
 #block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a:focus::after,
