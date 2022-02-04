@@ -31,7 +31,11 @@
             {% endif %}
 
             <p>
-              <a href="#" target="_blank">Vis på kort</a>
+            {% if theme_settings.contact_information.vispaakort %}
+              <div>
+                <a href="{{ theme_settings.contact_information.vispaakort }}" target="_blank">Vis på kort</a>
+              </div>
+            {% endif %}
             </p>
 
             <p>

@@ -74,6 +74,9 @@
 html {
   font-family: "MuseoSans", "Helvetica", "Arial", sans-serif;
 }
+a:focus, a.link-focus {
+  color: var(--primary);
+}
 .node__links {
   display: none;
 }
@@ -1232,7 +1235,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
 .view-os2web-page-content .views-row:last-of-type .entity-teaser__body {
   border-bottom: 1px solid var(--gray1);
 }
-.view-os2web-page-content .entity-teaser__body h3 {
+.view-os2web-page-content .entity-teaser__body .h4 {
   margin-top: 0;
   font-size: 22px;
   font-family: "Museo 500", sans-serif;
@@ -1244,7 +1247,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  text-indent: -9999px;
   padding: 0;
 }
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .news {
@@ -1371,7 +1374,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  text-indent: -9999px;
   padding: 0;
   z-index: 1;
 }
@@ -1409,7 +1412,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   line-height: 2.4rem;
   font-family: "Museo 500", sans-serif;
 }
-.entity-teaser--os2web-event a {
+.entity-teaser--os2web-event h2 {
   color: var(--dark-gray2);
   text-decoration: none;
 }
@@ -1467,10 +1470,10 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   height: 19px;
 }
 .field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:hover::after,
-.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after
+.field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:hover::after,
-.field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after  {
-  background-position: -19px -47px;
+.field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after {
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -47px;
 }
 .field--name-field-os2web-page-paragraph-righ .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3 {
@@ -2139,11 +2142,9 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--menu-link--view-mode--image .entry .entrywrap:hover .taxonomy-pic .menu-icon-wrapper img {
   float: left;
 }
-.paragraph--menu-link--view-mode--image .entry .entrywrap h3 {
+.paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
   font-size: 18px;
   margin: 15px;
-}
-.paragraph--menu-link--view-mode--image .entry .entrywrap h3 a {
   color: var(--primary);
   text-decoration: none;
   word-break: break-word;
@@ -2189,7 +2190,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(8) .entry-text {
   margin-top: 8px;
 }
-  .paragraph--menu-link--view-mode--image .entry .entrywrap h3 {
+  .paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
     font-size: 24px;
     margin: 15px 15px 50px;
   }
@@ -2433,7 +2434,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  text-indent: -9999px;
 }
 
 /*BORGERDREVNE FORSLAG*/

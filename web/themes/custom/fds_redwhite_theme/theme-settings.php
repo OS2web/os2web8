@@ -22,4 +22,9 @@ function fds_redwhite_theme_form_system_theme_settings_alter(
     '#title' => t('Banner underoverskrift.'),
     '#default_value' => theme_get_setting('frontpage_banner_subheading'),
   ];
+  $form['contact_information']['vispaakort'] = [
+    '#type' => 'textfield',
+    '#title' => t('Vis på kort (link)'),
+    '#default_value' => theme_get_setting('vispaakort'),
+  ];
 }

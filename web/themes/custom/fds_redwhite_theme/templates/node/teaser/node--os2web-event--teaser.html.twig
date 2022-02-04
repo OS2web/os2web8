@@ -91,10 +91,7 @@
         {{ node.field_os2web_event_start_date.value|date('M') }}
       </div>
       <div class="col-10 os2web-event-title">
-        <h2{{ title_attributes }}>
-          <a target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">
-            {{ label }}</a>
-        </h2>
+        <h2{{ title_attributes }}>{{ label }}</h2>
       </div>
     </div>
 
