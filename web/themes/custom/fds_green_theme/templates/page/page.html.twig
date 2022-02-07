@@ -48,11 +48,11 @@
       </div>
     </div>
     <!-- Begin - toggle search -->
-    <div class="searchy">
+    <div id="searchy" class="searchy">
       <div class="container">
         {% include '@fds_green_theme/includes/action-buttons.html.twig' %}
         <div class="searchy-close">
-          <button class="js-toggle-searchy" aria-label="Åbn eller luk søgning"></button>
+          <button class="custom-header__button custom-header__button--toggle-search js-toggle-searchy" aria-label="{{ 'Åbn søgning' | t }}"></button>
         </div>
 
         {{ page.header__search }}
