@@ -80,6 +80,7 @@
 ] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
+<a class="fullhref" target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">{{ label }}</a>
 
   {{ title_prefix }}
   {% if label and not page %}
@@ -90,13 +91,9 @@
         {{ node.field_os2web_event_start_date.value|date('M') }}
       </div>
       <div class="col-10 os2web-event-title">
-        <h2{{ title_attributes }}>
-          <a target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">
-            {{ label }}</a>
-        </h2>
+        <h2{{ title_attributes }}>{{ label }}</h2>
       </div>
     </div>
-    <a class="fullhref" target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">{{ label }}</a>
 
   {% endif %}
   {{ title_suffix }}
@@ -112,6 +109,6 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content | without(['field_os2web_event_start_date', 'field_maaned']) }}
+    {{ content | without(['field_os2web_event_start_date']) }}
   </div>
 </article>

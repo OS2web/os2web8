@@ -1,0 +1,67 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  'paragraph--image-position--' ~ image_position,
+  'clearfix',
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      {# Begin - image #}
+      {{ content.field_os2web_cnt_image }}
+      {# End - image #}
+
+      {# Begin - heading #}
+      <h2>{{ content.field_os2web_cnt_heading }}</h2>
+      {# End - heading #}
+
+      {# Begin - subheading #}
+      {{ content.field_os2web_cnt_subheading }}
+      {# End - subheading #}
+
+      {# Begin - body #}
+      {{ content.field_os2web_cnt_body }}
+      {# End - body #}
+
+      {# Begin - address #}
+      {{ content.field_adresse }}
+      {# End - address #}
+
+      {# Begin - city #}
+      {{ content.field_by }}
+      {# End -city #}
+
+      {# Begin - zipcode #}
+      {{ content.field_postnummer }}
+      {# End - zipcode #}
+
+      {# Begin - phone #}
+      {{ content.field_os2web_cnt_phone }}
+      {# End - phone #}
+
+      {# Begin - email #}
+      {{ content.field_os2web_cnt_email }}
+      {# End - email #}
+
+      {# Begin - link #}
+      {{ content.field_os2web_cnt_link }}
+      {# End - link #}
+
+      {# Begin - website #}
+      {{ content.field_os2web_cnt_website }}
+      {# End - website #}
+
+      {# Begin - facebook #}
+      {{ content.field_os2web_cnt_facebook }}
+      {# End - facebook #}
+
+      {# Begin - open_hours #}
+      {{ content.field_os2web_cnt_open_hours }}
+      {# End - open_hours #}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

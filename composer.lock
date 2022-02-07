@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bef942c3f768375bcc7977e0c01e6db9",
+    "content-hash": "078d1b7ec49377cb301441d65afc9339",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5854,6 +5854,56 @@
             }
         },
         {
+            "name": "drupal/imce",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/imce.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imce-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "2797d6a669b739490edd00c753303cd9263f8dc3"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1618251147",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2841111/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "ufku",
+                    "homepage": "https://www.drupal.org/user/9910"
+                }
+            ],
+            "description": "Provides a file manager supporting personal folders.",
+            "homepage": "https://drupal.org/project/imce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/imce",
+                "issues": "https://www.drupal.org/project/issues/imce?version=8.x"
+            }
+        },
+        {
             "name": "drupal/inline_entity_form",
             "version": "1.0.0-rc9",
             "source": {
@@ -7214,6 +7264,65 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/node_revision_delete",
                 "issues": "https://www.drupal.org/project/issues/node_revision_delete"
+            }
+        },
+        {
+            "name": "drupal/office_hours",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/office_hours.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "745079dfca40222a034da0475e516c0aa1317c67"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1623916796",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Voskuilen",
+                    "homepage": "https://www.drupal.org/user/167994",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "johnv",
+                    "homepage": "https://www.drupal.org/user/591042"
+                },
+                {
+                    "name": "mikl",
+                    "homepage": "https://www.drupal.org/user/58679"
+                },
+                {
+                    "name": "skwashd",
+                    "homepage": "https://www.drupal.org/user/116305"
+                }
+            ],
+            "description": "Defines a 'weekly office hours' field type, allowing you to specify when an Entity is open or closed.",
+            "homepage": "http://drupal.org/project/office_hours",
+            "support": {
+                "source": "http://cgit.drupalcode.org/office_hours",
+                "issues": "http://drupal.org/project/office_hours",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -12660,17 +12769,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_contact.git",
-                "reference": "78ca1b7d50abcc1c44089e35f184c66639567399"
+                "reference": "41f55c6d7beaedbd9ad1fc81605e397b39abc945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/78ca1b7d50abcc1c44089e35f184c66639567399",
-                "reference": "78ca1b7d50abcc1c44089e35f184c66639567399",
+                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/41f55c6d7beaedbd9ad1fc81605e397b39abc945",
+                "reference": "41f55c6d7beaedbd9ad1fc81605e397b39abc945",
                 "shasum": ""
             },
             "require": {
                 "drupal/core": "*",
                 "drupal/inline_entity_form": "^1.0@RC",
+                "drupal/office_hours": "*",
                 "drupal/paragraphs": "*"
             },
             "default-branch": true,
@@ -12684,7 +12794,7 @@
                 "issues": "https://github.com/OS2web/os2web_contact/issues",
                 "source": "https://github.com/OS2web/os2web_contact/tree/master"
             },
-            "time": "2022-01-05T12:05:24+00:00"
+            "time": "2022-01-28T11:42:22+00:00"
         },
         {
             "name": "os2web/os2web_datalookup",
@@ -13128,12 +13238,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_news.git",
-                "reference": "ca8c015852f63f4abd18929db28c78649dc38e29"
+                "reference": "c887d5136d4ff52b715b9cc60296fef23d2ff57b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_news/zipball/ca8c015852f63f4abd18929db28c78649dc38e29",
-                "reference": "ca8c015852f63f4abd18929db28c78649dc38e29",
+                "url": "https://api.github.com/repos/OS2web/os2web_news/zipball/c887d5136d4ff52b715b9cc60296fef23d2ff57b",
+                "reference": "c887d5136d4ff52b715b9cc60296fef23d2ff57b",
                 "shasum": ""
             },
             "require": {
@@ -13152,7 +13262,7 @@
                 "issues": "https://github.com/OS2web/os2web_news/issues",
                 "source": "https://github.com/OS2web/os2web_news/tree/master"
             },
-            "time": "2022-01-27T08:44:32+00:00"
+            "time": "2022-02-01T09:56:25+00:00"
         },
         {
             "name": "os2web/os2web_newsletter",
@@ -13190,12 +13300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "1f8f8a563f9e0c909c2c2014ae8f03829a302a23"
+                "reference": "b8fb2f5d3775253b670c565a91c062aeef31dea4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/1f8f8a563f9e0c909c2c2014ae8f03829a302a23",
-                "reference": "1f8f8a563f9e0c909c2c2014ae8f03829a302a23",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/b8fb2f5d3775253b670c565a91c062aeef31dea4",
+                "reference": "b8fb2f5d3775253b670c565a91c062aeef31dea4",
                 "shasum": ""
             },
             "require": {
@@ -13223,7 +13333,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2022-01-27T08:43:24+00:00"
+            "time": "2022-02-07T11:54:07+00:00"
         },
         {
             "name": "os2web/os2web_person_information",

@@ -10,8 +10,7 @@ use Drupal\Core\Url;
 function fds_redwhite_theme_preprocess_page(array &$variables) {
   $variables['show_action_buttons'] = TRUE;
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    $variables['node'] = $node;
-    if ($node->bundle() == 'os2web_page') {
+    if (is_object($node) && $node->bundle() == 'os2web_page') {
       $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
       $menu_link = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $node->id()));
       $menu_link = reset($menu_link);
@@ -26,6 +25,7 @@ function fds_redwhite_theme_preprocess_page(array &$variables) {
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
+  $variables['theme_settings']['contact_information']['vispaakort'] = theme_get_setting('vispaakort');
 }
 
 /**

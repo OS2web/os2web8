@@ -27,10 +27,7 @@
 
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__content">
     <div class="row">
-      <div class="col col-sm-5 col--align-center">
-        {{ content.field_os2web_m_type }}
-      </div>
-      <div class="col col-sm-7 col--align-center d-none d-sm-flex">
+      <div class="col-12 col--align-center d-sm-flex">
         {% if timestamp %}
           {{ timestamp | format_date('long') }}
         {% endif %}

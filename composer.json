@@ -106,6 +106,7 @@
         "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
+        "drupal/imce": "^2.4",
         "drupal/mailchimp": "^2.0",
         "drupal/media_directories": "^2.0",
         "drupal/memcache": "^2.2",
