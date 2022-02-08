@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/fds_base_theme.git",
-                "reference": "a0af497c6c20314de533be4f08b8453b977dd7c0"
+                "reference": "1d6c98f7348ba99aec8a93273a912dae6039c60e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/fds_base_theme/zipball/a0af497c6c20314de533be4f08b8453b977dd7c0",
-                "reference": "a0af497c6c20314de533be4f08b8453b977dd7c0",
+                "url": "https://api.github.com/repos/bellcom/fds_base_theme/zipball/1d6c98f7348ba99aec8a93273a912dae6039c60e",
+                "reference": "1d6c98f7348ba99aec8a93273a912dae6039c60e",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -153,7 +153,7 @@
                 "source": "https://github.com/bellcom/fds_base_theme/tree/stable/drupal-8.x",
                 "issues": "https://github.com/bellcom/fds_base_theme/issues"
             },
-            "time": "2021-06-08T12:00:18+00:00"
+            "time": "2022-02-08T11:54:38+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -13297,12 +13297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "b8fb2f5d3775253b670c565a91c062aeef31dea4"
+                "reference": "4e67e77d1f4504071a3083920792f81c438f0f31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/b8fb2f5d3775253b670c565a91c062aeef31dea4",
-                "reference": "b8fb2f5d3775253b670c565a91c062aeef31dea4",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/4e67e77d1f4504071a3083920792f81c438f0f31",
+                "reference": "4e67e77d1f4504071a3083920792f81c438f0f31",
                 "shasum": ""
             },
             "require": {
@@ -13330,7 +13330,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2022-02-07T11:54:07+00:00"
+            "time": "2022-02-08T12:05:58+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
