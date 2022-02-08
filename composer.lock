@@ -12707,12 +12707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_borgerdk.git",
-                "reference": "44433c202a0af459c8d4ba179f52eb7e0d281a5d"
+                "reference": "2400cb8ce3b1b9ecc09f27bca75e43180c4fcb70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/44433c202a0af459c8d4ba179f52eb7e0d281a5d",
-                "reference": "44433c202a0af459c8d4ba179f52eb7e0d281a5d",
+                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/2400cb8ce3b1b9ecc09f27bca75e43180c4fcb70",
+                "reference": "2400cb8ce3b1b9ecc09f27bca75e43180c4fcb70",
                 "shasum": ""
             },
             "require": {
@@ -12731,7 +12731,7 @@
                 "issues": "https://github.com/OS2web/os2web_borgerdk/issues",
                 "source": "https://github.com/OS2web/os2web_borgerdk/tree/master"
             },
-            "time": "2021-10-21T08:37:13+00:00"
+            "time": "2022-02-08T08:04:33+00:00"
         },
         {
             "name": "os2web/os2web_citizen_proposals",
