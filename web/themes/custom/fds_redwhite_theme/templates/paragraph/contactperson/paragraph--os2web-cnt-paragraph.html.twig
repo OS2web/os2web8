@@ -10,57 +10,72 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
-      {# Begin - image #}
-      {{ content.field_os2web_cnt_image }}
-      {# End - image #}
+    <div class="row">
+      <div class="col-12">
+        {# Begin - heading #}
+        <h2>Kontakt: {{ content.field_os2web_cnt_heading.0 }}</h2>
+        {# End - heading #}
+      </div>
 
-      {# Begin - heading #}
-      <h2>{{ content.field_os2web_cnt_heading }}</h2>
-      {# End - heading #}
+      <div class="col-12 col-sm-6">
+        {# Begin - subheading #}
+        {{ content.field_os2web_cnt_subheading }}
+        {# End - subheading #}
 
-      {# Begin - subheading #}
-      {{ content.field_os2web_cnt_subheading }}
-      {# End - subheading #}
+        {# Begin - address #}
+        {{ content.field_adresse }}
+        {# End - address #}
 
-      {# Begin - body #}
-      {{ content.field_os2web_cnt_body }}
-      {# End - body #}
+        {# Begin - zipcode city #}
+        {{ content.field_postnummer }} {{ content.field_by }}
+        {# End -city #}
 
-      {# Begin - address #}
-      {{ content.field_adresse }}
-      {# End - address #}
+        {# Begin - phone #}
+        {{ content.field_os2web_cnt_phone }}
+        {# End - phone #}
 
-      {# Begin - city #}
-      {{ content.field_by }}
-      {# End -city #}
+        {# Begin - email #}
+        <a href="mailto:{{ content.field_os2web_cnt_email.0 }}">{{ content.field_os2web_cnt_email.0 }}</a>
+        {# End - email #}
+      </div>
 
-      {# Begin - zipcode #}
-      {{ content.field_postnummer }}
-      {# End - zipcode #}
+      <div class="col-12 col-sm-6">
+        {# Begin - open_hours #}
+        {{ content.field_os2web_cnt_open_hours }}
+        {# End - open_hours #}
+      </div>
 
-      {# Begin - phone #}
-      {{ content.field_os2web_cnt_phone }}
-      {# End - phone #}
+      <div class="col-12 spacer"></div>
 
-      {# Begin - email #}
-      {{ content.field_os2web_cnt_email }}
-      {# End - email #}
+      <div class="col-12 col-sm-3 os2web_cnt_image">
+        {# Begin - image #}
+        {{ content.field_os2web_cnt_image }}
+        {# End - image #}
+      </div>
 
-      {# Begin - link #}
-      {{ content.field_os2web_cnt_link }}
-      {# End - link #}
+      <div class="col-12 col-sm-9 os2web_cnt_body">
+        <p>Hvis du ønsker at sende følsomme eller fortrolige oplysninger til Ringsted Kommune, eksempelvis dit cpr.nr., oplysninger om dine helbredsforhold eller økonomiske situation, anbefales du at gøre det via e-boks. <a href="#">Læs om beskyttelse af persondata</a></p>
+        {# Begin - body #}
+        {{ content.field_os2web_cnt_body }}
+        {# End - body #}
 
-      {# Begin - website #}
-      {{ content.field_os2web_cnt_website }}
-      {# End - website #}
+        {# Begin - link #}
+        {{ content.field_os2web_cnt_link }}
+        {# End - link #}
 
-      {# Begin - facebook #}
-      {{ content.field_os2web_cnt_facebook }}
-      {# End - facebook #}
+        {# Begin - website #}
+        <div>
+          <a href="{{ content.field_os2web_cnt_website.0 }}" target="_blank">{{ content.field_os2web_cnt_website.0 }}</a>
+        </div>
+        {# End - website #}
 
-      {# Begin - open_hours #}
-      {{ content.field_os2web_cnt_open_hours }}
-      {# End - open_hours #}
+        {# Begin - facebook #}
+        <div>
+          <a href="{{ content.field_os2web_cnt_facebook.0 }}" target="_blank">Facebook</a>
+        </div>
+        {# End - facebook #}
+      </div>
+    </div>
 
     {% endblock %}
   </div>
