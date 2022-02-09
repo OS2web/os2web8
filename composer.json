@@ -110,6 +110,7 @@
         "drupal/mailchimp": "^2.0",
         "drupal/media_directories": "^2.0",
         "drupal/memcache": "^2.2",
+        "drupal/menu_breadcrumb": "^1.16",
         "drupal/modules_weight": "^1.9",
         "drupal/monitoring": "^1.9",
         "drupal/pdf_api": "^2.0",
