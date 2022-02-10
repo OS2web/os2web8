@@ -1985,9 +1985,13 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   padding: 0 15px;
   border-bottom: 1px solid var(--gray1);
 }
-.accordion-content {
+.accordion .accordion-content {
   padding-top: 2rem;
   padding-bottom: 5rem;
+}
+.field--name-field-os2web-accordion-reference .accordion-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .accordion-content a {
   color: var(--primary);
@@ -2811,6 +2815,9 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
     margin: 0;
   }
 }
+.node__content {
+  margin-bottom: 30px;
+}
 .node__content iframe {
   aspect-ratio: 71 / 40;
 	height: 100%;
@@ -2854,9 +2861,6 @@ table tbody th {
   text-align: left;
   border: 1px solid var(--light-gray3);
   border-collapse: collapse;
-}
-.entity-default--os2web-borgerdk-article .selfservice-links {
-  display: none;
 }
 
 /*SØGERESULTATER*/
