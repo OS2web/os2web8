@@ -132,6 +132,16 @@ h1 {
   -ms-transform: none;
   -o-transform: none;
 }
+.field--name-field-os2web-page-intro p,
+.field--name-field-os2web-news-intro p {
+  max-width: 66ch;
+}
+@media screen and (min-width: 768px) {
+  .field--name-field-os2web-page-intro p,
+  .field--name-field-os2web-news-intro p {
+    max-width: 44ch;
+  }
+}
 .field--name-field-os2web-page-intro,
 .field--name-field-os2web-hearings-intro,
 .field--name-field-os2web-news-intro {
