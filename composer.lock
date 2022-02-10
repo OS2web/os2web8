@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "078d1b7ec49377cb301441d65afc9339",
+    "content-hash": "9cafed316c8a4da660e6725029fcddfd",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/fds_base_theme.git",
-                "reference": "a0af497c6c20314de533be4f08b8453b977dd7c0"
+                "reference": "1d6c98f7348ba99aec8a93273a912dae6039c60e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/fds_base_theme/zipball/a0af497c6c20314de533be4f08b8453b977dd7c0",
-                "reference": "a0af497c6c20314de533be4f08b8453b977dd7c0",
+                "url": "https://api.github.com/repos/bellcom/fds_base_theme/zipball/1d6c98f7348ba99aec8a93273a912dae6039c60e",
+                "reference": "1d6c98f7348ba99aec8a93273a912dae6039c60e",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -153,7 +153,7 @@
                 "source": "https://github.com/bellcom/fds_base_theme/tree/stable/drupal-8.x",
                 "issues": "https://github.com/bellcom/fds_base_theme/issues"
             },
-            "time": "2021-06-08T12:00:18+00:00"
+            "time": "2022-02-08T11:54:38+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -5854,56 +5854,6 @@
             }
         },
         {
-            "name": "drupal/imce",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/imce.git",
-                "reference": "8.x-2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imce-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "2797d6a669b739490edd00c753303cd9263f8dc3"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1618251147",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/2841111/committers",
-                    "role": "Developer"
-                },
-                {
-                    "name": "ufku",
-                    "homepage": "https://www.drupal.org/user/9910"
-                }
-            ],
-            "description": "Provides a file manager supporting personal folders.",
-            "homepage": "https://drupal.org/project/imce",
-            "support": {
-                "source": "https://git.drupalcode.org/project/imce",
-                "issues": "https://www.drupal.org/project/issues/imce?version=8.x"
-            }
-        },
-        {
             "name": "drupal/inline_entity_form",
             "version": "1.0.0-rc9",
             "source": {
@@ -6291,6 +6241,53 @@
             }
         },
         {
+            "name": "drupal/linkit_media_library",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/linkit_media_library.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit_media_library-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "b6c58fcc66f4c86f114be45b8047b02f7a7597c4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/linkit": "^5 || ^6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2",
+                    "datestamp": "1609388688",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nate Andersen (oknate)",
+                    "homepage": "https://www.drupal.org/u/oknate",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module adds a 'Media Library' button to the Link ('drupallink') CKEditor dialog allowing the insertion of links from the media library.",
+            "homepage": "https://www.drupal.org/project/linkit_media_library",
+            "support": {
+                "source": "https://git.drupalcode.org/project/linkit_media_library",
+                "issues": "https://drupal.org/project/issues/linkit_media_library"
+            }
+        },
+        {
             "name": "drupal/mailchimp",
             "version": "2.0.2",
             "source": {
@@ -6647,6 +6644,70 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/memcache",
                 "issues": "https://www.drupal.org/project/issues/memcache"
+            }
+        },
+        {
+            "name": "drupal/menu_breadcrumb",
+            "version": "1.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_breadcrumb.git",
+                "reference": "8.x-1.16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "e7faa28edcd703c5512b480117d35718d0dd7441"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.16",
+                    "datestamp": "1620238102",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RyanPrice",
+                    "homepage": "https://www.drupal.org/user/873848"
+                },
+                {
+                    "name": "aaron",
+                    "homepage": "https://www.drupal.org/user/33420"
+                },
+                {
+                    "name": "gdevlugt",
+                    "homepage": "https://www.drupal.org/user/167273"
+                },
+                {
+                    "name": "rphair",
+                    "homepage": "https://www.drupal.org/user/3196607"
+                },
+                {
+                    "name": "vaibhavjain",
+                    "homepage": "https://www.drupal.org/user/1159692"
+                },
+                {
+                    "name": "xurizaemon",
+                    "homepage": "https://www.drupal.org/user/76026"
+                }
+            ],
+            "description": "Create breadcrumbs from nested menu titles and/or taxonomy membership.",
+            "homepage": "https://www.drupal.org/project/menu_breadcrumb",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_breadcrumb"
             }
         },
         {
@@ -12707,12 +12768,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_borgerdk.git",
-                "reference": "44433c202a0af459c8d4ba179f52eb7e0d281a5d"
+                "reference": "2400cb8ce3b1b9ecc09f27bca75e43180c4fcb70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/44433c202a0af459c8d4ba179f52eb7e0d281a5d",
-                "reference": "44433c202a0af459c8d4ba179f52eb7e0d281a5d",
+                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/2400cb8ce3b1b9ecc09f27bca75e43180c4fcb70",
+                "reference": "2400cb8ce3b1b9ecc09f27bca75e43180c4fcb70",
                 "shasum": ""
             },
             "require": {
@@ -12731,7 +12792,7 @@
                 "issues": "https://github.com/OS2web/os2web_borgerdk/issues",
                 "source": "https://github.com/OS2web/os2web_borgerdk/tree/master"
             },
-            "time": "2021-10-21T08:37:13+00:00"
+            "time": "2022-02-08T08:04:33+00:00"
         },
         {
             "name": "os2web/os2web_citizen_proposals",
@@ -13300,12 +13361,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "b8fb2f5d3775253b670c565a91c062aeef31dea4"
+                "reference": "4e67e77d1f4504071a3083920792f81c438f0f31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/b8fb2f5d3775253b670c565a91c062aeef31dea4",
-                "reference": "b8fb2f5d3775253b670c565a91c062aeef31dea4",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/4e67e77d1f4504071a3083920792f81c438f0f31",
+                "reference": "4e67e77d1f4504071a3083920792f81c438f0f31",
                 "shasum": ""
             },
             "require": {
@@ -13333,7 +13394,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2022-02-07T11:54:07+00:00"
+            "time": "2022-02-08T12:05:58+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
