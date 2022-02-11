@@ -2639,12 +2639,26 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   padding: 0 !important;
   box-shadow: none;
 }
-.paragraph--type--os2web-files-paragraph .file a {
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .file a {
   padding: 15px 50px 15px 15px;
   height: 100%;
   font-weight: normal;
   color: var(--primary);
   background-color: var(--white);
+}
+.paragraph--type--file-with-description {
+  font-weight: normal;
+  background-color: var(--white);
+  margin-bottom: 15px;
+}
+.paragraph--type--file-with-description a {
+  padding: 15px 0 0 15px;
+  color: var(--primary);
+  height: 100%;
+  font-weight: normal;
+}
+.paragraph--type--file-with-description .field--name-field-description {
+  padding: 0 50px 0 15px;
 }
 .paragraph--type--os2web-files-paragraph .file a:hover,
 .paragraph--type--os2web-files-paragraph .file a:focus {
