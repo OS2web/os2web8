@@ -40,7 +40,7 @@
 
     var element = this;
     var currentListItem = element.parentElement;
-    var listItems = document.querySelectorAll('.region-header__below .menu-level-0 > li.show-subnavigation');
+    var listItems = document.querySelectorAll('.paragraph--menu-link--view-mode--image ul > li.show-subnavigation');
 
     // Remove "show submenu" class from all list items.
     for (var i = 0; i < listItems.length; i++) {
@@ -61,11 +61,17 @@
     scroll();
   }
 
-  var links = document.querySelectorAll('.region-header__below .menu-level-0 > li > a');
+  var links = document.querySelectorAll('.paragraph--menu-link--view-mode--image ul > li > a');
 
   for (var i = 0; i < links.length; i++) {
     var link = links[i];
 
     link.addEventListener('click', handleToggle);
   }
+
+  var firstItem = document.querySelectorAll('.paragraph--menu-link--view-mode--image ul > li:first-child');
+  if (firstItem.length) {
+    firstItem[0].classList.toggle('show-subnavigation');
+  }
+
 })();
