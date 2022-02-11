@@ -2780,11 +2780,13 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   margin-top: 20px
 }
 .paragraph--image-position--right .field--name-field-os2web-cnt-link a,
-.paragraph--image-position--left .field--name-field-os2web-cnt-link a {
+.paragraph--image-position--left .field--name-field-os2web-cnt-link a,
+.paragraph--type--os2web-cnt-paragraph-reference .os2web_contact a {
   color: var(--primary);
   border-bottom: 1px dotted var(--dark-gray1);
   padding-right: 0;
   font-weight: normal;
+  text-decoration: none;
 }
 .paragraph--image-position--right .field--name-field-os2web-cnt-website,
 .paragraph--image-position--left .field--name-field-os2web-cnt-website,
