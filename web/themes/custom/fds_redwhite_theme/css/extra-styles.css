@@ -1987,6 +1987,9 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   border-bottom: 3px solid var(--gray1);
   margin-bottom: 30px;
 }
+.accordion .has-selfservice-links .selfservice-links {
+  display: none;
+}
 .accordion .field--type-text-with-summary {
   border-bottom: none;
 }
@@ -2840,9 +2843,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-image img {
     margin: 0;
   }
-}
-.node__content {
-  margin-bottom: 30px;
 }
 .node__content iframe {
   aspect-ratio: 71 / 40;
