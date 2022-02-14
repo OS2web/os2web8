@@ -2636,6 +2636,26 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--type-file > .field__item {
   margin-bottom: 15px;
 }
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading {
+  background: var(--white);
+  padding: 15px;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading h2 {
+  margin: 0;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files-descrip {
+  background: var(--white);
+  padding: 0 15px 15px;
+  margin-bottom: 30px;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files + .field--name-field-os2web-files-heading {
+  margin-top: -15px;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files + .field--name-field-os2web-files-files-descrip {
+  margin-top: -15px;
+}
+
+
 .paragraph--type--os2web-files-paragraph .file {
   height: 100%;
   margin: 0;
