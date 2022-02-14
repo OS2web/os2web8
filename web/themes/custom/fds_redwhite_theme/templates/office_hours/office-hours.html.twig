@@ -1,0 +1,27 @@
+<div class="office-hours">
+  {% for item in items %}
+    <div class="office-hours__item">
+      {% if item.label %}
+        {% if 'Lukket' in item.slots %}
+        {% else %}
+          <span class="office-hours__item-label" style="width: {{ label_length * 0.60 }}em;">{{ item.label }}</span>
+        {% endif %}
+      {% endif %}
+      {% if item.slots['#markup'] is not empty %}
+        {% if 'Lukket' in item.slots %}
+        {% else %}
+          <span class="office-hours__item-slots">{{ item.slots }}</span>
+        {% endif %}
+      {% endif %}
+      {% if item.comments['#markup'] is not empty %}
+        <span class="office-hours__item-comments">{{ item.comments }}</span>
+      {% endif %}
+      <span>{{ item_separator | raw }}</span>
+    </div>
+  {% endfor %}
+  {% if schema %}
+    {% for meta in schema %}
+      <meta property="openingHours" content="{{ meta.label }}{{ meta.slots }}">
+    {% endfor %}
+  {% endif %}
+</div>
