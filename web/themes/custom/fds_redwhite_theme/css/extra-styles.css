@@ -2632,6 +2632,19 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-factbox-paragraph h6 {
   margin-top: 0;
 }
+.paragraph--type--os2web-files-paragraph {
+  display: flex;
+  flex-direction: column;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files {
+  order: 1;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading {
+  order: 2;
+}
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files-descrip {
+  order: 3;
+}
 .paragraph--type--os2web-files-paragraph .field--type-file > .field__items > .field__item,
 .paragraph--type--os2web-files-paragraph .field--type-file > .field__item {
   margin-bottom: 15px;
