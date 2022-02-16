@@ -170,7 +170,12 @@ h1 {
   margin-top: 2.8rem;
 }
 .entity-default--os2web-simple-text-paragraph {
-  margin: 0 0 30px;
+  margin: 0 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .entity-default--os2web-simple-text-paragraph {
+    margin: 0 0 30px;
+  }
 }
 a,
 a:visited {
@@ -211,7 +216,7 @@ svg.ext {
 .tabnav-panel:not(.field--widget-text-textarea) ul li,
 .field--type-text-long:not(.field--widget-text-textarea) ul li {
   margin-top: 8px;
-  padding-left: 20px !important;
+  padding-left: 25px !important;
   line-height: 2.2rem;
 }
 .accordion-content:not(.field--widget-text-textarea) ul li::before,
@@ -219,10 +224,23 @@ svg.ext {
 .field--type-text-long:not(.field--widget-text-textarea) ul li::before {
   font: normal normal normal 14px/1 FontAwesome;
   content: "\f111" !important;
-  left: 0;
-  top: 5px;
-  font-size: 8px;
+  left: 10px;
+  top: 8px;
+  font-size: 6px;
   color: var(--dark-gray2);
+}
+.field--name-field-os2web-page-description {
+  margin-bottom: 45px;
+}
+.field--name-field-os2web-page-description h2 {
+  font-size: 22px !important;
+  font-family: 'Museo 500';
+  font-weight: 500;
+}
+.field--name-field-os2web-page-description h3 {
+  font-size: 18px !important;
+  font-family: 'Museo 500';
+  font-weight: 500;
 }
 .field--name-field-os2web-page-description a {
   color: var(--primary);
@@ -238,6 +256,17 @@ svg.ext {
 }
 .field--name-field-os2web-page-description a::after {
   display: none;
+}
+.field--name-field-os2web-page-description a[href$=".pdf"]::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 4px;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
 }
 .field--name-field-os2web-page-intro + .field,
 .field--type-text-with-summary {
@@ -255,9 +284,6 @@ svg.ext {
 /* .entity-full--os2web-page {
   margin-bottom: 45px;
 } */
-.field--name-field-os2web-page-description {
-  margin-bottom: 45px;
-}
 
 /*FORM-INPUT*/
 .form-input,
@@ -1185,10 +1211,25 @@ body.path-frontpage .region-featured-bottom-first {
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none;
-}
+  }
 }
 
 /*FRONT-NYHEDER*/
+@media screen and (max-width: 767px) {
+  .news::after {
+    content: "";
+    background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -112px 0;
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 18px;
+    height: 45px;
+  }
+  .news.open::after {
+    display: none;
+  }
+}
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
   padding-bottom: 30px;
   border-bottom: 20px solid var(--light-gray1);
@@ -1266,15 +1307,23 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .news {
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .readmore {
   display: none;
 }
+body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .news.open .readmore {
+  display: block;
+}
 body.path-frontpage .field--name-field-os2web-column-1 .news::after {
   content: "";
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -112px 0;
   display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   width: 18px;
   height: 45px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   content: "";
@@ -2667,8 +2716,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files + .field--name-field-os2web-files-files-descrip {
   margin-top: -15px;
 }
-
-
 .paragraph--type--os2web-files-paragraph .file {
   height: 100%;
   margin: 0;
