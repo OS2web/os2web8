@@ -221,7 +221,8 @@
             "drupal/core": {
                 "Notice: Undefined index: value in Drupal\\views\\Plugin\\views\\filter\\NumericFilter->acceptExposedInput()" : "https://www.drupal.org/files/issues/2020-06-04/2825860-exposed-filter-notice-38.patch",
                 "Allow edit Media items from Media Library modal dialog in CKEditor" : "https://www.drupal.org/files/issues/2021-04-21/3168868-13_0.patch",
-                "2961554 - Display node title by default when creating link with drupalink, allow configuration." : "https://www.drupal.org/files/issues/2021-10-14/2741945-92_1.patch"
+                "2961554 - Display node title by default when creating link with drupalink, allow configuration." : "https://www.drupal.org/files/issues/2021-10-14/2741945-92_1.patch",
+                "2449895 Imported PO files have no public URL but have a link at admin/content/files" : "https://www.drupal.org/files/issues/2020-06-01/2449895-2-80.patch"
             },
             "drupal/printable": {
                 "3214729 PDF filename is generated with it's location" : "https://git.drupalcode.org/issue/printable-3214729/-/commit/cbc98dbe864f82b4cc1da110d88097d0c4740bb9.patch",
