@@ -2802,67 +2802,53 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .contactperson .field--name-field-os2web-cnt-link a::after {
   display: none;
 }
-.paragraph--image-position--right a,
-.paragraph--image-position--left a {
+.paragraph--type--os2web-cnt-paragraph a {
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
 }
-.paragraph--image-position--right,
-.paragraph--image-position--left {
+.paragraph--type--os2web-cnt-paragraph {
   border-top: 1px solid var(--dark-gray1);
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--dark-gray1);
 }
-.paragraph--image-position--right .spacer,
-.paragraph--image-position--left .spacer {
+.paragraph--type--os2web-cnt-paragraph .spacer {
   margin-top: 30px;
 }
-.paragraph--image-position--right .row,
-.paragraph--image-position--left .row {
+.paragraph--type--os2web-cnt-paragraph .row {
   align-items: flex-start;
 }
-.paragraph--image-position--right .field--name-field-postnummer,
-.paragraph--image-position--left .field--name-field-postnummer,
-.paragraph--image-position--right .field--name-field-by,
-.paragraph--image-position--left .field--name-field-by {
+.paragraph--type--os2web-cnt-paragraph .field--name-field-fornavn,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-efternavn,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-postnummer,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-by {
   display: inline-block;
 }
-.paragraph--image-position--right h2,
-.paragraph--image-position--left h2 {
+.paragraph--type--os2web-cnt-paragraph h2 {
   margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 30px;
 }
-.paragraph--image-position--right .field--name-field-os2web-cnt-body a,
-.paragraph--image-position--left .field--name-field-os2web-cnt-body a {
+.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-body a {
   border-bottom: 1px dotted var(--dark-gray1);
 }
-.paragraph--image-position--right .field--name-field-os2web-cnt-body a::after,
-.paragraph--image-position--left .field--name-field-os2web-cnt-body a::after {
+.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-body a::after {
   display: none;
 }
-.paragraph--image-position--right .office-hours__item-label,
-.paragraph--image-position--left .office-hours__item-label {
+.paragraph--type--os2web-cnt-paragraph .office-hours__item-label {
   font-weight: normal;
   width: 5em !important;
 }
-.paragraph--image-position--right .office-hours__item-slots,
-.paragraph--image-position--left .office-hours__item-slots {
+.paragraph--type--os2web-cnt-paragraph .office-hours__item-slots {
   width: 6.5em;
 }
-.paragraph--image-position--right .office-hours__item-comments,
-.paragraph--image-position--left .office-hours__item-comments {
+.paragraph--type--os2web-cnt-paragraph .office-hours__item-comments {
   font-style: italic;
 }
-.paragraph--image-position--right .os2web_cnt_space,
-.paragraph--image-position--left .os2web_cnt_space {
+.paragraph--type--os2web-cnt-paragraph .os2web_cnt_space {
   margin-top: 30px;
 }
-.paragraph--image-position--right .field--name-field-os2web-cnt-phone,
-.paragraph--image-position--left .field--name-field-os2web-cnt-phone {
-  margin-top: 20px
-}
-.paragraph--image-position--right .field--name-field-os2web-cnt-link a,
-.paragraph--image-position--left .field--name-field-os2web-cnt-link a,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-link a,
 .paragraph--type--os2web-cnt-paragraph-reference .os2web_contact a {
   color: var(--primary);
   border-bottom: 1px dotted var(--dark-gray1);
@@ -2870,44 +2856,15 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   font-weight: normal;
   text-decoration: none;
 }
-.paragraph--image-position--right .field--name-field-os2web-cnt-website,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-website,
 .paragraph--image-position--left .field--name-field-os2web-cnt-website,
-.paragraph--image-position--right .field--name-field-os2web-cnt-facebook,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-facebook,
 .paragraph--image-position--left .field--name-field-os2web-cnt-facebook {
   word-break: break-all;
 }
-.paragraph--image-position--right .field--name-field-os2web-cnt-link a::after,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-link a::after,
 .paragraph--image-position--left .field--name-field-os2web-cnt-link a::after {
   display: none;
-}
-.paragraph--type--os2web-cnt-paragraph.paragraph--image-position--right .field--name-field-os2web-cnt-image {
-  margin: 0;
-  float: none;
-}
-.paragraph--type--os2web-cnt-paragraph.paragraph--image-position--left .field--name-field-os2web-cnt-image {
-  margin: 0;
-  float: none;
-}
-.paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-image img {
-  width: 100%;
-  margin: 15px 0;
-}
-.paragraph--type--os2web-cnt-paragraph.paragraph--image-position--right .os2web_cnt_image {
-  order: 2;
-}
-.paragraph--type--os2web-cnt-paragraph.paragraph--image-position--right .os2web_cnt_body {
-  order: 1;
-}
-.paragraph--type--os2web-cnt-paragraph.paragraph--image-position--left .os2web_cnt_image {
-  order: 1;
-}
-.paragraph--type--os2web-cnt-paragraph.paragraph--image-position--left .os2web_cnt_body {
-  order: 2;
-}
-@media screen and (min-width: 576px) {
-  .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-image img {
-    margin: 0;
-  }
 }
 .node__content iframe {
   aspect-ratio: 71 / 40;

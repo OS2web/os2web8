@@ -26,18 +26,6 @@
         {{ content.field_fornavn }} {{ content.field_efternavn }}
         {# End - Fornavn Efternavn #}
 
-        {# Begin - Jobtitel #}
-        {{ content.jobtitel }}
-        {# End - Jobtitel#}
-
-        {# Begin - Arbejdsopgaver #}
-        {{ content.arbejdsopgaver }}
-        {# End - Arbejdsopgaver#}
-
-        {# Begin - Beskrivelse #}
-        {{ content.beskrivelse }}
-        {# End - beskrivelse#}
-
         {# Begin - address #}
         {{ content.field_adresse }}
         {# End - address #}
@@ -46,9 +34,23 @@
         {{ content.field_postnummer }} {{ content.field_by }}
         {# End -city #}
 
+        <div class="spacer"></div>
+
+        {# Begin - Jobtitel #}
+        {{ content.field_jobtitel }}
+        {# End - Jobtitel#}
+
+        {# Begin - Arbejdsopgaver #}
+        {{ content.field_arbejdsopgaver }}
+        {# End - Arbejdsopgaver#}
+
+        {# Begin - Beskrivelse #}
+        {{ content.field_beskrivelse }}
+        {# End - beskrivelse#}
+
         {# Begin - phone #}
         <div class="field--name-field-os2web-cnt-phone">
-          {{ 'Tel.' | t }}: {{ content.field_os2web_cnt_phone|render|striptags|trim }}
+          {{ 'Tlf.' | t }}: {{ content.field_os2web_cnt_phone|render|striptags|trim }}
         </div>
         {# End - phone #}
 
@@ -64,7 +66,7 @@
 
         {# Begin - Mobilnummer #}
         <div>
-          {{ 'Mobile' | t }}: {{ content.field_mobilnummer|render|striptags|trim }}
+          {{ 'Mobil' | t }}: {{ content.field_mobilnummer|render|striptags|trim }}
         </div>
         {# End - Mobilnummer#}
 
@@ -79,17 +81,6 @@
           {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_cnt_email.0 }}">{{ content.field_os2web_cnt_email.0|render|striptags|trim }}</a>
         </div>
         {# End - email #}
-      </div>
-
-      <div class="col-12 col-sm-6">
-        {# Begin - open_hours #}
-        {{ content.field_os2web_cnt_open_hours }}
-        {# End - open_hours #}
-      </div>
-
-      <div class="col-12 spacer"></div>
-
-      <div class="col-12 col-sm-9 os2web_cnt_body">
 
         {# Begin - website #}
         {% if content.field_os2web_cnt_website %}
@@ -107,6 +98,15 @@
         {% endif %}
         {# End - facebook #}
       </div>
+
+      <div class="col-12 col-sm-6">
+        {# Begin - open_hours #}
+        {{ content.field_os2web_cnt_open_hours }}
+        {# End - open_hours #}
+      </div>
+
+      <div class="col-12 spacer"></div>
+
       <div class="col-12 os2web_cnt_body">
         <p>Hvis du ønsker at sende følsomme eller fortrolige oplysninger til Ringsted Kommune, eksempelvis dit cpr.nr., oplysninger om dine helbredsforhold eller økonomiske situation, anbefales du at gøre det via e-boks. <a href="#">Læs om beskyttelse af persondata</a></p>
         {# Begin - body #}
