@@ -1501,6 +1501,10 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   border-bottom: none;
   padding-bottom: 0 !important;
 }
+
+#block-selvbetjening h2{
+  font-size: 32px;
+}
 #block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a {
   color: var(--primary);
