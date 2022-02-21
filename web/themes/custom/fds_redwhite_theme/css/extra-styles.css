@@ -2129,16 +2129,16 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .path-node-2348 .paragraph--menu-link--view-mode--image {
   background-image: url("/sites/default/files/2021-12/sne_paa_grangraene_web.jpg");
 }
-.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic,
-.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(8) .entry-graphic {
+.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-graphic,
+.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic {
   width: 120px;
   aspect-ratio: auto 500 / 216;
 }
-.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-text,
-.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(8) .entry-text {
+.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-text,
+.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-text {
   margin-top: 0;
 }
-.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic::after {
+.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-graphic::after {
   background-image: url("/sites/default/files/2022-01/flyttil.jpeg");
   width: 100%;
   height: 100%;
@@ -2148,7 +2148,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   content: "";
   background-size: cover;
 }
-.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(8) .entry-graphic::after {
+.path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic::after {
   background-image: url("/sites/default/files/2022-01/job_og_karriere_i_ringsted_kommune.jpeg");
   width: 100%;
   height: 100%;
@@ -2270,12 +2270,12 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic,
-  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(8) .entry-graphic {
+  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-graphic,
+  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic {
     width: 100%;
   }
-  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-text,
-  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(8) .entry-text {
+  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-text,
+  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-text {
     margin-top: 8px;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
@@ -2303,7 +2303,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
     padding-top: 30px;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .taxonomy-pic .field--name-field-os2web-icon .field--name-field-os2web-banner-image {
-    margin-top: -55px;
+    margin-top: -30px;
     width: auto;
   }
 }
@@ -2402,20 +2402,40 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .banner__actions .button-primary:focus::before {
   background-position: -19px -47px;
 }
+.banner__actions .field__item {
+  margin-right: 1.52905%;
+  width: 46%;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  border: 0 none;
+  margin-bottom: 5px;
+}
+.banner__actions .inline-list li + li {
+  margin-top: 0;
+}
 .region-featured-top .banner__box .field--type-text-long a {
   font-weight: 400;
 }
 .region-featured-top .banner__box h2 {
   font-size: 30px;
   line-height: 1em;
+  color: #333;
+}
+@media screen and (max-width: 480px) {
+  .banner__actions .inline-list li {
+    width: 100%;
+    margin-right: 1.52905%;
+  }
+  .banner__actions .inline-list li + li {
+    margin-top: 5px;
+  }
 }
 @media screen and (min-width: 576px) {
   .region-featured-top .banner__box h2 {
     font-size: calc(40px + 6 * ((100vw - 576px) / 680));
   }
-}
-@media screen and (min-width: 768px) {
-
 }
 @media screen and (min-width: 1140px) {
   .region-featured-top .banner__box h2 {
