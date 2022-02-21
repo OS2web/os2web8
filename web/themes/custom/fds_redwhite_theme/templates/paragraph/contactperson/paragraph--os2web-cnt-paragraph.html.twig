@@ -19,68 +19,104 @@
 
       <div class="col-12 col-sm-6">
         {# Begin - subheading #}
-        {{ content.field_os2web_cnt_subheading }}
+        {% if content.field_os2web_cnt_subheading %}
+          {{ content.field_os2web_cnt_subheading }}
+        {% endif %} 
         {# End - subheading #}
 
         {# Begin - Fornavn Efternavn #}
-        {{ content.field_fornavn }} {{ content.field_efternavn }}
+        {% if content.field_fornavn and content.field_efternavn %}
+          {{ content.field_fornavn }} {{ content.field_efternavn }}
+        {% endif %}
         {# End - Fornavn Efternavn #}
 
         {# Begin - address #}
-        {{ content.field_adresse }}
+        {% if content.field_adresse %}
+          {{ content.field_adresse }}
+        {% endif %} 
         {# End - address #}
 
         {# Begin - zipcode city #}
-        {{ content.field_postnummer }} {{ content.field_by }}
+        {% if content.field_postnummer and content.field_by %}
+          {{ content.field_postnummer }} {{ content.field_by }}
+        {% endif %}
         {# End -city #}
 
         <div class="spacer"></div>
 
         {# Begin - Jobtitel #}
-        {{ content.field_jobtitel }}
+        {% if content.field_jobtitel %}
+          {{ content.field_jobtitel }}
+        {% endif %} 
         {# End - Jobtitel#}
 
         {# Begin - Arbejdsopgaver #}
-        {{ content.field_arbejdsopgaver }}
+        {% if content.field_arbejdsopgaver %}
+          {{ content.field_arbejdsopgaver }}
+        {% endif %} 
         {# End - Arbejdsopgaver#}
 
         {# Begin - Beskrivelse #}
-        {{ content.field_beskrivelse }}
+        {% if content.field_beskrivelse %}
+          {{ content.field_beskrivelse }}
+        {% endif %} 
         {# End - beskrivelse#}
 
         {# Begin - phone #}
-        <div class="field--name-field-os2web-cnt-phone">
-          {{ 'Tlf.' | t }}: {{ content.field_os2web_cnt_phone|render|striptags|trim }}
-        </div>
+        {% if content.field_os2web_cnt_phone %}
+          <div class="field--name-field-os2web-cnt-phone">
+            {{ 'Tlf.' | t }}: {{ content.field_os2web_cnt_phone|render|striptags|trim }}
+          </div>
+        {% endif %}  
         {# End - phone #}
 
         {# Begin - Hovednummer #}
-        <div>
-          {{ 'Dir.' | t }}: {{ content.field_hovednummer|render|striptags|trim }}
-        </div>
+        {% if content.field_hovednummer %}
+          <div>
+            {{ 'Dir.' | t }}: {{ content.field_hovednummer|render|striptags|trim }}
+          </div>
+        {% endif %}  
         {# End - Hovednummer#}
 
         {# Begin - Direkte nummer #}
-        {{ content.direkte_nummer }}
+        {% if content.direkte_nummer %}
+          <div>
+            {{ content.direkte_nummer }}
+          </div>
+        {% endif %}        
         {# End - Direkte nummer#}
 
         {# Begin - Mobilnummer #}
-        <div>
-          {{ 'Mobil' | t }}: {{ content.field_mobilnummer|render|striptags|trim }}
-        </div>
+        {% if content.field_mobilnummer %}
+          <div>
+            {{ 'Mobil' | t }}: {{ content.field_mobilnummer|render|striptags|trim }}
+          </div>
+        {% endif %}
         {# End - Mobilnummer#}
 
         {# Begin - Fax #}
-        <div>
-          {{ 'Fax' | t }}: {{ content.field_fax|render|striptags|trim }}
-        </div>
+        {% if content.field_fax %}
+          <div>
+            {{ 'Fax' | t }}: {{ content.field_fax|render|striptags|trim }}
+          </div>
+        {% endif %}
         {# End - Fax#}
 
         {# Begin - email #}
-        <div>
-          {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_cnt_email.0 }}">{{ content.field_os2web_cnt_email.0|render|striptags|trim }}</a>
-        </div>
+        {% if content.field_os2web_cnt_email %}
+          <div>
+            {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_cnt_email.0 }}">{{ content.field_os2web_cnt_email.0|render|striptags|trim }}</a>
+          </div>
+        {% endif %}
         {# End - email #}
+
+        {# Begin - link #}
+        {% if content.field_os2web_cnt_link %}
+          <div>
+            {{ content.field_os2web_cnt_link }}
+          </div>
+        {% endif %}
+        {# End - link #}
 
         {# Begin - website #}
         {% if content.field_os2web_cnt_website %}
@@ -110,12 +146,12 @@
       <div class="col-12 os2web_cnt_body">
         <p>Hvis du ønsker at sende følsomme eller fortrolige oplysninger til Ringsted Kommune, eksempelvis dit cpr.nr., oplysninger om dine helbredsforhold eller økonomiske situation, anbefales du at gøre det via e-boks. <a href="#">Læs om beskyttelse af persondata</a></p>
         {# Begin - body #}
-        {{ content.field_os2web_cnt_body }}
+        {% if content.field_os2web_cnt_body %}
+          <div>
+            {{ content.field_os2web_cnt_body }}
+          </div>
+        {% endif %}
         {# End - body #}
-
-        {# Begin - link #}
-        {{ content.field_os2web_cnt_link }}
-        {# End - link #}
       </div>
     </div>
 
