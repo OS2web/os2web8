@@ -2402,20 +2402,40 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .banner__actions .button-primary:focus::before {
   background-position: -19px -47px;
 }
+.banner__actions .field__item {
+  margin-right: 1.52905%;
+  width: 46%;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  border: 0 none;
+  margin-bottom: 5px;
+}
+.banner__actions .inline-list li + li {
+  margin-top: 0;
+}
 .region-featured-top .banner__box .field--type-text-long a {
   font-weight: 400;
 }
 .region-featured-top .banner__box h2 {
   font-size: 30px;
   line-height: 1em;
+  color: #333;
+}
+@media screen and (max-width: 480px) {
+  .banner__actions .inline-list li {
+    width: 100%;
+    margin-right: 1.52905%;
+  }
+  .banner__actions .inline-list li + li {
+    margin-top: 5px;
+  }
 }
 @media screen and (min-width: 576px) {
   .region-featured-top .banner__box h2 {
     font-size: calc(40px + 6 * ((100vw - 576px) / 680));
   }
-}
-@media screen and (min-width: 768px) {
-
 }
 @media screen and (min-width: 1140px) {
   .region-featured-top .banner__box h2 {
