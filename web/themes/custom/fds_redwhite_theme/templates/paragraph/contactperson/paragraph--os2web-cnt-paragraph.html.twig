@@ -65,7 +65,7 @@
         {# Begin - phone #}
         {% if content.field_os2web_cnt_phone %}
           <div class="field--name-field-os2web-cnt-phone">
-            {{ 'Tlf.' | t }}: {{ content.field_os2web_cnt_phone|render|striptags|trim }}
+            {{ 'Tlf.' | t }}: {{ content.field_os2web_cnt_phone.0|render|striptags|trim }}
           </div>
         {% endif %}  
         {# End - phone #}
@@ -105,7 +105,7 @@
         {# Begin - email #}
         {% if content.field_os2web_cnt_email %}
           <div>
-            {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_cnt_email.0 }}">{{ content.field_os2web_cnt_email.0|render|striptags|trim }}</a>
+            {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_cnt_email.0|render|striptags|trim }}">{{ content.field_os2web_cnt_email.0|render|striptags|trim }}</a>
           </div>
         {% endif %}
         {# End - email #}

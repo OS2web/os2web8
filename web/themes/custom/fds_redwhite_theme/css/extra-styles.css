@@ -74,6 +74,9 @@
 html {
   font-family: "MuseoSans", "Helvetica", "Arial", sans-serif;
 }
+.container {
+  max-width: 1013px;
+}
 a:focus, a.link-focus {
   color: var(--primary);
 }
@@ -635,6 +638,7 @@ form#views-exposed-form-os2web-search-os2web-search-page .form-actions .form-sub
 }
 .custom-header__logo img {
   height: 70px;
+  margin-bottom: 10px;
 }
 .custom-header__inner {
   background: var(--white);
@@ -789,7 +793,7 @@ a.entity-teaser--os2web-meetings-meeting:focus {
 }
 @media screen and (min-width: 1200px) {
   .custom-header__inner {
-    padding: 30px 0 0;
+    padding: 27px 0 0;
   }
   .custom-header__logo img {
     height: 97px;
@@ -1501,7 +1505,6 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   border-bottom: none;
   padding-bottom: 0 !important;
 }
-
 #block-selvbetjening h2{
   font-size: 32px;
 }
@@ -2180,7 +2183,8 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   z-index: 1;
 }
 .paragraph--menu-link--view-mode--image .entry {
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
+  max-width: 632px;
 }
 .paragraph--menu-link--view-mode--image .entry .entrywrap {
   background-color: rgba(255, 255, 255, 0.8);
@@ -2275,7 +2279,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
     margin-top: 8px;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
-    margin: 15px 15px 50px;
+    margin: 21px 10px 20px;
     font-size: 20px;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .entry-graphic {
@@ -2296,21 +2300,23 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
     width: auto;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .taxonomy-pic .field--name-field-os2web-icon {
-    padding-top: 55px;
+    padding-top: 30px;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .taxonomy-pic .field--name-field-os2web-icon .field--name-field-os2web-banner-image {
     margin-top: -55px;
     width: auto;
   }
 }
-@media screen and (min-width: 1330px) {
+@media screen and (min-width: 980px) {
   body.path-frontpage .paragraph--menu-link--view-mode--image {
-    margin: 6px -100px 0;
+    margin: 4px -110px 0;
   }
   .paragraph--menu-link--view-mode--image {
-    padding: 45px 0 35px;
-    margin: 5px -100px 0;
+    padding: 45px 0 30px;
+    margin: 3px -110px 0;
   }
+}
+@media screen and (min-width: 1200px) {
   .paragraph--menu-link--view-mode--image::before {
     display: none;
   }
@@ -2331,9 +2337,9 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   height: 450px;
   background-size: cover;
   background-position: center;
-  max-width: calc(1288px + 200px);
+  max-width: 1200px;
   margin: 0 auto -1px;
-  padding: 40px 0;
+  padding: 37px 0;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -2341,7 +2347,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   -o-transition: all 0.2s ease-in-out;
 }
 .region-featured-top .banner__box {
-  padding: 40px 40px 60px;
+  padding: 40px 37px 60px;
   background: rgba(255, 255, 255, 0.8);
   margin-left: 0;
   transition: all 0.2s ease-in-out;
@@ -2416,12 +2422,12 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
     font-size: 50px;
   }
 }
-@media screen and (min-width: 1380px) {
+@media screen and (min-width: 980px) {
   .entity-default--os2web-banner-paragraph {
-    height: 640px;
+    height: 520px;
   }
   .region-featured-top .banner__box {
-    margin-left: -40px;
+    margin-left: -37px;
     max-width: calc(50% + 40px);
   }
 }
@@ -2810,25 +2816,32 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
 }
-.paragraph--type--os2web-cnt-paragraph {
+.paragraph--type--os2web-cnt-paragraph,
+.os2web_contact {
   border-top: 1px solid var(--dark-gray1);
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--dark-gray1);
 }
-.paragraph--type--os2web-cnt-paragraph .spacer {
+.paragraph--type--os2web-cnt-paragraph .spacer,
+.os2web_contact .spacer {
   margin-top: 30px;
 }
 .paragraph--type--os2web-cnt-paragraph .row {
   align-items: flex-start;
 }
 .paragraph--type--os2web-cnt-paragraph .field--name-field-fornavn,
+.os2web_contact .field--name-field-fornavn,
 .paragraph--type--os2web-cnt-paragraph .field--name-field-efternavn,
+.os2web_contact .field--name-field-efternavn,
 .paragraph--type--os2web-cnt-paragraph .field--name-field-postnummer,
-.paragraph--type--os2web-cnt-paragraph .field--name-field-by {
+.os2web_contact .field--name-field-postnummer,
+.paragraph--type--os2web-cnt-paragraph .field--name-field-by,
+.os2web_contact .field--name-field-by {
   display: inline-block;
 }
-.paragraph--type--os2web-cnt-paragraph h2 {
+.paragraph--type--os2web-cnt-paragraph h2,
+.os2web_contact h2 {
   margin-top: 0;
   margin-bottom: 35px;
   font-size: 32px;
@@ -3262,6 +3275,9 @@ footer .footer a:focus {
   color: var(--primary);
   border-bottom: none;
 }
+.footer-col {
+  padding-top: 0;
+}
 .footer-col + .footer-col {
   border-left: none;
 }
@@ -3286,6 +3302,7 @@ footer .footer .footer-col:not(:first-child) {
 /* FOOTER MENU DROPDOWN */
 .footer .block-menu.navigation .menu-item--expanded {
   position: relative;
+  margin-top: 40px;
   margin-bottom: 10px;
   display: inline-block;
   background: #fff;
