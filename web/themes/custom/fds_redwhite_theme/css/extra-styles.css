@@ -2939,6 +2939,17 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   font-size: 32px;
   margin: 0 0 30px;
 }
+.node__content > .field > .field__item h3 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Museo 500';
+  font-weight: 500;
+}
+.node__content .field .field__item .spotbox h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 .node__content iframe {
   aspect-ratio: 71 / 40;
 	height: 100%;
