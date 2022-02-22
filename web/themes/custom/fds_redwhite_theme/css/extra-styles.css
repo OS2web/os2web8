@@ -2390,7 +2390,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   position: relative;
   font-size: 16px;
   font-size: 1rem;
-  color: #c5062d;
+  color: #c5062d !important;
   text-decoration: none;
   background: transparent;
   padding: 0;
@@ -2417,6 +2417,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .banner__actions .button-primary:hover,
 .banner__actions .button-primary:focus {
   background: transparent;
+  color: #333 !important;
 }
 .banner__actions .button-primary:hover::before,
 .banner__actions .button-primary:focus::before {
@@ -2738,10 +2739,10 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading {
   order: 0;
 }
-.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading h2 {
+/* .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading h2 {
   margin: 0 0 30px;
   font-size: 30px;
-}
+} */
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files {
   margin: 0;
   border: 1px solid var(--light-gray2);
@@ -2856,13 +2857,13 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
 }
-.paragraph--type--os2web-cnt-paragraph,
+/* .paragraph--type--os2web-cnt-paragraph,
 .os2web_contact {
   border-top: 1px solid var(--dark-gray1);
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--dark-gray1);
-}
+} */
 .paragraph--type--os2web-cnt-paragraph .spacer,
 .os2web_contact .spacer {
   margin-top: 30px;
@@ -2880,12 +2881,12 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .os2web_contact .field--name-field-by {
   display: inline-block;
 }
-.paragraph--type--os2web-cnt-paragraph h2,
+/* .paragraph--type--os2web-cnt-paragraph h2,
 .os2web_contact h2 {
   margin-top: 0;
   margin-bottom: 35px;
   font-size: 32px;
-}
+} */
 .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-body a {
   border-bottom: 1px dotted var(--dark-gray1);
 }
@@ -2922,6 +2923,20 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-link a::after,
 .paragraph--image-position--left .field--name-field-os2web-cnt-link a::after {
   display: none;
+}
+.node__content > .field > .field__item {
+  border-top: 1px solid var(--dark-gray1);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--dark-gray1);
+}
+.node__content > .field > .field__item + .field__item {
+  border-top: none;
+  padding-top: 0;
+}
+.node__content > .field > .field__item h2 {
+  font-size: 32px;
+  margin: 0 0 30px;
 }
 .node__content iframe {
   aspect-ratio: 71 / 40;
