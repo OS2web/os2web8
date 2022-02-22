@@ -217,7 +217,7 @@
                 "2449895 Imported PO files have no public URL but have a link at admin/content/files" : "https://www.drupal.org/files/issues/2021-12-19/2449895_92.patch"
             },
             "drupal/printable": {
-                "3214729 PDF filename is generated with it's location" : "https://git.drupalcode.org/issue/printable-3214729/-/commit/cbc98dbe864f82b4cc1da110d88097d0c4740bb9.patch"
+                "3214729 PDF filename is generated with it's location" : "./patches/3214729_pdf_filename_generated_with_its_location.patch"
             },
             "drupal/scheduler_content_moderation_integration" : {
                 "Widget error when field is overridden - undefined offset 0 in $form['publish_state']" : "https://www.drupal.org/files/issues/2020-06-30/3077147-28.patch"
