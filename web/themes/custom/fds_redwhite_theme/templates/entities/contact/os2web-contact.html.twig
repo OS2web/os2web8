@@ -100,7 +100,7 @@
         {# Begin - website #}
         {% if content.field_os2web_contact_website %}
           <div>
-            <a href="{{ content.field_os2web_contact_website.0 }}" target="_blank">{{ paragraph.field_os2web_contact_website.0.value|trim('https://')|trim('http://')}}</a>
+            <a href="{{ content.field_os2web_contact_website.0 }}" target="_blank">{{  content.field_os2web_contact_website.0|render|striptags|trim('https://')|trim('http://')}}</a>
           </div>
         {% endif %}
         {# End - website #}
