@@ -75,7 +75,7 @@ html {
   font-family: "MuseoSans", "Helvetica", "Arial", sans-serif;
 }
 .container {
-  max-width: 1013px;
+  max-width: 1009px;
 }
 a:focus, a.link-focus {
   color: var(--primary);
@@ -562,8 +562,8 @@ header div.custom-header {
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
   border-radius: 100%;
-  margin-left: 10px;
-  margin-bottom: -11px;
+  margin-left: 9px;
+  margin-bottom: -10px;
 }
 .custom-header__button--toggle-search .fa-search:before {
   display: none;
@@ -1045,7 +1045,7 @@ body.path-frontpage .region-featured-bottom-first {
 
 /*SPOTBOX-REFERENCE*/
 .entity-default--os2web-spotbox-reference {
-  padding: 45px 0;
+  padding: 45px 4px;
 }
 .entity-default--os2web-spotbox-reference #tns1-iw {
   margin: 0 -7.5px;
@@ -2330,11 +2330,11 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 @media screen and (min-width: 980px) {
   body.path-frontpage .paragraph--menu-link--view-mode--image {
-    margin: 4px -110px 0;
+    margin: 4px -112.4px 0;
   }
   .paragraph--menu-link--view-mode--image {
     padding: 45px 0 30px;
-    margin: 3px -110px 0;
+    margin: 3px -112.4px 0;
   }
 }
 @media screen and (min-width: 1200px) {
