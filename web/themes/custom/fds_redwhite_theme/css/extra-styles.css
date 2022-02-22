@@ -111,6 +111,7 @@ h1 {
 }
 .node__content > .field--name-field-os2web-page-primaryimage {
   margin-right: 0;
+  margin-bottom: 30px;
 }
 .field--type-text-long a {
   font-weight: 400;
@@ -2136,7 +2137,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-text,
 .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-text {
-  margin-top: 0;
+  margin-top: 2px;
 }
 .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-graphic::after {
   background-image: url("/sites/default/files/2022-01/flyttil.jpeg");
@@ -2228,6 +2229,22 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   float: left;
 }
 .paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
+  display: table-cell;
+  font-family: 'Museo 500';
+  font-weight: 500;
+  font-style: normal;
+  vertical-align: middle;
+  height: 60px;
+  padding: 0;
+  width: 100%;
+  color: #c5062d;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  word-break: break-word;
+}
+/* .paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
   font-size: 18px;
   font-family: 'Museo 500';
   font-weight: 500;
@@ -2236,7 +2253,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   color: var(--primary);
   text-decoration: none;
   word-break: break-word;
-}
+} */
 .paragraph--menu-link--view-mode--image .entry .entrywrap .global-link {
   display: block;
   height: 100%;
@@ -2274,10 +2291,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-graphic {
     width: 100%;
   }
-  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(6) .entry-text,
-  .path-node-2348 .paragraph--menu-link--view-mode--image .entry:nth-of-type(7) .entry-text {
-    margin-top: 8px;
-  }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .h3 {
     margin: 21px 10px 20px;
     font-size: 20px;
@@ -2287,8 +2300,13 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
     padding: 0;
     float: none;
   }
-  .paragraph--menu-link--view-mode--image .entry .entrywrap .entry-text {
+/*   .paragraph--menu-link--view-mode--image .entry .entrywrap .entry-text {
     display: block;
+    float: none;
+  } */
+  .paragraph--menu-link--view-mode--image .entry .entrywrap .entry-text {
+    display: table;
+    width: 100%;
     float: none;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .taxonomy-pic .menu-icon-wrapper {
@@ -2301,9 +2319,11 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .taxonomy-pic .field--name-field-os2web-icon {
     padding-top: 30px;
+    padding-bottom: 5px;
   }
   .paragraph--menu-link--view-mode--image .entry .entrywrap .taxonomy-pic .field--name-field-os2web-icon .field--name-field-os2web-banner-image {
     margin-top: -30px;
+    margin-bottom: -10px;
     width: auto;
   }
 }
@@ -2988,6 +3008,11 @@ table tbody th {
 .field--name-field-os2web-bdk-article .spotbox--button.spotbox:hover .spotbox__content h3::before,
 .field--name-field-os2web-bdk-article .spotbox--button.spotbox:focus .spotbox__content h3::before {
   background-position: -19px -48px;
+}
+@media screen and (max-width: 767px) {
+  p, ul:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.nav-primary):not(.inline-list):not(.tabnav):not(.sidenav-list):not(.sidenav-sub_list), ol:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.sidenav-list) {
+    max-width: none;
+  }
 }
 
 /*SØGERESULTATER*/
