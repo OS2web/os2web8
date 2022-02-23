@@ -89,13 +89,13 @@
         {% endif %}
         {# End - email #}
 
-        {# Begin - link #}
-        {% if content.field_os2web_contact_link %}
+        {# Begin - secure mail link #}
+        {% if content.field_os2web_contact_secure_mail %}
           <div>
-            {{ content.field_os2web_contact_link }}
+            {{ content.field_os2web_contact_secure_mail }}
           </div>
         {% endif %}
-        {# End - link #}
+        {# End - secure mail #}
 
         {# Begin - website #}
         {% if content.field_os2web_contact_website %}
