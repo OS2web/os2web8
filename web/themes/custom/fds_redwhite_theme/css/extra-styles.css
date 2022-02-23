@@ -563,7 +563,7 @@ header div.custom-header {
   -o-border-radius: 100%;
   border-radius: 100%;
   margin-left: 9px;
-  margin-bottom: -10px;
+  vertical-align: -10px;
 }
 .custom-header__button--toggle-search .fa-search:before {
   display: none;
@@ -1507,7 +1507,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   padding-bottom: 0 !important;
 }
 #block-selvbetjening h2{
-  font-size: 32px;
+  font-size: 29px;
   line-height: 1em;
 }
 #block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a,
@@ -2074,7 +2074,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .accordion-button,
 .tabnav > button {
-  padding: 1.6rem 15px;
+  padding: 1.5rem 15px;
   padding-right: 6rem;
 }
 .accordion-button:hover {
@@ -2881,6 +2881,10 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-cnt-paragraph .field--name-field-by,
 .os2web_contact .field--name-field-by {
   display: inline-block;
+}
+.paragraph--type--os2web-cnt-paragraph .field__label,
+.os2web_contact .field__label {
+  font-weight: normal;
 }
 /* .paragraph--type--os2web-cnt-paragraph h2,
 .os2web_contact h2 {
