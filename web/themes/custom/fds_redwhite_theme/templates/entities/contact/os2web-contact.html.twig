@@ -90,9 +90,9 @@
         {# End - email #}
 
         {# Begin - secure mail link #}
-        {% if content.field_os2web_contact_secure_mail %}
+        {% if content.field_os2web_contact_secure_mail.0 %}
           <div>
-            {{ content.field_os2web_contact_secure_mail }}
+            <a href="{{ content.field_os2web_contact_secure_mail.0|render|striptags|trim }}" target="_blank">Sende besked</a>
           </div>
         {% endif %}
         {# End - secure mail #}
@@ -106,7 +106,7 @@
         {# End - website #}
 
         {# Begin - facebook #}
-        {% if content.field_os2web_contact_facebook %}
+        {% if content.field_os2web_contact_facebook.0 %}
           <div>
             <a href="{{ content.field_os2web_contact_facebook.0 }}" target="_blank">facebook.com</a>
           </div>
