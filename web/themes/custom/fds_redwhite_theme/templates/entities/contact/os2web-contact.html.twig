@@ -92,7 +92,7 @@
         {# Begin - secure mail link #}
         {% if content.field_os2web_contact_secure_mail.0 %}
           <div>
-            <a href="{{ content.field_os2web_contact_secure_mail.0|render|striptags|trim }}" target="_blank">Sende besked</a>
+            <a href="{{ content.field_os2web_contact_secure_mail.0|render|striptags|trim|raw }}" target="_blank">{{ content.field_os2web_contact_secure_mail['#title'] }}</a>
           </div>
         {% endif %}
         {# End - secure mail #}
