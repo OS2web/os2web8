@@ -82,7 +82,7 @@
         {# End - phone #}
 
         {# Begin - email #}
-        {% if content.field_os2web_contact_email %}
+        {% if content.field_os2web_contact_email.0 %}
           <div>
             {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_contact_email.0|render|striptags|trim }}">{{ content.field_os2web_contact_email.0|render|striptags|trim }}</a>
           </div>
