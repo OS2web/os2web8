@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
@@ -195,4 +196,21 @@ function fds_redwhite_theme_preprocess_office_hours(&$variables) {
 
   $variables['items'] = $items;
   $variables['label_length'] = $label_length;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function fds_redwhite_theme_preprocess_media__os2web_file(array &$variables) {
+  $variables['media_file_url'] = FALSE;
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $media = $variables['media'];
+  /** @var EntityReferenceFieldItemListInterface $field_media_file_1 */
+  $field_media_file_1 = $media->field_media_file_1;
+  if ($field_media_file_1->isEmpty() || !($files = $field_media_file_1->referencedEntities())) {
+    return;
+  }
+  /** @var \Drupal\file\Entity\File $file */
+  $file = $files[0];
+  $variables['media_file_url'] = $file->createFileUrl();
 }

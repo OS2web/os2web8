@@ -2761,7 +2761,8 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a {
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a,
+.media--type-os2web-file.media--view-mode-os2web-reference .publication-body a {
   position: relative;
   display: block;
   word-break: break-word;
@@ -2772,6 +2773,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   font-size: 23px;
   color: var(--primary);
   padding: 0 45px 0 0;
+  text-decoration: none;
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
   content: "\f1c1";
@@ -2801,6 +2803,19 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files + .field--name-field-os2web-files-files-descrip {
   margin-top: -25px;
 }
+.media--type-os2web-file.media--view-mode-os2web-reference {
+  margin-bottom: 4px;
+  border: 1px solid #dfdfdf;
+  padding: 30px;
+  background-color: #fafafa;
+}
+
+.media--type-os2web-file.media--view-mode-os2web-reference .publication-body {
+  max-width: 330px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .paragraph--type--os2web-pi .views-row {
   border: 1px solid var(--light-gray3);
   padding: 10px;
