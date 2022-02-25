@@ -2954,10 +2954,23 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.node__content iframe {
+/* .node__content iframe {
   aspect-ratio: 71 / 40;
 	height: 100%;
 	width: 100%;
+} */
+.entity-default--os2web-gis-map a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--dark-gray1);
+}
+.entity-default--os2web-gis-map a:hover,
+.entity-default--os2web-gis-map a:focus {
+  color: var(--primary);
+  font-weight: bold;
+}
+.entity-default--os2web-gis-map a .icon {
+  display: none;
 }
 .field--name-byline {
   margin-top: 30px;
