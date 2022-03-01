@@ -2882,7 +2882,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 } */
 .paragraph--type--os2web-cnt-paragraph .spacer,
 .os2web_contact .spacer {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 .paragraph--type--os2web-cnt-paragraph .row {
   align-items: flex-start;
@@ -2912,6 +2912,10 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-body a::after {
   display: none;
+}
+.paragraph--type--os2web-cnt-paragraph .office-hours {
+  line-height: 2.2rem;
+  margin-top: -1px;
 }
 .paragraph--type--os2web-cnt-paragraph .office-hours__item-label {
   font-weight: normal;
@@ -3000,9 +3004,18 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   margin-bottom: 1rem;
   font-size: 2.4rem;
 }
+.os2web_contact .field--name-field-os2web-contact-open-hours {
+  text-align: left;
+}
 .os2web_contact .office-hours__item-label {
   font-weight: normal;
+  text-align: left;
   width: 5em !important;
+}
+@media screen and (min-width: 576px) {
+  .os2web_contact .field--name-field-os2web-contact-open-hours {
+    text-align: right;
+  }
 }
 table {
   width: 100%;
