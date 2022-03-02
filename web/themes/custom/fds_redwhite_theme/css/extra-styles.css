@@ -95,7 +95,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 h1 {
   font-size: 30px;
-  line-height: 1em;
+  line-height: normal;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -208,7 +208,7 @@ svg.ext {
 .node__links a:hover,
 .node__links a:focus {
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   background-color: var(--secondary);
 }
 .node__links a {
@@ -419,13 +419,16 @@ form#views-exposed-form-os2web-search-os2web-search-page .form-actions:after {
 .action-buttons {
   margin-bottom: 55px;
 }
-.action-buttons a {
+.action-buttons a,
+.action-buttons a:visited {
   font-weight: 400;
   font-size: 14px;
+  color: var(--dark-gray2);
 }
 .action-buttons a:hover,
 .action-buttons a:focus {
   font-weight: 700;
+  color: var(--primary);
 }
 .action-buttons .print {
   display: block;
@@ -553,7 +556,7 @@ header div.custom-header {
 }
 .custom-header__button--toggle-search .icon {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -36px -1px;
-  background-color: #c30a32;
+  background-color: var(--primary);
   height: 36px;
   width: 36px;
   right: 0;
@@ -1652,7 +1655,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .region-sidebar-second > div + div ul li {
   padding: 0;
   border-bottom: 1px solid var(--light-gray1);
-  background-color: #fff;
+  background-color: var(--white);
   position: relative;
   margin-top: 0;
 }
@@ -2418,7 +2421,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .banner__actions .button-primary:hover,
 .banner__actions .button-primary:focus {
   background: transparent;
-  color: #333 !important;
+  color: var(--dark-gray2) !important;
 }
 .banner__actions .button-primary:hover::before,
 .banner__actions .button-primary:focus::before {
@@ -2443,7 +2446,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .region-featured-top .banner__box h2 {
   font-size: 30px;
   line-height: 1em;
-  color: #333;
+  color: var(--dark-gray2);
 }
 @media screen and (max-width: 480px) {
   .banner__actions .inline-list li {
@@ -2961,6 +2964,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .node__content > .field > .field__item h2 {
   font-size: 32px;
   margin: 0 0 30px;
+  line-height: normal;
 }
 .node__content > .field > .field__item h3 {
   font-size: 22px;
@@ -3006,6 +3010,10 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .os2web_contact .field--name-field-os2web-contact-open-hours {
   text-align: left;
+}
+.os2web_contact .office-hours {
+  line-height: 2.2rem;
+  margin-top: -1px;
 }
 .os2web_contact .office-hours__item-label {
   font-weight: normal;
@@ -3514,7 +3522,7 @@ footer .footer .footer-col:not(:first-child) {
   background: #fff;
   cursor: pointer;
   border-radius: 50%;
-  border: 1px solid #C30A32;
+  border: 1px solid var(--primary);
   margin: 0 auto;
 }
 body.domain-businesspark-ringsted-dk .rk_cover_arrow_button, body.domain-erhvervsforum-dk .rk_cover_arrow_button {
