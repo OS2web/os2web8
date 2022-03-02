@@ -162,6 +162,12 @@ h1 {
 .field--name-field-os2web-news-intro p strong {
   font-weight: 300;
 }
+.entity-default--os2web-simple-text-paragraph {
+  font-size: 15px;
+}
+.entity-default--os2web-simple-text-paragraph p {
+  line-height: 2.15rem
+}
 @media screen and (min-width: 768px) {
   .field--name-field-os2web-page-intro,
   .field--name-field-os2web-hearings-intro,
@@ -174,12 +180,7 @@ h1 {
   margin-top: 2.8rem;
 }
 .entity-default--os2web-simple-text-paragraph {
-  margin: 0 0 15px;
-}
-@media screen and (min-width: 768px) {
-  .entity-default--os2web-simple-text-paragraph {
-    margin: 0 0 30px;
-  }
+  margin: 0 0 30px;
 }
 a,
 a:visited {
@@ -2050,7 +2051,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .accordion-content,
 .tabnav-panel {
-  padding: 0 15px;
+  padding: 0 19px;
   border-bottom: 1px solid var(--gray1);
 }
 .accordion .accordion-content {
@@ -2059,7 +2060,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .field--name-field-os2web-accordion-reference .accordion-content {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 17px;
 }
 .accordion-content a {
   color: var(--primary);
@@ -2077,8 +2078,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .accordion-button,
 .tabnav > button {
-  padding: 1.5rem 15px;
-  padding-right: 6rem;
+  padding: 1.5rem 80px 1.5rem 19px;
 }
 .accordion-button:hover {
   color: var(--primary);
