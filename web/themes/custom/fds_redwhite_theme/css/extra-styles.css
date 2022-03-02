@@ -3020,6 +3020,9 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   text-align: left;
   width: 5em !important;
 }
+.os2web_contact .office-hours__item-slots {
+  width: 6.5em;
+}
 @media screen and (min-width: 576px) {
   .os2web_contact .field--name-field-os2web-contact-open-hours {
     text-align: right;
