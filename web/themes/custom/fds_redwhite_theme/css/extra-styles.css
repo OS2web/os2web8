@@ -70,6 +70,67 @@
   background-color: #fff !important;
 }
 
+/*CUSTOM CONTENT-SECTION - START*/
+.row-no-flex {
+  display: table;
+  margin: 0;
+  padding-bottom: 24px;
+}
+.sideblock-venstre {
+  width: 100%;
+  float: none;
+  display: block;
+}
+.hovedindhold-hojre {
+  width: 100%;
+  float: none;
+  display: block;
+}
+.hovedindhold-venstre {
+  width: 100%;
+  float: none;
+  display: block;
+}
+.sideblock-hojre {
+  width: 100%;
+  float: none;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .row-no-flex {
+    margin: 0 -16px;
+  }
+  .sideblock-venstre {
+    width: 31.4%;
+    float: left;
+    margin-left: 16px;
+    margin-right: 0;
+    display: inline;
+  }
+  .hovedindhold-hojre {
+    width: 56.1%;
+    float: right;
+    margin-left: 1.52905%;
+    margin-right: 16px;
+    display: inline;
+  }
+  .hovedindhold-venstre {
+    width: 56.1%;
+    float: left;
+    margin-left: 16px;
+    margin-right: 1.52905%;
+    display: inline;
+  }
+  .sideblock-hojre {
+    width: 31.4%;
+    float: right;
+    margin-left: 0;
+    margin-right: 16px;
+    display: inline;
+  }
+}
+/*CUSTOM CONTENT-SECTION - END*/
+
 /*GENERAL*/
 html {
   font-family: "MuseoSans", "Helvetica", "Arial", sans-serif;
