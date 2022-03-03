@@ -143,18 +143,15 @@
         </div>
       </div>
     {% endif %}
-    <div class="row">
+    <div class="row row-no-flex">
       {#  Wayaround for determining visibility for regions with lazybuilder.
       @See https://www.drupal.org/project/drupal/issues/953034 for more info. #}
-      {% set has_main_content = page.content|render|striptags|trim is not empty %}
       {% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
-      {# Due to previous design solution the right column should be shown always
-         if main column shown or it's not empty. #}
-      {% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty or has_main_content %}
+      {% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
       {% if has_sidebar_first %}
         {% set sidebar_first_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-md-4',
+          has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre',
         ] %}
         <aside {{ attributes.addClass(sidebar_first_classes) }}>
           <div class="layout-sidebar-left">
@@ -165,11 +162,12 @@
 
       {% set content_classes = [
         has_sidebar_first and has_sidebar_second ? 'col-12 col-md-6',
-        has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-md-8',
-        has_sidebar_second and has_sidebar_first is empty ? 'col-12 col-md-8',
+        has_sidebar_first and has_sidebar_second is empty ? 'hovedindhold-hojre',
+        has_sidebar_second and has_sidebar_first is empty ? 'hovedindhold-venstre',
         has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12 col-md-12'
       ] %}
 
+      {% set has_main_content = page.content|render|striptags|trim is not empty %}
       <main {{ content_attributes.addClass(content_classes) }}>
         {% if has_main_content %}
           {{ page.breadcrumb }}
@@ -181,7 +179,7 @@
       {% if has_sidebar_second %}
         {% set sidebar_second_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first is empty and has_sidebar_second ? 'col-12 col-md-4',
+          has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre',
         ] %}
         <aside {{ attributes.addClass(sidebar_second_classes) }}>
           <div class="layout-sidebar-right">
