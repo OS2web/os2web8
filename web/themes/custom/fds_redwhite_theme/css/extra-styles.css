@@ -320,7 +320,7 @@ svg.ext {
 .field--name-field-os2web-page-description a::after {
   display: none;
 }
-.field--name-field-media-file .field__items {
+.field--name-field-media-file .field__item {
   padding: 0;
 }
 .node__content .file {
