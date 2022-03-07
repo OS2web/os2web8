@@ -320,9 +320,15 @@ svg.ext {
 .field--name-field-os2web-page-description a::after {
   display: none;
 }
+.node__content .file {
+  display: inline-block;
+  box-shadow: none;
+}
+.node__content .file a {
+  display: inline-block;
+  height: auto;
+}
 .node__content a[href$=".pdf"]::before,
-.node__content a[href$=".jpg"]::before,
-.node__content a[href$=".jpeg"]::before,
 .field--name-field-os2web-page-description a[href$=".pdf"]::before {
   content: '';
   display: inline-block;
