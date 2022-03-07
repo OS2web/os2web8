@@ -320,6 +320,9 @@ svg.ext {
 .field--name-field-os2web-page-description a::after {
   display: none;
 }
+.field--name-field-media-file .field__items {
+  padding: 0;
+}
 .node__content .file {
   display: inline-block;
   box-shadow: none;
