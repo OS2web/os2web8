@@ -3437,6 +3437,12 @@ table tbody th {
   content: "";
   display: none;
 }
+.entity-default--os2web-slideshow #tns1-iw {
+  margin: 0;
+}
+.entity-default--os2web-slideshow #tns1-iw img {
+  aspect-ratio: 565 / 313;
+}
 .entity-default--os2web-slideshow #tns1-ow {
   margin-bottom: 0;
 }
