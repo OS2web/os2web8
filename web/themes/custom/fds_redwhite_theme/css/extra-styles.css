@@ -3386,7 +3386,7 @@ table tbody th {
 .view-os2web-search h2 {
   font-size: 22px;
 }
-.entity-default--os2web-slideshow {
+.node__content > .field > .field__item .entity-default--os2web-slideshow {
   border: none;
   padding: 0;
 }
