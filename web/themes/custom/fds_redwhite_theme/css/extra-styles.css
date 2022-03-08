@@ -2145,16 +2145,20 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   padding-top: 2rem;
   padding-bottom: 17px;
 }
-.accordion-content a {
+.accordion-content a,
+.field--name-field-os2web-simple-text-body a {
   color: var(--primary);
   word-break: break-word;
   border-bottom: 1px dotted var(--dark-gray1);
 }
-.accordion-content a::after {
+.accordion-content a::after,
+.field--name-field-os2web-simple-text-body a::after {
   display: none;
 }
 .accordion-content a:hover,
-.accordion-content a:focus {
+.accordion-content a:focus,
+.field--name-field-os2web-simple-text-body a:hover,
+.field--name-field-os2web-simple-text-body a:focus {
   font-weight: bold;
 }
 .accordion-content .field--name-title {
