@@ -3442,6 +3442,7 @@ table tbody th {
 }
 .entity-default--os2web-slideshow #tns1-iw img {
   aspect-ratio: 565 / 313;
+  object-fit: cover;
 }
 .entity-default--os2web-slideshow #tns1-ow {
   margin-bottom: 0;
