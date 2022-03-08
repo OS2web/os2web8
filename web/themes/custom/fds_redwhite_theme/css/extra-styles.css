@@ -331,6 +331,11 @@ svg.ext {
   display: inline-block;
   height: auto;
 }
+.node__content .file a:hover,
+.node__content .file a:focus {
+  color: var(--primary);
+  font-weight: bold;
+}
 .node__content a[href$=".pdf"]::before,
 .node__content a[href$=".ppt"]::before,
 .node__content a[href$=".pptx"]::before,
