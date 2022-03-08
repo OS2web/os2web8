@@ -213,7 +213,17 @@ function fds_redwhite_theme_preprocess_media__os2web_file(array &$variables) {
   }
   /** @var \Drupal\file\Entity\File $file */
   $file = $files[0];
-  $variables['media_file_url'] = $file->createFileUrl();
+  $variables['media_file_url'] = 'test';//$file->createFileUrl();
+
+  $mime_type = $file->getMimeType();
+  // Classes to add to the file field for icons.
+  $variables['file_link_classes'] = [
+    'file',
+    // Add a specific class for each and every mime type.
+    'file--mime-' . strtr($mime_type, ['/' => '-', '.' => '-']),
+    // Add a more general class for groups of well known MIME types.
+    'file--' . file_icon_class($mime_type),
+  ];
 }
 
 /**
