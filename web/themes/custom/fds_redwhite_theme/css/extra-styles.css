@@ -3386,13 +3386,17 @@ table tbody th {
 .view-os2web-search h2 {
   font-size: 22px;
 }
+.entity-default--os2web-slideshow {
+  border: none;
+  padding: 0;
+}
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
   position: absolute;
   color: transparent;
   left: 0;
-  top: 45%;
-  margin-top: -34px;
+  top: 50%;
+  margin-top: 0;
   width: 38px;
   height: 68px;
   cursor: pointer;
@@ -3401,14 +3405,19 @@ table tbody th {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="next"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -159px 0;
   position: absolute;
   color: transparent;
   right: 0;
-  top: 45%;
-  margin-top: -34px;
+  top: 50%;
+  margin-top: 0;
   width: 38px;
   height: 68px;
   cursor: pointer;
@@ -3417,11 +3426,19 @@ table tbody th {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"]:before,
 .entity-default--os2web-slideshow .tns-controls button[data-controls="next"]:before {
   content: "";
   display: none;
+}
+.entity-default--os2web-slideshow #tns1-ow {
+  margin-bottom: 0;
 }
 .entity-default--os2web-slideshow #tns1 > .tns-item {
   padding: 0 !important;
