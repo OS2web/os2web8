@@ -332,7 +332,15 @@ svg.ext {
   height: auto;
 }
 .node__content a[href$=".pdf"]::before,
-.field--name-field-os2web-page-description a[href$=".pdf"]::before {
+.node__content a[href$=".ppt"]::before,
+.node__content a[href$=".pptx"]::before,
+.node__content a[href$=".pptm"]::before,
+.node__content a[href$=".doc"]::before,
+.node__content a[href$=".docm"]::before,
+.node__content a[href$=".docx"]::before,
+.node__content a[href$=".xlsx"]::before,
+.node__content a[href$=".xlsm"]::before,
+.node__content a[href$=".xlsb"]::before {
   content: '';
   display: inline-block;
   position: relative;
