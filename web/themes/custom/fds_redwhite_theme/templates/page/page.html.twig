@@ -164,7 +164,7 @@
         has_sidebar_first and has_sidebar_second ? 'col-12 col-md-6',
         has_sidebar_first and has_sidebar_second is empty ? 'hovedindhold-hojre',
         has_sidebar_second and has_sidebar_first is empty ? 'hovedindhold-venstre',
-        has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12 col-md-12'
+        has_sidebar_first is empty and has_sidebar_second is empty ? 'hovedindhold-venstre'
       ] %}
 
       {% set has_main_content = page.content|render|striptags|trim is not empty %}
