@@ -3034,8 +3034,8 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   border-bottom: 1px solid var(--dark-gray1);
 }
 .node__content > .field > .field__item + .field__item .entity-default {
-  border-top: none;
-  padding-top: 0;
+  border: none;
+  padding: 0;
 }
 .node__content > .field > .field__item h2 {
   font-size: 32px;
@@ -3396,10 +3396,6 @@ table tbody th {
 .node__content > .field > .field__item .entity-default--os2web-slideshow {
   border: none !important;
   padding: 0 !important;
-}
-.field__item > .entity-default--os2web-accordion + .field__item > .entity-default--os2web-accordion {
-  border-top: none !important;
-  padding-top: 0 !important;
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
