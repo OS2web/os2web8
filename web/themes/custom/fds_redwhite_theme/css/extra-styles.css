@@ -3389,8 +3389,8 @@ table tbody th {
 }
 .accordion .entity-default--os2web-simple-text-paragraph,
 .node__content > .field > .field__item .entity-default--os2web-slideshow {
-  border: none;
-  padding: 0;
+  border: none !important;
+  padding: 0 !important;
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
