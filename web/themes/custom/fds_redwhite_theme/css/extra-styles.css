@@ -2850,7 +2850,8 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   padding: 0 45px 0 0;
   text-decoration: none;
 }
-.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::before {
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::before,
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
   display: none;
 }
 /* .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
