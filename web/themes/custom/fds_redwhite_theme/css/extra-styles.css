@@ -2124,7 +2124,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .accordion-content,
 .tabnav-panel {
-  padding: 0 19px;
+  padding: 0 30px 0 19px;
   border-bottom: 1px solid var(--gray1);
 }
 .accordion .accordion-content {
