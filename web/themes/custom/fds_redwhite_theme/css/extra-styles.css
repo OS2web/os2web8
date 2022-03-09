@@ -3392,6 +3392,7 @@ table tbody th {
   font-size: 22px;
 }
 .accordion .entity-default--os2web-simple-text-paragraph,
+.accordion .entity-default--os2web-accordion-reusable,
 .node__content > .field > .field__item .entity-default--os2web-slideshow {
   border: none !important;
   padding: 0 !important;
