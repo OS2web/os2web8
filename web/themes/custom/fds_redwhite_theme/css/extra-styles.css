@@ -3397,6 +3397,10 @@ table tbody th {
   border: none !important;
   padding: 0 !important;
 }
+.field-item .entity-default--os2web-accordion + .field-item .entity-default--os2web-accordion {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
   position: absolute;
