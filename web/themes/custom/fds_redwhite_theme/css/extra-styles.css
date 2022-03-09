@@ -3397,10 +3397,7 @@ table tbody th {
   border: none !important;
   padding: 0 !important;
 }
-.field__item .entity-default--os2web-accordion + .field__item .entity-default--os2web-accordion,
-.field__item .entity-default--os2web-accordion-reusable + .field__item .entity-default--os2web-accordion-reusable,
-.field__item .entity-default--os2web-accordion + .field__item .entity-default--os2web-accordion-reusable,
-.field__item .entity-default--os2web-accordion-reusable + .field__item .entity-default--os2web-accordion {
+.field__item > .entity-default--os2web-accordion + .field__item > .entity-default--os2web-accordion {
   border-top: none !important;
   padding-top: 0 !important;
 }
