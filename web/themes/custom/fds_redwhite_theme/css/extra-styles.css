@@ -2116,6 +2116,10 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   border-bottom: 3px solid var(--gray1);
   margin-bottom: 30px;
 }
+.accordion .entity-default {
+  padding: 0;
+  border: none;
+}
 .accordion .has-selfservice-links .selfservice-links {
   display: none;
 }
@@ -2140,6 +2144,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   color: var(--primary);
   word-break: break-word;
   border-bottom: 1px dotted var(--dark-gray1);
+  text-decoration: none;
 }
 .accordion-content a::after,
 .field--name-field-os2web-simple-text-body a::after {
