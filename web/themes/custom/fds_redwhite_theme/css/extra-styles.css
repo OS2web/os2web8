@@ -2826,7 +2826,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item {
   padding: 0 30px;
-  background: var(--white);
+  background: #fafafa;
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item + .field__item .file {
   margin-top: 0;
@@ -2850,7 +2850,10 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   padding: 0 45px 0 0;
   text-decoration: none;
 }
-.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
+.paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::before {
+  display: none;
+}
+/* .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
   content: "\f1c1";
   font-family: 'FontAwesome';
   padding-left: 0;
@@ -2866,7 +2869,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   height: auto;
   position: absolute;
   display: inline-block;
-}
+} */
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files-descrip {
   order: 3;
   background: var(--white);
