@@ -2804,9 +2804,16 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-factbox-paragraph h6 {
   margin-top: 0;
 }
-.field--name-field-os2web-page-paragraph-left > .field__item + .field__item, .field--name-field-os2web-page-paragraph-righ > .field__item + .field__item, .field--name-field-os2web-page-paragraph-narr > .field__item + .field__item, .field--name-field-os2web-page-description + .field--name-field-os2web-page-paragraph-narr {
+.field--name-field-os2web-page-paragraph-left > .field__item + .field__item,
+.field--name-field-os2web-page-paragraph-righ > .field__item + .field__item,
+.field--name-field-os2web-page-paragraph-narr > .field__item + .field__item,
+.field--name-field-os2web-page-description + .field--name-field-os2web-page-paragraph-narr {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+.field--name-field-os2web-page-paragraph-narr {
+  border-top: 1px solid var(--dark-gray1);
+  border-bottom: 1px solid var(--dark-gray1);
 }
 .paragraph--type--os2web-files-paragraph {
   display: flex;
@@ -3027,16 +3034,16 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--image-position--left .field--name-field-os2web-cnt-link a::after {
   display: none;
 }
-.node__content > .field > .field__item .entity-default {
+/* .node__content > .field > .field__item .entity-default {
   border-top: 1px solid var(--dark-gray1);
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--dark-gray1);
-}
-.node__content > .field > .field__item + .field__item .entity-default {
+} */
+/* .node__content > .field > .field__item + .field__item .entity-default {
   border: none;
   padding: 0;
-}
+} */
 .node__content > .field > .field__item h2 {
   font-size: 32px;
   margin: 0 0 30px;
@@ -3391,12 +3398,13 @@ table tbody th {
 .view-os2web-search h2 {
   font-size: 22px;
 }
-.accordion .entity-default--os2web-simple-text-paragraph,
+/* .accordion .entity-default--os2web-simple-text-paragraph,
 .entity-default--os2web-accordion-reusable,
 .node__content > .field > .field__item .entity-default--os2web-slideshow {
   border: none !important;
   padding: 0 !important;
-}
+} */
+.field__item > .entity-default--os2web-accordion + .field__item
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
   position: absolute;
