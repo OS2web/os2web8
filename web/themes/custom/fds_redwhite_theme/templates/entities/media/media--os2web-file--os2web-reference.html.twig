@@ -23,8 +23,10 @@
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix.contextual_links }}
   <div class="publication-body">
-    <a href="{{ media_file_url }}" target="blank">{{ content.name.0 | render| trim }}</a>
-    {{ content.field_media_description }}
+    <span class="{{ file_link_classes|join(' ') }}">
+      <a href="{{ media_file_url }}" target="blank">{{ content.name.0 | render| trim }}</a>
+      {{ content.field_media_description }}
+    </span>
   </div>
 
 </article>

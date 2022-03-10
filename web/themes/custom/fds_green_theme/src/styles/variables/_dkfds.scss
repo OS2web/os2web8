@@ -132,8 +132,11 @@ $color-green-001:             #00502D;
 $color-green-002:             #648F14;
 $color-green-021:             #233614 !default;
 $color-green-003:             #358000 !default;
-$color-green-004:             #E1EBDD  !default;
+$color-green-004:             #E1EBDD !default;
 $color-green-005:             #F3F5F2 !default;
+$color-green-006:             #A4C799;
+$color-light-green-001:       #ebedea;
+$color-light-green-002:       #D1E3CC;
 
 //orange
 //$color-orange-001:          #b4630c !default;
@@ -205,6 +208,7 @@ $color-gray-medium-light:     $color-gray-004 !default;
 $color-gray-light:            $color-gray-005 !default;
 $color-gray-mediumpale:       $color-gray-055 !default;
 $color-gray-pale:             #F3F5F2;
+$color-gray-overlay:          #5F5F5F;
 
 //Focus
 $color-focus:                 $color-gray-medium-dark !default;

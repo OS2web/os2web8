@@ -24,8 +24,11 @@ PROJECT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )/../" &> /dev/null && p
 echo-yellow "switching to project directory $PROJECT_DIR"
 cd $PROJECT_DIR
 
+COMPOSER=$(which composer)
+DRUSH=$(which drush)
+
 echo-yellow "Fetching composer dependencies"
-composer install
+$COMPOSER install
 
 if [ ! -f "web/sites/default/env.settings.php" ]; then
   cp web/sites/default/env.example.settings.php web/sites/default/env.settings.php
@@ -36,11 +39,11 @@ echo-yellow "Reinstalling drupal from scratch based in os2web profile."
 # drush si os2web --account-pass=admin --locale=da -y -vvv
 
 ## Without translations.
-drush si os2web --account-pass=admin -y -vvv
+$DRUSH si os2web --account-pass=admin -y -vvv
 
 chmod 755 web/sites/default
 
 echo-yellow "Enable theme and modules"
-drush theme:enable fds_custom_theme
-drush config-set system.theme default fds_custom_theme -y
-drush en -y os2web_pagebuilder os2web_spotbox
+$DRUSH theme:enable fds_custom_theme
+$DRUSH config-set system.theme default fds_custom_theme -y
+$DRUSH en -y os2web_pagebuilder os2web_spotbox
