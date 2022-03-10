@@ -213,7 +213,7 @@ function fds_redwhite_theme_preprocess_media__os2web_file(array &$variables) {
   }
   /** @var \Drupal\file\Entity\File $file */
   $file = $files[0];
-  $variables['media_file_url'] = 'test';//$file->createFileUrl();
+  $variables['media_file_url'] = $file->createFileUrl();
 
   $mime_type = $file->getMimeType();
   // Classes to add to the file field for icons.
