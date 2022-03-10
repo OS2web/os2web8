@@ -283,7 +283,7 @@ svg.ext {
   color: var(--dark-gray2);
 }
 .field--name-field-os2web-page-description {
-  margin-bottom: 45px;
+  margin-bottom: 0;
 }
 .field--name-field-os2web-page-description h2 {
   font-size: 22px !important;
@@ -348,7 +348,7 @@ svg.ext {
 }
 .field--name-field-os2web-page-intro + .field,
 .field--type-text-with-summary {
-  padding-bottom: 22px;
+  padding-bottom: 0;
 }
 .field--name-field-os2web-news-intro {
   padding-bottom: 22px;
@@ -2824,10 +2824,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading {
   order: 0;
 }
-/* .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-heading h2 {
-  margin: 0 0 30px;
-  font-size: 30px;
-} */
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files {
   margin: 0;
   border: 1px solid var(--light-gray2);
@@ -2863,23 +2859,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
   display: none;
 }
-/* .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item .file a::after {
-  content: "\f1c1";
-  font-family: 'FontAwesome';
-  padding-left: 0;
-  vertical-align: middle;
-  font-weight: 300;
-  background-image: none;
-  color: var(--primary);
-  font-size: inherit;
-  top: 50%;
-  margin-top: -15px;
-  right: 0;
-  width: auto;
-  height: auto;
-  position: absolute;
-  display: inline-block;
-} */
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files-descrip {
   order: 3;
   background: var(--white);
@@ -2961,13 +2940,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
 }
-/* .paragraph--type--os2web-cnt-paragraph,
-.os2web_contact {
-  border-top: 1px solid var(--dark-gray1);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--dark-gray1);
-} */
 .paragraph--type--os2web-cnt-paragraph .spacer,
 .os2web_contact .spacer {
   margin-top: 24px;
@@ -2989,12 +2961,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .os2web_contact .field__label {
   font-weight: normal;
 }
-/* .paragraph--type--os2web-cnt-paragraph h2,
-.os2web_contact h2 {
-  margin-top: 0;
-  margin-bottom: 35px;
-  font-size: 32px;
-} */
 .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-body a {
   border-bottom: 1px dotted var(--dark-gray1);
 }
@@ -3036,16 +3002,6 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--image-position--left .field--name-field-os2web-cnt-link a::after {
   display: none;
 }
-/* .node__content > .field > .field__item .entity-default {
-  border-top: 1px solid var(--dark-gray1);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--dark-gray1);
-} */
-/* .node__content > .field > .field__item + .field__item .entity-default {
-  border: none;
-  padding: 0;
-} */
 .node__content > .field > .field__item h2 {
   font-size: 32px;
   margin: 0 0 30px;
@@ -3400,12 +3356,6 @@ table tbody th {
 .view-os2web-search h2 {
   font-size: 22px;
 }
-/* .accordion .entity-default--os2web-simple-text-paragraph,
-.entity-default--os2web-accordion-reusable,
-.node__content > .field > .field__item .entity-default--os2web-slideshow {
-  border: none !important;
-  padding: 0 !important;
-} */
 .field__item > .entity-default--os2web-accordion + .field__item
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
