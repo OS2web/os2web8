@@ -2813,6 +2813,8 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .field--name-field-os2web-page-paragraph-narr {
   border-top: 1px solid var(--dark-gray1);
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-bottom: 1px solid var(--dark-gray1);
 }
 .paragraph--type--os2web-files-paragraph {
