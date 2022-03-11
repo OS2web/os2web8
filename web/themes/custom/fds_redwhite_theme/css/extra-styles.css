@@ -2833,7 +2833,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files {
   margin: 0;
-  border: 1px solid var(--light-gray2);
+  border: 1px solid #dfdfdf;
   z-index: 0;
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files .field__item {
