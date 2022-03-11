@@ -337,9 +337,12 @@ svg.ext {
 .node__content a[href$=".doc"]::before,
 .node__content a[href$=".docm"]::before,
 .node__content a[href$=".docx"]::before,
+.node__content a[href$=".xls"]::before,
 .node__content a[href$=".xlsx"]::before,
 .node__content a[href$=".xlsm"]::before,
-.node__content a[href$=".xlsb"]::before {
+.node__content a[href$=".xlsb"]::before,
+.node__content a[href$=".jpg"]::before,
+.node__content a[href$=".jpeg"]::before {
   content: '';
   display: inline-block;
   position: relative;
