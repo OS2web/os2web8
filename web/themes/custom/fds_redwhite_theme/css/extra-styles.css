@@ -353,6 +353,12 @@ svg.ext {
   margin-right: 5px;
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
 }
+.node__content a[href$=".xls"]::before {
+  content: '' !important;
+  display: inline-block !important;
+  position: relative !important;
+  background: green !important;
+}
 .field--name-field-os2web-page-intro + .field,
 .field--type-text-with-summary {
   padding-bottom: 0;
