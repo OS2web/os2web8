@@ -316,6 +316,7 @@ svg.ext {
 .node__content .file {
   display: inline-block;
   box-shadow: none;
+  margin-bottom: 0;
 }
 .node__content .file a {
   display: inline-block;
@@ -325,6 +326,9 @@ svg.ext {
 .node__content .file a:focus {
   color: var(--primary);
   font-weight: bold;
+}
+.node__content .file a::after {
+  display: none;
 }
 .node__content a[href$=".pdf"]::before,
 .node__content a[href$=".ppt"]::before,
