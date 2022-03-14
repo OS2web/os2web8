@@ -3689,3 +3689,7 @@ body.domain-pilotnaturpark-ringsted-dk .rk_cover_arrow_button_wrapper {
     transform: translate(-1.6666666667px, 6.6666666667px) rotate(-45deg);
   }
 }
+
+iframe {
+  min-height: 350px;
+}
