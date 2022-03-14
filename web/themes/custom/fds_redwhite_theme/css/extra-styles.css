@@ -2877,13 +2877,16 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files + .field--name-field-os2web-files-files-descrip {
   margin-top: -25px;
 }
+.media--view-mode-os2web-reference,
 .media--type-os2web-file.media--view-mode-os2web-reference {
   margin-bottom: 4px;
   border: 1px solid #dfdfdf;
   padding: 30px;
   background-color: #fafafa;
 }
-
+.media--view-mode-os2web-reference a {
+  padding: 0;
+}
 .media--type-os2web-file.media--view-mode-os2web-reference .publication-body {
   max-width: 330px;
   display: inline-block;
