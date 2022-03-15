@@ -20,12 +20,15 @@
     view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+
 <article{{ attributes.addClass(classes) }}>
   {{ title_suffix.contextual_links }}
   <div class="publication-body">
     <span class="{{ file_link_classes|join(' ') }}">
       <a href="{{ media_file_url }}" target="blank">{{ content.name.0 | render| trim }}</a>
+      <p>
       {{ content.field_media_description }}
+      </p>
     </span>
   </div>
 
