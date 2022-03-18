@@ -337,10 +337,6 @@ svg.ext {
 .file a:focus {
   color: var(--primary);
 }
-.file a::before,
-.file a::after {
-  display: none !important;
-}
 a[href$=".pdf"]::before,
 a[href$=".ppt"]::before,
 a[href$=".pptx"]::before,
@@ -364,6 +360,10 @@ a[href$=".odt"]::before{
   height: 19px;
   margin-right: 5px;
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+}
+.file a::before,
+.file a::after {
+  display: none !important;
 }
 .field--name-field-os2web-page-intro + .field,
 .field--type-text-with-summary {
