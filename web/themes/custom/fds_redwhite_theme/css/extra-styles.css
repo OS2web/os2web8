@@ -319,6 +319,7 @@ svg.ext {
   margin-bottom: 0;
   background-color: #fafafa;
   padding: 30px;
+  border: 1px solid #dfdfdf;
 }
 .file a {
   position: relative;
@@ -338,7 +339,7 @@ svg.ext {
 }
 .file a::before,
 .file a::after {
-  display: none;
+  display: none !important;
 }
 a[href$=".pdf"]::before,
 a[href$=".ppt"]::before,
@@ -2901,7 +2902,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   text-decoration: none;
 }
 .field--name-field-media-description {
-  padding: 15px 30px 0;
+  padding: 10px 30px 0;
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files-descrip {
   order: 3;
