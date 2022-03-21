@@ -1596,7 +1596,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field h2 {
   font-weight: 400;
   margin: 30px 0 30px;
-  font-size: 30px;
+  font-size: 29px;
 }
 #block-selvbetjening {
   border-bottom: none;
@@ -2043,7 +2043,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .block-views-blockos2web-news-os2web-news-archive {
   margin-top: -11px;
   border-top: 1px solid var(--dark-gray2);
-  padding-top: 45px;
+  padding-top: 45px !important;
 }
 .block-views-blockos2web-news-os2web-news-archive,
 .block-views-blockos2web-news-block-1 {
@@ -2916,12 +2916,9 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 .media--view-mode-os2web-reference {
   margin-bottom: 4px;
-  /* border: 1px solid #dfdfdf; */
-  /* padding: 030px; */
-  /* background-color: #fafafa; */
 }
 .media--view-mode-os2web-reference a {
-  padding: 0;
+  padding: 0 30px;
 }
 .paragraph--type--os2web-pi .views-row {
   border: 1px solid var(--light-gray3);
