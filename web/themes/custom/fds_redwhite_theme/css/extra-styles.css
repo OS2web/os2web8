@@ -2904,6 +2904,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
   margin-top: -30px;
   z-index: 1;
   position: relative;
+  padding-bottom: 30px;
 }
 .paragraph--type--os2web-files-paragraph .field--name-field-os2web-files-files-descrip {
   order: 3;
