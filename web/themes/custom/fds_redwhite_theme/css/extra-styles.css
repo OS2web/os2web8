@@ -3200,6 +3200,9 @@ table tbody th {
     max-width: none;
   }
 }
+.entity-default--os2web-borgerdk-selfser-ref h2 {
+  font-size: 22px;
+}
 .entity-default--os2web-borgerdk-selfser-ref a {
   display: inline-block;
   text-decoration: none;
