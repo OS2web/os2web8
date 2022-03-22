@@ -351,7 +351,7 @@ a[href$=".xlsm"]::before,
 a[href$=".xlsb"]::before,
 a[href$=".jpg"]::before,
 a[href$=".jpeg"]::before,
-a[href$=".odt"]::before{
+a[href$=".odt"]::before {
   content: '';
   display: inline-block !important;
   position: relative;
@@ -361,6 +361,22 @@ a[href$=".odt"]::before{
   height: 19px;
   margin-right: 5px;
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+}
+a[href$=".pdf"]:hover::before, a[href$=".pdf"]:focus::before,
+a[href$=".ppt"]:hover::before, a[href$=".ppt"]:focus::before,
+a[href$=".pptx"]:hover::before, a[href$=".pptx"]:focus::before
+a[href$=".pptm"]:hover::before, a[href$=".pptm"]:focus::before,
+a[href$=".doc"]:hover::before, a[href$=".doc"]:focus::before,
+a[href$=".docm"]:hover::before, a[href$=".docm"]:focus::before,
+a[href$=".docx"]:hover::before, a[href$=".docx"]:focus::before,
+a[href$=".xls"]:hover::before, a[href$=".xls"]:focus::before,
+a[href$=".xlsx"]:hover::before, a[href$=".xlsx"]:focus::before,
+a[href$=".xlsm"]:hover::before, a[href$=".xlsm"]:focus::before,
+a[href$=".xlsb"]:hover::before, a[href$=".xlsb"]:focus::before,
+a[href$=".jpg"]:hover::before, a[href$=".jpg"]:focus::before,
+a[href$=".jpeg"]:hover::before, a[href$=".jpeg"]:focus::before,
+a[href$=".odt"]:hover::before, a[href$=".odt"]:focus::before {
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
 }
 .file a::before,
 .file a::after {
@@ -3184,6 +3200,35 @@ table tbody th {
     max-width: none;
   }
 }
+.entity-default--os2web-borgerdk-selfser-ref a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--dark-gray1);
+}
+.entity-default--os2web-borgerdk-selfser-ref a::before {
+  content: '';
+  display: inline-block !important;
+  position: relative;
+  left: 0;
+  top: 4px;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+}
+.entity-default--os2web-borgerdk-selfser-ref a:hover::before,
+.entity-default--os2web-borgerdk-selfser-ref a:focus::before {
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
+}
+.entity-default--os2web-borgerdk-selfser-ref a h3 {
+  font-size: 16px;
+  color: var(--primary);
+  margin: 0;
+}
+.entity-default--os2web-borgerdk-selfser-ref a:hover h3,
+.entity-default--os2web-borgerdk-selfser-ref a:focus h3 {
+  font-weight: bold;
+}
 
 /*SØGERESULTATER*/
 .path-s .page-alert {
@@ -3410,6 +3455,12 @@ table tbody th {
 .entity-default--os2web-slideshow a[href$=".jpeg"]::before {
   display: none !important;
   content: "";
+}
+.entity-default--os2web-slideshow a[href$=".jpg"]:hover::before,
+.entity-default--os2web-slideshow a[href$=".jpg"]:focus::before,
+.entity-default--os2web-slideshow a[href$=".jpeg"]:hover::before,
+.entity-default--os2web-slideshow a[href$=".jpeg"]:focus::before {
+  background: none;
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
