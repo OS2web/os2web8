@@ -3205,7 +3205,12 @@ table tbody th {
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
 }
-.entity-default--os2web-borgerdk-selfser-ref a::before {
+.entity-default--os2web-borgerdk-selfser-ref a h3 {
+  font-size: 16px !important;
+  color: var(--primary);
+  margin: 0 !important;
+}
+.entity-default--os2web-borgerdk-selfser-ref a h3::before {
   content: '';
   display: inline-block !important;
   position: relative;
@@ -3216,14 +3221,9 @@ table tbody th {
   margin-right: 5px;
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
 }
-.entity-default--os2web-borgerdk-selfser-ref a:hover::before,
-.entity-default--os2web-borgerdk-selfser-ref a:focus::before {
+.entity-default--os2web-borgerdk-selfser-ref a:hover h3::before,
+.entity-default--os2web-borgerdk-selfser-ref a:focus h3::before {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
-}
-.entity-default--os2web-borgerdk-selfser-ref a h3 {
-  font-size: 16px !important;
-  color: var(--primary);
-  margin: 0 !important;
 }
 .entity-default--os2web-borgerdk-selfser-ref a:hover h3,
 .entity-default--os2web-borgerdk-selfser-ref a:focus h3 {
