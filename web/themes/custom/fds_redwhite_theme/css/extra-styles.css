@@ -3223,7 +3223,7 @@ table tbody th {
 .entity-default--os2web-borgerdk-selfser-ref a h3 {
   font-size: 16px;
   color: var(--primary);
-  margin: 0;
+  margin: 0 !important;
 }
 .entity-default--os2web-borgerdk-selfser-ref a:hover h3,
 .entity-default--os2web-borgerdk-selfser-ref a:focus h3 {
