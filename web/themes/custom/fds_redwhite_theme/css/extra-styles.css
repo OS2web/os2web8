@@ -3408,7 +3408,8 @@ table tbody th {
 }
 .entity-default--os2web-slideshow a[href$=".jpg"]::before,
 .entity-default--os2web-slideshow a[href$=".jpeg"]::before {
-  display: none;
+  display: none !important;
+  content: "";
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
