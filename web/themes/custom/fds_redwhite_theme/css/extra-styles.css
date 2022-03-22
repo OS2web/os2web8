@@ -3201,7 +3201,7 @@ table tbody th {
   }
 }
 .entity-default--os2web-borgerdk-selfser-ref h2 {
-  font-size: 22px;
+  font-size: 22px !important;
 }
 .entity-default--os2web-borgerdk-selfser-ref a {
   display: inline-block;
