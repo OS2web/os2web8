@@ -119,6 +119,7 @@
     display: inline;
   }
   .sideblock-hojre {
+    min-width: 320px;
     width: 32.45%;
     float: right;
     margin-left: 0;
