@@ -3221,13 +3221,13 @@ table tbody th {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
 }
 .entity-default--os2web-borgerdk-selfser-ref a h3 {
-  font-size: 16px;
+  font-size: 16px !important;
   color: var(--primary);
   margin: 0 !important;
 }
 .entity-default--os2web-borgerdk-selfser-ref a:hover h3,
 .entity-default--os2web-borgerdk-selfser-ref a:focus h3 {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 /*SØGERESULTATER*/
