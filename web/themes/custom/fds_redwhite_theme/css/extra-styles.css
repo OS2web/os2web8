@@ -2188,11 +2188,15 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 
 /*ACCORDION*/
-.accordion {
+.field--name-field-os2web-accordion-reference {
   margin-top: 10px;
   border-top: 3px solid var(--gray1);
   border-bottom: 3px solid var(--gray1);
   margin-bottom: 30px;
+}
+.accordion > li, .tabnav > li,
+.accordion-bordered > li {
+  background-color: transparent;
 }
 .accordion .has-selfservice-links .selfservice-links {
   display: none;
