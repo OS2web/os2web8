@@ -351,7 +351,7 @@ a[href$=".xlsm"]::before,
 a[href$=".xlsb"]::before,
 a[href$=".jpg"]::before,
 a[href$=".jpeg"]::before,
-a[href$=".odt"]::before{
+a[href$=".odt"]::before {
   content: '';
   display: inline-block !important;
   position: relative;
@@ -361,6 +361,22 @@ a[href$=".odt"]::before{
   height: 19px;
   margin-right: 5px;
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+}
+a[href$=".pdf"]:hover::before, a[href$=".pdf"]:focus::before,
+a[href$=".ppt"]:hover::before, a[href$=".ppt"]:focus::before,
+a[href$=".pptx"]:hover::before, a[href$=".pptx"]:focus::before
+a[href$=".pptm"]:hover::before, a[href$=".pptm"]:focus::before,
+a[href$=".doc"]:hover::before, a[href$=".doc"]:focus::before,
+a[href$=".docm"]:hover::before, a[href$=".docm"]:focus::before,
+a[href$=".docx"]:hover::before, a[href$=".docx"]:focus::before,
+a[href$=".xls"]:hover::before, a[href$=".xls"]:focus::before,
+a[href$=".xlsx"]:hover::before, a[href$=".xlsx"]:focus::before,
+a[href$=".xlsm"]:hover::before, a[href$=".xlsm"]:focus::before,
+a[href$=".xlsb"]:hover::before, a[href$=".xlsb"]:focus::before,
+a[href$=".jpg"]:hover::before, a[href$=".jpg"]:focus::before,
+a[href$=".jpeg"]:hover::before, a[href$=".jpeg"]:focus::before,
+a[href$=".odt"]:hover::before, a[href$=".odt"]:focus::before {
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
 }
 .file a::before,
 .file a::after {
@@ -2172,11 +2188,15 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 
 /*ACCORDION*/
-.accordion {
+.field--name-field-os2web-accordion-reference {
   margin-top: 10px;
   border-top: 3px solid var(--gray1);
   border-bottom: 3px solid var(--gray1);
   margin-bottom: 30px;
+}
+.accordion > li, .tabnav > li,
+.accordion-bordered > li {
+  background-color: transparent;
 }
 .accordion .has-selfservice-links .selfservice-links {
   display: none;
@@ -3184,6 +3204,42 @@ table tbody th {
     max-width: none;
   }
 }
+.entity-default--os2web-borgerdk-selfser-ref .field__item h2 {
+  font-size: 22px !important;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+  font-family: 'Museo 500';
+  font-weight: 500;
+}
+.entity-default--os2web-borgerdk-selfser-ref a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--dark-gray1);
+}
+.entity-default--os2web-borgerdk-selfser-ref a h3 {
+  font-size: 16px !important;
+  color: var(--primary);
+  margin: 0 !important;
+}
+.entity-default--os2web-borgerdk-selfser-ref a h3::before {
+  content: '';
+  display: inline-block !important;
+  position: relative;
+  left: 0;
+  top: 4px;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+}
+.entity-default--os2web-borgerdk-selfser-ref a:hover h3::before,
+.entity-default--os2web-borgerdk-selfser-ref a:focus h3::before {
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
+}
+.entity-default--os2web-borgerdk-selfser-ref a:hover h3,
+.entity-default--os2web-borgerdk-selfser-ref a:focus h3 {
+  font-weight: bold !important;
+}
 
 /*SØGERESULTATER*/
 .path-s .page-alert {
@@ -3405,6 +3461,17 @@ table tbody th {
 }
 .view-os2web-search h2 {
   font-size: 22px;
+}
+.entity-default--os2web-slideshow a[href$=".jpg"]::before,
+.entity-default--os2web-slideshow a[href$=".jpeg"]::before {
+  display: none !important;
+  content: "";
+}
+.entity-default--os2web-slideshow a[href$=".jpg"]:hover::before,
+.entity-default--os2web-slideshow a[href$=".jpg"]:focus::before,
+.entity-default--os2web-slideshow a[href$=".jpeg"]:hover::before,
+.entity-default--os2web-slideshow a[href$=".jpeg"]:focus::before {
+  background: none;
 }
 .entity-default--os2web-slideshow .tns-controls button[data-controls="prev"] {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
