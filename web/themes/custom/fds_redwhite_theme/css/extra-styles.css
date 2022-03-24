@@ -3736,3 +3736,21 @@ body.domain-pilotnaturpark-ringsted-dk .rk_cover_arrow_button_wrapper {
 iframe {
   min-height: 350px;
 }
+
+
+#block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-0 label {
+  margin-top: 3rem;
+  font-family: "Museo 300", sans-serif;
+  font-weight: normal;
+  color: var(--dark-gray2);
+  font-size: 2rem;
+  line-height: 3rem;
+  padding-left: 0;
+}
+#block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-0 label:before {
+  display:none;
+}
+
+#block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-1 label:before {
+  content: '';
+}
