@@ -1759,6 +1759,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .region-sidebar-second > div h2 {
   font-size: 22px;
   margin: 0 0 30px;
+  font-weight: 600;
 }
 .region-sidebar-first > div + div,
 .region-sidebar-second > div + div {
