@@ -1999,21 +1999,26 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .region-sidebar-second .sidenav-sub_list > li::before {
   display: none;
 }
-.region-sidebar-first .sidenav-sub_list > li a::before,
-.region-sidebar-second .sidenav-sub_list > li a::before {
-  content: '';
-  width: 6px;
-  height: 12px;
-  position: relative;
-  display: inline-block;
-  top: 50%;
-  background: url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -120px -70px;
-  margin-right: 5px;
-}
+
 .region-sidebar-first .sidenav-sub_list > li.active a::before,
 .region-sidebar-second .sidenav-sub_list > li.active a::before {
   color: var(--white);
 }
+
+.sub-link-sub {
+  float: left;
+  width: 5%;
+}
+
+.sub-link-div {
+  float: right;
+  width: 95%;
+  font-weight: normal;
+}
+.sub-link-div:hover {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 575px) {
   ul.limited-height > li:nth-child(n+3) {
       display: block;
