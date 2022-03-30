@@ -1757,9 +1757,10 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   padding: 0;
 }
 .region-sidebar-second > div h2 {
-  font-size: 22px;
-  margin: 0 0 30px;
-  font-weight: 600;
+  font-size: 1.85rem;
+  font-family: "Museo500",Helvetica,Arial,sans-serif;
+  margin: 0 0 20px;
+  color: #111;
 }
 .region-sidebar-first > div + div,
 .region-sidebar-second > div + div {
