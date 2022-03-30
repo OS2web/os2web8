@@ -2008,6 +2008,11 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .sub-link-sub {
   float: left;
   width: 5%;
+  content: '';
+  height: 24px;
+  position: relative;
+  top: 5px;
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -120px -70px;
 }
 
 .sub-link-div {
