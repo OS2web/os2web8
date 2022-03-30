@@ -200,6 +200,7 @@ h1 {
 .field--name-field-os2web-news-intro {
   font-size: 18px;
   line-height: 1.3em;
+  margin-bottom: 18px;
 }
 .field--name-field-os2web-page-intro p,
 .field--name-field-os2web-hearings-intro p,
@@ -222,6 +223,7 @@ h1 {
   .field--name-field-os2web-hearings-intro,
   .field--name-field-os2web-news-intro {
     font-size: 24px;
+    margin-bottom: 18px;
   }
 }
 .field--name-field-os2web-page-intro + .field,
