@@ -120,6 +120,17 @@
   }
   .sideblock-hojre {
     min-width: 320px;
+    width: 58.94%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    display: inline;
+  }
+}
+/* tholle */
+@media screen and (min-width: 1140px) {
+  .sideblock-hojre {
+    min-width: 320px;
     width: 32.45%;
     float: right;
     margin-left: 0;
