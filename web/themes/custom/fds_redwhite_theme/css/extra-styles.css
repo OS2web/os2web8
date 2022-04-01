@@ -1824,7 +1824,8 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .region-sidebar-second > div h2 {
   font-size: 1.85rem;
-  font-family: "Museo500",Helvetica,Arial,sans-serif;
+  font-family: "Museo 300", sans-serif;
+  font-weight: 300;
   margin: 0 0 20px;
   color: #111;
 }
@@ -3299,7 +3300,7 @@ table tbody th {
   color: var(--primary);
   margin: 0 !important;
 }
-.entity-default--os2web-borgerdk-selfser-ref a h3::before {
+.hovedindhold-venstre .entity-default--os2web-borgerdk-selfser-ref a h3::before {
   content: '';
   display: inline-block !important;
   position: relative;
