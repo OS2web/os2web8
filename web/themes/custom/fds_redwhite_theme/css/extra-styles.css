@@ -1514,6 +1514,11 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-description {
   margin-bottom: 90px;
 }
+.entity-full--os2web-news .node__content .field--name-field-os2web-news-description h2 {
+  padding: 10px 0 0;
+  font-size: 22px;
+  font-weight: bold;
+}
 .page-node-type-os2web-news .region-sidebar-second > div h2 {
   font-size: 30px;
   font-family: "Museo 300", sans-serif;
