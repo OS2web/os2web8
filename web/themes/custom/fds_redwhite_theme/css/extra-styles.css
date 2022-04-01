@@ -3290,7 +3290,7 @@ table tbody th {
   font-family: 'Museo 500';
   font-weight: 500;
 }
-.entity-default--os2web-borgerdk-selfser-ref a {
+.hovedindhold-venstre .entity-default--os2web-borgerdk-selfser-ref a {
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
