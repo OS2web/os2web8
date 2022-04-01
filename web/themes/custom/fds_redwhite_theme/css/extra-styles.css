@@ -1472,6 +1472,48 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 
 /*NYHEDER-SUBPAGE*/
+.field--name-field-os2web-page-heading + .field--name-field-os2web-page-paragraph-narr .entity-default--os2web-news-page h1 {
+  display: none;
+}
+.entity-default--os2web-news-page .views-row {
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid var(--dark-gray2);
+  margin-bottom: 30px;
+}
+.entity-default--os2web-news-page .entity-list--os2web-news h2 {
+  font-size: 20px !important;
+}
+.entity-default--os2web-news-page .field--name-field-os2web-news-article-date {
+  color: var(--dark-gray2) !important;
+  margin-top: 10px !important;
+}
+.entity-default--os2web-news-page .entity-list--os2web-news h2 a {
+  font-weight: bold;
+  color: var(--dark-gray2);
+  text-decoration: none;
+}
+.entity-default--os2web-news-page .entity-list--os2web-news h2 a:hover,
+.entity-default--os2web-news-page .entity-list--os2web-news h2 a:focus {
+  color: var(--primary);
+}
+.entity-default--os2web-news-page .field--name-field-os2web-news-intro p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.entity-full--os2web-news .node__content .field--name-field-os2web-news-intro {
+  padding-bottom: 40px;
+}
+.entity-full--os2web-news .node__content .field--name-field-os2web-news-primaryimage {
+  margin-bottom: 30px;
+}
+.entity-full--os2web-news .node__content .field--name-field-os2web-news-description {
+  margin-bottom: 90px;
+}
+.page-node-type-os2web-news .region-sidebar-second > div h2 {
+  font-size: 30px;
+  font-family: "Museo 300", sans-serif;
+  font-weight: 300;
+}
 .view-os2web-news .field--name-field-os2web-news-heading {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
