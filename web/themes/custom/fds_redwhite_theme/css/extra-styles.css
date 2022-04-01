@@ -1472,31 +1472,33 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 
 /*NYHEDER-SUBPAGE*/
-.field--name-field-os2web-page-heading + .field--name-field-os2web-page-paragraph-narr .entity-default--os2web-news-page h1 {
-  display: none;
+.os2web-news-main-list h1 {
+  border-bottom: 1px solid var(--dark-gray2);
+  padding-bottom: 30px
 }
-.entity-default--os2web-news-page .views-row {
+.os2web-news-main-list .views-row {
   padding: 0 0 20px 0;
   border-bottom: 1px solid var(--dark-gray2);
   margin-bottom: 30px;
 }
-.entity-default--os2web-news-page .entity-list--os2web-news h2 {
-  font-size: 20px !important;
-}
-.entity-default--os2web-news-page .field--name-field-os2web-news-article-date {
+.os2web-news-main-list .field--name-field-os2web-news-article-date {
   color: var(--dark-gray2) !important;
   margin-top: 10px !important;
 }
-.entity-default--os2web-news-page .entity-list--os2web-news h2 a {
+.os2web-news-main-list h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.os2web-news-main-list h2 a {
   font-weight: bold;
   color: var(--dark-gray2);
   text-decoration: none;
 }
-.entity-default--os2web-news-page .entity-list--os2web-news h2 a:hover,
-.entity-default--os2web-news-page .entity-list--os2web-news h2 a:focus {
+.os2web-news-main-list h2 a:hover,
+.os2web-news-main-list h2 a:focus {
   color: var(--primary);
 }
-.entity-default--os2web-news-page .field--name-field-os2web-news-intro p {
+.os2web-news-main-list p {
   font-size: 16px;
   line-height: 1.4;
 }
