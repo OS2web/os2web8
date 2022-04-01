@@ -1498,6 +1498,9 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .os2web-news-main-list h2 a:focus {
   color: var(--primary);
 }
+.os2web-news-main-list .field--name-field-os2web-news-intro {
+  padding-bottom: 7px;
+}
 .os2web-news-main-list p {
   font-size: 16px;
   line-height: 1.4;
