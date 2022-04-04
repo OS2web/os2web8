@@ -3917,7 +3917,7 @@ iframe {
     padding-bottom: 16px;
   }
   .custom-header__logo img {
-    height: 45px;
+    height: 48px;
   }
   .row-no-flex {
     display: block;
@@ -3940,6 +3940,7 @@ iframe {
     font-weight: normal;
     font-size: 14px;
     color: black;
+    font-family: sans-serif;
   }
   a {
     color: black !important;
