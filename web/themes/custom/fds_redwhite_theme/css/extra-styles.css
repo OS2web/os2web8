@@ -3910,24 +3910,26 @@ iframe {
     display: block;
   }
   .hovedindhold-venstre {
-    width: 100% !important;
-    float: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    display: block !important;
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
   }
   .sideblock-hojre {
-    width: 100% !important;
-    float: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    display: block !important;
+    min-width: none;
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
   }
   .sideblock-venstre {
-    width: 100% !important;
-    float: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    display: block !important;
+    min-width: none;
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
   }
 }
