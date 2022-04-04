@@ -3919,4 +3919,7 @@ iframe {
   p, ul:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.nav-primary):not(.inline-list):not(.tabnav):not(.sidenav-list):not(.sidenav-sub_list), ol:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.sidenav-list) {
     max-width: none;
   }
+  p, .body-text, .body-copy-text {
+    font-size: 12px;
+  }
 }
