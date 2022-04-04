@@ -3913,4 +3913,8 @@ iframe {
     margin-right: 0;
     display: block;
   }
+  .field--name-field-os2web-page-intro {
+    font-style: italic;
+    font-family: sans-serif;
+  }
 }
