@@ -3906,6 +3906,9 @@ iframe {
     text-align: left;
     padding-left: 16px;
   }
+  .row-no-flex {
+    display: block;
+  }
   .hovedindhold-venstre {
     width: 100% !important;
     float: none !important;
