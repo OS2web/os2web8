@@ -3908,5 +3908,9 @@ iframe {
   }
   .hovedindhold-venstre {
     width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
   }
 }
