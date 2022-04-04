@@ -151,7 +151,7 @@
       {% if has_sidebar_first %}
         {% set sidebar_first_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre',
+          has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre d-print-none',
         ] %}
         <aside {{ attributes.addClass(sidebar_first_classes) }}>
           <div class="layout-sidebar-left">
@@ -179,7 +179,7 @@
       {% if has_sidebar_second %}
         {% set sidebar_second_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre',
+          has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre d-print-none',
         ] %}
         <aside {{ attributes.addClass(sidebar_second_classes) }}>
           <div class="layout-sidebar-right">
