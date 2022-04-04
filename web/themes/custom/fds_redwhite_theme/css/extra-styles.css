@@ -3916,20 +3916,7 @@ iframe {
     margin-right: 0;
     display: block;
   }
-  .sideblock-hojre {
-    min-width: none;
-    width: 100%;
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
-  }
-  .sideblock-venstre {
-    min-width: none;
-    width: 100%;
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
+  p, ul:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.nav-primary):not(.inline-list):not(.tabnav):not(.sidenav-list):not(.sidenav-sub_list), ol:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.sidenav-list) {
+    max-width: none;
   }
 }
