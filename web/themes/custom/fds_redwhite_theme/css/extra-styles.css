@@ -3904,10 +3904,12 @@ iframe {
 @media print {
   body {
     font-family: sans-serif;
+    color: black;
   }
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: sans-serif;
     font-weight: bold;
+    color: black;
   }
   .custom-header--static .flexy-row {
     text-align: left;
@@ -3932,6 +3934,8 @@ iframe {
   .field--name-field-os2web-page-intro, .field--name-field-os2web-hearings-intro, .field--name-field-os2web-news-intro {
     font-style: italic;
     font-weight: normal;
+    font-size: 14px;
+    color: black;
   }
   a {
     color: black !important;
