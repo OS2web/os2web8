@@ -3900,3 +3900,9 @@ iframe {
 #block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-1 label:before {
   content: '';
 }
+
+@media print {
+  .custom-header--static .flexy-row {
+    text-align: left;
+  }
+}
