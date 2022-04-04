@@ -3907,11 +3907,11 @@ iframe {
     padding-left: 16px;
   }
   .hovedindhold-venstre {
-    width: 100%;
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block !important;
   }
   .field--name-field-os2web-page-intro {
     font-style: italic;
