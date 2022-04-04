@@ -3917,7 +3917,7 @@ iframe {
     padding-bottom: 16px;
   }
   .custom-header__logo img {
-    height: 48px;
+    height: 50px;
   }
   .row-no-flex {
     display: block;
@@ -3945,6 +3945,9 @@ iframe {
   a {
     color: black !important;
     text-decoration: underline !important;
+  }
+  .field--name-field-os2web-page-paragraph-narr .paragraph {
+    display: none;
   }
   #sliding-popup {
     display: none;
