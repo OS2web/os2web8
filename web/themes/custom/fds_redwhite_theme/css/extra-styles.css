@@ -3916,6 +3916,9 @@ iframe {
     padding-left: 16px;
     padding-bottom: 16px;
   }
+  .custom-header__logo img {
+    height: 45px;
+  }
   .row-no-flex {
     display: block;
   }
