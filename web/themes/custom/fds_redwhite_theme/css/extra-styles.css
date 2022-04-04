@@ -3913,8 +3913,18 @@ iframe {
     margin-right: 0 !important;
     display: block !important;
   }
-  .field--name-field-os2web-page-intro {
-    font-style: italic;
-    font-family: sans-serif;
+  .sideblock-hojre {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block !important;
+  }
+  .sideblock-venstre {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block !important;
   }
 }
