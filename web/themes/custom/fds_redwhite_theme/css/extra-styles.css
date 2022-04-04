@@ -3904,5 +3904,6 @@ iframe {
 @media print {
   .custom-header--static .flexy-row {
     text-align: left;
+    padding-left: 16px;
   }
 }
