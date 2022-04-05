@@ -3,7 +3,7 @@
  * array-foreach
  *   Array#forEach ponyfill for older browsers
  *   (Ponyfill: A polyfill that doesn't overwrite the native method)
- * 
+ *
  * https://github.com/twada/array-foreach
  *
  * Copyright (c) 2015-2016 Takuto Wada
@@ -3294,6 +3294,8 @@ document.addEventListener('DOMContentLoaded', function() {
     parent[0].classList.toggle('searchy--visible-form');
     var main = document.querySelectorAll('body');
     main[0].classList.toggle('search-active');
+    
+    jQuery(".searchy--visible-form").find("input:visible").first().focus();
   }
 
   var buttons = document.querySelectorAll('.js-toggle-searchy');

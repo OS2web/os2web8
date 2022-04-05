@@ -57,7 +57,7 @@
 </div>
 <!-- End - megamenu -->
 
-<header class="d-print-none">
+<header>
 
     <div class="custom-header custom-header--static">
       <div class="custom-header__inner">
@@ -97,7 +97,7 @@
             <!-- End - meta -->
           {% endif %}
 
-          <div class="menuwrapper">
+          <div class="menuwrapper d-print-none">
             <!-- Begin - below -->
               <!-- Begin - toggle -->
               <button
@@ -151,7 +151,7 @@
       {% if has_sidebar_first %}
         {% set sidebar_first_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre',
+          has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre d-print-none',
         ] %}
         <aside {{ attributes.addClass(sidebar_first_classes) }}>
           <div class="layout-sidebar-left">
@@ -164,7 +164,7 @@
         has_sidebar_first and has_sidebar_second ? 'col-12 col-md-6',
         has_sidebar_first and has_sidebar_second is empty ? 'hovedindhold-hojre',
         has_sidebar_second and has_sidebar_first is empty ? 'hovedindhold-venstre',
-        has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12 col-md-12'
+        has_sidebar_first is empty and has_sidebar_second is empty ? 'hovedindhold-venstre'
       ] %}
 
       {% set has_main_content = page.content|render|striptags|trim is not empty %}
@@ -179,7 +179,7 @@
       {% if has_sidebar_second %}
         {% set sidebar_second_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre',
+          has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre d-print-none',
         ] %}
         <aside {{ attributes.addClass(sidebar_second_classes) }}>
           <div class="layout-sidebar-right">

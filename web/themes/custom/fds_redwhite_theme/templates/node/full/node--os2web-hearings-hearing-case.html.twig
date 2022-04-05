@@ -17,7 +17,12 @@
   {% if not content['#is_decision'] %}
   {{ content.field_os2web_hearings_reply }}
 
-  <h2>{{ 'Skriv dit høringssvar' | trans }}</h2>
+  <h2>
+    {% if content['#reply_text'] %}
+      {{ content['#reply_text'] | trans }}
+    {% endif %}
+  </h2>
+
   <div class="box">
     <div class="box__body">
       <div class="row">
@@ -25,7 +30,7 @@
           {{ content.field_os2web_hearings_end_date }}
         </div>
         <div class="col-12 col-md-auto">
-          {{ content.field_os2web_hearings_published }}
+          {{ content.field_os2web_hearings_start_date }}
         </div>
         <div class="col-12 col-md-auto">
           {% if not content['#closed'] %}
@@ -35,7 +40,8 @@
       </div>
     </div>
   </div>
-{% endif %}
+    
+  {% endif %}
   <br />
 
   {# Link back to result overview. Hardcoded! #}

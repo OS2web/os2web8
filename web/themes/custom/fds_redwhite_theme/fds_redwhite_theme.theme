@@ -4,6 +4,7 @@ use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_preprocess_page().
@@ -122,10 +123,30 @@ function fds_redwhite_theme_preprocess_views_view_summary(&$variables) {
   if ($variables['view']->id() != 'os2web_news') {
     return;
   }
-  /** @var \Drupal\views\ResultRow $row */
-  foreach ($variables['rows'] as $row) {
-    $row->link = t('News @year', ['@year' => $row->link]);
+  /** @var \Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+  switch ($view->build_info['summary_level']) {
+    case 'field_os2web_news_article_date_value_year':
+      /** @var \Drupal\views\ResultRow $row */
+      foreach ($variables['rows'] as $row) {
+        $row->link = t('News @year', ['@year' => $row->link]);
+      }
+      break;
+
+    case 'field_os2web_news_section_target_id':
+      /** @var \Drupal\views\ResultRow $row */
+      foreach ($variables['rows'] as $rid => $row) {
+        /** @var Term $term */
+        if (is_string($row->link) && (int) $row->link && $term = Term::load($row->link)) {
+          $row->link = $term->label();
+        }
+        else {
+          unset($variables['rows'][$rid]);
+        }
+      }
+      break;
   }
+
 }
 
 /**
@@ -214,6 +235,16 @@ function fds_redwhite_theme_preprocess_media__os2web_file(array &$variables) {
   /** @var \Drupal\file\Entity\File $file */
   $file = $files[0];
   $variables['media_file_url'] = $file->createFileUrl();
+
+  $mime_type = $file->getMimeType();
+  // Classes to add to the file field for icons.
+  $variables['file_link_classes'] = [
+    'file',
+    // Add a specific class for each and every mime type.
+    'file--mime-' . strtr($mime_type, ['/' => '-', '.' => '-']),
+    // Add a more general class for groups of well known MIME types.
+    'file--' . file_icon_class($mime_type),
+  ];
 }
 
 /**
@@ -225,4 +256,19 @@ function fds_redwhite_theme_preprocess_field__field_os2web_iframe_code(array &$v
   $lst = $document->getElementsByTagName('iframe');
   $lst->item(0)->setAttribute('title',$variables['element']['#object']->field_os2web_iframe_heading->value);
   $variables['items'][0]['content']['#text'] = $document->saveHTML();
+}
+
+/**
+ * Implements hook_preprocess_file_link().
+ */
+function fds_redwhite_theme_preprocess_file_link(array &$variables) {
+  $file = $variables['file'];
+  $result = \Drupal::entityQuery('media')
+    ->condition('bundle', 'document')
+    ->condition('field_media_file.target_id', $file->id())
+    ->execute();
+  if (!empty($result)) {
+    $media = \Drupal::entityTypeManager()->getStorage('media')->load(reset($result));
+    $variables['link']['#title'] = $media->label();
+  }
 }

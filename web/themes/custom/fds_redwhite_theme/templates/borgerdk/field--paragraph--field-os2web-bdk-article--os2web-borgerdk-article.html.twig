@@ -64,10 +64,12 @@
             {{ item.content.legislation }}
             {{ item.content.recommendation }}
           </ul>
+          {% if item.content.selfservices %}
           <h3>{{ 'Selvbetjening' | trans }}</h3>
           <div>
             {{ item.content.selfservices }}
           </div>
+          {% endif %}
           {{ item.content.byline }}
           {{ item.content.post_text }}
         </div>
@@ -83,10 +85,12 @@
           {{ item.content.legislation }}
           {{ item.content.recommendation }}
         </ul>
+        {% if item.content.selfservices %}
         <h3>{{ 'Selvbetjening' | trans }}</h3>
         <div>
           {{ item.content.selfservices }}
         </div>
+        {% endif %}
         {{ item.content.byline }}
         {{ item.content.post_text }}
       </div>
@@ -107,10 +111,12 @@
             {{ item.content.legislation }}
             {{ item.content.recommendation }}
           </ul>
-          <h3>{{ 'Selvbetjening' | trans }}</h3>
-          <div>
-            {{ item.content.selfservices }}
-          </div>
+          {% if item.content.selfservices %}
+            <h3>{{ 'Selvbetjening' | trans }}</h3>
+            <div>
+              {{ item.content.selfservices }}
+            </div>
+          {% endif %}
           {{ item.content.byline }}
           {{ item.content.post_text }}
         </div>

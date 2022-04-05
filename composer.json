@@ -95,6 +95,7 @@
         "drupal/coder": "^8.3",
         "drupal/config_delete": "^1.17",
         "drupal/console": "^1.0.2",
+        "drupal/content_moderation_notifications": "^3.3",
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
         "drupal/core-recommended": "^9.1",
