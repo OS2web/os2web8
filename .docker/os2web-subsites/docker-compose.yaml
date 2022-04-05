@@ -26,6 +26,7 @@ services:
       - ./volumes/apache/sites-enabled:/etc/apache/sites-enabled
       - ./volumes/config:/opt/drupal/config
       - ./volumes/crontabs:/var/spool/cron/crontabs
+      - ./volumes/tmp:/opt/drupal/tmp
     depends_on:
       - mariadb
     ports:
@@ -39,8 +40,8 @@ services:
   mariadb:
     image: mariadb:latest
     volumes:
-      - /var/lib/mysql
+      - mysql:/var/lib/mysql
     networks:
       - backend
-    environment:
-      MARIADB_ROOT_PASSWORD: root
+    env_file:
+      - .env
