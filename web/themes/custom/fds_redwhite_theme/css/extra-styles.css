@@ -3951,7 +3951,7 @@ iframe {
     display: none;
   }
   .paragraph--type--os2web-cnt-paragraph-reference {
-    display: block;
+    display: block !important;
   }
   #sliding-popup {
     display: none;
