@@ -46,6 +46,6 @@ $config['bc_subsites.settings'] = [
 
 // Passing EXTERNAL_DB_PROVISIONING into Drupal settings.
 if (getenv('EXTERNAL_DB_PROVISIONING')) {
-  $settings['external_db_provisioning'] =  getenv('EXTERNAL_DB_PROVISIONING');
+  $config['bc_subsites.settings']['external_db_provisioning'] =  getenv('EXTERNAL_DB_PROVISIONING');
 }
 

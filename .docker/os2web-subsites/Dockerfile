@@ -15,13 +15,9 @@ RUN set -eux; \
 
 # Adding subsites provisioner script.
 RUN set -eux; \
-    sed -i "s/\"installer-paths\": {/\"installer-paths\": {\"scripts\/{\$name\}\": \[\"bellcom\/os2subsites_provision\"\],/g" composer.json; \
-	export COMPOSER_HOME="$(mktemp -d)"; \
-	echo "Loading bellcom/os2subsites_provision 05042022"; \
-	composer require bellcom/os2subsites_provision:dev-master; \
-    ln -s /opt/drupal/scripts/os2subsites_provision/8.x/bc_subsites /opt/drupal/web/modules/custom/; \
-	# delete composer cache.
-	rm -rf "$COMPOSER_HOME"
+    git clone -n https://github.com/bellcom/os2subsite_provision.git /opt/drupal/scripts/os2subsites_provision; \
+    cd /opt/drupal/scripts/os2subsites_provision && git checkout e1288f4a62ca94f191c17f9d497bd9fda9a82f61; \
+    ln -s /opt/drupal/scripts/os2subsites_provision/8.x/bc_subsites /opt/drupal/web/modules/custom/
 
 # Adding further site specific data to image.
 RUN chown -R www-data:www-data /opt/drupal/tmp /opt/drupal/logs /opt/drupal/translations; \

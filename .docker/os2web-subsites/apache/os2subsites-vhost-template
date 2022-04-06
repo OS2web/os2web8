@@ -3,14 +3,10 @@
     <Directory [basedir]>
        AllowOverride All
        Options FollowSymLinks
-       # Uncommenting below will only allow a limited number of Bellcom IPs access to the site
-       #Include /etc/apache2/limit-bellcom.conf
-       # Below blocks access without auth if the domain ends with bellcom.dk
-       #Include /etc/apache2/limit-subsite-access.conf
     </Directory>
 
     ServerAdmin domains@bellcom.dk
-    DocumentRoot [basedir]/public_html
+    DocumentRoot /var/www/html
     ServerName [domain]
 
     CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -18,7 +14,7 @@
 
     php_admin_value open_basedir [basedir]:/usr/share/php
     php_value include_path .:[basedir]
-    php_value error_log ${APACHE_LOG_DIR}/error.log
+    php_value error_log /dev/stderr
     php_value session.save_path [basedir]/sessions/[domain]
     php_admin_value upload_tmp_dir [basedir]/tmp/[domain]
 

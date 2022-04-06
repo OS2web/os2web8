@@ -38,6 +38,10 @@ drush en os2web_pagebuilder os2web_spotbox
 
 * Enable other modules from OS2Web category and setup them on demand.
 
+## Local development
+
+OS2Web subsites - See [.docker/os2web-subsites/README.md](.docker/os2web-subsites/README.md)
+
 ## Contribution
 
 OS2Web Hjemmeside projects is opened for new features and os course bugfixes.
