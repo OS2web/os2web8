@@ -1687,14 +1687,17 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   font-size: 29px !important;
   font-family: 'Museo 300' !important;
 }
+#block-selvbetjening,
 #block-selvbetjening--2 {
   border-bottom: none;
   padding-bottom: 0 !important;
 }
-#block-selvbetjening--2 h2{
+#block-selvbetjening h2,
+#block-selvbetjening--2 h2 {
   font-size: 29px;
   line-height: 1em;
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a {
   color: var(--primary);
@@ -1705,14 +1708,17 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   text-decoration: none;
   position: relative;
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox {
   background: transparent !important;
   margin-bottom: 0;
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item:last-of-type a,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item:last-of-type a,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item:last-of-type a {
   border-bottom: 1px solid var(--gray1);
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a::after {
   content: "";
@@ -1731,16 +1737,20 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   -ms-transform: translateY(-50%) !important;
   -o-transform: translateY(-50%) !important;
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after{
   transform:none;
   margin-top: 0;
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox:hover::after,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox:hover::after,
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox:focus::after,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox:focus::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:hover::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -47px;
 }
+#block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a h3,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a h3,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3 {
   margin: 0;
