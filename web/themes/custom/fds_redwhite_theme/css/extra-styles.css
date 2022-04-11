@@ -96,7 +96,14 @@
   float: none;
   display: block;
 }
+body {
+  flex-direction: unset;
+}
+
 @media screen and (min-width: 768px) {
+  body {
+    flex-direction: column !important;
+  }
   .sideblock-venstre {
     width: 32.45%;
     float: left;
@@ -127,7 +134,6 @@
     display: inline;
   }
 }
-/* tholle */
 @media screen and (min-width: 1140px) {
   .sideblock-hojre {
     min-width: 320px;
@@ -713,12 +719,12 @@ header div.custom-header {
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   opacity: 0;
 }
 .searchy-label {
   font-size: 22px;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   font-family: "Museo 300", sans-serif;
   color: var(--dark-gray2);
   text-transform: uppercase;
