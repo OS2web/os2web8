@@ -18,8 +18,9 @@
 {% set entity = elements['#os2web_borgerdk_selfservice'] %}
 
 <a target="_blank" href="{{ entity.selfserviceUrl.value }}" title="{{ entity.label.value }}" class="spotbox spotbox--button" {{ attributes }}>
-  <div class="spotbox__content">
+  {% if entity.label.value|length %}
     {{ content.label }}
-    {{ content.description }}
-  </div>
+  {% else %}
+    {{ content.title }}
+  {% endif %}
 </a>
