@@ -39,17 +39,17 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {% include '@fds_green_theme/includes/action-buttons.html.twig' %}
-    <div class="row">
-      <div class="col-md-8">
-        <h1>Dit overblik over hjælp i Frederiksberg Kommune</h1>
-        <p>
-          Her kan du få overblik over hvordan du bedst muligt kan hjælpe dig selv. Vi hjælper dig med råd, vejledning og viden, hvor du kan finde svar på dine spørgsmål. Du har også mulighed for at søge dig frem.
-        </p>
-        {{ content }}
-      </div>
-      <div class="col-md-4">
-        [picture placeholder]
+    <div class="container-fluid px-0">
+      <div class="row no-gutters slider-text justify-content-center justify-content-md-end">
+        <img class="one-third align-self-end order-md-last img-fluid" src="/sites/default/files/2022-04/topimage.png" alt="test">
+        <div class="one-forth">
+        {% include '@fds_green_theme/includes/action-buttons.html.twig' %}
+          <div class="text align-self-center">
+            <h1>Dit overblik over hjælp i Frederiksberg Kommune</h1>
+            <p>Her kan du få overblik over hvordan du bedst muligt kan hjælpe dig selv. Vi hjælper dig med råd, vejledning og viden, hvor du kan finde svar på dine spørgsmål. Du har også mulighed for at søge dig frem.</p>
+            {{ content }}
+          </div>
+        </div>
       </div>
     </div>
   {% endblock %}

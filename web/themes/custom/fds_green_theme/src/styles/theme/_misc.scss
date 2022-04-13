@@ -24,10 +24,10 @@
 
 
 // Increased specificity to win over base theme.
-body .container-fluid {
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
-}
+// body .container-fluid {
+//  padding-left: $grid-gutter-width;
+//  padding-right: $grid-gutter-width;
+// }
 
 .skip-link {
   color: $color-text;
@@ -77,9 +77,9 @@ body {
   display: none;
 }
 
-body .page-container {
-  padding-top: 1rem;
-}
+//body .page-container {
+//  padding-top: 1rem;
+//}
 
 .path-frontpage {
   background: $color-green-005;
