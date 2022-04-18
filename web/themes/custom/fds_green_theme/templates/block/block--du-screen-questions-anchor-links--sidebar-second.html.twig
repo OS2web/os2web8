@@ -1,0 +1,28 @@
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('h4') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+    {{ content }}
+
+    <p>Klik på en af vores genvejsknapper og hop hurtigt hen til det som er relevant for dig.</p>
+
+    <ul>
+      {% for link in content['#relatedCategoriesLinks'] %}
+        <li>
+          <a href="#{{ link.anchorId }}">{{ link.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
+</div>
