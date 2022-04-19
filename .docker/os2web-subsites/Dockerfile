@@ -13,6 +13,12 @@ RUN set -eux; \
 		sudo; \
 	rm -rf /var/lib/apt/lists/*
 
+# Adding subsites provisioner script.
+RUN set -eux; \
+    git clone -n https://github.com/bellcom/os2subsite_provision.git /opt/drupal/scripts/os2subsites_provision; \
+    cd /opt/drupal/scripts/os2subsites_provision && git checkout 89a7202548462dfbb6946fda9978cfad3e77412b; \
+    ln -s /opt/drupal/scripts/os2subsites_provision/8.x/bc_subsites /opt/drupal/web/modules/custom/
+
 # Adding further site specific data to image.
 RUN chown -R www-data:www-data /opt/drupal/tmp /opt/drupal/logs /opt/drupal/translations; \
 	echo "<?php" > /opt/drupal/web/sites/sites.php; \
@@ -20,6 +26,12 @@ RUN chown -R www-data:www-data /opt/drupal/tmp /opt/drupal/logs /opt/drupal/tran
 
 # Additional PHP configuration for OS2Web subsites both CLI and Apache
 COPY php/os2web-subsites.ini /usr/local/etc/php/conf.d/os2web-subsites.ini
+
+# Add OS2Subsites vhost template
+COPY apache/os2subsites-vhost-template /opt/drupal/scripts/os2subsites_provision/os2subsites-vhost-template
+
+# Copy drupal local settings
+COPY settings/*.php /opt/drupal/.docker/os2web-subsites/settings/
 
 # Adding entry point where required services could be started.
 COPY entrypoint.sh /usr/bin/
@@ -33,6 +45,9 @@ RUN echo "HOME=/opt/drupal" >> /opt/drupal/.env
 
 # Addjusting php runtime.
 RUN ln -s /usr/local/bin/php /usr/bin/php;
+
+# Allow www-data call scripts.
+COPY os2subsite /etc/sudoers.d/os2subsite
 
 ENTRYPOINT ["entrypoint.sh"]
 
