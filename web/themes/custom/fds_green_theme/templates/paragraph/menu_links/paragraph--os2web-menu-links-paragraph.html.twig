@@ -23,9 +23,9 @@
           {% endif %}
           {% if menu_link['children']|length %}
             <div class="sublist-wrapper">
-              <div class="temaer">
+{#               <div class="temaer">
                 <p>Eksempler på temaer:</p>
-              </div>
+              </div> #}
               <ul>
                 {% for node_link in menu_link['children'] %}
                   <li><a href="{{ node_link.url }}">{{ node_link.title }}</a>

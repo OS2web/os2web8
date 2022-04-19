@@ -84,3 +84,22 @@ function fds_green_theme_preprocess_anonymous_subscriptions_message(array &$vari
     $variables['link'] = Link::fromTextAndUrl(t('Klik her for at gå til høringer og afgørelser'), Url::fromUserInput('/hoeringer-og-afgoerelser'));
   }
 }
+
+/**
+ * Implements hook_preprocess_paragraph().
+ *
+ * search_selected_terms block.
+ */
+function fds_green_theme_preprocess_paragraph__os2web_search_selected_terms(&$variables) {
+  if ($variables['view_mode'] == 'preview') {
+    return;
+  }
+
+  $variables['#search_terms'] = [];
+
+  $vid = 'os2web_search_selected_terms';
+  $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+  foreach ($terms as $term) {
+    $variables['#search_terms'][] = $term->name;
+  }
+}

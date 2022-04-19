@@ -282,6 +282,13 @@ body {
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+  header {
+    .custom-header__logo {
+      img {
+        height: 50px;
+      }
+    }
+  }
   .region-header__top {
     margin-right: 3.5%;
   }
@@ -301,11 +308,6 @@ body {
   }
   .custom-header__button--toggle-search {
     font-size: 1.6rem;
-  }
-  .custom-header__logo {
-    img {
-      height: 50px;
-    }
   }
   .region-header__top {
     .views-exposed-form {
