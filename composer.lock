@@ -13385,12 +13385,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_news.git",
-                "reference": "c887d5136d4ff52b715b9cc60296fef23d2ff57b"
+                "reference": "e85c991b9185020bef6e6f821c154ece155e85ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_news/zipball/c887d5136d4ff52b715b9cc60296fef23d2ff57b",
-                "reference": "c887d5136d4ff52b715b9cc60296fef23d2ff57b",
+                "url": "https://api.github.com/repos/OS2web/os2web_news/zipball/e85c991b9185020bef6e6f821c154ece155e85ab",
+                "reference": "e85c991b9185020bef6e6f821c154ece155e85ab",
                 "shasum": ""
             },
             "require": {
@@ -13409,7 +13409,7 @@
                 "issues": "https://github.com/OS2web/os2web_news/issues",
                 "source": "https://github.com/OS2web/os2web_news/tree/master"
             },
-            "time": "2022-02-01T09:56:25+00:00"
+            "time": "2022-04-19T12:49:52+00:00"
         },
         {
             "name": "os2web/os2web_newsletter",
@@ -24686,5 +24686,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.0.0"
 }
