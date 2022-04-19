@@ -3955,7 +3955,7 @@ iframe {
   h1 {
     font-size: 27px;
   }
-  h2 {
+  .node__content > .field > .field__item h2 {
     font-size: 20px;
     margin: 0 0 15px;
   }
@@ -3994,6 +3994,12 @@ iframe {
   a {
     color: black !important;
     text-decoration: underline !important;
+  }
+  .field--name-field-os2web-page-paragraph-left > .field__item + .field__item,
+  .field--name-field-os2web-page-paragraph-righ > .field__item + .field__item,
+  .field--name-field-os2web-page-paragraph-narr > .field__item + .field__item,
+  .field--name-field-os2web-page-description + .field--name-field-os2web-page-paragraph-narr {
+    margin: 0;
   }
   .field--name-field-os2web-page-paragraph-narr {
     border: none;
