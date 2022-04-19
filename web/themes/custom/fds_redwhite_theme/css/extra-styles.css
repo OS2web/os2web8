@@ -3941,18 +3941,23 @@ iframe {
     font-size: 14px;
     line-height: 1.4;
     color: black;
+    font-weight: normal;
   }
   body .page-container {
     background: transparent;
   }
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    font-family: sans-serif;
+    font-family: Helvetica,Arial,sans-serif;
     font-weight: bold;
     color: black;
     max-width: none;
   }
   h1 {
     font-size: 27px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 0 0 15px;
   }
   .custom-header--static .flexy-row {
     text-align: left;
@@ -3989,6 +3994,10 @@ iframe {
   a {
     color: black !important;
     text-decoration: underline !important;
+  }
+  .field--name-field-os2web-page-paragraph-narr {
+    border: none;
+    padding: 0;
   }
   .field--name-field-os2web-page-paragraph-narr .paragraph {
     display: none;
