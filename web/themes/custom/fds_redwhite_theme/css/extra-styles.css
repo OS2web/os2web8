@@ -3946,6 +3946,9 @@ iframe {
   body .page-container {
     background: transparent;
   }
+  .container {
+    padding: 0 8px;
+  }
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: Helvetica,Arial,sans-serif;
     font-weight: bold;
@@ -3977,7 +3980,8 @@ iframe {
   }
   .custom-header--static .flexy-row {
     text-align: left;
-    padding-left: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-bottom: 16px;
   }
   .custom-header__logo img {
@@ -4017,6 +4021,8 @@ iframe {
   a {
     color: black !important;
     text-decoration: underline !important;
+  }
+  .field a {
     border-bottom: 1px dotted var(--dark-gray1);
   }
   .field--name-field-os2web-page-paragraph-left > .field__item + .field__item,
