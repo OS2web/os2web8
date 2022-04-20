@@ -3957,7 +3957,23 @@ iframe {
   }
   .node__content > .field > .field__item h2 {
     font-size: 20px;
-    margin: 0 0 15px;
+    margin: 15px 0;
+  }
+  .col-sm-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .os2web_contact .field--name-field-os2web-contact-open-hours {
+    margin: 15px 0;
+  }
+  .node--type-os2web-page .node-updated {
+    display: block;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
   }
   .custom-header--static .flexy-row {
     text-align: left;
@@ -4010,6 +4026,9 @@ iframe {
   }
   .paragraph--type--os2web-cnt-paragraph-reference {
     display: block !important;
+  }
+  .paragraph--type--os2web-cnt-paragraph .spacer, .os2web_contact .spacer {
+    margin-top: 0;
   }
   #sliding-popup {
     display: none;
