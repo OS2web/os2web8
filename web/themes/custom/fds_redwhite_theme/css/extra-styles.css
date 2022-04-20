@@ -3966,12 +3966,12 @@ iframe {
     max-width: 100%;
   }
   .os2web_contact .field--name-field-os2web-contact-open-hours {
-    margin: 15px 0;
+    margin: 20px 0;
   }
   .node--type-os2web-page .node-updated {
     display: block;
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 0;
     font-weight: bold;
   }
@@ -3982,6 +3982,7 @@ iframe {
   }
   .custom-header__logo img {
     height: 50px;
+    margin-bottom: 15px;
   }
   .row-no-flex {
     display: block;
@@ -4016,6 +4017,7 @@ iframe {
   a {
     color: black !important;
     text-decoration: underline !important;
+    border-bottom: 1px dotted var(--dark-gray1);
   }
   .field--name-field-os2web-page-paragraph-left > .field__item + .field__item,
   .field--name-field-os2web-page-paragraph-righ > .field__item + .field__item,
