@@ -4044,6 +4044,21 @@ iframe {
   .paragraph--type--os2web-cnt-paragraph .spacer, .os2web_contact .spacer {
     margin-top: 0;
   }
+  footer .footer {
+    background-image: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 13px;
+  }
+  footer .footer h2,
+  footer .footer h3 {
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 1.4;
+  }
+  footer .footer h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
   #sliding-popup {
     display: none;
   }
