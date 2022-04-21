@@ -343,18 +343,19 @@ svg.ext {
 .file {
   display: block;
   box-shadow: none;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   background-color: #fafafa;
   padding: 30px;
   border: 1px solid var(--light-gray2);
 }
+/*WHY WAS THIS ADDED?
 span.file {
   border: none;
   background-color: inherit;
   padding: 0px;
   display: inline-flex;
   font-size: 1.4rem;
-}
+}*/
 .file a {
   position: relative;
   display: block;
