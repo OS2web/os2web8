@@ -28,12 +28,18 @@ class RelatedPagesFilterForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, NodeInterface $node = NULL) {
     // Getting screening question keys.
-    $field_du_scr_ques_situation = $node->get('field_du_scr_ques_situation')->getValue();
-    $situationKeys = array_column($field_du_scr_ques_situation, 'target_id');
+    $situationKeys = [];
+    if ($node->hasField('field_du_scr_ques_situation')) {
+      $field_du_scr_ques_situation = $node->get('field_du_scr_ques_situation')->getValue();
+      $situationKeys = array_column($field_du_scr_ques_situation, 'target_id');
+    }
 
     // Getting screening question titles.
-    $field_du_scr_ques_title = $node->get('field_du_scr_ques_title')->getValue();
-    $situationTitles = array_column($field_du_scr_ques_title, 'value');
+    $situationTitles = [];
+    if ($node->hasField('field_du_scr_ques_title')) {
+      $field_du_scr_ques_title = $node->get('field_du_scr_ques_title')->getValue();
+      $situationTitles = array_column($field_du_scr_ques_title, 'value');
+    }
 
     // Checking if the number of keys and values are the same.
     if (count($situationKeys) !== count($situationTitles)) {

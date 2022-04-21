@@ -5,8 +5,6 @@ namespace Drupal\du_screen_questions\Plugin\Block;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Block\BlockPluginInterface;
-use Drupal\Core\Render\Markup;
-use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
@@ -28,8 +26,11 @@ class ScreeningQuestionsAnchorLinks extends BlockBase implements BlockPluginInte
 
     if ($node && $node->bundle() == 'os2web_page') {
       // Getting screening question keys.
-      $field_du_scr_ques_situation = $node->get('field_du_scr_ques_situation')->getValue();
-      $situationKeys = array_column($field_du_scr_ques_situation, 'target_id');
+      $situationKeys = [];
+      if ($node->hasField('field_du_scr_ques_situation')) {
+        $field_du_scr_ques_situation = $node->get('field_du_scr_ques_situation')->getValue();
+        $situationKeys = array_column($field_du_scr_ques_situation, 'target_id');
+      }
 
       // Returns if we have no situation added.
       if (empty($situationKeys)) {
