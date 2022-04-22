@@ -151,6 +151,9 @@ body {
   margin-right: 0;
   display: block;
 }
+.path-node-2438 .breadcrumb {
+  display: none;
+}
 /*CUSTOM CONTENT-SECTION - END*/
 
 /*GENERAL*/
