@@ -250,7 +250,7 @@ h1 {
   .field--name-field-os2web-hearings-intro,
   .field--name-field-os2web-news-intro {
     font-size: 24px;
-    margin-bottom: 18px;
+    margin: 30px 0 40px;
   }
 }
 .field--name-field-os2web-page-intro + .field,
