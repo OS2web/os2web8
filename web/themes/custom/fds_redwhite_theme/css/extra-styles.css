@@ -351,32 +351,36 @@ svg.ext {
   border: 1px solid var(--light-gray2);
 }
 
-div.field__item span.file {
+
+
+div.field--name-field-os2web-page-description div.field__item > span.file {
   background-color: inherit;
   border: none;
   padding: 4px;
 }
-div.field__item span.file a {
+
+div.field--name-field-os2web-page-description div.field__item > span.file a {
   padding-left: unset;
+  padding-right: unset;
   display: inline-block;
-  /*font-size: 1.7rem;*/
   font-size: inherit;
-  border-bottom: none;
+  border-bottom: 1px dashed grey;
 }
-div.field__item span.file > a[href$=".pdf"]::before,
-div.field__item span.file > a[href$=".ppt"]::before,
-div.field__item span.file > a[href$=".pptx"]::before,
-div.field__item span.file > a[href$=".pptm"]::before,
-div.field__item span.file > a[href$=".doc"]::before,
-div.field__item span.file > a[href$=".docm"]::before,
-div.field__item span.file > a[href$=".docx"]::before,
-div.field__item span.file > a[href$=".xls"]::before,
-div.field__item span.file > a[href$=".xlsx"]::before,
-div.field__item span.file > a[href$=".xlsm"]::before,
-div.field__item span.file > a[href$=".xlsb"]::before,
-div.field__item span.file > a[href$=".jpg"]::before,
-div.field__item span.file > a[href$=".jpeg"]::before,
-div.field__item span.file > a[href$=".pdf"]::before {
+
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".ppt"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptx"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptm"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".doc"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".docm"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".docx"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xls"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsx"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsm"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsb"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpg"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpeg"]::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]::before {
   content: '';
   display: inline-block !important;
   position: relative;
@@ -387,23 +391,38 @@ div.field__item span.file > a[href$=".pdf"]::before {
   margin-right: 5px;
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
 }
-div.field__item span.file > a[href$=".ppt"]:hover::before, div.field__item span.file > a[href$=".ppt"]:focus::before,
-div.field__item span.file > a[href$=".pptx"]:hover::before, div.field__item span.file > a[href$=".pptx"]:focus::before,
-div.field__item span.file > a[href$=".pptm"]:hover::before, div.field__item span.file > a[href$=".pptm"]:focus::before,
-div.field__item span.file > a[href$=".doc"]:hover::before, div.field__item span.file > a[href$=".doc"]:focus::before,
-div.field__item span.file > a[href$=".docm"]:hover::before, div.field__item span.file > a[href$=".docm"]:focus::before,
-div.field__item span.file > a[href$=".docx"]:hover::before, div.field__item span.file > a[href$=".docx"]:focus::before,
-div.field__item span.file > a[href$=".xls"]:hover::before, div.field__item span.file > a[href$=".xls"]:focus::before,
-div.field__item span.file > a[href$=".xlsx"]:hover::before, div.field__item span.file > a[href$=".xlsx"]:focus::before,
-div.field__item span.file > a[href$=".xlsm"]:hover::before, div.field__item span.file > a[href$=".xlsm"]:focus::before,
-div.field__item span.file > a[href$=".xlsb"]:hover::before, div.field__item span.file > a[href$=".xlsb"]:focus::before,
-div.field__item span.file > a[href$=".jpg"]:hover::before, div.field__item span.file > a[href$=".jpg"]:focus::before,
-div.field__item span.file > a[href$=".jpeg"]:hover::before, div.field__item span.file > a[href$=".jpeg"]:focus::before,
-div.field__item span.file > a[href$=".odt"]:hover::before, div.field__item span.file > a[href$=".odt"]:focus::before,
-div.field__item span.file > a[href$=".pdf"]:hover::before, div.field__item span.file > a[href$=".pdf"]:focus::before {
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
-}
 
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".ppt"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".ppt"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptx"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptx"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptm"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptm"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".doc"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".doc"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".docm"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".docm"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".docx"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".docx"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xls"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xls"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsx"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsx"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsm"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsm"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsb"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".xlsb"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpg"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpg"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpeg"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpeg"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]:focus::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:focus::before {
+  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
+  color: blue;
+}
 
 .file a {
   position: relative;
