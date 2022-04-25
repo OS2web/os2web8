@@ -13039,12 +13039,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "ce37c6f4684b226700ba51e4e2b60f60b143a2b3"
+                "reference": "8c54d3fea9430610421a08dfd527c3caed18927e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/ce37c6f4684b226700ba51e4e2b60f60b143a2b3",
-                "reference": "ce37c6f4684b226700ba51e4e2b60f60b143a2b3",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/8c54d3fea9430610421a08dfd527c3caed18927e",
+                "reference": "8c54d3fea9430610421a08dfd527c3caed18927e",
                 "shasum": ""
             },
             "require": {
@@ -13059,9 +13059,9 @@
             "description": "Adds Hearing related content types and Hearings search view",
             "support": {
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
-                "source": "https://github.com/OS2web/os2web_hearings/tree/RINGSTED-340"
+                "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2022-03-17T15:13:35+00:00"
+            "time": "2022-04-25T17:43:07+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
