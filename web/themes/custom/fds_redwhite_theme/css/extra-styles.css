@@ -424,6 +424,13 @@ div.field--name-field-os2web-page-description div.field__item span.file a[href$=
   color: blue;
 }
 
+div.field--name-field-os2web-page-description table a span.file {
+  border: none;
+  padding: inherit;
+  background-color: inherit;
+  display: inline-block;
+}
+
 .file a {
   position: relative;
   display: block;
