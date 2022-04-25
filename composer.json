@@ -165,17 +165,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "composer/installers": true,
-            "cweagans/composer-patches": true,
-            "simplesamlphp/composer-module-installer": true,
-            "drupal/console-extend-plugin": true,
-            "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true,
-            "zaporylie/composer-drupal-optimizations": true
-        }
+        "sort-packages": true
     },
     "autoload": {
         "classmap": [
