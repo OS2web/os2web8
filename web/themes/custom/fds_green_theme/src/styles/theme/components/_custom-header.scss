@@ -85,7 +85,6 @@ header {
     }
   }
 }
-
 body {
   .dialog-off-canvas-main-canvas::after {
     content: "";
@@ -141,6 +140,7 @@ body {
   padding: 10px; // For fat thumbs.
   background-color: transparent;
   border: 0;
+  margin-right: -10px;
   + .searchy,
   + .custom-header__button {
     margin-left: 15px;
@@ -149,7 +149,7 @@ body {
     height: auto;
     width: auto;
     font-size: 3rem;
-    color: $color-white;
+    color: $color-primary;
   }
 }
 .searchy {
@@ -303,7 +303,7 @@ body {
   }
   .custom-header__button {
     .icon {
-      color: $color-orange-004;
+      color: $color-primary;
     }
   }
   .custom-header__button--toggle-search {

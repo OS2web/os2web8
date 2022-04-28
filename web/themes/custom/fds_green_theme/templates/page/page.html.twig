@@ -4,6 +4,40 @@
 </div>
 <!-- End - ie -->
 
+<!-- Begin - megamenu -->
+<div class="custom-megamenu d-print-none d-sm-none">
+  <div class="container-fluid">
+
+    <!-- Begin - top row -->
+    <div class="custom-megamenu__row custom-megamenu__row--top">
+      <div class="row">
+
+        <!-- Begin - toggle megamenu -->
+        <div class="col-12 col-sm-3">
+          <div class="text-align-right">
+            <button class="custom-megamenu__button custom-megamenu__button--toggle-megamenu js-toggle-megamenu d-sm-inline-block" aria-label="{{ 'Luk menu' | t }}">
+              <span class="material-icons icon">close</span>
+            </button>
+          </div>
+        </div>
+        <!-- End - toggle megamenu -->
+
+      </div>
+    </div>
+    <!-- End - top row -->
+
+    <!-- Begin - navigation -->
+    <div class="custom-megamenu__row custom-megamenu__row--navigation">
+      TEST
+      {{ page.megamenu__navigation }}
+      {{ page.megamenu__selfservice }}
+    </div>
+    <!-- End - navigation -->
+
+  </div>
+</div>
+<!-- End - megamenu -->
+
 <header class="d-print-none">
     <div class="custom-header custom-header--static">
       <div class="custom-header__inner">
@@ -27,10 +61,16 @@
             <div class="flexy-spacer"></div>
 
             <!-- Begin - logo -->
-            <a href="{{ url('<front>') }}" class="custom-header__logo">
+            <a href="{{ url('<front>') }}" class="custom-header__logo d-none d-sm-block">
               <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
             </a>
             <!-- End - logo -->
+
+            <!-- Begin - mobile menu -->
+            <button class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-block d-sm-none" aria-label="{{ 'Åbn menu' | t }}">
+              <span class="icon fa fa-bars"></span>
+            </button>
+            <!-- Begin - mobile menu -->
 
           </div>
           <!-- End - top -->
