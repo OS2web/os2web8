@@ -1,3 +1,6 @@
+
+
+
 {#
 /**
  * @file
@@ -39,27 +42,32 @@
  */
 #}
 
-
 {%
   set classes = [
-  'paragraph',
-  'paragraph--type--' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ? 'paragraph--unpublished'
-]
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
 %}
-
 {% block paragraph %}
 
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
-      <ul class="d-flex flex-wrap">
-        {% for term in _context['#search_terms'] %}
-          <li class=""><a href="{{ path('view.os2web_search.os2web_search_page', {'sq': term|lower}) }}">{{ term }}</a></li>
-        {% endfor %}
-      </ul>
+
+    <div class="col-12 col-md-6 py-5 d-flex flex-column justify-content-center">    
+      <h2>{{content.field_block_titl}}</h2>
+      <p><strong>{{content.field_block_desc}}</strong></p>
+      <div>{{content.field_links}}</div>
+    </div>
+    <div class="d-none d-md-block col-md-6">
+      <div class="custom-bg"></div>
+    </div>
+
+
+
     {% endblock %}
   </div>
-
 {% endblock paragraph %}
+
+
