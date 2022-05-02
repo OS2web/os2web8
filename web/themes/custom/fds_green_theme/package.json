@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    //read README
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development gulp build",
     "watch": "cross-env NODE_ENV=development gulp watch",
