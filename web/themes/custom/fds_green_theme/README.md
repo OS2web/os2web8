@@ -1,3 +1,9 @@
+### READ BEFORE GULP start
+INSTALL node : v10.24.1
+npm: 6.14.12
+
+
+
 
 ### Prerequisites
 
