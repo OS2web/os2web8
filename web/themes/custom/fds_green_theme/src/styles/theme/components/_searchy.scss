@@ -20,6 +20,9 @@
 // Styling
 // --------------------------------------------------
 
+.search-api-autocomplete-search {
+  box-shadow: none !important;
+}
 .ui-autocomplete {
   .ui-menu-item:last-child {
     border-bottom-left-radius: 10px;
