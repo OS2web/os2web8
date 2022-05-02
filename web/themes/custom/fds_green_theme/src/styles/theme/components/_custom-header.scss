@@ -23,6 +23,31 @@
 header {
   position: relative;
   z-index: 100;
+  form#views-exposed-form-os2web-search-os2web-search-page {
+    .form-actions {
+      left: auto;
+      right: 0;
+      .form-submit {
+        background-color: $color-green-002;
+        border-radius: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        ::after {
+          display: none;
+        }
+      }
+    }
+    input[type=text] {
+      background-image: url("/themes/custom/fds_green_theme/dist/images/Soeg.svg") !important;
+      background-size: 15px 15px !important;
+      background-repeat: no-repeat !important;
+      background-position: 25px center !important;
+      padding: 14px 14px 14px 50px !important;
+    }
+  }
+  .region .region-header__search {
+    margin-top: 65px;
+  }
   .custom-header {
     button,
     a {
