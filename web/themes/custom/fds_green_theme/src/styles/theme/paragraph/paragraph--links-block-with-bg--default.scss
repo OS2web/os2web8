@@ -1,5 +1,4 @@
-// .paragraph--type--links-block-with-bg {
-.entity-default.entity-default--os2web-wrapper.paragraph.paragraph--type--os2web-wrapper.background-color--tertiary.paragraph--view-mode--default {
+.paragraph--type--links-block-with-bg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +29,6 @@
       }
     }
   }
-
   @include media($xs) {
     background-image: url("../images/falks.svg");
     background-repeat: no-repeat;
