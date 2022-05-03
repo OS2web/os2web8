@@ -4134,9 +4134,20 @@ iframe {
   .paragraph--type--os2web-cnt-paragraph .spacer, .os2web_contact .spacer {
     margin-top: 0;
   }
+  footer {
+    margin-top: 30px;
+    border-top: 2px solid #000;
+  }
+  footer a {
+    border-bottom: none;
+  }
+  footer .vispaakort a {
+    font-size: 18px;
+    font-weight: bold;
+  }
   footer .footer {
     background-image: none;
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 30px;
     font-size: 13px;
   }
@@ -4148,6 +4159,15 @@ iframe {
   footer .footer h2 {
     font-size: 14px;
     text-transform: uppercase;
+  }
+  footer .footer h2, footer .footer h3 {
+    margin: 13px 0 10px;
+  }
+  footer .footer .col-sm-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 20%;
+    max-width: 20%;
   }
   #sliding-popup {
     display: none;
