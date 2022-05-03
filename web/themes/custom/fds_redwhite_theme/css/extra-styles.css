@@ -4141,7 +4141,10 @@ iframe {
   footer a {
     border-bottom: none;
   }
-  footer .vispaakort a {
+  footer .footer .footer-col:not(:first-child) {
+    margin-top: 0;
+  }
+  footer .vispaakort {
     font-size: 18px;
     font-weight: bold;
   }
