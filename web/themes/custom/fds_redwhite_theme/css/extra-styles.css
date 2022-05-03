@@ -4107,6 +4107,7 @@ iframe {
     font-family: Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.4;
+    margin: 35px 0 20px
   }
   a {
     color: black !important;
@@ -4134,7 +4135,11 @@ iframe {
   .paragraph--type--os2web-cnt-paragraph .spacer, .os2web_contact .spacer {
     margin-top: 0;
   }
+  .os2web_contact .office-hours {
+    line-height: 2.5rem;
+  }
   footer {
+    max-width: 445px;
     margin-top: 30px;
     border-top: 2px solid #000;
   }
@@ -4167,12 +4172,10 @@ iframe {
     margin: 13px 0 10px;
   }
   footer .footer .col-sm-6 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 20%;
-    max-width: 20%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
   #sliding-popup {
-    display: none;
+    display: none !important;
   }
 }
