@@ -4140,16 +4140,11 @@ iframe {
   }
   footer {
     max-width: 445px;
-    margin-top: 30px;
+    margin: 30px 8px 0;
+    border-top: 2px solid #000;
   }
-  footer::before {
-    content: "";
-    width: 100%;
-    max-width: 445px;
-    background: #000;
-    height: 2px;
-    display: block;
-    position: relative;
+  footer p {
+    font-size: 13px;
   }
   footer .footer a, footer .footer a:visited {
     border-bottom: none;
