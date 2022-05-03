@@ -4143,6 +4143,9 @@ iframe {
     margin: 30px 8px 0;
     border-top: 2px solid #000;
   }
+  footer .container {
+    padding: 0;
+  }
   footer p {
     font-size: 13px;
   }
