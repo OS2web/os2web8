@@ -3,6 +3,11 @@
       @content;
     }
   }
+@mixin media-max($size) {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  }
   
   @mixin media-mm($size1, $size2) {
     @media screen and (min-width: $size1) and (max-width: $size2) {

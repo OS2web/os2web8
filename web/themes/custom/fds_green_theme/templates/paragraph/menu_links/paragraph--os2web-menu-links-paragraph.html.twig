@@ -4,43 +4,55 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   paragraph.isPublished() ? null : 'paragraph--unpublished'
 ] %}
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
 
-      {# Begin - links #}
-      <ul>
-      {% for menu_link in _context['#menu_links'] %}
-        <li>
-          <a href="{{ menu_link.url }}">{{ menu_link.title }}</a>
-          <span class="toplist-title">{{ menu_link.title }}</span>
-          {% set rendered_content = menu_link.content.field_ikon|render %}
-          {% if rendered_content %}
-            {{ rendered_content }}
-          {% endif %}
-          {% if menu_link['intro_text']|length %}
-            {{ menu_link['intro_text'] }}
-          {% endif %}
+{% set i = 0 %}
+{% block paragraph %}
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			<div class="tabnav" role="tablist">
+				{% for menu_link in _context['#menu_links'] %}
+
+					<button aria-controls="tabpanel-{{i}}" id="tab-{{i}}" class="tabnav-item m-0" role="tab" {% if i == 0 %} aria-selected="false" {% else %} aria-selected="true" {% endif %}>
+            {% set rendered_content = menu_link.content.field_ikon|render %}
+            {% if rendered_content %}
+              {{ rendered_content }}
+            {% endif %}
+            {% if menu_link['intro_text']|length %}
+              {{ menu_link['intro_text'] }}
+            {% endif %}
+            <span class="toplist-title">{{ menu_link.title }}</span>
+					</button>
+
+					<section class="sublist-wrapper tabnav-panel" {% if i == 0 %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %} role="tabpanel" tabindex="0" id="tabpanel-{{i}}" aria-labelledby="tab-{{i}}">
+          <ul class="m-0 mw-100">
           {% if menu_link['children']|length %}
-            <div class="sublist-wrapper">
-              <div class="temaer">
+          
+          
+         
+            <div class="temaer">
                 <p>Eksempler på temaer:</p>
-              </div>
-              <ul>
+            </div>
+
+              <ul class="row">
                 {% for node_link in menu_link['children'] %}
-                  <li><a href="{{ node_link.url }}">{{ node_link.title }}</a>
-                    <span class="sublist-title">{{ node_link.title }}</span>
-                    {{ node_link.intro_text }}
+                  <li class="col-12 col-sm-6 col-md-4">
+                    <a href="{{ node_link.url }}">
+                      <span class="sublist-title">{{ node_link.title }}</span>
+                      {{ node_link.intro_text }}
+                    </a>
                   </li>
                 {% endfor %}
               </ul>
-            </div>
-          {% endif %}
-        </li>
-      {% endfor %}
-      </ul>
-      {# End - links #}
+             {% else %}
+             <div>No data</div>
+             {% endif %}
+              </ul>
+					</section>
+					{% set i = i + 1 %}
+				{% endfor %}
+			</div>
+		{% endblock %}
+	</div>
 
-    {% endblock %}
-  </div>
+
 {% endblock paragraph %}
