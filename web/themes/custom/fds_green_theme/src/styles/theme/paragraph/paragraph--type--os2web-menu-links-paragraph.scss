@@ -1,0 +1,261 @@
+// FRONT-MENU
+.paragraph--type--os2web-menu-links-paragraph {
+  position: relative;
+  display: block;
+  background: $color-light-green-001;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: -50px;
+  box-shadow: 0px 0px 6px #00000029;
+  > .tabnav {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: none !important;
+    margin: 0;
+    padding: 0;
+    > li {
+      position: static !important;
+      flex-basis: calc(100% / 8);
+      margin: 0;
+      padding: 25px 0;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      &::before {
+        content: "";
+        display: none;
+      }
+      .sublist-wrapper {
+        width: 100%;
+        position: absolute;
+        height: auto;
+        top: 100%;
+        z-index: 10;
+        display: block;
+        left: 0;
+        right: 0;
+        .temaer {
+          background: $color-white;
+          text-align: left;
+          padding: 30px 48px;
+          font-style: italic;
+        }
+      }
+      &:nth-child(1) .field--name-field-ikon {
+        height: 33px;
+        width: 30px;
+        img {
+          max-width: 60px;
+        }
+      }
+      &:nth-child(2) .field--name-field-ikon {
+        height: 33px;
+        width: 27px;
+        img {
+          max-width: 54px;
+        }
+      }
+      &:nth-child(3) .field--name-field-ikon {
+        height: 34px;
+        width: 27px;
+        img {
+          max-width: 54px;
+        }
+      }
+      &:nth-child(4) .field--name-field-ikon {
+        height: 34px;
+        width: 29px;
+        img {
+          max-width: 58px;
+        }
+      }
+      &:nth-child(5) .field--name-field-ikon {
+        height: 36px;
+        width: 23px;
+        img {
+          max-width: 46px;
+        }
+      }
+      &:nth-child(6) .field--name-field-ikon {
+        height: 37px;
+        width: 29px;
+        img {
+          max-width: 58px;
+        }
+      }
+      &:nth-child(7) .field--name-field-ikon {
+        height: 32px;
+        width: 49px;
+        img {
+          max-width: 98px;
+        }
+      }
+      &:nth-child(8) .field--name-field-ikon {
+        height: 32px;
+        width: 35px;
+        img {
+          max-width: 70px;
+        }
+      }
+      .field--name-field-ikon {
+        order: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        min-height: 44px;
+        img {
+          float: left;
+        }
+      }
+      a {
+        position: absolute;
+        width: calc(100% / 8);
+        height: 100%;
+        top: 0;
+        text-indent: -9999px;
+        z-index: 1;
+      }
+      .toplist-title {
+        order: 1;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $color-primary;
+        text-decoration: none;
+        padding: 0 5px;
+        z-index: 2;
+        pointer-events: none;
+        position: relative;
+      }
+      ul {
+        order: 3;
+        display: none;
+        max-width: none;
+        li {
+          text-align: left;
+          padding: 5px;
+          &::before {
+            content: "";
+            display: none;
+          }
+          a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            text-indent: -9999px;
+            z-index: 1;
+            padding: 0;
+            &::before {
+              content: "";
+              height: 18px;
+              width: 35px;
+              background-image: url("../images/Pil.svg");
+              background-size: 35px 18px;
+              display: block;
+              position: absolute;
+              top: auto;
+              bottom: 46px;
+              left: auto;
+              right: 33px;
+              transition: all 0.2s ease-in-out;
+              -webkit-transition: all 0.2s ease-in-out;
+              -moz-transition: all 0.2s ease-in-out;
+              -ms-transition: all 0.2s ease-in-out;
+              -o-transition: all 0.2s ease-in-out;
+            }
+            &:hover,
+            &:focus {
+              background: $color-green-005;
+            }
+            &:hover::before,
+            &:focus::before {
+              right: 23px;
+            }
+          }
+          .sublist-title {
+            padding: 0;
+            font-weight: bold;
+            font-size: 1.6rem;
+            color: $color-primary;
+            z-index: 2;
+            pointer-events: none;
+            position: relative;
+          }
+          .field--name-field-os2web-page-intro p {
+            font-weight: normal;
+            color: $color-primary;
+            font-size: 1.6rem;
+            margin-top: 10px;
+            z-index: 2;
+            pointer-events: none;
+            position: relative;
+            strong {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+      &.show-subnavigation {
+        background: $color-white;
+        &:first-child {
+          border-top-left-radius: 10px;
+        }
+        &:last-child {
+          border-top-right-radius: 10px;
+        }
+        .field--name-field-ikon {
+          img {
+            float: right;
+          }
+        }
+        .toplist-title {
+          color: $color-gray-001;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          max-width: none !important;
+          padding: 3px 25px 25px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          box-shadow: 0px 0px 6px #00000029;
+          background: $color-white;
+          li {
+            flex-basis: 32.3%;
+            padding: 35px 70px 65px 23px;
+            list-style: none;
+            margin: 0 0 21px;
+            &::after {
+              content: "";
+              height: 2px;
+              width: calc(100% - 46px);
+              background: $color-light-green-002;
+              display: block;
+              position: absolute;
+              bottom: 15px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              z-index: 2;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+    // FRONT-MENU
+    .paragraph--type--os2web-menu-links-paragraph {
+      margin-top: -25px;
+    }
+  }

@@ -128,7 +128,7 @@ jQuery(function ($) {
 // Search.
 document.addEventListener('DOMContentLoaded', function() {
   function toggle(event) {
-    var parent = document.querySelectorAll('.searchy');
+    var parent = document.querySelectorAll('.search-container');
     parent[0].classList.toggle('searchy--visible-form');
     var main = document.querySelectorAll('body');
     main[0].classList.toggle('search-active');

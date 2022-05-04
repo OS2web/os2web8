@@ -166,7 +166,7 @@ body {
   background-color: transparent;
   border: 0;
   margin-right: -10px;
-  + .searchy,
+  + .search-container,
   + .custom-header__button {
     margin-left: 15px;
   }
@@ -177,7 +177,7 @@ body {
     color: $color-primary;
   }
 }
-.searchy {
+.search-container {
   + .custom-header__button {
     margin-left: 15px;
   }
