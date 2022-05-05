@@ -43,10 +43,10 @@
           height: 100%;
           width: 100%;
           @include media-breakpoint-up(xs) {
-            padding: 21px 72px 46px 22px;
+            padding: 30px 72px 46px 22px;
           }
           @include media-breakpoint-up(md) {
-            padding-right: 50px;
+            padding-right: 63px;
           }
           &::before {
             content: "";
@@ -57,7 +57,7 @@
             display: block;
             position: absolute;
             bottom: 44px;
-            right: 0;
+            right: 23px;
             transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
             -moz-transition: all 0.2s ease-in-out;
@@ -67,14 +67,14 @@
           &::after {
             content: "";
             height: 2px;
-            width: calc(100% - 23px);
+            width: calc(100% - 46px);
             background: #d1e3cc;
             display: block;
             position: absolute;
             bottom: 15px;
             left: 0;
             right: 0;
-            margin: 0 0 0 auto;
+            margin: 0 auto 0 auto;
             z-index: 2;
             pointer-events: none;
           }
@@ -84,7 +84,7 @@
           }
           &:hover::before,
           &:focus::before {
-            right: 23px;
+            right: 40px;
           }
         }
         .sublist-title {

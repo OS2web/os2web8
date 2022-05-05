@@ -20,7 +20,7 @@
             {% if menu_link['intro_text']|length %}
               {{ menu_link['intro_text'] }}
             {% endif %}
-            <span class="toplist-title">{{ menu_link.title }}</span>
+            <span class="toplist-title pr-7 pr-sm-0">{{ menu_link.title }}</span>
 					</button>
 
 					<section class="sublist-wrapper tabnav-panel" {% if i == 0 %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %} role="tabpanel" tabindex="0" id="tabpanel-{{i}}" aria-labelledby="tab-{{i}}">
@@ -44,7 +44,7 @@
                 {% endfor %}
               </ul>
              {% else %}
-             <div>No data</div>
+             <div class="px-5 pt-5 pb-2"><strong>No data</strong></div>
              {% endif %}
               </ul>
 					</section>
@@ -56,3 +56,6 @@
 
 
 {% endblock paragraph %}
+
+
+
