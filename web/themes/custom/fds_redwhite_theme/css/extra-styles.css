@@ -2498,7 +2498,7 @@ body.path-frontpage .paragraph--menu-link--view-mode--image {
 }
 
 .entity-full--os2web-hearings-hearing-case.os2web-hearings-hearing-case.full {
-  width: 58.94%;
+  max-width: 58.94%;
 }
 
 .path-node-4189 .hovedindhold-venstre {
