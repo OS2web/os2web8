@@ -365,6 +365,7 @@ div.field--name-field-os2web-page-description div.field__item > span.file a {
   display: inline-block;
   font-size: inherit;
   border-bottom: 1px dotted var(--dark-gray1);
+  line-height: 2.2rem;
 }
 div.field--name-field-os2web-page-description p + .embedded-entity .file {
   padding: 0 !important;
