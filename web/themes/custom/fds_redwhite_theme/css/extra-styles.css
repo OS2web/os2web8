@@ -1853,7 +1853,8 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   margin: 0;
   font-size: inherit;
   color: var(--primary);
-  font-family: "Museo 500", sans-serif;;
+  font-family: "Museo 500", sans-serif;
+  font-weight: 500;
 }
 .field--name-field-os2web-bdk-selfser-ref > .field__item + .field__item {
   margin: 0;
@@ -1933,8 +1934,8 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .region-sidebar-second > div h2 {
   font-size: 1.85rem;
-  font-family: "Museo 500", sans-serif;
-  font-weight: 500;
+  font-family: "Museo 300", sans-serif;
+  font-weight: 300;
   margin: 0 0 20px;
   color: #111;
 }
