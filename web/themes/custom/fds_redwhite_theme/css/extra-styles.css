@@ -370,6 +370,9 @@ div.field--name-field-os2web-page-description p + .embedded-entity .file {
   padding: 0 !important;
   margin:0 !important;
 }
+div.field--name-field-os2web-page-description .embedded-entity + .embedded-entity .file {
+  margin-top: 1rem;
+}
 
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]::before,
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".ppt"]::before,
