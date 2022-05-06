@@ -9,7 +9,7 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border: 0;
-
+    z-index: 1;
     @include media-breakpoint-only(xs) {
       order: 0;
     }

@@ -133,6 +133,7 @@
 
       &[aria-selected="true"] {
         background: $color-white;
+        z-index: 1;
         .field--name-field-ikon {
           svg {
             path:not([fill="none"]) {
