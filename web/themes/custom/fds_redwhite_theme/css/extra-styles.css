@@ -3411,6 +3411,9 @@ table tbody th {
 .field--name-field-os2web-bdk-article .spotbox--button.spotbox:focus .spotbox__content h3::before {
   background-position: -19px -48px;
 }
+.field--name-field-os2web-bdk-article .field--name-header {
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 767px) {
   p, ul:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.nav-primary):not(.inline-list):not(.tabnav):not(.sidenav-list):not(.sidenav-sub_list), ol:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.sidenav-list) {
     max-width: none;
