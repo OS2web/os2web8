@@ -123,6 +123,7 @@
         </div>
       </div>
     {% endif %}
+    {% if logged_in %}
     <div class="row">
     
       <aside class="col-12 col-md-4 col-lg-4 col-xl-3">
@@ -146,7 +147,7 @@
       </aside>
 
     </div>
-
+  {% endif %}
   </div>
 
   {{ page.featured_bottom_first }}
