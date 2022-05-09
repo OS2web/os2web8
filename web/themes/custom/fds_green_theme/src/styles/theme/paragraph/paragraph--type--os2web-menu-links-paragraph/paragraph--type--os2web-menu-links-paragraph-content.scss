@@ -3,12 +3,13 @@
 ///CONTENT PART
 ///CONTENT PART
 .paragraph--type--os2web-menu-links-paragraph {
-  section.sublist-wrapper.tabnav-panel[aria-hidden="false"] {
+  section.sublist-wrapper.tabnav-panel[aria-hidden="false"],
+  section.accordion-content {
     background-color: $color-white;
     margin-bottom: 0;
-
     border: 0;
     z-index: 1;
+    width: 100%;
     &:last-of-type {
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
@@ -112,10 +113,14 @@
         }
       }
     }
-    & + .tabnav-item[aria-selected="false"] {
+    &[aria-hidden="false"] + .accordion-button[aria-expanded="false"] {
       &::after {
         display: none;
       }
     }
   }
+  .accordion-bordered .accordion-button[aria-expanded=true], .accordion-bordered .tabnav > button[aria-expanded=true] {
+    border-bottom: none;
+  }
 }
+
