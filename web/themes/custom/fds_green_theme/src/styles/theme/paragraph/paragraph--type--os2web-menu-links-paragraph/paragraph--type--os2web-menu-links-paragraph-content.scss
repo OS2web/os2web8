@@ -6,12 +6,19 @@
   section.sublist-wrapper.tabnav-panel[aria-hidden="false"] {
     background-color: $color-white;
     margin-bottom: 0;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+
     border: 0;
     z-index: 1;
+    &:last-of-type {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
     @include media-breakpoint-only(xs) {
       order: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
     }
     .temaer {
       background: $color-white;
@@ -103,6 +110,11 @@
             font-weight: normal;
           }
         }
+      }
+    }
+    & + .tabnav-item[aria-selected="false"] {
+      &::after {
+        display: none;
       }
     }
   }

@@ -31,13 +31,15 @@
       background-color: $background-alternative;
       position: relative;
       &.tabnav-item {
-        &::after {
+        &:first-of-type::after {
+          display: none;
+        }
+        &:not(:first-of-type)::after {
           content: "";
           height: 2px;
           background-color: $color-green-004;
           position: absolute;
-          top: unset;
-          bottom: 0;
+          top: 0;
           left: 0;
           right: 0;
           width: calc(100% - 64px);
