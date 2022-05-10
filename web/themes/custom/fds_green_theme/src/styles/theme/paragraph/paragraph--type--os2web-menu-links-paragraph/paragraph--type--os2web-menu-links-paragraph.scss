@@ -3,12 +3,12 @@
   position: relative;
   display: block;
   background: $color-light-green-001;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: $big-border-radius;
+  border-top-right-radius: $big-border-radius;
   margin-top: -50px;
   box-shadow: 0px 0px 6px #00000029;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: $big-border-radius;
+  border-bottom-left-radius: $big-border-radius;
   > .tabnav, 
   > .accordion {
     display: flex;
@@ -16,7 +16,7 @@
     max-width: none !important;
     margin: 0;
     padding: 0;
-    border-radius: 10px;
+    border-radius: $big-border-radius;
 
     > button {
       padding: 0;
@@ -121,12 +121,12 @@
         }
       }
       &:first-child {
-        border-top-left-radius: 10px !important;
-        border-top-right-radius: 10px !important;
+        border-top-left-radius: $big-border-radius !important;
+        border-top-right-radius: $big-border-radius !important;
       }
       &:last-of-type {
-        border-bottom-right-radius: 10px !important;
-        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: $big-border-radius !important;
+        border-bottom-left-radius: $big-border-radius !important;
       }
       &[aria-expanded="true"] {
         border-bottom-right-radius: unset !important;
@@ -143,7 +143,7 @@
           border-top-right-radius: unset !important;
         }
         &:nth-of-type(4) {
-          border-top-right-radius: 10px !important;
+          border-top-right-radius: $big-border-radius !important;
         }
         &:last-of-type {
           border-bottom-right-radius: unset !important;
@@ -155,7 +155,7 @@
           border-top-right-radius: unset !important;
         }
         &:last-of-type {
-          border-top-right-radius: 10px !important;
+          border-top-right-radius: $big-border-radius !important;
         }
       }
 

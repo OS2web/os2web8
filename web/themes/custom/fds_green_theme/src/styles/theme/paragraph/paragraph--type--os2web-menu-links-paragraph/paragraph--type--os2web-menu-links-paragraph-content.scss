@@ -11,15 +11,15 @@
     z-index: 1;
     width: 100%;
     &:last-of-type {
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: $big-border-radius;
+      border-bottom-left-radius: $big-border-radius;
     }
     @include media-breakpoint-only(xs) {
       order: 0;
     }
     @include media-breakpoint-up(sm) {
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: $big-border-radius;
+      border-bottom-left-radius: $big-border-radius;
     }
     .temaer {
       background: $color-white;
