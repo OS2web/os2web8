@@ -48,7 +48,8 @@
         }
       }
 
-      $bg-colors-and-svgs: "1" $color-orange-006 "../images/Hjalp_dig_selv.svg",
+      $bg-colors-and-svgs: 
+        "1" $color-orange-006 "../images/Hjalp_dig_selv.svg",
         "2" $color-blue-009 "../images/Teknologier.svg",
         "3" $color-primary "../images/Kommunale_tilbud.svg",
         "4" $color-red-003 "../images/Private_tilbud.svg";
@@ -72,7 +73,7 @@
             width: 20px;
             position: absolute;
             top: 50%;
-            left: 31px;
+            left: 10%;
             transform: translateY(-50%);
             background-image: url($svg-path);
             background-position: center;
