@@ -1,0 +1,76 @@
+.du-screen-questions-related-pages-container-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @supports not (gap: 1px) {
+    margin: 20px 0;
+    // @include media-breakpoint-up(sm) {
+    //   margin: 10px 0;
+    // }
+  }
+  .du-screen-questions-related-pages-container {
+    padding: 30px;
+    $bg-colors-and-svgs: "1" $color-orange-006 "../images/Hjalp_dig_selv.svg",
+      "2" $color-blue-009 "../images/Teknologier.svg",
+      "3" $color-primary "../images/Kommunale_tilbud.svg",
+      "4" $color-red-003 "../images/Private_tilbud.svg";
+    h2.du-screen-questions-related-pages-container-title {
+      color: $color-base-002;
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+      padding-left: 46px;
+    }
+    @each $id, $color-code, $svg-path in $bg-colors-and-svgs {
+      &.color-container-#{$id} {
+        border: 1px solid $color-code;
+        border-top: 11px solid $color-code;
+        border-radius: $big-border-radius;
+        position: relative;
+        &::after {
+          content: "";
+          height: 26px;
+          width: 20px;
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          background-image: url($svg-path);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          z-index: 10;
+          @include media-breakpoint-up(sm) {
+            height: 32px;
+            width: 25px;
+          }
+        }
+      }
+    }
+
+
+    .accordion {
+      .accordion-inner-wrap {
+        border-radius: $big-border-radius;
+      }
+      h2 {
+        color: $color-primary;
+        button {
+          background-color: $color-green-005;
+          color: $color-primary;
+          &::after {
+            content: url("../images/down-arrow-green.svg");
+            height: 26px;
+            width: 20px;
+
+          }
+          &[aria-expanded="true"] {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
