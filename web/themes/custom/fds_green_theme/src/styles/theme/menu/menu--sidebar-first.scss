@@ -1,14 +1,16 @@
 .menu--sidebar-first {
     .menu--sidebar-first-menu-list {
-        padding: 16px 28px 20px 45px;
+        padding: 16px 28px 20px 57px;
         display: flex;
         flex-direction: row;
         position: relative;
         .sidenav-sub_list {
+            margin-top: 10px;
             .sidenav-sub_list-item {
+                margin-bottom: 7px;
                 a {
                     .sub-link-div {
-                        padding-left: 17px;
+                        padding-left: 25px;
                         &:hover {
                             font-weight: normal;
                         }
@@ -27,7 +29,7 @@
                             left: 0;
                             top: 50%;
                             transform: translateY(-50%);
-                            width: 10px;
+                            width: 15px;
                             height: 2px;
                             background-color: $color-white;
                         }
