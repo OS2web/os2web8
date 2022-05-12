@@ -1,11 +1,14 @@
 .block--du-screen-questions-anchor-links--sidebar-second {
   h2.h4 {
     color: $color-gray-001;
+    max-width: unset;
   }
   p {
+    max-width: unset;
     color: $color-gray-001;
   }
   ul {
+    max-width: unset!important;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
