@@ -28,7 +28,9 @@
     <div class="box__body">
       <div class="row">
         <div class="col-12 col-md-auto">
+          {% if node.field_os2web_hearings_tender.target_id != "4563" %}
           {{ content.field_os2web_hearings_end_date }}
+          {% endif %}
         </div>
         <div class="col-12 col-md-auto">
           {{ content.field_os2web_hearings_start_date }}
