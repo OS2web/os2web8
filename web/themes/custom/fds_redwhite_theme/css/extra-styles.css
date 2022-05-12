@@ -2361,7 +2361,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   color: var(--primary);
 }
 .entity-teaser--os2web-hearings-hearing-case__content {
-  padding: 15px 15px 5px;
+  padding: 15px 15px 15px;
   display: block;
 }
 .entity-teaser--os2web-hearings-hearing-case__date {
