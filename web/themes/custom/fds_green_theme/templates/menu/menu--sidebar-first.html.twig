@@ -7,7 +7,7 @@
   {% if items %}
 
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('sidenav-list menu--sidebar-first') }}>
+      <ul aria-hidden="true" id="overflow1" {{ attributes.addClass('sidenav-list overflow-menu-inner menu--sidebar-first') }}>
     {% else %}
       <ul class="sidenav-sub_list">
     {% endif %}
@@ -17,7 +17,7 @@
     
       {%
         set classes = [
-          menu_level == 0 ? "menu--sidebar-first-menu-list",
+          menu_level == 0 ? "menu--sidebar-first-menu-list overflow-list",
           menu_level != 0 ? "sidenav-sub_list-item",
           item.in_active_trail ? 'current',
           item.is_active ? 'active',
@@ -49,6 +49,14 @@
 
     {% endfor %}
     </ul>
+    {# <div class="overflow-menu-inner" id="overflow1" aria-hidden="true">
+        <ul class='overflow-list'>
+            <li><button>Option 1</button></li>
+            <li><button>Option 2</button></li>
+            <li><a href='#'>Option 3 as link</a></li>
+            <li><button>Option 4 is longer text</button></li>
+        </ul>
+    </div> #}
   {% endif %}
 
 {% endmacro %}

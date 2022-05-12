@@ -1,0 +1,12 @@
+.overflow-menu-inner.menu--sidebar-first {
+      @include media-max($grid-lg - 1px) {
+        display: none;
+        &[aria-hidden="false"] {
+            display: flex;
+            right: 0;
+            top: -55px;
+            position: absolute;
+            z-index: 100;
+        }
+      };
+}

@@ -61,15 +61,23 @@
             <div class="flexy-spacer"></div>
 
             <!-- Begin - logo -->
-            <a href="{{ url('<front>') }}" class="custom-header__logo d-none d-sm-block">
+            <a href="{{ url('<front>') }}" class="custom-header__logo d-none d-lg-block">
               <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
             </a>
             <!-- End - logo -->
 
             <!-- Begin - mobile menu -->
-            <button class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-block d-sm-none" aria-label="{{ 'Åbn menu' | t }}">
+            {# <button class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-block d-md-none" aria-label="{{ 'Åbn menu' | t }}">
               <span class="icon fa fa-bars"></span>
-            </button>
+            </button> #}
+            <div class="overflow-menu  overflow-menu--open-right d-block d-lg-none">
+              <button class="button-overflow-menu js-dropdown"
+                  data-js-target="overflow1" aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="{{ 'Åbn menu' | t }}">
+                 <span class="icon fa fa-bars"></span>
+              </button>
+            </div>
             <!-- Begin - mobile menu -->
 
           </div>
@@ -108,12 +116,12 @@
 
     {% if not is_front %}
       <div class="region-action-buttons row d-print-none">
-        <div class="col-12 col-md-3 d-none d-md-block">
+        <div class="col-12 col-md-3 d-none d-lg-block">
           <a href="{{ url('<front>') }}" class="return-to-home-link">
             {{ 'Forside' | trans }}
           </a>
         </div>
-        <div class="col-12 col-md-9 col--align-center">
+        <div class="col-12 col-md-9 d-none d-lg-block col--align-center">
           <div class="flexy-row">
 
             <div class="flexy-spacer"></div>
@@ -126,17 +134,17 @@
     {% if logged_in or not is_front %}
     <div class="row">
     
-      <aside class="col-12 col-md-4 col-lg-4 col-xl-3">
+      <aside class="col-12 col-md-12 col-lg-4 col-xl-3">
         <div class="layout-sidebar-left">
           {{ page.sidebar_first }}
         </div>
       </aside>
 
-      <main {{ content_attributes.addClass('col-12 col-md-8 col-lg-6 col-xl-6') }}>
+      <main {{ content_attributes.addClass('order-2 order-md-1 col-12 col-md-8 col-lg-6 col-xl-6') }}>
         {{ page.content }}
       </main>
 
-      <aside class="col-12 col-md-12 col-lg-2 col-xl-3 d-print-none">
+      <aside class="order-1 order-md-2 col-12 col-md-4 col-lg-2 col-xl-3 d-print-none">
         <div class="layout-sidebar-right">
           <div class="box">
             <div class="box__body">
