@@ -79,6 +79,13 @@ header {
         outline-color: $color-orange-004;
       }
     }
+    .custom-header-home-link {
+      font-size: 16px;
+      color: $color-primary;
+      margin-right: 47px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
   .custom-header__logo {
     line-height: 0;
