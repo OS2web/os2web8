@@ -1,12 +1,168 @@
-.overflow-menu-inner.menu--sidebar-first {
-      @include media-max($grid-lg - 1px) {
+.overflow-menu {
+  ///BURGER
+  .button-overflow-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 11;
+    &:hover {
+      text-decoration: none;
+    }
+    &::before,
+    &::after {
+      display: none;
+    }
+    .icon {
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 11;
+      &::before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &[aria-expanded="false"] {
+      .fa-bars {
+        display: flex;
+        color: $color-primary;
+      }
+      .fa-times {
         display: none;
-        &[aria-hidden="false"] {
-            display: flex;
-            right: 0;
-            top: -55px;
-            position: absolute;
-            z-index: 100;
+      }
+    }
+    &[aria-expanded="true"] {
+      .fa-bars {
+        display: none;
+      }
+      .fa-times {
+        display: flex;
+        color: $color-white;
+        font-size: 45px;
+        &::before {
+            -webkit-text-stroke: 7px $color-primary;
         }
-      };
+      }
+    }
+  }
+
+  //MENU CONTENT
+  .overflow-menu-inner {
+    padding: 0;
+    padding-block: 82px;
+    top: -30px;
+    left: -222px;
+    z-index: 9;
+    background-color: $color-primary;
+    border: 0;
+    min-width: 300px;
+
+
+    
+    &[aria-hidden="false"] {
+      .region-header__top {
+        margin: 0;
+        .menu.menu-level-0 {
+          & > li > a {
+            display: none;
+          }
+        }
+        .menu-level-1.accordion {
+          display: block;
+          position: static;
+          margin-top: 0;
+          & > li.menu-item {
+            margin: 0;
+            background-color: transparent;
+            box-shadow: none;
+            position: relative;
+            &:not(:first-child):before {
+                content: "";
+                    height: 2px;
+                    background-color: $color-white;
+                    position: absolute;
+                    opacity: 0.2;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: calc(100% - 64px);
+                    display: block;
+                    margin: 0 auto;
+                    z-index: 10;
+              }
+            button.accordion-button {
+              border: 0;
+              background-color: transparent;
+              padding-inline: 26px 33px;
+              &:focus {
+                outline: 0;
+              }
+              &:focus-visible {
+                outline: 2px solid black;
+              }
+              &::after {
+                content: url("../images/down-arrow-white.svg");
+                position: absolute;
+                top: 1.6rem;
+                right: 33px;
+                height: 10px;
+                width: 17px;
+              }
+           
+
+              &[aria-expanded="true"] {
+                &::after {
+                  transform: rotate(180deg) translateY(-20px);
+                }
+              }
+              .menu-level-1-link-wrap {
+                img {
+                  filter: invert(34%) sepia(110%) saturate(75%)
+                    hue-rotate(-35deg) brightness(369%) contrast(139%);
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                a {
+                  color: $color-white;
+                  padding-inline: 60px 25px;
+                  text-transform: initial;
+                  font-weight: normal;
+                  &:focus {
+                    outline: 0;
+                  }
+                  &:focus-visible {
+                    outline: 2px solid black;
+                  }
+                }
+              }
+            }
+            .accordion-content {
+              background-color: transparent;
+              border: 0;
+              ul.menu {
+                li.menu-item {
+                    padding-left: 0!important;
+                    margin-bottom: 10px;
+                  a {
+                    color: $color-white;
+                    text-transform: initial;
+                    font-size: 14px;
+                    font-weight: normal;
+                  }
+                }
+              }
+
+              .field--name-field-ikon {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
