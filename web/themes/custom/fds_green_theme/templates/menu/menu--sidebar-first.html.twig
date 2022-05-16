@@ -7,7 +7,7 @@
   {% if items %}
 
     {% if menu_level == 0 %}
-      <ul aria-hidden="true" id="overflow1" {{ attributes.addClass('sidenav-list overflow-menu-inner menu--sidebar-first') }}>
+      <ul aria-hidden="true" id="overflow1" {{ attributes.addClass('d-none d-lg-flex sidenav-list overflow-menu-inner menu--sidebar-first') }}>
     {% else %}
       <ul class="sidenav-sub_list">
     {% endif %}
