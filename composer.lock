@@ -11665,25 +11665,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings_sbsys.git",
-                "reference": "557712735803db4d8b7807fc74cbce6f9ecafb7f"
+                "reference": "35e6bd8174180e65cdfaf458b0fbce219c84e707"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings_sbsys/zipball/557712735803db4d8b7807fc74cbce6f9ecafb7f",
-                "reference": "557712735803db4d8b7807fc74cbce6f9ecafb7f",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_sbsys/zipball/35e6bd8174180e65cdfaf458b0fbce219c84e707",
+                "reference": "35e6bd8174180e65cdfaf458b0fbce219c84e707",
                 "shasum": ""
             },
             "require": {
-                "drupal/migrate_plus": "^4.2",
-                "drupal/migrate_tools": "^4.5"
+                "drupal/migrate_plus": "^4.2 || ^5.1",
+                "drupal/migrate_tools": "^4.5 || ^5.0"
             },
+            "default-branch": true,
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "EUPL-1.2"
             ],
             "description": "Import meetings from SBSYS ESDH system",
-            "time": "2020-12-30T11:59:53+00:00"
+            "support": {
+                "issues": "https://github.com/OS2web/os2web_meetings_sbsys/issues",
+                "source": "https://github.com/OS2web/os2web_meetings_sbsys/tree/master"
+            },
+            "time": "2022-05-16T12:53:14+00:00"
         },
         {
             "name": "os2web/os2web_nemlogin",
@@ -21095,5 +21100,5 @@
         "php": ">=7.0.8"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
