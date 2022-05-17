@@ -18,12 +18,6 @@
   {% if not content['#is_decision'] %}
   {{ content.field_os2web_hearings_reply }}
 
-  <h2>
-    {% if content['#reply_text'] %}
-      {{ content['#reply_text'] | trans }}
-    {% endif %}
-  </h2>
-
   <div class="box">
     <div class="box__body">
       <div class="row">
