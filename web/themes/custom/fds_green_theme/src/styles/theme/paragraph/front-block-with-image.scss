@@ -69,9 +69,10 @@
 
       .button.button-primary {
         color: $color-white;
-
         padding: 11px 67px;
-
+        &:hover {
+          background-color: $color-primary-light;
+        }
         &::after {
           display: none;
         }
