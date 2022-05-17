@@ -36,7 +36,10 @@
     display: inline-block;
   }
   .action-buttons a {
-    color: inherit !important;
+    color: $color-white;
+    &:hover {
+      color: $color-primary-light!important; 
+    }
     @include media-breakpoint-up(md) {
 
     }
@@ -45,4 +48,3 @@
     z-index: 1;
   }
 }
-
