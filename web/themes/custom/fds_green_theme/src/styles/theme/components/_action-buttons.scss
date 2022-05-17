@@ -40,35 +40,38 @@
     white-space: nowrap;
     font-weight: $font-weight-bold;
     text-decoration: none;
-
     color: $color-primary;
+    &:hover {
+      color: $color-primary-light;
+    }
   }
 }
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+
 
 .action-button {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  svg {
-    fill: $color-white;
-  }
   &:hover {
-    svg {
-      fill: $color-primary-light;
+    img.action-button__icon {
+      display: none;
+      &.action-button__icon--light-green {
+        display: inline-block;
+      }
     }
   }
 }
 
 .action-button__icon {
   display: none;
-
+  width: 21px;
   margin-right: 5px;
 }
-
-// --------------------------------------------------
-// Variants
-// --------------------------------------------------
 
 .action-button__icon--green {
   /* Show orange variant as default. */
