@@ -36,10 +36,7 @@
       background-position: center;
       border: none;
       cursor: pointer;
-      &:hover,
-      &:focus {
-        opacity: 0.5;
-      }
+
     }
   }
 
@@ -98,10 +95,6 @@
         a {
           color: $color-white;
           font-weight: 700;
-          &:hover,
-          &:focus {
-            opacity: 0.5;
-          }
         }
       }
     }
