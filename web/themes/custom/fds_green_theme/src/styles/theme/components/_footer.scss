@@ -74,7 +74,9 @@ footer {
     }
     a {
       font-weight: bold;
-      text-decoration: none;
+      &:hover {
+        color: $color-primary-light;
+      }
      
       &:focus {
         outline-color: $color-black;

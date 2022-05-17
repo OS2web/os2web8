@@ -14,7 +14,8 @@
 // Mixins
 // --------------------------------------------------
 
-@mixin action-buttons-mixin() {}
+@mixin action-buttons-mixin() {
+}
 
 // --------------------------------------------------
 // Styling
@@ -26,9 +27,7 @@
 }
 
 .action-buttons {
-
   .flexy-list {
-
     > * {
       padding: 0 20px 0 0;
     }
@@ -41,27 +40,40 @@
     white-space: nowrap;
     font-weight: $font-weight-bold;
     text-decoration: none;
-
     color: $color-primary;
+    &:hover {
+      color: $color-primary-light;
+    }
   }
 }
-
-.action-button {
-  display: flex;
-}
-
-.action-button__icon {
-  display: none;
-
-  margin-right: 5px;
-}
-
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
 
-.action-button__icon--green {
 
+
+.action-button {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    img.action-button__icon {
+      display: none;
+      &.action-button__icon--light-green {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.action-button__icon {
+  display: none;
+  width: 21px;
+  margin-right: 5px;
+}
+
+.action-button__icon--green {
   /* Show orange variant as default. */
   display: inline-block;
 }
@@ -71,37 +83,49 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(xs) {
+}
 
 // Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
+@include media-breakpoint-only(xs, $grid-breakpoints) {
+}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+}
 
 // Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
+@include media-breakpoint-only(sm, $grid-breakpoints) {
+}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
 // Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {}
+@include media-breakpoint-only(md, $grid-breakpoints) {
+}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
 // Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {}
+@include media-breakpoint-only(lg, $grid-breakpoints) {
+}
 
 // Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+}
 
 // Print
-@media print {}
+@media print {
+}
 
 // Touch
-.touchevents {}
+.touchevents {
+}
 
 // No touch
-.no-touchevents {}
+.no-touchevents {
+}

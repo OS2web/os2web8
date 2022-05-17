@@ -74,7 +74,7 @@
           }
           &::after {
             content: "";
-            height: 2px;
+            height: 1px;
             width: calc(100% - 46px);
             background-color: $color-light-green-002;
             display: block;
@@ -82,7 +82,7 @@
             bottom: 15px;
             left: 0;
             right: 0;
-            margin: 0 auto 0 auto;
+            margin: 0 auto;
             z-index: 2;
             pointer-events: none;
           }
