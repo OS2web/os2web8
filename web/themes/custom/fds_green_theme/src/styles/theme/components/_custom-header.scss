@@ -26,9 +26,7 @@ header {
   form#views-exposed-form-os2web-search-os2web-search-page {
     .form-actions {
       left: auto;
-      right: 0;
       .form-submit {
-        background-color: $color-green-002;
         border-radius: 0;
         border-top-right-radius: $big-border-radius;
         border-bottom-right-radius: $big-border-radius;
@@ -38,10 +36,6 @@ header {
       }
     }
     input[type=text] {
-      background-image: url("../images/Soeg.svg") !important;
-      background-size: 15px 15px !important;
-      background-repeat: no-repeat !important;
-      background-position: 25px center !important;
       padding: 14px 14px 14px 50px !important;
     }
   }
