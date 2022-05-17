@@ -67,6 +67,9 @@
     position: relative;
     a {
       color: $color-white;
+      &:hover {
+        color: $color-primary-light!important; 
+      }
     }
     .action-button__icon--green {
       display: none;
