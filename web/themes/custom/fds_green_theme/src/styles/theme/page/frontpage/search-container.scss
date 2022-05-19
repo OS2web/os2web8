@@ -24,7 +24,11 @@
   .searchy-close {
     position: absolute;
     right: 26px;
-    top: 0;
+    top: -25px;
+    @include media-breakpoint-up(lg) {
+      top: 0;
+    }
+  
     display: block;
     z-index: 102;
     button {
@@ -62,6 +66,7 @@
     margin: 30px 0 30px 1px;
     z-index: 101;
     position: relative;
+    padding: 0!important;
     a {
       color: $color-white;
       &:hover {
