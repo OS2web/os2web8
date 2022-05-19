@@ -48,7 +48,9 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
 
-    
+      @include media-breakpoint-up(md) {
+        font-size: 1.6rem;
+      }
       &:focus {
         outline: 0;
       }
