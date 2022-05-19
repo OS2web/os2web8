@@ -46,6 +46,7 @@ footer {
       height: 530px;
     }
   }
+
   .footer {
     margin-top: 0;
     border-top: 0;
@@ -103,7 +104,9 @@ footer {
       font-size: 15px;
     }
   }
-
+  &.footer-not-front {
+    background-color: $color-green-005;
+  }
   section {
     max-width: 450px;
   }
