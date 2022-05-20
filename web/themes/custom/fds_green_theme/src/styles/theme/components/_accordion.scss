@@ -110,6 +110,58 @@
   }
 }
 
+.accordion {
+  & > li {
+    border-radius: $big-border-radius!important;
+    box-shadow: none;
+    background-color: transparent;
+    & > h2 {
+      margin: 0;
+      color: $color-primary;
+    }
+  }
+    button {
+      border-radius: $big-border-radius!important;
+      background-color: $color-green-005;
+      color: $color-primary;
+      &::after {
+        content: url("../images/down-arrow-green.svg");
+        height: 26px;
+        width: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:focus {
+        color: $color-primary;
+        outline: none;
+        background-color: $color-green-005;
+      }
+      &:hover {
+        background-color: $color-green-005;
+      }
+      &[aria-expanded="true"] {
+        border-bottom-left-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+        background-color: $color-green-005;
+        &::after {
+          content: url("../images/down-arrow-green.svg");
+          transform: translateY(-50%) rotate(180deg);
+        }
+        &:focus {
+          background-color: $color-green-005;
+        }
+        &:hover {
+          background-color: $color-green-005;
+        }
+      }
+    }
+    .accordion-content {
+      background-color: $color-green-005;
+      border-bottom-left-radius: $big-border-radius!important;
+      border-bottom-right-radius: $big-border-radius!important;
+    }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
