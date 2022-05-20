@@ -8,24 +8,25 @@
 ]
 %}
 <div {{ attributes.addClass(classes).addClass(_context['#page_category_class']) }}>
-  <h4>{{ label }}</h4>
+	<div class="field--type-link">
+		<a href="{{ url }}">
+			<h4>{{ label }}</h4>
 
-  <div>
-    {{ content }}
-  </div>
+			<div>
+				{{ content }}
+			</div>
 
-  <br>
+			<br>
 
-  {% for sectionLabel in _context['#section_labels'] %}
-    {{ sectionLabel }}
-    {% if not loop.last %}
-      >
-    {% endif %}
-  {% endfor %}
+			{% for sectionLabel in _context['#section_labels'] %}
+				{{ sectionLabel }}
+				{% if not loop.last %}
+					>
+				{% endif %}
+			{% endfor %}
 
-  <div class="field--type-link text-align-right">
-    <a href="{{ url }}">
-      {# {{ 'Read more' | trans }} #}
-    </a>
-  </div>
+
+			{# {{ 'Read more' | trans }} #}
+		</a>
+	</div>
 </div>

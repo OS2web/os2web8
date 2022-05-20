@@ -1,6 +1,6 @@
 .entity-search-result--os2web-page.search-result {
-    $side-gap: 15px;
-    $bottom-gap: 12px;
+  $side-gap: 15px;
+  $bottom-gap: 12px;
   box-shadow: none;
   border: 1px solid $color-primary;
   border-top: 11px solid $color-primary;
@@ -21,12 +21,12 @@
     right: 0;
     margin: 0 auto;
     height: 1px;
-    width: calc(100% - ( #{$side-gap } * 2 ));
+    width: calc(100% - (#{$side-gap} * 2));
     background-color: $color-green-006;
   }
   .field--type-link {
-      margin-bottom: 30px;
-    a {
+    margin-bottom: 30px;
+    & > a {
       &:after {
         height: 18px;
         width: 35px;
@@ -35,6 +35,8 @@
         content: "";
         transform: none;
         position: absolute;
+        left: unset;
+        top: unset;
         bottom: 0;
         right: 0;
         transition: right 0.2s ease-in-out;
@@ -42,9 +44,9 @@
     }
   }
   &:hover {
-      background-color: $color-green-005;
+    background-color: $color-green-005;
     .field--type-link {
-      a {
+      & > a {
         &:after,
         &:after {
           right: 25px;
