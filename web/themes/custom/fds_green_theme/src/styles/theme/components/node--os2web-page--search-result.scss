@@ -1,0 +1,55 @@
+.entity-search-result--os2web-page.search-result {
+    $side-gap: 15px;
+    $bottom-gap: 12px;
+  box-shadow: none;
+  border: 1px solid $color-primary;
+  border-top: 11px solid $color-primary;
+  border-radius: $big-border-radius;
+  color: $color-primary;
+  font-size: 15px;
+  position: relative;
+  padding: 21px $side-gap $bottom-gap;
+  h4 {
+    color: $color-primary;
+    font-size: 16px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: $bottom-gap;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 1px;
+    width: calc(100% - ( #{$side-gap } * 2 ));
+    background-color: $color-green-006;
+  }
+  .field--type-link {
+      margin-bottom: 30px;
+    a {
+      &:after {
+        height: 18px;
+        width: 35px;
+        background-image: url("../images/Pil.svg");
+        background-size: 35px 18px;
+        content: "";
+        transform: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: right 0.2s ease-in-out;
+      }
+    }
+  }
+  &:hover {
+      background-color: $color-green-005;
+    .field--type-link {
+      a {
+        &:after,
+        &:after {
+          right: 25px;
+        }
+      }
+    }
+  }
+}
