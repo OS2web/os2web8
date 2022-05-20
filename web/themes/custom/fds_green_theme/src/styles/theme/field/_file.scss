@@ -14,7 +14,8 @@
 // Mixins
 // --------------------------------------------------
 
-@mixin file-mixin() {}
+@mixin file-mixin() {
+}
 
 // --------------------------------------------------
 // Styling
@@ -22,57 +23,51 @@
 
 .file {
   display: block;
-
-  margin-bottom: 15px;
-  padding-left: 0 !important; // Reset.
   background-image: none !important;
-
-  box-shadow: $box-shadow;
-
+  background-color: $color-green-005;
+  color: $color-black;
+  position: relative;
+  padding: 38px 38px 38px 30px;
+  border-radius: $big-border-radius;
+  margin-bottom: 10px;
   a {
-    position: relative;
     display: flex;
-
     align-items: center;
-
     word-break: break-word;
-
-    padding: 0 (30px + 30px + 5px) 0 30px; // Width of icon + left/right spacing + gutter.
-
     height: 88px;
     max-width: 100%; // Reset.
-
     font-weight: bold;
-
-    &, &:hover, &:focus, &:visited {
-      color: $color-text;
-      text-decoration: none;
-    }
-
+    color: $color-black;
+    text-decoration: none;
     &:after {
-      display: inline-block;
-
       position: absolute;
-
       content: "";
-
-      top: 50%;
-      right: 30px;
-
-      margin-top: -15px; // Half the height.
-
-      width: 30px;
-      height: 30px;
-
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
       background-image: url("../images/download.svg");
+      background-size: 21px 28px;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-color: $color-light-green-003;
+      background-position: center;
+      border-top-right-radius: $big-border-radius;
+    }
+    &:hover {
+      &:after {
+        background-image: url("../images/download-hover-effect.svg");
+        background-size: 21px 23px;
+      }
+    }
+    &:hover,
+    &:focus,
+    &:visited {
+      text-decoration: none;
     }
   }
 }
 
 .field--type-file {
-
   > .field__items,
   &.field__items {
     display: flex;
@@ -84,7 +79,6 @@
 
   > .field__items > .field__item,
   > .field__item {
-
     // Column.
     position: relative;
     width: 100%;
@@ -105,16 +99,16 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(xs) {
+}
 
 // Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
+@include media-breakpoint-only(xs, $grid-breakpoints) {
+}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
   .field--type-file {
-
     > .field__items > .field__item,
     > .field__item {
       @include grid-col(6, 12);
@@ -123,26 +117,31 @@
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
+@include media-breakpoint-only(sm, $grid-breakpoints) {
+}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
 // Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {}
+@include media-breakpoint-only(md, $grid-breakpoints) {
+}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
 // Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {}
+@include media-breakpoint-only(lg, $grid-breakpoints) {
+}
 
 // Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+}
 
 // Print
 @media print {
-
   .file {
     box-shadow: none;
 
@@ -150,7 +149,6 @@
   }
 
   .field--type-file {
-
     > .field__items > .field__item,
     > .field__item {
       @include grid-col(6, 12);
@@ -159,7 +157,9 @@
 }
 
 // Touch
-.touchevents {}
+.touchevents {
+}
 
 // No touch
-.no-touchevents {}
+.no-touchevents {
+}
