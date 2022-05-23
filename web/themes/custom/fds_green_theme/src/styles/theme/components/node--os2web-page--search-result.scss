@@ -27,19 +27,31 @@
   .field--type-link {
     margin-bottom: 30px;
     & > a {
+      display: block;
+      text-decoration: none;
+      color: $color-primary;
+      max-width: unset;
+      width: 100%;
+      position: relative;
       &:after {
         height: 18px;
         width: 35px;
         background-image: url("../images/Pil.svg");
         background-size: 35px 18px;
+        background-repeat: no-repeat;
         content: "";
         transform: none;
         position: absolute;
         left: unset;
-        top: unset;
-        bottom: 0;
-        right: 0;
+        bottom: 3px;
+        right: $side-gap;
         transition: right 0.2s ease-in-out;
+
+      }
+      .search-results-bread-crumbs {
+        color: $color-black;
+        font-weight: $font-weight-bold;
+        font-size: 12px;
       }
     }
   }

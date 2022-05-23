@@ -22,34 +22,33 @@
 
 .field--type-link {
 
-  .fake-link,
-  a {
-    position: relative;
+  // .fake-link {
+  //   // position: relative;
 
-    padding-right: 40px;
+  //   padding-right: 40px;
 
-    font-weight: $font-weight-bold;
-    color: $color-blue-001;
-    text-decoration: underline;
+  //   font-weight: $font-weight-bold;
+  //   color: $color-blue-001;
+  //   text-decoration: underline;
 
-    &, &:hover, &:active, &:visited {
-      text-decoration: none;
-      color: $color-text;
-    }
+    // &:hover, &:active, &:visited {
+    //   text-decoration: none;
+    //   color: $color-text;
+    // }
 
-    &:after {
-      position: absolute;
+    // &:after {
+    //   // position: absolute;
 
-      right: 5px;
+    //   // right: 5px;
 
-      font-size: 2.2rem;
-      font-family: "Material Icons";
+    //   // font-size: 2.2rem;
+    //   // font-family: "Material Icons";
 
-      color: $color-orange-004;
-      content: "keyboard_backspace";
-      transform: rotate(180deg);
-    }
-  }
+    //   // color: $color-orange-004;
+    //   // content: "keyboard_backspace";
+    //   // transform: rotate(180deg);
+    // }
+  // }
 }
 
 // --------------------------------------------------

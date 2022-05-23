@@ -17,13 +17,14 @@
 			</div>
 
 			<br>
-
+			<div class="search-results-bread-crumbs">
 			{% for sectionLabel in _context['#section_labels'] %}
 				{{ sectionLabel }}
 				{% if not loop.last %}
 					>
 				{% endif %}
 			{% endfor %}
+			</div>
 
 
 			{# {{ 'Read more' | trans }} #}
