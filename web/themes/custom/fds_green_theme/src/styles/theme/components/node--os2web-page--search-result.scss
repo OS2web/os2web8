@@ -2,13 +2,28 @@
   $side-gap: 15px;
   $bottom-gap: 12px;
   box-shadow: none;
-  border: 1px solid $color-primary;
-  border-top: 11px solid $color-primary;
+  border: 1px solid $color-gray-medium-dark;
+  border-top: 11px solid $color-gray-medium-dark;
   border-radius: $big-border-radius;
   color: $color-primary;
   font-size: 15px;
   position: relative;
   padding: 21px $side-gap $bottom-gap;
+
+
+  $bg-colors: 
+      "du-cat-hjaelp-dig-selv" $color-orange-006,
+      "du-cat-kommunale-tilbud" $color-blue-009,
+      "du-cat-hverdags-teknologier" $color-primary,
+      "du-cat-private-tilbud" $color-red-003;
+
+ @each $id, $color-code in $bg-colors {
+      &.#{$id} {
+        border-color: $color-code;
+      }
+    }
+
+    
   h4 {
     color: $color-primary;
     font-size: 16px;
