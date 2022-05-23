@@ -63,6 +63,11 @@
         transition: right 0.2s ease-in-out;
 
       }
+      .search-results-examples {
+        strong {
+          background-color: #E0E9D0;
+        }
+      }
       .search-results-bread-crumbs {
         color: $color-black;
         font-weight: $font-weight-bold;
