@@ -10,16 +10,17 @@
     border: 0;
     z-index: 1;
     width: 100%;
+    border-radius: unset!important;
     &:last-of-type {
-      border-bottom-right-radius: $big-border-radius;
-      border-bottom-left-radius: $big-border-radius;
+      border-bottom-right-radius: $big-border-radius!important;
+      border-bottom-left-radius: $big-border-radius!important;
     }
     @include media-breakpoint-only(xs) {
       order: 0;
     }
     @include media-breakpoint-up(sm) {
-      border-bottom-right-radius: $big-border-radius;
-      border-bottom-left-radius: $big-border-radius;
+      border-bottom-right-radius: $big-border-radius!important;
+      border-bottom-left-radius: $big-border-radius!important;
     }
     .temaer {
       background: $color-white;
