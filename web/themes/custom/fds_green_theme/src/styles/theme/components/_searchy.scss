@@ -74,7 +74,8 @@
     }
   }
 }
-#block-os2web-search-page-form-content, #block-os2web-search-page-form-content--2 {
+
+[id*="block-os2web-search-page-form-content"]{
   h2 {
     font-size: 16px;
     font-weight: normal;
