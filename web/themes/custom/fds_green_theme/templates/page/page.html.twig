@@ -137,44 +137,44 @@
 		{% endif %}
 		{% if logged_in or not is_front %}
 			<div class="row">
-        {# {% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
+        {% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
         {% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
         
 				{% if has_sidebar_first %}
-         {% set sidebar_first_classes = [
-            has_sidebar_first and has_sidebar_second ? 'col-12 col-lg-3',
-            has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-lg-3 d-print-none',
-          ] %} #}
-					<aside class="col-12 col-md-12 col-lg-4 col-xl-3">
-					{# <aside {{ attributes.addClass(sidebar_first_classes) }}> #}
+				{% set sidebar_first_classes = [
+					has_sidebar_first and has_sidebar_second ? 'col-12 col-lg-3',
+					has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-lg-3 d-print-none',
+				] %} 
+					<aside {{ attributes.addClass(sidebar_first_classes) }}>
+					{# <aside class="col-12 col-md-12 col-lg-4 col-xl-3"> #}
 						<div class="layout-sidebar-left">
 							{{ page.sidebar_first }}
 						</div>
 					</aside>
-				{# {% endif %} #}
+				{% endif %}
 
 
-        {# {% set has_main_content = page.content|render|striptags|trim is not empty %}
-				{% if has_main_content %} #}
-          {# {% set content_classes = [
-              has_sidebar_first and has_sidebar_second ? 'order-2 order-lg-1 col-12 col-lg-6',
-              has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-lg-9',
-              has_sidebar_second and has_sidebar_first is empty ? 'order-2 order-lg-1 col-12 col-lg-9 ',
-              has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12'
-            ] %} #}
-					<main {{ content_attributes.addClass('order-2 order-md-1 col-12 col-md-8 col-lg-6 col-xl-6') }}>
-					 {# <main {{ content_attributes.addClass(content_classes) }}> #}
+        			{% set has_main_content = page.content|render|striptags|trim is not empty %}
+				{% if has_main_content %}
+				{% set content_classes = [
+					has_sidebar_first and has_sidebar_second ? 'order-2 order-lg-1 col-12 col-lg-6',
+					has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-lg-9',
+					has_sidebar_second and has_sidebar_first is empty ? 'order-2 order-lg-1 col-12 col-lg-9 ',
+					has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12 col-lg-9'
+					] %} 
+					 <main {{ content_attributes.addClass(content_classes) }}>
+					{# <main {{ content_attributes.addClass('order-2 order-md-1 col-12 col-md-8 col-lg-6 col-xl-6') }}> #}
 						{{ page.content }}
 					</main>
-				{# {% endif %} #}
+				{% endif %}
 
 
-        {# {% if has_sidebar_second %}
+        {# {% if not has_sidebar_second %}
           {% set sidebar_second_classes = [
             has_sidebar_first and has_sidebar_second ? 'order-1 order-lg-2 col-12 col-lg-3',
             has_sidebar_first is empty and has_sidebar_second ? 'order-1 order-lg-2 col-12 col-lg-3 d-print-none',
-          ] %} #}
-          {# <aside {{ attributes.addClass(sidebar_second_classes) }}> #}
+          ] %}
+          <aside {{ attributes.addClass(sidebar_second_classes) }}> #}
 					<aside class="order-1 order-md-2 col-12 col-md-4 col-lg-2 col-xl-3 d-print-none">
 						<div class="layout-sidebar-right">
 							<div class="box">
