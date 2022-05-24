@@ -5,3 +5,9 @@
 .colored-bg-light {
     background-color: $color-light-green-003;
 }
+
+.node__content {
+    h1, strong, p {
+        color: $color-base-002; 
+    }
+}
