@@ -142,3 +142,26 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', toggle);
   }
 });
+ 
+// Tiny Slider frontpage events.
+(function($, Drupal) {
+  var selector = '.view-display-id-frontpage_events .view-content';
+
+  if (document.querySelector(selector) !== null) {
+
+    // Run tiny slider.
+    tns({
+      container: selector,
+      items: 1,
+      autoplay: false,
+      gutter: 32,
+      rewind: true,
+      nav: false,
+      responsive: {
+        576: {
+          items: 3,
+        },
+      },
+    });
+  }
+})(jQuery, Drupal);
