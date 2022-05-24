@@ -38,16 +38,21 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 3rem;
-
-  font-family: $headings-font-family;
-  font-weight: 700;
-
-  color: $color-gray-002;
+  font-family: "Museo 300", sans-serif;
+  font-weight: normal;
+  color: $color-dark-gray2;
 
   + p,
   + .body-text {
     margin-top: 0;
   }
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1em;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 h2, .h2,
@@ -85,7 +90,11 @@ p, .body-text {
 @include media-breakpoint-only(xs, $grid-breakpoints) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+  h1 {
+    font-size: calc(40px + 6 * ((100vw - 576px) / 680));
+  }
+}
 
 // Tablet - only
 @include media-breakpoint-only(sm, $grid-breakpoints) {}
@@ -103,7 +112,11 @@ p, .body-text {
 @include media-breakpoint-only(lg, $grid-breakpoints) {}
 
 // Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+  h1 {
+    font-size: 50px;
+  }
+}
 
 // Print
 @media print {

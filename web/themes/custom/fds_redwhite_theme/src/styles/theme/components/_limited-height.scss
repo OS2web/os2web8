@@ -20,7 +20,7 @@
 // Styling
 // --------------------------------------------------
 
-.limited-height__toggle {
+/* .limited-height__toggle {
   display: none;
 
   button {
@@ -50,7 +50,7 @@
   &.limited-height__toggle--hidden {
     display: none !important;
   }
-}
+} */
 
 // --------------------------------------------------
 // Responsive
@@ -62,7 +62,7 @@
 // Mobile - only
 @include media-breakpoint-only(xs, $grid-breakpoints) {
 
-  .limited-height {
+/*   .limited-height {
     height: 200px;
     overflow: hidden;
   }
@@ -84,7 +84,7 @@
 
   .limited-height__toggle {
     display: block !important;
-  }
+  } */
 }
 
 // Tablet - and up

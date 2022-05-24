@@ -1,61 +1,28 @@
 // |--------------------------------------------------------------------------
-// | Box
+// | Path-node
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .box
-// |
+// | Path-node
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
 
 // --------------------------------------------------
-// Mixins
-// --------------------------------------------------
-
-@mixin box-mixin() {}
-
-// --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
-.box {
-  margin-bottom: $grid-gutter-width / 2;
-
-  background-color: transparent;
-
-  table {
-    width: 100%;
-  }
-
-  a {
-    position: initial;
-
-    padding-right: initial;
-
-    &:after {
-      display: none;
-    }
-  }
-
-  // Issue fix: on the right sidebar we have a box inside a box.
-  .box {
-    margin-left: -30px;
-    margin-right: -30px;
-  }
+// Kultunaut
+.path-node-2438 .hovedindhold-venstre {
+  width: 100%;
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
 }
-.box__heading {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.box__body {
-  padding: 0;
-}
-
-// Variants.
-.box--primary {
-  background-color: $color-green-002;
+.path-node-2438 .breadcrumb {
+  display: none;
 }
 
 // --------------------------------------------------

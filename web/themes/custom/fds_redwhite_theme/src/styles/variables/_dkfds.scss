@@ -3,6 +3,25 @@
 // by a previous import.
 //
 
+/*ORIGINAL COLORS FROM EXTRA-STYLES.CSS*/
+/* :root {
+  --primary: $color-primary;
+  --secondary: $color-secondary;
+  --white: $color-white;
+  --light-gray0: $color-light-gray0;
+  --light-gray1: $color-light-gray1;
+  --light-gray2: $color-light-gray2;
+  --light-gray3: $color-light-gray3;
+  --light-gray4: $color-light-gray4;
+  --medium-gray1: $color-medium-gray1;
+  --gray1: $color-gray1;
+  --dark-gray0: $color-dark-gray0;
+  --dark-gray1: $color-dark-gray1;
+  --dark-gray2: $color-dark-gray2;
+  --dark-gray3: $color-dark-gray3;
+  --black: $color-black;
+} */
+
 //----------------
 // -to-rem
 //----------------
@@ -65,7 +84,7 @@ $font-weight-bold:            700 !default;
 $font-style-normal:           normal !default;
 $font-style-italic:           italic !default;
 
-$font-family:                 'Candara', 'Arial', Roboto, 'IBMPlexSans', 'system';
+$font-family:                 "MuseoSans", "Helvetica", "Arial", sans-serif;
 
 ///////////////////////////////////////////////////////////////////
 // Spacing helpers
@@ -115,7 +134,20 @@ $spacing-xxx-large:             5.6rem !default;
 ////////////////////////////////////////////////////////////////////////////
 //color contrasting
 $color-base-001:              #ffffff !default;
-$color-base-002:              #002412;
+$color-base-002:              #000;
+
+//CUSTOM-Gray
+$color-light-gray0:           #ccc;
+$color-light-gray1:           #ebebeb;
+$color-light-gray2:           #d1d3d4;
+$color-light-gray3:           #d5d5d5;
+$color-light-gray4:           #f3f3f3;
+$color-medium-gray1:          #999;
+$color-gray1:                 #586464;
+$color-dark-gray0:            #555;
+$color-dark-gray1:            #444;
+$color-dark-gray2:            #333;
+$color-dark-gray3:            #666;
 
 //Gray
 $color-gray-001:              $color-base-002 !default;
@@ -193,8 +225,8 @@ $color-data-violet-004:        #ECEDF4 !default;
 //########################################################################
 
 // Base colors
-$color-white:                 $color-base-001 !default;
-$color-black:                 $color-base-002 !default;
+$color-white:                 #fff !default;
+$color-black:                 #000 !default;
 
 // Gray-scales
 //new
@@ -226,9 +258,12 @@ $color-neutral-darkest:       $color-base-002 !default;
 $color-neutral-lightest:      $color-gray-004 !default; //TODO, need base color for lightest
 
 // Functional theme colors
-$color-primary:               $color-green-001;
+$color-primary:               #c30a32;
 $color-primary-medium:        $color-gray-002 !default;
 $color-primary-dark:          $color-gray-001 !default;
+$color-secondary:             #E6032F;
+$color-tertiary:              #c5062d;
+
 
 $color-positive:              $color-green-005 !default;
 $color-negative:              $color-red-001 !default;

@@ -68,7 +68,9 @@ body {
 //}
 
 body .page-container {
-  padding-top: 1rem;
+  background: $color-light-gray1;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .path-frontpage {
@@ -132,7 +134,7 @@ body .page-container {
 }
 
 .background-color--primary {
-  background-color: $color-green-002 !important;
+  background-color: $color-white !important;
 }
 .background-color--secondary {
   background-color: $color-orange-005 !important;

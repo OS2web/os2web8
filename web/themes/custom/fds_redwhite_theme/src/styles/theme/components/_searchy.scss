@@ -26,19 +26,17 @@
   .region {
     display: none;
     position: absolute;
-
-    top: 0;
-    right: 100%;
-
+    top: 110px;
+    right: auto;
+    left: auto;
     z-index: 100;
-
-    padding-right: 10px;
-
-    width: 250px;
+    padding: 0 15px;
+    width: 100%;
   }
 
   &.searchy--visible-form {
-
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
     .region {
       display: block;
     }
@@ -60,19 +58,25 @@
 @include media-breakpoint-only(xs, $grid-breakpoints) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+  .searchy-label {
+    font-size: 18px;
+  }
+  .searchy {
+    .region {
+      top: 30px;
+      padding: 0;
+    }
+  }
+}
 
 // Tablet - only
 @include media-breakpoint-only(sm, $grid-breakpoints) {}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  .searchy {
-
-    .region {
-      width: 600px;
-    }
+  .searchy-label {
+    font-size: 22px;
   }
 }
 

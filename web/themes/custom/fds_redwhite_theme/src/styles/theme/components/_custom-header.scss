@@ -22,21 +22,15 @@
 // --------------------------------------------------
 
 .custom-header {
-  background-position: top center;
-  background-image: url("../images/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 
   button,
   a {
 
     &:focus {
-      outline-color: $color-orange-004;
     }
 
     &:hover {
-      outline: 2px solid $color-orange-004;
-      outline-offset: 1px;
+      outline-color: $color-dark-gray1;
     }
   }
 
@@ -60,39 +54,51 @@
   }
 
   .views-exposed-form {
-    padding-left: 1px;
-    padding-bottom: 1rem;
-  }
-
-  input {
-
-    &:focus {
-      outline-color: $color-orange-004;
+    padding: 0;
+    form {
+      max-width: 685px;
+      margin: 0 auto;
+      &#views-exposed-form-os2web-search-os2web-search-page {
+        .form-input {
+          margin: 0;
+          padding: 20px 50px 20px 20px;
+          max-width: unset;
+          border-radius: 50px;
+          background: $color-white;
+        }
+        .form-actions .form-submit {
+          margin: 0;
+          padding: 0;
+          height: 50px;
+        }
+      }
     }
+  }
+  input:focus {
+    outline-color: $color-primary;
   }
 }
 
 .custom-header__logo {
-
   img {
-    height: 32px;
+    height: 70px;
+    margin-bottom: 10px;
   }
-
   + .action-buttons {
     margin-left: 50px;
   }
 }
 
 .custom-header__inner {
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  background: rgb(0, 102, 50);
-  background: linear-gradient(90deg, rgba(0, 102, 50, 1) 0%, rgba(0, 102, 50, 0.75) 50%, rgba(0, 102, 50, 0) 100%);
+  background: $color-white;
+  padding: 10px 0 0;
+  .container {
+    padding: 0;
+  }
 }
 
 body {
-  &, &.toolbar-fixed {
+  &.toolbar-fixed {
     padding-top: 74px !important;
   }
 
@@ -117,17 +123,42 @@ body {
     }
   }
 }
+.menutoggletitle {
+  font-family: "Museo 300", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 22px;
+  vertical-align: 4px;
+}
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
 
 .custom-header--static {
-  display: none;
-
-  margin-bottom: (150px / 2); // Half the height of the box.
-
-  background-position: top center;
+  .flexy-row {
+    display: block;
+    text-align: center;
+  }
+  .menuwrapper {
+    position: relative;
+    padding-bottom: 80px;
+    .form-input {
+      font-size: 22px;
+      font-family: "Museo 300", sans-serif;
+      font-weight: normal;
+    }
+    .region-header__below {
+      .block-menu.menu--main {
+        top: 50px;
+        left: 0;
+        z-index: 300;
+        .menu-item--active-trail a {
+          background: $color-light-gray1;
+        }
+      }
+    }
+  }
 
   .path-frontpage & {
     display: block;
@@ -143,7 +174,7 @@ body {
 
   + .searchy,
   + .custom-header__button {
-    margin-left: 15px;
+    margin-left: 0;
   }
 
   .icon {
@@ -157,21 +188,69 @@ body {
 }
 
 .searchy {
-
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
   + .custom-header__button {
     margin-left: 15px;
   }
 }
+.searchy-label {
+  font-size: 22px;
+  transition: all 0.2s ease-in-out;
+  font-family: "Museo 300", sans-serif;
+  color: $color-dark-gray2;
+  text-transform: uppercase;
+}
 
 .custom-header__button--toggle-megamenu {
+  position: absolute;
+  left: 0;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+  &:active,
+  &:focus {
+    background: $color-light-gray1;
+  }
+  &:hover,
+  &:focus {
+    outline-color: $color-dark-gray1;
+  }
+  .icon {
+    color: $color-primary;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
 }
 
 .custom-header__button--toggle-search {
-
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0;
+  padding: 15px;
+  border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0;
+  &:hover,
+  &:focus {
+    border: 0;
+    outline-color: $color-dark-gray1;
+  }
+  .fa-search::before {
+    display: none;
+  }
   .icon {
     font-size: 2rem;
-
-    color: $color-orange-004;
+    color: $color-white;
+    background: url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -36px -1px;
+    background-color: $color-primary;
+    height: 36px;
+    width: 36px;
+    right: 0;
+    border-radius: 100%;
+    margin-left: 9px;
+    vertical-align: -10px;
   }
 }
 
@@ -232,29 +311,42 @@ body {
 
   .menu-level-0 {
     position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    text-align: center;
+    display: block;
 
     > li {
+      flex-basis: auto;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
 
       > a {
         position: relative;
-
-        color: $color-text;
-        background-color: #fff;
-
-        svg {
-
-          &,
-          path {
-            fill: $color-orange-004;
-          }
+        display: block;
+        height: initial;
+        margin: 0;
+        padding: 16px 15px;
+        text-align: initial;
+        font-weight: inherit;
+        font-size: 16px;
+        font-family: "Museo 300", sans-serif;
+        box-shadow: none;
+        text-decoration: none;
+        color: $color-dark-gray2;
+        text-transform: uppercase;
+        &.is-active {
+          background: $color-light-gray1;
         }
       }
 
       &.show-subnavigation > a,
       > a:hover,
       > a:focus {
-        color: #fff;
-        background-color: $color-primary;
+        color: $color-dark-gray2;
+        background-color: $color-light-gray1;
 
         svg {
 
@@ -326,6 +418,27 @@ body {
     display: none;
   }
 }
+.search-active {
+  .page-alert {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2 ease-in-out;
+  }
+  .paragraph--menu-link--view-mode--image,
+  .entity-default--os2web-banner-paragraph {
+    padding-top: calc(45px + 80px) !important;
+  }
+  .region-breadcrumb,
+  .layout-sidebar-right {
+    padding-top: 65px;
+  }
+}
+.region-breadcrumb,
+.layout-sidebar-right {
+  transition: all 0.2s ease-in-out;
+}
 
 // --------------------------------------------------
 // Responsive
@@ -333,32 +446,51 @@ body {
 
 // Mobile - and up
 @include media-breakpoint-up(xs) {
+  .region-header__below .menu li > a {
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+  .custom-header--static .menuwrapper .region-header__below {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 
 // Mobile - only
 @include media-breakpoint-only(xs, $grid-breakpoints) {
   .custom-header {
     .menuwrapper {
-      position: relative;
-
       .region-header__below {
-        &.expand-collaps {
-          display: block;
-        }
+        margin-bottom: 0;
+        display: none;
+        display: block;
         .block-menu.menu--main {
           position: absolute;
-          top: 50px;
+          top: 66px;
           text-align: left;
-          left: -5%;
+          left: 0;
           margin: 0;
           width: 100%;
           z-index: 40;
+          transform: translate(-110%);
+          transition: transform 0.3s ease-in-out;
+          opacity: 0;
+          a {
+            background: $color-light-gray1;
+          }
           .menu-item--active-trail a {
-            background: var(--white) !important;
+            background: $color-light-gray2;
             font-weight: bold;
           }
           .menu li {
             display: block;
+          }
+        }
+        &.expand-collaps {
+          display: block;
+          .block-menu.menu--main {
+            transform: translate(0px);
+            opacity: 1;
           }
         }
       }
@@ -368,86 +500,34 @@ body {
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
-  .custom-header {
-    background-position: center center;
-
-    .action-buttons {
+  .custom-header__inner .container {
+    padding: 0 15px;
+    .menuwrapper {
+      text-align: center;
       display: block;
-    }
-  }
-
-  .custom-header__inner {
-    padding-top: 100px;
-    padding-bottom: 40px;
-
-    background: linear-gradient(90deg, rgba(0, 102, 50, 1) 0%, rgba(0, 102, 50, 0.75) 30%, rgba(0, 102, 50, 0) 100%);
-  }
-
-  .custom-header__meta {
-    padding: 1rem;
-  }
-
-  .custom-header__button {
-
-    .icon {
-      color: $color-orange-004;
-    }
-  }
-
-  .custom-header__button--toggle-search {
-    width: 40px;
-    height: 40px;
-
-    border-radius: 100%;
-    background-color: $color-orange-004;
-
-    .icon {
-      font-size: 2rem;
-      color: #fff;
-    }
-  }
-
-  .custom-header__logo {
-
-    img {
-      height: 43px;
-    }
-  }
-
-  .region-header__below {
-
-    .views-exposed-form {
-      display: block;
-    }
-  }
-
-  .region-header__below {
-    margin-bottom: 0 - ((150px / 2) + 40px);
-
-    .menu {
-
-      li {
-        flex-basis: 25%;
-
-        > a {
-          height: 147px;
-
-          padding: 40px 5px 10px 5px;
-
-          font-size: $large-font-size;
-        }
+      padding-bottom: 0;
+      .custom-header__button {
+        padding: 0 0 0 15px;
+      }
+      .region-header__below .block-menu.menu--main {
+        top: 0;
+      }
+      .custom-header__button--toggle-search {
+        position: relative;
+        right: auto;
       }
     }
   }
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {
-}
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
+  .region-header__below .menu li > a {
+    font-size: 22px;
+  }
   .custom-header {
 
     .views-exposed-form {
@@ -478,19 +558,41 @@ body {
 }
 
 // Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {
-}
+@include media-breakpoint-only(md, $grid-breakpoints) {}
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
+  .region-header__below .menu {
+    text-align: right;
+  }
 }
 
 // Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {
-}
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
 
 // Extra large desktop - and up
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xl) {}
+
+@media screen and (min-width: 1200px) {
+  .custom-header--static {
+    .custom-header__inner {
+      padding: 27px 0 0;
+      .flexy-row {
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        flex-wrap: wrap;
+        .custom-header__logo {
+        img {
+          height: 97px;
+          }
+        }
+      }
+      .menuwrapper {
+        text-align: right;
+      }
+    }
+  }
 }
 
 // Print

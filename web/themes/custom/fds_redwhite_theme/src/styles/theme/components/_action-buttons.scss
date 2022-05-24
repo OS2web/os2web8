@@ -21,20 +21,57 @@
 // --------------------------------------------------
 
 .action-buttons {
-
+  margin-bottom: 55px;
   .flexy-list {
-
     > * {
       padding: 0 20px 0 0;
     }
   }
-
-  a {
+  a, a:visited {
     white-space: nowrap;
-    font-weight: $font-weight-bold;
+    font-weight: 400;
+    font-size: 14px;
     text-decoration: none;
-
-    color: $color-text;
+    color: $color-dark-gray2;
+  }
+  a:hover, a:focus {
+    font-weight: 700;
+    color: $color-primary;
+  }
+  .print {
+    display: block;
+    &::before {
+      top: 2px;
+      background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -87px -16px;
+      content: "";
+      display: block;
+      position: relative;
+      display: inline-block;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+  .newsletter {
+    &::before {
+      top: 2px;
+      background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -87px -47px;
+      content: "";
+      display: block;
+      position: relative;
+      display: inline-block;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+    &:visited {
+      color: $color-dark-gray2;
+    }
+    &:hover, &:focus {
+      color: $color-primary;
+    }
   }
 }
 
