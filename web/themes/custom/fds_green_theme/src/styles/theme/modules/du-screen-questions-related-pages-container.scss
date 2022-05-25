@@ -22,6 +22,12 @@
       font-size: 18px;
       padding-left: 46px;
     }
+    .accordion-button {
+      font-size: 14px;
+      @include media-breakpoint-up(md) {
+        font-size: 16px;
+      }
+    }
     @each $id, $color-code, $svg-path in $bg-colors-and-svgs {
       &.color-container-#{$id} {
         border: 1px solid $color-code;

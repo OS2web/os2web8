@@ -10,14 +10,15 @@
 ]
 %}
 
-<a data-test='1' href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
+<a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
   <div class="entity-{{ view_mode|clean_class }}__image">
     {{ content.field_os2web_page_primaryimage }}
   </div>
 
   <div data-teaser-title class="teaser-title-wrap entity-{{ view_mode|clean_class }}__body">
+  <div class="d-none">
     {{ content.field_os2web_page_heading }}
-
+  </div>
     {# Begin - body #}
     {% set text = content.field_os2web_page_description | render %}
     <div class="field field--type-body">
@@ -25,9 +26,9 @@
     </div>
     {# End - body #}
 
-    <div data-test='2' class="field--type-link">
+    <div class="field--type-link">
       <div class="text-primary">
-        {{ 'Read more' | trans }}
+        {{ 'Read more' | t }}
       </div>
     </div>
   </div>

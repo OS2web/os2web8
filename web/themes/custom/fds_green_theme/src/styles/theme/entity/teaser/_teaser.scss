@@ -27,7 +27,8 @@
   box-shadow: $box-shadow;
   color: $color-black;
   text-decoration: none;
-  min-width: unset;
+  max-width: unset!important;
+  width: 100%;
   font-size: 14px;
   .entity-teaser__image {
     img {
