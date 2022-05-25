@@ -43,15 +43,11 @@
 					{% for relatedNode in relatedPageCategory.nodes %}
 						<ul class="accordion accordion-multiselectable">
 							<li data-teaser-title-wrap class="accordion-inner-wrap">
-								<h2>
-									<button data-teaser-duplicated-title class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
-										Title
-									</button>
-								</h2>
+								<button data-teaser-duplicated-title class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
+									Title
+								</button>
 								<div id="accordion-{{i}}-{{k}}" aria-hidden="true" class="accordion-content">
-									<p>
-										{{ relatedNode }}
-									</p>
+									{{ relatedNode }}
 								</div>
 							</li>
 						</ul>

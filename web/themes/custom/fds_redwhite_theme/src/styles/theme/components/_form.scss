@@ -265,6 +265,35 @@ form#views-exposed-form-os2web-search-os2web-search-page {
 .form-checkboxes .term-depth-1 label:before {
   content: '';
 }
+// Webforms
+.webform-submission-form {
+  .form-item {
+    label,
+    legend {
+      font-size: 1.8rem;
+      margin-left: 0;
+    }
+    .form-hint.description {
+      font-size: 1.3rem;
+    }
+    &.form-type-checkbox {
+      .option {
+        font-size: 1.4rem;
+      }
+    }
+    &.webform-type-fieldset{
+      padding: 25px 25px 0;
+      border: 1px solid #ccc;
+      margin-bottom: 35px;
+      legend {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .form-item:not(.form-type-checkbox) {
+    margin-bottom: 20px;
+  }
+}
 
 // --------------------------------------------------
 // Responsive

@@ -20,19 +20,56 @@
 // Styling
 // --------------------------------------------------
 
-.entity-teaser {
-  display: flex;
+.node--os2web-page--teaser {
+  border-radius: $big-border-radius;
+  position: relative;
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  color: $color-black;
+  text-decoration: none;
+  max-width: unset!important;
+  width: 100%;
+  font-size: 14px;
+  .entity-teaser__image {
+    img {
+      width: calc(100% + 30px);
+      border-top-left-radius: $big-border-radius;
+      border-top-right-radius: $big-border-radius;
+    }
+  }
+  .entity-teaser {
+    display: flex;
+  
+    flex-direction: column;
 
-  flex-direction: column;
+    .field--name-field-os2web-page-heading {
+      font-weight: $font-weight-bold;
+    }
+  }
+  .field--type-link {
+    margin-left: 0!important;
+    text-align: right;
+    .text-primary {
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-align: right;
+      margin-top: 30px;
+    }
+  }
 }
-
-.entity-teaser__image {
-
+div.entity-teaser__image {
   img {
     width: 100%;
   }
 }
 
+.entity-teaser {
+  display: flex;
+
+  flex-direction: column;
+}
 .entity-teaser__body {
   display: flex;
 

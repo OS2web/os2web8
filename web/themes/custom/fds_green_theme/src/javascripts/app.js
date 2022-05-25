@@ -159,6 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
       nav: false,
       responsive: {
         576: {
+          items: 2,
+        },
+        992: {
           items: 3,
         },
       },
