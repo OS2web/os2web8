@@ -79,18 +79,23 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
-  {% if node.field_os2web_event_start_date.value %}
-    <div class="os2web-event-date">
-      {{ node.field_os2web_event_start_date.value|date('d') }}
-      <br/>
-      {{ node.field_os2web_event_start_date.value|date('M') }}
-    </div>
-  {% endif %}
-  {{ content.field_os2web_evnet_image }}
-  {{ title_prefix }}
-  {{ label }}
-  {{ title_suffix }}
-  {{ content.body }}
-  <a href="{% if node.field_os2web_event_url.value %}{{ node.field_os2web_event_url.value }} {% else %}{{ node.url }}{% endif %}"> {{ 'Read more' | t }}  </a>
+<article{{attributes.addClass(classes)}}>
+	{{ title_suffix }}
+	<a class="text-decoration-none" href="{% if node.field_os2web_event_url.value %}{{ node.field_os2web_event_url.value }} {% else %}{{ node.url }}{% endif %}">
+		{% if node.field_os2web_event_start_date.value %}
+			<div class="os2web-event-date">
+				{{ node.field_os2web_event_start_date.value|date('d') }}
+				<br/>
+				{{ node.field_os2web_event_start_date.value|date('M') }}
+			</div>
+		{% endif %}
+		{{ content.field_os2web_evnet_image }}
+		<div class="os2web-event-content-wrap">
+			{{ title_prefix }}
+			{{ label }}
+			{{ content.body }}
+			<div class="text-primary">{{ 'Read more' | t }}
+			</div>
+		</div>
+	</a>
 </article>
