@@ -51,7 +51,8 @@
   }
 }
 
-.node--type-os2web-page {
+.node--type-os2web-page,
+.node--type-os2web-postlister{
   .node-updated {
      display: block;
      font-size: $small-text;
