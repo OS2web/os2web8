@@ -1,4 +1,8 @@
 .block--du-screen-questions-anchor-links--sidebar-second {
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 0;
+  }
   h2.h4 {
     color: $color-gray-001;
     max-width: unset;

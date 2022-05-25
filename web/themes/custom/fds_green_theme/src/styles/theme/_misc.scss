@@ -89,6 +89,10 @@ svg.ext {
 .layout-sidebar-right {
   padding-top: $grid-gutter-width;
 
+  
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
   .os2web_contact {
 
     .field {
@@ -100,13 +104,19 @@ svg.ext {
   }
 
   > .box {
-
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+    }
     > .box__body {
       padding-top: 0;
       padding-bottom: 0;
-
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+      }
       > .region {
-
+        @include media-breakpoint-up(lg) {
+          height: 100%;
+        }
         > * {
 
           &:first-child {
