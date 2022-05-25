@@ -38,9 +38,10 @@
     display: block;
   }
 }
-body {
-  flex-direction: unset;
-}
+// don't know who added this, but it breaks the responsive part on mobile
+// body {
+//  flex-direction: unset;
+//}
 
 // --------------------------------------------------
 // Responsive
@@ -60,9 +61,10 @@ body {
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-  body {
-    flex-direction: column !important;
-  }
+  // don't know who added this, but it breaks the responsive part on mobile
+  // body {
+  //  flex-direction: column !important;
+  // } */
   .row-no-flex {
     .sideblock-venstre {
       width: 32.45%;
