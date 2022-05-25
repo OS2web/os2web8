@@ -6,13 +6,15 @@
 
   background-color: $color-gray-pale;
   .entity-default--os2web-simple-text-paragraph {
-    h2 {
-      font-size: 25px;
-      max-width: unset;
-      text-align: center;
-      margin-bottom: 30px;
+      h2 {
+        color: $color-black;
+        font-size: 30px;
+        max-width: unset;
+        text-align: center;
+        margin-bottom: 30px;
     }
     p {
+        color: $color-black;
       text-align: center;
       max-width: unset;
     }
