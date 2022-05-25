@@ -918,56 +918,6 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   }
 }
 
-/*HØRINGER*/
-.entity-teaser--os2web-hearings-hearing-case {
-  display: block;
-  box-shadow: 0 0 5px #00000029;
-  background: var(--white);
-  color: var(--dark-gray2);
-}
-.entity-teaser--os2web-hearings-hearing-case h3 {
-  font-size: 18px;
-  border-bottom: 1px dotted var(--dark-gray2);
-  display: inline;
-  font-family: "Museo 500", sans-serif;
-  font-weight: 500;
-}
-.entity-teaser--os2web-hearings-hearing-case a {
-  text-decoration: none;
-  display: block;
-  text-decoration: none;
-}
-.entity-teaser--os2web-hearings-hearing-case a span {
-  border-bottom: 1px dotted var(--dark-gray2);
-}
-.entity-teaser--os2web-hearings-hearing-case a:hover h3,
-.entity-teaser--os2web-hearings-hearing-case a:focus h3 {
-  color: var(--primary);
-}
-.entity-teaser--os2web-hearings-hearing-case__content {
-  padding: 15px 15px 15px;
-  display: block;
-}
-.entity-teaser--os2web-hearings-hearing-case__date {
-  display: block;
-  text-align: left;
-  background-color: transparent;
-  padding: 0 15px 15px;
-  font-size: 15px;
-  font-weight: inherit;
-  font-style: italic;
-}
-.entity-teaser--os2web-hearings-hearing-case__date__month,
-.entity-teaser--os2web-hearings-hearing-case__date__date,
-.entity-teaser--os2web-hearings-hearing-case__date__title,
-.entity-teaser--os2web-hearings-hearing-case__date__til {
-  display: inline;
-  text-transform: none;
-  font-size: inherit;
-  color: var(--dark-gray2);
-  font-size: 13px;
-}
-
 /*ACCORDION*/
 .field--name-field-os2web-accordion-reference {
   margin-top: 10px;

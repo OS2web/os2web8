@@ -259,6 +259,13 @@ form#views-exposed-form-os2web-search-os2web-search-page {
 }
 .form-type-search-api-autocomplete {}
 
+.js-form-item-user-consent {
+  margin-top: 20px;
+}
+.form-checkboxes .term-depth-1 label:before {
+  content: '';
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
