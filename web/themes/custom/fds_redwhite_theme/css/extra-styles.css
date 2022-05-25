@@ -1073,9 +1073,8 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 
 /*PARAGRAFFER/CONTENT*/
 .spotbox--button.spotbox {
-  padding: 15px 50px 15px 15px;
+  padding: 20px 50px 20px 15px;
   background: var(--primary) url("/themes/custom/fds_redwhite_theme/dist/images/hb-right-arrow.svg") no-repeat right center !important;
-  margin-bottom: 15px;
 }
 .spotbox--button.spotbox:hover,
 .spotbox--button.spotbox:focus {
@@ -1406,23 +1405,25 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px dotted var(--dark-gray1);
+  width: 100%;
 }
 .entity-default--os2web-borgerdk-selfser-ref a h3 {
-  font-size: 16px !important;
+  font-size: 32px !important;
   color: var(--primary);
   margin: 0 !important;
 }
-.hovedindhold-venstre .entity-default--os2web-borgerdk-selfser-ref a h3::before {
-  content: '';
-  display: inline-block !important;
-  position: relative;
-  left: 0;
-  top: 4px;
-  width: 19px;
-  height: 19px;
-  margin-right: 5px;
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+.hovedindhold-venstre .entity-default--os2web-borgerdk-selfser-ref .spotbox__content {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
 }
+
+.hovedindhold-venstre .entity-default--os2web-borgerdk-selfser-ref .spotbox__content .spotbox__description {
+  padding: 10px 16px;
+}
+
 .entity-default--os2web-borgerdk-selfser-ref a:hover h3::before,
 .entity-default--os2web-borgerdk-selfser-ref a:focus h3::before {
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
