@@ -31,7 +31,6 @@
 <div{{attributes.addClass(classes)}}>
 	{{ children }}
 	{% set i = 1 %}
-		{{dump(container['#related_pages_categories'])}}
 	{% for relatedPageCategory in container['#related_pages_categories'] %}
 		{% if relatedPageCategory.nodes %}
 			<div id="{{ relatedPageCategory.transliteratedName }}" class="du-screen-questions-related-pages-container color-container-{{i}} {{ relatedPageCategory.transliteratedName }}">
