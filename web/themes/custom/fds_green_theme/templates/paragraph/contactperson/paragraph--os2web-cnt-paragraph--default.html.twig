@@ -143,10 +143,12 @@
       </div>
 
       <div class="col-12 col-sm-6">
-        {# Begin - open_hours #}
-        {{ 'Visiting hours' | t }}:
-        {{ content.field_os2web_cnt_open_hours }}
-        {# End - open_hours #}
+        {% if content.field_os2web_cnt_open_hours %}
+          {# Begin - open_hours #}
+          {{ 'Visiting hours' | t }}:
+          {{ content.field_os2web_cnt_open_hours }}
+          {# End - open_hours #}
+        {% endif %}
       </div>
 
       <div class="col-12 spacer"></div>
