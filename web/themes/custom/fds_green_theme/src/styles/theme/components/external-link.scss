@@ -1,0 +1,19 @@
+a[data-extlink] {
+    color: $color-primary;
+    position: relative;
+    padding-right: 20px;
+    &:after {
+        content: "";
+        height: 9px;
+        width: 15px;
+        background-image: url("../images/Link-pil.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: block;
+        position: absolute;
+        top: -2px;
+        right: 0;
+        transform: rotate(0);
+    }
+}
