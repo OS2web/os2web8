@@ -157,3 +157,18 @@ function fds_green_theme_preprocess_facets_item_list(array &$variables) {
     $variables['items'][$delta]['attributes'] = $attributes;
   }
 }
+
+/**
+ * Implements hook_preprocess_file_link().
+ */
+function fds_green_theme_preprocess_file_link(array &$variables) {
+  $file = $variables['file'];
+  $result = \Drupal::entityQuery('media')
+    ->condition('bundle', 'document')
+    ->condition('field_media_file.target_id', $file->id())
+    ->execute();
+  if (!empty($result)) {
+    $media = \Drupal::entityTypeManager()->getStorage('media')->load(reset($result));
+    $variables['link']['#title'] = $media->label();
+  }
+}
