@@ -1518,6 +1518,9 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   line-height: 3rem;
   padding-left: 0;
 }
+#block-anonymoustaxonomytermssubscription-2--2 #edit-terms--2--wrapper .fieldset-legend{
+  display:none;
+}
 #block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-0 label:before {
   display:none;
 }
