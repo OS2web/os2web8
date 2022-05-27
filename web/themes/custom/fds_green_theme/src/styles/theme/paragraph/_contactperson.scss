@@ -27,6 +27,15 @@
   color: $color-base-002;
   font-size: 14px;
   border-radius: $big-border-radius;
+  @include media-breakpoint-only(sm, $grid-breakpoints) {
+    padding: 15px 10px;
+  }
+  
+  .field--type-link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
   a {
     color: $color-primary;
     font-weight: $font-weight-bold;
@@ -51,6 +60,22 @@
 
     + .field--name-field-os2web-cnt-link {
       margin-top: 20px;
+    }
+  }
+  .office-hours__item {
+    @include media-breakpoint-only(xs, $grid-breakpoints) {
+      display: flex; 
+      gap: 1rem;
+    }
+    .office-hours__item-label {
+      font-weight: normal;
+      display: inline-block;
+      @include media-breakpoint-only(xs, $grid-breakpoints) {
+        margin-right: auto;
+      }
+    }
+    .office-hours__item-slots {
+      display: inline-block;
     }
   }
 }

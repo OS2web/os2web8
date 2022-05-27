@@ -18,7 +18,7 @@
         {# End - heading #}
       </div>
 
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-sm-6 mb-auto">
         {# Begin - subheading #}
         {% if content.field_os2web_cnt_subheading %}
           {{ content.field_os2web_cnt_subheading }}
@@ -119,7 +119,7 @@
 
         {# Begin - link #}
         {% if content.field_os2web_cnt_link %}
-          <div>
+          <div class="mt-6 d-none d-sm-block">
             {{ content.field_os2web_cnt_link }}
           </div>
         {% endif %}
@@ -142,13 +142,21 @@
         {# End - facebook #}
       </div>
 
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-sm-6 mb-auto">
         {% if content.field_os2web_cnt_open_hours %}
           {# Begin - open_hours #}
           {{ 'Visiting hours' | t }}:
           {{ content.field_os2web_cnt_open_hours }}
           {# End - open_hours #}
         {% endif %}
+
+          {# Begin - link #}
+        {% if content.field_os2web_cnt_link %}
+          <div class="mt-7 d-sm-none">
+            {{ content.field_os2web_cnt_link }}
+          </div>
+        {% endif %}
+        {# End - link #}
       </div>
 
       <div class="col-12 spacer"></div>
