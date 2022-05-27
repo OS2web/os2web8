@@ -20,50 +20,55 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
-.file {
-  display: block;
-  background-image: none !important;
+.media.media--type-document {
   background-color: $color-green-005;
   color: $color-black;
   position: relative;
   padding: 38px 38px 38px 30px;
   border-radius: $big-border-radius;
   margin-bottom: 10px;
-  a {
-    display: flex;
-    align-items: center;
-    word-break: break-word;
-    height: 88px;
-    max-width: 100%; // Reset.
-    font-weight: bold;
-    color: $color-black;
-    text-decoration: none;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/download.svg");
+    background-size: 21px 28px;
+    background-repeat: no-repeat;
+    background-color: $color-light-green-003;
+    background-position: center;
+    border-top-right-radius: $big-border-radius;
+  }
+  &:hover {
     &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      width: 50px;
-      height: 50px;
-      background-image: url("../images/download.svg");
-      background-size: 21px 28px;
-      background-repeat: no-repeat;
-      background-color: $color-light-green-003;
-      background-position: center;
-      border-top-right-radius: $big-border-radius;
+      background-image: url("../images/download-hover-effect.svg");
+      background-size: 21px 23px;
     }
-    &:hover {
-      &:after {
-        background-image: url("../images/download-hover-effect.svg");
-        background-size: 21px 23px;
+  }
+  .file {
+    display: block;
+    background-image: none !important;
+    margin-bottom: 10px;
+    padding-left: 0;
+    a {
+      display: flex;
+      align-items: center;
+      word-break: break-word;
+      max-width: 100%; // Reset.
+      font-weight: bold;
+      color: $color-black;
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:visited {
+        text-decoration: none;
       }
     }
-    &:hover,
-    &:focus,
-    &:visited {
-      text-decoration: none;
-    }
+  }
+  .field--name-field-media-description {
+    padding-left: 8px;
   }
 }
 
