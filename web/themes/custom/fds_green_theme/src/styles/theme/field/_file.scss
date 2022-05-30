@@ -41,10 +41,20 @@
     background-position: center;
     border-top-right-radius: $big-border-radius;
   }
+  &:before {
+    position: absolute;
+    content: "";
+    top: 37px;
+    right: 15px;
+    height: 2px;
+    width: 21px;
+    background-color: $color-primary;
+    z-index: 1;
+  }
+  
   &:hover {
     &:after {
-      background-image: url("../images/download-hover-effect.svg");
-      background-size: 21px 23px;
+      background-position: center 70%;
     }
   }
   .file {
