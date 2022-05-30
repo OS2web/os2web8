@@ -168,3 +168,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 })(jQuery, Drupal);
+
+
+jQuery(document).ready(function () {
+  console.log(jQuery("video"));
+
+    jQuery(".play-pause-btn").on("click", function () {
+      let video = jQuery(this).next()[0]
+      if (jQuery(this).attr("data-click") == 1) {
+        jQuery(this).attr("data-click", 0);
+        video.pause();
+      } else {
+        jQuery(this).attr("data-click", 1);
+        video.play();
+      }
+    });
+  });
