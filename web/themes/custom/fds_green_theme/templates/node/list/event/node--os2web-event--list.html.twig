@@ -72,6 +72,7 @@
 #}
 {% set classes = [
   'node',
+  'node--os2web-event--list',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
@@ -80,28 +81,30 @@
 ] %}
 {{ attach_library('classy/node') }}
 <article{{attributes.addClass(classes)}}>
-  <div class="row">
-  {{ title_prefix }}
-<div class="col-12 col-sm-3">
-    {% if node.field_os2web_event_start_date.value %}
-      <div class="os2web-event-date">
-        {{ node.field_os2web_event_start_date.value|date('d') }}
-        <br/>
-        {{ node.field_os2web_event_start_date.value|date('M') }}
-      </div>
-    {% endif %}
-    {{ content.field_os2web_evnet_image }}
-  </div>
-    <div class="col-12 col-sm-9">
-    <div class="os2web-event-content-wrap">
-      {{ label }}
-      {{ content.body }}
-      <div class="text-primary">
-        <a class="text-decoration-none" href="{% if node.field_os2web_event_url.value %}{{ node.field_os2web_event_url.value }} {% else %}{{ node.url }}{% endif %}">{{ 'Read more' | t }} </a>
-      </div>
-    </div>
-    </div>
-
-  </div>
-  {{ title_suffix }}
+	<div class="row">
+		{{ title_prefix }}
+		<div class="col-12 col-sm-3">
+			<div class="position-relative os2web-event-left-wrap">
+				{% if node.field_os2web_event_start_date.value %}
+					<div class="os2web-event-date">
+						{{ node.field_os2web_event_start_date.value|date('d') }}
+						<br/>
+						{{ node.field_os2web_event_start_date.value|date('M') }}
+					</div>
+				{% endif %}
+				{{ content.field_os2web_evnet_image }}
+			</div>
+		</div>
+		<div class="col-12 col-sm-9">
+			<div class="os2web-event-content-wrap">
+				{{ label }}
+				{{ content.body }}
+				<div class="text-primary">
+					<a class="os2web-event-link" href="{% if node.field_os2web_event_url.value %}{{ node.field_os2web_event_url.value }} {% else %}{{ node.url }}{% endif %}">{{ 'Read more' | t }}
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ title_suffix }}
 </article>

@@ -16,4 +16,7 @@ a[data-extlink] {
         right: 0px;
         transform: rotate(-45deg);
     }
+    &:hover {
+        color: $color-green-002; 
+    }
 }
