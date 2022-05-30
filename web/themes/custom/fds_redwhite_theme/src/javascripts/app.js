@@ -21,6 +21,18 @@ jQuery(function ($) {
   }
 })();
 
+// responsive tables
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    // Responsive tables (horizontal scroll)
+    $('table').each(function(i, el) {
+      let wrapper = $('<div>').addClass('table-responsive');
+      $(this).wrap(wrapper);
+    });
+  });
+})(jQuery);
+
 // Accordion.
 (function () {
   function handleClose(event) {
