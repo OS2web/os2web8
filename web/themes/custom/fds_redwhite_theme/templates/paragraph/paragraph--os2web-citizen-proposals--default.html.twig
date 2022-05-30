@@ -29,7 +29,9 @@
 
         <div id="{{ proposal.id }}" aria-hidden="true" class="accordion-content">
           <div class="body">
-            {{ proposal.field_os2web_cit_props_proposal.value }}
+
+            {{ proposal.field_os2web_cit_props_proposal.value | nl2br }}
+
             <div class="author">Oprettet af {{ proposal.field_os2web_cit_props_name.value }}</div>
             <hr />
 
