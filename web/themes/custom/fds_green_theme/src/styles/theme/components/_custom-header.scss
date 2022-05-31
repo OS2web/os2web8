@@ -74,7 +74,7 @@ header {
       }
     }
     .custom-header-home-link {
-      font-size: 16px;
+      font-size: 14px;
       color: $color-primary;
       margin-right: 47px;
       text-decoration: none;
@@ -314,6 +314,11 @@ body {
         height: 50px;
       }
     }
+    .custom-header {
+      .custom-header-home-link {
+        font-size: 16px;
+      }
+    }
   }
   .region-header__top {
     margin-right: 3.5%;
@@ -323,7 +328,9 @@ body {
     .action-buttons {
       display: block;
     }
+   
   }
+
   .custom-header__meta {
     padding: 1rem;
   }
