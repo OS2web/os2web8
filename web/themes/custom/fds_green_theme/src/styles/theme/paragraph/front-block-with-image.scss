@@ -70,6 +70,8 @@
       .button.button-primary {
         color: $color-white;
         padding: 11px 67px;
+        font-weight: $font-weight-bold;
+        border-radius: $big-border-radius;
         &:hover {
           background-color: $color-primary-light;
         }

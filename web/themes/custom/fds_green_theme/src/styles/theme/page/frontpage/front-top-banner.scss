@@ -17,6 +17,7 @@ $block-height: 465px;
     display: block;
   }
   .hero-content {
+    padding-bottom: 100px;
     @include media-breakpoint-up(md) {
       padding-left: 70px;
       padding-right: 30px;
