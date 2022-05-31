@@ -83,11 +83,13 @@
 	{{ title_suffix }}
 	<a class="text-decoration-none" href="{% if node.field_os2web_event_url.value %}{{ node.field_os2web_event_url.value }} {% else %}{{ node.url }}{% endif %}">
 		{% if node.field_os2web_event_start_date.value %}
-			<div class="os2web-event-date">
+			<time class="os2web-event-date">
 				{{ node.field_os2web_event_start_date.value|date('d') }}
 				<br/>
+				<small>
 				{{ node.field_os2web_event_start_date.value|date('M') }}
-			</div>
+				</small>
+			</time>
 		{% endif %}
 		{{ content.field_os2web_evnet_image }}
 		<div class="os2web-event-content-wrap">

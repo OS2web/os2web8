@@ -86,11 +86,13 @@
 		<div class="col-3">
 			<div class="position-relative os2web-event-left-wrap">
 				{% if node.field_os2web_event_start_date.value %}
-					<div class="os2web-event-date">
+					<time class="os2web-event-date">
 						{{ node.field_os2web_event_start_date.value|date('d') }}
 						<br/>
+						<small>
 						{{ node.field_os2web_event_start_date.value|date('M') }}
-					</div>
+						</small>
+					</time>
 				{% endif %}
 				{{ content.field_os2web_evnet_image }}
 			</div>
