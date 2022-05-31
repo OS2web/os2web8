@@ -26,12 +26,27 @@
     margin-top: 60px;
     width: 80%;
     margin-inline: auto;
+    .tns-carousel {
+      display: flex;
+    }
+  }
+  .views-row.tns-item{
+    padding-left: 5px;
+    padding-block: 5px;
   }
   .node--view-mode-teaser {
     border-radius: $big-border-radius;
     position: relative;
     background-color: $color-white;
     box-shadow: $box-shadow;
+    height: 100%;
+    cursor: pointer;
+    & > a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-bottom: 2rem;
+    }
     a {
       color: $color-black;
       text-decoration: none;
@@ -69,22 +84,23 @@
         padding: 1.5rem;
       }
       .os2web-event-content-wrap {
+        display: flex;
+        flex-direction: column;
         .field--name-title {
           font-weight: $font-weight-bold;
         }
-        .text-primary {
-          color: $color-primary;
-          font-weight: $font-weight-bold;
-          font-size: 16px;
-          text-transform: uppercase;
-          text-align: right;
-          margin-top: 30px;
-        }
+     
       }
-    }
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-      transform: scale(0.99);
+      div.text-primary {
+        margin-top: auto;
+        padding-inline: 1.5rem;
+        color: $color-primary;
+        font-weight: $font-weight-bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: right;
+        margin-top: auto;
+      }
     }
   }
 
