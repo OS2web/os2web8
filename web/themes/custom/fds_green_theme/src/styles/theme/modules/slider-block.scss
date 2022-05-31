@@ -46,6 +46,12 @@
       flex-direction: column;
       height: 100%;
       padding-bottom: 2rem;
+      &:after {
+        display: none!important;
+      }
+      :focus {
+        outline: 0;
+      }
     }
     a {
       color: $color-black;
