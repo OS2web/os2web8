@@ -23,10 +23,11 @@
 
   .searchy-close {
     position: absolute;
-    right: 26px;
+    right: 34px;
     top: -25px;
     @include media-breakpoint-up(lg) {
       top: 0;
+      right: 28px;
     }
   
     display: block;
