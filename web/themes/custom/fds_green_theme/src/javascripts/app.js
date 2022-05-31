@@ -184,3 +184,25 @@ jQuery(document).ready(function () {
       }
     });
   });
+});
+
+
+
+
+
+const mutationTarget = document.querySelector('button[data-js-target="overflow1"]');
+const targetConfig = {
+    attributes: true,
+};
+const callback = function(mutationsList, targetObserver) {
+  for (let mutation of mutationsList) {
+      if (mutation.type === 'attributes') {
+          const headerToggle = document.querySelector('header.menu-toggler')
+          headerToggle.classList.toggle('open')
+          return
+      } 
+  }
+};
+const targetObserver = new MutationObserver(callback);
+targetObserver.observe(mutationTarget, targetConfig);
+

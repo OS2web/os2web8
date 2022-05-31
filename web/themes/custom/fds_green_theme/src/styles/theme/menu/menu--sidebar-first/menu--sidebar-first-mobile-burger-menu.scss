@@ -1,3 +1,21 @@
+header.menu-toggler.open {
+  position: relative;
+  &:after {
+    content: "";
+    z-index: 1;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
+
 .overflow-menu {
   ///BURGER
   .button-overflow-menu {
@@ -35,6 +53,7 @@
       }
     }
     &[aria-expanded="true"] {
+
       .fa-bars {
         display: none;
       }
@@ -42,6 +61,7 @@
         display: flex;
         color: $color-white;
         font-size: 45px;
+        margin-left: 25px;
         &::before {
             -webkit-text-stroke: 7px $color-primary;
         }
@@ -54,7 +74,7 @@
     padding: 0;
     padding-block: 82px;
     top: -30px;
-    left: -222px;
+    left: -222px!important;
     z-index: 9;
     background-color: $color-primary;
     border: 0;
@@ -62,6 +82,15 @@
 
 
     
+  //   .overlay {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     height: 100%;
+  //     width: 100%;
+  //     background-color: rgba(0, 0, 0, 0.5);
+  //     z-index: 10;
+  // }
     &[aria-hidden="false"] {
       .region-header__top {
         margin: 0;
@@ -88,7 +117,7 @@
                     top: 0;
                     left: 0;
                     right: 0;
-                    width: calc(100% - 64px);
+                    width: calc(100% - 50px);
                     display: block;
                     margin: 0 auto;
                     z-index: 10;
@@ -97,6 +126,7 @@
               border: 0;
               background-color: transparent;
               padding-inline: 26px 33px;
+              padding-block: 19px;
               &:focus {
                 outline: 0;
               }
@@ -106,8 +136,9 @@
               &::after {
                 content: url("../images/down-arrow-white.svg");
                 position: absolute;
-                top: 1.6rem;
+                top: 50%;
                 right: 33px;
+                transform: translateY(-100%);
                 height: 10px;
                 width: 17px;
               }
@@ -115,7 +146,7 @@
 
               &[aria-expanded="true"] {
                 &::after {
-                  transform: rotate(180deg) translateY(-20px);
+                  transform: rotate(180deg) translateY(-100%);
                 }
               }
               .menu-level-1-link-wrap {
