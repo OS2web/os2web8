@@ -1261,7 +1261,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   width: 100%;
 }
 .entity-default--os2web-borgerdk-selfser-ref a h3 {
-  font-size: 32px !important;
+  font-size: 32px;
   color: var(--primary);
   margin: 0 !important;
 }
