@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "103b8d4cb5c7fd841f37e075349ab43e",
+    "content-hash": "131feeacad58b0315927b86a5cc1fe4a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6330,6 +6330,58 @@
             "homepage": "https://www.drupal.org/project/ldap_auth",
             "support": {
                 "source": "https://git.drupalcode.org/project/ldap_auth"
+            }
+        },
+        {
+            "name": "drupal/link_field_autocomplete_filter",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/link_field_autocomplete_filter.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/link_field_autocomplete_filter-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "43d05451866a3995759b3ad66e804f1cb369fe65"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1606638287",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Upchuk",
+                    "homepage": "https://www.drupal.org/user/1885838"
+                },
+                {
+                    "name": "jmuxf",
+                    "homepage": "https://www.drupal.org/user/1275704"
+                }
+            ],
+            "description": "Link Field Autocomplete Filter",
+            "homepage": "https://www.drupal.org/project/link_field_autocomplete_filter",
+            "keywords": [
+                "Drupal",
+                "Linkfield"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/link_field_autocomplete_filter"
             }
         },
         {
@@ -24735,5 +24787,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.0.0"
 }

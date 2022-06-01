@@ -107,6 +107,7 @@
         "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
+        "drupal/link_field_autocomplete_filter": "^1.14",
         "drupal/linkit_media_library": "^1.0",
         "drupal/mailchimp": "^2.0",
         "drupal/media_directories": "^2.0",
