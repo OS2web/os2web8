@@ -47,6 +47,8 @@ header.menu-toggler.open {
       .fa-bars {
         display: flex;
         color: $color-primary;
+        -webkit-text-stroke: 2px $color-green-005;
+        font-size: 30px;
       }
       .fa-times {
         display: none;
