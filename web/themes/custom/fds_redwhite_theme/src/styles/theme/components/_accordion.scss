@@ -26,26 +26,21 @@
     box-shadow: $box-shadow;
   }
 }
-.accordion-button {
+button.accordion-button {
   position: relative;
-
-  padding: 1.6rem 2.4rem;
-  padding-right: 6rem;
-
+  padding: 20px 80px 16px 19px;
   font-weight: $font-weight-bold;
-
   border-radius: 0 !important;
-
   background-image: none !important;
-
-  &, &:hover, &:focus {
-    background-color: #fff;
+  background-color: $color-white;
+  &:hover, &:focus {
+    background-color: $color-white;
   }
 
   &:after {
     position: absolute;
-
-    top: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
     right: 2.4rem;
 
     font-size: 4rem;
@@ -57,14 +52,22 @@
   }
 
   &[aria-expanded="true"] {
+    color: #000000;
+    background-color: $color-white;
+    &:hover, &:focus {
+      background-color: $color-white;
 
-    &, &:hover, &:focus {
-      background-color: #fff;
+    }
+    &:hover {
+      color: $color-tertiary!important;
     }
 
     &:after {
       content: $fa-var-angle-up;
     }
+  }
+  &:focus {
+    outline: 0;
   }
 }
 
@@ -77,10 +80,17 @@
       margin-top: $grid-gutter-width / 2;
     }
   }
+  .field__label {
+    font: inherit;
+
+  }
+  em {
+    font: inherit;
+  }
 }
 
 .accordion-close-button {
-  display: block;
+  display: none;
 
   margin-left: -2.4rem;
   margin-right: -2.4rem;

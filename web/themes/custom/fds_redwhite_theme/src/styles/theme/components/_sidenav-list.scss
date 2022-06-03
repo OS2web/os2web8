@@ -27,11 +27,12 @@ $sidenav-list-dot-spacing: 22px;
 .region-sidebar-second {
 	>div {
 		h2 {
-			font-size: 1.85rem;
-			font-family: "Museo 300", sans-serif;
-			font-weight: 300;
 			margin: 0 0 20px;
 			color: $color-dark-gray2;
+			font-size: 30px;
+			font-family: "Museo 300",Helvetica,Arial,sans-serif;
+			padding: 0;
+			margin-bottom: 35px;
 		}
 		+ {
 			div {
