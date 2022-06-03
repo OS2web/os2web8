@@ -12,7 +12,7 @@
 			<div class="tabnav d-none d-sm-flex" role="tablist">
 				{% for menu_link in _context['#menu_links'] %}
 
-					<button aria-controls="tabpanel-{{i}}" id="tab-{{i}}" class="tabnav-item m-0" role="tab" {% if i == 0 %} aria-selected="false" {% else %} aria-selected="true" {% endif %}>
+					<button aria-controls="tabpanel-{{i}}" id="tab-{{i}}" class="tabnav-item m-0 {% if i == 0 %} class-remover initial-first-border {% elseif i == 7  %} initial-last-border {% endif %}" role="tab" {% if i == 0 %} aria-selected="true" {% else %} aria-selected="false" {% endif %}>
             {% set rendered_content = menu_link.content.field_ikon|render %}
             {% if rendered_content %}
               {{ rendered_content }}
@@ -20,9 +20,10 @@
             {% if menu_link['intro_text']|length %}
               {{ menu_link['intro_text'] }}
             {% endif %}
+            <span class="p-1 d-md-none">&nbsp;</span>
             <span class="toplist-title pr-7 pr-sm-0">{{ menu_link.title }}</span>
 					</button>
-					<section class="sublist-wrapper tabnav-panel" {% if i == 0 %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %} role="tabpanel" tabindex="0" id="tabpanel-{{i}}" aria-labelledby="tab-{{i}}">
+					<section class="sublist-wrapper tabnav-panel {% if i == 0 %} d-none {% endif %}" {% if i == 0 %} aria-hidden="false" {% else %} aria-hidden="true" {% endif %} role="tabpanel" tabindex="0" id="tabpanel-{{i}}" aria-labelledby="tab-{{i}}">
             <ul class="m-0 mw-100">
             {% if menu_link['children']|length %}
               <div class="temaer">

@@ -203,3 +203,20 @@ const callback = function(mutationsList, targetObserver) {
 const targetObserver = new MutationObserver(callback);
 targetObserver.observe(mutationTarget, targetConfig);
 
+
+const frontMegamenuOpenedContentTabClassRemovers = document.querySelectorAll('.paragraph--type--os2web-menu-links-paragraph button')
+const frontMegamenuOpenedContentTabLeft = document.querySelector('.paragraph--type--os2web-menu-links-paragraph button.initial-first-border')
+const frontMegamenuOpenedContentTabRight = document.querySelector('.paragraph--type--os2web-menu-links-paragraph button.initial-last-border')
+const frontMegamenuOpenedContentTab = document.querySelector('.paragraph--type--os2web-menu-links-paragraph section.d-none')
+frontMegamenuOpenedContentTabClassRemovers.forEach(remover => {
+  remover.addEventListener("click", () => {
+    frontMegamenuOpenedContentTab.classList.remove("d-none")
+    frontMegamenuOpenedContentTabLeft.classList.remove("class-remover")
+    frontMegamenuOpenedContentTabLeft.classList.remove("initial-first-border")
+    frontMegamenuOpenedContentTabRight.classList.remove("initial-last-border")
+  })
+})
+
+
+
+
