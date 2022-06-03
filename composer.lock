@@ -13328,17 +13328,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "e8331abf98c22b3222e781ac8366a57fd241a174"
+                "reference": "cb0aae2468d6bfb7662ea03eb11c14fa00bd8ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/e8331abf98c22b3222e781ac8366a57fd241a174",
-                "reference": "e8331abf98c22b3222e781ac8366a57fd241a174",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/cb0aae2468d6bfb7662ea03eb11c14fa00bd8ab1",
+                "reference": "cb0aae2468d6bfb7662ea03eb11c14fa00bd8ab1",
                 "shasum": ""
             },
             "require": {
-                "drupal/migrate_plus": "^5.1",
-                "drupal/migrate_tools": "^5.0",
+                "drupal/migrate_plus": "^4.2 || ^5.1",
+                "drupal/migrate_tools": "^4.5 || ^5.0",
                 "drupal/printable": "^2.0"
             },
             "type": "drupal-module",
@@ -13351,7 +13351,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/develop"
             },
-            "time": "2021-11-16T12:39:58+00:00"
+            "time": "2022-06-03T10:24:55+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
