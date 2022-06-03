@@ -6,6 +6,10 @@
   h2.h4 {
     color: $color-gray-001;
     max-width: unset;
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
   }
   p {
     max-width: unset;

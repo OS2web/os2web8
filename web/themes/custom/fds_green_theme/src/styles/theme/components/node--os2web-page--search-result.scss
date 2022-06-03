@@ -1,3 +1,11 @@
+.view-id-os2web_search.view-display-id-os2web_search_page {
+  .view-header {
+    h2 {
+      display: none;
+    }
+  }
+}
+
 .entity-search-result--os2web-page.search-result {
   $side-gap: 15px;
   $bottom-gap: 12px;
@@ -59,7 +67,7 @@
         position: absolute;
         left: unset;
         bottom: 3px;
-        right: $side-gap;
+        right: 0;
         transition: right 0.2s ease-in-out;
 
       }
@@ -81,7 +89,7 @@
       & > a {
         &:after,
         &:after {
-          right: 25px;
+          right: -6px;
         }
       }
     }
