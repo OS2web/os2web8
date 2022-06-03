@@ -74,7 +74,7 @@ header.menu-toggler.open {
     padding: 0;
     padding-block: 82px;
     top: -30px;
-    left: -222px!important;
+    left: -236px!important;
     z-index: 9;
     background-color: $color-primary;
     border: 0;
@@ -117,16 +117,16 @@ header.menu-toggler.open {
                     top: 0;
                     left: 0;
                     right: 0;
-                    width: calc(100% - 50px);
+                    width: calc(100% - 55px);
                     display: block;
-                    margin: 0 auto;
+                    margin-left: 2.6rem;
                     z-index: 10;
               }
             button.accordion-button {
               border: 0;
               background-color: transparent;
               padding-inline: 26px 33px;
-              padding-block: 19px;
+              padding-block: 19px 16px;
               &:focus {
                 outline: 0;
               }
@@ -174,6 +174,7 @@ header.menu-toggler.open {
             .accordion-content {
               background-color: transparent;
               border: 0;
+              padding-top: 0;
               ul.menu {
                 li.menu-item {
                     padding-left: 0!important;
