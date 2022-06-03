@@ -29,10 +29,10 @@
       z-index: 1!important;
     }
     &#views-exposed-form-os2web-search-os2web-search-page input[type="text"] {
-      &:placeholder-shown { 
+      // &:placeholder-shown { 
         border-radius: $big-border-radius;
         border-color: $color-primary;
-      }
+      // }
       border: 1px solid $color-light-green-001;
       font-size: 1.4rem;
       box-shadow: none;
@@ -42,12 +42,12 @@
       margin: 0;
       padding: 14px 14px 14px 45px;
       max-width: unset;
-      &:focus:not(:placeholder-shown)  { 
-        border-top-left-radius: $big-border-radius;
-        border-top-right-radius: $big-border-radius;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
+      // &:focus:not(:placeholder-shown)  { 
+      //   border-top-left-radius: $big-border-radius;
+      //   border-top-right-radius: $big-border-radius;
+      //   border-bottom-left-radius: 0;
+      //   border-bottom-right-radius: 0;
+      // }
        
 
 

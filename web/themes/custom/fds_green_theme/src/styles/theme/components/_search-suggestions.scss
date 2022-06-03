@@ -26,11 +26,13 @@
   z-index: 500;
   box-shadow: $box-shadow;
   box-shadow: none !important;
+  box-shadow: 0 -18px 0 $color-white!important;
   margin-top: -10px !important;
   border-bottom-left-radius: $big-border-radius;
   border-bottom-right-radius: $big-border-radius;
   border: 1px solid $color-light-green-001!important;
   border-top: none!important;
+
   .ui-menu-item {
     padding-left: 0;
 
