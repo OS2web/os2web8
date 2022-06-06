@@ -68,8 +68,6 @@ function fds_redwhite_theme_form_search_form_alter(&$form, FormStateInterface $f
  * Implements template_preprocess_swiftmailer().
  */
 function fds_redwhite_theme_preprocess_swiftmailer(&$variables) {
-dump($variables);
-die;
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();
