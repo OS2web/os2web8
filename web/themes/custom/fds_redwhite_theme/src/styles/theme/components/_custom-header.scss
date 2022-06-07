@@ -418,6 +418,24 @@ body {
     display: none;
   }
 }
+.region-highlighted {
+  padding-top: 30px;
+  transition: all 0.3s linear;
+  .views-exposed-form {
+    padding: 0;
+    form {
+      max-width: 685px;
+      margin: 0 auto;
+      @include media-breakpoint-up(md) {
+        max-width: 600px;
+      }
+      input {
+        font-size: 22px;
+        font-family: "Museo 300", sans-serif;
+      }
+    }
+  }
+}
 .search-active {
   .page-alert {
     height: 0;
@@ -430,8 +448,9 @@ body {
   .entity-default--os2web-banner-paragraph {
     padding-top: calc(45px + 80px) !important;
   }
-  .region-breadcrumb,
-  .layout-sidebar-right {
+
+  
+  & .region-highlighted {
     padding-top: 65px;
   }
 }
@@ -531,7 +550,7 @@ body {
   .custom-header {
 
     .views-exposed-form {
-      padding-left: 3rem;
+      // padding-left: 3rem;
       padding-bottom: 9rem;
 
       form {

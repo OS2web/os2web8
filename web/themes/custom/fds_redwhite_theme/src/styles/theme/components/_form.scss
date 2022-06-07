@@ -182,81 +182,84 @@ body {
 }
 
 // Search form.
-form#views-exposed-form-os2web-search-os2web-search-page {
-  position: relative;
-
-  .form-actions {
-    position: absolute;
-
-    top: 0;
-    right: 0;
-    z-index: 500;
-
-    width: 50px;
-
-    margin: 0;
-
-    .form-submit {
+form {
+  &#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page, 
+  &#views-exposed-form-os2web-search-os2web-search-page {
+    position: relative;
+    .form-actions {
       position: absolute;
-
+  
       top: 0;
-      left: 0;
       right: 0;
-      bottom: 0;
-
       z-index: 500;
-
-      min-width: auto;
+  
       width: 50px;
-      height: 45px;
-
-      padding: 0 !important;
-
-      border: 0;
-
-      background-color: transparent;
-    }
-
-    &:after {
-      background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0px 0px;
-      position: absolute;
-      display: inline-block;
-      top: 5px;
-      right: 15px;
-      text-indent: -999em;
-      z-index: 100;
-      text-transform: uppercase;
-      height: 36px;
-      padding: 0;
-      width: 36px;
-      content: "";
-      color: transparent;
-    }
-  }
-
-  .form-input {
-    margin: 0;
-    padding: 12px 60px 12px 20px;
-
-    max-width: unset;
-
-    border-radius: 25px;
-  }
-
-  // Remove float from inline form elements.
-  .form--inline {
-
-    .form-item {
-      float: initial;
-
+  
       margin: 0;
+  
+      .form-submit {
+        position: absolute;
+  
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+  
+        z-index: 500;
+  
+        min-width: auto;
+        width: 50px;
+        height: 45px;
+  
+        padding: 0 !important;
+  
+        border: 0;
+  
+        background-color: transparent;
+      }
+  
+      &:after {
+        background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0px 0px;
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        right: 15px;
+        text-indent: -999em;
+        z-index: 100;
+        text-transform: uppercase;
+        height: 36px;
+        padding: 0;
+        width: 36px;
+        content: "";
+        color: transparent;
+      }
     }
-  }
-
-  input.form-autocomplete {
-    background-image: none;
+  
+    .form-input {
+      margin: 0;
+      padding: 12px 60px 12px 20px;
+  
+      max-width: unset;
+  
+      border-radius: 25px;
+    }
+  
+    // Remove float from inline form elements.
+    .form--inline {
+  
+      .form-item {
+        float: initial;
+  
+        margin: 0;
+      }
+    }
+  
+    input.form-autocomplete {
+      background-image: none;
+    }
   }
 }
+
 .form-type-search-api-autocomplete {}
 
 .js-form-item-user-consent {
