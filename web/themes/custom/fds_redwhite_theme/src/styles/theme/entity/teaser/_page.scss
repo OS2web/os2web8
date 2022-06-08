@@ -51,6 +51,15 @@
   }
 }
 
+.field--name-field-os2web-page-heading {
+  h1 {
+    font-size: 40px;
+    @include media-breakpoint-up(sm) {
+      font-size: 50px;
+    }
+  }
+}
+
 a.entity-teaser--os2web-page {
 
   &, &:hover, &:focus, &:active {
