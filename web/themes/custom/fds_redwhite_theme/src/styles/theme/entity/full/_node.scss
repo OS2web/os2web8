@@ -59,6 +59,20 @@
      font-size: $small-text ;
   }
 }
+.field--name-field-os2web-postlister-descript {
+  & > p {
+    line-height: 32px;
+  }
+}
+
+.node--type-os2web-postlister {
+  h1 {
+    font-size: 40px;
+    @include media-breakpoint-up(sm) {
+      font-size: 50px;
+    }
+  }
+}
 
 // --------------------------------------------------
 // Variants
