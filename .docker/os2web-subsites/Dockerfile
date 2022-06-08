@@ -16,7 +16,7 @@ RUN set -eux; \
 # Adding subsites provisioner script.
 RUN set -eux; \
     git clone -n https://github.com/bellcom/os2subsite_provision.git /opt/drupal/scripts/os2subsites_provision; \
-    cd /opt/drupal/scripts/os2subsites_provision && git checkout 89a7202548462dfbb6946fda9978cfad3e77412b; \
+    cd /opt/drupal/scripts/os2subsites_provision && git checkout 2a2df4c493d9a9d07f906be11f3dd3fa3783ce71; \
     ln -s /opt/drupal/scripts/os2subsites_provision/8.x/bc_subsites /opt/drupal/web/modules/custom/
 
 # Adding further site specific data to image.
