@@ -143,7 +143,7 @@ div.field--name-field-os2web-page-description div.field__item > span.file a {
   display: inline-block;
   font-size: inherit;
   border-bottom: 1px dotted var(--dark-gray1);
-  line-height: 2.2rem;
+  line-height: 1.05;
 }
 div.field--name-field-os2web-page-description p + .embedded-entity .file {
   padding: 0 !important;
@@ -203,9 +203,10 @@ div.field--name-field-os2web-page-description div.field__item span.file a[href$=
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpeg"]:hover::before,
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".jpeg"]:focus::before,
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]:hover::before,
-div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]:focus::before,
-div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:hover::before,
-div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:focus::before {
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]:focus::before
+/* div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:hover::before,
+div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:focus::before  */
+{
   background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
   color: blue;
 }
