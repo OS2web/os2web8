@@ -1295,7 +1295,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   content: "Dato: ";
 }
 
-#block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-0 label {
+.block-subscribe-taxonomy-terms-block fieldset .term-depth-0 label {
   margin-top: 3rem;
   font-family: "Museo 300", sans-serif;
   font-weight: normal;
@@ -1307,10 +1307,10 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .block-subscribe-taxonomy-terms-block .fieldset-legend{
   display:none;
 }
-#block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-0 label:before {
+.block-subscribe-taxonomy-terms-block  fieldset .term-depth-0 label:before {
   display:none;
 }
-#block-anonymoustaxonomytermssubscription-2--2 fieldset .term-depth-1 label:before {
+.block-subscribe-taxonomy-terms-block  fieldset .term-depth-1 label:before {
   content: '';
 }
 
