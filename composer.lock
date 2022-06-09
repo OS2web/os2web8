@@ -11709,12 +11709,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings_sbsys.git",
-                "reference": "35e6bd8174180e65cdfaf458b0fbce219c84e707"
+                "reference": "f65d42955ba5ebec19ddb785c9a7d87c8022cc2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings_sbsys/zipball/35e6bd8174180e65cdfaf458b0fbce219c84e707",
-                "reference": "35e6bd8174180e65cdfaf458b0fbce219c84e707",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_sbsys/zipball/f65d42955ba5ebec19ddb785c9a7d87c8022cc2d",
+                "reference": "f65d42955ba5ebec19ddb785c9a7d87c8022cc2d",
                 "shasum": ""
             },
             "require": {
@@ -11732,7 +11732,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings_sbsys/issues",
                 "source": "https://github.com/OS2web/os2web_meetings_sbsys/tree/master"
             },
-            "time": "2022-05-16T12:53:14+00:00"
+            "time": "2022-06-09T07:59:26+00:00"
         },
         {
             "name": "os2web/os2web_nemlogin",
