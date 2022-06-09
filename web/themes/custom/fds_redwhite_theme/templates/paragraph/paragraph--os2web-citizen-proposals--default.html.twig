@@ -21,7 +21,7 @@
       <li class="proposal" data-nid="{{ proposal.id }}">
         <button class="accordion-button js-accordion-add-link" aria-expanded="false" aria-controls="{{ proposal.id }}" id="label_{{ proposal.id }}">
           <div class="header">
-            <span class="date">{{ proposal.getCreatedTime()|date("d M Y") }}</span>
+            <span class="date">{{ proposal.getCreatedTime()|format_date("custom", "d. M Y") }}</span>
             <span class="title">{{ proposal.label }}</span>
             <span class="votes">{{ votes_count }}</span>
           </div>
