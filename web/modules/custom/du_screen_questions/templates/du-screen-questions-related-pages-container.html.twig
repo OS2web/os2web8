@@ -39,19 +39,19 @@
 				</h2>
 				<div>
 					{% set k = 1 %}
-					{% for relatedNode in relatedPageCategory.nodes %}
-						<ul class="accordion accordion-multiselectable">
-							<li  class="accordion-inner-wrap">
-								<button  class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
-									Title
-								</button>
-								<div id="accordion-{{i}}-{{k}}" aria-hidden="true" class="accordion-content">
-									{{ relatedNode }}
-								</div>
-							</li>
-						</ul>
-						{% set k = k + 1 %}
-					{% endfor %}
+          <ul class="accordion accordion-multiselectable">
+            {% for nodeTitle, relatedNode in relatedPageCategory.nodes %}
+                <li  class="accordion-inner-wrap">
+                  <button  class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
+                    {{ nodeTitle }}
+                  </button>
+                  <div id="accordion-{{i}}-{{k}}" aria-hidden="true" class="accordion-content">
+                    {{ relatedNode }}
+                  </div>
+                </li>
+              {% set k = k + 1 %}
+            {% endfor %}
+          </ul>
 				</div>
 			</div>
 		{% endif %}

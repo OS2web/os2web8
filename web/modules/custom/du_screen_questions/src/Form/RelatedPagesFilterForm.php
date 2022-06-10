@@ -107,7 +107,11 @@ class RelatedPagesFilterForm extends FormBase {
       $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
       $build = $view_builder->view($node, 'teaser');
       $nodeRendered = \Drupal::service('renderer')->render($build);
-      $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][] = $nodeRendered;
+      $title = $node->label();
+      if (!$node->get('field_os2web_page_heading')->isEmpty()) {
+        $title = $node->get('field_os2web_page_heading')->value;
+      }
+      $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][$title] = $nodeRendered;
     }
 
     $form['related_pages_categories'] = [
