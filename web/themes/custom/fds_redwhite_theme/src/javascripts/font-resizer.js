@@ -16,12 +16,13 @@
   }
 
   function initialBoot() {
-    var wrapper = document.getElementById('font-resize-wrapper');
+    var wrapper = document.querySelectorAll('div[data-font-resize-wrapper]');
     var storedFontSize = getCookie('fontResizer');
 
     if (storedFontSize === null) return;
-
-    wrapper.style.fontSize = parseFloat(storedFontSize) + 'px';
+    wrapper.forEach(item => {
+      item.style.fontSize = parseFloat(storedFontSize) + 'px';
+    })
   }
 
   function handleDecreaseFontSize(event) {
@@ -30,13 +31,16 @@
     decreaseFontSize();
   }
   function decreaseFontSize() {
-    var wrapper = document.getElementById('font-resize-wrapper');
-    var styles = getComputedStyle(wrapper);
-    var currentFontSize = parseFloat(styles.fontSize, 10);
-    var newFontSize = currentFontSize / 1.2;
-
-    setCookie('fontResizer', newFontSize, 100);
-    wrapper.style.fontSize = newFontSize + 'px';
+    var wrapper = document.querySelectorAll('div[data-font-resize-wrapper]');
+    wrapper.forEach(item => {
+      var styles = getComputedStyle(item);
+      var currentFontSize = parseFloat(styles.fontSize, 10);
+      var newFontSize = currentFontSize / 1.2;
+  
+      setCookie('fontResizer', newFontSize, 100);
+      item.style.fontSize = newFontSize + 'px';
+    })
+ 
   }
 
   function handleIncreaseFontSize(event) {
@@ -45,13 +49,16 @@
     increaseFontSize();
   }
   function increaseFontSize() {
-    var wrapper = document.getElementById('font-resize-wrapper');
-    var styles = getComputedStyle(wrapper);
-    var currentFontSize = parseFloat(styles.fontSize, 10);
-    var newFontSize = currentFontSize * 1.2;
+    var wrapper = document.querySelectorAll('div[data-font-resize-wrapper]');
+    wrapper.forEach(item => {
+      var styles = getComputedStyle(item);
+      var currentFontSize = parseFloat(styles.fontSize, 10);
+      var newFontSize = currentFontSize * 1.2;
+  
+      setCookie('fontResizer', newFontSize, 100);
+      item.style.fontSize = newFontSize + 'px';
+    })
 
-    setCookie('fontResizer', newFontSize, 100);
-    wrapper.style.fontSize = newFontSize + 'px';
   }
 
   // Add event listeners.
