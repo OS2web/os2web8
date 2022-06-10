@@ -11,10 +11,10 @@
   .du-screen-questions-related-pages-container {
     padding: 30px;
     $bg-colors-and-svgs: 
-      "1" $color-orange-006 "../images/Hjalp_dig_selv.svg",
-      "2" $color-blue-009 "../images/Teknologier.svg",
-      "3" $color-primary "../images/Kommunale_tilbud.svg",
-      "4" $color-red-003 "../images/Private_tilbud.svg";
+      "hjaelp-dig-selv" $color-orange-006 "../images/Hjalp_dig_selv.svg",
+      "hverdags-teknologier" $color-blue-009 "../images/Teknologier.svg",
+      "kommunale-tilbud" $color-primary "../images/Kommunale_tilbud.svg",
+      "private-tilbud" $color-red-003 "../images/Private_tilbud.svg";
     h2.du-screen-questions-related-pages-container-title {
       color: $color-base-002;
       margin: 0;
@@ -28,8 +28,8 @@
         font-size: 16px;
       }
     }
-    @each $id, $color-code, $svg-path in $bg-colors-and-svgs {
-      &.color-container-#{$id} {
+    @each $class, $color-code, $svg-path in $bg-colors-and-svgs {
+      &.#{$class} {
         border: 1px solid $color-code;
         border-top: 11px solid $color-code;
         border-radius: $big-border-radius;

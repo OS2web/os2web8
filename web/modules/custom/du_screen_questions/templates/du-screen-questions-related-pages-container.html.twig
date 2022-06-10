@@ -33,17 +33,16 @@
 	{% set i = 1 %}
 	{% for relatedPageCategory in container['#related_pages_categories'] %}
 		{% if relatedPageCategory.nodes %}
-			<div id="{{ relatedPageCategory.transliteratedName }}" class="du-screen-questions-related-pages-container color-container-{{i}} {{ relatedPageCategory.transliteratedName }}">
+			<div id="{{ relatedPageCategory.transliteratedName }}" class="du-screen-questions-related-pages-container {{ relatedPageCategory.transliteratedName }}">
 				<h2 class="du-screen-questions-related-pages-container-title">
 					{{ relatedPageCategory.name }}
 				</h2>
 				<div>
 					{% set k = 1 %}
-				
 					{% for relatedNode in relatedPageCategory.nodes %}
 						<ul class="accordion accordion-multiselectable">
-							<li data-teaser-title-wrap class="accordion-inner-wrap">
-								<button data-teaser-duplicated-title class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
+							<li  class="accordion-inner-wrap">
+								<button  class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
 									Title
 								</button>
 								<div id="accordion-{{i}}-{{k}}" aria-hidden="true" class="accordion-content">
@@ -59,11 +58,3 @@
 		{% set i = i + 1 %}
 	{% endfor %}
 </div>
-<script>
-	const teaserTitleWraps = document.querySelectorAll("[data-teaser-title-wrap]")
-	teaserTitleWraps.forEach(wrap => {
-		const teaserTitle = wrap.querySelector('[data-teaser-title] div h3')
-		const teaserdDuplicatedTitle = wrap.querySelector('[data-teaser-duplicated-title')
-		teaserdDuplicatedTitle.textContent = teaserTitle.textContent
-	})
-</script>
