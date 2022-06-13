@@ -12,10 +12,12 @@
     {{ content.field_os2web_news_primaryimage }}
   </div>
 
-  <div class="entity-{{ view_mode|clean_class }}__body">
-    {{ content.field_os2web_news_article_date }}
+  <div role="region" aria-label="{{'Teaser'| trans}}" class="entity-{{ view_mode|clean_class }}__body">
+    <time>
+      {{ content.field_os2web_news_article_date }}
+    </time>
     {{ content.field_os2web_news_heading }}
-
+    
     {% set text = content.field_os2web_news_description | render %}
     <div class="field field--type-body">
       {{ text | striptags }}
