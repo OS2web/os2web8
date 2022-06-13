@@ -86,7 +86,7 @@
   content: "\f111" !important;
   left: 10px;
   top: 8px;
-  font-size: 0.6rem;
+  font-size: 6px;
   color: var(--dark-gray2);
 }
 .field--name-field-os2web-page-description {
@@ -548,7 +548,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .view-os2web-news .field--name-field-os2web-news-article-date {
   order: 1;
   font-size: 1.4rem;
-  color: var(--medium-gray1);
+  color: var(--gray1);
   margin: 15px 0;
   font-family: "Museo 500", sans-serif;
 }
