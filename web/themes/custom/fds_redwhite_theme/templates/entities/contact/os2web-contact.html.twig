@@ -92,7 +92,7 @@
         {# Begin - secure mail link #}
         {% if content.field_os2web_contact_secure_mail.0 %}
           <div>
-            <a aria-label="Secure mail link" href="{{ content.field_os2web_contact_secure_mail.0|render|striptags|trim|raw }}" target="_blank">{{ content.field_os2web_contact_secure_mail['#title'] }}</a>
+            <a aria-label="{{ 'Сontact secure mail' | trans }}" href="{{ content.field_os2web_contact_secure_mail.0|render|striptags|trim|raw }}" target="_blank">{{ content.field_os2web_contact_secure_mail['#title'] }}</a>
           </div>
         {% endif %}
         {# End - secure mail #}
@@ -100,7 +100,7 @@
         {# Begin - website #}
         {% if content.field_os2web_contact_website %}
           <div>
-            <a aria-label="contact website" href="{{ content.field_os2web_contact_website.0 }}" target="_blank">{{  content.field_os2web_contact_website.0|render|striptags|trim('https://')|trim('http://')}}</a>
+            <a aria-label="{{ 'Сontact website' | trans }}" href="{{ content.field_os2web_contact_website.0 }}" target="_blank">{{  content.field_os2web_contact_website.0|render|striptags|trim('https://')|trim('http://')}}</a>
           </div>
         {% endif %}
         {# End - website #}
@@ -108,7 +108,7 @@
         {# Begin - facebook #}
         {% if content.field_os2web_contact_facebook.0 %}
           <div>
-            <a aria-label="Facebook" href="{{ content.field_os2web_contact_facebook.0 }}" target="_blank">facebook.com</a>
+            <a aria-label="{{ 'Facebook' | trans }}" href="{{ content.field_os2web_contact_facebook.0 }}" target="_blank">facebook.com</a>
           </div>
         {% endif %}
         {# End - facebook #}

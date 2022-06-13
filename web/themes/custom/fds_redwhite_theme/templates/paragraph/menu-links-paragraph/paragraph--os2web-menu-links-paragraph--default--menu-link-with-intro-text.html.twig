@@ -9,7 +9,7 @@
     {% block content %}
 
       {# Begin - links #}
-    <div class="row entrylinks">
+    <nav class="row entrylinks">
       {% for menu_link in _context['#menu_links'] %}
       <div class="col-12 col-sm-6 col-md-3 entrylinks-col">
         <div class="entrylinks-wrapper">
@@ -33,7 +33,7 @@
           </div>
         </div>
       {% endfor %}
-      </div>
+      </nav>
       {# End - links #}
 
     {% endblock %}
