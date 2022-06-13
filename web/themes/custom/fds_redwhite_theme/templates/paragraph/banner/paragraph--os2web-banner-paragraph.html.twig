@@ -13,7 +13,7 @@
           {{ breadcrumbs }}
 
           {% if paragraph.field_os2web_banner_heading.value %}
-            <div class="banner__heading">
+            <div role="heading" aria-level="2" aria-label="{{ 'Title' | t }}" class="banner__heading">
               {{ content.field_os2web_banner_heading }}
             </div>
           {% endif %}
