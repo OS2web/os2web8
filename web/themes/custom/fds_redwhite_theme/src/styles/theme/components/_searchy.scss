@@ -60,7 +60,7 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
   .searchy-label {
-    font-size: 18px;
+    font-size: 18rem;
   }
   .searchy {
     .region {
@@ -76,7 +76,7 @@
 // Desktop - and up
 @include media-breakpoint-up(md) {
   .searchy-label {
-    font-size: 22px;
+    font-size: 2.2rem;
   }
 }
 

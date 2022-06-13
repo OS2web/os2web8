@@ -127,7 +127,7 @@ body {
   font-family: "Museo 300", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 2.2rem;
   vertical-align: 4px;
 }
 
@@ -144,7 +144,7 @@ body {
     position: relative;
     padding-bottom: 80px;
     .form-input {
-      font-size: 22px;
+      font-size: 2.2rem;
       font-family: "Museo 300", sans-serif;
       font-weight: normal;
     }
@@ -196,7 +196,7 @@ body {
   }
 }
 .searchy-label {
-  font-size: 22px;
+  font-size: 2.2rem;
   transition: all 0.2s ease-in-out;
   font-family: "Museo 300", sans-serif;
   color: $color-dark-gray2;
@@ -331,7 +331,7 @@ body {
         padding: 16px 15px;
         text-align: initial;
         font-weight: inherit;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-family: "Museo 300", sans-serif;
         box-shadow: none;
         text-decoration: none;
@@ -430,7 +430,7 @@ body {
         max-width: 600px;
       }
       input {
-        font-size: 22px;
+        font-size: 2.2rem;
         font-family: "Museo 300", sans-serif;
       }
     }
@@ -466,7 +466,7 @@ body {
 // Mobile - and up
 @include media-breakpoint-up(xs) {
   .region-header__below .menu li > a {
-    font-size: 18px;
+    font-size: 1.8rem;
     padding: 16px 20px;
   }
   .custom-header--static .menuwrapper .region-header__below {
@@ -545,7 +545,7 @@ body {
 // Desktop - and up
 @include media-breakpoint-up(md) {
   .region-header__below .menu li > a {
-    font-size: 22px;
+    font-size: 2.2rem;
   }
   .custom-header {
 

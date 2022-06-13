@@ -26,7 +26,7 @@
 .field--name-field-os2web-page-intro,
 .field--name-field-os2web-hearings-intro,
 .field--name-field-os2web-news-intro {
-  font-size: 18px;
+  font-size: 1.8rem;
   /* line-height: 1.3em; */
   margin: 30px 0 40px;
 }
@@ -41,7 +41,7 @@
   font-weight: 300;
 }
 .entity-default--os2web-simple-text-paragraph {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .entity-default--os2web-simple-text-paragraph p {
   line-height: 2.15rem
@@ -50,7 +50,7 @@
   .field--name-field-os2web-page-intro,
   .field--name-field-os2web-hearings-intro,
   .field--name-field-os2web-news-intro {
-    font-size: 24px;
+    font-size: 2.4rem;
   }
 }
 .field--name-field-os2web-page-intro + .field,
@@ -86,19 +86,19 @@
   content: "\f111" !important;
   left: 10px;
   top: 8px;
-  font-size: 6px;
+  font-size: 0.6rem;
   color: var(--dark-gray2);
 }
 .field--name-field-os2web-page-description {
   margin-bottom: 0;
 }
 .field--name-field-os2web-page-description h2 {
-  font-size: 22px !important;
+  font-size: 2.2rem !important;
   font-family: 'Museo 500';
   font-weight: 500;
 }
 .field--name-field-os2web-page-description h3 {
-  font-size: 18px !important;
+  font-size: 1.8rem !important;
   font-family: 'Museo 500';
   font-weight: 500;
 }
@@ -226,7 +226,7 @@ div.field--name-field-os2web-page-description table a span.file {
   height: auto;
   max-width: 100%;
   font-weight: normal;
-  font-size: 23px;
+  font-size: 2.3rem;
   color: var(--primary);
   text-decoration: none;
   border-bottom: none;
@@ -341,7 +341,7 @@ body.path-frontpage .region-featured-bottom-first {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: 'Museo 300';
   font-weight: normal;
 }
@@ -364,7 +364,7 @@ body.path-frontpage .region-featured-bottom-first {
   padding-left: 10px;
 }
 .field--type-text-long h2 {
-  font-size: 30px;
+  font-size: 3rem;
   margin: 0;
 }
 .field--type-text-long h2 + p {
@@ -400,7 +400,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
 }
 .view-os2web-page-content .field--name-field-os2web-news-article-date {
   order: 1;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: var(--medium-gray1);
   margin: 15px 0;
   font-family: "Museo 500", sans-serif;
@@ -423,7 +423,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
 .view-os2web-page-content h2 {
   margin: 0;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 3rem;
 }
 .view-os2web-page-content .views-row .entity-teaser__body {
   border-top: 1px solid var(--gray1);
@@ -435,7 +435,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
 }
 .view-os2web-page-content .entity-teaser__body .h4 {
   margin-top: 0;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-family: "Museo 500", sans-serif;
 }
 .view-os2web-page-content .field--type-link a {
@@ -504,7 +504,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   margin-top: 10px !important;
 }
 .os2web-news-main-list h2 {
-  font-size: 20px;
+  font-size: 2rem;
   margin-bottom: 25px;
 }
 .os2web-news-main-list h2 a {
@@ -520,7 +520,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   padding-bottom: 7px;
 }
 .os2web-news-main-list p {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.4;
 }
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-intro {
@@ -534,11 +534,11 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-description h2 {
   padding: 10px 0 0;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: bold;
 }
 .page-node-type-os2web-news .region-sidebar-second > div h2 {
-  font-size: 30px;
+  font-size: 3rem;
   font-family: "Museo 300", sans-serif;
   font-weight: 300;
 }
@@ -547,7 +547,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .view-os2web-news .field--name-field-os2web-news-article-date {
   order: 1;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: var(--medium-gray1);
   margin: 15px 0;
   font-family: "Museo 500", sans-serif;
@@ -584,7 +584,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .view-os2web-news .entity-teaser__body h3 {
   margin-top: 0;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-family: "Museo 500", sans-serif;
 }
 .view-os2web-news .field--type-link a {
@@ -658,7 +658,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .entity-teaser--os2web-event h2 {
   margin: 0;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 2.2rem;
   line-height: 2.4rem;
   font-family: "Museo 500", sans-serif;
 }
@@ -669,7 +669,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .view-display-id-embed_3 .entity-default--os2web-simple-text-paragraph h2 {
   margin: 0;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 3rem;
 }
 @media screen and (min-width: 768px) {
   .field--name-field-os2web-column-2 {
@@ -976,7 +976,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   height: auto;
   max-width: 100%;
   font-weight: normal;
-  font-size: 23px;
+  font-size: 2.3rem;
   color: var(--primary);
   text-decoration: none;
 }
@@ -1040,7 +1040,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   border-bottom: 1px solid var(--dark-gray2);
 }
 .contactperson h2 {
-  font-size: 30px;
+  font-size: 3rem;
   margin-bottom: 30px;
 }
 .contactperson a {
@@ -1134,14 +1134,14 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   line-height: normal;
 }
 .node__content > .field > .field__item h3 {
-  font-size: 22px;
+  font-size: 2.2rem;
   margin-top: 40px;
   margin-bottom: 40px;
   font-family: 'Museo 500';
   font-weight: 500;
 }
 .node__content .field.field--name-field-os2web-accordion-item-head.field__item h3 {
-  font-size: 16px;
+  font-size: 1.6rem;
   margin-top: 0;
   margin-bottom: 0;
   font-family: "MuseoSans", "Helvetica", "Arial", sans-serif;
@@ -1248,7 +1248,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   }
 }
 .entity-default--os2web-borgerdk-selfser-ref .field__item h2 {
-  font-size: 22px !important;
+  font-size: 2.2rem !important;
   margin-top: 40px !important;
   margin-bottom: 40px !important;
   font-family: 'Museo 500';
@@ -1289,7 +1289,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 /*NYHEDER-SUBPAGE*/
 .field--name-field-os2web-news-article-date {
   margin-bottom: 30px;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .field--name-field-os2web-news-article-date time::before {
   content: "Dato: ";
@@ -1317,7 +1317,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 @media print {
   body {
     font-family: Helvetica,Arial,sans-serif;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.4;
     color: black;
     font-weight: normal;
@@ -1338,7 +1338,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
     font-size: 27px;
   }
   .node__content > .field > .field__item h2 {
-    font-size: 20px;
+    font-size: 2rem;
     margin: 15px 0;
   }
   .col-sm-6 {
@@ -1352,7 +1352,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   }
   .node--type-os2web-page .node-updated {
     display: block;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-top: 20px;
     margin-bottom: 0;
     font-weight: bold;
@@ -1381,20 +1381,20 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
     max-width: none;
   }
   p, .body-text, .body-copy-text {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
   .field--name-field-os2web-page-intro p strong,
   .field--name-field-os2web-hearings-intro p strong,
   .field--name-field-os2web-news-intro p strong {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
   .field--name-field-os2web-page-intro, .field--name-field-os2web-hearings-intro, .field--name-field-os2web-news-intro {
     font-style: italic;
     font-weight: normal;
     color: black;
     font-family: Helvetica,Arial,sans-serif;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.4;
     margin: 35px 0 20px
   }

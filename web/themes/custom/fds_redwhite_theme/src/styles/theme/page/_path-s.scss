@@ -21,7 +21,7 @@
     display: none;
   }
   .sapi-did-you-mean {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 300;
     font-family: "MuseoSans", "Helvetica", "Arial", sans-serif;
   }
@@ -46,7 +46,7 @@
   padding: 0;
 }
 .view-os2web-search .view-header h2 {
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 1em;
   margin-top: 0;
   margin-bottom: 30px;
@@ -55,10 +55,10 @@
 .view-os2web-search .field--name-title {
   font-weight: 500;
   font-family: "Museo 500", sans-serif;
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 .view-os2web-search .createdtime {
-  font-size: 12px;
+  font-size: 1.2rem;
   text-transform: lowercase;
 }
 .view-os2web-search .search-content-type {
@@ -72,7 +72,7 @@
   margin: 2px;
 }
 .view-os2web-search .pager__item a {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .view-os2web-search .pager li.pager__item a {
   padding: 2px 8px;
@@ -152,7 +152,7 @@
   color: $color-primary;
 }
 .view-os2web-search h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 
 // --------------------------------------------------
@@ -256,7 +256,7 @@
 // Extra large desktop - and up
 @include media-breakpoint-up(xl) {
   .view-os2web-search .view-header h2 {
-    font-size: 50px;
+    font-size: 5rem;
   }
 }
 
