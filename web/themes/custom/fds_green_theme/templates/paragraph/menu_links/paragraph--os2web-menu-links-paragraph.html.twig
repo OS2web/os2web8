@@ -33,7 +33,7 @@
                 {% for node_link in menu_link['children'] %}
                   <li class="col-12 col-md-6 col-lg-4">
                     <a href="{{ node_link.url }}">
-                      <span class="sublist-title">{{ node_link.title }}</span>
+                      <span class="sublist-title">{{ node_link.heading }} </span>
                       {{ node_link.intro_text }}
                     </a>
                   </li>
@@ -84,7 +84,7 @@
             </section>
         {% set a = a + 1 %}
         	{% endfor %}
-      </div> 
+      </div>
 		{% endblock %}
 	</div>
 {% endblock paragraph %}
