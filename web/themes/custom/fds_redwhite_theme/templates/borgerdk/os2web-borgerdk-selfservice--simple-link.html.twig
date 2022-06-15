@@ -17,7 +17,7 @@
 #}
 {% set entity = elements['#os2web_borgerdk_selfservice'] %}
 
-<a target="_blank" href="{{ entity.selfserviceUrl.value }}" title="{{ entity.label.value }}" {{ attributes }}>
+<a role="navigation" target="_blank" href="{{ entity.selfserviceUrl.value }}" title="{{ entity.label.value }}" {{ attributes }}>
   {% if entity.label.value|length %}
     {{ content.label }}
   {% else %}

@@ -51,12 +51,26 @@
   }
 }
 
-.node--type-os2web-page {
+.node--type-os2web-page,
+.node--type-os2web-postlister{
   .node-updated {
      display: block;
-     font-size: $small-text;
      margin-top: 40px;
-     margin-bottom: 60px;
+     font-size: $small-text ;
+  }
+}
+.field--name-field-os2web-postlister-descript {
+  & > p {
+    line-height: 32px;
+  }
+}
+
+.node--type-os2web-postlister {
+  h1 {
+    font-size: 4rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 5rem;
+    }
   }
 }
 
@@ -106,7 +120,7 @@
       color: var(--primary);
       transform: rotate(
           0deg);
-      font-size: 50px;
+      font-size: 5rem;
       -webkit-transform: rotate(
           0deg);
       -moz-transform: rotate(0deg);

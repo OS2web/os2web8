@@ -137,6 +137,7 @@ $color-green-005:             #F3F5F2 !default;
 $color-green-006:             #A4C799;
 $color-light-green-001:       #ebedea;
 $color-light-green-002:       #D1E3CC;
+$color-light-green-003:       #DAECD2;
 
 //orange
 //$color-orange-001:          #b4630c !default;
@@ -144,10 +145,12 @@ $color-light-green-002:       #D1E3CC;
 //$color-orange-003:          #f08b1e !default;
 $color-orange-004:            #D9620D;
 $color-orange-005:            #EAE3C0;
+$color-orange-006:            #ef8a17;
 
 //red
 $color-red-001:               #b63433 !default;
 $color-red-002:               #ffe0e0 !default;
+$color-red-003:               #b6244f !default;
 
 //blue
 $color-blue-001:              #0A487E;
@@ -158,6 +161,7 @@ $color-blue-005:              #067293 !default;
 $color-blue-006:              #04556E !default;
 $color-blue-007:              #033747 !default;
 $color-blue-008:              #1B86C3 !default;
+$color-blue-009:              #255c99 !default;
 
 //purple
 $color-purple-001:            #800080!default;
@@ -428,10 +432,12 @@ $checkbox-small-width:          rem-calc(18) !default;
 $checkbox-small-lineheight:      rem-calc(24) !default;
 $border-radius:                 3px !default;
 $button-border-radius:          4px !default;
+$big-border-radius:             10px !default;
+$medium-border-radius:          6px !default;
 $static-border-radius:          0;
 $interactive-border-radius:     4px;
 $button-box-shadow:             rgba(0,0,0,.4) !default;
-$box-shadow:                    0 0 2px $color-shadow !default;
+$box-shadow:                    0 0 11px $color-shadow !default;
 $focus-outline:                 4px solid $color-focus;
 $focus-spacing:                 1px;
 $nav-responsive-breakpoint:     lg !default; // 992px

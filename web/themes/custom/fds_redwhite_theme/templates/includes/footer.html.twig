@@ -1,4 +1,4 @@
-<footer class="d-print-none">
+<footer>
   <div class="footer">
     <div class="container">
       <div class="row">
@@ -33,7 +33,7 @@
             <p>
             {% if theme_settings.contact_information.vispaakort %}
               <div>
-                <a href="{{ theme_settings.contact_information.vispaakort }}" target="_blank">Vis på kort</a>
+                <a class="vispaakort" href="{{ theme_settings.contact_information.vispaakort }}" target="_blank">Vis på kort</a>
               </div>
             {% endif %}
             </p>
@@ -86,12 +86,12 @@
             {{ page.footer_second }}
           </section>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 footer-col">
+        <div class="col-12 col-sm-6 col-lg-3 footer-col d-print-none">
           <section>
             {{ page.footer_third }}
           </section>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 footer-col">
+        <div class="col-12 col-sm-6 col-lg-3 footer-col d-print-none">
           <section>
             {{ page.footer_fourth }}
           </section>

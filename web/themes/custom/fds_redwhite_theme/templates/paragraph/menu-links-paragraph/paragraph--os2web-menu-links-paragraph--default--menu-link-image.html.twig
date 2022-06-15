@@ -10,7 +10,7 @@
 
       {# Begin - links #}
       <div class="container">
-        <div class="row">
+        <nav class="row">
         {% for menu_link in _context['#menu_links'] %}
           <div class="col-12 col-md-6 col-lg-3 entry">
             <div class="entrywrap">
@@ -23,9 +23,9 @@
                     </div>
                   </div>
                   <div class="entry-text">
-                    <p class="h3">{{ menu_link.title }}</p>
+                    <p role='heading' aria-level="3" aria-label="{{ menu_link.title }}" class="h3">{{ menu_link.title }}</p>
                   </div>
-                  <a class="global-link" href="{{ menu_link.url }}"></a>
+                  <a class="global-link" aria-label="{{ menu_link.title }}" href="{{ menu_link.url }}"></a>
                   {% if menu_link['children']|length %}
                     <hr>
                     <ul>
@@ -37,7 +37,7 @@
             </div>
           </div>
         {% endfor %}
-        </div>
+        </nav>
       </div>
       {# End - links #}
 

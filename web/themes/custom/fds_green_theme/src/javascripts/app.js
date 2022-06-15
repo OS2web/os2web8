@@ -128,7 +128,7 @@ jQuery(function ($) {
 // Search.
 document.addEventListener('DOMContentLoaded', function() {
   function toggle(event) {
-    var parent = document.querySelectorAll('.searchy');
+    var parent = document.querySelectorAll('.search-container');
     parent[0].classList.toggle('searchy--visible-form');
     var main = document.querySelectorAll('body');
     main[0].classList.toggle('search-active');
@@ -142,3 +142,80 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', toggle);
   }
 });
+ 
+// Tiny Slider frontpage events.
+(function($, Drupal) {
+  var selector = '.view-display-id-frontpage_events .view-content';
+
+  if (document.querySelector(selector) !== null) {
+
+    // Run tiny slider.
+    tns({
+      container: selector,
+      items: 1,
+      autoplay: false,
+      gutter: 32,
+      rewind: true,
+      nav: false,
+      responsive: {
+        576: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+      },
+    });
+  }
+})(jQuery, Drupal);
+
+
+jQuery(document).ready(function () {
+  jQuery(".play-pause-btn").on("click", function () {
+    let video = jQuery(this).next()[0]
+    if (jQuery(this).attr("data-click") == 1) {
+      jQuery(this).attr("data-click", 0);
+      video.pause();
+    } else {
+      jQuery(this).attr("data-click", 1);
+      video.play();
+    }
+  });
+});
+
+
+
+
+
+const mutationTarget = document.querySelector('button[data-js-target="overflow1"]');
+const targetConfig = {
+    attributes: true,
+};
+const callback = function(mutationsList, targetObserver) {
+  for (let mutation of mutationsList) {
+      if (mutation.type === 'attributes') {
+          const headerToggle = document.querySelector('header.menu-toggler')
+          headerToggle.classList.toggle('open')
+          return
+      } 
+  }
+};
+const targetObserver = new MutationObserver(callback);
+targetObserver.observe(mutationTarget, targetConfig);
+
+
+const frontMegamenuOpenedContentTabClassRemovers = document.querySelectorAll('.paragraph--type--os2web-menu-links-paragraph button')
+const frontMegamenuOpenedContentTabLeft = document.querySelector('.paragraph--type--os2web-menu-links-paragraph button.initial-first-border')
+const frontMegamenuOpenedContentTabRight = document.querySelector('.paragraph--type--os2web-menu-links-paragraph button.initial-last-border')
+const frontMegamenuOpenedContentTab = document.querySelector('.paragraph--type--os2web-menu-links-paragraph section.d-none')
+frontMegamenuOpenedContentTabClassRemovers.forEach(remover => {
+  remover.addEventListener("click", () => {
+    frontMegamenuOpenedContentTab.classList.remove("d-none")
+    frontMegamenuOpenedContentTabLeft.classList.remove("class-remover")
+    frontMegamenuOpenedContentTabLeft.classList.remove("initial-first-border")
+    frontMegamenuOpenedContentTabRight.classList.remove("initial-last-border")
+  })
+})
+
+
+

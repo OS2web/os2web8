@@ -1,4 +1,5 @@
 //@import "overrides/loader";
+@import "base/loader";
 @import "components/loader";
 @import "entity/loader";
 @import "field/loader";
@@ -6,5 +7,8 @@
 @import "views/loader";
 @import "paragraph/loader";
 @import "spotbox/loader";
+@import "block/loader";
+@import "modules/loader";
+@import "menu/loader";
 
 @import "misc";

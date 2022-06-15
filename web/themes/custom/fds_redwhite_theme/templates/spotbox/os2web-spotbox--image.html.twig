@@ -24,7 +24,8 @@
   'spotbox--' ~ spotbox_type,
   background_color ? ('spotbox--background-color-' ~ background_color),
 ] %}
-<a href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}>
+
+<a role="navigation" aria-label="{{ spotbox_heading }}" href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}  title = "{{ spotbox.field_osweb_spotbox_alt_text.value }}">
   <div class="spotbox__content">
     <div class="spotbox__image">
       {{ content.field_os2web_spotbox_bg_image }}

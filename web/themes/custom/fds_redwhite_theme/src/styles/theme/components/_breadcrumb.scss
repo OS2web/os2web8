@@ -21,34 +21,36 @@
 // --------------------------------------------------
 
 .breadcrumb {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-top: 45px;
+  margin-bottom: 2rem;
+  font-family: "Museo 300", sans-serif;
 
   li {
     display: inline-block;
 
     &:before {
-      display: inline-block;
-      float: left;
-
-      margin-top: -1px;
-      margin-left: 8px;
-      margin-right: 12px;
-
-      font-size: 20px;
-      font-family: FontAwesome;
-      content: "\f105";
-
-      color: $color-orange-004;
+      font-weight: 900;
+      display: inline;
+      float: none;
+      margin-top: initial;
+      margin-left: initial;
+      margin-right: initial;
+      font-size: inherit;
+      font-family: inherit;
+      content: "/";
+      color: $color-primary;
     }
   }
 
   a {
-
-    &, &:hover, &:visited {
+    color: $color-primary;
+    &, &:hover {
       text-decoration: none;
-
-      color: $color-text;
+      border-bottom: 1px dotted $color-dark-gray1;
+    }
+    &:hover, &:focus {
+      color: $color-dark-gray2;
     }
   }
 }

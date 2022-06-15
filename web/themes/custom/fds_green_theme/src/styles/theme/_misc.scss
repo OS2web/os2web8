@@ -14,20 +14,14 @@
 // --------------------------------------------------
 
 // BANNER
-.entity-default--os2web-banner-paragraph {
-  padding: 0;
-  min-height: 465px;
-  .banner__box {
-    background-color: transparent;
-  }
-}
+
 
 
 // Increased specificity to win over base theme.
-body .container-fluid {
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
-}
+// body .container-fluid {
+//  padding-left: $grid-gutter-width;
+//  padding-right: $grid-gutter-width;
+// }
 
 .skip-link {
   color: $color-text;
@@ -73,13 +67,13 @@ body {
   }
 }
 
-.ext {
+svg.ext {
   display: none;
 }
 
-body .page-container {
-  padding-top: 1rem;
-}
+//body .page-container {
+//  padding-top: 1rem;
+//}
 
 .path-frontpage {
   background: $color-green-005;
@@ -95,6 +89,10 @@ body .page-container {
 .layout-sidebar-right {
   padding-top: $grid-gutter-width;
 
+  
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
   .os2web_contact {
 
     .field {
@@ -106,13 +104,19 @@ body .page-container {
   }
 
   > .box {
-
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+    }
     > .box__body {
       padding-top: 0;
       padding-bottom: 0;
-
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+      }
       > .region {
-
+        @include media-breakpoint-up(lg) {
+          height: 100%;
+        }
         > * {
 
           &:first-child {

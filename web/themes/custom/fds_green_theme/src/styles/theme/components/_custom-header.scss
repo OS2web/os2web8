@@ -23,6 +23,25 @@
 header {
   position: relative;
   z-index: 100;
+  form#views-exposed-form-os2web-search-os2web-search-page {
+    .form-actions {
+      left: auto;
+      .form-submit {
+        border-radius: 0;
+        border-top-right-radius: $big-border-radius;
+        border-bottom-right-radius: $big-border-radius;
+        ::after {
+          display: none;
+        }
+      }
+    }
+    input[type=text] {
+      padding: 14px 14px 14px 50px !important;
+    }
+  }
+  .region-header__search {
+    margin-top: 65px !important;
+  }
   .custom-header {
     button,
     a {
@@ -53,6 +72,13 @@ header {
       &:focus {
         outline-color: $color-orange-004;
       }
+    }
+    .custom-header-home-link {
+      font-size: 14px;
+      color: $color-primary;
+      margin-right: 47px;
+      text-decoration: none;
+      font-weight: bold;
     }
   }
   .custom-header__logo {
@@ -85,7 +111,6 @@ header {
     }
   }
 }
-
 body {
   .dialog-off-canvas-main-canvas::after {
     content: "";
@@ -94,7 +119,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: $color-gray-overlay;
+    background-color: rgba(95, 95, 95, 0.438);
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -141,7 +166,8 @@ body {
   padding: 10px; // For fat thumbs.
   background-color: transparent;
   border: 0;
-  + .searchy,
+  margin-right: -10px;
+  + .search-container,
   + .custom-header__button {
     margin-left: 15px;
   }
@@ -149,10 +175,10 @@ body {
     height: auto;
     width: auto;
     font-size: 3rem;
-    color: $color-white;
+    color: $color-primary;
   }
 }
-.searchy {
+.search-container {
   + .custom-header__button {
     margin-left: 15px;
   }
@@ -282,6 +308,18 @@ body {
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+  header {
+    .custom-header__logo {
+      img {
+        height: 50px;
+      }
+    }
+    .custom-header {
+      .custom-header-home-link {
+        font-size: 16px;
+      }
+    }
+  }
   .region-header__top {
     margin-right: 3.5%;
   }
@@ -290,22 +328,19 @@ body {
     .action-buttons {
       display: block;
     }
+   
   }
+
   .custom-header__meta {
     padding: 1rem;
   }
   .custom-header__button {
     .icon {
-      color: $color-orange-004;
+      color: $color-primary;
     }
   }
   .custom-header__button--toggle-search {
     font-size: 1.6rem;
-  }
-  .custom-header__logo {
-    img {
-      height: 50px;
-    }
   }
   .region-header__top {
     .views-exposed-form {

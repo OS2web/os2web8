@@ -5,7 +5,7 @@
 <!-- End - ie -->
 
 <!-- Begin - megamenu -->
-<div class="custom-megamenu d-print-none">
+{# <div class="custom-megamenu d-print-none">
   <div class="container-fluid">
 
     <!-- Begin - top row -->
@@ -54,7 +54,7 @@
     <!-- End - navigation -->
 
   </div>
-</div>
+</div> #}
 <!-- End - megamenu -->
 
 <header>
@@ -122,7 +122,7 @@
     </div>
 </header>
 
-<div class="page-alert" id="font-resize-wrapper">
+<div class="page-alert" data-font-resize-wrapper id="">
   <div class="container">
     {{ page.alert }}
   </div>
@@ -130,7 +130,7 @@
 
 {{ page.featured_top }}
 
-<div class="page-container" id="font-resize-wrapper">
+<div class="page-container" data-font-resize-wrapper id="">
   <div class="container" id="main-content">
     {{ page.highlighted }}
 
@@ -146,8 +146,9 @@
     <div class="row row-no-flex">
       {#  Wayaround for determining visibility for regions with lazybuilder.
       @See https://www.drupal.org/project/drupal/issues/953034 for more info. #}
-      {% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
-      {% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
+      {% set has_sidebar_first = page.sidebar_first|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
+      {% set has_sidebar_second = page.sidebar_second|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
+
       {% if has_sidebar_first %}
         {% set sidebar_first_classes = [
           has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',

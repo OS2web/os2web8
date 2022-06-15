@@ -54,7 +54,8 @@
     padding: 5px;
 
     font-size: $small-text;
-
+    color: $color-primary;
+    cursor: pointer;
     &, &:hover, &:focus, &:active {
       text-decoration: none;
     }

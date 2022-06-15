@@ -84,10 +84,10 @@
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+  {% if label %}
+    <h1{{ title_attributes }}>
+     {{ label }}
+    </h1>
   {% endif %}
   {{ title_suffix }}
 
@@ -104,7 +104,7 @@
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
-
-  Sidst opdateret {{ node.node.getChangedTime()|date("d.m.Y") }}
-
+  <div class="node-updated">
+    {{ 'Sidst opdateret' | t }} {{ node.node.getChangedTime()|date("d.m.Y") }}
+  </div>
 </article>

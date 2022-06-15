@@ -23,40 +23,144 @@
 footer {
 
   .footer {
+    color: $color-dark-gray2;
+    background-color: $color-light-gray2;
+    background-image: url(/themes/custom/fds_redwhite_theme/dist/images/small-circle.png), url(/themes/custom/fds_redwhite_theme/dist/images/big-circle.png);
+    background-repeat: no-repeat;
+    background-position: 110% -95px, -250px -95px;
     margin-top: 0;
-    padding-top: calc(#{map-get($spacers, 905)} - 1px);
-    padding-bottom: calc(#{map-get($spacers, 905)} - 1px);
+    padding-top: 30px;
+    padding-bottom: 100px;
+    font-size: 1.5rem;
 
     border-top: 0;
-    background-color: $color-footer-background;
 
-    h1, h2, h3, h4, h5, h6,
+    h1, h2, h3, h4, h5, h6 {
+      color: $color-dark-gray2;
+      margin: 25px 0 10px;
+      font-family: "Museo 500", sans-serif;
+    }
+    h2 {
+      font-size: 2.2rem;
+    }
+    h3 {
+      font-size: 1.9rem;
+    }
+    h2 + p,
+    h3 + p {
+      margin-top: 10px;
+    }
+    #block-footertwo {
+      .field--name-field-os2web-page-intro + .field,
+      .field--type-text-with-summary{
+        margin-top: 0;
+      }
+      p:first-child {
+      margin-top: 0;
+    }
+    }
     a, a:hover, a:visited, a:focus, a:active,
     .is-active > a,
     .is-active > a:hover,
     .is-active > a:focus,
     .is-active > a:visited,
     .is-active > a:active,
-    &, p {
-      color: #fff;
+    p {
+      margin: 20px 0;
+      color: inherit;
     }
 
-    a {
-      font-weight: bold;
+    a, a:visited {
+      color: $color-dark-gray2;
+      font-weight: inherit;
+      border-bottom: 1px dotted $color-dark-gray1;
       text-decoration: none;
 
       &:focus {
-        outline-color: $color-orange-004;
+        outline-color: $color-dark-gray1;
+      }
+      &:hover,
+      &:focus {
+        color: $color-primary;
+        border-bottom: none;
       }
     }
 
     .social-icon {
       font-size: 2rem;
     }
+
+    .block-menu.navigation .menu-item--expanded {
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      display: inline-block;
+      background: $color-white;
+      width: 100%;
+      padding: 0;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $color-primary;
+      }
+      .menu-item a {
+        transition: all 0.2s ease-in-out;
+        border-bottom: none;
+        &:hover,
+        &:focus {
+          font-weight: 700;
+          padding-left: 5px;
+          color: $color-dark-gray2;
+        }
+      }
+      ul {
+        display: none;
+        position: absolute;
+        padding: 0;
+        background: $color-light-gray1;
+        width: 100%;
+        z-index: 3;
+        &.show {
+          display:block;
+        }
+        li {
+          text-decoration: none;
+          display: block;
+          padding: 6px 10px;
+          border-bottom: 1px solid $color-white;
+        }
+      }
+      span {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        padding: 6px 10px;
+        &:after {
+          width: 10px;
+          height: 10px;
+          line-height: 10px;
+          border-top: 1px solid $color-black;
+          border-right: 1px solid $color-black;
+          transform: rotate(45deg);
+          position: absolute;
+          right: 15px;
+          top: 14px;
+          content: '';
+        }
+      }
+      &.active span:after {
+        transform: rotate(135deg);
+        right: 15px;
+        top: 10px;
+      }
+    }
+    .block-menu.navigation .active {
+      color: $color-primary;
+    }
   }
 
   section {
-    max-width: 450px;
+    max-width: none;
+    padding: 0;
   }
 
   .menu {
@@ -71,12 +175,31 @@ footer {
     }
 
     .menu-item {
-      padding-top: .8em;
+      line-height: 1.9em;
+      padding-top: 0;
     }
   }
 
   .social-icon-list {
     margin-top: 35px;
+  }
+  .field--type-text-with-summary {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .footer-wrapper .contacts .tel, .footer-wrapper .contacts p,
+  .footer-wrapper .contacts-secondary .tel,
+  .footer-wrapper .contacts-secondary p {
+    margin-bottom: 20px;
+  }
+}
+.footer-col {
+  padding-top: 0;
+  & + .footer-col {
+    border-left: none;
+  }
+  &:not(:first-child) {
+    margin-top: 25px;
   }
 }
 
@@ -89,23 +212,19 @@ footer {
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
-
-// Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {
-
+@include media-breakpoint-up(xs) {
   footer {
-
     .footer {
-
-      .menu {
-        padding-top: 10px;
-
-        border-top: 1px solid rgba(255, 255, 255, .5);
+      background-position: 110% -95px, -250px 50%;
+      .footer-col:not(:first-child) {
+        margin-top: 0;
       }
     }
   }
 }
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {}
@@ -117,27 +236,7 @@ footer {
 @include media-breakpoint-up(md) {
 
   .footer-col {
-    padding-top: 10px;
     padding-bottom: 15px;
-
-    + .footer-col {
-      border-left: 1px solid #fff;
-    }
-
-    &:nth-child(1) {
-
-      section {
-        padding-left: 70px;
-      }
-    }
-
-    &:nth-child(2) {
-
-      section {
-        padding-top: 60px;
-        padding-left: 70px;
-      }
-    }
   }
 }
 
@@ -155,9 +254,46 @@ footer {
 
 // Print
 @media print {
-
-  footer .footer {
-    border: none;
+  footer {
+    max-width: 445px;
+    margin: 30px 8px 0;
+    border-top: 2px solid $color-black;
+    .footer {
+      background-image: none;
+      padding-top: 0;
+      padding-bottom: 30px;
+      font-size: 1.3rem;
+      .container {
+        padding: 0;
+        p {
+          font-size: 1.3rem;
+        }
+        a, a:visited {
+          border-bottom: none;
+        }
+        h2,
+        h3 {
+          font-family: Helvetica, Arial, sans-serif;
+          line-height: 1.4;
+          margin: 13px 0 10px;
+        }
+        h2 {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+        }
+        .vispaakort {
+          font-size: 1.8rem;
+          font-weight: bold !important;
+        }
+      }
+      .footer-col:not(:first-child) {
+        margin-top: 0;
+      }
+      .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
   }
 }
 

@@ -1,3 +1,6 @@
+// READ README!!!
+// READ README!!!
+
 // Configurations
 let compileConfig = {
     settings: require('./src/compile-settings.json')

@@ -23,7 +23,7 @@
 .box {
   margin-bottom: $grid-gutter-width / 2;
 
-  background-color: $color-orange-005;
+  background-color: transparent;
 
   table {
     width: 100%;
@@ -50,7 +50,7 @@
   padding-right: 30px;
 }
 .box__body {
-  padding: 30px;
+  padding: 0;
 }
 
 // Variants.

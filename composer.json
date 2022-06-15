@@ -95,6 +95,7 @@
         "drupal/coder": "^8.3",
         "drupal/config_delete": "^1.17",
         "drupal/console": "^1.0.2",
+        "drupal/content_access": "^1.0@alpha",
         "drupal/content_moderation_notifications": "^3.3",
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
@@ -107,6 +108,7 @@
         "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
+        "drupal/link_field_autocomplete_filter": "^1.14",
         "drupal/linkit_media_library": "^1.0",
         "drupal/mailchimp": "^2.0",
         "drupal/media_directories": "^2.0",
@@ -125,6 +127,7 @@
         "drupal/upgrade_rector": "^1.0@alpha",
         "drupal/upgrade_status": "^3.5",
         "drupal/video": "^1.5@alpha",
+        "drupal/views_local_tasks": "^1.0",
         "drupal/webform": "^6.1",
         "drupal/workbench": "^1.3",
         "drupal/workbench_access": "^1.0@beta",
@@ -165,7 +168,17 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "simplesamlphp/composer-module-installer": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "zaporylie/composer-drupal-optimizations": true
+        }
     },
     "autoload": {
         "classmap": [

@@ -21,6 +21,18 @@ jQuery(function ($) {
   }
 })();
 
+// responsive tables
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    // Responsive tables (horizontal scroll)
+    $('table').each(function(i, el) {
+      let wrapper = $('<div>').addClass('table-responsive');
+      $(this).wrap(wrapper);
+    });
+  });
+})(jQuery);
+
 // Accordion.
 (function () {
   function handleClose(event) {
@@ -243,3 +255,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 })();
+
+
+//show alert if click on some social link
+function has_social_media_link(el) {
+  let href = jQuery(el).attr('href');
+  let reg = new RegExp('http(s)?:\/\/[\w\d\.\-\_]{0,}(youtube\.com|youtu\.be|facebook\.com|linkedin\.com|vimeo\.com|instagram\.com)\/', 'i');
+  let regmatch = reg.exec(href);
+
+  if (regmatch) {
+    // Return the "domain" match.
+    return regmatch[2];
+  }
+
+  return false;
+}
+
+
+
+// # Go through all links and add a confirm on social media links
+jQuery('a').each(function() {
+  let href = jQuery(this).attr('href');
+  let domain = has_social_media_link(jQuery(this));
+
+  if (domain) {
+    // Add confirm on this <a> element.
+    jQuery(this).click(function() {
+      return confirm('Hvis du går videre vil ' + domain + ' sætte en eller flere cookies på din computer');
+    });
+  }
+});
