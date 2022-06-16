@@ -164,7 +164,13 @@ body {
   padding-right: 45px;
 }
 
-.form-input {}
+.form-input {
+  &:focus, 
+  &.focus {
+    outline: 3px solid #000 !important;
+  }
+
+}
 
 .js input.form-autocomplete{
   background-image: none;
