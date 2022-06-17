@@ -232,7 +232,7 @@
 
 .region-sidebar-first > div + div ul,
 .region-sidebar-second > div + div ul {
-  border: 1px solid $color-light-gray1;
+  // border: 1px solid $color-light-gray1;
   border-bottom: 0;
   @include media-breakpoint-up(md) {
     border-top: 1px solid $color-light-gray1;
