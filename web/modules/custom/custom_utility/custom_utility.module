@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Implementing custom hook functions
+ */
+
+function custom_utility_cron() {
+  \Drupal::logger('custom_utility')->notice('custom utility cron start');
+
+//  $now = date("Y-m-01");
+//  $run = false;
+//
+//  $last_start = \Drupal::keyValue('custom_utility_cron')->get('last_start');
+//  if (empty($last_start))
+//  {
+//    $run = true;
+//    \Drupal::keyValue('custom_utility_cron')->set('last_start', $now);
+//  }
+//  else
+//  {
+//    $lastdiff = strtotime("+1 month", strtotime($last_start));
+//    $run = ($now === date('Y-m-01', $lastdiff));
+//    // TODO or older that now + one month
+//  }
+//
+//  if ($run) {
+//      $nodes = \Drupal::entityTypeManager()
+//        ->getStorage('node')
+//        ->loadByProperties([
+//          'type' => 'os2web_page'
+//        ]);
+//      \Drupal::logger('custom_utility_cron')->notice('# ' . count($nodes));
+//
+//      foreach ( $nodes AS $node )
+//      {
+//        $state = $node->moderation_state->value;
+//        if (gettype($state) === 'string' && $state === 'foraeldet')
+//        {
+//          \Drupal::logger('custom_utility_cron')->notice('# node ' . $state);
+//        }
+//      }
+//  }
+
+  \Drupal::logger('custom_utility')->notice('custom utility cron done');
+}
