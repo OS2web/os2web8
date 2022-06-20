@@ -1,0 +1,17 @@
+<?php
+
+
+use Drupal\bc_utiltiy\Controller\OldContentNotify;
+
+/**
+ * @file
+ * Implementing custom hook functions
+ */
+function bc_utility_cron()
+{
+  \Drupal::logger('bc_utility')->notice('bellcom utility cron start');
+
+  // $run = OldContentNotify::handler();
+
+  \Drupal::logger('bc_utility')->notice('bellcom utility cron done');
+}

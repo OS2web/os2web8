@@ -143,17 +143,19 @@
         </div>
       </div>
     {% endif %}
+      {% set has_main_content = page.content|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
+     {% if has_main_content %}
     <div class="row row-no-flex">
       {#  Wayaround for determining visibility for regions with lazybuilder.
       @See https://www.drupal.org/project/drupal/issues/953034 for more info. #}
       {% set has_sidebar_first = page.sidebar_first|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
       {% set has_sidebar_second = page.sidebar_second|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
 
+      {% set sidebar_first_classes = [
+        has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
+        has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre d-print-none',
+      ] %}
       {% if has_sidebar_first %}
-        {% set sidebar_first_classes = [
-          has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first and has_sidebar_second is empty ? 'sideblock-venstre d-print-none',
-        ] %}
         <aside {{ attributes.addClass(sidebar_first_classes) }}>
           <div class="layout-sidebar-left">
             {{ page.sidebar_first }}
@@ -168,24 +170,23 @@
         has_sidebar_first is empty and has_sidebar_second is empty ? 'hovedindhold-venstre'
       ] %}
 
-      {% set has_main_content = page.content|render|striptags|trim is not empty %}
-      <main {{ content_attributes.addClass(content_classes) }}>
+
         {% if has_main_content %}
-          {{ page.breadcrumb }}
+          <main {{ content_attributes.addClass(content_classes) }}>
+              {{ page.breadcrumb }}
+            {{ page.content }}
+          </main>
         {% endif %}
 
-        {{ page.content }}
-      </main>
-
+      {% set sidebar_second_classes = [
+        has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
+        has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre d-print-none',
+      ] %}
       {% if has_sidebar_second %}
-        {% set sidebar_second_classes = [
-          has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3',
-          has_sidebar_first is empty and has_sidebar_second ? 'sideblock-hojre d-print-none',
-        ] %}
         <aside {{ attributes.addClass(sidebar_second_classes) }}>
           <div class="layout-sidebar-right">
             {% if show_action_buttons %}
-            {% include '@fds_redwhite_theme/includes/action-buttons.html.twig' %}
+              {% include '@fds_redwhite_theme/includes/action-buttons.html.twig' %}
             {% endif %}
             <div class="box">
               <div class="box__body">
@@ -196,6 +197,7 @@
         </aside>
       {% endif %}
     </div>
+    {% endif %}
   </div>
 
   {{ page.featured_bottom_first }}

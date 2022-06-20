@@ -285,3 +285,21 @@ jQuery('a').each(function() {
     });
   }
 });
+
+
+//menu hide
+//menu hide
+const menuRowBtn = jQuery(".custom-header__button--toggle-megamenu");
+const menuRow = jQuery("#block-fds-redwhite-theme-header-below-navigation");
+
+jQuery(document).mouseup(function(e) {
+  if (
+    jQuery(".region.region-header__below.expand-collaps")[0] && 
+    !menuRowBtn.is(e.target) &&
+    menuRowBtn.has(e.target).length === 0 &&
+    !menuRow.is(e.target) &&
+    menuRow.has(e.target).length === 0
+  ) {
+    jQuery(".region.region-header__below").removeClass('expand-collaps')
+  }
+});
