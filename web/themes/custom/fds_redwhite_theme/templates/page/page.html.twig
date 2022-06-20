@@ -143,7 +143,7 @@
         </div>
       </div>
     {% endif %}
-      {% set has_main_content = page.content|render|striptags|trim is not empty %}
+      {% set has_main_content = page.content|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
      {% if has_main_content %}
     <div class="row row-no-flex">
       {#  Wayaround for determining visibility for regions with lazybuilder.
