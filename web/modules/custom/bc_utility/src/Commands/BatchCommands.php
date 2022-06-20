@@ -17,9 +17,27 @@ Class BatchCommands extends DrushCommands
    */
   public function oldContentNotify($options=array())
   {
-    \Drupal::logger('bc_utility')->notice('bellcom utility cron start');
+    $now = date("Y-m-01");
+    $run = false;
+    $last_start = \Drupal::keyValue('bc_utility_cron')->get('last_start');
+    if (empty($last_start))
+    {
+      $run = true;
+      \Drupal::keyValue('bc_utility_cron')->set('last_start', $now);
+    }
+    else
+    {
+      $lastdiff = strtotime("+1 month", strtotime($last_start));
+      $run = ($now === date('Y-m-01', $lastdiff));
+      // TODO or older that now + one month
+    }
 
-    \Drupal\bc_utility\Controller\OldContentNotity::handler();
+    if ($run)
+    {
+      \Drupal::logger('bc_utility')->notice('bc utility cron start');
+      \Drupal\bc_utility\Controller\OldContentNotity::handler();
+    }
+
   }
 
 }
