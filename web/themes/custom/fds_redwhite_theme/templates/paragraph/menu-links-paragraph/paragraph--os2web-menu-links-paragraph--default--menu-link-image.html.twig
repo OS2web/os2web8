@@ -25,7 +25,7 @@
                   <div class="entry-text">
                     <p role='heading' aria-level="3" aria-label="{{ menu_link.title }}" class="h3">{{ menu_link.title }}</p>
                   </div>
-                  <a class="global-link" aria-label="{{ menu_link.title }}" href="{{ menu_link.url }}"></a>
+                  <a class="global-link" title="{{ menu_link.title }}" aria-label="{{ menu_link.title }}" href="{{ menu_link.url }}"></a>
                   {% if menu_link['children']|length %}
                     <hr>
                     <ul>
