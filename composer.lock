@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "400d8179a735a287f82ee90420c35e62",
+    "content-hash": "4ff80d7a05e591cf8228b3f775bbb4fe",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -13372,12 +13372,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "cb0aae2468d6bfb7662ea03eb11c14fa00bd8ab1"
+                "reference": "ac6384faabbcf8ccd40703581d771a69de7c1c96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/cb0aae2468d6bfb7662ea03eb11c14fa00bd8ab1",
-                "reference": "cb0aae2468d6bfb7662ea03eb11c14fa00bd8ab1",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/ac6384faabbcf8ccd40703581d771a69de7c1c96",
+                "reference": "ac6384faabbcf8ccd40703581d771a69de7c1c96",
                 "shasum": ""
             },
             "require": {
@@ -13395,7 +13395,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/develop"
             },
-            "time": "2022-06-03T10:24:55+00:00"
+            "time": "2022-06-20T10:56:05+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
