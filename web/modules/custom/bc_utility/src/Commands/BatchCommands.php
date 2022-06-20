@@ -32,7 +32,7 @@ Class BatchCommands extends DrushCommands
       // TODO or older that now + one month
     }
 
-    if ($run)
+    if (true || $run)
     {
       \Drupal::logger('bc_utility')->notice('bc utility cron start');
       \Drupal\bc_utility\Controller\OldContentNotity::handler();

@@ -11,7 +11,7 @@ function bc_utility_cron()
 {
   \Drupal::logger('bc_utility')->notice('bellcom utility cron start');
 
-  // $run = OldContentNotify::handler();
+//  OldContentNotify::handler();
 
   \Drupal::logger('bc_utility')->notice('bellcom utility cron done');
 }
