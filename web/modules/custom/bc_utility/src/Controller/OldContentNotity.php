@@ -1,29 +1,19 @@
 <?php
-namespace Drupal\custom_utility\Commands;
+namespace Drupal\bc_utility\Controller;
 
-use Drush\Commands\DrushCommands;
-
-Class BatchCommands extends DrushCommands
+Class OldContentNotity
 {
 
-  /**
-   * Search node with foraeldet status
-   *
-   *
-   * @command old:notify
-   * @aliases oln
-   * @options $options arr AN option that takes multiple values.
-   */
-  public function oldContentNotify($options=array())
+  public static function handler()
   {
-    // $this->output()->writeln("start \n");
+    \Drupal::logger('bc_utility')->notice('bellcom OldContentNotify start');
 
     $outdated = array();
     $nodes = \Drupal::entityTypeManager()
-        ->getStorage('node')
-        ->loadByProperties([
-          'type' => 'os2web_page'
-        ]);
+      ->getStorage('node')
+      ->loadByProperties([
+        'type' => 'os2web_page'
+      ]);
 
     if (count($nodes) > 0 )
     {
@@ -62,7 +52,6 @@ Class BatchCommands extends DrushCommands
           }
         }
       }
-      // $this->output()->writeln('# users ' . print_r( $outdated , true ));
     }
 
     if (count($outdated))
