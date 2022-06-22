@@ -77,7 +77,7 @@ Class OldContentNotity
         'subject' => 'A page is outdated',
         'body' => null,
         'headers' => array(
-          'Content-Type' => 'text/html; charset=UTF-8; format=flowed; delsp=yes;'
+          'Content-Type' => 'text/html; charset=UTF-8; format=flowed; delsp=yes'
         )
       );
 
@@ -86,7 +86,7 @@ Class OldContentNotity
         $body = '<p>Hej ' . $user['name'] . '</p>';
         foreach ( $user['outdated'] as $page )
         {
-          $body .= '<p>Siden "' . $page['title'] . '" er forældet. <a href="' . $page['link'] . '" target="_blank">Link</a></p>';
+          $body .= '<p>Siden <em>' . $page['title'] . '</em> er forældet. <a href="' . $page['link'] . '" target="_blank">Link</a></p>';
         }
 
         $params['body'] = $body;
