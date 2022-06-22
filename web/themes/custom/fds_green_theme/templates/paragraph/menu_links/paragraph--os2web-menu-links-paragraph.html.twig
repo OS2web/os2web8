@@ -31,10 +31,17 @@
               </div>
               <ul class="row">
                 {% for node_link in menu_link['children'] %}
+                  {% set intro_text = node_link.intro_text|render|striptags %}
                   <li class="col-12 col-md-6 col-lg-4">
                     <a href="{{ node_link.url }}">
                       <span class="sublist-title">{{ node_link.heading }} </span>
-                      {{ node_link.intro_text }}
+                      <div class="field--name-field-os2web-page-intro">
+                        <p>
+                          <strong>
+                            {{ intro_text|length > 150 ? intro_text|slice(0, 150) ~ '...' : intro_text  }}
+                          </strong>
+                        </p>
+                      </div>
                     </a>
                   </li>
                 {% endfor %}
