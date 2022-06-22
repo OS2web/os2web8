@@ -231,10 +231,10 @@ div.field--name-field-os2web-page-description table a span.file {
   text-decoration: none;
   border-bottom: none;
 }
-.file a:hover,
+/* .file a:hover,
 .file a:focus {
   color: var(--primary);
-}
+} */
 a[href$=".pdf"]::before,
 a[href$=".ppt"]::before,
 a[href$=".pptx"]::before,

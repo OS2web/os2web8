@@ -45,7 +45,7 @@
     font-weight: bold;
 
     &, &:hover, &:focus, &:visited {
-      color: $color-text;
+      color: var(--primary);
       text-decoration: none;
     }
 
