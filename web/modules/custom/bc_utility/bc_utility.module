@@ -15,3 +15,19 @@ function bc_utility_cron()
 
   \Drupal::logger('bc_utility')->notice('bellcom utility cron done');
 }
+
+function bc_utility_mail($key, &$message, $params)
+{
+
+  \Drupal::logger('bc_utility')->notice('mail hook key ' . $key);
+
+  if (isset($params['headers']))
+  {
+    $message['headers'] = array_merge($message['headers'], $params['headers']);
+  }
+
+  $message['from'] = $params['from'];
+  $message['subject'] = t($params['subject']);
+  $message['body'][] = $params['body'];
+
+}
