@@ -50,7 +50,7 @@
 					class="flexy-row">
 
 					<!-- Begin - below -->
-					<a class="custom-header-home-link" href="{{ url('<front>') }}">{{ "MIT UNIVERS" | t }}</a>
+					<a class="custom-header-home-link" href="{{ url('<front>') }}">{{ "MIN TRIVSEL" | t }}</a>
 					<!-- End - below -->
 
 					<!-- Begin - searchtoggle -->
@@ -120,8 +120,8 @@
 		{% if not is_front %}
 			<div class="region-action-buttons row d-print-none">
 				<div class="col-12 col-md-3 d-none d-lg-block">
-					<a href="{{ url('<front>') }}" class="return-to-home-link">
-						{{ 'Forside' | trans }}
+					<a onclick="event.preventDefault(); history.back();" href="#" class="return-to-home-link">
+						{{ 'Tilbage' | trans }}
 					</a>
 				</div>
 				<div class="col-12 col-md-9 d-none d-lg-block col--align-center">
