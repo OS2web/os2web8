@@ -2,6 +2,7 @@
 
 
 use Drupal\bc_utiltiy\Controller\OldContentNotify;
+use Drupal\Component\Render\FormattableMarkup;
 
 /**
  * @file
@@ -23,6 +24,6 @@ function bc_utility_mail($key, &$message, $params)
 
     $message['from'] = $params['from'];
     $message['subject'] = t($params['subject']);
-    $message['body'][] = $params['body'];
+    $message['body'][] = new FormattableMarkup($params['body'], []);
   }
 }
