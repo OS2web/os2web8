@@ -40,6 +40,10 @@ class RelatedPagesFilterForm extends FormBase {
       $field_du_scr_ques_title = $node->get('field_du_scr_ques_title')->getValue();
       $situationTitles = array_column($field_du_scr_ques_title, 'value');
     }
+    if ($node->hasField('field_du_keyword_without_buttons')) {
+      $field_du_screen_category_without_buttons = $node->get('field_du_keyword_without_buttons')->getValue();
+      $categoryKeys = array_column($field_du_screen_category_without_buttons, 'target_id');
+    }
 
     // Checking if the number of keys and values are the same.
     if (count($situationKeys) !== count($situationTitles)) {
@@ -74,6 +78,12 @@ class RelatedPagesFilterForm extends FormBase {
       if (!empty($situationFilters)) {
         $selectedSituation = $situationFilters;
       }
+      else {
+        $selectedSituation = array_merge($selectedSituation, $categoryKeys);
+      }
+    }
+    else {
+      $selectedSituation = array_merge($selectedSituation, $categoryKeys);
     }
 
     // Returns if we have no situation added.
