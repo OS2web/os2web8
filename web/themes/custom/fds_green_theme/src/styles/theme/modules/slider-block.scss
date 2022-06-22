@@ -58,6 +58,10 @@
       text-decoration: none;
       max-width: unset;
       font-size: 14px;
+      &[data-extlink] {
+        padding-right: 0;
+        background: none;
+      }
       .os2web-event-date {
         position: absolute;
         top: 0;
