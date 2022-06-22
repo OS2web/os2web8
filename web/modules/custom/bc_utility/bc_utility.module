@@ -9,11 +9,7 @@ use Drupal\bc_utiltiy\Controller\OldContentNotify;
  */
 function bc_utility_cron()
 {
-  \Drupal::logger('bc_utility')->notice('bellcom utility cron start');
-
 //  OldContentNotify::handler();
-
-  \Drupal::logger('bc_utility')->notice('bellcom utility cron done');
 }
 
 function bc_utility_mail($key, &$message, $params)
@@ -28,8 +24,5 @@ function bc_utility_mail($key, &$message, $params)
     $message['from'] = $params['from'];
     $message['subject'] = t($params['subject']);
     $message['body'][] = $params['body'];
-
-    \Drupal::logger('bc_utility')->notice('mail hook key ' . print_r( $message , true));
-
   }
 }
