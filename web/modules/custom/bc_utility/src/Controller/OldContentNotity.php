@@ -3,6 +3,7 @@ namespace Drupal\bc_utility\Controller;
 
 use Drupal\content_moderation\Plugin\WorkflowType\ContentModeration;
 use Drupal\content_moderation_notifications\Entity\ContentModerationNotification;
+use Drupal\Core\Mail\MailFormatHelper;
 
 Class OldContentNotity
 {
@@ -67,7 +68,6 @@ Class OldContentNotity
 //      $body = $ContentModerationNote->getMessage();
 
       $mailManager = \Drupal::service('plugin.manager.mail');
-      $subject = 'En side er forældet.';
       $module = 'bc_utiltity';
       $key = 'old_article';
       $langcode = 'da';
@@ -86,7 +86,7 @@ Class OldContentNotity
         $body = '<p>Hej ' . $user['name'] . '</p>';
         foreach ( $user['outdated'] as $page )
         {
-          $body .= '<p>Siden "' . $page['title'] . '" er forældet. <a href="' . $page['link'] . ' target="_blank">Link</a></p>';
+          $body .= '<p>Siden "' . $page['title'] . '" er forældet. <a href="' . $page['link'] . '" target="_blank">Link</a></p>';
         }
 
         $params['body'] = $body;
