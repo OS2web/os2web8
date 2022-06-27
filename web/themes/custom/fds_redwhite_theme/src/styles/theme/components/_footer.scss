@@ -255,7 +255,7 @@ footer {
 // Print
 @media print {
   footer {
-    max-width: 445px;
+    max-width: 100%;
     margin: 30px 8px 0;
     border-top: 2px solid $color-black;
     .footer {

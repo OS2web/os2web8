@@ -121,10 +121,15 @@
 }
 
 // Print
-@media print {}
-
+@media print {
+  .hovedindhold-venstre {
+    width: 100%!important;
+  }
+}
 // Touch
 .touchevents {}
 
 // No touch
 .no-touchevents {}
+
+

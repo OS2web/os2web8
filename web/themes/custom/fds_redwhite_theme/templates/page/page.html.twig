@@ -145,7 +145,7 @@
     {% endif %}
 
       
-      {% set drupalTag = '<drupal-render-placeholder >'%}
+      {% set drupalTag = '<drupal-render-placeholder>'%}
       {% set has_main_content = page.content|render|striptags(drupalTag)|trim is not empty %}
      {% if has_main_content %}
     <div class="row row-no-flex">
