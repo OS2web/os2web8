@@ -143,6 +143,10 @@ body .page-container {
   background-color: $color-blue-001 !important;
 }
 
+
+.node--unpublished {
+  background-color: transparent;
+}   
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
