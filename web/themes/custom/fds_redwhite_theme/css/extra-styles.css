@@ -231,10 +231,10 @@ div.field--name-field-os2web-page-description table a span.file {
   text-decoration: none;
   border-bottom: none;
 }
-.file a:hover,
+/* .file a:hover,
 .file a:focus {
   color: var(--primary);
-}
+} */
 a[href$=".pdf"]::before,
 a[href$=".ppt"]::before,
 a[href$=".pptx"]::before,
@@ -402,7 +402,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   order: 1;
   font-size: 1.4rem;
   color: var(--medium-gray1);
-  margin: 15px 0;
+  margin: 11px 0;
   font-family: "Museo 500", sans-serif;
 }
 .view-os2web-page-content .field--type-body {

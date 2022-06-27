@@ -62,6 +62,10 @@
 			padding: 0 !important;
 		}
 	}
+	.field--name-field-os2web-slideshow-heading  {
+		@extend h2;
+		font-size: 3.2rem;
+	}
 }
 .field--name-field-os2web-page-paragraph-narr .field__item:nth-of-type(1) .paragraph--type--os2web-slideshow {
   	margin-top: -31px;

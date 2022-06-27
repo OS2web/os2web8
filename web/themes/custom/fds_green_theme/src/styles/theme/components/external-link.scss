@@ -2,19 +2,12 @@ a[data-extlink] {
     color: $color-primary;
     position: relative;
     padding-right: 15px;
+    background-image: url("../images/Pil-rotated.svg");
+    background-repeat: no-repeat;
+    background-position: 100% -3px;
+    background-size: 14px 23px;
     &:after {
-        content: "";
-        height: 7px;
-        width: 14px;
-        background-image: url("../images/Pil.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        display: block;
-        position: absolute;
-        top: 1px;
-        right: 0px;
-        transform: rotate(-45deg);
+        display: none;
     }
     &:hover {
         color: $color-green-002; 

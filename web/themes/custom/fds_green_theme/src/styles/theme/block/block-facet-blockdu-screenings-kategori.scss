@@ -59,11 +59,11 @@
         }
       }
 
-      $bg-colors-and-svgs: 
+      $bg-colors-and-svgs:
       ".du-cat-hjaelp-dig-selv" $color-orange-006 "../images/Hjalp_dig_selv.svg",
       ".du-cat-kommunale-tilbud" $color-blue-009 "../images/Teknologier.svg",
-      ".du-cat-hverdags-teknologier" $color-primary "../images/Kommunale_tilbud.svg",
-      ".du-cat-private-tilbud" $color-red-003 "../images/Private_tilbud.svg";
+      ".du-cat-hverdagsteknologi" $color-primary "../images/Kommunale_tilbud.svg",
+      ".du-cat-eksterne-tilbud" $color-red-003 "../images/Private_tilbud.svg";
 
       @each $id, $color-code, $svg-path in $bg-colors-and-svgs {
         &#{$id} input {

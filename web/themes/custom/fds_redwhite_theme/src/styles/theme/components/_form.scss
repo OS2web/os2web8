@@ -164,7 +164,13 @@ body {
   padding-right: 45px;
 }
 
-.form-input {}
+.form-input {
+  &:focus, 
+  &.focus {
+    outline: 3px solid #000 !important;
+  }
+
+}
 
 .js input.form-autocomplete{
   background-image: none;
@@ -173,10 +179,46 @@ body {
 #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-simple {
 
   .form-item-ar {
-
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    .form-label {
+      margin: 0;
+    }
     .form-select {
       min-width: unset;
       max-width: 130px !important;
+    }
+  }
+  .js-form-item-ud {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    .form-label {
+      margin: 0;
+    }
+    .chosen-container-single {
+      height: 50px!important;
+      .chosen-single {
+        background: transparent;
+        display: flex;
+        height: 50px!important;
+        border-radius: 0;
+        border-color: #ccc;
+        & > span {
+          margin: auto 0;
+        }
+        & > div {
+          display: flex;
+          b {
+            display: none;
+            transform: translateY(-10%);
+            margin: auto 0;
+            width: 10px;
+            height: 16px;
+          }
+        }
+      }
     }
   }
 }
@@ -216,6 +258,7 @@ form {
         border: 0;
   
         background-color: transparent;
+        cursor: pointer;
       }
   
       &:after {

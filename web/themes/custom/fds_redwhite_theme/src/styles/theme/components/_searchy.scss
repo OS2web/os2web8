@@ -42,6 +42,31 @@
     }
   }
 }
+ul.search-api-autocomplete-search {
+  border: 1px solid $color-black!important;
+  li.ui-menu-item {
+    &:nth-child(even) {
+      .search-api-autocomplete-suggestion {
+        background-color: #eee;
+      }
+    }
+    .search-api-autocomplete-suggestion {
+      font-size: 16px;
+      font-family: "Arial";
+      color: $color-black;
+      padding: 8px 5px;
+      line-height: 16px;
+    }
+    .ui-menu-item-wrapper {
+      &.ui-state-active {
+        .search-api-autocomplete-suggestion {
+          background-color: #0A246A;
+          color: white;
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Variants
@@ -60,7 +85,7 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
   .searchy-label {
-    font-size: 18rem;
+    font-size: 1.8rem;
   }
   .searchy {
     .region {
