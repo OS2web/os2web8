@@ -18,7 +18,7 @@
       {# End - subheading #}
 
       {# Begin - iframe #}
-      <iframe title = "{{ paragraph.field_os2web_gis_map_heading.value }}" id="gis-map-frame" src="{{ os2web_gis_map_iframe_url }}" width="100%" height="400px"> </iframe>
+      <iframe title = "{{ paragraph.field_os2web_gis_map_heading.value }}" id="gis-map-frame-1" src="{{ os2web_gis_map_iframe_url }}" width="100%" height="400px"> </iframe>
 
       <a href="javascript:void(0);" class="function-link" data-micromodal-trigger="{{ modalId }}">
         <span class="icon fa fa-arrows-alt"></span> {{ 'Increase map size' | trans }}
@@ -40,7 +40,7 @@
             {% endif %}
 
             <main class="modal__content">
-              <iframe id="gis-map-frame" src="{{ os2web_gis_map_iframe_url }}" width="100%" height="700px"> </iframe>
+              <iframe id="gis-map-frame-2" src="{{ os2web_gis_map_iframe_url }}" width="100%" height="700px"> </iframe>
             </main>
 
             <footer class="modal__footer">
