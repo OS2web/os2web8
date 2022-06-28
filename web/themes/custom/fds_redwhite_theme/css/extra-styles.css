@@ -445,7 +445,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   top: 0;
   width: 100%;
   height: 100%;
-  text-indent: -9999px;
+  /* text-indent: -9999px; */
   padding: 0;
 }
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .news {
