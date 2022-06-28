@@ -21,40 +21,40 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
+{% set classes = [
   has_parent ? 'js-form-wrapper',
   has_parent ? 'form-wrapper',
   "du-screen-questions-related-pages-container-wrap",
-]
-%}
-<div{{attributes.addClass(classes)}}>
-	{{ children }}
-	{% set i = 1 %}
-	{% for relatedPageCategory in container['#related_pages_categories'] %}
-		{% if relatedPageCategory.nodes %}
-			<div id="{{ relatedPageCategory.transliteratedName }}" class="du-screen-questions-related-pages-container {{ relatedPageCategory.transliteratedName }}">
-				<h2 class="du-screen-questions-related-pages-container-title">
-					{{ relatedPageCategory.name }}
-				</h2>
-				<div>
-					{% set k = 1 %}
+] %}
+<div{{ attributes.addClass(classes) }}>
+  {{ children }}
+  {% set i = 1 %}
+  {% for relatedPageCategory in container['#related_pages_categories'] %}
+    {% if relatedPageCategory.nodes %}
+      <div
+        id="{% if relatedPageCategory.transliteratedName %}{{ relatedPageCategory.transliteratedName }} {% else %}other{% endif %}"
+        class="du-screen-questions-related-pages-container {% if relatedPageCategory.transliteratedName %}{{ relatedPageCategory.transliteratedName }} {% else %}other{% endif %}">
+        <h2 class="du-screen-questions-related-pages-container-title">
+          {% if relatedPageCategory.name %}{{ relatedPageCategory.name }} {% else %} {{ 'Other'| t }}{% endif %}
+        </h2>
+        <div>
+          {% set k = 1 %}
           <ul class="accordion accordion-multiselectable">
             {% for nodeTitle, relatedNode in relatedPageCategory.nodes %}
-                <li  class="accordion-inner-wrap">
-                  <button  class="accordion-button" aria-expanded="false" aria-controls="accordion-{{i}}-{{k}}">
-                    {{ nodeTitle }}
-                  </button>
-                  <div id="accordion-{{i}}-{{k}}" aria-hidden="true" class="accordion-content">
-                    {{ relatedNode }}
-                  </div>
-                </li>
+              <li class="accordion-inner-wrap">
+                <button class="accordion-button" aria-expanded="false" aria-controls="accordion-{{ i }}-{{ k }}">
+                  {{ nodeTitle }}
+                </button>
+                <div id="accordion-{{ i }}-{{ k }}" aria-hidden="true" class="accordion-content">
+                  {{ relatedNode }}
+                </div>
+              </li>
               {% set k = k + 1 %}
             {% endfor %}
           </ul>
-				</div>
-			</div>
-		{% endif %}
-		{% set i = i + 1 %}
-	{% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% set i = i + 1 %}
+  {% endfor %}
 </div>

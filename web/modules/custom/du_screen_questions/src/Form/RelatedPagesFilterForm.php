@@ -108,8 +108,7 @@ class RelatedPagesFilterForm extends FormBase {
     // Getting relates pages.
     $query = \Drupal::entityQuery('node')
       ->condition('status', 1)
-      ->condition('field_du_screen_situation', $selectedSituation, 'IN')
-      ->exists('field_du_screen_category');
+      ->condition('field_du_screen_situation', $selectedSituation, 'IN');
     $nids = $query->execute();
 
     $nodes = Node::loadMultiple($nids);
@@ -118,10 +117,15 @@ class RelatedPagesFilterForm extends FormBase {
       $build = $view_builder->view($node, 'teaser');
       $nodeRendered = \Drupal::service('renderer')->render($build);
       $title = $node->label();
-      if (!$node->get('field_os2web_page_heading')->isEmpty()) {
+      if ($node->hasField('field_os2web_page_heading') && !$node->get('field_os2web_page_heading')->isEmpty()) {
         $title = $node->get('field_os2web_page_heading')->value;
       }
-      $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][$title] = $nodeRendered;
+      if  (isset($node->field_du_screen_category->target_id)) {
+        $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][$title] = $nodeRendered;
+      }
+      else {
+        $relatedPageCategories['empty']['nodes'][$title] = $nodeRendered;
+      }
     }
 
     $form['related_pages_categories'] = [

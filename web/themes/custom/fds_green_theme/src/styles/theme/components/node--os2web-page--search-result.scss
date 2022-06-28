@@ -23,7 +23,8 @@
       "du-cat-hjaelp-dig-selv" $color-orange-006,
       "du-cat-kommunale-tilbud" $color-blue-009,
       "du-cat-hverdagsteknologi" $color-primary,
-      "du-cat-private-tilbud" $color-red-003;
+      "du-cat-eksterne-tilbud" $color-red-003,
+      "du-cat-other" $color-red-003;
 
  @each $id, $color-code in $bg-colors {
       &.#{$id} {
