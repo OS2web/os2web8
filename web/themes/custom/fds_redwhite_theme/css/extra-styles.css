@@ -525,6 +525,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-intro {
   padding-bottom: 0;
+  line-height: 3.2rem;
 }
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-primaryimage {
   margin-bottom: 30px;
