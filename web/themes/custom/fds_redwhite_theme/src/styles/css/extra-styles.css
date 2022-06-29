@@ -122,14 +122,7 @@
 .field--name-field-media-file .field__item {
   padding: 0;
 }
-.file {
-  display: block;
-  box-shadow: none;
-  margin-bottom: 4px;
-  background-color: #fafafa;
-  padding: 30px;
-  border: 1px solid var(--light-gray2);
-}
+
 
 
 
