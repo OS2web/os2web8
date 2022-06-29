@@ -11,7 +11,7 @@
 		  }
 		.tns-controls {
 			button[data-controls="next"] {
-				background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -159px 0;
+				background: transparent url("../images/sprite.png") no-repeat -159px 0;
 				position: absolute;
 				color: transparent;
 				right: 0;
@@ -26,7 +26,7 @@
 				}
 			}
 			button[data-controls="prev"] {
-				background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
+				background: transparent url("../images/sprite.png") no-repeat -190px 0;
 				position: absolute;
 				color: transparent;
 				left: 0;
@@ -56,7 +56,7 @@
 }
 .field--name-field-os2web-spotbox-heading h3::after {
 	content: "";
-	background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -112px 0;
+	background: transparent url("../images/sprite.png") no-repeat -112px 0;
 	display: block;
 	position: absolute;
 	top: 50%;

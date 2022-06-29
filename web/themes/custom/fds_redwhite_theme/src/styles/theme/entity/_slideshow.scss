@@ -13,7 +13,7 @@
 	}
 	.tns-controls {
 		button[data-controls="prev"] {
-			background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -190px 0;
+			background: transparent url("../images/sprite.png") no-repeat -190px 0;
 			position: absolute;
 			color: transparent;
 			left: 0;
@@ -30,7 +30,7 @@
 			}
 		}
 		button[data-controls="next"] {
-			background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -159px 0;
+			background: transparent url("../images/sprite.png") no-repeat -159px 0;
 			position: absolute;
 			color: transparent;
 			right: 0;

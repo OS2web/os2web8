@@ -128,7 +128,7 @@ $sidenav-list-dot-spacing: 22px;
 								label {
 									color: $color-primary;
 									&::after {
-										background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -136px 0;
+										background: transparent url("../images/sprite.png") no-repeat -136px 0;
 									}
 								}
 							}
@@ -232,7 +232,7 @@ $sidenav-list-dot-spacing: 22px;
 					position: absolute;
 					display: block;
 					top: 10px;
-					background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -137px -23px;
+					background: transparent url("../images/sprite.png") no-repeat -137px -23px;
 				}
 			}
 		}
@@ -302,7 +302,7 @@ $sidenav-list-dot-spacing: 22px;
       display: block;
       &::before {
         content: "";
-        background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+        background: transparent url("../images/sprite.png") no-repeat 0 -48px;
         display: block;
         position: absolute;
         top: 2px;
@@ -343,7 +343,7 @@ $sidenav-list-dot-spacing: 22px;
 	height: 24px;
 	position: relative;
 	top: 5px;
-	background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -120px -70px;
+	background: transparent url("../images/sprite.png") no-repeat -120px -70px;
 }
 .sub-link-div {
 	float: right;
