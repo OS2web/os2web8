@@ -28,7 +28,7 @@
             {% if menu_link['children']|length %}
               <div class="temaer">
                 <p>
-                  Hovedkatagori: <a href="{{ menu_link['url'] }}">{{ menu_link.title }} </a>
+                  <strong><a href="{{ menu_link['url'] }}">{{ menu_link.title }} </a></strong>
                 </p>
               </div>
               <ul class="row">
@@ -76,7 +76,7 @@
                     <div class="temaer">
                       <a href="{{ menu_link.url }}">
                         <p>
-                          Hovedkatagori: <a href="{{ menu_link['url'] }}">{{ menu_link.title }} </a>
+                         <strong> <a href="{{ menu_link['url'] }}">{{ menu_link.title }} </a></strong>
                         </p>
                       </a>
                     </div>
