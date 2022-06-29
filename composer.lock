@@ -13496,12 +13496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu.git",
-                "reference": "1d580882003bf77e8e6533e8949c91c1dd9ee369"
+                "reference": "546719439219c2a895f7f6d9b35d8ce7547409d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/1d580882003bf77e8e6533e8949c91c1dd9ee369",
-                "reference": "1d580882003bf77e8e6533e8949c91c1dd9ee369",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/546719439219c2a895f7f6d9b35d8ce7547409d6",
+                "reference": "546719439219c2a895f7f6d9b35d8ce7547409d6",
                 "shasum": ""
             },
             "require": {
@@ -13519,7 +13519,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/issues",
                 "source": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/tree/master"
             },
-            "time": "2021-11-16T12:43:42+00:00"
+            "time": "2022-06-29T09:26:58+00:00"
         },
         {
             "name": "os2web/os2web_meetings_sbsys",
