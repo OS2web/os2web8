@@ -12,9 +12,9 @@ styles:
 javascripts:
   js:
     dist/javascripts/app.js: {}
-    dist/javascripts/modernizr.js: {}
+    # dist/javascripts/modernizr.js: {}
     js/extra-js.js: {}
   dependencies:
     - core/drupal
     - core/jquery
-    - core/modernizr
+    # - core/modernizr
