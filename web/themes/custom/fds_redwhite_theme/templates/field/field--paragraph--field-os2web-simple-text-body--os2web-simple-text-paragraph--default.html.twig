@@ -52,7 +52,6 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
@@ -62,7 +61,11 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div role="region" aria-label="{{ 'Read more'| t }}" {{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+      <div role="region" aria-label="{{ 'Read more'| t }}" {{ attributes.addClass(classes, 'field__item') }}>
+        <div class="news">
+          {{ item.content }}
+        </div>
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}
