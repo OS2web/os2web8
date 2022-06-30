@@ -386,6 +386,18 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
   padding-bottom: 30px;
   border-bottom: 20px solid var(--light-gray1);
 }
+.news-col-1 {
+  padding-bottom: 30px;
+  border-bottom: 20px solid var(--light-gray1);
+}
+@media screen and (min-width: 768px) {
+  .news-col-1 {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   padding-bottom: 0;
   border-bottom: none;
