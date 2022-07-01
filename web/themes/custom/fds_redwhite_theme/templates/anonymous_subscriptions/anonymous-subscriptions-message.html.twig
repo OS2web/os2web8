@@ -69,6 +69,11 @@
               </td>
             </tr>
             <tr>
+              <td style="padding:10px;text-align:right;padding-right:24px;">
+                {{ 'the'|trans }} {{ "now"|date('U')|format_date("custom", "j. F Y") }}
+              </td>
+            </tr>
+            <tr>
               <td style="padding:10px;text-align:left;">
                 {{ message|raw }}
                 {% if link %}
