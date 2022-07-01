@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ff80d7a05e591cf8228b3f775bbb4fe",
+    "content-hash": "4736a8daa23958bd0a34b380cb09a454",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5547,6 +5547,50 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/file_management",
                 "issues": "https://www.drupal.org/project/issues/file_management"
+            }
+        },
+        {
+            "name": "drupal/form_options_attributes",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/form_options_attributes.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/form_options_attributes-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "b2064d2a3369d9c89e5a8acaf13ac7987b75c354"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1591035322",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "zengenuity",
+                    "homepage": "https://www.drupal.org/user/326925"
+                }
+            ],
+            "description": "Allows form options for select, checkboxes, and radio elements to have individual attributes.",
+            "homepage": "https://www.drupal.org/project/form_options_attributes",
+            "support": {
+                "source": "https://git.drupalcode.org/project/form_options_attributes"
             }
         },
         {
@@ -13238,12 +13282,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "10d90e78743062249ecba70f93b3146230f34917"
+                "reference": "8ffe29785e4dce5e3cbfec159fa645d33c575c23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/10d90e78743062249ecba70f93b3146230f34917",
-                "reference": "10d90e78743062249ecba70f93b3146230f34917",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/8ffe29785e4dce5e3cbfec159fa645d33c575c23",
+                "reference": "8ffe29785e4dce5e3cbfec159fa645d33c575c23",
                 "shasum": ""
             },
             "require": {
@@ -13260,7 +13304,7 @@
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
                 "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2022-05-30T11:36:44+00:00"
+            "time": "2022-07-01T12:07:34+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
@@ -13496,12 +13540,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu.git",
-                "reference": "546719439219c2a895f7f6d9b35d8ce7547409d6"
+                "reference": "68f721fb0957b5ed1e847982abeb8d68e4ab2402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/546719439219c2a895f7f6d9b35d8ce7547409d6",
-                "reference": "546719439219c2a895f7f6d9b35d8ce7547409d6",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/68f721fb0957b5ed1e847982abeb8d68e4ab2402",
+                "reference": "68f721fb0957b5ed1e847982abeb8d68e4ab2402",
                 "shasum": ""
             },
             "require": {
@@ -13519,7 +13563,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/issues",
                 "source": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/tree/master"
             },
-            "time": "2022-06-29T09:26:58+00:00"
+            "time": "2022-07-01T09:22:11+00:00"
         },
         {
             "name": "os2web/os2web_meetings_sbsys",
