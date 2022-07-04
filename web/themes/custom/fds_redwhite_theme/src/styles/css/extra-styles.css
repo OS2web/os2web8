@@ -766,7 +766,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a h3,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3 {
   margin: 0;
-  font-size: inherit;
+  font-size: inherit!important;
   color: var(--primary);
   font-family: "Museo 500", sans-serif;
   font-weight: 500;
