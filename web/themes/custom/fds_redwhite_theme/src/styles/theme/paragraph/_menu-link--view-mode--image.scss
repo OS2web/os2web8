@@ -186,6 +186,17 @@ body.path-frontpage {
   z-index: 20;
   left: 50%;
   transform: translate(-50%, 0);
+  &::before {
+	bottom: 5px;
+	left: 50%;
+	content: "";
+	position: absolute;
+	width: 100vw;
+	height: 15px;
+	transform: translateX(-50%);
+	background-color: $color-light-gray1;
+	z-index: -1;
+  }
   .rk_cover_arrow_button {
     width: 43px;
     height: 43px;
