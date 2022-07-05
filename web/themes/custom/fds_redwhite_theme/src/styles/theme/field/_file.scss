@@ -27,19 +27,15 @@
 }
 
 .file {
-
-
   display: block;
   box-shadow: none;
   margin-bottom: 4px;
   background-color: #fafafa;
   padding: 30px;
   border: 1px solid var(--light-gray2);
-
   margin-bottom: 15px;
   padding-left: 0 !important; // Reset.
   background-image: none !important;
-
   box-shadow: $box-shadow;
   a {
     position: relative;
