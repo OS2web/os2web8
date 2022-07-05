@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce0a714528bbe526f9344585ee6644a6",
+    "content-hash": "ff3c92d6ec188d8e2fd1d40faa1dfa85",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -13765,12 +13765,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "4978212b76311cb869d793b7f1b11bf5a61eef64"
+                "reference": "e7c2f24f5684169987346372011ede033edff3e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/4978212b76311cb869d793b7f1b11bf5a61eef64",
-                "reference": "4978212b76311cb869d793b7f1b11bf5a61eef64",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/e7c2f24f5684169987346372011ede033edff3e9",
+                "reference": "e7c2f24f5684169987346372011ede033edff3e9",
                 "shasum": ""
             },
             "require": {
@@ -13796,9 +13796,9 @@
             "description": "Page builder set for os2web",
             "support": {
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
-                "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
+                "source": "https://github.com/OS2web/os2web_pagebuilder/tree/develop"
             },
-            "time": "2022-06-14T08:54:21+00:00"
+            "time": "2022-07-05T14:38:52+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
