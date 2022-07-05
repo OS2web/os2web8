@@ -9,7 +9,8 @@
     "src/javascripts/news.js"
   ],
   "styles": [
-    "src/styles/stylesheet.scss"
+    "src/styles/stylesheet.scss",
+    "src/styles/css/extra-styles.css"
   ],
   "fonts": [
     "node_modules/font-awesome/fonts/*",

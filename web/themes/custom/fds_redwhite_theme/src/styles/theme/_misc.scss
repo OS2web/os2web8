@@ -143,6 +143,10 @@ body .page-container {
   background-color: $color-blue-001 !important;
 }
 
+
+.node--unpublished {
+  background-color: transparent;
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
@@ -164,10 +168,6 @@ body .page-container {
 
   .layout-sidebar-right {
     padding-top: 0;
-
-    .box {
-      min-height: 238px; // Same height as primary image.
-    }
   }
 }
 

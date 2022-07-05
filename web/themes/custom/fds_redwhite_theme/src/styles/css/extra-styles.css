@@ -56,6 +56,7 @@
 .field--name-field-os2web-page-intro + .field,
 .field--type-text-with-summary {
   margin-top: 2.8rem;
+  padding-top: 0;
 }
 .entity-default--os2web-simple-text-paragraph {
   margin: 0 0 30px;
@@ -70,6 +71,7 @@
   background-color: var(--primary);
   border-color: var(--gray1);
 }
+
 
 
 .accordion-content:not(.field--widget-text-textarea) ul li,
@@ -120,14 +122,7 @@
 .field--name-field-media-file .field__item {
   padding: 0;
 }
-.file {
-  display: block;
-  box-shadow: none;
-  margin-bottom: 4px;
-  background-color: #fafafa;
-  padding: 30px;
-  border: 1px solid var(--light-gray2);
-}
+
 
 
 
@@ -175,7 +170,7 @@ div.field--name-field-os2web-page-description div.field__item span.file a[href$=
   width: 19px;
   height: 19px;
   margin-right: 5px;
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+  background: transparent url("../images/sprite.png") no-repeat 0 -48px;
 }
 
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".ppt"]:hover::before,
@@ -207,7 +202,7 @@ div.field--name-field-os2web-page-description div.field__item span.file a[href$=
 /* div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:hover::before,
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:focus::before  */
 {
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
+  background: transparent url("../images/sprite.png") no-repeat -19px -48px;
   color: blue;
 }
 
@@ -257,7 +252,7 @@ a[href$=".odt"]::before {
   width: 19px;
   height: 19px;
   margin-right: 5px;
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+  background: transparent url("../images/sprite.png") no-repeat 0 -48px;
 }
 a[href$=".pdf"]:hover::before, a[href$=".pdf"]:focus::before,
 a[href$=".ppt"]:hover::before, a[href$=".ppt"]:focus::before,
@@ -273,7 +268,7 @@ a[href$=".xlsb"]:hover::before, a[href$=".xlsb"]:focus::before,
 a[href$=".jpg"]:hover::before, a[href$=".jpg"]:focus::before,
 a[href$=".jpeg"]:hover::before, a[href$=".jpeg"]:focus::before,
 a[href$=".odt"]:hover::before, a[href$=".odt"]:focus::before {
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
+  background: transparent url("../images/sprite.png") no-repeat -19px -48px;
 }
 .file a::before,
 .file a::after {
@@ -355,7 +350,7 @@ body.path-frontpage .region-featured-bottom-first {
   height: 16px;
   float: right;
   width: 6px;
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -6px -152px;
+  background: transparent url("../images/sprite.png") no-repeat -6px -152px;
   margin-left: 5px;
 }
 .field--type-link .readmore a:after,
@@ -375,7 +370,7 @@ body.path-frontpage .region-featured-bottom-first {
 @media screen and (max-width: 767px) {
   .news::after {
     content: "";
-    background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -112px 0;
+    background: transparent url("../images/sprite.png") no-repeat -112px 0;
     display: block;
     position: absolute;
     top: -10px;
@@ -391,6 +386,18 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
   padding-bottom: 30px;
   border-bottom: 20px solid var(--light-gray1);
 }
+.news-col-1 {
+  padding-bottom: 30px;
+  border-bottom: 20px solid var(--light-gray1);
+}
+@media screen and (min-width: 768px) {
+  .news-col-1 {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   padding-bottom: 0;
   border-bottom: none;
@@ -445,7 +452,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   top: 0;
   width: 100%;
   height: 100%;
-  text-indent: -9999px;
+  /* text-indent: -9999px; */
   padding: 0;
 }
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .news {
@@ -459,7 +466,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 .news.open .rea
 }
 body.path-frontpage .field--name-field-os2web-column-1 .news::after {
   content: "";
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -112px 0;
+  background: transparent url("../images/sprite.png") no-repeat -112px 0;
   display: block;
   position: absolute;
   top: 50%;
@@ -524,7 +531,8 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   line-height: 1.4;
 }
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-intro {
-  padding-bottom: 40px;
+  padding-bottom: 0;
+  line-height: 3.2rem;
 }
 .entity-full--os2web-news .node__content .field--name-field-os2web-news-primaryimage {
   margin-bottom: 30px;
@@ -730,7 +738,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a::after {
   content: "";
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -47px;
+  background: transparent url("../images/sprite.png") no-repeat 0 -47px;
   display: block;
   position: absolute;
   top: 50%;
@@ -752,7 +760,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a.spotbox--button.spotbox:focus::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:hover::after,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a:focus::after {
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -47px;
+  background: transparent url("../images/sprite.png") no-repeat -19px -47px;
 }
 #block-selvbetjening .field.field--name-field-selfbetjening-ref .field__item a h3,
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a h3,
@@ -852,7 +860,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   text-indent: -999em;
   width: 20px;
   right: 30px;
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -233px 0px;
+  background: transparent url("../images/sprite.png") no-repeat -233px 0px;
 }
 .accordion li .accordion-button[aria-expanded="true"]:after,
 .accordion li .tabnav > button[aria-expanded="true"]:after {
@@ -928,11 +936,11 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 /*PARAGRAFFER/CONTENT*/
 .spotbox--button.spotbox {
   padding: 20px 50px 20px 15px;
-  background: var(--primary) url("/themes/custom/fds_redwhite_theme/dist/images/hb-right-arrow.svg") no-repeat right center !important;
+  background: var(--primary) url("../images/hb-right-arrow.svg") no-repeat right center !important;
 }
 .spotbox--button.spotbox:hover,
 .spotbox--button.spotbox:focus {
-  background: var(--secondary) url("/themes/custom/fds_redwhite_theme/dist/images/hb-right-arrow_fat.svg") no-repeat right center !important;
+  background: var(--secondary) url("../images/hb-right-arrow_fat.svg") no-repeat right center !important;
 }
 .spotbox--button.spotbox .spotbox__content {
   padding: 0;
@@ -1222,7 +1230,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .field--name-field-os2web-bdk-article .spotbox--button.spotbox .spotbox__content h3::before {
   content: "";
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat 0 -48px;
+  background: transparent url("../images/sprite.png") no-repeat 0 -48px;
   display: inline-block;
   position: relative;
   top: 3px;
@@ -1279,7 +1287,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 
 .entity-default--os2web-borgerdk-selfser-ref a:hover h3::before,
 .entity-default--os2web-borgerdk-selfser-ref a:focus h3::before {
-  background: transparent url("/themes/custom/fds_redwhite_theme/dist/images/sprite.png") no-repeat -19px -48px;
+  background: transparent url("../images/sprite.png") no-repeat -19px -48px;
 }
 .entity-default--os2web-borgerdk-selfser-ref a:hover h3,
 .entity-default--os2web-borgerdk-selfser-ref a:focus h3 {

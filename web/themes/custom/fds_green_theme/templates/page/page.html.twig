@@ -52,7 +52,7 @@
 					<!-- Begin - below -->
 					<a class="custom-header-home-link" href="{{ url('<front>') }}">{{ "MIN TRIVSEL" | t }}</a>
 					<!-- End - below -->
-
+          <a class="custom-header-home-link" href="https://my.matterport.com/show/?m=jPALtwPcGhH" target="_blank">{{ "DEN VIRTUELLE LEJLIGHED" | t }}</a>
 					<!-- Begin - searchtoggle -->
 					<button class="custom-header__button custom-header__button--toggle-search js-toggle-searchy" aria-label="{{ 'Åbn søgning' | t }}">
 						<span class="searchy-label">Søg</span>
@@ -138,12 +138,12 @@
 			<div class="row">
 				{% set has_sidebar_first = page.sidebar_first|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
 				{% set has_sidebar_second = page.sidebar_second|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
-        
+
 				{% if has_sidebar_first %}
 				{% set sidebar_first_classes = [
 					has_sidebar_first and has_sidebar_second ? 'col-12 col-lg-3',
 					has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-lg-3 d-print-none',
-				] %} 
+				] %}
 					<aside {{ attributes.addClass(sidebar_first_classes) }}>
 					{# <aside class="col-12 col-md-12 col-lg-4 col-xl-3"> #}
 						<div class="layout-sidebar-left">
@@ -160,7 +160,7 @@
 					has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-lg-9',
 					has_sidebar_second and has_sidebar_first is empty ? 'order-2 order-lg-1 col-12 col-lg-9 ',
 					has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12'
-				] %} 
+				] %}
 					<main {{ content_attributes.addClass(content_classes) }}>
 					{# <main {{ content_attributes.addClass('order-2 order-md-1 col-12 col-md-8 col-lg-6 col-xl-6') }}> #}
 						{{ page.content }}
@@ -179,7 +179,7 @@
 							<div class="box">
 								<div class="box__body">
 									{{ page.sidebar_second }}
-									
+
 								</div>
 							</div>
 						</div>
@@ -203,10 +203,4 @@
 	// Add internet explorer class to <body>
 (function () {
 var ua = window.navigator.userAgent;
-var isIE = /MSIE|Trident/.test(ua);
-
-if (isIE) {
-document.documentElement.classList.add('ie');
-}
-})();
-</script>
+var isI

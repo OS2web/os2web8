@@ -27,7 +27,9 @@
             <ul class="m-0 mw-100">
             {% if menu_link['children']|length %}
               <div class="temaer">
-                  <p>Eksempler på temaer:</p>
+                <p>
+                  <strong><a href="{{ menu_link['url'] }}">{{ menu_link.title }} </a></strong>
+                </p>
               </div>
               <ul class="row">
                 {% for node_link in menu_link['children'] %}
@@ -72,7 +74,11 @@
                 <ul class="m-0 mw-100">
                   {% if menu_link['children']|length %}
                     <div class="temaer">
-                        <p>Eksempler på temaer:</p>
+                      <a href="{{ menu_link.url }}">
+                        <p>
+                         <strong> <a href="{{ menu_link['url'] }}">{{ menu_link.title }} </a></strong>
+                        </p>
+                      </a>
                     </div>
                       <ul class="row">
                         {% for node_link in menu_link['children'] %}

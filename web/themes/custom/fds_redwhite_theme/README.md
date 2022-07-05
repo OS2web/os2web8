@@ -1,18 +1,21 @@
 
 ### Prerequisites
 
-Before being able to run this package you need to have node installed on your machine.
+<!-- Before being able to run this package you need to have node installed on your machine.
 
 After node is installed you need a global package manager, as well. We use Yarn instead of NPM as it is way faster due to the way it utilizes local caching.
 
-To install Yarn, follow the guide on: https://yarnpkg.com/en/docs/install#mac-stable 
+To install Yarn, follow the guide on: https://yarnpkg.com/en/docs/install#mac-stable  -->
+
+We use npm
+node version 12.19.0
 
 ### First time use
 When you initialize this project, you need to install all required node dependencies (listed inside package.json). 
 
 To install all node dependencies run:
 
-`yarn install`
+`npm install`
 
 ### Compile and build CSS and javascript
 
@@ -20,7 +23,7 @@ You can see which options this project has inside package.json's "scripts: { opt
 
 To compile CSS and javascript, run:
 
-`yarn dev`
+`npm run watch`
 
 ### Hot reload (live reload)
 
