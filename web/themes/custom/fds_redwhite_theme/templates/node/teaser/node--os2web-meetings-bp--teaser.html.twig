@@ -12,7 +12,7 @@
 %}
 
 <button class="accordion-button" aria-expanded="false" aria-controls="{{ uniqueId }}">
-  {{ label }}
+  {{ label }} {% if node.field_os2web_m_bp_closed.value %} ({{ 'Closed' | t }}) {% endif %}
 </button>
 
 <div id="{{ uniqueId }}" aria-hidden="true" {{ attributes.addClass(classes) }}>
