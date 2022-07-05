@@ -76,7 +76,8 @@ header.menu-toggler.open {
     padding: 0;
     padding-block: 82px;
     top: -30px;
-    left: -236px!important;
+    left: unset!important;
+    right: -17px !important;
     z-index: 9;
     background-color: $color-primary;
     border: 0;
