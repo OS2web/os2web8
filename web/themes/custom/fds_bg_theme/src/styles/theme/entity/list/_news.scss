@@ -31,9 +31,6 @@ a.entity-list--os2web-news {
   margin-top: $grid-gutter-width / 2;
   margin-bottom: $grid-gutter-width / 2;
 
-  box-shadow: $box-shadow;
-  background-color: #fff;
-
   .field--name-field-os2web-news-heading {
 
     h1, h2, h3, h4, h5, h6 {
@@ -74,6 +71,9 @@ a.entity-list--os2web-news {
   }
 }
 
+#block-views-block-os2web-news-block-recent-news > h4 {
+  font-size: 2.6rem;
+}
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -99,6 +99,7 @@ a.entity-list--os2web-news {
     .entity-list__image {
       flex-basis: 200px;
       flex-shrink: 0;
+      padding: 14px 0;
 
       img {
         width: 100%;
