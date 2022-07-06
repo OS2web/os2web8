@@ -766,7 +766,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 #block-selvbetjening--2 .field.field--name-field-selfbetjening-ref .field__item a h3,
 .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field .field__item a h3 {
   margin: 0;
-  font-size: inherit;
+  font-size: inherit!important;
   color: var(--primary);
   font-family: "Museo 500", sans-serif;
   font-weight: 500;
@@ -1147,6 +1147,9 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   margin-bottom: 40px;
   font-family: 'Museo 500';
   font-weight: 500;
+}
+a .field--type-string h3.h4 {
+  font-size: 1.8rem!important;
 }
 .node__content .field.field--name-field-os2web-accordion-item-head.field__item h3 {
   font-size: 1.6rem;

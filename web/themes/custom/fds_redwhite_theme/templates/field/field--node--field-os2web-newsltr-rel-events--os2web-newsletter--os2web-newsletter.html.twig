@@ -77,9 +77,11 @@
           <tr>
         {% endif %}
 
-        <td
+        <td class="newsletter-event-teaser"
           style="vertical-align:top; width:333px; padding: 30px 0 50px 0; border-top:1px solid #333; border-bottom:1px solid #333;">
-          <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+          <div{{ item.attributes.addClass('field__item') }}>
+            {{ item.content }}
+          </div>
         </td>
 
         {# Adding after every first element #}
@@ -94,7 +96,7 @@
 
         {# Fixing display is we only have 1 element #}
         {% if loop.length == 1 %}
-          <td
+          <td class="newsletter-event-teaser"
             style="vertical-align:top; width:333px; padding: 30px 0 50px 0; border-top:1px solid #333; border-bottom:1px solid #333;">
           </td>
         {% endif %}
@@ -110,3 +112,69 @@
     </table>
   </td>
 </tr>
+
+
+<style>
+.newsletter-event-teaser article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+}
+.newsletter-event-teaser article a.fullhref {
+      position: absolute;
+      inset: 0;
+}
+.newsletter-event-teaser article a.fullhref span {
+      display: none;
+}
+.newsletter-event-teaser article > div{
+      display: flex;
+      flex-direction: column;
+}
+.newsletter-event-teaser article > div p{
+      margin: 0;
+}
+.newsletter-event-teaser article time {
+      order: 2;
+      margin: 16px 0;
+      position: relative;
+}
+.newsletter-event-teaser article time {
+      order: 2;
+      margin: 16px 0;
+      position: relative;
+      padding-left: 30px;
+}
+.newsletter-event-teaser article time::before {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-top: 4px solid;
+    border-radius: 3px;
+    left: 0;
+    bottom: 2px;
+}
+.newsletter-event-teaser article time::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    background: currentColor;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+    left: 4px;
+    bottom: 5px;
+}
+
+.newsletter-event-teaser article time br {
+      display: none;
+}
+.newsletter-event-teaser article .field--type-text-with-summary p {
+      line-height: 1.3;
+}
+</style>

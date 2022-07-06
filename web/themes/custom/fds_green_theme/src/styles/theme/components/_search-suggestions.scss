@@ -32,11 +32,27 @@
   border-bottom-right-radius: $big-border-radius;
   border: 1px solid $color-light-green-001!important;
   border-top: none!important;
+
+
+
   .ui-menu-item {
     padding-left: 0;
 
     &:before {
       display: none;
+    }
+    &:first-child {
+      position: relative;
+        &::after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 2px);
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-primary;
+      }
     }
     &:last-child {
       border-bottom-left-radius: $big-border-radius;
