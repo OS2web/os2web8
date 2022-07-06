@@ -8,7 +8,11 @@ After node is installed you need a global package manager, as well. We use Yarn 
 To install Yarn, follow the guide on: https://yarnpkg.com/en/docs/install#mac-stable  -->
 
 We use npm
-node version 12.19.0
+Node version on ringsted v14.19.0
+<!-- cannot update higher because of incompatibility 
+
+if we want to update >= Node v15 then we should update node sass, and this forces us to update font-awesome and dkfds packages. 
+Updating those packages forces us update whole website.  -->
 
 ### First time use
 When you initialize this project, you need to install all required node dependencies (listed inside package.json). 
