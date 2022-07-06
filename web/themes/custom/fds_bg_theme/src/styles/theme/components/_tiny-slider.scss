@@ -24,6 +24,10 @@
   position: relative;
 
   margin-bottom: 50px;
+
+  #block-fds-bg-theme-paragraph-banner & {
+    margin-bottom: 0;
+  }
 }
 
 .tns-nav {
@@ -34,6 +38,11 @@
   right: 0;
 
   margin-bottom: -40px;
+
+  #block-fds-bg-theme-paragraph-banner & {
+    margin-bottom: 20px;
+    z-index: 101;
+  }
 
   button {
     width: 14px;
@@ -87,6 +96,10 @@
     &[data-controls="prev"] {
       left: -15px;
 
+      #block-fds-bg-theme-paragraph-banner & {
+        left: 5px;
+      }
+
       &:before {
         content: "\f104";
       }
@@ -94,6 +107,10 @@
 
     &[data-controls="next"] {
       right: -15px;
+
+      #block-fds-bg-theme-paragraph-banner & {
+        right: 5px;
+      }
 
       &:before {
         content: "\f105";
