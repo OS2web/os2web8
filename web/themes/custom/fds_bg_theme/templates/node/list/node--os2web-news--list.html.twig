@@ -15,12 +15,10 @@
 
   <div class="entity-{{ view_mode|clean_class }}__body">
     {{ content.field_os2web_news_heading }}
-
-    {{ content.field_os2web_news_article_date }}
-
     {% set text = content.field_os2web_news_description | render %}
     <div class="field field--type-body">
       {{ text | striptags }}
     </div>
+    {{ content.field_os2web_news_article_date }}
   </div>
 </a>
