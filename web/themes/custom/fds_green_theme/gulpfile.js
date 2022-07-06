@@ -1,147 +1,90 @@
-// READ README!!!
-// READ README!!!
-
 // Configurations
 let compileConfig = {
     settings: require('./src/compile-settings.json')
-};
-let gulpConfig = {
+  };
+  
+  let gulpConfig = {
     settings: require('./src/gulp-settings.json')
-};
-
-// Output the error to the terminal instead of dying out
-function swallowError(error) {
-
-    // If you want details of the error in the console
-    console.log(error.toString());
-
-    this.emit('end');
-}
-
-// Load plugins
-const gulp = require('gulp');
-const styles = require('gulp-sass');
-const del = require('del');
-const modernizr = require('gulp-modernizr');
-const autoprefixer = require('gulp-autoprefixer');
-const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
-const sourcemaps = require('gulp-sourcemaps');
-const runSequence = require('run-sequence');
-
-// Builders
-gulp.task('build:modernizr', (callback) => {
-    runSequence(['build:javascripts', 'build:styles'], 'clean:modernizr', 'process:modernizr', callback);
-});
-gulp.task('build:styles', (callback) => {
-    runSequence('clean:styles', 'process:styles', callback);
-});
-gulp.task('build:javascripts', (callback) => {
-    runSequence('clean:javascripts', 'process:javascripts', callback);
-});
-gulp.task('build:fonts', (callback) => {
-    runSequence('clean:fonts', 'process:fonts', callback);
-});
-
-// Processors
-gulp.task('process:modernizr', () => {
-    return gulp.src(['dist/stylesheets/*.css', 'dist/javascripts/*.js', '!dist/javascripts/modernizr.js'])
-        .pipe(modernizr({
-            'cache': true,
-            'uglify': true,
-            'options': [
-                'setClasses',
-                'addTest',
-                'html5printshiv',
-                'testProp',
-                'fnBind'
-            ],
-            excludeTests: [
-                'hidden'
-            ]
-        }))
-        .pipe(gulp.dest('dist/javascripts'));
-});
-gulp.task('process:styles', () => {
-    return gulp.src(compileConfig.settings.styles)
-        .pipe(sourcemaps.init())
-        .pipe(styles().on('error', swallowError))
-        .pipe(autoprefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
-        }))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist/stylesheets'))
-        .pipe(browserSync.stream({match: '**/*.css'}));
-});
-gulp.task('process:javascripts', () => {
-    return gulp.src(compileConfig.settings.javascripts)
-        .on('error', swallowError)
-        .pipe(sourcemaps.init())
-        .pipe(concat('app.js'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist/javascripts'));
-});
-gulp.task('process:fonts', () => {
-    return gulp.src(compileConfig.settings.fonts)
-        .pipe(gulp.dest('dist/fonts'));
-});
-
-// Cleaners
-gulp.task('clean:modernizr', () => {
-    return del(['dist/javascripts/modernizr.js']);
-});
-gulp.task('clean:styles', () => {
-    return del(['dist/stylesheets']);
-});
-gulp.task('clean:javascripts', () => {
-    return del(['dist/javascripts/*.js', '!dist/javascripts/modernizr.js']);
-});
-gulp.task('clean:fonts', () => {
-    return del(['dist/fonts']);
-});
-
-// Reloaders
-gulp.task('reload:javascripts', () => {
-    return browserSync.reload();
-});
-gulp.task('reload:fonts', () => {
-    return browserSync.reload();
-});
-gulp.task('reload:template', () => {
-    return browserSync.reload();
-});
-
-// Watchers
-gulp.task('watcher:styles', (callback) => {
-    runSequence('build:styles', callback);
-});
-gulp.task('watcher:javascripts', (callback) => {
-    runSequence('build:javascripts', 'reload:javascripts', callback);
-});
-gulp.task('watcher:fonts', (callback) => {
-    runSequence('build:fonts', 'reload:fonts', callback);
-});
-gulp.task('watcher:templates', (callback) => {
-    runSequence('reload:template', callback);
-});
-
-// Tasks
-gulp.task('default', (callback) => {
-    runSequence('build', 'watch', callback);
-});
-
-gulp.task('watch', ['build'], () => {
-    gulp.watch('src/styles/**/*.scss', ['watcher:styles']);
-    gulp.watch('src/javascripts/**/*.js', ['watcher:javascripts']);
-    gulp.watch('src/fonts/**/*.+(eot|svg|ttf|woff|woff2)', ['watcher:fonts']);
-    gulp.watch('**/*.+(twig|twig.html|tpl|tpl.php|html)', ['watcher:templates']);
-
-    // Browser sync
-    browserSync.init(['dist/stylesheets/*.css', 'dist/javascripts/*.js'], {
-        proxy: gulpConfig.settings.options.proxy
+  };
+  
+  
+  const { src, dest, series, watch } = require('gulp');
+  const sass = require('gulp-sass');
+  const csso = require('gulp-csso');
+  const include = require('gulp-file-include');
+  const htmlmin = require('gulp-htmlmin');
+  const del = require('del');
+  const concat = require('gulp-concat');
+  const autoprefixer = require('gulp-autoprefixer');
+  const sync = require('browser-sync').create();
+  
+  
+  
+  function html() {
+    return src('src/**.html')
+      .pipe(
+        include({
+          prefix: '@@',
+        })
+      )
+      .pipe(
+        htmlmin({
+          collapseWhitespace: true,
+        })
+      )
+      .pipe(dest('dist'));
+  }
+  
+  function scss() {
+    return src(compileConfig.settings.styles)
+      .pipe(sass())
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ['last 2 versions'],
+        })
+      )
+      .pipe(csso())
+      .pipe(concat('stylesheet.css'))
+      .pipe(dest('dist/stylesheets'));
+  }
+  
+  
+  
+  
+  function fonts() {
+    return src(compileConfig.settings.fonts).pipe(dest('dist/fonts'));
+  }
+  function img() {
+    return src('src/images/**/*').pipe(dest('dist/images'));
+  }
+  
+  function js() {
+    return src(compileConfig.settings.javascripts)
+      .pipe(include())
+      .pipe(concat('app.js'))
+      .pipe(dest('dist/javascripts'))
+      .pipe(sync.stream());
+  }
+  
+  function clear() {
+    return del('dist');
+  }
+  
+  
+  
+  function serve() {
+    sync.init({
+      proxy: gulpConfig.settings.options.proxy
     });
-});
-gulp.task('build', (callback) => {
-    runSequence(['build:modernizr', 'build:fonts'], callback);
-});
+  
+    watch('**/*.+(twig|twig.html|tpl|tpl.php|html)', series(html)).on('change', sync.reload);
+    watch('src/styles/**/**.scss', series(scss)).on('change', sync.reload);
+    watch('src/images/**.**', series(img)).on('change', sync.reload);
+    watch('src/javascripts/**/*.js', series(js)).on('change', sync.reload);
+  }
+  
+  exports.build = series(clear, scss, html, js, img, fonts);
+  exports.serve = series(clear, scss, html, js, img, fonts, serve);
+  exports.clear = clear;
+  
+  

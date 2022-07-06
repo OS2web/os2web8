@@ -1,9 +1,11 @@
 ### READ BEFORE GULP start
-INSTALL node : v10.24.1
-npm: 6.14.12
 
+We use npm
+Node version v14.19.0
+<!-- cannot update higher because of incompatibility 
 
-
+if we want to update >= Node v15 then we should update node sass, and this forces us to update font-awesome and dkfds packages. 
+Updating those packages forces us update whole website.  -->
 
 ### Prerequisites
 
@@ -18,7 +20,7 @@ When you initialize this project, you need to install all required node dependen
 
 To install all node dependencies run:
 
-`yarn install`
+`npm install`
 
 ### Compile and build CSS and javascript
 
@@ -26,7 +28,7 @@ You can see which options this project has inside package.json's "scripts: { opt
 
 To compile CSS and javascript, run:
 
-`yarn dev`
+`npm run watch`
 
 ### Hot reload (live reload)
 
