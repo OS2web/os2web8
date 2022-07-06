@@ -210,6 +210,13 @@ function fds_redwhite_theme_preprocess_node(&$variables) {
       }
     }
   }
+  if ($node->getType() == 'os2web_meetings_bpa' && $variables['view_mode'] == 'teaser') {
+    $body = $variables['content']['body'][0]['#text'];
+    $body=str_replace(array("\n", "\t"), '', $body);
+    $body = preg_replace("/<((?:style)).*>.*<\/style>/im","",$body);
+    $variables['content']['body'][0]['#text'] = $body;
+
+  }
 }
 
 /**
@@ -315,3 +322,6 @@ function fds_redwhite_theme_preprocess_file_link(array &$variables) {
     $variables['link']['#title'] = $media->label();
   }
 }
+
+
+
