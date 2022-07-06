@@ -110,6 +110,9 @@ header.menu-toggler.open {
             background-color: transparent;
             box-shadow: none;
             position: relative;
+            // min-height: 68px; 
+            display: flex;
+            flex-direction: column;
             &:not(:first-child):before {
                 content: "";
                     height: 2px;
@@ -128,7 +131,10 @@ header.menu-toggler.open {
               border: 0;
               background-color: transparent;
               padding-inline: 26px 33px;
-              padding-block: 19px 16px;
+              padding-block: 10px 10px;
+              // padding-block: 0;
+              margin: auto 0;
+              min-height: 68px; 
               &:focus {
                 outline: 0;
               }
@@ -136,11 +142,15 @@ header.menu-toggler.open {
                 outline: 2px solid black;
               }
               &::after {
-                content: url("../images/down-arrow-white.svg");
+                content: '';
+                background-image: url("../images/down-arrow-white.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
                 position: absolute;
                 top: 50%;
                 right: 33px;
-                transform: translateY(-100%);
+                // transform: translateY(-100%);
                 height: 10px;
                 width: 17px;
               }
@@ -148,7 +158,7 @@ header.menu-toggler.open {
 
               &[aria-expanded="true"] {
                 &::after {
-                  transform: rotate(180deg) translateY(-100%);
+                  transform: rotate(180deg) translateY(100%);
                 }
               }
               .menu-level-1-link-wrap {
