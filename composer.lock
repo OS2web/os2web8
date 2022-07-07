@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff3c92d6ec188d8e2fd1d40faa1dfa85",
+    "content-hash": "f186696d46664125f51abe395d33a4c4",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/fds_base_theme.git",
-                "reference": "0bbc39c482e43b79b7f30c68cac4c9ddcbc2e600"
+                "reference": "989810dc98a2cfb26122e4d110156938d73c1a7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/fds_base_theme/zipball/0bbc39c482e43b79b7f30c68cac4c9ddcbc2e600",
-                "reference": "0bbc39c482e43b79b7f30c68cac4c9ddcbc2e600",
+                "url": "https://api.github.com/repos/bellcom/fds_base_theme/zipball/989810dc98a2cfb26122e4d110156938d73c1a7b",
+                "reference": "989810dc98a2cfb26122e4d110156938d73c1a7b",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -153,7 +153,7 @@
                 "source": "https://github.com/bellcom/fds_base_theme/tree/stable/drupal-8.x",
                 "issues": "https://github.com/bellcom/fds_base_theme/issues"
             },
-            "time": "2022-06-20T13:55:02+00:00"
+            "time": "2022-07-07T10:16:04+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -13765,12 +13765,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "8d4919ea0ad4159b2dbd05d188532c659d094439"
+                "reference": "4f56271251391ad1512641c73f027e456dfe8edd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/8d4919ea0ad4159b2dbd05d188532c659d094439",
-                "reference": "8d4919ea0ad4159b2dbd05d188532c659d094439",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/4f56271251391ad1512641c73f027e456dfe8edd",
+                "reference": "4f56271251391ad1512641c73f027e456dfe8edd",
                 "shasum": ""
             },
             "require": {
@@ -13798,7 +13798,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2022-07-05T17:11:46+00:00"
+            "time": "2022-07-07T10:12:18+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
@@ -25003,5 +25003,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
