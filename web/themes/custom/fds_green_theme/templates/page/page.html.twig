@@ -200,8 +200,13 @@
 </div>
 
 <script>
+  // Add internet explorer class to <body>
+  (function() {
+    var ua = window.navigator.userAgent;
+    var isIE = /MSIE|Trident/.test(ua);
 
-	// Add internet explorer class to <body>
-(function () {
-var ua = window.navigator.userAgent;
-var isI
+    if(isIE) {
+      document.documentElement.classList.add('ie');
+    }
+  })();
+</script>
