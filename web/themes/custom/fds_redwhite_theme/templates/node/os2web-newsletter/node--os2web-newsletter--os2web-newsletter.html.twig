@@ -1,8 +1,8 @@
 <tr>
   <td style="vertical-align:middle; padding-left:123px;">
   </td>
-  <td
-    style="font-size:15px; font-weight:bold; vertical-align:bottom; padding:0 123px 17px 0; text-align:right; color:#333; font-family:Arial;">
+  <td class="newsletter-table-date"
+    style="font-size:15px; font-weight:bold; vertical-align:bottom; text-align:right; color:#333; font-family:Arial;">
     {{ content.field_os2web_newsltr_date_text }}
   </td>
 </tr>
@@ -42,7 +42,15 @@
 </tr>
 {{ content.field_os2web_newsltr_rel_news }}
 {{ content.field_os2web_newsltr_rel_events }}
-
+<style>
+  
+  .newsletter-table-date {
+    padding:0 123px 17px 0
+  }
+  .newsletter-table-wrap .newsletter-table-date {
+    padding: 0 0 17px 0
+  }
+</style>
 
 
 
