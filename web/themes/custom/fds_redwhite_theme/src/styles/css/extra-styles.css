@@ -299,12 +299,12 @@ a[href$=".odt"]:hover::before, a[href$=".odt"]:focus::before {
 .view-os2web-meetings {
   margin-bottom: 30px;
 }
-.month--10 + .month--01, .month--10 + .month--02, .month--10 + .month--03, .month--10 + .month--04, .month--10 + .month--05, .month--10 + .month--06, .month--10 + .month--07, .month--10 + .month--08, .month--10 + .month--09, .month--10 + .month--11, .month--10 + .month--12 {
+/* .month--10 + .month--01, .month--10 + .month--02, .month--10 + .month--03, .month--10 + .month--04, .month--10 + .month--05, .month--10 + .month--06, .month--10 + .month--07, .month--10 + .month--08, .month--10 + .month--09, .month--10 + .month--11, .month--10 + .month--12 {
   margin-top: 10px;
 }
 .month--01 + .month--02, .month--01 + .month--03, .month--01 + .month--04, .month--01 + .month--05, .month--01 + .month--06, .month--01 + .month--07, .month--01 + .month--08, .month--01 + .month--09, .month--01 + .month--10, .month--01 + .month--11, .month--01 + .month--12 {
   margin-top: 10px;
-}
+} */
 a.entity-teaser--os2web-meetings-meeting:focus {
   outline-color: var(--black);
 }
