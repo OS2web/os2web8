@@ -13992,12 +13992,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_spotbox.git",
-                "reference": "afb2957852bdadb3014d7d967ca4a2c357cbf61a"
+                "reference": "3350da75ab6979fa40d05dd6fe15b969a91b67e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_spotbox/zipball/afb2957852bdadb3014d7d967ca4a2c357cbf61a",
-                "reference": "afb2957852bdadb3014d7d967ca4a2c357cbf61a",
+                "url": "https://api.github.com/repos/OS2web/os2web_spotbox/zipball/3350da75ab6979fa40d05dd6fe15b969a91b67e3",
+                "reference": "3350da75ab6979fa40d05dd6fe15b969a91b67e3",
                 "shasum": ""
             },
             "require": {
@@ -14020,7 +14020,7 @@
                 "issues": "https://github.com/OS2web/os2web_spotbox/issues",
                 "source": "https://github.com/OS2web/os2web_spotbox/tree/master"
             },
-            "time": "2022-07-07T13:12:39+00:00"
+            "time": "2022-07-08T09:18:27+00:00"
         },
         {
             "name": "palantirnet/drupal-rector",
