@@ -37,7 +37,7 @@ WORKDIR /opt/drupal
 # Loading composer dependencies and configuring project folders.
 RUN set -eux; \
 	export COMPOSER_HOME="$(mktemp -d)"; \
-	COMPOSER_MEMORY_LIMIT=-1 composer install; \
+	COMPOSER_MEMORY_LIMIT=-1 composer install --no-interaction; \
 	chown -R www-data:www-data web/sites web/modules web/themes; \
 	# delete composer cache.
 	rm -rf "$COMPOSER_HOME"
