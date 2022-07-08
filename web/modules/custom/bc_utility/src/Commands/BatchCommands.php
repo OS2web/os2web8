@@ -28,7 +28,7 @@ Class BatchCommands extends DrushCommands
     else
     {
       $lastdiff = strtotime("+1 month", strtotime($last_start));
-      $run = ($now === date('Y-m-01', $lastdiff));
+      $run = ($now !== date('Y-m-01', $lastdiff));
       // TODO or older that now + one month
     }
 
