@@ -80,6 +80,9 @@
 					.field--name-field-os2web-banner-image {
 						margin-top: 0;
 						width: 100px;
+						img {
+							display: block;
+						}
 					}
 				}
 				.menu-icon-wrapper {
@@ -123,6 +126,7 @@
 				padding: 10px;
 			}
 			.entry-text {
+				padding: 5px;
 				float: left;
 			}
 		}
@@ -141,16 +145,16 @@ body.path-frontpage {
 				.entry-graphic {
 					width: 120px;
 					aspect-ratio: auto 500 / 216;
-					&::after {
+					overflow: hidden;
 						background-image: url("/sites/default/files/2022-01/flyttil.jpeg");
-						width: 100%;
-						height: 100%;
-						margin-bottom: 8px;
 						display: block;
 						position: relative;
-						content: "";
-						background-size: cover;
-					}
+						background-size: 90%;
+						background-position: center;
+						background-repeat: no-repeat;
+						@include media-breakpoint-up(md) {
+							background-size: cover;
+						}
 				}
 				.entry-text {
 					margin-top: 2px;
@@ -160,16 +164,16 @@ body.path-frontpage {
 				.entry-graphic {
 					width: 120px;
 					aspect-ratio: auto 500 / 216;
-					&::after {
+					overflow: hidden;
 						background-image: url("/sites/default/files/2022-01/job_og_karriere_i_ringsted_kommune.jpeg");
-						width: 100%;
-						height: 100%;
-						margin-bottom: 8px;
 						display: block;
 						position: relative;
-						content: "";
-						background-size: cover;
-					}
+						background-size: 90%;
+						background-position: center;
+						background-repeat: no-repeat;
+						@include media-breakpoint-up(md) {
+							background-size: cover;
+						}
 				}
 				.entry-text {
 					margin-top: 2px;
