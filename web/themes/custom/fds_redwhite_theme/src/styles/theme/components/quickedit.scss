@@ -1,0 +1,24 @@
+.quickedit {
+    .quickedit-toolbar-content {
+        & > .quickedit-toolbar.icon.icon-pencil {
+            width: 100%;
+            height: auto;
+            background-size: auto;
+            background-position-y: center;
+            &::before {
+                display: none;
+            }
+            .quickedit-toolgroup {
+                order: 2;
+                margin-left: auto;
+                .action-save {
+                    width: unset;
+                    height: unset;
+                }
+                .action-cancel.icon-close {
+                    background-image: none;
+                }
+            }
+        }
+    }
+}
