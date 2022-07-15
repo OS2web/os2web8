@@ -85,7 +85,25 @@ body {
       }
     }
   }
+  .tns-outer {
+    a {
+      text-decoration: none !important;
+    }
+  }
 
+  .page-alert {
+    .custom-alert {
+      a {
+        @include reset-border;
+        text-decoration: underline dotted $color-white 1px !important;
+      }
+      .custom-alert__button {
+        a {
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
   .field--name-field-os2web-page-description,
   .accordion-content,
   .field--name-field-os2web-simple-text-body,
