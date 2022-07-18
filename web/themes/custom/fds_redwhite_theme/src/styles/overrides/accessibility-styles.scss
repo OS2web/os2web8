@@ -19,12 +19,19 @@ body {
       .tns-controls {
         button {
           &[data-controls="next"] {
-            background: url(../images/sprite.png) no-repeat -150px 0;
+            background: url(../images/sprite.png) no-repeat -154px 0;
+            right: -4px;
+          }
+          &[data-controls="prev"] {
+            background: transparent url("../images/sprite.png") no-repeat -188px
+              0;
+            left: -3px;
           }
         }
       }
     }
   }
+
   .accordion-content,
   .field--name-field-os2web-simple-text-body {
     a {
