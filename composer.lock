@@ -13493,12 +13493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "ac6384faabbcf8ccd40703581d771a69de7c1c96"
+                "reference": "8c8fa2b771d9c322fc887cfd8ad23c0354a9db23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/ac6384faabbcf8ccd40703581d771a69de7c1c96",
-                "reference": "ac6384faabbcf8ccd40703581d771a69de7c1c96",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/8c8fa2b771d9c322fc887cfd8ad23c0354a9db23",
+                "reference": "8c8fa2b771d9c322fc887cfd8ad23c0354a9db23",
                 "shasum": ""
             },
             "require": {
@@ -13516,7 +13516,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/develop"
             },
-            "time": "2022-06-20T10:56:05+00:00"
+            "time": "2022-07-19T08:11:50+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
