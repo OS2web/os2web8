@@ -2117,12 +2117,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "7a5e02c31a22a9880db9b44de736de9f2b8cb895"
+                "reference": "6f9e148f7e061b342191a35f876e0adb06ed2d27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/7a5e02c31a22a9880db9b44de736de9f2b8cb895",
-                "reference": "7a5e02c31a22a9880db9b44de736de9f2b8cb895",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/6f9e148f7e061b342191a35f876e0adb06ed2d27",
+                "reference": "6f9e148f7e061b342191a35f876e0adb06ed2d27",
                 "shasum": ""
             },
             "default-branch": true,
@@ -2135,7 +2135,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/8.x-1.x",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2022-07-08T15:20:04+00:00"
+            "time": "2022-07-19T13:03:46+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
@@ -13493,12 +13493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "ac6384faabbcf8ccd40703581d771a69de7c1c96"
+                "reference": "8c8fa2b771d9c322fc887cfd8ad23c0354a9db23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/ac6384faabbcf8ccd40703581d771a69de7c1c96",
-                "reference": "ac6384faabbcf8ccd40703581d771a69de7c1c96",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/8c8fa2b771d9c322fc887cfd8ad23c0354a9db23",
+                "reference": "8c8fa2b771d9c322fc887cfd8ad23c0354a9db23",
                 "shasum": ""
             },
             "require": {
@@ -13516,7 +13516,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/develop"
             },
-            "time": "2022-06-20T10:56:05+00:00"
+            "time": "2022-07-19T08:11:50+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
