@@ -79,36 +79,65 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
-<a class="fullhref" target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">{{ label }}</a>
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<a class="fullhref" style="color:#333;text-decoration:none" target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">
+					<div
+						{{ attributes.addClass(classes) }}>
+						{# {{ label }} #}
+						{{ title_prefix }}
+						{% if label and not page %}
+							<table>
+								<tbody>
+									<tr role="region" aria-label="{{'Teaser'| t}}" class="row no-gutters">
+										<td style="font-size:0;line-height:0;vertical-align:top;width:50px">
+                                        <p style="margin:0;padding:0;font-size:8px;line-height:8px;background:#d2000f"> &nbsp;</p>
+											<time style="display:block;width:50px;padding:0;background:#d2000f;margin:0;color:#fff;text-align:center;font-size:15px;font-weight:bold;font-family:Arial,sans-serif;line-height:18px" class="col-2 os2web-event-date">
+												{{ node.field_os2web_event_start_date.value|date('d') }}
+												{{ node.field_os2web_event_start_date.value|date('M') | t }}
+											</time>
+                                            <p style="margin:0;padding:0;font-size:8px;line-height:8px;background:#d2000f"> &nbsp;</p>
+										</td>
+                                        <td style="font-size:0;line-height:0;vertical-align:top;width:10px"> &nbsp;</td>
+										<td>
+											<h2 style="margin:0;padding:0;font-size:24px;line-height:24px;font-weight:bold;font-family:Arial,sans-serif;color:#333">{{ label }}</h2>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						{% endif %}
+						{{ title_suffix }}
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <div role="region" aria-label="{{'Teaser'| t}}" class="row no-gutters">
-      <time class="col-2 os2web-event-date">
-        {{ node.field_os2web_event_start_date.value|date('d') }}
-        <br />
-        {{ node.field_os2web_event_start_date.value|date('M') | t }}
-      </time>
-      <div class="col-10 os2web-event-title">
-        <h2{{ title_attributes }}>{{ label }}</h2>
-      </div>
-    </div>
+						{% if display_submitted %}
+							<footer class="node__meta">
+								{{ author_picture }}
+								<div {{author_attributes.addClass('node__submitted')}}>
+									{% trans %}Submitted by
+									{{ author_name }}
+									on
+									{{ date }}{% endtrans %}
+									{{ metadata }}
+								</div>
+							</footer>
+						{% endif %}
+                        <p style="margin:0;padding:0;font-size:25px;line-height:25px"> &nbsp;</p>
+						<table>
+							<tbody>
+								<tr role="region" aria-label="{{'Teaser'| t}}" class="row no-gutters">
+									<td>
+										<div role="region" aria-label="{{'Teaser'| t}}" {{ content_attributes.addClass('node__content') }}>
+											{{ content | without(['field_os2web_event_start_date']) }}
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div {{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <article role="region" aria-label="{{'Teaser'| t}}" {{ content_attributes.addClass('node__content') }}>
-    {{ content | without(['field_os2web_event_start_date']) }}
-  </article>
-</article>
+					</div>
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
