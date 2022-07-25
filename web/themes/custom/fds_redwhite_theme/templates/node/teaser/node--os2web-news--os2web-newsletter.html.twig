@@ -1,0 +1,32 @@
+{%
+  set classes = [
+  node.bundle|clean_class,
+  node.isPromoted() ? 'is-promoted',
+  node.isSticky() ? 'is-sticky',
+  not node.isPublished() ? 'is-unpublished',
+  view_mode ? view_mode|clean_class,
+]
+%}
+<div {{ attributes.addClass(classes) }}>
+  <div class="entity-{{ view_mode|clean_class }}__image">
+    {{ content.field_os2web_news_primaryimage }}
+  </div>
+  <div class="field--type-link">
+    <a style="color: #333; text-decoration: none;" href="{{ url }}" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
+      <div class="entity-{{ view_mode|clean_class }}__body">
+          <div style="font-size: 12px;">
+            {{ content.field_os2web_news_heading }}
+          </div>
+          {{ content.field_os2web_news_article_date }}
+
+          {% set text = content.field_os2web_news_description | render %}
+          <div style="margin-top: 16px; line-height: 1.3;" class="field field--type-body">
+            {{ text | striptags }}
+          </div>
+      </div>
+    </a>
+  </div>
+ 
+</div>
+
+
