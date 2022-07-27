@@ -245,7 +245,11 @@ body .page-container {
 .layout-content {
   padding-top: $grid-gutter-width;
 }
-
+.os2web_contact {
+  .field--name-field-os2web-contact-more {
+    margin-bottom: 1rem;
+  }
+}
 .layout-sidebar-right {
 
   .os2web_contact {
