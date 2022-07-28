@@ -290,8 +290,8 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'M9fdfMF48ZhttUmjRUfzOwTHRP8xNEzlOkSGtXE563J-Llcsyz7xYkEOamiOYQiHSfcaIdPIYQ';
-// $settings['hash_salt'] = 'SLebmIs0KVxIaQ1wZzgfR25D_GjpvF5HwkOxiciwF7GABUE2ufWCQTfAkbfLQ_QmnBCy3xrQaQ';
+$settings['hash_salt'] = '';
+
 /**
  * Deployment identifier.
  *
@@ -792,9 +792,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
+# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#   include $app_root . '/' . $site_path . '/settings.local.php';
+# }
 
 // <DDSETTINGS>
 // Please don't edit anything between <DDSETTINGS> tags.
@@ -841,25 +841,3 @@ switch ($settings['project_env']) {
     }
     break;
 }
-// $databases['default']['default'] = array (
-//   'database' => 'default',
-//   'username' => 'user',
-//   'password' => 'user',
-//   'prefix' => '',
-//   'host' => 'db',
-//   'port' => '3306',
-//   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-//   'driver' => 'mysql',
-// );
-// $config['stage_file_proxy.settings']['origin'] = 'https://ringsted.devel.dk';
-
-  $databases['default']['default'] = array (
-  'database' => 'default',
-  'username' => 'user',
-  'password' => 'user',
-  'prefix' => '',
-  'host' => 'db',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
