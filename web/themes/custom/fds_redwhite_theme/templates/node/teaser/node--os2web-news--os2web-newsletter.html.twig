@@ -14,9 +14,9 @@
   <div class="field--type-link">
     <a style="color: #333; text-decoration: none;" href="{{ url }}" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
       <div class="entity-{{ view_mode|clean_class }}__body">
-          <div style="font-size: 16px;">
-            {{ content.field_os2web_news_heading }}
-          </div>
+          <h2 style="font-size: 24px;">
+            {{ node.field_os2web_news_heading.value }}
+          </h2>
           {{ content.field_os2web_news_article_date }}
 
           {% set text = content.field_os2web_news_description | render %}
