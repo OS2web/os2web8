@@ -88,7 +88,7 @@
 			<table role="presentation" style="width:100%;border:0;border-spacing:0;">
 				<tr>
 					<td align="center" style="background-color:#ebebeb;">
-						<div class="outer" style="width:96%;max-width:912px;margin:20px auto;background:#fff;">
+						<div class="outer" style="width:96%;max-width:912px;margin:20px auto;background:#ffffff;">
 
 							<table class='newsletter-table-wrap' role="presentation" style="width:666px;border:0;border-spacing:0;">
 								<tr>
@@ -114,16 +114,16 @@
 								</tr>
 							</table>
 							<table align="center" width="912" height="240" border="0" cellspacing="0" cellpadding="0">
-								<tbody>
+								<tbody bgcolor="#D1D3D4">
 									<tr>
-										<td bgcolor="#D1D3D4" width="912" height="240" background="{{ base_url }}themes/custom/fds_redwhite_theme/dist/images/blobs.png" border="0" style="vertical-align:top;padding:0;background-repeat:no-repeat;">
+										<td width="912" height="240" background="{{ base_url }}themes/custom/fds_redwhite_theme/dist/images/blobs.png" border="0" style="vertical-align:top;padding:0;background-repeat:no-repeat;">
 
 											<table align="center">
 												<tr>
 													<td style="vertical-align:top;width:333px;padding-top:40px;">
 														<div class="column" style="width:100%;display:inline-block;vertical-align:middle;">
 															<div class="footerpad" style="">
-																<p style="margin:0;font-family:Arial,sans-serif;font-size:16px;line-height:18px;color:#333;">
+																<p style="margin:0;font-family:Arial,sans-serif;font-size:16px;line-height:18px;color:#333333;">
 																	<img src="{{ logo_url }}" alt="Ringsted logotype" width="166" height="76" style="display:block;"/>
 																</p>
 															</div>
@@ -132,7 +132,7 @@
 													<td style="vertical-align:top;width:333px;padding-top:40px;">
 														<div class="column" style="width:100%display:inline-block;vertical-align:middle;">
 															<div class="footerpad" style="font-size:16px;line-height:1.2;text-align:left;">
-																<p style="margin-top:0;margin-bottom:16px;font-family:Arial,sans-serif;color:#333;">
+																<p style="margin-top:0;margin-bottom:16px;font-family:Arial,sans-serif;color:#333333;">
 																	{% if theme_settings.contact_information.business_owner_name %}
 																		{{ theme_settings.contact_information.business_owner_name | trans }}
 																	{% endif %}
@@ -152,7 +152,7 @@
 																	{% endif %}
 																	<br>
 																	{% if theme_settings.contact_information.email %}
-																		<a href="mailto: {{ theme_settings.contact_information.email }}" style="color:#333; font-weight:bold; text-decoration:none;">
+																		<a href="mailto: {{ theme_settings.contact_information.email }}" style="color:#333333; font-weight:bold; text-decoration:none;">
 																			{{ theme_settings.contact_information.email }}
 																		</a>
 																	{% endif %}
@@ -165,11 +165,11 @@
 											<table role="presentation" style="width:100%;border:0;border-spacing:0;background-color: transparent;">
 												<tr>
 													<td style="padding:10px;text-align:left;">
-														<p style="font-family:Arial,sans-serif;margin:0; color:#333; font-size:16px; line-height:18px; text-align: center">
-															<a style="color:#333;" href="{{ unsubscribe_url }}">Afmeld nyhedsbrev</a>
+														<p style="font-family:Arial,sans-serif;margin:0; color:#333333; font-size:16px; line-height:18px; text-align: center">
+															<a style="color:#333333;" href="{{ unsubscribe_url }}">Afmeld nyhedsbrev</a>
 														</p>
-														<p style="font-family:Arial,sans-serif;margin:0; color:#333; font-size:16px; line-height:18px; text-align: center">
-															<a style="color:#333;" href="{{ unsubscribe_all_url }}">Afmeld alle dine abonnementer</a>
+														<p style="font-family:Arial,sans-serif;margin:0; color:#333333; font-size:16px; line-height:18px; text-align: center">
+															<a style="color:#333333;" href="{{ unsubscribe_all_url }}">Afmeld alle dine abonnementer</a>
 														</p>
 													</td>
 												</tr>
