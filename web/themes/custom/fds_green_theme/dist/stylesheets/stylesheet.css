@@ -18069,7 +18069,7 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
 .paragraph--type--os2web-menu-links-paragraph section.accordion-content .temaer,
 .paragraph--type--os2web-menu-links-paragraph section.tabnav-panel .temaer {
     padding: 0;
-    display: none;
+    display: flex;
   }
 }
 .paragraph--type--os2web-menu-links-paragraph section.sublist-wrapper.tabnav-panel[aria-hidden=false] .temaer a,

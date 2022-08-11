@@ -29,7 +29,7 @@
       padding: 30px 48px;
       @include media-breakpoint-only(xs) {
         padding: 0;
-        display: none;
+        display: flex;
     }
      a {
        color: initial;
