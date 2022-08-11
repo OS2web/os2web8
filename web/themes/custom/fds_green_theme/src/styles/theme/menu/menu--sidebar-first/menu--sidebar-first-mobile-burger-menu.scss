@@ -32,7 +32,7 @@ header.menu-toggler.open {
       display: none;
     }
     .icon {
-      font-size: 28px;
+      font-size: 2.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,7 +48,7 @@ header.menu-toggler.open {
         display: flex;
         color: $color-primary;
         -webkit-text-stroke: 2px $color-green-005;
-        font-size: 30px;
+        font-size: 3rem;
       }
       .fa-times {
         display: none;
@@ -181,7 +181,7 @@ header.menu-toggler.open {
                   a {
                     color: $color-white;
                     text-transform: initial;
-                    font-size: 14px;
+                    font-size: 1.4rem;
                     font-weight: normal;
                   }
                 }

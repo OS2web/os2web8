@@ -16,16 +16,16 @@
       border-top-left-radius: $big-border-radius;
       border-bottom-right-radius: $big-border-radius;
       padding: 5px 8px;
-      font-size: 17px;
+      font-size: 1.7rem;
       small {
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: $font-weight-bold;
       }
       @include media-breakpoint-up(md) {
         padding: 10px;
-        font-size: 25px;
+        font-size: 2.5rem;
         small {
-          font-size: 20px;
+          font-size: 2rem;
         }
       }
       & + .os2web-event-content-wrap {
@@ -49,17 +49,17 @@
     .field--name-title {
       font-weight: $font-weight-bold;
       color: $color-base-002;
-      font-size: 14px;
+      font-size: 1.4rem;
     }
     .field--type-text-with-summary {
       color: $color-base-002;
-      font-size: 14px;
+      font-size: 1.4rem;
       margin-top: 10px;
     }
     a.os2web-event-link {
       color: $color-primary;
       font-weight: $font-weight-bold;
-      font-size: 16px;
+      font-size: 1.6rem;
       text-align: left;
       margin-top: 10px;
       display: block;
