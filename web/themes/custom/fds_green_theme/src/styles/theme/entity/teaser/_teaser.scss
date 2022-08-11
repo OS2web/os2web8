@@ -39,7 +39,7 @@
   }
   .entity-teaser {
     display: flex;
-  
+
     flex-direction: column;
 
     .field--name-field-os2web-page-heading {
@@ -80,6 +80,7 @@ div.entity-teaser__image {
 
   .field--type-body {
     flex-grow: 1;
+    overflow-wrap: break-word;
   }
 }
 

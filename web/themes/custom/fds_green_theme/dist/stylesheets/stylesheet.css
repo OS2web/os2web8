@@ -16767,6 +16767,7 @@ div.entity-teaser__image img {
 }
 .entity-teaser__body .field--type-body {
   flex-grow: 1;
+  overflow-wrap: break-word;
 }
 
 .entity-teaser--os2web-meetings-meeting {
