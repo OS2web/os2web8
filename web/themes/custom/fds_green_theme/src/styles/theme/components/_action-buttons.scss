@@ -44,6 +44,18 @@
     &:hover {
       color: $color-primary-light;
     }
+    &.font-size-change {
+      cursor: pointer;
+      &[disabled="disabled"] {
+        cursor: unset;
+        color: $color-white!important;
+        opacity: 0.6;
+        &:hover {
+          opacity: 0.6;
+          color: $color-white!important;
+        }
+      }
+    }
   }
 }
 // --------------------------------------------------

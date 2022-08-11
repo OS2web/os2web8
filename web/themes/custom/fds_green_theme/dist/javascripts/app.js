@@ -3224,79 +3224,55 @@ module.exports = function (button, expanded) {
 
 })();
 
-(function() {
+(function($) {
+  const increase = document.querySelectorAll('a[data-increase-font-size]');
+  const decrease = document.querySelectorAll('a[data-decrease-font-size]');
+  const html = document.querySelector("html");
 
-  function getCookie(name) {
-    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-    return v ? v[2] : null;
-  }
-  function setCookie(name, value, days) {
-    var d = new Date;
 
-    d.setTime(d.getTime() + 24*60*60*1000*days);
+  increase.forEach(incItem => {
+    decrease.forEach(decItem => {
+      incItem.addEventListener("keydown", event => {
+        if (event.code === "Space" || event.code === "Enter") {
+          incItem.click();
+        }
+      });
+      function addFontSizeChange() {
+        html.classList.add("fz-change");
+        html.style.fontSize = "15px";
+        decItem.removeAttribute("disabled", "disabled");
+        incItem.setAttribute("disabled", "disabled");
+      }
 
-    document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
-  }
-  function deleteCookie(name) {
-    setCookie(name, '', -1);
-  }
+      decItem.addEventListener("keydown", event => {
+        if (event.code === "Space" || event.code === "Enter") {
+          decItem.click();
+        }
+      });
 
-  function initialBoot() {
-    var wrapper = document.getElementById('font-resize-wrapper');
-    var storedFontSize = getCookie('fontResizer');
+      function removeFontSizeChange() {
+        html.classList.remove("fz-change");
+        html.style.fontSize = "10px";
+        decItem.setAttribute("disabled", "disabled");
+        incItem.removeAttribute("disabled", "disabled");
+      }
 
-    if (storedFontSize === null) return;
-
-    wrapper.style.fontSize = parseFloat(storedFontSize) + 'px';
-  }
-
-  function handleDecreaseFontSize(event) {
-    event.preventDefault();
-
-    decreaseFontSize();
-  }
-  function decreaseFontSize() {
-    var wrapper = document.getElementById('font-resize-wrapper');
-    var styles = getComputedStyle(wrapper);
-    var currentFontSize = parseFloat(styles.fontSize, 10);
-    var newFontSize = currentFontSize / 1.2;
-
-    setCookie('fontResizer', newFontSize, 100);
-    wrapper.style.fontSize = newFontSize + 'px';
-  }
-
-  function handleIncreaseFontSize(event) {
-    event.preventDefault();
-
-    increaseFontSize();
-  }
-  function increaseFontSize() {
-    var wrapper = document.getElementById('font-resize-wrapper');
-    var styles = getComputedStyle(wrapper);
-    var currentFontSize = parseFloat(styles.fontSize, 10);
-    var newFontSize = currentFontSize * 1.2;
-
-    setCookie('fontResizer', newFontSize, 100);
-    wrapper.style.fontSize = newFontSize + 'px';
-  }
-
-  // Add event listeners.
-  var decreaseButtons = document.querySelectorAll('.js-decrease-font-size');
-  for (var i = 0; i < decreaseButtons.length; i++) {
-    var decreaseButton = decreaseButtons[i];
-
-    decreaseButton.addEventListener('click', handleDecreaseFontSize);
-  }
-
-  var increaseButtons = document.querySelectorAll('.js-increase-font-size');
-  for (var i = 0; i < increaseButtons.length; i++) {
-    var increaseButton = increaseButtons[i];
-
-    increaseButton.addEventListener('click', handleIncreaseFontSize);
-  }
-
-  initialBoot();
-})();
+      incItem.addEventListener("click", function() {
+        window.localStorage.setItem("preferBigFontSize", 1);
+        addFontSizeChange();
+      });
+      decItem.addEventListener("click", function() {
+        window.localStorage.setItem("preferBigFontSize", 0);
+        removeFontSizeChange();
+      });
+      if (+window.localStorage.getItem("preferBigFontSize")) {
+        addFontSizeChange();
+      } else {
+        removeFontSizeChange();
+      }
+    });
+  });
+})(jQuery);
 
 // Search.
 (function() {
