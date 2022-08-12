@@ -44,13 +44,29 @@
     &:hover {
       color: $color-primary-light;
     }
+    &.font-size-change {
+      cursor: pointer;
+    }
   }
 }
+
+html[style*="font-size: 10px"] .hero-block .action-buttons .decrease-font-size,
+html[style*="font-size: 23px"] .hero-block .action-buttons .increase-font-size,
+html[style*="font-size: 10px"] .search-container .action-buttons .decrease-font-size,
+html[style*="font-size: 23px"] .search-container .action-buttons .increase-font-size 
+{
+  cursor: unset;
+  color: $color-white !important;
+  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+    color: $color-white !important;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-
-
 
 .action-button {
   display: flex;

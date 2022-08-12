@@ -32,15 +32,15 @@ $block-height: 465px;
     color: $color-white;
   }
   h1 {
-    font-size: 20px;
+    font-size: 2rem;
     @include media-breakpoint-up(md) {
-      font-size: 30px;
+      font-size: 3rem;
     }
   }
   p {
-    font-size: 14px;
+    font-size: 1.4rem;
     @include media-breakpoint-up(md) {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
   .action-button__icon {

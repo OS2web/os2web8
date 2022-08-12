@@ -8,12 +8,12 @@
   .entity-default--os2web-simple-text-paragraph {
     h2 {
       color: $color-black;
-      font-size: 30px;
+      font-size: 3rem;
       max-width: unset;
       text-align: center;
       margin-bottom: 30px;
       @include media-breakpoint-up(md) {
-        font-size: 38px;
+        font-size: 3.8rem;
       }
     }
     p {
@@ -57,7 +57,7 @@
       color: $color-black;
       text-decoration: none;
       max-width: unset;
-      font-size: 14px;
+      font-size: 1.4rem;
       &[data-extlink] {
         padding-right: 0;
         background: none;
@@ -74,16 +74,16 @@
         border-top-left-radius: $big-border-radius;
         border-bottom-right-radius: $big-border-radius;
         padding: 5px 8px;
-        font-size: 17px;
+        font-size: 1.7rem;
         small {
-          font-size: 12px;
+          font-size: 1.2rem;
           font-weight: $font-weight-bold;
         }
         @include media-breakpoint-up(md) {
           padding: 10px;
-          font-size: 25px;
+          font-size: 2.5rem;
           small {
-            font-size: 20px;
+            font-size: 2rem;
           }
         }
         & + .os2web-event-content-wrap {
@@ -113,7 +113,7 @@
         padding-inline: 1.5rem;
         color: $color-primary;
         font-weight: $font-weight-bold;
-        font-size: 16px;
+        font-size: 1.6rem;
         text-transform: uppercase;
         text-align: right;
         margin-top: auto;

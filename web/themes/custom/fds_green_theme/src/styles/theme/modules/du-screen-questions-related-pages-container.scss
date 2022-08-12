@@ -20,13 +20,13 @@
       color: $color-base-002;
       margin: 0;
       margin-bottom: 20px;
-      font-size: 18px;
+      font-size: 1.8rem;
       padding-left: 46px;
     }
     .accordion-button {
-      font-size: 14px;
+      font-size: 1.4rem;
       @include media-breakpoint-up(md) {
-        font-size: 16px;
+        font-size: 1.6rem;
       }
     }
     @each $class, $color-code, $svg-path in $bg-colors-and-svgs {

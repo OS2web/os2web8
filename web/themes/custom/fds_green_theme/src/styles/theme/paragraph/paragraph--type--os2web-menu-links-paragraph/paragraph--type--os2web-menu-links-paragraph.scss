@@ -127,11 +127,11 @@
         color: $color-primary;
         text-decoration: none;
         @include media-breakpoint-only(sm) {
-          font-size: 11px;
+          font-size: 1.1rem;
           line-height: 1.2;
         }
         @include media-breakpoint-only(md) {
-          font-size: 13px;
+          font-size: 1.3rem;
           line-height: 1;
         }
       }

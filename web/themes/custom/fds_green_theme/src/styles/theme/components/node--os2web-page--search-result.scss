@@ -14,7 +14,7 @@
   border-top: 11px solid $color-gray-medium-dark;
   border-radius: $big-border-radius;
   color: $color-primary;
-  font-size: 15px;
+  font-size: 1.5rem;
   position: relative;
   padding: 21px $side-gap $bottom-gap;
 
@@ -35,7 +35,7 @@
 
   h4 {
     color: $color-primary;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   &:after {
     content: "";
@@ -80,7 +80,7 @@
       .search-results-bread-crumbs {
         color: $color-black;
         font-weight: $font-weight-bold;
-        font-size: 12px;
+        font-size: 1.2rem;
       }
     }
   }
