@@ -1,49 +1,39 @@
-(function($) {
-  const increase = document.querySelectorAll('a[data-increase-font-size]');
-  const decrease = document.querySelectorAll('a[data-decrease-font-size]');
-  const html = document.querySelector("html");
-
-
-  increase.forEach(incItem => {
-    decrease.forEach(decItem => {
-      incItem.addEventListener("keydown", event => {
-        if (event.code === "Space" || event.code === "Enter") {
-          incItem.click();
-        }
-      });
-      function addFontSizeChange() {
-        html.classList.add("fz-change");
-        html.style.fontSize = "15px";
-        decItem.removeAttribute("disabled", "disabled");
-        incItem.setAttribute("disabled", "disabled");
-      }
-
-      decItem.addEventListener("keydown", event => {
-        if (event.code === "Space" || event.code === "Enter") {
-          decItem.click();
-        }
-      });
-
-      function removeFontSizeChange() {
-        html.classList.remove("fz-change");
-        html.style.fontSize = "10px";
-        decItem.setAttribute("disabled", "disabled");
-        incItem.removeAttribute("disabled", "disabled");
-      }
-
-      incItem.addEventListener("click", function() {
-        window.localStorage.setItem("preferBigFontSize", 1);
-        addFontSizeChange();
-      });
-      decItem.addEventListener("click", function() {
-        window.localStorage.setItem("preferBigFontSize", 0);
-        removeFontSizeChange();
-      });
-      if (+window.localStorage.getItem("preferBigFontSize")) {
-        addFontSizeChange();
-      } else {
-        removeFontSizeChange();
-      }
+(function ($) {
+  const html = $("html");
+  $(document).ready(function () {
+    $("a[data-increase-font-size]").click(function () {
+      modifyFontSize("increase");
     });
+    $("a[data-decrease-font-size]").click(function () {
+      modifyFontSize("decrease");
+    });
+
+
+    function modifyFontSize(flag) {
+      let currentFontSize = parseInt(html.css("font-size"));
+      if (flag == "increase") {
+        switch (html.css("font-size")) {
+          case "10px":
+            currentFontSize = 15;
+            break;
+          case "15px":
+            currentFontSize = 23;
+            break;
+        }
+      } else if (flag == "decrease") {
+        switch (html.css("font-size")) {
+          case "23px":
+            currentFontSize = 15;
+            break;
+          case "15px":
+            currentFontSize = 10;
+            break;
+        }
+      }
+      localStorage.setItem("fontSize", currentFontSize);
+      html.css("font-size", parseInt(currentFontSize));
+    }
+    html.css("font-size", parseInt(localStorage.getItem("fontSize")));
+    console.log(html.css("font-size")); 
   });
 })(jQuery);
