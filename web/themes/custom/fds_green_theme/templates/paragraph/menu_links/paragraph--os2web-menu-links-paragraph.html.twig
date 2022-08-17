@@ -85,7 +85,14 @@
                           <li class="col-12 col-md-6 col-lg-4">
                             <a href="{{ node_link.url }}">
                               <span class="sublist-title">{{ node_link.title }}</span>
-                              {{ node_link.intro_text }}
+                              <div class="field--name-field-os2web-page-intro">
+                                <p>
+                                  <strong>
+                              {% set intro_text = node_link.intro_text|render|striptags %}
+                              {{ intro_text|length > 150 ? intro_text|slice(0, 150) ~ '...' : intro_text  }}
+                                  </strong>
+                                </p>
+                              </div>
                             </a>
                           </li>
                         {% endfor %}
