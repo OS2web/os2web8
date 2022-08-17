@@ -128,7 +128,13 @@
 						
 						<p style="margin:0;padding:0 25px 0 0;line-height:140%;font-size:16px;color:#333333;font-family:Arial,sans-serif" role="region" aria-label="{{'Teaser'| t}}" {{ content_attributes.addClass('node__content') }}>
 							{# {{ content | without(['field_os2web_event_start_date']) }} #}
-							{{ node.body.value|render|striptags("<drupal-render-placeholder>")|trim }}
+							{% set text = node.body.value|render|striptags("<drupal-render-placeholder>")|trim %}
+							{% set textSizeLimit = 110 %}
+							{{ 
+								text|length > textSizeLimit ? 
+								text|slice(0, textSizeLimit) ~ '...' : 
+								text  
+							}}
 						</p>
 					</div>
 				
