@@ -26,11 +26,6 @@
       <div class="row">
         <div class="col-12 col-sm-3 footer-col">
           <div class="block">
-            {% if theme_settings.footer.footer_use_default_logo %}
-              <img src="{{ base_path ~ directory }}/dist/images/logo--footer.png" alt="" class="logo logo--footer" />
-            {% else %}
-              <img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo logo--footer">
-            {% endif %}
             {% if theme_settings.contact_information.address %}
               <div>
                 {{ theme_settings.contact_information.address }}
@@ -299,6 +294,19 @@
             {% endif %}
 
           </div>
+
+          {% if theme_settings.footer.footer_use_default_logo %}
+            <img src="{{ base_path ~ directory }}/dist/images/logo--footer.png" alt="" class="logo logo--footer" />
+          {% else %}
+            <img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo logo--footer">
+          {% endif %}
+
+          {% if theme_settings.footer.footer_text %}
+            <div class="footer-free-text">
+              {{ theme_settings.footer.footer_text }}
+            </div>
+          {% endif %}
+
         </div>
       </div>
     </div>

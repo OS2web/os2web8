@@ -14,7 +14,7 @@
 
   <div>
     {% if node.body.value %}
-      {{ node.body.value|striptags|slice(0, 256)|replace({'&nbsp;': ''}) ~ '...' }}
+      {{ node.body.value|striptags|replace({'&nbsp;': ' '})|slice(0, 256) ~ '...' }}
     {% else %}
       {{ content }}
     {% endif %}
