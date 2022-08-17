@@ -14,7 +14,7 @@
 
   <div>
     {% if node.field_os2web_postlister_descript.value %}
-      {{ node.field_os2web_postlister_descript.value|striptags|slice(0, 256)|replace({'&nbsp;': ' '}) ~ '...' }}
+      {{ node.field_os2web_postlister_descript.value|striptags|replace({'&nbsp;': ' '})|slice(0, 256) ~ '...' }}
     {% else %}
       {{ content }}
     {% endif %}
