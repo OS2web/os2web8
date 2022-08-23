@@ -51,6 +51,16 @@
     }
   }
 }
+.list-unstyled {
+  &::before {
+    content: none;
+  }
+  & li {
+    &::before {
+      content: none;
+    }
+  }
+}
 
 .field--type-text-long {
 

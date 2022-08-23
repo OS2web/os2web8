@@ -19,10 +19,13 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html {
   font-family: $font-family;
   line-height: $base-line-height;
+}
+* {
+  font-family: "Lato";
 }
 html body {
   line-height: $base-line-height;

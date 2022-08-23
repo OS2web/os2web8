@@ -1,0 +1,35 @@
+$shift-size: 190px;
+
+.mobile-menu-open { //styles on html tag
+    position: relative;
+    right: $shift-size;
+    overflow: hidden;
+}
+.custom-mobile-navigation {
+    .slinky-menu {
+        display: none;
+    }
+    &.custom-mobile-navigation--open {
+      
+        .custom-mobile-navigation-popup {
+            position: absolute;
+            top: 0;
+            right: -($shift-size);
+            .slinky-menu {
+                display: block;
+                height: 100%!important;
+                li {
+                    &::before{ 
+                        display: none;
+                    }
+                    a {
+                        &:focus {
+                            outline: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

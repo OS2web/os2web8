@@ -29,78 +29,105 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Custom mobile navigation.
 (function() {
-  function handleToggle(event) {
-    var menu = document.querySelector('.custom-mobile-navigation');
-
-    menu.classList.toggle('custom-mobile-navigation--open');
-  }
-
-  var buttons = document.querySelectorAll('.js-custom-mobile-navigation-toggle');
-
-  for (var i = 0; i < buttons.length; i += 1) {
-    var button = buttons[i];
-
-    button.addEventListener('click', handleToggle);
-  }
+  const buttons = document.querySelectorAll('.js-custom-mobile-navigation-toggle');
+  const html =  document.querySelector('html')
+  const menu = document.querySelector('.custom-mobile-navigation');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      menu.classList.toggle('custom-mobile-navigation--open');
+      html.classList.toggle('mobile-menu-open');
+    });
+  })
+  window.addEventListener("resize", () => {
+    if(html.classList.contains("mobile-menu-open"))
+    menu.classList.remove('custom-mobile-navigation--open');
+    html.classList.remove('mobile-menu-open');
+  })
 })();
 
-// Items for "Senest besøgte indhold".
-(function($, Drupal, drupalSettings) {
-  function addToLocalStorage(path) {
-    var heading = document.querySelectorAll('h1');
-    var currentLocalStorage = JSON.parse(localStorage.getItem('visitedContent')) || [];
 
-    // Filter away current path if its already there.
-    const filteredLocalStorage = currentLocalStorage.filter(function(item) {
-      if (item.path === path) {
-        return false;
-      }
 
-      return true;
-    });
 
-    // Add new path.
-    filteredLocalStorage.push({
-      label: (heading[0] && heading[0].innerText) || document.title,
-      path: path,
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  const searchForm = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form');
+  const searchBtnIcon = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-actions');;
 
-    // Convert back into a string.
-    var updatedLocalStorageObj = JSON.stringify(filteredLocalStorage);
-
-    return localStorage.setItem('visitedContent', updatedLocalStorageObj);
+  function getPageAndElementDistance() {
+    searchBtnIcon.style.right =  -window.innerWidth - -30 - -searchForm.getBoundingClientRect().right + "px" //adding position for search icon
   }
 
-  var allowedNodeTypeClassnames = [
-    'page-node-type-os2web-news',
-    'page-node-type-os2web-page',
-  ];
+  getPageAndElementDistance()
+  window.addEventListener("resize", () => {
+    getPageAndElementDistance()
+  })
 
-  // Run through allowed classes.
-  for (var i = 0; i < allowedNodeTypeClassnames.length; i += 1) {
-    var allowedClassname = allowedNodeTypeClassnames[i];
+});
 
-    // The current page is supposed to be logged.
-    if (document.body.classList.contains(allowedClassname)) {
-      var currentPath = drupalSettings.path.currentPath;
+jQuery(document).ready(function(){
+  window.slinky = jQuery('.custom-mobile-navigation .side-menu').slinky()
+  console.log(jQuery('#side-menu'));
+});
 
-      addToLocalStorage(currentPath);
-    }
-  }
 
-  var wrapper = document.getElementById('js-visited-content');
-  var items = JSON.parse(localStorage.getItem('visitedContent'));
-  var listNode = document.createElement('UL');
-  var noOfItemsToDisplay = 6;
 
-  for (var i = 0; i < items.length && i < noOfItemsToDisplay; i += 1) {
-    var item = items[i];
-    var listItemNode = document.createElement('LI');
-    listItemNode.innerHTML = '<a href=' + item.path + '>' + item.label + '</a>';
 
-    listNode.prepend(listItemNode);
-  }
+// // Items for "Senest besøgte indhold".
+// (function($, Drupal, drupalSettings) {
+//   function addToLocalStorage(path) {
+//     var heading = document.querySelectorAll('h1');
+//     var currentLocalStorage = JSON.parse(localStorage.getItem('visitedContent')) || [];
 
-  wrapper.innerHTML = '';
-  wrapper.prepend(listNode);
-})(jQuery, Drupal, drupalSettings);
+//     // Filter away current path if its already there.
+//     const filteredLocalStorage = currentLocalStorage.filter(function(item) {
+//       if (item.path === path) {
+//         return false;
+//       }
+
+//       return true;
+//     });
+
+//     // Add new path.
+//     filteredLocalStorage.push({
+//       label: (heading[0] && heading[0].innerText) || document.title,
+//       path: path,
+//     });
+
+//     // Convert back into a string.
+//     var updatedLocalStorageObj = JSON.stringify(filteredLocalStorage);
+
+//     return localStorage.setItem('visitedContent', updatedLocalStorageObj);
+//   }
+
+//   var allowedNodeTypeClassnames = [
+//     'page-node-type-os2web-news',
+//     'page-node-type-os2web-page',
+//   ];
+
+//   // Run through allowed classes.
+//   for (var i = 0; i < allowedNodeTypeClassnames.length; i += 1) {
+//     var allowedClassname = allowedNodeTypeClassnames[i];
+
+//     // The current page is supposed to be logged.
+//     if (document.body.classList.contains(allowedClassname)) {
+//       var currentPath = drupalSettings.path.currentPath;
+
+//       addToLocalStorage(currentPath);
+//     }
+//   }
+
+//   var wrapper = document.getElementById('js-visited-content');
+//   var items = JSON.parse(localStorage.getItem('visitedContent'));
+//   var listNode = document.createElement('UL');
+//   var noOfItemsToDisplay = 6;
+
+//   for (var i = 0; i < items.length && i < noOfItemsToDisplay; i += 1) {
+//     var item = items[i];
+//     var listItemNode = document.createElement('LI');
+//     listItemNode.innerHTML = '<a href=' + item.path + '>' + item.label + '</a>';
+
+//     listNode.prepend(listItemNode);
+//   }
+
+//   wrapper.innerHTML = '';
+//   wrapper.prepend(listNode);
+// })(jQuery, Drupal, drupalSettings);
