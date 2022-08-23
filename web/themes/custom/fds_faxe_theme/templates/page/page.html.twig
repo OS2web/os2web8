@@ -3,22 +3,30 @@
     <div class="custom-header-row custom-header-row--meta">
       <div class="container">
         <div class="flexy-row">
+
           {{ page.header__logo }}
-
           <div class="flexy-spacer"></div>
-
           <div class="d-none d-md-block">
             {{ page.header__top_navigation }}
           </div>
+          
         </div>
       </div>
     </div>
-    <div class="custom-header-row custom-header-row--desktop-navigation d-none d-md-block">
+    <div class="custom-header-row custom-header-row--desktop-navigation d-none d-md-flex">
       <div class="container">
         <div class="flexy-row">
-          <div class="flexy-spacer"></div>
-
           {{ page.header__main_navigation }}
+          <div class="flexy-spacer"></div>
+          <div class="flexy-header__social-icons hidden-xs hidden-sm">
+            <ul class="flexy-list list-unstyled">
+              <li class="m-0">
+                <a href="https://www.facebook.com/faxemusikskole/" target="_blank" class="social-icon social-icon--facebook" data-toggle="tooltip" data-placement="top" title="" rel="noopener noreferrer" data-original-title="Find os på Facebook">
+                  <span class="icon fa fa-facebook-f"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
           {{ page.small_search }}
         </div>
       </div>
@@ -39,9 +47,9 @@
               <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--vertical">
                 {{ page.header__main_navigation }}
               </div>
-              <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
+              {# <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
                 {{ page.header__top_navigation }}
-              </div>
+              </div> #}
             </div>
           </div>
         </div>
