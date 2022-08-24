@@ -50,11 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const searchForm = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form');
+  const searchInput = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-item-search-api-fulltext input');
   const searchBtnIcon = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-actions');;
-
   function getPageAndElementDistance() {
     searchBtnIcon.style.right =  -window.innerWidth - -30 - -searchForm.getBoundingClientRect().right + "px" //adding position for search icon
+    searchInput.style.width =  window.innerWidth - searchForm.getBoundingClientRect().right + "px" //adding width for search input
   }
+
 
   getPageAndElementDistance()
   window.addEventListener("resize", () => {
@@ -64,8 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 jQuery(document).ready(function(){
-  window.slinky = jQuery('.custom-mobile-navigation .side-menu').slinky()
-  console.log(jQuery('#side-menu'));
+  window.slinky = jQuery('.custom-mobile-navigation .side-menu').slinky({
+    title: true
+  })
 });
 
 
