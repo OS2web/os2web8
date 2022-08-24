@@ -19,12 +19,45 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-$header-top-menu-size: 9rem;
+$header-top-menu-size-lg: 9rem;
+$header-top-menu-size-md: 7rem;
+$header-top-menu-size-sm: 5rem;
 .custom-header-row.custom-header-row--meta {
-  height: $header-top-menu-size;
+  height: $header-top-menu-size-sm;
+  @include media-breakpoint-up(md) {
+    height: $header-top-menu-size-md;
+  }
+  @include media-breakpoint-up(lg) {
+    height: $header-top-menu-size-lg;
+  }
   display: flex;
   .flexy-row {
-    height: $header-top-menu-size;
+    height: $header-top-menu-size-sm;
+    @include media-breakpoint-up(md) {
+      height: $header-top-menu-size-md;
+    }
+    @include media-breakpoint-up(lg) {
+      height: $header-top-menu-size-lg;
+    }
+  }
+  .region-small-search {
+    form {
+      .form-item-search-api-fulltext {
+        display: none;
+      }
+      .form-actions {
+        position: initial!important;
+        & input {
+            position: initial!important;
+        }
+        &:after {
+            transform: translateY(-50%);
+            top: 50%!important;
+            right: 50%!important;
+            color: black!important;
+        }
+    }
+    }
   }
 }
 .region-header__logo {
@@ -123,7 +156,7 @@ $header-bottom-menu-size: 7rem;
           position: absolute;
           height: 70px;
           left: 0;
-          right: 455px;
+          padding-right: 80px!important;
           &::placeholder {
             // color: $color-white!important;
           }
@@ -153,7 +186,10 @@ $header-bottom-menu-size: 7rem;
 
     img {
       display: block;
-      max-height: 60px;
+      max-height: 1.5rem;
+      @include media-breakpoint-up(sm) {
+        max-height: 2.4rem;
+      }
     }
   }
 }
