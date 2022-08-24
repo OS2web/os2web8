@@ -13,9 +13,9 @@ styles:
       "https://slinky.js.org/dist/slinky.min.css": { type: external, minified: true }
 javascripts:
   js:
+    src/javascripts/slinky.js: {}
     dist/javascripts/app.js: {}
     'https://cdhsign.dk/cdh_player.js': { type: external }
-    "https://slinky.js.org/dist/slinky.min.js": { type: external, minified: true }
   dependencies:
     - core/drupal
     - core/jquery
