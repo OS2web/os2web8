@@ -15,6 +15,9 @@
     {% for item in breadcrumb %}
       <li>
         {% if item.url %}
+          {% if loop.index is same as 1 %}
+            <i class="fa fa-home" aria-hidden="true"></i>
+          {% endif %}
           <a href="{{ item.url }}">{{ item.text }}</a>
         {% else %}
           {{ item.text }}

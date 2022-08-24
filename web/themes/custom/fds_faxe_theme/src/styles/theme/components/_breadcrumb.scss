@@ -21,22 +21,28 @@
 // --------------------------------------------------
 
 .breadcrumb {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-
+  background-color: $color-white;
+  margin: 0;
+  padding: 16px 30px;
+  border-radius: 0;
   li {
     display: inline-block;
 
-    font-size: $small-font-size;
-
+    font-size: 1.6rem;
+    color: $background_color__secondary;
+    i {
+      &::before {
+        font-size: 20px;
+        color: $background_color__secondary;
+      }
+      margin-right: 10px;
+    }
     &:before {
       float: left;
+      margin-left: 10px;
+      margin-right: 10px;
 
-      margin-top: -1px;
-      margin-left: 8px;
-      margin-right: 12px;
-
-      font-size: 1.4rem;
+      font-size: 20px;
       font-family: FontAwesome;
       content: $fa-var-angle-right;
 
@@ -45,8 +51,8 @@
   }
 
   a {
-    font-size: $small-font-size;
-
+    font-size: 1.6rem;
+    color: $color-black;
     &, &:hover, &:visited {
       text-decoration: none;
     }
