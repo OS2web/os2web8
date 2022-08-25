@@ -41,7 +41,7 @@
   }
 
   &.banner-overlay {
-    background-image: linear-gradient(to right,rgba(0,124,163,0.6) 40%,transparent 65%);
+    background-image: linear-gradient(to right,rgba($background_color__tertiary, 0.6) 40%,transparent 65%);
   }
   .container .banner__actions {
     margin-bottom: 0;
