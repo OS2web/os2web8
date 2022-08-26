@@ -458,7 +458,14 @@ body {
     max-width: unset;
   }
 }
-
+a:not([class]) {
+  text-decoration: none;
+  color: $color__link;
+  font-weight: 400;
+  &:hover {
+    text-decoration: underline;
+  }
+ }
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
