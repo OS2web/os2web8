@@ -102,6 +102,7 @@
         "drupal/core-project-message": "9.3.19",
         "drupal/core-recommended": "9.3.19",
         "drupal/csv_importer": "^1.12",
+        "drupal/devel": "^4.1",
         "drupal/editor_file": "^1.6",
         "drupal/entity_clone": "^1.0@beta",
         "drupal/fancy_file_delete": "^2.0",
