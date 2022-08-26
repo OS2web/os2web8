@@ -196,7 +196,72 @@ body .page-container {
 }
 
 .block-os2web-pagebuilder-related-links {
+  &.box {
+    background-color: $color-white;
+    padding: 0;
+    .box__heading {
+      padding: 40px 10px;
+      @include media-breakpoint-up(md) {
+        padding: 40px;
+      }
+      .h4 {
+        font-size: 19px;
+        @include media-breakpoint-up(md) {
+          font-size: 24px;
+        }
+        color: $color-black;
+      }
+    }
+    .box__body {
+      padding: 0 10px 30px 10px;
+      @include media-breakpoint-up(md) {
+        padding: 0 40px 30px;
+      }
+      .related-links {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        li {
+          padding: 0;
+          a {
+            padding: 25px 15px;
+            font-size: 20px;
+            position: relative;
+            display: block;
+            color: $color-black;
 
+            &:before {
+              background-color: $background_color__primary;
+              color: $color-white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 0;
+              content: '\276f';
+              font-size: 15px;
+              height: 40px;
+              width: 40px;
+              position: absolute;
+            }
+            &:hover {
+              background-color: $background_color__default;
+              color: $background_color__primary;
+            }
+            &:focus {
+              outline: 0;
+            }
+
+          }
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .box__heading {
     padding-top: 0;
     padding-bottom: 0;
