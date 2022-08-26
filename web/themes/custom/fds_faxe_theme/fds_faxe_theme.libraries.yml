@@ -6,10 +6,8 @@ fonts:
 styles:
   css:
     theme:
-      dist/stylesheets/stylesheet.css: {}
-
       # dist/stylesheets/stylesheet.css: {}
-      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css": { type: external, minified: true }
+      # "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css": { type: external, minified: true }
       "https://slinky.js.org/dist/slinky.min.css": { type: external, minified: true }
 javascripts:
   js:
