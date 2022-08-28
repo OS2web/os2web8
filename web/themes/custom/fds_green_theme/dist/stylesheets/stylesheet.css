@@ -17799,6 +17799,12 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
 .paragraph--type--links-block-with-bg .paragraph--type--os2web-search-selected-terms ul li a:hover {
   color: #648F14;
 }
+.paragraph--type--links-block-with-bg .field--name-field-os2web-simple-text-body p {
+  color: #ffffff;
+}
+.paragraph--type--links-block-with-bg .field--name-field-os2web-simple-text-body p a {
+  color: #ffffff;
+}
 @media screen and (min-width: 576px) {
   .paragraph--type--links-block-with-bg {
     background-image: url("../images/falks.svg");
