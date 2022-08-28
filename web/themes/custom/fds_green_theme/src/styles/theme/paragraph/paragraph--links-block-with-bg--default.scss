@@ -39,7 +39,7 @@
   & .field--name-field-os2web-simple-text-body p a {
     color: $color-white;
   }
-  
+
   @include media($xs) {
     background-image: url("../images/falks.svg");
     background-repeat: no-repeat;
