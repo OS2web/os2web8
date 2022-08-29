@@ -18329,6 +18329,9 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   padding-top: 56px;
   padding-left: 125px;
 }
+.field--name-field-os2web-paragraphs .front-search .field--type-image {
+  margin-bottom: -7px;
+}
 
 @media (min-width: 992px) {
   .block--du-screen-questions-anchor-links--sidebar-second {
