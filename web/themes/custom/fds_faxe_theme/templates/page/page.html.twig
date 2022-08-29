@@ -13,25 +13,23 @@
             {{ page.small_search }}
           </div>
             <div class="custom-header-row custom-header-row--mobile-navigation d-lg-none">
-              <div class="container">
-                <div class="flexy-row">
-                  <div class="flexy-spacer"></div>
+              <div class="flexy-row">
+                <div class="flexy-spacer"></div>
 
-                  <div class="custom-mobile-navigation">
-                    <div class="custom-mobile-navigation__overlay"></div>
+                <div class="custom-mobile-navigation">
+                  <div class="custom-mobile-navigation__overlay"></div>
 
-                    <button class="custom-mobile-navigation-toggle js-custom-mobile-navigation-toggle">
-                      <span class="icon fa fa-bars"></span>
-                    </button>
+                  <button class="custom-mobile-navigation-toggle js-custom-mobile-navigation-toggle">
+                    <span class="icon fa fa-bars"></span>
+                  </button>
 
-                    <div class="custom-mobile-navigation-popup">
-                      <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--vertical">
-                        {{ page.header__main_navigation }}
-                      </div>
-                      {# <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
-                        {{ page.header__top_navigation }}
-                      </div> #}
+                  <div class="custom-mobile-navigation-popup">
+                    <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--vertical">
+                      {{ page.header__main_navigation }}
                     </div>
+                    {# <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
+                      {{ page.header__top_navigation }}
+                    </div> #}
                   </div>
                 </div>
               </div>
@@ -87,7 +85,7 @@
       {%
         set content_classes = [
         page.sidebar_first ? 'col-12 col-md-4 content-column',
-        page.sidebar_first is empty ? 'col-12 col-md-7 content-column'
+        page.sidebar_first is empty ? 'col-12 content-column'
       ]
       %}
 
@@ -107,11 +105,11 @@
         </div>
       </main>
 
-      <aside class="col-12 col-md-5 sidebar-column">
+      <!-- <aside class="col-12 col-md-5 sidebar-column">
         <div class="layout-sidebar-right">
           {{ page.sidebar_second }}
         </div>
-      </aside>
+      </aside> -->
     </div>
   </div>
 
