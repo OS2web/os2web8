@@ -14,6 +14,7 @@
 
 
 $background_color__default: #eeeff4;
+$background_color__default_secondary: darken($background_color__default, 10%);
 $background_color__primary: #012c4e;
 $background_color__secondary: lighten($background_color__primary, 10%);
 $background_color__tertiary: lighten($background_color__secondary, 10%);
