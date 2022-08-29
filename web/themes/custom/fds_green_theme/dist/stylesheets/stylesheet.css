@@ -18326,11 +18326,14 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   height: 60px;
 }
 .field--name-field-os2web-paragraphs .front-search .soeg-block-top-content {
-  padding-top: 56px;
+  padding-top: 15px;
   padding-left: 125px;
 }
 .field--name-field-os2web-paragraphs .front-search .field--type-image {
-  margin-bottom: -7px;
+  margin-bottom: -6px;
+}
+.field--name-field-os2web-paragraphs .front-search img {
+  min-height: 400px;
 }
 
 @media (min-width: 992px) {
