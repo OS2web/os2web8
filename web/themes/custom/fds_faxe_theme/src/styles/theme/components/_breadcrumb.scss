@@ -38,7 +38,6 @@
       margin-right: 10px;
     }
     &:before {
-      float: left;
       margin-left: 10px;
       margin-right: 10px;
 
@@ -53,6 +52,7 @@
   a {
     font-size: 1.6rem;
     color: $color-black;
+    cursor: pointer;
     &, &:hover, &:visited {
       text-decoration: none;
     }
