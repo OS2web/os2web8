@@ -79,10 +79,14 @@ p, .body-text {
 .field--name-field-os2web-page-heading {
   h1 {
     margin: 0;
-    padding: 0 2.6rem 2.6rem;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     line-height: 3.5rem;
     font-weight: 400;
+    color: $color-black;
+    @include media-breakpoint-up(sm) {
+      padding: 0 2.6rem 2.6rem;
+      font-size: 3.2rem;
+    }
   }
 }
 
