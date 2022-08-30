@@ -298,18 +298,19 @@
             {% endif %}
 
           </div>
+          <div class="d-flex align-items-center">
+            {% if theme_settings.footer.footer_use_default_logo %}
+              <img src="{{ base_path ~ directory }}/dist/images/logo__white.png" alt="" class="logo mr-5 logo--footer" />
+            {% else %}
+              <img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo mr-5 logo--footer">
+            {% endif %}
 
-          {% if theme_settings.footer.footer_use_default_logo %}
-            <img src="{{ base_path ~ directory }}/dist/images/logo--footer.png" alt="" class="logo logo--footer" />
-          {% else %}
-            <img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo logo--footer">
-          {% endif %}
-
-          {% if theme_settings.footer.footer_text %}
-            <div class="footer-free-text">
-              {{ theme_settings.footer.footer_text }}
-            </div>
-          {% endif %}
+            {% if theme_settings.footer.footer_text %}
+              <div class="footer-free-text">
+                {{ theme_settings.footer.footer_text }}
+              </div>
+            {% endif %}
+          </div>
 
         </div>
       </div>
