@@ -5,13 +5,17 @@
 }
 
 body {
-  a,
   input,
   button,
   textarea {
     display: inline-block;
     min-width: 44px !important;
     min-height: 44px !important;
+  }
+
+  a {
+    display: inline-block;
+    min-width: 44px !important;
   }
 
   .entity-default--os2web-spotbox-reference {
