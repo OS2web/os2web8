@@ -19,10 +19,13 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html {
   font-family: $font-family;
   line-height: $base-line-height;
+}
+* {
+  font-family: "Lato";
 }
 html body {
   line-height: $base-line-height;
@@ -71,6 +74,20 @@ p, .body-text, .body-copy-text {
 p, .body-text {
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
+}
+
+.field--name-field-os2web-page-heading {
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: 400;
+    color: $color-black;
+    @include media-breakpoint-up(sm) {
+      padding: 0 2.6rem 2.6rem;
+      font-size: 3.2rem;
+    }
+  }
 }
 
 // --------------------------------------------------

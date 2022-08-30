@@ -21,14 +21,27 @@
 // --------------------------------------------------
 
 footer {
-
+  border-top: 7rem solid $background_color__footer_secondary;
+  background-color: $background_color__footer_primary;
+ 
   .footer {
-    margin-top: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    border-top: 0;
-    background-color: $color-footer-background;
+    padding-block: 8rem;
+    border: 0;
+    margin: 0;
+    > .container {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/footer__watermark.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 306px;
+        height: 365px;
+        top: -150px;
+        right: 0;
+      }
+    }
 
     a, a:hover, a:visited, a:focus, a:active,
     .is-active > a,
@@ -59,8 +72,8 @@ footer {
     }
 
     a {
-      text-decoration: underline;
-
+      font-size: 20px;
+      color: $color-white;
       &:focus {
         outline-color: rgba(255, 255, 255, .5);
       }
@@ -109,6 +122,44 @@ footer {
   p.h1, p.h2, p.h3, p.h4, p.h5, p.h6 {
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 1);
+  }
+  .region-header__main-navigation {
+    margin: 0;
+    padding-left: 0;
+    nav {
+      ul {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        li {
+          margin: 0;
+          position: relative;
+          list-style: none;
+          float: left;
+          padding: 0;
+          &:before {
+            display: none;
+          }
+         
+          a {
+            font-size: 2rem;
+            display: block;
+            color: $color-white;
+            line-height: 2.8rem;
+            &:focus {
+              outline: 0;
+            }
+            &:hover {
+              text-decoration: none;
+            }
+            & + ul {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

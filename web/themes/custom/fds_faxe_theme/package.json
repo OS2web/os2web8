@@ -33,6 +33,7 @@
     "dkfds": "^6.1.1",
     "font-awesome": "^4.7.0",
     "material-design-icons": "^3.0.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "sidr": "^2.2.1"
   }
 }

@@ -17328,15 +17328,6 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   margin-top: 1rem;
 }
 
-.field--name-field-os2web-page-paragraph-wide > .field__item > .paragraph {
-  padding: 25px 0;
-}
-
-@media (min-width: 768px) {
-  .field--name-field-os2web-page-paragraph-wide > .field__item > .paragraph {
-    padding: 70px 0;
-  }
-}
 .search-container {
   position: absolute;
   color: #ffffff;
@@ -17799,6 +17790,12 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
 .paragraph--type--links-block-with-bg .paragraph--type--os2web-search-selected-terms ul li a:hover {
   color: #648F14;
 }
+.paragraph--type--links-block-with-bg .field--name-field-os2web-simple-text-body p {
+  color: #ffffff;
+}
+.paragraph--type--links-block-with-bg .field--name-field-os2web-simple-text-body p a {
+  color: #ffffff;
+}
 @media screen and (min-width: 576px) {
   .paragraph--type--links-block-with-bg {
     background-image: url("../images/falks.svg");
@@ -17814,7 +17811,6 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   background: #ebedea;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin-top: -50px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -18044,7 +18040,7 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
 
 @media (min-width: 768px) {
   .paragraph--type--os2web-menu-links-paragraph {
-    margin-top: -25px;
+    margin-top: 15px;
   }
 }
 .paragraph--type--os2web-menu-links-paragraph section.sublist-wrapper.tabnav-panel[aria-hidden=false],
@@ -18310,6 +18306,34 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
 }
 .front-block-with-image .paragraph--type--os2web-image-paragraph {
   box-shadow: none;
+}
+
+.field--name-field-os2web-paragraphs .front-search {
+  position: relative;
+}
+.field--name-field-os2web-paragraphs .front-search h1 {
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+.field--name-field-os2web-paragraphs .front-search p {
+  color: #ffffff;
+}
+.field--name-field-os2web-paragraphs .front-search .col-5 {
+  padding: unset;
+}
+.field--name-field-os2web-paragraphs .front-search input.form-input {
+  border-radius: 10px;
+  height: 60px;
+}
+.field--name-field-os2web-paragraphs .front-search .soeg-block-top-content {
+  padding-top: 15px;
+  padding-left: 125px;
+}
+.field--name-field-os2web-paragraphs .front-search .field--type-image {
+  margin-bottom: -6px;
+}
+.field--name-field-os2web-paragraphs .front-search img {
+  min-height: 400px;
 }
 
 @media (min-width: 992px) {

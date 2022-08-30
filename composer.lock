@@ -2081,12 +2081,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "6f9e148f7e061b342191a35f876e0adb06ed2d27"
+                "reference": "81daa6c1f534696fcfbad3f9bb0f4887646fe32e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/6f9e148f7e061b342191a35f876e0adb06ed2d27",
-                "reference": "6f9e148f7e061b342191a35f876e0adb06ed2d27",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/81daa6c1f534696fcfbad3f9bb0f4887646fe32e",
+                "reference": "81daa6c1f534696fcfbad3f9bb0f4887646fe32e",
                 "shasum": ""
             },
             "default-branch": true,
@@ -13475,12 +13475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_logging.git",
-                "reference": "8435cc12989e50d02e22eeb1eb1b0be3f18086c0"
+                "reference": "44099223dfbae5a6a65abfb5cb4aa05a02acc978"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/8435cc12989e50d02e22eeb1eb1b0be3f18086c0",
-                "reference": "8435cc12989e50d02e22eeb1eb1b0be3f18086c0",
+                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/44099223dfbae5a6a65abfb5cb4aa05a02acc978",
+                "reference": "44099223dfbae5a6a65abfb5cb4aa05a02acc978",
                 "shasum": ""
             },
             "require": {
@@ -13498,7 +13498,7 @@
                 "issues": "https://github.com/OS2web/os2web_logging/issues",
                 "source": "https://github.com/OS2web/os2web_logging/tree/master"
             },
-            "time": "2022-01-18T10:21:57+00:00"
+            "time": "2022-08-24T12:25:08+00:00"
         },
         {
             "name": "os2web/os2web_meetings",

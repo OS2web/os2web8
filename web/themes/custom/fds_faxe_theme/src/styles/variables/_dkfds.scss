@@ -19,6 +19,7 @@ $base-line-height:  2.4rem !default;
 $font-path:                     '../fonts/IBMPlexSans/' !default;
 $image-path:                    '../images' !default;
 $icons-folder-path:             "../images/svg-icons" !default;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 // Typography
 // Typography font-size and line-height
 
@@ -65,7 +66,8 @@ $font-weight-bold:            700 !default;
 $font-style-normal:           normal !default;
 $font-style-italic:           italic !default;
 
-$font-family:                 'Open Sans', sans-serif, 'system';
+$font-family:                  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 
 ///////////////////////////////////////////////////////////////////
 // Spacing helpers
@@ -398,8 +400,8 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
   sm: 100%,
-  md: 100%,
-  lg: 100%,
+  md: 780px,
+  lg: 1000px,
   xl: 1200px
 ) !default;
 

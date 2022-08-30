@@ -15,7 +15,10 @@
     {% for item in breadcrumb %}
       <li>
         {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a>
+          {% if loop.index is same as 1 %}
+            <i class="fa fa-home" aria-hidden="true"></i>
+          {% endif %}
+          <a href="{{ item.url }}">{% if item.text %} {{ item.text }}{% else %} {{ 'Back'|t }} {% endif %} </a>
         {% else %}
           {{ item.text }}
         {% endif %}
