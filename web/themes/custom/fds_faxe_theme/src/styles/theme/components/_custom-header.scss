@@ -124,6 +124,9 @@ $header-bottom-menu-size: 7rem;
             & + ul {
               display: none;
             }
+            &.is-active {
+              text-decoration: none;
+            }
           }
         }
       }
