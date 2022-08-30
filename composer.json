@@ -241,7 +241,8 @@
                 "Allow edit Media items from Media Library modal dialog in CKEditor" : "https://www.drupal.org/files/issues/2021-04-21/3168868-13_0.patch",
                 "2961554 - Display node title by default when creating link with drupalink, allow configuration." : "https://www.drupal.org/files/issues/2021-10-14/2741945-92_1.patch",
                 "Notice: Undefined index: type in Drupal\\Core\\Render\\Element\\Date::processDate()" : "https://www.drupal.org/files/issues/2022-06-28/3189302-18.patch",
-                "Notice: Trying to access array offset on value of type null in Drupal\\views\\Plugin\\views\\display\\EntityReference->query()": "https://www.drupal.org/files/issues/2021-12-08/3180227-15.patch"
+                "Notice: Trying to access array offset on value of type null in Drupal\\views\\Plugin\\views\\display\\EntityReference->query()": "https://www.drupal.org/files/issues/2021-12-08/3180227-15.patch",
+                "Provide a way for fields with computed or custom storage to decide how to impact entity queries." : "https://www.drupal.org/files/issues/2021-12-06/3025164-33.patch"
             },
             "drupal/printable": {
                  "3214729 PDF filename is generated with it's location" : "./patches/3214729_pdf_filename_generated_with_its_location.patch"

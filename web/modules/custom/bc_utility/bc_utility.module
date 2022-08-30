@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\bc_utility\Controller\OldContentNotity;
 use Drupal\Component\Render\FormattableMarkup;
 
 /**
@@ -8,27 +9,24 @@ use Drupal\Component\Render\FormattableMarkup;
  */
 function bc_utility_cron()
 {
-  if (class_exists(\Drupal\bc_utility\Controller\OldContentNotity::class))
+  $now = date("Y-m-01");
+  $run = false;
+  $last_start = \Drupal::keyValue('bc_utility_cron')->get('last_start');
+  if (empty($last_start))
   {
-    $now = date("Y-m-01");
-    $run = false;
-    $last_start = \Drupal::keyValue('bc_utility_cron')->get('last_start');
-    if (empty($last_start))
-    {
-      $run = true;
-      \Drupal::keyValue('bc_utility_cron')->set('last_start', $now);
-    }
-    else
-    {
-      $lastdiff = strtotime("+1 month", strtotime($last_start));
-      $run = ($now === date('Y-m-01', $lastdiff));
-      // TODO or older that now + one month
-    }
+    $run = true;
+    \Drupal::keyValue('bc_utility_cron')->set('last_start', $now);
+  }
+  else
+  {
+    $lastdiff = strtotime("+1 month", strtotime($last_start));
+    $run = ($now === date('Y-m-01', $lastdiff));
+    // TODO or older that now + one month
+  }
 
-    if ($run) {
-      Drupal::logger('bc_utility')->info("bc utility cron run");
-      \Drupal\bc_utility\Controller\OldContentNotity::handler();
-    }
+  if ($run) {
+    Drupal::logger('bc_utility')->info("bc utility cron run");
+    OldContentNotity::handler();
   }
 }
 
