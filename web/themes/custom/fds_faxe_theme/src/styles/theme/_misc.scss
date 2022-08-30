@@ -33,8 +33,10 @@ body .container-fluid {
     max-width: 100%;
   }
 }
-
-.content-column {
+#main-content {
+  margin-bottom: 12rem;
+}
+.layout-content {
   background-color: $color-white;
 }
 
