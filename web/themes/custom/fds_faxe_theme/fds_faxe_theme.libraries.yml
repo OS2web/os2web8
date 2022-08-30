@@ -6,7 +6,7 @@ fonts:
 styles:
   css:
     theme:
-      # dist/stylesheets/stylesheet.css: {}
+      dist/stylesheets/stylesheet.css: {}
       "https://slinky.js.org/dist/slinky.min.css": { type: external, minified: true }
 javascripts:
   js:
