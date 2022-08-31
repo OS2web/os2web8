@@ -3553,6 +3553,20 @@ jQuery(document).mouseup(function(e) {
     jQuery(".region.region-header__below").removeClass('expand-collaps')
   }
 });
+
+let allATags = document.querySelectorAll('a');
+for (let i = 0; i < allATags.length; i++) {
+  let aTag = allATags[i];
+  let tagHeight = aTag.getBoundingClientRect().height
+  if(tagHeight < 44) {
+    aTag.style.paddingTop = 0 + "px"
+    aTag.style.paddingBottom = 0 + "px"
+    tagHeight = aTag.getBoundingClientRect().height
+    let remainigHeight = (44 - tagHeight)
+    aTag.style.paddingTop = Math.ceil(remainigHeight / 2) + "px"
+    aTag.style.paddingBottom = Math.ceil(remainigHeight / 2) + "px"
+  }
+}
 // Proposals form toggle.
 (function($) {
   "use strict";
