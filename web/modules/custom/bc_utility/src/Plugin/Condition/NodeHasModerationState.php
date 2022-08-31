@@ -13,7 +13,7 @@ use Drupal\rules\Core\RulesConditionBase;
  *   label = @Translation("Node has moderation state"),
  *   category = @Translation("Content"),
  *   context_definitions = {
- *     "entity" = @ContextDefinition("entity:node",
+ *     "node" = @ContextDefinition("entity:node",
  *       label = @Translation("Node"),
  *       description = @Translation("Specifies the node for which to evaluate the condition."),
  *       assignment_restriction = "selector"
