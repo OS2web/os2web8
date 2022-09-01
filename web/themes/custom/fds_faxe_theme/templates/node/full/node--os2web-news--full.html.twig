@@ -31,13 +31,16 @@
 
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content.field_os2web_news_primaryimage }}
-    <div class="row news-metadata">
-      <div class="col-sm-12">
+    
+    <h1>{{ content.field_os2web_news_heading | render | striptags }}</h1>
+    <div class="news-metadata">
+      <div class="">
         <span class="date">{{ content.field_os2web_news_article_date | render | striptags }}</span>
         <span>{{ content.field_os2web_news_article_author | render | striptags }}</span>
       </div>
     </div>
-    {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_article_date', 'field_os2web_news_article_author') }}
+    <div>{{ content.field_os2web_news_description | render | striptags }}</div>
+    {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_description', 'field_os2web_news_heading','field_os2web_news_article_date', 'field_os2web_news_article_author') }}
   </div>
 
 </article>
