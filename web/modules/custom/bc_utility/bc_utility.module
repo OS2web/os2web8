@@ -14,10 +14,9 @@ function bc_utility_cron()
   if (empty($last_start)) {
     $run = TRUE;
   } else {
-    $datediff = time() - $last_start;
-    $daysDiff = round($datediff / (60 * 60 * 24));
+    $oneMonthAgoTs = strtotime("-1 months");
     // If last run was 30 day ago or more.
-    if ($daysDiff >= 30) {
+    if ($last_start <= $oneMonthAgoTs) {
       $run = TRUE;
     }
   }
