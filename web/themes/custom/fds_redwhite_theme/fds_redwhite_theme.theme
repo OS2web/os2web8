@@ -309,6 +309,21 @@ function fds_redwhite_theme_preprocess_field__field_os2web_iframe_code(array &$v
 }
 
 /**
+ * Implement hook_preprocess_field().
+ */
+function fds_redwhite_theme_preprocess_field(&$variables) {
+  if (!empty($variables['field_name'])) {
+    switch ($variables['field_name']) {
+      case 'field_os2web_slideshow_image':
+        foreach ($variables['items'] as $key => $item) {
+          $variables['items'][$key]['content']['#alt_text'] = $item['content']['#item']->get('alt')->getString();
+        }
+        break;
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_file_link().
  */
 function fds_redwhite_theme_preprocess_file_link(array &$variables) {
