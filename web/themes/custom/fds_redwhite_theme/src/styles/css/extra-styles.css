@@ -87,6 +87,7 @@
   font: normal normal normal 14px/1 FontAwesome;
   content: "\f111" !important;
   left: 10px;
+  /* top: 8px; */
   top: 50%;
   transform: translateY(-50%);
   font-size: 6px;
