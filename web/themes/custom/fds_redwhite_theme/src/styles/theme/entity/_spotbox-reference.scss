@@ -11,14 +11,14 @@
 		  }
 		.tns-controls {
 			button[data-controls="next"] {
-				background: transparent url("../images/sprite.png") no-repeat -159px 0;
+				background: transparent url("../images/sprite.png") no-repeat -159px 0/285px;
 				position: absolute;
 				color: transparent;
 				right: 0;
 				top: 45%;
 				margin-top: -34px;
 				width: 38px;
-				height: 68px;
+				height: 70px;
 				cursor: pointer;
 				border-radius: 0;
 				&::before {
@@ -26,14 +26,14 @@
 				}
 			}
 			button[data-controls="prev"] {
-				background: transparent url("../images/sprite.png") no-repeat -190px 0;
+				background: transparent url("../images/sprite.png") no-repeat -190px 0/285px;
 				position: absolute;
 				color: transparent;
 				left: 0;
 				top: 45%;
 				margin-top: -34px;
 				width: 38px;
-				height: 68px;
+				height: 70px;
 				cursor: pointer;
 				border-radius: 0;
 				&::before {
