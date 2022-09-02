@@ -5,9 +5,9 @@
   paragraph.isPublished() ? null : 'paragraph--unpublished'
 ] %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  {% set backgroundImageUrl = file_url(paragraph.field_os2web_menu_links_image.entity.fileuri) %}
+  <div{{ attributes.addClass(classes) }} {% if backgroundImageUrl %}style="background-image: url({{ backgroundImageUrl }})"{% endif %}>
     {% block content %}
-
       {# Begin - links #}
       <div class="container">
         <nav class="row">
@@ -30,7 +30,7 @@
                     <hr>
                     <ul>
                       {% for node_link in menu_link['children'] %}
-                        <li><a href="{{ node_link.url }}">{{ node_link.title }}</a></li>
+                        <li><a href="{{ node_link.url }}">UPD: {{ node_link.title }}</a></li>
                       {% endfor %}
                     </ul>
                   {% endif %}
