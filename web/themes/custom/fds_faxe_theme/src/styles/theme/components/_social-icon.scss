@@ -82,14 +82,9 @@ a.social-icon-teaser {
 }
 
 .social-icon-list {
-
-  > div {
-    display: inline-block;
-
-    + div {
-      margin-left: 1rem;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .social-icon {

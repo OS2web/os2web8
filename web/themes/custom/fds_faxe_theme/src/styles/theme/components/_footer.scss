@@ -80,10 +80,27 @@ footer {
     }
 
     .social-icon {
-      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      font-size: 2.4rem;
     }
   }
-
+  .footer-extra-info {
+    flex-wrap:wrap;
+    gap: 1rem;
+    * {
+      font-size: 20px;
+    }
+    & > div {
+        &:not(:last-child) {
+          &::after {
+            padding-left: 10px;
+            content: "|";
+          }
+        }
+      }
+    }
   .menu {
     margin: 0;
 
@@ -100,15 +117,10 @@ footer {
       padding-bottom: .4em;
     }
   }
-  //
-  //.social-icon-list {
-  //  margin-top: 5.5rem;
-  //}
 
 
-  .social-icon-list {
-    text-align: right;
-  }
+
+
 
   // h1, h2, h3, h4, h5, h6,
   // .h1, .h2, .h3, .h4, .h5, .h6,
