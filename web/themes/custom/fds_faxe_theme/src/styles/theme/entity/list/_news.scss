@@ -92,6 +92,33 @@ a.entity-list--os2web-news {
   }
 }
 
+.node--os2web-news--full {
+  margin-top: -28px;
+  .field--name-field-os2web-news-primaryimage {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .node--os2web-news--full-inner-wrap {
+    padding: 6rem 4rem 0;
+    font-size: 1.6rem;
+    color: $color-black;
+    h1 {
+      margin: 0;
+      margin-bottom: 3rem;
+      font-size: 3.2rem;
+      color: $color-black;
+    }
+    .news-metadata {
+      border: 0;
+    }
+    .box .box__body {
+      padding: 0;
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

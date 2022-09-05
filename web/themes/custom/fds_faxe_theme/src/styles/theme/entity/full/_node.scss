@@ -51,32 +51,7 @@
   }
 }
 
-.node--view-mode-full {
 
-  .field--name-field-os2web-news-primaryimage {
-
-    img.image-style-os2web-normal {
-      width: 100%;
-    }
-  }
-
-  &.node--type-os2web-news {
-    .news-metadata {
-      padding-bottom: 5px;
-
-      font-weight: $font-weight-bold;
-      font-size: $small-font-size;
-
-      color: #666;
-      border-bottom: 1px solid #666;
-
-      .date {
-        margin-right: 15px;
-        display: block;
-      }
-    }
-  }
-}
 
 // --------------------------------------------------
 // Variants

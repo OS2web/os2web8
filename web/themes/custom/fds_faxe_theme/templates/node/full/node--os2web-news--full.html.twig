@@ -1,6 +1,7 @@
 {%
   set classes = [
     'node',
+    'node--os2web-news--full',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
@@ -9,7 +10,7 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<article {{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
   {% if label and not page %}
@@ -29,18 +30,21 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_os2web_news_primaryimage }}
-    
-    <h1>{{ content.field_os2web_news_heading | render | striptags }}</h1>
-    <div class="news-metadata">
-      <div class="">
-        <span class="date">{{ content.field_os2web_news_article_date | render | striptags }}</span>
-        <span>{{ content.field_os2web_news_article_author | render | striptags }}</span>
-      </div>
-    </div>
-    <div>{{ content.field_os2web_news_description | render | striptags }}</div>
-    {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_description', 'field_os2web_news_heading','field_os2web_news_article_date', 'field_os2web_news_article_author') }}
-  </div>
+  <div {{ content_attributes.addClass('node__content') }}>
 
+    {{ content.field_os2web_news_primaryimage }}
+    <div class="node--os2web-news--full-inner-wrap">
+      <h1>{{ content.field_os2web_news_heading | render | striptags }}</h1>
+      <div class="news-metadata">
+        <div class="">
+          <span class="date">
+            {{ content.field_os2web_news_article_date | render | striptags }}
+          </span>
+          <span>{{ content.field_os2web_news_article_author | render | striptags }}</span>
+        </div>
+      </div>
+      <div>{{ content.field_os2web_news_description | render | striptags }}</div>
+      {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_description', 'field_os2web_news_heading','field_os2web_news_article_date', 'field_os2web_news_article_author') }}
+    </div>
+  </div>
 </article>
