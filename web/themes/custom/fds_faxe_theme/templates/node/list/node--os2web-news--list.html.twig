@@ -11,7 +11,6 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-<div>
   <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
     <div class="col-md-4 col-12 entity-{{ view_mode|clean_class }}__image">
       {{ content.field_os2web_news_primaryimage }}
@@ -28,4 +27,3 @@
       </div>
     </div>
   </a>
-</div>
