@@ -280,12 +280,6 @@ body .page-container {
 
 
 .block-os2web-contact {
-  .box__heading {
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: rgba(0, 0, 0, 0.15);
-  }
-
   .region-sidebar-second & {
     padding-top: 0;
   }
@@ -407,13 +401,22 @@ body .page-container {
   }
 }
 
-.button--primary {
 
-  &, &:hover, &:focus {
-    font-weight: $font-weight-bold;
 
-    color: #fff;
-    background-color: $color-orange-004;
+.button.button-primary {
+  background-color: $background_color__button;
+  color: $color-black;
+  &:hover {
+    background-color: $background_color__button_hover;
+  }
+}
+.button.button-secondary {
+  background-color: $background_color__secondary;
+  color: $color-white;
+  border-color: $background_color__secondary;
+  &:hover {
+    background-color: $background_color__tertiary;
+    border-color: $background_color__tertiary;
   }
 }
 
@@ -426,6 +429,7 @@ body .page-container {
 
 .background-color--primary {
   background-color: $background_color__primary !important;
+  color: $color-white;
 }
 .background-color--secondary {
   color: #fff !important;

@@ -28,10 +28,11 @@
   border-radius: 3px;
   box-shadow: 0 1px 2px 0 rgba(27, 27, 29, .2);
   background-color: $background_color__primary;
+  color: $color-white;
 
-  .background-color--primary & {
-    background-color: $background_color__default;
-  }
+  // .background-color--primary & {
+  //   background-color: $background_color__default;
+  // }
 
   .field--name-field-os2web-news-heading {
 

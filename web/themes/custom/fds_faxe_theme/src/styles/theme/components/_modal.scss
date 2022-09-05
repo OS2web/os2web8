@@ -24,8 +24,17 @@
 
   .modal__container {
     min-width: 330px;
-
     padding: 15px;
+    .modal__header {
+      .modal__title {
+        font-size: 3.2rem;
+        font-weight: 400;
+      }
+    }
+    .modal__footer {
+      border: 0;
+      background-color: unset;
+    }
   }
 }
 
