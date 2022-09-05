@@ -21,6 +21,8 @@
 // --------------------------------------------------
 
 a.entity-list--os2web-news {
+  margin-left: -($side-shift-size);
+  margin-right: -($side-shift-size);
   max-width: 100%;
   img {
     width: 100%;
@@ -93,6 +95,8 @@ a.entity-list--os2web-news {
 }
 
 .node--os2web-news--full {
+  margin-left: -($side-shift-size);
+  margin-right: -($side-shift-size);
   margin-top: -28px;
   .field--name-field-os2web-news-primaryimage {
     img {

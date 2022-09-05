@@ -25,6 +25,8 @@
     padding-top: 0;
     [class*="search-page"] {
       padding: 40px 40px;
+      margin-left: -($side-shift-size);
+      margin-right: -($side-shift-size);
       h2 {
         margin: 0;
         margin-bottom: 4rem;
@@ -102,6 +104,8 @@
     }
     .view-os2web-search {
       padding: 0 40px 40px;
+      margin-left: -($side-shift-size);
+      margin-right: -($side-shift-size);
       .view-content {
         // fake ul
         display: block;
