@@ -36,7 +36,12 @@ body {
     }
   }
 
-  .accordion-content,
+  .accordion-content {
+    a {
+      margin: 0;
+      @include reset-border;
+    }
+  }
   .field--name-field-os2web-simple-text-body {
     a {
       margin: 3px 0;

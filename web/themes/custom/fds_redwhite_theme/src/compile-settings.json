@@ -4,6 +4,7 @@
     "src/javascripts/megamenu.js",
     "src/javascripts/font-resizer.js",
     "src/javascripts/a11y.js",
+    "src/javascripts/accordion.js",
     "src/javascripts/app.js",
     "src/javascripts/new-proposals.js",
     "src/javascripts/news.js"
