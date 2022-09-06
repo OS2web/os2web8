@@ -321,11 +321,13 @@ function getDynamicPaddingsAndBulletOffset() {
     }
   
     if(aTag.parentElement.tagName === "LI") {
-      if(aTag.parentElement.firstElementChild === aTag) {
+      if(aTag.parentElement.firstChild === aTag) {
         if(aTag.style.paddingTop) {
           let beforeElementTopOffset = parseInt(aTag.style.paddingTop) + 11
           aTag.parentElement.classList.add(`before-element-top-${beforeElementTopOffset}`)
         }
+      } else if(aTag.parentElement.firstChild.nodeValue === "\n") {
+        aTag.parentElement.removeChild(aTag.parentElement.firstChild)
       }
     }
   }
