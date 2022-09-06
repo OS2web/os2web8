@@ -102,7 +102,10 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content.field_os2web_page_heading }}
+    {{ content.field_os2web_page_intro }}
+    {{ content.field_os2web_page_primaryimage }}
+    {{ content|without('field_os2web_page_primaryimage', "field_os2web_page_heading", "field_os2web_page_intro") }}
     {% if show_last_update_date %}
     <div class="node-updated">
       {{ 'Last updated' | t }} {{ node.changed.value|date("d.m.Y") }}
