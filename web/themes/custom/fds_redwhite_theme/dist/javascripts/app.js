@@ -3602,28 +3602,58 @@ jQuery(document).mouseup(function(e) {
   }
 });
 
-let allATags = document.querySelectorAll('a');
-for (let i = 0; i < allATags.length; i++) {
-  let aTag = allATags[i];
-  let tagHeight = aTag.getBoundingClientRect().height
-  if(tagHeight < 44) {
-    aTag.style.paddingTop = 0 + "px"
-    aTag.style.paddingBottom = 0 + "px"
-    tagHeight = aTag.getBoundingClientRect().height
-    let remainigHeight = (44 - tagHeight)
-    aTag.style.paddingTop = Math.ceil(remainigHeight / 2) + "px"
-    aTag.style.paddingBottom = Math.ceil(remainigHeight / 2) + "px"
-  }
 
-  if(aTag.parentElement.tagName === "LI") {
-    if(aTag.parentElement.firstElementChild === aTag) {
-      if(aTag.style.paddingTop) {
-        let beforeElementTopOffset = parseInt(aTag.style.paddingTop) + 11
-        aTag.parentElement.classList.add(`before-element-top-${beforeElementTopOffset}`)
+
+function getDynamicPaddingsAndBulletOffset() {
+  let allATags = document.querySelectorAll('a');
+  for (let i = 0; i < allATags.length; i++) {
+    let aTag = allATags[i];
+    let tagHeight = aTag.getBoundingClientRect().height
+    if(tagHeight < 44) {
+      aTag.style.paddingTop = 0 + "px"
+      aTag.style.paddingBottom = 0 + "px"
+      tagHeight = aTag.getBoundingClientRect().height
+      let remainigHeight = (44 - tagHeight)
+      aTag.style.paddingTop = Math.ceil(remainigHeight / 2) + "px"
+      aTag.style.paddingBottom = Math.ceil(remainigHeight / 2) + "px"
+    }
+  
+    if(aTag.parentElement.tagName === "LI") {
+      if(aTag.parentElement.firstElementChild === aTag) {
+        if(aTag.style.paddingTop) {
+          let beforeElementTopOffset = parseInt(aTag.style.paddingTop) + 11
+          aTag.parentElement.classList.add(`before-element-top-${beforeElementTopOffset}`)
+        }
       }
     }
   }
 }
+let allAccordionButtons = document.querySelectorAll('.accordion-button')
+if(allAccordionButtons) {
+  allAccordionButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      setTimeout(() => {
+        let accordionBody = button.nextElementSibling
+        let allATags = accordionBody.querySelectorAll('a');
+        allATags.forEach(aTag => {
+          if(aTag.parentElement.tagName === "LI") {
+            if(aTag.parentElement.classList.value.startsWith("before-element-top")) {
+              const prefix = "before-element-top-";
+              const classes = aTag.parentElement.className.split(" ").filter(c => !c.startsWith(prefix));
+              aTag.parentElement.className = classes.join(" ").trim();
+            }
+          }
+
+          aTag.style.paddingTop = 0 + "px"
+          aTag.style.paddingBottom = 0 + "px"
+        })
+        getDynamicPaddingsAndBulletOffset();
+      })
+    })
+  })
+}
+
+getDynamicPaddingsAndBulletOffset();
 // Proposals form toggle.
 (function($) {
   "use strict";
