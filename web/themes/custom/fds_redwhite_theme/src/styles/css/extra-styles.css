@@ -419,7 +419,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   order: 2;
 }
 .view-os2web-page-content .row {
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 .view-os2web-page-content .field--type-text-long a {
@@ -644,7 +644,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   z-index: 1;
 }
 .entity-teaser--os2web-event .row {
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 .entity-teaser--os2web-event {
