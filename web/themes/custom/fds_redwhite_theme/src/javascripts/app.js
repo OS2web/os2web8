@@ -316,4 +316,13 @@ for (let i = 0; i < allATags.length; i++) {
     aTag.style.paddingTop = Math.ceil(remainigHeight / 2) + "px"
     aTag.style.paddingBottom = Math.ceil(remainigHeight / 2) + "px"
   }
+
+  if(aTag.parentElement.tagName === "LI") {
+    if(aTag.parentElement.firstElementChild === aTag) {
+      if(aTag.style.paddingTop) {
+        let beforeElementTopOffset = parseInt(aTag.style.paddingTop) + 11
+        aTag.parentElement.classList.add(`before-element-top-${beforeElementTopOffset}`)
+      }
+    }
+  }
 }

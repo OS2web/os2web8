@@ -1,0 +1,10 @@
+$max-offset: 37;
+
+@for $i from 1 through $max-offset {
+    .before-element-top-#{$i} {
+        &::before {
+            top: $i * 1px!important;
+            transform: none!important;
+        }
+    }
+}
