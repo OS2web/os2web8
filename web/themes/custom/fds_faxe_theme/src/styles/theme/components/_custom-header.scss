@@ -23,7 +23,12 @@ $header-top-menu-size-lg: 9rem;
 $header-top-menu-size-md: 7rem;
 $header-top-menu-size-sm: 5rem;
 .custom-header-row.custom-header-row--meta {
+  background-color: $color-white;
+  color: $color-black;
   height: $header-top-menu-size-sm;
+  a {
+    color: $color-black;
+  }
   @include media-breakpoint-up(md) {
     height: $header-top-menu-size-md;
   }
@@ -83,7 +88,8 @@ $header-top-menu-size-sm: 5rem;
 $header-bottom-menu-size: 7rem;
 .custom-header-row--desktop-navigation {
   min-height: $header-bottom-menu-size;
-  background-color: $background_color__navigation;
+  background-color: $gray-primary;
+  color: $color-black;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
@@ -114,7 +120,7 @@ $header-bottom-menu-size: 7rem;
           a {
             font-size: 2.2rem;
             display: block;
-            color: $color-white;
+            color: $color-black;
             &:focus {
               outline: 0;
             }
@@ -138,7 +144,7 @@ $header-bottom-menu-size: 7rem;
   .social-icon {
     height: $header-bottom-menu-size;
     width: $header-bottom-menu-size;
-    background-color: lighten($background_color__navigation, 10%);
+    background-color: $background_color__secondary;
     border-radius: 0;
     .icon {
       color: $color-white;

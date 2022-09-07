@@ -14,7 +14,7 @@
 // --------------------------------------------------
 
 body {
-  background-color: $color-background;
+  background-color: $gray-secondary;
 }
 
 // Increased specificity to win over base theme.
@@ -255,7 +255,7 @@ body .page-container {
               position: absolute;
             }
             &:hover {
-              background-color: $background_color__default;
+              background-color: $gray-primary;
               color: $background_color__primary;
             }
             &:focus {
@@ -404,19 +404,21 @@ body .page-container {
 
 
 .button.button-primary {
-  background-color: $background_color__button;
-  color: $color-black;
+  background-color: $background_color__default;
+  border-color: $background_color__default;
+  color: $color-white;
   &:hover {
-    background-color: $background_color__button_hover;
+    background-color: $background_color__secondary;
+    border-color: $background_color__secondary;
   }
 }
 .button.button-secondary {
   background-color: $background_color__secondary;
-  color: $color-white;
   border-color: $background_color__secondary;
+  color: $color-white;
   &:hover {
-    background-color: $background_color__tertiary;
-    border-color: $background_color__tertiary;
+    background-color: $background_color__default;
+    border-color: $background_color__default;
   }
 }
 
