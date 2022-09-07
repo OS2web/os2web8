@@ -19,25 +19,25 @@
 
       <div class="col-12 col-sm-6">
         {# Begin - subheading #}
-        {% if content.field_os2web_cnt_subheading %}
+        {% if content.field_os2web_cnt_subheading|render|trim %}
           {{ content.field_os2web_cnt_subheading }}
         {% endif %}
         {# End - subheading #}
 
         {# Begin - Fornavn Efternavn #}
-        {% if content.field_fornavn and content.field_efternavn %}
+        {% if content.field_fornavn|render|trim and content.field_efternavn|render|trim %}
           {{ content.field_fornavn }} {{ content.field_efternavn }}
         {% endif %}
         {# End - Fornavn Efternavn #}
 
         {# Begin - address #}
-        {% if content.field_adresse %}
+        {% if content.field_adresse|render|trim %}
           {{ content.field_adresse }}
         {% endif %}
         {# End - address #}
 
         {# Begin - zipcode city #}
-        {% if content.field_postnummer and content.field_by %}
+        {% if content.field_postnummer|render|trim and content.field_by|render|trim %}
           {{ content.field_postnummer }} {{ content.field_by }}
         {% endif %}
         {# End -city #}
@@ -45,25 +45,25 @@
         <div class="spacer"></div>
 
         {# Begin - Jobtitel #}
-        {% if content.field_jobtitel %}
+        {% if content.field_jobtitel|render|trim %}
           {{ content.field_jobtitel }}
         {% endif %}
         {# End - Jobtitel#}
 
         {# Begin - Arbejdsopgaver #}
-        {% if content.field_arbejdsopgaver %}
+        {% if content.field_arbejdsopgaver|render|trim %}
           {{ content.field_arbejdsopgaver }}
         {% endif %}
         {# End - Arbejdsopgaver#}
 
         {# Begin - Beskrivelse #}
-        {% if content.field_beskrivelse %}
+        {% if content.field_beskrivelse|render|trim %}
           {{ content.field_beskrivelse }}
         {% endif %}
         {# End - beskrivelse#}
 
         {# Begin - phone #}
-        {% if content.field_os2web_cnt_phone %}
+        {% if content.field_os2web_cnt_phone|render|trim %}
           <div class="field--name-field-os2web-cnt-phone">
             {{ 'Tlf.' | t }}: {{ content.field_os2web_cnt_phone.0|render|striptags|trim }}
           </div>
@@ -71,7 +71,7 @@
         {# End - phone #}
 
         {# Begin - Hovednummer #}
-        {% if content.field_hovednummer %}
+        {% if content.field_hovednummer|render|trim %}
           <div>
             {{ 'Dir.' | t }}: {{ content.field_hovednummer|render|striptags|trim }}
           </div>
@@ -79,7 +79,7 @@
         {# End - Hovednummer#}
 
         {# Begin - Direkte nummer #}
-        {% if content.direkte_nummer %}
+        {% if content.direkte_nummer|render|trim %}
           <div>
             {{ content.direkte_nummer }}
           </div>
@@ -87,7 +87,7 @@
         {# End - Direkte nummer#}
 
         {# Begin - Mobilnummer #}
-        {% if content.field_mobilnummer %}
+        {% if content.field_mobilnummer|render|trim %}
           <div>
             {{ 'Mobil' | t }}: {{ content.field_mobilnummer|render|striptags|trim }}
           </div>
@@ -95,7 +95,7 @@
         {# End - Mobilnummer#}
 
         {# Begin - Fax #}
-        {% if content.field_fax %}
+        {% if content.field_fax|render|trim %}
           <div>
             {{ 'Fax' | t }}: {{ content.field_fax|render|striptags|trim }}
           </div>
@@ -103,7 +103,7 @@
         {# End - Fax#}
 
         {# Begin - email #}
-        {% if content.field_os2web_cnt_email %}
+        {% if content.field_os2web_cnt_email|render|trim %}
           <div>
             {{ 'E-mail' | t }}:  <a href="mailto:{{ content.field_os2web_cnt_email.0|render|striptags|trim }}">{{ content.field_os2web_cnt_email.0|render|striptags|trim }}</a>
           </div>
@@ -111,7 +111,7 @@
         {# End - email #}
 
         {# Begin - link #}
-        {% if content.field_os2web_cnt_link %}
+        {% if content.field_os2web_cnt_link|render|trim %}
           <div>
             {{ content.field_os2web_cnt_link }}
           </div>
@@ -119,7 +119,7 @@
         {# End - link #}
 
         {# Begin - website #}
-        {% if content.field_os2web_cnt_website %}
+        {% if content.field_os2web_cnt_website|render|trim %}
           <div>
             <a href="{{ content.field_os2web_cnt_website.0 }}" target="_blank">{{ paragraph.field_os2web_cnt_website.0.value|trim('https://')|trim('http://')}}</a>
           </div>
@@ -127,7 +127,7 @@
         {# End - website #}
 
         {# Begin - facebook #}
-        {% if content.field_os2web_cnt_facebook %}
+        {% if content.field_os2web_cnt_facebook|render|trim %}
           <div>
             <a href="{{ content.field_os2web_cnt_facebook.0 }}" target="_blank">facebook.com</a>
           </div>
@@ -141,17 +141,11 @@
         {# End - open_hours #}
       </div>
 
-      <div class="col-12 spacer"></div>
+      <div class="col-12 spacer"><br></div>
 
       <div class="col-12 os2web_cnt_body">
         <p>Hvis du ønsker at sende følsomme eller fortrolige oplysninger til Ringsted Kommune, eksempelvis dit cpr.nr., oplysninger om dine helbredsforhold eller økonomiske situation, anbefales du at gøre det via Digital Post. <a href="#">Læs om beskyttelse af persondata</a></p>
-        {# Begin - body #}
-        {% if content.field_os2web_cnt_body %}
-          <div>
-            {{ content.field_os2web_cnt_body }}
-          </div>
-        {% endif %}
-        {# End - body #}
+
       </div>
     </div>
 
