@@ -47,19 +47,19 @@
 
   a {
     display: block;
-    border: 1px solid $background_color__button;
+    border: 1px solid $gray-helper-border;
     padding: 1.8rem 3rem;
     background-color: transparent;
     font-size: 1.6rem;
     text-decoration: none;
     margin-left: -1px;
-
+    transition: background-color 0.5s;
     span {
       text-transform: lowercase;
     }
     &:hover, &:focus, &:active {
       text-decoration: none!important;
-      background-color: $background_color__button_hover;
+      background-color: $gray-helper-bg;
     }
   }
 

@@ -34,11 +34,11 @@
     position: relative;
     font-size: 1.6rem;
     padding: 1rem 5rem 1rem 2rem;
-    font-weight: $font-weight-bold;
+    font-weight: 700;
     border-radius: 0 !important;
     background-image: none !important;
-    background-color: $background_color__tertiary;
-    color: $color-white;
+    background-color: $gray-primary;
+    color: $color-black;
     &:after {
       display: flex;
       position: absolute;
@@ -60,8 +60,8 @@
   
       content: $fa-var-plus;
   
-      color: #414141;      
-      background-color: $color-background;
+      color: $color-black;      
+      background-color: $color-white;
   
       border-radius: 25px;
     }
@@ -69,7 +69,8 @@
       outline: 0;
     }
     &[aria-expanded="true"] { //accordion button is open
-      background-color: $background_color__primary;
+      background-color: $background_color__default;
+      color: $color-white;
       &:after {
         content: $fa-var-minus;
         font-size: 0.8rem;
@@ -78,13 +79,13 @@
   }
   
   .accordion-content {
-    border: 1px solid gray;
+    border: 1px solid $gray-helper;
     border-top: 0;
     padding: 1.5rem 2rem;
-    background-color: $background_color__tertiary;
-    color: $color-white;
+    background-color: $color-white;
+    color: $color-black;
     * {
-      color: $color-white;
+      color: $color-black;
     }
     .field {
   

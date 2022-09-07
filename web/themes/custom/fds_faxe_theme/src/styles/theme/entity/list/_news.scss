@@ -29,9 +29,9 @@ a.entity-list--os2web-news {
     object-fit: cover;
   }
   &:hover {
-    background-color: $background_color__default_secondary;
+    background-color: $gray-tertiary;
     *:not( .field--name-field-os2web-news-heading .h4) {
-      color: $background_color__secondary;
+      color: $background_color__default;
     }
   }
   .entity-list__image {
@@ -58,7 +58,7 @@ a.entity-list--os2web-news {
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
       font-weight: normal;
-      color: $color-link;
+      color: $blue-primary;
     }
     .h4 {
       font-size: 2.4rem;

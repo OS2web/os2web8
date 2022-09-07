@@ -42,8 +42,8 @@
             margin: 0;
             input {
               width: 100%;
-              background-color: $background_color__default;
-              padding: 1.8rem 4rem;
+              background-color: $gray-secondary;
+              padding: 1.8rem 3rem;
               font-size: 1.6rem;
               color: $color-black;
               border: 0;
@@ -51,7 +51,7 @@
               height: 6rem;
               &::placeholder {
                 font-size: 1.6rem;
-                color: $color-primary-lightest;
+                color: $gray-helper-color;
               }
             }
           }
@@ -84,7 +84,7 @@
               pointer-events: none;
               font-family: FontAwesome;
               content: "\f002";
-              color: $background_color__default;
+              color: $color-white;
             }
             &:after {
               position: absolute;
@@ -96,7 +96,7 @@
               pointer-events: none;
               font-family: FontAwesome;
               content: "";
-              color: $background_color__default;
+              color: $color-white;
             }
           }
         }

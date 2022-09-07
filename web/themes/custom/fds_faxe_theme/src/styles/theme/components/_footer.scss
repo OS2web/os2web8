@@ -21,8 +21,8 @@
 // --------------------------------------------------
 
 footer {
-  border-top: 7rem solid $background_color__footer_secondary;
-  background-color: $background_color__footer_primary;
+  border-top: 7rem solid $background_color__secondary;
+  background-color: $background_color__default;
  
   .footer {
     padding-block: 8rem;
@@ -49,7 +49,7 @@ footer {
     .is-active > a:focus,
     .is-active > a:visited,
     .is-active > a:active {
-      color: $color__link_footer;
+      color: $color-white;
     }
 
     .logo {
