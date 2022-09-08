@@ -116,9 +116,9 @@
 							<img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo mr-5 logo--footer">
 						{% endif %}
 
-						{% if theme_settings.footer.footer_text %}
+						{% if theme_settings.branding.branding_toggle %}
 							<div class="footer-free-text">
-								{{ theme_settings.footer.footer_text }}
+								{{ theme_settings.branding.branding_text }}
 							</div>
 						{% endif %}
 					</div>
@@ -138,7 +138,7 @@
 							</div>
 						{% endif %}
 
-						
+
 
 						{% if theme_settings.contact_information.vat_no %}
 							<div>
@@ -160,7 +160,7 @@
 								{{ theme_settings.contact_information.giro_no }}
 							</div>
 						{% endif %}
-			
+
             {% if theme_settings.contact_information.business_owner_name
               or theme_settings.contact_information.email
               or theme_settings.contact_information.phone_readable %}{% endif %}
@@ -269,7 +269,7 @@
               </div>
             {% endif %}
           </div>
- 
+
           {{ page.footer_first }}
         </div>
 

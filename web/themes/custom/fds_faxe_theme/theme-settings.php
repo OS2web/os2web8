@@ -20,4 +20,19 @@ function fds_faxe_theme_form_system_theme_settings_alter(
     '#title' => t('enable '),
     '#default_value' => theme_get_setting('footer_show_latest_content'),
   ];
+  $form['branding'] = [
+    '#type' => 'details',
+    '#title' => t('Branding'),
+    '#group' => 'fds_base_theme',
+  ];
+  $form['branding']['branding_toggle'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Vis branding'),
+    '#default_value' => theme_get_setting('branding_toggle'),
+  ];
+  $form['branding']['branding_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Tekst'),
+    '#default_value' => theme_get_setting('branding_text'),
+  ];
 }
