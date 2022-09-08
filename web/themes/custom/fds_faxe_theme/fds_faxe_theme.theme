@@ -12,6 +12,8 @@ use Drupal\taxonomy\Entity\Term;
 function fds_faxe_theme_preprocess_page(array &$variables) {
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['footer']['footer_show_latest_content'] = theme_get_setting('footer_show_latest_content');
+  $variables['theme_settings']['branding']['branding_toggle'] = theme_get_setting('branding_toggle');
+  $variables['theme_settings']['branding']['branding_text'] = theme_get_setting('branding_text');
 }
 
 /**
