@@ -31,7 +31,7 @@
     {{ content.title }}
   </button>
 
-  {% if hasSelfserviceLink %}
+  {# {% if hasSelfserviceLink %}
     <div class="selfservice-links">
       {% for selfservicelink in _context['#selfservices'] %}
         <a href="{{ selfservicelink['url'] }}" class="button button-primary button--selfservice" target="_blank" aria-labelledby="label_{{ uniqueId }}">
@@ -39,7 +39,7 @@
         </a>
       {% endfor %}
     </div>
-  {% endif %}
+  {% endif %} #}
 
   <div id="{{ uniqueId }}" aria-hidden="true" class="accordion-content">
     {{ content.content }}
