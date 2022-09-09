@@ -288,7 +288,7 @@ $sidenav-list-dot-spacing: 22px;
   #block-fds-redwhite-theme-os2web-search-section {
     border-top: 1px solid $color-dark-gray2;
   }
-  #block-indholdfield, #block-postlitermenu {
+  [id*="block-indholdfield"], [id*="block-postlitermenu"] {
     padding-bottom: 50px;
     border-bottom: 1px solid $color-dark-gray2;
     h2 {
@@ -305,12 +305,16 @@ $sidenav-list-dot-spacing: 22px;
         background: transparent url("../images/sprite.png") no-repeat 0 -48px;
         display: block;
         position: absolute;
-		top: 13px;
-		// transform: translateY(-50%);
+		top: 3px;
         left: 0;
         width: 19px;
         height: 19px;
       }
+	  &[style*="padding-top"] {
+		  &::before {
+			top: 13px;
+		  }
+	  }
       &:hover::before, &:focus::before {
         background-position: -19px -48px;
       }
