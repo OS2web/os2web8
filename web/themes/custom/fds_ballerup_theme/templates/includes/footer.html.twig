@@ -1,7 +1,7 @@
 <div class="section section--social-icon-teasers">
   <div class="container">
     <div class="preheader">
-      <h2 class="h4">SOCIALE MEDIER</h2>
+      <h2 role="region" aria-label="SOCIALE MEDIER" class="h4">SOCIALE MEDIER</h2>
     </div>
 
     <br>
@@ -19,7 +19,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/facebook.jpg" alt="Facebook" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Facebook">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-facebook-f"></span>
                 </span>
@@ -39,7 +39,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/twitter.jpg" alt="Twitter" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Twitter">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-twitter-square"></span>
                 </span>
@@ -59,7 +59,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/google-plus.jpg" alt="Google+" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Google+">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-google-plus"></span>
                 </span>
@@ -79,7 +79,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/linkedin.jpg" alt="LinkedIn" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="LinkedIn">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-linkedin"></span>
                 </span>
@@ -99,7 +99,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/pinterest.jpg" alt="Pinterest" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Pinterest">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-pinterest"></span>
                 </span>
@@ -119,7 +119,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/instagram.jpg" alt="Instagram" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Instagram">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-instagram"></span>
                 </span>
@@ -139,7 +139,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/youtube.jpg" alt="Youtube" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Youtube">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-youtube"></span>
                 </span>
@@ -159,7 +159,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/vimeo.jpg" alt="Vimeo" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="Vimeo">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-vimeo"></span>
                 </span>
@@ -179,7 +179,7 @@
 
               <img src="{{ base_path ~ directory }}/dist/images/social-icon-teaser/github.jpg" alt="GitHub" />
 
-              <div class="social-icon-teaser__bar">
+              <div class="social-icon-teaser__bar"  role="region" aria-label="GitHub">
                 <span class="social-icon-teaser__icon">
                   <span class="icon fa fa-github"></span>
                 </span>
@@ -349,7 +349,8 @@
                   href="{{ theme_settings.social.facebook.url }}"
                   target="_blank"
                   class="social-icon social-icon--facebook social-icon--image"
-                  title="{{ theme_settings.social.facebook.tooltip }}">
+                  title="{{ theme_settings.social.facebook.tooltip }}"
+                  aria-label={{"facebook" | trans}}>
                   <span class="icon fa fa-facebook-f"></span>
                 </a>
               </div>
@@ -361,7 +362,8 @@
                   href="{{ theme_settings.social.twitter.url }}"
                   target="_blank"
                   class="social-icon social-icon--twitter social-icon--image"
-                  title="{{ theme_settings.social.twitter.tooltip }}">
+                  title="{{ theme_settings.social.twitter.tooltip }}"
+                  aria-label={{'twitter' | trans}}>
                   <span class="icon fa fa-twitter-square"></span>
                 </a>
               </div>
@@ -373,7 +375,8 @@
                   href="{{ theme_settings.social.googleplus.url }}"
                   target="_blank"
                   class="social-icon social-icon--google-plus"
-                  title="{{ theme_settings.social.googleplus.tooltip }}">
+                  title="{{ theme_settings.social.googleplus.tooltip }}"
+                  aria-label={{'googleplus' | trans}}>
                   <span class="icon fa fa-google-plus"></span>
                 </a>
               </div>
@@ -385,7 +388,8 @@
                   href="{{ theme_settings.social.linkedin.url }}"
                   target="_blank"
                   class="social-icon social-icon--linkedin"
-                  title="{{ theme_settings.social.linkedin.tooltip }}">
+                  title="{{ theme_settings.social.linkedin.tooltip }}"
+                  aria-label={{'linkedin' | trans}}>
                   <span class="icon fa fa-linkedin"></span>
                 </a>
               </div>
@@ -397,7 +401,8 @@
                   href="{{ theme_settings.social.pinterest.url }}"
                   target="_blank"
                   class="social-icon social-icon--pinterest"
-                  title="{{ theme_settings.social.pinterest.tooltip }}">
+                  title="{{ theme_settings.social.pinterest.tooltip }}"
+                  aria-label={{'pinterest' | trans}}>
                   <span class="icon fa fa-pinterest"></span>
                 </a>
               </div>
@@ -409,7 +414,8 @@
                   href="{{ theme_settings.social.instagram.url }}"
                   target="_blank"
                   class="social-icon social-icon--instagram social-icon--image"
-                  title="{{ theme_settings.social.instagram.tooltip }}">
+                  title="{{ theme_settings.social.instagram.tooltip }}"
+                  aria-label={{'instagram' | trans}}>
                   <span class="icon fa fa-instagram"></span>
                 </a>
               </div>
@@ -421,7 +427,8 @@
                   href="{{ theme_settings.social.youtube.url }}"
                   target="_blank"
                   class="social-icon social-icon--youtube"
-                  title="{{ theme_settings.social.youtube.tooltip }}">
+                  title="{{ theme_settings.social.youtube.tooltip }}"
+                  aria-label={{'youtube' | trans}}>
                   <span class="icon fa fa-youtube"></span>
                 </a>
               </div>
@@ -433,7 +440,8 @@
                   href="{{ theme_settings.social.vimeo.url }}"
                   target="_blank"
                   class="social-icon social-icon--vimeo"
-                  title="{{ theme_settings.social.vimeo.tooltip }}">
+                  title="{{ theme_settings.social.vimeo.tooltip }}"
+                  aria-label={{'vimeo' | trans}}>
                   <span class="icon fa fa-vimeo"></span>
                 </a>
               </div>
@@ -445,7 +453,8 @@
                   href="{{ theme_settings.social.github.url }}"
                   target="_blank"
                   class="social-icon social-icon--github"
-                  title="{{ theme_settings.social.github.tooltip }}">
+                  title="{{ theme_settings.social.github.tooltip }}"
+                  aria-label={{'github' | trans}}>
                   <span class="icon fa fa-github"></span>
                 </a>
               </div>
