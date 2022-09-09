@@ -447,6 +447,8 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   margin-top: 0;
   font-size: 2.2rem;
   font-family: "Museo 500", sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .view-os2web-page-content .field--type-link a {
   position: absolute;
@@ -597,6 +599,8 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   margin-top: 0;
   font-size: 2.2rem;
   font-family: "Museo 500", sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .view-os2web-news .field--type-link a {
   position: absolute;
