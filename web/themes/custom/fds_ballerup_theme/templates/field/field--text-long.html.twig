@@ -58,7 +58,7 @@
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-            <div role="region" aria-label={{ item.content | render | striptags }}>
+            <div role="region" aria-label={{ item.content | render | striptags | trim }}>
                 {{ field_name | render | striptags }}
             </div>
         </div>
@@ -67,7 +67,7 @@
   {% else %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
-        <div role="region" aria-label={{ item.content | render | striptags }}>
+        <div role="region" aria-label={{ item.content | render | striptags | trim }}>
             {{ item.content | render | striptags  }}
         </div>
       </div>
@@ -81,7 +81,7 @@
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item') }}>
-        <div role="region" aria-label={{ item.content | render | striptags }}>
+        <div role="region" aria-label={{ item.content | render | striptags | trim }}>
             {{ field_name | render | striptags }}
         </div>
       </div>
