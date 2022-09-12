@@ -326,7 +326,7 @@ function getDynamicPaddingsAndBulletOffset() {
           let beforeElementTopOffset = parseInt(aTag.style.paddingTop) + 11
           aTag.parentElement.classList.add(`before-element-top-${beforeElementTopOffset}`)
         }
-      } else if(aTag.parentElement.firstChild.nodeValue === "\n") {
+      } else if(aTag.parentElement.firstChild.nodeValue.trim() === "") {
         aTag.parentElement.removeChild(aTag.parentElement.firstChild)
       }
     }
