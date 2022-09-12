@@ -74,8 +74,10 @@
   {% if type|clean_class != 'radio' and type|clean_class != 'checkbox' %}
     {{ label }}
   {% endif %}
-
-  {{ children }}
+  <label style="visibility: collapse; text-indent: -9999px;">
+  input label
+    {{ children }}
+  </label>
 
   {% if type|clean_class == 'radio' or type|clean_class == 'checkbox' %}
     {{ label }}
