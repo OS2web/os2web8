@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ballerup_d7_migration\Utility;
+namespace Drupal\faxe_d7_migration\Utility;
 
 use Drupal\Core\Database\Database;
 use Drupal\file\Entity\File;
@@ -12,7 +12,7 @@ use Drupal\taxonomy\Entity\Term;
 
 class MigrationHelper {
 
-  public static $siteUrl = 'https://ballerup.dk';
+  public static $siteUrl = 'https://lokalarkiv.faxekommune.dk/';
 
   function createUrlFromNid($nid) {
     return MigrationHelper::$siteUrl . '/node/' . $nid;
@@ -42,39 +42,32 @@ class MigrationHelper {
    * @return array
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function createAccordionItemParagraph($field_accordion) {
-    if (!$field_accordion) {
+  /**
+   * Create accordion paragraph.
+   *
+   * @param $field_accordion
+   *
+   * @return array
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  function createAccordionItemParagraph($field_paragraph_text) {
+    if (!$field_paragraph_text) {
       return [];
     }
-
-    $title = $field_accordion['manual_title'];
-    $text = $field_accordion['manual_text'];
-
     // Creating text paragraph.
     $text_paragraph = Paragraph::create([
       'type' => 'os2web_simple_text_paragraph',
       'field_os2web_simple_text_heading' => '',
       'field_os2web_simple_text_body' => [
-        'value' => $text,
+        'value' => $field_paragraph_text['value'],
         'format' => 'wysiwyg_tekst'
       ]
     ]);
     $text_paragraph->save();
 
-    // Creating accordion item paragraph.
-    $accordion_item_paragraph = Paragraph::create([
-      'type' => 'os2web_accordion_item',
-      'field_os2web_accordion_item_head' => $title,
-      'field_os2web_accordion_item_ref' => [
-        'target_id' => $text_paragraph->id(),
-        'target_revision_id' =>  $text_paragraph->getRevisionId()
-      ]
-    ]);
-    $accordion_item_paragraph->save();
-
     return [
-      'target_id' => $accordion_item_paragraph->id(),
-      'target_revision_id' => $accordion_item_paragraph->getRevisionId(),
+      'target_id' => $text_paragraph->id(),
+      'target_revision_id' =>  $text_paragraph->getRevisionId(),
     ];
   }
 
@@ -140,11 +133,11 @@ class MigrationHelper {
         ->fetchField();
 
       if ($fileUrl) {
-        //replacing public:// to https://ballerup.dk/sites/default/files/
+        //replacing public:// to https://ringsted.dk/sites/default/files/
         $fileUrl = preg_replace('/(public:\/\/)/', MigrationHelper::$siteUrl . '/sites/default/files/', $fileUrl);
       }
     }
-
+var_dump($fileUrl);
     return $fileUrl;
   }
 
@@ -173,7 +166,7 @@ class MigrationHelper {
         ->execute()
         ->fetchField();
     }
-
+    var_dump($fileUrl);
     return $fileUrl;
   }
 
@@ -207,10 +200,9 @@ class MigrationHelper {
       $file->setPermanent();
       $file->save();
     }
-
+    var_dump($file->id());
     return $file->id();
   }
-
 
   /**
    * Helper function to find local node by remote ID.

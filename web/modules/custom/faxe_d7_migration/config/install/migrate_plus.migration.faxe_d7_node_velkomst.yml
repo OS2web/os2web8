@@ -35,6 +35,12 @@ process:
           plugin: default_value
           default_value: 'wysiwyg_tekst'
   status: status
+  moderation_state:
+    plugin: callback
+    callable:
+      - 'Drupal\ballerup_d7_migration\Utility\MigrationHelper'
+      - setModerationState
+    source: status
   created: created
   changed: changed
   #promote: promote

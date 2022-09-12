@@ -2,7 +2,7 @@ id: faxe_d7_contact_box
 label: Faxe D7 Contact Box
 migration_tags:
   - 'Drupal 7'
-migration_group: ballerup_d7
+migration_group: faxe_d7
 deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
   plugin: d7_node

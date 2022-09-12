@@ -1,0 +1,20 @@
+id: faxe_d7_paragraph_accordion_items
+label: Faxe D7 Paragraph Accordion Items
+migration_tags:
+  - 'Drupal 7'
+migration_group: faxe_d7
+source:
+  plugin: d7_paragraphs_item
+  bundle: afsnit_m_billede
+  track_changes: true
+process:
+  field_os2web_accordion_heading: field_paragraph_header
+  field_os2web_accordion_reference:
+    plugin: callback
+    callable:
+      - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+      - createAccordionItemParagraph
+    source: field_paragraph_text
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: os2web_accordion_item
