@@ -43,14 +43,14 @@ body a {
   font-weight: bold;
 
   &.form-submit {
-    color: $button-primary-color;
-    background-color: $button-primary-bg;
-    border-color: $button-primary-border-color;
+    color: $color-white;
+    background-color: $background_color__default;
+    border-color: $background_color__default;
 
     &:hover,
     &.button-hover {
-      background-color: $button-primary-hover-bg;
-      border-color: $button-primary-hover-border-color;
+      background-color: $background_color__secondary;
+      border-color: $background_color__secondary;
     }
 
     &:active,
@@ -314,12 +314,13 @@ body .page-container {
 }
 
 .button--primary {
-
-  &, &:hover, &:focus {
+  background-color: $background_color__default;
+  border-color: $background_color__default;
+  color: $color-white;
+  &:hover, &:focus {
     font-weight: $font-weight-bold;
-
-    color: #fff;
-    background-color: $color-orange-004;
+    background-color: $background_color__secondary;
+    border-color: $background_color__secondary;
   }
 }
 
@@ -332,10 +333,11 @@ body .page-container {
 
 .background-color--primary {
   color: #fff !important;
-  background-color: $color-green-001 !important;
+  background-color: $background_color__default !important;
 }
 .background-color--secondary {
-  background-color: #fff;
+  background-color: $background_color__secondary !important;
+
 }
 .background-color--tertiary {
   color: #fff !important;

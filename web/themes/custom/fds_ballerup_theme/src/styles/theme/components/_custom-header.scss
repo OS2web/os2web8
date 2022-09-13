@@ -48,7 +48,8 @@
 .custom-header-row--meta {
   padding-top: 2rem;
   padding-bottom: 1rem;
-
+  background-color: $color-white;
+  color: $color-black;
   .flexy-row {
     align-items: initial;
   }
@@ -77,8 +78,8 @@
   }
 }
 .custom-header-row--desktop-navigation {
-  background-color: $color-data-orange-001;
-
+  background-color: $gray-primary;
+  color: $color-black;
   .menu {
 
     a {
@@ -87,7 +88,7 @@
       font-size: $h4-font-size;
       text-transform: uppercase;
 
-      color: #fff;
+      color: $color-black;
 
       &, &:hover {
         text-decoration: none;
@@ -95,8 +96,7 @@
 
       &:hover, &:focus, &.is-active {
         outline: none;
-        color: $color-data-orange-001;
-        background-color: #fff;
+
       }
     }
   }

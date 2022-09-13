@@ -69,7 +69,8 @@
   border-radius: 0 !important;
 
   background-image: none !important;
-
+  background-color: $gray-primary;
+  color: $color-black;
   &, &:hover, &:focus {
     background-color: #fff;
   }
@@ -96,17 +97,17 @@
 
     content: $fa-var-plus;
 
-    color: #243544;
-    border: 1px solid #243544;
-    background-color: #f5f7f8;
+    color: $color-black;
+    border: 1px solid $color-black;
+    background-color: $color-white;
 
     border-radius: 25px;
   }
 
   &[aria-expanded="true"] {
-
+    background-color: $background_color__default;
+    color: $color-white;
     &, &:hover, &:focus {
-      background-color: #fff;
     }
 
     &:after {
@@ -139,7 +140,7 @@
   text-align: center;
   border: 0;
 
-  color: $color-orange-004;
+  color: $background_color__default;
   background-color: transparent;
 
   &:focus {

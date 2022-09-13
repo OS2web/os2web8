@@ -54,7 +54,7 @@ a.social-icon-teaser {
   text-transform: uppercase;
 
   color: #fff;
-  background-color: rgba(180,65,46,0.85);
+  background-color: rgba($background_color__default ,0.85);
 }
 .social-icon-teaser__icon {
   display: flex;
@@ -70,7 +70,7 @@ a.social-icon-teaser {
 
   border-radius: 100%;
 
-  color: rgba(180,65,46,0.85);
+  color: rgba($background_color__default ,0.85);
   background-color: #fff;
 
   .icon {

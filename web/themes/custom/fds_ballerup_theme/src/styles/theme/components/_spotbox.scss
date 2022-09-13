@@ -33,7 +33,7 @@
   &, &:hover, &:focus, &:visited {
     color: $color-text;
     background-color: #fff;
-    outline-color: $color-orange-004;
+    outline-color: $background_color__default;
   }
 
   .field--name-title,
@@ -210,7 +210,7 @@ a.spotbox {
     content: "keyboard_backspace";
     transform: rotate(180deg);
 
-    color: $color-orange-004;
+    color: $background_color__default;
   }
 }
 
@@ -260,7 +260,7 @@ a.spotbox {
     content: "keyboard_backspace";
     transform: rotate(180deg);
 
-    color: $color-orange-004;
+    color: $background_color__default;
   }
 }
 
@@ -294,7 +294,7 @@ a.spotbox {
     content: "keyboard_backspace";
     transform: rotate(180deg);
 
-    color: $color-orange-004;
+    color: $background_color__default;
   }
 }
 
@@ -305,7 +305,7 @@ a.spotbox {
     box-shadow: none;
 
     color: #fff;
-    background-color: $color-green-001 !important;
+    background-color: $background_color__default !important;
 
     h1, h2, h3, h4, h5, h6 {
       text-transform: uppercase;
@@ -345,14 +345,14 @@ a.spotbox {
   &.spotbox--background-color-primary {
 
     &, &:hover, &:focus, &:visited {
-      background-color: $color-green-001 !important;
+      background-color: $background_color__default !important;
     }
   }
 
   &.spotbox--background-color-secondary {
 
     &, &:hover, &:focus, &:visited {
-      background-color: $color-orange-005 !important;
+      background-color: $background_color__secondary !important;
     }
   }
 
@@ -387,7 +387,7 @@ a.spotbox {
     content: "keyboard_backspace";
     transform: rotate(180deg);
 
-    color: $color-orange-004;
+    color: $background_color__default;
   }
 }
 

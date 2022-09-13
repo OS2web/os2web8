@@ -93,7 +93,7 @@ $sidenav-list-dot-spacing: 22px;
   }
 
   .sidenav-sub_list {
-    background-color: $color-green-002;
+    background-color: $background_color__secondary;
 
     > li {
       border-top: 0;
@@ -117,7 +117,7 @@ $sidenav-list-dot-spacing: 22px;
 
         font-size: 22px;
 
-        color: $color-orange-004;
+        color: $background_color__default;
       }
 
       &:hover {
