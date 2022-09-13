@@ -32,6 +32,6 @@ destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: os2web_accordion
 migration_dependencies:
-  required:
+  required: {}
+  optional:
     - faxe_d7_paragraph_accordion_items
-  optional: {}

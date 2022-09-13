@@ -114,5 +114,5 @@ migration_dependencies:
   required:
     - faxe_d7_contact_box
     - faxe_d7_paragraph_simple_text
+  optional:
     - faxe_d7_paragraph_accordion
-  optional: {}

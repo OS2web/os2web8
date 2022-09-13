@@ -8,8 +8,8 @@ source:
   bundle: afsnit_m_billede
   track_changes: true
 process:
-  field_os2web_accordion_heading: field_paragraph_header
-  field_os2web_accordion_reference:
+  field_os2web_accordion_item_head: field_paragraph_header
+  field_os2web_accordion_item_ref:
     plugin: callback
     callable:
       - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
@@ -18,3 +18,6 @@ process:
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: os2web_accordion_item
+migration_dependencies:
+  required: {}
+  optional: {}
