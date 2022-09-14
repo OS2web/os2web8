@@ -12,7 +12,8 @@ use Drupal\taxonomy\Entity\Term;
 
 class MigrationHelper {
 
-  public static $siteUrl = 'https://lokalarkiv.faxekommune.dk/';
+  public static $siteUrl = 'https://lokalarkiv.faxekommune.dk';
+  public static $fileFolderPath = 'lokalarkiv.subsites.faxekommune.dk';
 
   function createUrlFromNid($nid) {
     return MigrationHelper::$siteUrl . '/node/' . $nid;
@@ -134,10 +135,9 @@ class MigrationHelper {
 
       if ($fileUrl) {
         //replacing public:// to https://ringsted.dk/sites/default/files/
-        $fileUrl = preg_replace('/(public:\/\/)/', MigrationHelper::$siteUrl . '/sites/default/files/', $fileUrl);
+        $fileUrl = preg_replace('/(public:\/\/)/', MigrationHelper::$siteUrl . '/sites/'. MigrationHelper::$fileFolderPath .'/files/', $fileUrl);
       }
     }
-var_dump($fileUrl);
     return $fileUrl;
   }
 
@@ -166,7 +166,6 @@ var_dump($fileUrl);
         ->execute()
         ->fetchField();
     }
-    var_dump($fileUrl);
     return $fileUrl;
   }
 
@@ -200,7 +199,6 @@ var_dump($fileUrl);
       $file->setPermanent();
       $file->save();
     }
-    var_dump($file->id());
     return $file->id();
   }
 
