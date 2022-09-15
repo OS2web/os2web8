@@ -202,6 +202,43 @@ class MigrationHelper {
     return $file->id();
   }
 
+
+  /**
+   * Create wrapper paragraph.
+   *
+   * @param $field_os2web_base_field_spotbox
+   *
+   * @return array
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  function createWrapperParagraph($field_os2web_base_field_spotbox){
+    if (!$field_os2web_base_field_spotbox) {
+      return [];
+    }
+    $spotbox_paragraph = Paragraph::create([
+      'type' => 'os2web_spotbox_reference',
+      'field_os2web_spotbox_reference' => [
+        'target_id' => $field_os2web_base_field_spotbox
+      ]
+    ]);
+
+    $spotbox_paragraph->save();
+    // Creating os2web_wrapper paragraph.
+    $os2web_wrapper_paragraph = Paragraph::create([
+      'type' => 'os2web_wrapper',
+      'field_os2web_paragraphs' => [
+        'target_id' => $spotbox_paragraph->id(),
+        'target_revision_id' =>  $spotbox_paragraph->getRevisionId()
+      ]
+    ]);
+    $os2web_wrapper_paragraph->save();
+
+    return [
+      'target_id' => $os2web_wrapper_paragraph->id(),
+      'target_revision_id' => $os2web_wrapper_paragraph->getRevisionId(),
+    ];
+  }
+
   /**
    * Helper function to find local node by remote ID.
    *

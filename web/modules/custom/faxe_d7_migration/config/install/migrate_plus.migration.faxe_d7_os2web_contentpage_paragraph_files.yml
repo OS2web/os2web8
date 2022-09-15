@@ -1,31 +1,27 @@
-id: faxe_d7_spotbox
-label: Faxe D7 Spotbox
+id: faxe_d7_os2web_contentpage_paragraph_files
+label: Faxe D7 OS2Web contentpage files
 migration_tags:
   - 'Drupal 7'
 migration_group: faxe_d7
 deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
   plugin: d7_node
-  node_type: os2web_spotbox_box
+  node_type: os2web_base_contentpage
   track_changes: true
 process:
-  name: title
-  field_os2web_spotbox_link:
-    - plugin: field_link
-      source: field_spot_link
   migrate_file_url_source:
     - plugin: extract
-      source: field_os2web_spotbox_big_image
+      source: field_os2web_base_field_media
       default: ''
       index:
-        - 0
+       - 0
     - plugin: callback
       callable:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         - getFileDownloadUrl
   migrate_file_url_destination:
     - plugin: extract
-      source: field_os2web_spotbox_big_image
+      source: field_os2web_base_field_media
       default: ''
       index:
         - 0
@@ -46,14 +42,8 @@ process:
       callable:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         -  createFileManaged
-  field_os2web_spotbox_bg_image/target_id: '@migrate_file_fid'
-  field_os2web_spotbox_bg_image/alt: title
-  moderation_state:
-    plugin: callback
-    callable:
-      - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
-      - setModerationState
-    source: status
+  field_os2web_files_files/target_id: '@migrate_file_fid'
+  field_os2web_files_files/alt: title
 destination:
-  plugin: 'entity:os2web_spotbox'
-  default_bundle: os2web_spotbox_box
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: os2web_files_paragraph

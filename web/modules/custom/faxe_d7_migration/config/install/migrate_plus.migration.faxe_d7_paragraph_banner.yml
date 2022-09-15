@@ -1,21 +1,21 @@
-id: faxe_d7_spotbox
-label: Faxe D7 Spotbox
+id: faxe_d7_paragraph_banner
+label: Faxe D7 Banner
 migration_tags:
   - 'Drupal 7'
 migration_group: faxe_d7
 deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
   plugin: d7_node
-  node_type: os2web_spotbox_box
+  node_type: banner
   track_changes: true
 process:
-  name: title
-  field_os2web_spotbox_link:
+  field_os2web_banner_heading: field_banner_headline
+  field_os2web_banner_links:
     - plugin: field_link
-      source: field_spot_link
+      source: field_knap_link
   migrate_file_url_source:
     - plugin: extract
-      source: field_os2web_spotbox_big_image
+      source: field_banner_billede
       default: ''
       index:
         - 0
@@ -25,7 +25,7 @@ process:
         - getFileDownloadUrl
   migrate_file_url_destination:
     - plugin: extract
-      source: field_os2web_spotbox_big_image
+      source: field_banner_billede
       default: ''
       index:
         - 0
@@ -46,14 +46,16 @@ process:
       callable:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         -  createFileManaged
-  field_os2web_spotbox_bg_image/target_id: '@migrate_file_fid'
-  field_os2web_spotbox_bg_image/alt: title
-  moderation_state:
-    plugin: callback
-    callable:
-      - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
-      - setModerationState
-    source: status
+  field_os2web_banner_image/target_id: '@migrate_file_fid'
+  field_os2web_banner_image/alt: title
+  field_os2web_banner_body:
+    - plugin: sub_process
+      source: field_banner_text
+      process:
+        value: value
+        format:
+          plugin: default_value
+          default_value: 'wysiwyg_tekst'
 destination:
-  plugin: 'entity:os2web_spotbox'
-  default_bundle: os2web_spotbox_box
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: os2web_banner_paragraph
