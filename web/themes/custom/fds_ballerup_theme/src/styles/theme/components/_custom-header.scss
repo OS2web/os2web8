@@ -78,8 +78,8 @@
   }
 }
 .custom-header-row--desktop-navigation {
-  background-color: $gray-primary;
-  color: $color-black;
+  background-color: $background_color__default;
+  color: $color-white;
   .menu {
 
     a {
@@ -88,15 +88,23 @@
       font-size: $h4-font-size;
       text-transform: uppercase;
 
-      color: $color-black;
+      color: $color-white;
 
-      &, &:hover {
-        text-decoration: none;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
-
+      
       &:hover, &:focus, &.is-active {
         outline: none;
-
+      }
+      
+    }
+    .menu-item--active-trail {
+      a {
+        text-decoration: none;
+        background-color: $color-white;
+        color: $background_color__default;
       }
     }
   }
@@ -104,7 +112,7 @@
 .custom-header-row--mobile-navigation {
   height: 50px;
 
-  background-color: $color-data-orange-001;
+  background-color: $color-white;
 }
 
 .custom-header__logo {

@@ -105,8 +105,6 @@
   }
 
   &[aria-expanded="true"] {
-    background-color: $background_color__default;
-    color: $color-white;
     &, &:hover, &:focus {
     }
 

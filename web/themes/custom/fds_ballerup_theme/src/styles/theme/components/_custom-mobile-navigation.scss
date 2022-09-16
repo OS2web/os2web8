@@ -39,8 +39,8 @@ $distance-from-top: 78px;
 
   font-size: 2.4rem;
 
-  color: $background_color__default;
-  background-color: #e6e6e6;
+  color: $gray-helper-bg-2;
+  background-color: #f2f2f2;
 
   .toolbar-vertical & {
     top: $distance-from-top + 39px;
@@ -123,7 +123,7 @@ $distance-from-top: 78px;
   margin-left: 80px;
   margin-right: 10px;
 
-  background-color: #fff;
+  background-color: $background_color__default;
 
   .custom-mobile-navigation--open & {
     margin-left: 0;
@@ -155,14 +155,14 @@ $distance-from-top: 78px;
 
     a {
       padding: 14px 80px 14px 15px;
-
+      background-color: $background_color__default;
       text-decoration: none;
       text-transform: uppercase;
+      color: $color-white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-      border-bottom: 1px solid #dadde0;
-
-      &, &.is-active, &:hover, &:focus {
-        color: $background_color__default;
+      &.is-active, &:hover, &:focus {
+        color: $color-white;
       }
 
       .custom-mobile-navigation--open & {
@@ -174,7 +174,7 @@ $distance-from-top: 78px;
 .custom-mobile-navigation-popup__navigation--horizontal {
   display: none;
 
-  background-color: #fff;
+  background-color: $background_color__default;
 
   .custom-mobile-navigation--open & {
     display: block;
@@ -196,10 +196,10 @@ $distance-from-top: 78px;
       font-weight: $font-weight-bold;
       text-decoration: none;
 
-      color: $color-text;
+      color: $color-white;
 
       &:hover, &:focus {
-        color: $color-primary;
+        color: $color-white;
         text-decoration: underline;
       }
     }
