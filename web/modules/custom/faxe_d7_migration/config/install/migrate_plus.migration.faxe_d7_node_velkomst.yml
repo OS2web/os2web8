@@ -38,7 +38,7 @@ process:
   moderation_state:
     plugin: callback
     callable:
-      - 'Drupal\ballerup_d7_migration\Utility\MigrationHelper'
+      - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
       - setModerationState
     source: status
   created: created
