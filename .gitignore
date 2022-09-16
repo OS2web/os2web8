@@ -55,3 +55,6 @@ tmp/*
 !tmp/.gitkeep
 sessions/*
 !sessions/.gitkeep
+
+# Ignore FederationMetadata.xml files
+[Ff]ederation[Mm]etadata.xml
