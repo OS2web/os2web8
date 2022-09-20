@@ -80,10 +80,11 @@
 .custom-header-row--desktop-navigation {
   background-color: $background_color__default;
   color: $color-white;
+  height: 50px;
   .menu {
 
     a {
-      padding: 18px 15px;
+      padding: 14px 15px;
 
       font-size: $h4-font-size;
       text-transform: uppercase;
