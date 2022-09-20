@@ -46,7 +46,32 @@ Read more about the Drush commands for Migrate API on [Migrate tools](https://ww
     ```
     drush migrate:import faxe_d7_contact_box
     ```
+* Migrate Accordions:
+   ```
+   drush migrate:import faxe_d7_paragraph_accordion_items
+   ```
+  ```
+   drush migrate:import faxe_d7_paragraph_accordion
+   ```
 
+* Migrate Banners:
+   ```
+   drush migrate:import faxe_d7_paragraph_banner
+   ```
+
+* Migrate Spotbox:
+   ```
+   drush migrate:import faxe_d7_spotbox
+   ```
+
+* Migrate Inholdside page:
+   ```
+   drush migrate:import faxe_d7_node_indholdside
+   ```
+* Migrate Events:
+   ```
+   drush migrate:import faxe_d7_node_os2web_event
+   ```
 ## Migration fixes
 Some parts were too complication or not possible to be solved by only running the migrations.
 They require extra scripts to run after the migration is done. See *scripts* directory
