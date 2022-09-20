@@ -18,14 +18,14 @@
       {{ content.field_os2web_news_article_date }}
       {{ content.field_os2web_news_heading }}
 
-      {% set text = content.field_os2web_news_intro | render %}
+      {% set text = content.field_os2web_news_description | render %}
       <div class="field field--type-body">{{ text | striptags }}</div>
 
-      <div class="field--type-link">
+      {# <div class="field--type-link">
         <span class="fake-link">
           {{ 'Read more' | trans }}
         </span>
-      </div>
+      </div> #}
     </div>
   </a>
 </div>
