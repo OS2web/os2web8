@@ -87,6 +87,7 @@ html[style*="font-size: 23px"] .search-container .action-buttons .increase-font-
   display: none;
   width: 21px;
   margin-right: 5px;
+  min-height: unset!important;
 }
 
 .action-button__icon--green {

@@ -1,5 +1,8 @@
 // FRONT-TOP-BANNER
 $block-height: 465px;
+.soeg-block-wrap {
+  min-height: $block-height;
+}
 .hero-block {
   overflow: hidden;
   color: $color-white;
@@ -7,14 +10,24 @@ $block-height: 465px;
     min-height: $block-height;
   }
   .hero-img {
-    right: 0;
+    top: 0;
     bottom: 0;
-    width: 40%;
-    height: $block-height;
+    right: -25px;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    width: 43%;
+    width: 45%;
     display: block;
+    .field--name-field-image {
+      min-height: 500px;
+      img {
+        object-fit: cover;
+        aspect-ratio: 2/1;
+        height: 100%;
+        display: block;
+        position: absolute;
+      }
+    }
   }
   .hero-content {
     padding-bottom: 85px;
