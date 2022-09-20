@@ -205,13 +205,14 @@
 }
 
 
-
+.paragraph--type--os2web-menu-links-paragraph {
+  margin-top: -35px;
+}
 // Desktop - and up
 @include media-breakpoint-up(md) {
   // FRONT-MENU
   .paragraph--type--os2web-menu-links-paragraph {
-    //margin-top: -25px;
-    margin-top: 15px;
+    margin-top: -15px;
   }
 }
 
