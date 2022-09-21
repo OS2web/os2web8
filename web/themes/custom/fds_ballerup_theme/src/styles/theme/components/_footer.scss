@@ -19,7 +19,25 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
+.footer-branding {
+  background-color: $background_color__default;
+  padding: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  height: 140px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/watermark.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: right 150px top -100px;
+  img {
+    display: inline;
+    max-height: 61px;
+  }
+}
 footer {
 
   .footer {
