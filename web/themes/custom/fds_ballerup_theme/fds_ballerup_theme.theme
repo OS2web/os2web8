@@ -9,8 +9,17 @@ use Drupal\taxonomy\Entity\Term;
 /**
  * Implements hook_preprocess_page().
  */
-function fds_ballerup_theme_preprocess_page(array &$variables) {
+function fds_ballerup_theme_preprocess_page(array &$variables)
+{
+
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
+
+  $logo = theme_get_setting('logo');
+  if (!empty( $logo ) && !empty($logo['url']))
+  {
+    $variables['custom_logo'] = $logo['url'];
+  }
+
 }
 
 /**
