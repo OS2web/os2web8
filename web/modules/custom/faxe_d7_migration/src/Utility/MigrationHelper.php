@@ -4,9 +4,6 @@ namespace Drupal\faxe_d7_migration\Utility;
 
 use Drupal\Core\Database\Database;
 use Drupal\file\Entity\File;
-use Drupal\os2web_borgerdk\Entity\BorgerdkArticle;
-use Drupal\os2web_borgerdk\Entity\BorgerdkMicroarticle;
-use Drupal\os2web_borgerdk\Entity\BorgerdkSelfservice;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
 
@@ -14,10 +11,6 @@ class MigrationHelper {
 
   public static $siteUrl = 'https://lokalarkiv.faxekommune.dk';
   public static $fileFolderPath = 'lokalarkiv.subsites.faxekommune.dk';
-
-  function createUrlFromNid($nid) {
-    return MigrationHelper::$siteUrl . '/node/' . $nid;
-  }
 
   /**
    * Sets the moderation state for the node based on a status.
@@ -70,42 +63,6 @@ class MigrationHelper {
       'target_id' => $text_paragraph->id(),
       'target_revision_id' =>  $text_paragraph->getRevisionId(),
     ];
-  }
-
-  /**
-   * Find or create term 'Media' in os2web_keyword vocabulary.
-   *
-   * @param int $nid
-   *   Node Id.
-   *
-   * @return array
-   *   [
-   *     'tid'
-   *   ]
-   *
-   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
-   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
-   * @throws \Drupal\Core\Entity\EntityStorageException
-   */
-  function createMediaKeywordTerm($nid) {
-    $name = 'Media';
-    $vid = 'os2web_keyword';
-
-    $properties['name'] = $name;
-    $properties['vid'] = $vid;
-
-    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties($properties);
-    $term = reset($terms);
-
-    if (empty($term)) {
-      $term = Term::create([
-        'name' => $name,
-        'vid' => $vid,
-      ]);
-      $term->save();
-    }
-
-    return [$term->id()];
   }
 
   /**
@@ -237,40 +194,6 @@ class MigrationHelper {
       'target_id' => $os2web_wrapper_paragraph->id(),
       'target_revision_id' => $os2web_wrapper_paragraph->getRevisionId(),
     ];
-  }
-
-  /**
-   * Helper function to find local node by remote ID.
-   *
-   * @param $sourceNodeId
-   *   Remote node ID.
-   *
-   * @return int|null
-   *   Int if the local node is found. NULL otherwise.
-   */
-  function findLocalNode($sourceNodeId) {
-    $node_migrate_tables = [
-      'migrate_map_ballerup_d7_node_gallery_slide',
-      'migrate_map_ballerup_d7_node_indholdside',
-      'migrate_map_ballerup_d7_node_institution_page',
-      'migrate_map_ballerup_d7_node_news',
-    ];
-
-    $database = \Drupal::database();
-    foreach ($node_migrate_tables as $table) {
-      $localNid = $database->select($table)->fields($table, [
-        'destid1',
-      ])
-        ->condition('sourceid1', $sourceNodeId)
-        ->execute()
-        ->fetchField();
-
-      if ($localNid) {
-        return $localNid;
-      }
-    }
-
-    return NULL;
   }
 
 }

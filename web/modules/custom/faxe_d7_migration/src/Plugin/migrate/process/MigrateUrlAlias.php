@@ -5,7 +5,7 @@
  *
  */
 
-namespace Drupal\ballerup_d7_migration\Plugin\migrate\process;
+namespace Drupal\faxe_d7_migration\Plugin\migrate\process;
 
 use Drupal\Core\Database\Database;
 use Drupal\migrate\MigrateExecutableInterface;
@@ -24,15 +24,15 @@ class MigrateUrlAlias extends ProcessPluginBase {
   /**
   * {@inheritdoc}
   */
-  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) { 
-    // Retrieves a \Drupal\Core\Database\Connection which is a PDO instance      
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    // Retrieves a \Drupal\Core\Database\Connection which is a PDO instance
     $db = Database::getConnection('default', 'migrate');
     $query = $db->select('url_alias', 'u')
       ->fields('u', ['alias'])
       ->condition('u.source', 'node/' . $row->getSourceIdValues()['nid'])
       ->orderBy('pid', 'DESC')
       ->range(0, 1);
-   
+
     $data = $query->execute()->fetch();
       if (is_object($data)) {
         return '/' . $data->alias;
