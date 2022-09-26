@@ -20,10 +20,12 @@
   'spotbox--' ~ spotbox_type,
   background_color ? ('spotbox--background-color-' ~ background_color),
 ] %}
-<div{{ attributes.addClass(classes) }}>
+<a href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
+
+  {{ spotbox_heading }}
   {% if content %}
-    {{- content -}}
+    {{- content|without('field_os2web_spotbox_link') -}}
   {% endif %}
-</div>
+</a>
