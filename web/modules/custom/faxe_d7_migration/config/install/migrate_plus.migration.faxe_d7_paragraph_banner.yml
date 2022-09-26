@@ -12,7 +12,10 @@ process:
   field_os2web_banner_heading: field_banner_headline
   field_os2web_banner_subheading: field_banner_text
   field_os2web_banner_links:
-    - plugin: field_link
+    - plugin: callback
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        - getFieldLinks
       source: field_knap_link
   migrate_file_url_source:
     - plugin: extract

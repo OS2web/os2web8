@@ -196,4 +196,63 @@ class MigrationHelper {
     ];
   }
 
+  /**
+   * Helper function to populate links fields.
+   *
+   * @param $link
+   *   Link field.
+   *
+   * @return int|null
+   *   Int if the local node is found. NULL otherwise.
+   */
+  function getFieldLinks($link) {
+    if (strpos($link['url'], 'node') === 0) {
+      $urlParts = explode('/', $link['url']);
+      
+      // Finding local node URL, if present.
+      if ($localNid = MigrationHelper::findLocalNode($urlParts[1])) {
+        $urlParts[1] = $localNid;
+        $link['url'] = implode('/', $urlParts);
+      }
+    }
+
+    $fieldLink = [
+      'title' => $link['title'],
+      'uri' => $link['url']
+    ];
+
+    return $fieldLink;
+  }
+
+  /**
+   * Helper function to find local node by remote ID.
+   *
+   * @param $sourceNodeId
+   *   Remote node ID.
+   *
+   * @return int|null
+   *   Int if the local node is found. NULL otherwise.
+   */
+  static function findLocalNode($sourceNodeId) {
+    $node_migrate_tables = [
+      'migrate_map_faxe_d7_node_indholdside',
+    ];
+
+    $database = \Drupal::database();
+    foreach ($node_migrate_tables as $table) {
+      $localNid = $database->select($table)->fields($table, [
+        'destid1',
+      ])
+        ->condition('sourceid1', $sourceNodeId)
+        ->execute()
+        ->fetchField();
+
+      if ($localNid) {
+        return $localNid;
+      }
+    }
+
+    return NULL;
+  }
+
 }
