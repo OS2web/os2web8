@@ -10,7 +10,7 @@ source:
   track_changes: true
 process:
   field_os2web_banner_heading: field_banner_headline
-  field_os2web_banner_body: field_os2web_banner_subheading
+  field_os2web_banner_subheading: field_banner_text
   field_os2web_banner_links:
     - plugin: field_link
       source: field_knap_link
