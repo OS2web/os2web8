@@ -17,6 +17,7 @@ process:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         - getFieldLinks
       source: field_knap_link
+    - plugin: field_link
   migrate_file_url_source:
     - plugin: extract
       source: field_banner_billede

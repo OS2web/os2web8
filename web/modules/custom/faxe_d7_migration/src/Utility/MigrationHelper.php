@@ -208,7 +208,7 @@ class MigrationHelper {
   function getFieldLinks($link) {
     if (strpos($link['url'], 'node') === 0) {
       $urlParts = explode('/', $link['url']);
-      
+
       // Finding local node URL, if present.
       if ($localNid = MigrationHelper::findLocalNode($urlParts[1])) {
         $urlParts[1] = $localNid;
@@ -218,7 +218,7 @@ class MigrationHelper {
 
     $fieldLink = [
       'title' => $link['title'],
-      'uri' => $link['url']
+      'url' => $link['url']
     ];
 
     return $fieldLink;
