@@ -24,8 +24,8 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  {{ spotbox_heading }}
   {% if content %}
     {{- content|without('field_os2web_spotbox_link') -}}
   {% endif %}
+  <span>{{ spotbox_heading }}</span>
 </a>
