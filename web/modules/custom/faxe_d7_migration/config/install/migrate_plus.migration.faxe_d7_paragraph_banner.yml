@@ -10,6 +10,7 @@ source:
   track_changes: true
 process:
   field_os2web_banner_heading: field_banner_headline
+  field_os2web_banner_body: field_os2web_banner_subheading
   field_os2web_banner_links:
     - plugin: field_link
       source: field_knap_link
@@ -48,14 +49,6 @@ process:
         -  createFileManaged
   field_os2web_banner_image/target_id: '@migrate_file_fid'
   field_os2web_banner_image/alt: title
-  field_os2web_banner_body:
-    - plugin: sub_process
-      source: field_banner_text
-      process:
-        value: value
-        format:
-          plugin: default_value
-          default_value: 'wysiwyg_tekst'
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: os2web_banner_paragraph
