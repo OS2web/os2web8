@@ -172,7 +172,39 @@ body .page-container {
       min-height: unset;
     }
   }
-
+  .sidenav-list {
+    & > li {
+      background: none;
+      border: none;
+      & > a {
+        padding: 25px 40px;
+        font-size: 20px;
+        position: relative;
+        display: block;
+        color: #231f20;
+        &:hover {
+          color: $background_color__default;
+          background-color: $gray-primary;
+        }
+        &:before {
+            background-color: $background_color__default;
+            color: $color-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            content: '\276f';
+            font-size: 15px;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+        }
+      }
+    }
+  }
   .block {
     padding-top: $grid-gutter-width;
     padding-bottom: $grid-gutter-width;
@@ -480,6 +512,12 @@ a:not([class]) {
     text-decoration: underline;
   }
  }
+
+ #block-fds-faxe-theme-primaernavigation-2 {
+  background-color: white;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
