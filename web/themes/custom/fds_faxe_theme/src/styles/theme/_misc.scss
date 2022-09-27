@@ -157,6 +157,15 @@ svg.ext {
 body .page-container {
   padding-top: 0;
   padding-bottom: 0;
+  &.page-container-front {
+    margin-bottom: 10px;
+    .paragraph--type--os2web-news-block {
+      margin-top: 60px;
+    }
+  }
+  &.page-container-not-front {
+    margin-bottom: 120px;
+  }
 }
 
 .region-sidebar-second {
