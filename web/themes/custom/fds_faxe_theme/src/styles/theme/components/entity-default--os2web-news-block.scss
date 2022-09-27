@@ -16,9 +16,10 @@
             letter-spacing: 0;
         }
     }
+    $news-block-content-shift-size: 40px;
     .view-os2web-news-wrapper {
         position: relative;
-        padding: 15px 54px;
+        padding: 15px $news-block-content-shift-size;
         background-color: $color-white;
         transition: all 0.3s ease;
         &:hover {
@@ -67,7 +68,7 @@
             .field-content {
                 position: absolute;
                 bottom: 15px;
-                left: 54px;
+                left: $news-block-content-shift-size;
                 pointer-events: none;
                 color: $background_color__default;
                 font-size: 1.4rem;
