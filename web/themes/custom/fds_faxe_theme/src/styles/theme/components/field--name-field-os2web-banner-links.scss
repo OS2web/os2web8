@@ -8,7 +8,7 @@
             text-align: left;
             white-space: normal;
             color: #333!important;
-            background-color: #fff!important;
+            background-color: $color-white!important;
             border: 1px solid #ccc!important;
             display: block;
             width: 100%;
@@ -19,7 +19,7 @@
             font-size: 1.6rem;
             line-height: 1.42857;
             font-weight: 400;
-            transition: color 0.3s ease, background-color 0.3s ease;
+            transition: all 0.3s ease;
             &::after {
                 position: absolute;
                 display: flex;
@@ -35,7 +35,7 @@
                 transform: rotate(90deg);
             }
             &:hover {
-                color: #007ca3!important;
+                color: $background_color__default!important;
                 background-color: #e6e6e6!important;
                 border-color: #adadad!important;
             }
