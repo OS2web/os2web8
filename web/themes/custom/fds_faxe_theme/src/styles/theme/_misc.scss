@@ -178,7 +178,7 @@ body .page-container {
       border: none;
       & > a {
         padding: 25px 40px;
-        font-size: 20px;
+        font-size: 2rem;
         position: relative;
         display: block;
         color: #231f20;
@@ -197,7 +197,7 @@ body .page-container {
             transform: translateY(-50%);
             right: 0;
             content: '\276f';
-            font-size: 15px;
+            font-size: 1.5rem;
             height: 40px;
             width: 40px;
             position: absolute;
@@ -245,9 +245,9 @@ body .page-container {
         padding: 40px;
       }
       .h4 {
-        font-size: 19px;
+        font-size: 1.9rem;
         @include media-breakpoint-up(md) {
-          font-size: 24px;
+          font-size: 2.4rem;
         }
         color: $color-black;
       }
@@ -265,7 +265,7 @@ body .page-container {
           padding: 0;
           a {
             padding: 25px 15px;
-            font-size: 20px;
+            font-size: 2rem;
             position: relative;
             display: block;
             color: $color-black;
@@ -281,7 +281,7 @@ body .page-container {
               transform: translateY(-50%);
               right: 0;
               content: '\276f';
-              font-size: 15px;
+              font-size: 1.5rem;
               height: 40px;
               width: 40px;
               position: absolute;

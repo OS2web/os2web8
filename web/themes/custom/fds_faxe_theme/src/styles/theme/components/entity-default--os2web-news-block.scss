@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             color: inherit;
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: 400;
             letter-spacing: 0;
         }
@@ -40,14 +40,14 @@
             transform: translateY(-50%);
             right: 0;
             content: '\276f';
-            font-size: 15px;
+            font-size: 1.5rem;
             height: 40px;
             width: 40px;
         }
         .views-field-title {
             font-weight: 700;
             margin: 0;
-            font-size: 16px;
+            font-size: 1.6rem;
             letter-spacing: 0;
             line-height: 1.1;
             margin-bottom: 8px;
@@ -70,7 +70,7 @@
                 left: 54px;
                 pointer-events: none;
                 color: $background_color__default;
-                font-size: 14px;
+                font-size: 1.4rem;
                 font-weight: 700;
             }
         }
