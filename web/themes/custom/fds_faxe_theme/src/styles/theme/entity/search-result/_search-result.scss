@@ -29,7 +29,7 @@
       margin-right: -($side-shift-size);
       h2 {
         margin: 0;
-        margin-bottom: 4rem;
+        margin-bottom: 40px;
       }
       & > form {
         margin-bottom: 0 !important;
@@ -43,7 +43,7 @@
             input {
               width: 100%;
               background-color: $gray-secondary;
-              padding: 1.8rem 3rem;
+              padding: 18px 30px;
               font-size: 1.6rem;
               color: $color-black;
               border: 0;
@@ -129,8 +129,8 @@
           }
           article {
             h2 {
-              margin-top: 2rem;
-              margin-bottom: 1.1rem;
+              margin-top: 20px;
+              margin-bottom: 11px;
               .search-results-links {
                 text-decoration: none;
                 &:hover {
@@ -142,7 +142,7 @@
             }
             .field--name-field-os2web-page-intro {
               p {
-                margin-bottom: 1.1rem;
+                margin-bottom: 11px;
               }
             }
           }
@@ -152,7 +152,7 @@
   }
 }
 .entity-search-result {
-  padding: 2.4rem;
+  padding: 24px;
 
   background-color: #fff;
   box-shadow: $box-shadow;

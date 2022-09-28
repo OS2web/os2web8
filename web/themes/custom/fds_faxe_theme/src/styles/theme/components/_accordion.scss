@@ -33,7 +33,7 @@
   .accordion-button {
     position: relative;
     font-size: 1.6rem;
-    padding: 1rem 5rem 1rem 2rem;
+    padding: 10px 50px 10px 20px;
     font-weight: 700;
     border-radius: 0 !important;
     background-image: none !important;
@@ -50,10 +50,10 @@
   
       top: 50%;
       transform: translateY(-50%);
-      right: 2rem;
+      right: 20px;
   
-      width: 2.6rem;
-      height: 2.6rem;
+      width: 26px;
+      height: 26px;
   
       font-size: 1rem;
       font-family: FontAwesome;
@@ -81,7 +81,7 @@
   .accordion-content {
     border: 1px solid $gray-helper;
     border-top: 0;
-    padding: 1.5rem 2rem;
+    padding: 15px 20px;
     background-color: $color-white;
     color: $color-black;
     * {
@@ -99,10 +99,10 @@
 .accordion-close-button {
   display: block;
 
-  margin-left: -2.4rem;
-  margin-right: -2.4rem;
-  margin-bottom: -2rem;
-  padding: 2rem 0 3rem 0;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: -20px;
+  padding: 20px 0 30px 0;
 
   font-weight: $font-weight-bold;
   font-size: 4rem;

@@ -49,7 +49,7 @@
         content: "\2303";
         margin-top: -15px;
         height: 30px;
-        font-size: 13px;
+        font-size: 1.3rem;
         color: $background_color__default;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
@@ -357,10 +357,10 @@ a.spotbox {
       margin-top: -1.75rem;
 
       top: 50%;
-      right: 2.4rem;
+      right: 24px;
 
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 20px;
+      height: 20px;
 
       font-size: 2rem;
       font-family: FontAwesome;
@@ -462,16 +462,16 @@ a.spotbox {
       padding-left: $grid-gutter-width;
     }
     .spotbox__image {
-      padding-top: 2rem;
+      padding-top: 20px;
       padding-right: $grid-gutter-width;
       justify-content: left;
     }
     .spotbox__content {
       height: 90px;
 
-      padding-top: 1rem;
-      padding-bottom: 4rem;
-      padding-right: 4.5rem;
+      padding-top: 10px;
+      padding-bottom: 40px;
+      padding-right: 45px;
     }
 
     .field--name-field-os2web-spotbox-icon {
@@ -504,7 +504,7 @@ a.spotbox {
       padding: 0;
     }
     .spotbox__content {
-      padding: 1.5rem 5rem 1.5rem 1.5rem;
+      padding: 15px 50px 15px 15px;
     }
   }
 
@@ -524,7 +524,7 @@ a.spotbox {
           .spotbox__content {
             height: 180px;
 
-            padding: 1.5rem 3rem 5rem 3rem;
+            padding: 15px 30px 50px 30px;
           }
 
           &:after {
@@ -560,8 +560,8 @@ a.spotbox {
           }
 
           &:after {
-            right: 1.5rem;
-            bottom: 2.5rem;
+            right: 15px;
+            bottom: 25px;
           }
         }
       }

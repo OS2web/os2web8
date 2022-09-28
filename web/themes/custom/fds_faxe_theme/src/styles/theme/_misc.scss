@@ -112,7 +112,7 @@ body a {
 //}
 
 .region-content {
-  padding-bottom: 4rem;
+  padding-bottom: 40px;
 }
 
 svg.mailto {
@@ -376,7 +376,7 @@ body .page-container {
     .field--name-field-os2web-contact-body {
 
       + .field {
-        margin-top: 2.8rem; // Same distance as between <p> <p>
+        margin-top: 28px; // Same distance as between <p> <p>
       }
     }
 
@@ -386,8 +386,8 @@ body .page-container {
       &:before {
         display: inline-block;
 
-        margin-right: .5rem;
-        width: 2.2rem;
+        margin-right: 5px;
+        width: 22px;
 
         font-family: FontAwesome;
       }

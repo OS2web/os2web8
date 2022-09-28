@@ -23,7 +23,7 @@
 .box {
   background-color: $color-white;
   .box__heading {
-    padding: 4rem;
+    padding: 40px;
     color: $color-black;
     background-color: $color-white;
     .h4 {
@@ -33,7 +33,7 @@
   .box__body {
     font-size: 1.6rem;
     color: $color-black;
-    padding: 3rem 4rem;
+    padding: 30px 40px;
     background-color: $color-white;
   }
   .box__heading + .box__body {
