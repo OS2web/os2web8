@@ -84,19 +84,19 @@
     <div class="row layout--hidden-on-sections">
       {% if ((path('<current>') starts with '/brug-byen/kunst-i-ballerup') ) or ((path('<current>') starts with '/alle-kunstvaerker/')) %}
         {%
-          set content_classes = ['col-12 col-md-9']
+          set content_classes = ['col-12 col-md-8']
         %}
       {% else %}
         {%
           set content_classes = [
             page.sidebar_first ? 'col-12 col-md-6',
-            page.sidebar_first is empty ? 'col-12 col-md-9',
+            page.sidebar_first is empty ? 'col-12 col-md-8',
           ]
         %}
       {% endif %}
       {% if page.sidebar_first %}
         {% block sidebar_first %}
-          <aside class="col-12 col-md-3">
+          <aside class="col-12 col-md-4">
             <div class="layout-sidebar-left">
               {{ page.sidebar_first }}
             </div>
@@ -111,7 +111,7 @@
       </main>
 
       {% if ( not (path('<current>') starts with '/brug-byen/kunst-i-ballerup')) and ( not (path('<current>') starts with '/alle-kunstvaerker/')) %}
-        <aside class="col-12 col-md-3 d-print-none">
+        <aside class="col-12 col-md-4 d-print-none">
           <div class="layout-sidebar-right">
             {% if page.sidebar_second %}
               {% block sidebar_second %}
