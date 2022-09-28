@@ -18492,7 +18492,7 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   filter: unset;
 }
 .block--du-screen-questions-anchor-links--sidebar-second ul li a.button-color-2 {
-  background-color: #ebedea;
+  background-color: #0A487E;
   color: #ffffff;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -18512,7 +18512,7 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
-  background-image: url("../images/Kommunale_tilbud.svg");
+  background-image: url("../images/Teknologier.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -18527,15 +18527,15 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   }
 }
 .block--du-screen-questions-anchor-links--sidebar-second ul li a.button-color-2:hover {
-  border: 2px solid #ebedea;
-  color: #ebedea;
+  border: 2px solid #0A487E;
+  color: #0A487E;
   background-color: transparent;
 }
 .block--du-screen-questions-anchor-links--sidebar-second ul li a.button-color-2:hover::after {
   filter: unset;
 }
 .block--du-screen-questions-anchor-links--sidebar-second ul li a.button-color-3 {
-  background-color: #0A487E;
+  background-color: #ebedea;
   color: #ffffff;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -18555,7 +18555,7 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
-  background-image: url("../images/Teknologier.svg");
+  background-image: url("../images/Kommunale_tilbud.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -18570,8 +18570,8 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
   }
 }
 .block--du-screen-questions-anchor-links--sidebar-second ul li a.button-color-3:hover {
-  border: 2px solid #0A487E;
-  color: #0A487E;
+  border: 2px solid #ebedea;
+  color: #ebedea;
   background-color: transparent;
 }
 .block--du-screen-questions-anchor-links--sidebar-second ul li a.button-color-3:hover::after {
