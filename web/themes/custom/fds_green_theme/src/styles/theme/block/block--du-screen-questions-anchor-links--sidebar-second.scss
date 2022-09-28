@@ -61,8 +61,8 @@
 
       $bg-colors-and-svgs: 
         "1" $color-orange-006 "../images/Hjalp_dig_selv.svg",
-        "2" $color-blue-001 "../images/Teknologier.svg",
-        "3" $color-light-green-001  "../images/Kommunale_tilbud.svg",
+        "3" $color-blue-001 "../images/Teknologier.svg",
+        "2" $color-light-green-001  "../images/Kommunale_tilbud.svg",
         "4" $color-red-003 "../images/Private_tilbud.svg";
 
       @each $id, $color-code, $svg-path in $bg-colors-and-svgs {
