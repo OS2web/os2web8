@@ -4,7 +4,6 @@ description: 'Brown & green theme for subsites.'
 core: 8.x
 core_version_requirement: ^8 || ^9
 screenshot: screenshot.png
-logo: logo.png
 base theme: fds_base_theme
 package: OS2web
 

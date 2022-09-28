@@ -21,16 +21,47 @@
 // --------------------------------------------------
 
 .spotbox {
-  display: block;
   position: relative;
-
-  max-width: 100%;
-
-  overflow: hidden;
-
-  box-shadow: $box-shadow;
-
-  &, &:hover, &:focus, &:visited {
+  min-height: 290px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-bottom: 30px;
+  span {
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 20px 60px 20px 40px;
+      width: clamp(300px,50%,50%);
+      background-color: $color-white;
+      font-weight: $font-weight-bold;
+      color: #000;
+      &:after {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        right: 26px;
+        content: "\2303";
+        margin-top: -15px;
+        height: 30px;
+        font-size: 13px;
+        color: $background_color__default;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+  }
+  img {
+    min-height: 290px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  &:hover, &:focus, &:visited {
     color: $color-text;
     background-color: #fff;
     outline-color: $color-red-001;

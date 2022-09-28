@@ -2,7 +2,7 @@
 
 
 
-<div class="page-container" id="font-resize-wrapper">
+<div class="page-container {% if is_front %} page-container-front {% else %} page-container-not-front {% endif %}">
   <div class="container" id="main-content" role="main">
     {{ page.highlighted }}
 
@@ -31,7 +31,7 @@
         {% endblock %}
       {% endif %}
       <main {{ content_attributes.addClass(content_classes, 'col-12') }}>
-        <div class="layout-content">
+        <div class="layout-content position-relative">
           {{ page.content }}
         </div>
       </main>

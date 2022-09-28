@@ -81,7 +81,7 @@ $header-top-menu-size-sm: 5rem;
     }
   }
   a {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 
@@ -183,7 +183,7 @@ $header-bottom-menu-size: 7rem;
         transform: translateY(-50%);
         right: -439px;
         &::after {
-          font-size: 20px;
+          font-size: 2rem;
         }
         input { //submit input
           position: initial!important;

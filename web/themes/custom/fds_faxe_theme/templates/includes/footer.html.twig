@@ -110,12 +110,13 @@
 
         <div class="col-12 col-sm-3 footer-col">
 					<div class="d-flex align-items-center">
-						{% if theme_settings.footer.footer_use_default_logo %}
-							<img src="{{ base_path ~ directory }}/dist/images/logo__white.png" alt="" class="logo mr-5 logo--footer"/>
-						{% else %}
-							<img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo mr-5 logo--footer">
-						{% endif %}
-
+						<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}">
+							{% if theme_settings.footer.footer_use_default_logo %}
+								<img src="{{ base_path ~ directory }}/dist/images/logo__white.png" alt="" class="logo mr-5 logo--footer"/>
+							{% else %}
+								<img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo mr-5 logo--footer">
+							{% endif %}
+						</a>
 						{% if theme_settings.branding.branding_toggle %}
 							<div class="footer-free-text">
 								{{ theme_settings.branding.branding_text }}

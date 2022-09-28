@@ -117,7 +117,7 @@ $spacing-xxx-large:             5.6rem !default;
 ////////////////////////////////////////////////////////////////////////////
 //color contrasting
 $color-base-001:              #ffffff !default;
-$color-base-002:              #231F20;
+$color-base-002:              #000000;
 
 //Gray
 $color-gray-001:              $color-base-002 !default;
@@ -406,7 +406,7 @@ $container-max-widths: (
 ) !default;
 
 $grid-columns:                  12 !default;
-$grid-gutter-width:             28px;
+$grid-gutter-width:             60px;
 
 //----------------
 // Magic Numbers

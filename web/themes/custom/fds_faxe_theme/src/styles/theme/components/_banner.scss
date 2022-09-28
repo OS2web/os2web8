@@ -84,7 +84,12 @@
       line-height: 2.7rem;
   }
 }
-
+.banner__heading, .banner__body {
+  text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: left;
+  }
+}
 
 // --------------------------------------------------
 // Responsive
