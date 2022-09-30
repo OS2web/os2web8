@@ -20,7 +20,10 @@
 // Styling
 // --------------------------------------------------
 .field--name-field-os2web-page-primaryimage {
-  margin-bottom: 40px;
+  margin: -60px -40px 60px;
+  img {
+    display: block;
+  }
 }
 // --------------------------------------------------
 // Variants
