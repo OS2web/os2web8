@@ -75,7 +75,7 @@ process:
         value:
           plugin: format_date
           from_format: 'Y-m-d H:i:s'
-          to_format: 'Y-m-d'
+          to_format: 'Y-m-d\TH:i:s'
           from_timezone: 'Europe/Copenhagen'
           source: value
   field_os2web_event_end_date:
@@ -85,7 +85,7 @@ process:
         value:
           plugin: format_date
           from_format: 'Y-m-d H:i:s'
-          to_format: 'Y-m-d'
+          to_format: 'Y-m-d\TH:i:s'
           from_timezone: 'Europe/Copenhagen'
           source: value2
   status: status
