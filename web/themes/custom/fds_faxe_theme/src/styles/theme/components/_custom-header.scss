@@ -167,7 +167,7 @@ $header-bottom-menu-size: 70px;
       display: flex;
       justify-content: center;
       position: relative;
-      .form-item-search-api-fulltext {
+      div {
         height: $header-bottom-menu-size;
         display: flex;
         justify-content: center;

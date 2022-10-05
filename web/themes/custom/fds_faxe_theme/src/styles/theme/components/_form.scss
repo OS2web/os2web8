@@ -120,7 +120,7 @@ form#search-block-form,
 
       min-width: auto;
       width: 30px;
-      height: 32px;
+      height: 100%;
 
       padding: 0 !important;
 
@@ -135,7 +135,8 @@ form#search-block-form,
       position: absolute;
       display: inline-block;
 
-      top: 4px;
+      top: 50%;
+      transform: translateY(-50%);
       right: 10px;
 
       z-index: 100;
