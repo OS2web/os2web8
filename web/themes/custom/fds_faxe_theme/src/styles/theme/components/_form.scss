@@ -94,9 +94,7 @@ body {
 
 // Search form.
 form#search-block-form,
-.region-small-search form#views-exposed-form-search-indholdside-page-1,
-.region-small-search form#views-exposed-form-os2web-search-page-1,
-form#views-exposed-form-os2web-search-os2web-search-page {
+.region-small-search form {
   position: relative;
 
   .form-actions {
@@ -181,8 +179,7 @@ form#views-exposed-form-os2web-search-os2web-search-page {
 }
 
 .region-content {
-  form#views-exposed-form-search-indholdside-page-1,
-  form#views-exposed-form-os2web-search-page-1 {
+  form{
     margin-bottom: 1rem;
 
     > .form--inline {
