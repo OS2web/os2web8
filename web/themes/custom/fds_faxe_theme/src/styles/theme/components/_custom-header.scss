@@ -73,15 +73,25 @@ $header-top-menu-size-sm: 50px;
   }
 }
 .region-header__top-navigation {
-  ul {
-    li {
-      &::before {
-        content: none;
+  display: flex;
+  nav {
+    display: flex;
+    ul {
+      display: flex;
+      margin: 0;
+      li {
+        margin: 0;
+        &::before {
+          content: none;
+        }
       }
     }
-  }
-  a {
-    font-size: 2rem;
+    a {
+      font-size: 2rem;
+      &.is-active {
+        text-decoration: none;
+      }
+    }
   }
 }
 
