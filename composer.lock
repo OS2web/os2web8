@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4993104dbd6bc28ccf767a05466cee6c",
+    "content-hash": "e5b63f97e5fbc88ff42ce3ebc31b5c29",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -13669,12 +13669,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web.git",
-                "reference": "ec5067f0b10f5c2e859607398953e949660f7602"
+                "reference": "4677ddb209adf3a29d68ee166f5485b5a6841321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web/zipball/ec5067f0b10f5c2e859607398953e949660f7602",
-                "reference": "ec5067f0b10f5c2e859607398953e949660f7602",
+                "url": "https://api.github.com/repos/OS2web/os2web/zipball/4677ddb209adf3a29d68ee166f5485b5a6841321",
+                "reference": "4677ddb209adf3a29d68ee166f5485b5a6841321",
                 "shasum": ""
             },
             "require": {
@@ -13702,7 +13702,7 @@
                 "issues": "https://github.com/OS2web/os2web/issues",
                 "source": "https://github.com/OS2web/os2web/tree/master"
             },
-            "time": "2022-02-18T14:09:49+00:00"
+            "time": "2022-08-24T12:19:17+00:00"
         },
         {
             "name": "os2web/os2web_banner",
