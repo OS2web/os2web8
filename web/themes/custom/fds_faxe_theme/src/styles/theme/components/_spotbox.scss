@@ -22,7 +22,7 @@
 
 .spotbox {
   position: relative;
-  min-height: 290px;
+  height: 290px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,7 +56,7 @@
     }
   }
   img {
-    min-height: 290px;
+    height: 290px;
     width: 100%;
     display: block;
     object-fit: cover;
