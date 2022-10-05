@@ -12,10 +12,10 @@ process:
   name: title
   field_os2web_spotbox_link:
     - plugin: callback
-        callable:
-          - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
-          - getFieldLinks
-        source: field_spot_link
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        - getFieldLinks
+      source: field_spot_link
     - plugin: field_link
   migrate_file_url_source:
     - plugin: extract
