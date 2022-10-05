@@ -1,7 +1,7 @@
 {%
   set classes = [
   'element-wrapper-link',
-  '',
+  'row',
   'px-0',
   'py-4',
   node.bundle|clean_class,
@@ -12,11 +12,11 @@
 ]
 %}
   <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
-    <div class="col-md-4 col-12 entity-{{ view_mode|clean_class }}__image">
+    <div class="col-lg-4 col-12 entity-{{ view_mode|clean_class }}__image">
       {{ content.field_os2web_news_primaryimage }}
     </div>
   
-    <div class="col-md-8 col-12 py-6 entity-{{ view_mode|clean_class }}__body">
+    <div class="col-lg-8 col-12 py-6 entity-{{ view_mode|clean_class }}__body">
       {{ content.field_os2web_news_heading }}
   
       {{ content.field_os2web_news_article_date }}
