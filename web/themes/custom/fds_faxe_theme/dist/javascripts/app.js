@@ -3214,7 +3214,11 @@ jQuery(document).ready(function(){
   })
 });
 
-
+jQuery(document).ready(function(){
+  if(jQuery( ".paragraph--type--os2web-accordion" )) {
+    jQuery( ".paragraph--type--os2web-accordion" ).parent( ".field__item" ).addClass("paragraph--type--os2web-accordion-wrapper");
+  }
+});
 
 
 // // Items for "Senest besøgte indhold".

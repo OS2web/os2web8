@@ -19,10 +19,13 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.field__item.paragraph--type--os2web-accordion-wrapper {
+  & + .field__item.paragraph--type--os2web-accordion-wrapper {
+    margin-top: 0;
+  }
+}
 
 .accordion {
-  margin-top: 10px;
-  margin-bottom: $grid-gutter-width / 2;
   & > li {
     margin-bottom: 0.5rem;
   }
