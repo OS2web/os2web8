@@ -83,10 +83,11 @@ $sidenav-list-dot-spacing: 22px;
 
         border-top: 0;
 
-        background-color: $color-primary;
+        background-color: $gray-primary;
+        color: $background_color__default;
 
         > a {
-          color: #fff;
+          color: $background_color__default;
         }
       }
     }
