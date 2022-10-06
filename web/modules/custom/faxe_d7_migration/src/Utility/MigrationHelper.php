@@ -240,15 +240,17 @@ class MigrationHelper {
 
     $database = \Drupal::database();
     foreach ($node_migrate_tables as $table) {
-      $localNid = $database->select($table)->fields($table, [
-        'destid1',
-      ])
+      if ($database->schema()->tableExists($table)) {
+        $localNid = $database->select($table)->fields($table, [
+          'destid1',
+        ])
         ->condition('sourceid1', $sourceNodeId)
         ->execute()
         ->fetchField();
 
-      if ($localNid) {
-        return $localNid;
+        if ($localNid) {
+          return $localNid;
+        }
       }
     }
 
