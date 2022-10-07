@@ -54,6 +54,10 @@ echo "Migration faxe_d7_node_indholdside - START"
 drush migrate:import faxe_d7_node_indholdside
 echo "Migration faxe_d7_node_indholdside - END"
 
+echo "Migration faxe_d7_main_menu - START"
+drush migrate:import faxe_d7_main_menu
+echo "Migration faxe_d7_main_menu - END"
+
 # We need to run it again in the end, so that the URL's in the fields are transformed into correct node links
 echo "Running that depend on local content again"
 
