@@ -225,6 +225,29 @@ class MigrationHelper {
   }
 
   /**
+   * Helper function to populate menu link.
+   *
+   * @param $link
+   *   Link field.
+   *
+   * @return int|null
+   *   Int if the local node is found. NULL otherwise.
+   */
+  function getMenuLink($link) {
+    if (strpos($link, 'node') === 0) {
+      $urlParts = explode('/', $link);
+
+      // Finding local node URL, if present.
+      if ($localNid = MigrationHelper::findLocalNode($urlParts[1])) {
+        $urlParts[1] = $localNid;
+        $link = implode('/', $urlParts);
+      }
+    }
+
+    return $link;
+  }
+
+  /**
    * Helper function to find local node by remote ID.
    *
    * @param $sourceNodeId
