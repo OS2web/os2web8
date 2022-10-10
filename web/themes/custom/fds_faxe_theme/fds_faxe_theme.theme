@@ -124,17 +124,26 @@ function fds_faxe_theme_preprocess_taxonomy_term(array &$variables) {
 function fds_faxe_theme_preprocess_node(array &$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
-
+  
   if ($variables['view_mode'] == 'search_result' && $node->getType() == 'os2web_page') {
     $sectionLabels = [];
     if ($section_id = $node->field_os2web_page_section->target_id) {
       $parents = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadAllParents($section_id);
-
+      
       foreach ($parents as $parent) {
         $sectionLabels[] = $parent->label();
       }
-
+      
       $variables['#section_labels'] = array_reverse($sectionLabels);
+    }
+  }
+  if ($variables['view_mode'] == 'full' && $node->getType() == 'os2web_event') {
+    $startDateAttr = $variables['content']['field_os2web_event_start_date'][0]['#attributes']['datetime'];
+    $endDateAttr = $variables['content']['field_os2web_event_end_date'][0]['#attributes']['datetime'];
+    $endDateText = $variables['content']['field_os2web_event_end_date'][0]['#text'];
+    if(substr($startDateAttr, 0 , 11) == substr($endDateAttr, 0 , 11)) {
+      $newEndDate = substr($endDateText, -5);
+      $variables['content']['field_os2web_event_end_date'][0]['#text'] = 'til ' . $newEndDate;
     }
   }
 }
