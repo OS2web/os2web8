@@ -24,12 +24,14 @@
 .paragraph--type--os2web-spotbox,
 .paragraph--type--os2web-spotbox-reference {
   display: block;
-  border-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   margin-bottom: 15px;
   overflow: hidden;
   position: relative;
   .spotbox {
-    border-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -37,7 +39,8 @@
       img {
         display: block;
         width: 100%;
-        border-radius: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
         min-height: 272px;
         height: auto;
         object-fit: cover;
@@ -47,33 +50,15 @@
   .spotbox__content {
     line-height: 1.35;
     height: 5em;
-    position: absolute;
     display: flex;
-    z-index: 2;
     align-items: center;
     padding: 12px;
-    left: 0;
-    right: 0;
-    bottom: 0;
     font-weight: 400;
     text-transform: uppercase;
     color: $color-white;
-    background-color: transparent;
+    background-color: $background_color__default;;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-
-    &::after {
-      content: '';
-      background-color: $background_color__default;
-      opacity: 0.85;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-    }
     .field--name-field-os2web-spotbox-heading {
       z-index: 1;
     }
