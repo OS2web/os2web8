@@ -53,6 +53,13 @@
     text-align: center;
     max-width: 572px;
     margin: 0 auto;
+    &.region-header__search {
+      form {
+        .form-label {
+          display: none;
+        }
+      }
+    }
     h2 {
       color: inherit !important;
       font-size: 1.5625em;
