@@ -13895,7 +13895,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_events.git",
-                "reference": "d5ebe922f04b17ac596b7bc380aa4919c29f15a2"
+                "reference": "89eb4ce4cb2aec7ffeb3d1ffc64bb387b741f306"
             },
             "dist": {
                 "type": "zip",
