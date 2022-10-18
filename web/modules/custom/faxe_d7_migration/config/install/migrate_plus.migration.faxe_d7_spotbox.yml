@@ -17,6 +17,9 @@ process:
         - getFieldLinks
       source: field_spot_link
     - plugin: field_link
+  type:
+    plugin: default_value
+    default_value: 'default'
   migrate_file_url_source:
     - plugin: extract
       source: field_os2web_spotbox_big_image
