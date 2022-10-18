@@ -43,8 +43,9 @@
           <span>{{ content.field_os2web_news_article_author | render | striptags }}</span>
         </div>
       </div>
+      <div><strong>{{ content.field_os2web_news_intro }}</strong></div>
       <div>{{ content.field_os2web_news_description }}</div>
-      {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_description', 'field_os2web_news_heading','field_os2web_news_article_date', 'field_os2web_news_article_author') }}
+      {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_description', 'field_os2web_news_heading','field_os2web_news_article_date', 'field_os2web_news_article_author', 'field_os2web_news_intro') }}
     </div>
   </div>
 </article>
