@@ -21,65 +21,7 @@
 // --------------------------------------------------
 
 .file {
-  display: block;
 
-  margin-bottom: 15px;
-  padding-left: 0 !important; // Reset.
-  background-image: none !important;
-
-  box-shadow: 0 1px 2px 0 rgba(27, 27, 29, .2);
-
-  a {
-    position: relative;
-    display: flex;
-
-    align-items: center;
-
-    word-break: break-word;
-
-    padding: 0 (30px + 30px + 5px) 0 30px; // Width of icon + left/right spacing + gutter.
-
-    height: 88px;
-    max-width: 100%; // Reset.
-
-    border-radius: 3px;
-    background-color: $background_color__primary;
-    font-weight: bold;
-
-    .background-color--primary & {
-      background-color: $background_color__default;
-    }
-
-    &, &:hover, &:focus, &:visited {
-      color: $color-text;
-      text-decoration: none;
-    }
-
-    &:after {
-      display: inline-block;
-
-      position: absolute;
-
-      content: "";
-
-      top: 50%;
-      right: 30px;
-
-      margin-top: -15px; // Half the height.
-
-      width: 30px;
-      height: 30px;
-
-      background-image: url("../images/download.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .accordion &,
-    .box & {
-      background-color: #f5f3ef;
-    }
-  }
 }
 
 .field--type-file {
