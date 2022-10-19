@@ -13,11 +13,11 @@
       </div>
 
       {{ content | without('field_os2web_news_block_header', 'field_os2web_news_details_link') }}
-
-      <div class="preheader">
-        <div></div>
-        {{ content.field_os2web_news_details_link }}
-      </div>
+      {% if content.field_os2web_news_details_link|trim %}
+        <div class="preheader">
+          {{ content.field_os2web_news_details_link }}
+        </div>
+      {% endif %}
     {% endblock %}
   </div>
 {% endblock paragraph %}
