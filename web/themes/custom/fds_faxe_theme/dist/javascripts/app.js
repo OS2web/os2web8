@@ -3196,8 +3196,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-item-search-api-fulltext input');
   const searchBtnIcon = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-actions');;
   function getPageAndElementDistance() {
-    searchBtnIcon.style.right =  -window.innerWidth - -30 - -searchForm.getBoundingClientRect().right + "px" //adding position for search icon
-    searchInput.style.width =  window.innerWidth - searchForm.getBoundingClientRect().right + "px" //adding width for search input
+    if(searchBtnIcon && searchInput && searchForm) {
+      searchBtnIcon.style.right =  -window.innerWidth - -30 - -searchForm.getBoundingClientRect().right + "px" //adding position for search icon
+      searchInput.style.width =  window.innerWidth - searchForm.getBoundingClientRect().right + "px" //adding width for search input
+    }
   }
 
 
