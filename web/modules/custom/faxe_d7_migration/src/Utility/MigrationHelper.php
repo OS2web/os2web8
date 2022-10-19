@@ -201,7 +201,7 @@ class MigrationHelper {
    */
   function createMediaEntity($id, $filename) {
     $media = Media::create([
-      'bundle' => 'os2web_file',
+      'bundle' => 'document',
       'uid' => '0',
       'field_media_file' => [
         'target_id' => $id,

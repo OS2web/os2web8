@@ -124,16 +124,16 @@ function fds_faxe_theme_preprocess_taxonomy_term(array &$variables) {
 function fds_faxe_theme_preprocess_node(array &$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
-  
+
   if ($variables['view_mode'] == 'search_result' && $node->getType() == 'os2web_page') {
     $sectionLabels = [];
     if ($section_id = $node->field_os2web_page_section->target_id) {
       $parents = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadAllParents($section_id);
-      
+
       foreach ($parents as $parent) {
         $sectionLabels[] = $parent->label();
       }
-      
+
       $variables['#section_labels'] = array_reverse($sectionLabels);
     }
   }
@@ -144,6 +144,22 @@ function fds_faxe_theme_preprocess_node(array &$variables) {
     if(substr($startDateAttr, 0 , 11) == substr($endDateAttr, 0 , 11)) {
       $newEndDate = substr($endDateText, -5);
       $variables['content']['field_os2web_event_end_date'][0]['#text'] = 'til ' . $newEndDate;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_media().
+ */
+function fds_faxe_theme_preprocess_media(array &$variables) {
+  $media = $variables['media'];
+  $name = $media->getName();
+  if (!empty($name)) {
+    $mediaArray = $media->toArray();
+    if (!empty($mediaArray['field_media_file'][0]['target_id'])) {
+      $fileId = $mediaArray['field_media_file'][0]['target_id'];
+      $file = \Drupal\file\Entity\File::load($fileId);
+      $file->setFilename($name);
     }
   }
 }
