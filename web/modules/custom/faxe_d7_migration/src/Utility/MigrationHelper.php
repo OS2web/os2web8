@@ -6,6 +6,7 @@ use Drupal\Core\Database\Database;
 use Drupal\file\Entity\File;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\media\Entity\Media;
 
 class MigrationHelper {
 
@@ -89,7 +90,6 @@ class MigrationHelper {
         ->condition('f.status', 1)
         ->execute()
         ->fetchField();
-
       if ($fileUrl) {
         //replacing public:// to https://ringsted.dk/sites/default/files/
         $fileUrl = preg_replace('/(public:\/\/)/', MigrationHelper::$siteUrl . '/sites/'. MigrationHelper::$fileFolderPath .'/files/', $fileUrl);
@@ -97,7 +97,34 @@ class MigrationHelper {
     }
     return $fileUrl;
   }
+  /**
+   * Gets a file Name.
+   *
+   * @param mix $field
+   *   Array coming from migration source.
+   *
+   * @return string
+   *   File title.
+   */
+  function getFileName($field) {
+    $fileName = NULL;
+    if ($field) {
+      $fid = $field['fid'];
 
+      // Getting connection to migrate database.
+      $connection = Database::getConnection('default', 'migrate');
+
+      // Getting file url.
+      $fileName = $connection->select('file_managed', 'f')
+        ->fields('f', array('filename'))
+        ->condition('f.fid', $fid)
+        ->condition('f.status', 1)
+        ->execute()
+        ->fetchField();
+
+    }
+    return $fileName;
+  }
   /**
    * Generates file destination URI.
    *
@@ -142,7 +169,6 @@ class MigrationHelper {
   function createFileManaged($uri) {
     $properties['uri'] = $uri;
     $files = \Drupal::entityTypeManager()->getStorage('file')->loadByProperties($properties);
-
     $file = reset($files);
 
     if (empty($file)) {
@@ -161,6 +187,35 @@ class MigrationHelper {
 
 
   /**
+   * Creates the media entity based on file id.
+   *
+   * @param string $uri
+   *   Uri of the file.
+   *
+   * @return int
+   *   File ID.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  function createMediaEntity($id, $filename) {
+    $media = Media::create([
+      'bundle' => 'os2web_file',
+      'uid' => '0',
+      'field_media_file' => [
+        'target_id' => $id,
+      ],
+      'status' => 1
+    ]);
+
+    $media->setName($filename)
+      ->save();
+    return $media->id();
+  }
+
+
+  /**
    * Create wrapper paragraph.
    *
    * @param $field_os2web_base_field_spotbox
@@ -168,7 +223,7 @@ class MigrationHelper {
    * @return array
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function createWrapperParagraph($field_os2web_base_field_spotbox){
+  function createSpotboxParagraph($field_os2web_base_field_spotbox){
     if (!$field_os2web_base_field_spotbox) {
       return [];
     }
@@ -180,19 +235,9 @@ class MigrationHelper {
     ]);
 
     $spotbox_paragraph->save();
-    // Creating os2web_wrapper paragraph.
-    $os2web_wrapper_paragraph = Paragraph::create([
-      'type' => 'os2web_wrapper',
-      'field_os2web_paragraphs' => [
-        'target_id' => $spotbox_paragraph->id(),
-        'target_revision_id' =>  $spotbox_paragraph->getRevisionId()
-      ]
-    ]);
-    $os2web_wrapper_paragraph->save();
-
     return [
-      'target_id' => $os2web_wrapper_paragraph->id(),
-      'target_revision_id' => $os2web_wrapper_paragraph->getRevisionId(),
+      'target_id' => $spotbox_paragraph->id(),
+      'target_revision_id' => $spotbox_paragraph->getRevisionId(),
     ];
   }
 

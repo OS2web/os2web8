@@ -81,56 +81,54 @@ process:
       - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
       - setModerationState
     source: status
-  migrate_paragraph_files:
-    plugin: migration_lookup
-    migration: faxe_d7_paragraph_banner
-    source: nid
-    no_stub: true
   migrate_paragraph_banner:
     plugin: migration_lookup
     migration: faxe_d7_paragraph_banner
     source: field_os2web_base_banner
     no_stub: true
+  migrate_paragraph_files:
+    plugin: migration_lookup
+    migration: faxe_d7_os2web_contentpage_paragraph_files
+    source: nid
+    no_stub: true
   field_os2web_page_paragraph_narr:
     plugin: sub_process
-    source: field_afsnit
+    source:
+      - '@migrate_paragraph_files'
     process:
-      target_id:
-        - plugin: migration_lookup
-          migration:
-            - faxe_d7_paragraph_simple_text
-            - faxe_d7_paragraph_accordion
-          source: value
-        - plugin: extract
-          index:
-            - 0
-      target_revision_id:
-        - plugin: migration_lookup
-          migration:
-            - faxe_d7_paragraph_simple_text
-            - faxe_d7_paragraph_accordion
-          source: value
-        - plugin: extract
-          index:
-            - 1
-#  field_os2web_page_paragraph_bann:
+      target_id: '0'
+      target_revision_id: '1'
+#  field_os2web_page_paragraph_narr:
 #    plugin: sub_process
-#    source: field_os2web_base_banner
+#    source: field_afsnit
 #    process:
 #      target_id:
 #        - plugin: migration_lookup
-#          migration: faxe_d7_paragraph_banner
+#          migration:
+#            - faxe_d7_paragraph_simple_text
+#            - faxe_d7_paragraph_accordion
 #          source: value
 #        - plugin: extract
 #          index:
 #            - 0
 #      target_revision_id:
 #        - plugin: migration_lookup
-#          migration: faxe_d7_paragraph_banner
+#          migration:
+#            - faxe_d7_paragraph_simple_text
+#            - faxe_d7_paragraph_accordion
 #          source: value
 #        - plugin: extract
 #          index:
 #            - 1
+#  field_os2web_page_paragraph_narr:
+#    - plugin: migration_lookup
+#      migration: faxe_d7_spotbox
+#      source: field_os2web_base_field_spotbox
+#      no_stub: true
+#    - plugin: callback
+#      callable:
+#        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+#        - createSpotboxParagraph
   field_os2web_page_paragraph_bann:
     plugin: sub_process
     source: '@migrate_paragraph_banner'
@@ -143,15 +141,6 @@ process:
     migration: faxe_d7_contact_box
     source: field_os2sub_contact_ref
     no_stub: true
-  field_os2web_page_paragraph_wide:
-    - plugin: migration_lookup
-      migration: faxe_d7_spotbox
-      source: field_os2web_base_field_spotbox
-      no_stub: true
-    - plugin: callback
-      callable:
-        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
-        - createWrapperParagraph
 destination:
   plugin: entity:node
 migration_dependencies:

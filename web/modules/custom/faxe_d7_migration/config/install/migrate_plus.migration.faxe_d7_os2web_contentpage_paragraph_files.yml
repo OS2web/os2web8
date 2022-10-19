@@ -10,6 +10,9 @@ source:
   track_changes: true
 process:
   migrate_file_url_source:
+    - plugin: skip_row_if_not_set
+      index: 0
+      source: field_os2web_base_field_media
     - plugin: extract
       source: field_os2web_base_field_media
       default: ''
@@ -20,6 +23,9 @@ process:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         - getFileDownloadUrl
   migrate_file_url_destination:
+    - plugin: skip_row_if_not_set
+      index: 0
+      source: field_os2web_base_field_media
     - plugin: extract
       source: field_os2web_base_field_media
       default: ''
@@ -30,6 +36,9 @@ process:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         - generateFileDestinationPath
   migrate_file_fid:
+    - plugin: skip_row_if_not_set
+      index: 0
+      source: field_os2web_base_field_media
     - plugin: skip_on_empty
       method: process
       source: '@migrate_file_url_source'
@@ -42,8 +51,36 @@ process:
       callable:
         - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
         -  createFileManaged
-  field_os2web_files_files/target_id: '@migrate_file_fid'
-  field_os2web_files_files/alt: title
+  migrate_file_title:
+    - plugin: skip_row_if_not_set
+      index: 0
+      source: field_os2web_base_field_media
+    - plugin: extract
+      source: field_os2web_base_field_media
+      default: ''
+      index:
+        - 0
+    - plugin: callback
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        - getFileName
+  migrate_media_entity:
+    - plugin: skip_row_if_not_set
+      index: 0
+      source: field_os2web_base_field_media
+    - plugin: skip_on_empty
+      method: process
+      source: '@migrate_file_url_source'
+      message: 'File is missing'
+    - plugin: callback
+      unpack_source: true
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        -  createMediaEntity
+      source:
+        - '@migrate_file_fid'
+        - '@migrate_file_title'
+  field_os2web_files_media/target_id: '@migrate_media_entity'
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   default_bundle: os2web_files_paragraph
