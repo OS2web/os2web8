@@ -226,7 +226,11 @@ class MigrationHelper {
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
   function createSpotboxParagraph($field_os2web_base_field_spotbox){
-    if (!$field_os2web_base_field_spotbox) {
+
+    if (!$field_os2web_base_field_spotbox ) {
+      return [];
+    }
+    if (is_array($field_os2web_base_field_spotbox) ) {
       return [];
     }
     $spotbox_paragraph = Paragraph::create([
@@ -237,12 +241,48 @@ class MigrationHelper {
     ]);
 
     $spotbox_paragraph->save();
-    return [
-      'target_id' => $spotbox_paragraph->id(),
-      'target_revision_id' => $spotbox_paragraph->getRevisionId(),
-    ];
+    $return = [
+      '0' => $spotbox_paragraph->id(),
+      '1' => $spotbox_paragraph->getRevisionId(),
+   ];
+
+    return $return;
   }
 
+  /**
+   * Create os2web page paragraph narrow.
+   *
+   * @param $values
+   *
+   * @return array
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  function migrateNarrowParagraph($values) {
+    $return = [];
+    if (!is_array($values)) {
+      return [];
+    };
+    foreach ($values as $key => $arr) {
+      if (isset($values[0]) && is_array($values[0])) {
+        foreach ($arr as $value) {
+          if (is_array($value)) {
+            $return[] = [
+              'target_id' => $value[0],
+              'target_revision_id' => $value[1],
+            ];
+          } else {
+            $return[] = [
+              'target_id' => $values[$key][0],
+              'target_revision_id' => $values[$key][1],
+            ];
+            break;
+          }
+        }
+      }
+    }
+
+    return ($return);
+  }
   /**
    * Helper function to populate links fields.
    *

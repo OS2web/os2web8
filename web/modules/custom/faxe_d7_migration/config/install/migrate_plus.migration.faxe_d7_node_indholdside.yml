@@ -91,13 +91,46 @@ process:
     migration: faxe_d7_os2web_contentpage_paragraph_files
     source: nid
     no_stub: true
-  field_os2web_page_paragraph_narr:
+  migrate_paragraph_spotbox:
+    - plugin: migration_lookup
+      migration: faxe_d7_spotbox
+      source: field_os2web_base_field_spotbox
+      no_stub: true
+    - plugin: callback
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        - createSpotboxParagraph
+  migrate_paragraph_accordion:
     plugin: sub_process
-    source:
-      - '@migrate_paragraph_files'
+    source: field_afsnit
     process:
-      target_id: '0'
-      target_revision_id: '1'
+      0:
+        - plugin: migration_lookup
+          migration:
+            - faxe_d7_paragraph_simple_text
+            - faxe_d7_paragraph_accordion
+          source: value
+        - plugin: extract
+          index:
+            - 0
+      1:
+        - plugin: migration_lookup
+          migration:
+            - faxe_d7_paragraph_simple_text
+            - faxe_d7_paragraph_accordion
+          source: value
+        - plugin: extract
+          index:
+            - 1
+  field_os2web_page_paragraph_narr:
+    - plugin: callback
+      source:
+        - '@migrate_paragraph_accordion'
+        - '@migrate_paragraph_files'
+        - '@migrate_paragraph_spotbox'
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        - migrateNarrowParagraph
 #  field_os2web_page_paragraph_narr:
 #    plugin: sub_process
 #    source: field_afsnit
