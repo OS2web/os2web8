@@ -177,11 +177,13 @@ class MigrationHelper {
       $file = File::create();
       $file->setFileUri($uri);
       $file->setOwnerId(\Drupal::currentUser()->id());
-      $file->setMimeType('image/' . pathinfo($uri, PATHINFO_EXTENSION));
+      $file->setMimeType(\Drupal::service('file.mime_type.guesser')->guess($uri));
       $file->setFileName($filesystem->basename($uri));
       $file->setPermanent();
       $file->save();
     }
+    $file->setMimeType(\Drupal::service('file.mime_type.guesser')->guess($uri));
+    $file->save();
     return $file->id();
   }
 
@@ -279,6 +281,9 @@ class MigrationHelper {
    *   Int if the local node is found. NULL otherwise.
    */
   function getMenuLink($link) {
+    if (parse_url($link, PHP_URL_HOST) == parse_url(MigrationHelper::$siteUrl, PHP_URL_HOST)) {
+      $link = parse_url($link, PHP_URL_PATH);
+    }
     if (strpos($link, 'node') === 0) {
       $urlParts = explode('/', $link);
 
