@@ -338,6 +338,23 @@ class MigrationHelper {
   }
 
   /**
+   * Helper function to populate menu link.
+   *
+   * @param $link
+   *   Link field.
+   *
+   * @return int|null
+   *   Int if the local node is found. NULL otherwise.
+   */
+  function migrateRelatedLinks($links) {
+    if ($localNid = MigrationHelper::findLocalNode($links['nid'])) {
+      return [
+        'target_id' => $localNid
+      ];
+    }
+    return [];
+  }
+  /**
    * Helper function to find local node by remote ID.
    *
    * @param $sourceNodeId
