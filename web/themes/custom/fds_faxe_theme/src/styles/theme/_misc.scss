@@ -370,7 +370,18 @@ body .page-container {
   }
 }
 .layout-sidebar-right {
-
+  .block-menu-block  {
+  .sidenav-list {
+    li {
+      a {
+        background-color: $color-white;
+        &:hover {
+          background-color: $gray-primary;
+        }
+      }
+    }
+  }
+  }
   .os2web_contact {
 
     .field {
