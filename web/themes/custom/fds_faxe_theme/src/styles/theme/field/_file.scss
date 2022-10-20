@@ -66,13 +66,7 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-  .field--type-file {
 
-    > .field__items > .field__item,
-    > .field__item {
-      @include grid-col(6, 12);
-    }
-  }
 }
 
 // Tablet - only
