@@ -141,6 +141,10 @@ process:
     migration: faxe_d7_contact_box
     source: field_os2sub_contact_ref
     no_stub: true
+  path/alias: alias
+  path/pathauto:
+    plugin: default_value
+    default_value: false
 destination:
   plugin: entity:node
 migration_dependencies:
