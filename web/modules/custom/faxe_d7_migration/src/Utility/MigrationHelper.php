@@ -78,7 +78,7 @@ class MigrationHelper {
   function getFileDownloadUrl($field) {
     $fileUrl = NULL;
     if ($field) {
-      $fid = $field['fid'];
+      $fid = is_array($field) ? $field['fid'] : $field;
 
       // Getting connection to migrate database.
       $connection = Database::getConnection('default', 'migrate');
@@ -109,7 +109,7 @@ class MigrationHelper {
   function getFileName($field) {
     $fileName = NULL;
     if ($field) {
-      $fid = $field['fid'];
+      $fid = is_array($field) ? $field['fid'] : $field;
 
       // Getting connection to migrate database.
       $connection = Database::getConnection('default', 'migrate');
@@ -135,10 +135,10 @@ class MigrationHelper {
    *   File destination URL.
    */
   function generateFileDestinationPath($field) {
+
     $fileUrl = '';
     if ($field) {
-      $fid = $field['fid'];
-
+      $fid = is_array($field) ? $field['fid'] : $field;
       // Getting connection to migrate database.
       $connection = Database::getConnection('default', 'migrate');
 
