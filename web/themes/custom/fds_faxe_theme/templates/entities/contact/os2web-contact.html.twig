@@ -8,10 +8,10 @@
     {{ content.field_os2web_contact_body }}
     {{ content.field_os2web_contact_phone }}
     {{ content.field_os2web_contact_email }}
-
-    {{ content.field_os2web_contact_more }}
-
-    {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value%}
+    {% if content.field_os2web_contact_more.value %}
+        {{ content.field_os2web_contact_more }}
+    {% endif %}
+    {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value %}
       <button data-micromodal-trigger="{{ modalId }}" class="button button-primary">
         {{ content.field_os2web_contact_modal_butt }}
       </button>
