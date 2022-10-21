@@ -77,6 +77,10 @@ jQuery(document).ready(function(){
   if(jQuery( ".paragraph--type--os2web-accordion" )) {
     jQuery( ".paragraph--type--os2web-accordion" ).parent( ".field__item" ).addClass("paragraph--type--os2web-accordion-wrapper");
   }
+  if(jQuery( ".layout-content" ) && jQuery( ".node--os2web-news--full" )) {
+    let paddingTopSize = parseInt(jQuery( ".layout-content" ).css('padding-top'))
+    jQuery( ".node--os2web-news--full" ).css('margin-top', (paddingTopSize * -1) + "px")
+  }
   if(jQuery( ".node--type-os2web-event" )) {
     jQuery( ".node--type-os2web-event" ).closest( ".layout-content" ).addClass("node--type-os2web-event-wrapper");
   }
