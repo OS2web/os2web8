@@ -21,17 +21,7 @@
 // --------------------------------------------------
 
 .entity-teaser--os2web-event {
-  margin-top: $grid-gutter-width / 2;
-  margin-bottom: $grid-gutter-width / 2;
-  padding: ($grid-gutter-width / 2);
-  padding-bottom: 5px;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px 0 rgba(27, 27, 29, .2);
-  background-color: $background_color__primary;
 
-  .background-color--primary & {
-    background-color: $background_color__default;
-  }
 
   .field--name-field-os2web-event-heading {
 
