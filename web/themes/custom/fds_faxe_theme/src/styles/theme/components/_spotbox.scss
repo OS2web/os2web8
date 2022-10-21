@@ -571,10 +571,16 @@ a.spotbox {
 
 .content-column {
   .paragraph--type--os2web-spotbox-wrapper {
-    margin-inline: -40px;
+    margin-inline: -10px;
     padding-top: 60px;
     padding-bottom: 20px;
     background-color: $gray-secondary;
+    @include media-breakpoint-up(md) {
+      margin-inline: -20px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-inline: -40px;
+    }
   }
 }
 .field--name-field-os2web-spotbox-reference {
