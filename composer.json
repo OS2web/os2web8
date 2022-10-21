@@ -257,6 +257,9 @@
             },
             "drupal/csv_importer" : {
                 "Custom patch to get anonymous subscription support on csv_import" : "./patches/anonymous_subscriptions_csv_import.patch"
+            },
+            "drupal/menu_block" : {
+                "Menu block renders when tree is empty" : "https://www.drupal.org/files/issues/2022-04-29/menu_block_rendered_empty-3271218-17.patch"
             }
         }
     }
