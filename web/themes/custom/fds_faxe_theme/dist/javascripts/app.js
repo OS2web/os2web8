@@ -3223,6 +3223,14 @@ jQuery(document).ready(function(){
   if(jQuery( ".node--type-os2web-event" )) {
     jQuery( ".node--type-os2web-event" ).closest( ".layout-content" ).addClass("node--type-os2web-event-wrapper");
   }
+  if(jQuery( ".entity-default--os2web-spotbox-reference" )) {
+    jQuery( ".entity-default--os2web-spotbox-reference" ).parent( ".field__item" ).addClass("paragraph--type--os2web-spotbox-wrapper");
+  }
+  if(jQuery( ".region-content" ) && jQuery( ".field--name-field-os2web-page-paragraph-narr > .field__item") ) {
+    if(jQuery( ".field--name-field-os2web-page-paragraph-narr > .field__item").last().hasClass('paragraph--type--os2web-spotbox-wrapper')) {
+      jQuery( ".region-content" ).addClass("spotbox-el-is-last")
+    };
+  }
 });
 
 

@@ -569,6 +569,26 @@ a.spotbox {
   }
 }
 
+.content-column {
+  .paragraph--type--os2web-spotbox-wrapper {
+    margin-inline: -40px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: $gray-secondary;
+  }
+}
+.field--name-field-os2web-spotbox-reference {
+  & > .field__item {
+    &:last-child {
+      a.spotbox  {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.region-content.spotbox-el-is-last {
+  padding-bottom: 0;
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
