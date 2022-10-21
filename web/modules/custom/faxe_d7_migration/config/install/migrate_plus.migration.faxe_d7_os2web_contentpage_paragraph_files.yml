@@ -6,7 +6,9 @@ migration_group: faxe_d7
 deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
 source:
   plugin: d7_node
-  node_type: os2web_base_contentpage
+  node_type:
+    - os2web_base_contentpage
+    - os2web_base_news
   track_changes: true
 process:
   field_os2web_files_media:

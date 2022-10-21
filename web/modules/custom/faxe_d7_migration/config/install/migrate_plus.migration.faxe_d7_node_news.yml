@@ -82,21 +82,24 @@ process:
         - createFileManaged
   field_os2web_news_primaryimage/target_id: '@migrate_file_fid'
   field_os2web_news_primaryimage/alt: title
+  migrate_paragraph_files:
+    plugin: migration_lookup
+    migration: faxe_d7_os2web_contentpage_paragraph_files
+    source: nid
+    no_stub: true
+  field_os2web_news_paragraph_narr:
+    plugin: sub_process
+    source:
+      - '@migrate_paragraph_files'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
   moderation_state:
     plugin: callback
     callable:
       - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
       - setModerationState
     source: status
-  field_os2web_news_paragraph_wide:
-    - plugin: migration_lookup
-      migration: faxe_d7_spotbox
-      source: field_os2web_base_field_spotbox
-      no_stub: true
-    - plugin: callback
-      callable:
-        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
-        - createWrapperParagraph
 destination:
   plugin: entity:node
 migration_dependencies:
