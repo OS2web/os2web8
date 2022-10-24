@@ -26,39 +26,48 @@ drush migrate:reset faxe_d7_spotbox
 drush migrate:import faxe_d7_spotbox
 echo "Migration faxe_d7_spotbox - END"
 
-echo "Migration faxe_d7_node_news - START"
-drush migrate:import faxe_d7_node_news
-echo "Migration faxe_d7_node_news - END"
-
 echo "Migration faxe_d7_node_velkomst - START"
+drush migrate:reset faxe_d7_node_velkomst
 drush migrate:import faxe_d7_node_velkomst
 echo "Migration faxe_d7_node_velkomst - END"
 
 echo "Migration faxe_d7_os2web_contentpage_paragraph_files - START"
+drush migrate:reset faxe_d7_os2web_contentpage_paragraph_files
 drush migrate:import faxe_d7_os2web_contentpage_paragraph_files
 echo "Migration faxe_d7_os2web_contentpage_paragraph_files - END"
 
 echo "Migration faxe_d7_paragraph_simple_text - START"
+drush migrate:reset faxe_d7_paragraph_simple_text
 drush migrate:import faxe_d7_paragraph_simple_text
 echo "Migration faxe_d7_paragraph_simple_text - END"
 
 echo "Migration faxe_d7_paragraph_accordion_items - START"
+drush migrate:reset faxe_d7_paragraph_accordion_items
 drush migrate:import faxe_d7_paragraph_accordion_items
 echo "Migration faxe_d7_paragraph_accordion_items - END"
 
 echo "Migration faxe_d7_paragraph_accordion - START"
+drush migrate:reset faxe_d7_paragraph_accordion
 drush migrate:import faxe_d7_paragraph_accordion
 echo "Migration faxe_d7_paragraph_accordion - END"
 
+echo "Migration faxe_d7_node_news - START"
+drush migrate:reset faxe_d7_node_news
+drush migrate:import faxe_d7_node_news
+echo "Migration faxe_d7_node_news - END"
+
 echo "Migration faxe_d7_node_indholdside - START"
+drush migrate:reset faxe_d7_node_indholdside
 drush migrate:import faxe_d7_node_indholdside
 echo "Migration faxe_d7_node_indholdside - END"
 
 echo "Migration faxe_d7_main_menu - START"
+drush migrate:reset faxe_d7_main_menu
 drush migrate:import faxe_d7_main_menu
 echo "Migration faxe_d7_main_menu - END"
 
 echo "Migration faxe_d7_account_menu - START"
+drush migrate:reset faxe_d7_account_menu
 drush migrate:import faxe_d7_account_menu
 echo "Migration faxe_d7_account_menu - END"
 
