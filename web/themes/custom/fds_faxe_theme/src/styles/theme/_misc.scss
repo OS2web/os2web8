@@ -432,6 +432,9 @@ body .page-container {
 .layout-content {
   padding-top: $grid-gutter-width;
 }
+.layout-content.entity-teaser--os2web-event-wrapper {
+  padding-top: 40px;
+}
 .os2web_contact {
   .field--name-field-os2web-contact-more {
     margin-bottom: 1rem;
@@ -618,6 +621,18 @@ a:not([class]) {
   background-color: white;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.block-page-title-block {
+  h1 {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.1;
+  }
 }
 // --------------------------------------------------
 // Responsive

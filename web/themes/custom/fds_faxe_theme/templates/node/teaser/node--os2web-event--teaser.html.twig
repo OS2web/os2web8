@@ -14,11 +14,11 @@
   </div>
 
   <div class="entity-{{ view_mode|clean_class }}__body">
+    <div class="field field--name-field-os2web-event-heading">
+      <h2>{{ label }}</h2>
+    </div>
     {{ content.field_os2web_event_start_date }}
 
-    <div class="field field--name-field-os2web-event-heading">
-      <h3>{{ label }}</h3>
-    </div>
 
     {% set text = content.body | render %}
     <div class="field field--type-body">
