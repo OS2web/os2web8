@@ -56,7 +56,7 @@
   a {
     position: relative;
     font-weight: $font-weight-normal;
-    color: var(--primary);
+    color: $color__link;
     border-bottom: 1px dotted var(--dark-gray1);
     &:hover {
       font-weight: $font-weight-bold;

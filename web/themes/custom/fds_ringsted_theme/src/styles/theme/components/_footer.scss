@@ -24,7 +24,7 @@ footer {
 
   .footer {
     color: $color-dark-gray2;
-    background-color: $color-light-gray2;
+    background-color: $background_color__footer_primary;
     background-image: url(../images/small-circle.png), url(../images/big-circle.png);
     background-repeat: no-repeat;
     background-position: 110% -95px, -250px -95px;
@@ -71,7 +71,7 @@ footer {
     }
 
     a, a:visited {
-      color: $color-dark-gray2;
+      color: $color__link_footer;
       font-weight: inherit;
       border-bottom: 1px dotted $color-dark-gray1;
       text-decoration: none;

@@ -138,7 +138,7 @@ $color-base-002:              #000;
 
 //CUSTOM-Gray
 $color-light-gray0:           #ccc;
-$color-light-gray1:           #ebebeb;
+$color-light-gray1:           $background_color__default;
 $color-light-gray2:           #d1d3d4;
 $color-light-gray3:           #d5d5d5;
 $color-light-gray4:           #f3f3f3;
@@ -258,7 +258,7 @@ $color-neutral-darkest:       $color-base-002 !default;
 $color-neutral-lightest:      $color-gray-004 !default; //TODO, need base color for lightest
 
 // Functional theme colors
-$color-primary:               #c30a32;
+$color-primary:               $color__link;
 $color-primary-medium:        $color-gray-002 !default;
 $color-primary-dark:          $color-gray-001 !default;
 $color-secondary:             #E6032F;

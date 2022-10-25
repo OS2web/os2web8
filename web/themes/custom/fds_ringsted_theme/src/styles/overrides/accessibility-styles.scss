@@ -78,7 +78,7 @@ body {
         @include reset-border;
         &:focus,
         &:hover {
-          color: #c30a32;
+          color: $color__link;
           border-bottom: none;
           margin: 3px 0;
         }
@@ -87,7 +87,7 @@ body {
           @include reset-border;
           &:focus,
           &:hover {
-            color: #c30a32;
+            color: $color__link;
             border-bottom: none;
           }
         }

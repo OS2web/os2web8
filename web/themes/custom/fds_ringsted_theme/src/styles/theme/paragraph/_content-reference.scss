@@ -122,7 +122,7 @@
   background: transparent;
   .fake-link,
   .field--type-link a {
-    color: var(--dark-gray2);
+    color: $color__link__hover;
   }
 }
 

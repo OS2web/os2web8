@@ -7,14 +7,11 @@ styles:
   css:
     theme:
       dist/stylesheets/stylesheet.css: {}
-      # css/extra-styles.css: {}
 
 javascripts:
   js:
     dist/javascripts/app.js: {}
-    # dist/javascripts/modernizr.js: {}
     js/extra-js.js: {}
   dependencies:
     - core/drupal
     - core/jquery
-    # - core/modernizr
