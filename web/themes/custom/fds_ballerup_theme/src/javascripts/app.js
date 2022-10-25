@@ -144,3 +144,25 @@ document.addEventListener('DOMContentLoaded', function() {
     interactive: true,
   });
 }());
+
+// menu bar search
+(function($) {
+  let menusearch = $("button.menu-search");
+  if (menusearch.length) {
+    $("button.menu-search").on("click", function() {
+      let searchvalue = $("input.menu-search").val();
+      if (searchvalue.length > 1) {
+        document.location.href = '/search/node?keys=' + searchvalue;
+      }
+    });
+    $("input.menu-search").on("keyup", function(e) {
+      let code = (e.keyCode ? e.keyCode : e.which);
+      if (code==13) {
+        let searchvalue = $("input.menu-search").val();
+        if (searchvalue.length > 1) {
+          document.location.href = '/search/node?keys=' + searchvalue;
+        }
+      }
+    });
+  }
+})(jQuery);
