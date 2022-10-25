@@ -1,6 +1,6 @@
-name: 'Designsystem.dk - Red&White theme'
+name: 'Designsystem.dk - Ringsted subsites theme'
 type: theme
-description: 'Theme for Ringsted municipality'
+description: 'Theme for Ringsted subsites'
 core: 8.x
 core_version_requirement: ^8 || ^9
 screenshot: screenshot.png
