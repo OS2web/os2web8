@@ -2,6 +2,14 @@
 $block-height: 465px;
 .soeg-block-wrap {
   min-height: $block-height;
+  .hero-content {
+    p {
+      font-size: 1.7rem;
+      @include media-breakpoint-up(md) {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 .hero-block {
   overflow: hidden;
