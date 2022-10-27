@@ -325,6 +325,18 @@ function fds_redwhite_theme_preprocess_field(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_term().
+ */
+function fds_redwhite_theme_preprocess_taxonomy_term(array &$variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['term'];
+
+  // Background color
+  if ($term->field_os2web_color && $term->field_os2web_color->value) {
+    $variables['background_color'] = $term->field_os2web_color->value;
+  }
+}
+/**
  * Implements hook_preprocess_file_link().
  */
 function fds_redwhite_theme_preprocess_file_link(array &$variables) {

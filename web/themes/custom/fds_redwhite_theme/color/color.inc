@@ -1,52 +1,52 @@
 <?php
 
-// $info = [
-//   // Available colors and color labels used in theme.
-//   'fields' => [
-//     'background_color__default' => t('Background color - default'),
-//     'background_color__primary' => t('Background color - primary'),
-//     'background_color__secondary' => t('Background color - secondary (has white text)'),
-//     'background_color__tertiary' => t('Background color - tertiary (has white text)'),
-//     'background_color__navigation' => t('Background color - navigation'),
-//     'background_color__footer_primary' => t('Background color - footer primary'),
-//     // 'background_color__footer_secondary' => t('Background color - footer secondary (has white text)'),
-//     'background_color__button' => t('Background color - button'),
-//     'background_color__button_hover' => t('Background color - button:hover'),
-//     'color__link' => t('Link color'),
-//     'color__link__hover' => t('Link:hover color'),
-//     'color__footer_link' => t('Footer link color'),
-//     'color__bullets' => t('Bullets color'),
-//   ],
+$info = [
+  // Available colors and color labels used in theme.
+  'fields' => [
+    'background_color__default' => t('Background color - default'),
+    'background_color__primary' => t('Background color - primary'),
+    'background_color__secondary' => t('Background color - secondary'),
+    'background_color__tertiary' => t('Background color - tertiary'),
+    'background_color__navigation' => t('Background color - navigation'),
+    'background_color__footer_primary' => t('Background color - footer primary'),
+    // 'background_color__footer_secondary' => t('Background color - footer secondary'),
+    'background_color__button' => t('Background color - button'),
+    'background_color__button_hover' => t('Background color - button:hover'),
+    'color__link' => t('Link color'),
+    'color__link__hover' => t('Link:hover color'),
+    'color__footer_link' => t('Footer link color'),
+    'color__bullets' => t('Bullets color'),
+  ],
 
-//   // Pre-defined color schemes.
-//   'schemes' => [
-//     'default' => [
-//       'title' => t('Standard (default)'),
-//       'colors' => [
-//         'background_color__default' => '#ebebeb',
-//         'background_color__primary' => '#ffffff',
-//         'background_color__secondary' => '#eae3c0',
-//         'background_color__tertiary' => '#066cc5',
-//         'background_color__navigation' => '#ffffff',
-//         'background_color__footer_primary' => '#d1d3d4',
-//         // 'background_color__footer_secondary' => '',
-//         'background_color__button' => '#c30a32',
-//         'background_color__button_hover' => '#E6032F',
-//         'color__link' => '#c30a32',
-//         'color__link__hover' => '#333333',
-//         'color__footer_link' => '#333333',
-//         'color__bullets' => '#333333',
-//       ],
-//     ],
-//   ],
+  // Pre-defined color schemes.
+  'schemes' => [
+    'default' => [
+      'title' => t('Standard (default)'),
+      'colors' => [
+        'background_color__default' => '#ebebeb',
+        'background_color__primary' => '#f0efef',
+        'background_color__secondary' => '#eae3c0',
+        'background_color__tertiary' => '#066cc5',
+        'background_color__navigation' => '#fffafa',
+        'background_color__footer_primary' => '#d1d3d4',
+        // 'background_color__footer_secondary' => '',
+        'background_color__button' => '#C30A32',
+        'background_color__button_hover' => '#E6032F',
+        'color__link' => '#c50a32',
+        'color__link__hover' => '#333',
+        'color__footer_link' => '#313030',
+        'color__bullets' => '#383838',
+      ],
+    ],
+  ],
 
-//   // CSS files (excluding @import) to rewrite with new color scheme.
-//   'css' => [
-//     'dist/stylesheets/stylesheet.css',
-//   ],
+  // CSS files (excluding @import) to rewrite with new color scheme.
+  'css' => [
+    'dist/stylesheets/stylesheet.css',
+  ],
 
-//   // Files to copy.
-//   'copy' => [
-//     'logo.svg',
-//   ],
-// ];
+  // Files to copy.
+  'copy' => [
+    'logo.svg',
+  ],
+];
