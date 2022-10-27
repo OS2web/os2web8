@@ -90,7 +90,7 @@
 }
 
 .custom-header__inner {
-  background: $color-white;
+  background: $background_color__navigation;
   padding: 10px 0 0;
   .container {
     padding: 0;
@@ -244,7 +244,7 @@ body {
     font-size: 2rem;
     color: $color-white;
     background: url("../images/sprite.png") no-repeat -36px -1px;
-    background-color: $color-primary;
+    background-color: $background_color__button;
     height: 36px;
     width: 36px;
     right: 0;

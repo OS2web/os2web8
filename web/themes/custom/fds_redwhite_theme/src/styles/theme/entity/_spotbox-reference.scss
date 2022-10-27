@@ -99,16 +99,16 @@
 	height: 100%;
 	box-shadow: none;
 	&, &:visited {
-		background-color: $color-primary;
+		background-color: $background_color__button;
 	}
 	&:hover, &:focus {
 		background-color: $color-white;
 		.field--name-field-os2web-spotbox-heading h3 {
-			color: $color-primary;
+			color: $background_color__button;
 		}
 	}
 	&, &:hover, &:focus, &:visited {
-		outline-color: $color-primary;
+		outline-color: $background_color__button;
 		outline-offset: -2px;
   	}
 	.field--name-title,

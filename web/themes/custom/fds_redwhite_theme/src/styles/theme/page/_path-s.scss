@@ -37,7 +37,7 @@
     height: 50px;
     text-indent: -999em;
     cursor: pointer;
-    background: $color-primary url("../images/sprite.png") no-repeat 3px -253px;
+    background: $background_color__button url("../images/sprite.png") no-repeat 3px -253px;
     z-index: 32;
   }
 }
@@ -83,7 +83,7 @@
     li {
       &.is-active a {
         background: $color-white;
-        color: $color-primary;
+        color: $background_color__button;
         font-weight: normal;
       }
       &.pager__item--next,
@@ -93,7 +93,7 @@
           padding: 1px 0 0;
           @include media-breakpoint-up(sm) {
             background: transparent;
-            color: $color-primary;
+            color: $background_color__button;
             text-transform: uppercase;
             border: none;
           }
@@ -139,7 +139,7 @@
         }
         a {
           padding: 2px 8px;
-          background: $color-primary;
+          background: $background_color__button;
           color: $color-white;
           border: 1px solid $color-light-gray2;
           border-radius: 3px;
@@ -254,7 +254,7 @@
   a {
     text-decoration: none;
     &:visited {
-      color: $color-primary;
+      color: $color__link;
     }
   }
   h2 {

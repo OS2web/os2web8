@@ -81,14 +81,14 @@
 
     .entity-teaser--os2web-page {
       margin: 0;
-      background: $color-primary;
+      background: $background_color__button;
       width: auto;
       display: inline-block;
       box-shadow: none;
       border: 1px solid $color-light-gray1;
       &:hover,
       &:focus {
-        background: $color-secondary;
+        background: $background_color__button_hover;
         cursor: pointer;
       }
       .fake-link,

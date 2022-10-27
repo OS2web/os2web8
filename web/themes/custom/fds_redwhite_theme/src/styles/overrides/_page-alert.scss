@@ -75,13 +75,13 @@
 				display: inline-block;
 				padding: 10px 2rem;
 				text-decoration: none;
-				color: $color-primary;
+				color: $color__link;
 				background-color: $color-white;
 				font-weight: inherit;
 				border-bottom: none;
 				min-width: 108px;
 				&:hover, &:focus {
-					color: $color-primary;
+					color: $color__link;
 					background: rgba(255, 255, 255, 0.8);
 				}
 			}

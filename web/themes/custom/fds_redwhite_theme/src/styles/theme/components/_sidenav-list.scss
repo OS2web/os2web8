@@ -60,7 +60,7 @@ $sidenav-list-dot-spacing: 22px;
 							padding: 16px 20px;
 							transition: all 0.2s ease-in-out;
 							&:hover, &:focus {
-								background: $color-primary;
+								background: $background_color__button;
 								color: $color-white;
 							}
 						}
@@ -72,20 +72,10 @@ $sidenav-list-dot-spacing: 22px;
 					& >  label {
 						&:hover {
 							color: $color-white!important;
-							background: $color-primary!important;
+							background: $background_color__button!important;
 							transition: all 0.2s ease-in-out;
-
-							// filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(5deg) brightness(499%) contrast(101%);
 						}
-							// .facets-checkbox {
-							// 	&:checked {
-							// 		~ {
-							// 			label {
-							// 				background: $color-white;
-							// 			}
-							// 		}
-							// 	}
-							// }
+						
 					}
 					& > .facets-checkbox {
 						&:checked {
@@ -96,7 +86,6 @@ $sidenav-list-dot-spacing: 22px;
 									}
 								}
 							}
-							// outline: 5px solid blue;
 						}
 					}
 
@@ -157,10 +146,10 @@ $sidenav-list-dot-spacing: 22px;
 		display: block;
 		& > li {
 			border-top: 1px solid $color-light-gray1;
-			background-color: $color-primary;
+			background-color: $background_color__button;
 			transition: all 0.2s ease-in-out;
 			&:hover {
-				background-color: $color-secondary;
+				background-color: $background_color__button_hover;
 			}
 			a {
 				color: $color-white;
@@ -187,7 +176,7 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 		& > li.active {
-			background-color: $color-secondary;
+			background-color: $background_color__button_hover;
 			border-top: 1px solid $color-light-gray1;
 			& > a {
 				font-family: "Museo 700", sans-serif;
@@ -197,7 +186,7 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 		& > li.current {
-			background-color: $color-secondary;
+			background-color: $background_color__button_hover;
 			border-top: 1px solid $color-light-gray1;
       border-left: 0;
 			& > a {

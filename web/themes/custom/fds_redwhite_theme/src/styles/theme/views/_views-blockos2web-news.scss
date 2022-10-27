@@ -36,7 +36,7 @@
 				display: none;
 			}
 			a {
-				color: $color-primary !important;
+				color: $color__link !important;
 				transition: all 0.2s ease-in-out;
 				text-decoration: none;
 				padding: 0;
@@ -44,7 +44,7 @@
 				display: block;
 				&:hover, &:focus {
 					background: none !important;
-					color: $color-dark-gray2 !important;
+					color: $color__link__hover !important;
 					padding-left: 10px;
 				}
 			}
@@ -82,7 +82,7 @@
 				display: none;
 			}
 			a {
-				color: $color-primary !important;
+				color: $color__link !important;
 				transition: all 0.2s ease-in-out;
 				text-decoration: none;
 				padding: 0;
@@ -90,7 +90,7 @@
 				display: block;
 				&:hover, &:focus {
 					background: none !important;
-					color: $color-dark-gray2 !important;
+					color: $color__link__hover!important;
 					padding-left: 10px;
 				}
 			}

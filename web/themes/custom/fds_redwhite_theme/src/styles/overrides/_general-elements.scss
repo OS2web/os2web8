@@ -23,17 +23,17 @@ body.toolbar-fixed {
 }
 a,
 a:visited {
-  color: $color-primary;
+  color: $color__link;
 }
 a:focus, a.link-focus {
-  color: $color-primary;
+  color: $color__link;
 }
 a:not(.button) {
   max-width: none;
 }
 a:hover,
 a.link-hover {
-  color: $color-secondary;
+  color: $color__link__hover;
 }
 iframe {
   min-height: 350px;
@@ -53,7 +53,7 @@ table {
     border-collapse: collapse;
 	}
 	thead {
-		background: $color-primary;
+		background: $color__link;
 		text-align: left;
 		color: $color-white;
 		p {
@@ -91,7 +91,7 @@ svg.ext {
 	a {
 		font-weight: 400;
 		text-decoration: none;
-		color: $color-primary;
+		color: $color__link;
 		padding: 0;
 		&::after {
 			content: "";

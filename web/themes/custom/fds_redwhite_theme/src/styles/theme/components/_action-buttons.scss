@@ -36,7 +36,7 @@
   }
   a:hover, a:focus {
     font-weight: 700;
-    color: $color-primary;
+    color: $color__link;
   }
   .print {
     display: block;
@@ -70,7 +70,7 @@
       color: $color-dark-gray2;
     }
     &:hover, &:focus {
-      color: $color-primary;
+      color: $color__link;
     }
   }
 }
