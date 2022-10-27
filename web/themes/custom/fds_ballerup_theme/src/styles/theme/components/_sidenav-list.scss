@@ -25,6 +25,23 @@ $sidenav-list-dot-spacing: 22px;
 
 .region-sidebar-first,
 .region-sidebar-second {
+  .box {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    .box__body {
+      padding: unset;
+      > div {
+        background-color: white;
+        padding: 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+      }
+      .block + .block {
+        margin-top: unset;
+      }
+    }
+  }
 
   #block-primaernavigation-right-sidebar {
     .sidenav-list {
@@ -101,9 +118,6 @@ $sidenav-list-dot-spacing: 22px;
         order: 1;
         border-top: 0;
         background-color: $color-primary;
-        > a {
-          //color: #fff;
-        }
       }
     }
   }
