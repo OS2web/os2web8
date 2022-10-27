@@ -121,12 +121,6 @@
           <div class="layout-sidebar-right">
             {% if page.sidebar_second %}
               {% block sidebar_second %}
-                {% if ( not is_front ) %}
-                  {# <a href="/selvbetjening" class="button button-primary button--selvbetjening">
-                    {{ 'Genvej til al Selvbetjening' | trans }} <span class="icon fa fa-angle-right"></span>
-                  </a> #}
-                {% endif %}
-
                 {{ page.sidebar_second }}
               {% endblock %}
             {% endif %}
