@@ -11,9 +11,12 @@
 %}
 <a href="{{ url }}" {{ attributes.addClass(classes) }}>
 	<h3 class="title">{{ label }}</h3>
-	<div>
-		{{ content }}
-	</div>
+	<p>
+	{{ content }}
+	</p>
+	<p>
+  {{ node.type.entity.label }}
+	</p>
 	<div>
 		{{ _context['#section_labels']|last }}
 	</div>
