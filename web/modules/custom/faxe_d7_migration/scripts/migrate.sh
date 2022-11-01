@@ -36,6 +36,10 @@ drush migrate:reset faxe_d7_os2web_contentpage_paragraph_files
 drush migrate:import faxe_d7_os2web_contentpage_paragraph_files
 echo "Migration faxe_d7_os2web_contentpage_paragraph_files - END"
 
+echo "Migration faxe_d7_paragraph_twi - START"
+drush migrate:import faxe_d7_paragraph_twi
+echo "Migration faxe_d7_paragraph_twi - END"
+
 echo "Migration faxe_d7_paragraph_simple_text - START"
 drush migrate:reset faxe_d7_paragraph_simple_text
 drush migrate:import faxe_d7_paragraph_simple_text
