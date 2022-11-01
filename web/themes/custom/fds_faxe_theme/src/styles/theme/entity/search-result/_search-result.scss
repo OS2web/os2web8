@@ -152,10 +152,7 @@
   }
 }
 .entity-search-result {
-  padding: 24px;
 
-  background-color: #fff;
-  box-shadow: $box-shadow;
 
   h1,
   h2,
@@ -178,6 +175,19 @@ a.entity-search-result {
   &:visited,
   &:focus {
     color: $color-text;
+  }
+}
+
+.search-block-page {
+  .title {
+    color: $background_color__default;
+    span {
+      color: $background_color__default;
+    }
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
