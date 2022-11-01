@@ -20,7 +20,13 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.sogeresultater {
+  display: none;
+}
 .page--s {
+  .sogeresultater {
+    display: block;
+  }
   .layout-content {
     padding-top: 0;
     margin-bottom: 120px;
@@ -181,9 +187,11 @@ a.entity-search-result {
 
 .search-block-page {
   .title {
-    color: $background_color__default;
+    color: #2a5e6f;
+    font-weight: 400;
     span {
-      color: $background_color__default;
+      color: #2a5e6f;
+      font-weight: 400;
     }
     cursor: pointer;
     &:hover {
