@@ -37,6 +37,13 @@
       h2 {
         margin: 0;
         margin-bottom: 40px;
+        font-size: 25px;
+        @include media($sm) {
+          font-size: 27px;
+        };
+        @include media($md) {
+          font-size: 32px;
+        };
       }
       & > form {
         margin-bottom: 0 !important;

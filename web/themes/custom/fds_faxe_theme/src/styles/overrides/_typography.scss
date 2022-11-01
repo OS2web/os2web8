@@ -55,6 +55,16 @@ h6, .h6 {
 h1, .h1 {
   font-weight: $font-weight-semibold;
 }
+h2, .h2 {
+  font-weight: 400;
+  font-size: 22px;
+  @include media($sm) {
+    font-size: 23px;
+  };
+  @include media($md) {
+    font-size: 28px;
+  };
+}
 
 h2, .h2,
 h3, .h3 {
