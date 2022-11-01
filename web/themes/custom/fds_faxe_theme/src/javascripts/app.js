@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const searchForm = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form');
-  const searchInput = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-item-search-api-fulltext input');
-  const searchBtnIcon = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-actions');;
+  const searchInput = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form input');
+  const searchBtnIcon = document.querySelector('.custom-header-row--desktop-navigation .region-small-search form .form-actions');
   function getPageAndElementDistance() {
     if(searchBtnIcon && searchInput && searchForm) {
       searchBtnIcon.style.right =  -window.innerWidth - -30 - -searchForm.getBoundingClientRect().right + "px" //adding position for search icon
