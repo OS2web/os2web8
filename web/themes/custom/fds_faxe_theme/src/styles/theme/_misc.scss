@@ -213,13 +213,15 @@ body .page-container {
             top: 50%;
             transform: translateY(-50%);
             right: 0;
-            // content: '\276f';
-            font-family: FontAwesome;
-            content: "\f105";
-            font-size: 2rem;
+
             height: 40px;
             width: 40px;
             position: absolute;
+            content: $fa-var-angle-right;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
         }
       }
     }
@@ -293,10 +295,11 @@ body .page-container {
           top: 50%;
           transform: translateY(-50%);
           right: 0;
-          // content: '\276f';
-          font-family: FontAwesome;
-          content: "\f105";
-          font-size: 2rem;
+          content: $fa-var-angle-right;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
           height: 40px;
           width: 40px;
           position: absolute;
@@ -372,10 +375,11 @@ body .page-container {
               top: 50%;
               transform: translateY(-50%);
               right: 0;
-              // content: '\276f';
-              font-family: FontAwesome;
-              content: "\f105";
-              font-size: 2rem;
+              content: $fa-var-angle-right;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
               height: 40px;
               width: 40px;
               position: absolute;
