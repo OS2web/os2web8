@@ -44,6 +44,8 @@
             font-family: FontAwesome;
             content: "\f105";
             font-size: 1.6rem;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
             height: 40px;
             width: 40px;
         }
