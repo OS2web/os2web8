@@ -25,7 +25,7 @@ html {
   line-height: $base-line-height;
 }
 * {
-  font-family: "Lato";
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 html body {
   line-height: $base-line-height;
@@ -42,7 +42,7 @@ h5, .h5,
 h6, .h6 {
   margin-top: 30px;
 
-  font-family: "Lato";
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   color: $color-text;
   line-height: 1.1;
