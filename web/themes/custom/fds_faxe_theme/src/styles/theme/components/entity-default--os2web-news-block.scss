@@ -40,8 +40,10 @@
             top: 50%;
             transform: translateY(-50%);
             right: 0;
-            content: '\276f';
-            font-size: 1.5rem;
+            // content: '\276f';
+            font-family: FontAwesome;
+            content: "\f105";
+            font-size: 2rem;
             height: 40px;
             width: 40px;
         }
