@@ -20,7 +20,7 @@
 // Styling
 // --------------------------------------------------
 
-a.entity-list--os2web-news {
+div.entity-list--os2web-news {
   margin-left: -($side-shift-size);
   margin-right: -($side-shift-size);
   max-width: 100%;
@@ -87,7 +87,7 @@ a.entity-list--os2web-news {
   }
 }
 
-a.entity-list--os2web-news {
+div.entity-list--os2web-news {
   img {
     cursor: pointer;
   }
