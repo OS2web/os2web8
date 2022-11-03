@@ -150,3 +150,21 @@ function fds_ballerup_theme_preprocess_menu(&$variables, $hook) {
     }
   }
 }
+
+
+/**
+ * Implements hook_link_alter().
+ */
+function fds_ballerup_theme_preprocess_block(&$variables) {
+  if (!empty($variables['content']['#attributes']['block']) && $variables['content']['#attributes']['block'] == 'primaernavigation_right_sidebar') {
+    if (!empty($variables['content']['#items'])) {
+      $links = $variables['content']['#items'];
+      foreach( $links AS $idx => $link ) {
+        if ($link['in_active_trail']) {
+          unset( $variables['content']['#items'][$idx] );
+        }
+      }
+    }
+  }
+}
+
