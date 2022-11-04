@@ -25,7 +25,8 @@ header {
   z-index: 100;
   form#views-exposed-form-os2web-search-os2web-search-page {
     .form-actions {
-      left: auto;
+      left:unset;
+      right: 0;
       .form-submit {
         border-radius: 0;
         border-top-right-radius: $big-border-radius;
@@ -36,7 +37,7 @@ header {
       }
     }
     input[type=text] {
-      padding: 14px 14px 14px 50px !important;
+      padding: 14px 45px 14px 14px !important;
     }
   }
   .region-header__search {
