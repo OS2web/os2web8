@@ -3211,7 +3211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 jQuery(document).ready(function(){
-  window.slinky = jQuery('.custom-mobile-navigation .side-menu').slinky({
+  window.slinky = jQuery('.custom-mobile-navigation nav').slinky({
     title: true
   })
 });
