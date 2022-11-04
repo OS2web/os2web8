@@ -50,7 +50,7 @@
 
 // Tiny Slider slideshow img.
 (function() {
-  var selector = '.tns-slider';
+  var selector = '.paragraph--type--os2web-slideshow';
 
   // var transitionEndCallback = function (info, eventName) {
   //   // Add tab
@@ -68,18 +68,16 @@
   if (document.querySelector(selector) !== null) {
 
     // Run tiny slider.
-    var slider = tns({
+    tns({
       container: selector,
       items: 1,
-      autoplay: false,
+      autoplay: true,
       autoplayHoverPause: true,
-      gutter: 32,
+      mouseDrag: true,
+      gutter: 0,
       rewind: true,
-      responsive: {
-        576: {
-          items: 2,
-        },
-      },
+      controls: false,
+      nested: false,
     });
 
     // // bind function to event
@@ -87,3 +85,4 @@
     // transitionEndCallback(slider.getInfo());
   }
 })();
+
