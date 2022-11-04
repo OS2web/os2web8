@@ -40,10 +40,10 @@
     height: 14px;
 
     border-width: 1px;
-    border-color: $color-red-001;
+    border-color: $background_color__default;
 
     &.tns-nav-active {
-      background-color: $color-red-001;
+      background-color: $background_color__default;
     }
 
     + button {
@@ -75,7 +75,7 @@
     border-radius: 100%;
 
     color: #fff;
-    background-color: $color-red-001;
+    background-color: $background_color__default;
 
     &:before {
       display: inline-block;
@@ -85,7 +85,7 @@
     }
 
     &[data-controls="prev"] {
-      left: -15px;
+      left: -10px;
 
       &:before {
         content: "\f104";
@@ -93,7 +93,7 @@
     }
 
     &[data-controls="next"] {
-      right: -15px;
+      right: -10px;
 
       &:before {
         content: "\f105";
@@ -131,13 +131,13 @@
         font-size: 2.6rem;
       }
 
-      &[data-controls="prev"] {
-        left: -20px;
-      }
+      // &[data-controls="prev"] {
+      //   left: -20px;
+      // }
 
-      &[data-controls="next"] {
-        right: -20px;
-      }
+      // &[data-controls="next"] {
+      //   right: -20px;
+      // }
     }
   }
 }
