@@ -18,6 +18,7 @@
 						<div class="text align-self-center pt-7 py-md-7 hero-content">
 							<h1>{{ content.field_headline }}</h1>
 							{{ content.field_description }}
+							{% if content.field_show_search[0]|render == 'On' %}
 							<form block="os2web_search_page_form_content_front_page" action="/s" method="get" id="views-exposed-form-os2web-search-os2web-search-page" accept-charset="UTF-8">
 								<div class="form--inline clearfix">
 									<div class="search-input-submit-after form-group form-item js-form-item form-type-search-api-autocomplete js-form-type-search-api-autocomplete form-item-sq js-form-item-sq form-no-label">
@@ -26,6 +27,7 @@
 									</div>
 								</div>
 							</form>
+							{% endif %}
 						</div>
 					</div>
 					<div class="position-absolute hero-img d-none d-md-block">
