@@ -134,6 +134,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+
+const layoutSidebarRight = document.querySelector('.layout-sidebar-right');
+const layoutContent = document.querySelector('.layout-content');
+const fieldOs2webPageHeading = document.querySelector('.field--name-field-os2web-page-heading h1');
+function changeBlockPadding() {
+  if(layoutSidebarRight && fieldOs2webPageHeading && layoutContent && window.innerWidth > 767) {
+    const paddingTop = parseInt(window.getComputedStyle(layoutContent).getPropertyValue("padding-top"))
+    const marginTop = parseInt(window.getComputedStyle(fieldOs2webPageHeading).getPropertyValue("margin-top"))
+    const marginBottom = parseInt(window.getComputedStyle(fieldOs2webPageHeading).getPropertyValue("margin-bottom"))
+    const height =  parseInt(window.getComputedStyle(fieldOs2webPageHeading).getPropertyValue("height"))
+    layoutSidebarRight.style.paddingTop = paddingTop + marginTop + marginBottom + height + "px"
+  } else {
+    layoutSidebarRight.removeAttribute("style")
+  }
+}
+changeBlockPadding()
+window.addEventListener("resize", () => {
+  changeBlockPadding()
+});
+
 // Tooltips on mailto: links.
 (function() {
   var links = document.querySelectorAll('a[href^="mailto:"]');
