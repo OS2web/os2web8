@@ -159,6 +159,10 @@ form#search-block-form,
     background-color: $background_color__default;
 
     color: $color-white;
+    display: none;
+    @include media($md) {
+      display: block;
+    };
     &::placeholder {
       color: $color-white;
     }
