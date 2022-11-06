@@ -3260,7 +3260,7 @@ module.exports = function (button, expanded) {
       html.css("font-size", parseInt(currentFontSize));
     }
     html.css("font-size", parseInt(localStorage.getItem("fontSize")));
-    console.log(html.css("font-size")); 
+
   });
 })(jQuery);
 
