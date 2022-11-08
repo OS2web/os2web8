@@ -11,6 +11,7 @@
 
       {% set has_sidebar_first = page.sidebar_first|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
 			{% set has_sidebar_second = page.sidebar_second|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
+			{% set has_main_content = page.content|render|striptags("<drupal-render-placeholder>")|trim is not empty %}
 
       {%
         set content_classes = [
@@ -30,11 +31,13 @@
           </aside>
         {% endblock %}
       {% endif %}
-      <main {{ content_attributes.addClass(content_classes, 'col-12') }}>
-        <div class="layout-content">
-          {{ page.content }}
-        </div>
-      </main>
+      {% if has_main_content %}
+        <main {{ content_attributes.addClass(content_classes, 'col-12') }}>
+          <div class="layout-content">
+            {{ page.content }}
+          </div>
+        </main>
+      {% endif %}
 
       {% if has_sidebar_second %}
         {% block sidebar_second %}
@@ -46,6 +49,7 @@
         {% endblock %}
       {% endif %}
     </div>
+
   </div>
 
   {{ page.featured_bottom_first }}
