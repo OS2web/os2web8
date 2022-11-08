@@ -51,9 +51,9 @@
     }
   }
 }
+$contols-size: 20px;
 
 .tns-controls {
-
   button {
     display: flex;
     position: absolute;
@@ -64,8 +64,8 @@
     margin-top: -15px;
     padding: 0;
 
-    height: 30px;
-    width: 30px;
+    height: $contols-size;
+    width: $contols-size;
 
     align-items: center;
     justify-content: center;
@@ -81,11 +81,11 @@
       display: inline-block;
 
       font-family: FontAwesome;
-      font-size: 2.2rem;
+      font-size: calc(#{$contols-size} - 7px);
     }
 
     &[data-controls="prev"] {
-      left: -10px;
+      left: 0;
 
       &:before {
         content: "\f104";
@@ -93,7 +93,7 @@
     }
 
     &[data-controls="next"] {
-      right: -10px;
+      right: 0;
 
       &:before {
         content: "\f105";
@@ -124,11 +124,11 @@
     button {
       margin-top: -20px;
 
-      height: 40px;
-      width: 40px;
+      height: calc(#{$contols-size} + 10px);
+      width: calc(#{$contols-size} + 10px);;
 
       &:before {
-        font-size: 2.6rem;
+        font-size: $contols-size;
       }
 
       // &[data-controls="prev"] {

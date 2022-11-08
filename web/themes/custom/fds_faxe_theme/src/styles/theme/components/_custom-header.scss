@@ -68,7 +68,8 @@ $header-top-menu-size-sm: 50px;
 .region-header__logo {
   .logo {
     img {
-      height: 24px;
+      max-width: 350px;
+      min-height: 24px;
     }
   }
 }
