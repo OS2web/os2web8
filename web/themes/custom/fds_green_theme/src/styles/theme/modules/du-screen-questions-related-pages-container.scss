@@ -29,6 +29,21 @@
         font-size: 1.6rem;
       }
     }
+    div.du-screen-questions-link {
+      width: 100%;
+      background-color: $color-green-005; //back#f3f5f2;
+      padding: 16px 16px 16px 24px;
+      border-radius: $big-border-radius;
+      a.du-screen-questions-link {
+        text-decoration: none;
+        font-weight: bolder;
+        color: $color-green-001;
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+
     @each $class, $color-code, $svg-path in $bg-colors-and-svgs {
       &.#{$class} {
         border: 1px solid $color-code;

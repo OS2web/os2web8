@@ -27,6 +27,11 @@ class RelatedPagesFilterForm extends FormBase {
    * @inheritDoc
    */
   public function buildForm(array $form, FormStateInterface $form_state, NodeInterface $node = NULL) {
+
+    $useLink = false;
+    if ($node->hasField('field_du_screen_link')) {
+      $useLink = $node->get('field_du_screen_link')->value ?? true;
+    }
     // Getting screening question keys.
     $situationKeys = [];
     if ($node->hasField('field_du_scr_ques_situation')) {
@@ -101,7 +106,7 @@ class RelatedPagesFilterForm extends FormBase {
       $relatedPageCategories[$term->tid] = [
         'name' => $term->name,
         'transliteratedName' => Html::getClass($trans->transliterate($term->name)),
-        'nodes' => [],
+        'nodes' => []
       ];
     }
 
@@ -117,14 +122,19 @@ class RelatedPagesFilterForm extends FormBase {
       $build = $view_builder->view($node, 'teaser');
       $nodeRendered = \Drupal::service('renderer')->render($build);
       $title = $node->label();
+      $url =$node->toUrl()->toString();
+
       if ($node->hasField('field_os2web_page_heading') && !$node->get('field_os2web_page_heading')->isEmpty()) {
         $title = $node->get('field_os2web_page_heading')->value;
       }
+
       if  (isset($node->field_du_screen_category->target_id)) {
-        $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][$title] = $nodeRendered;
+        $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][$title]['content'] = $nodeRendered;
+        $relatedPageCategories[$node->field_du_screen_category->target_id]['nodes'][$title]['url'] = $url;
       }
       else {
-        $relatedPageCategories['empty']['nodes'][$title] = $nodeRendered;
+        $relatedPageCategories['empty']['nodes'][$title]['content'] = $nodeRendered;
+        $relatedPageCategories['empty']['nodes'][$title]['url'] = $url;
       }
     }
 
@@ -133,8 +143,9 @@ class RelatedPagesFilterForm extends FormBase {
       '#theme' => 'du_screen_questions_related_pages_container',
       '#related_pages_categories' => $relatedPageCategories,
       '#attributes' => [
-        'id' => ['js-related-pages'],
+        'id' => ['js-related-pages']
       ],
+      '#use_links' => (bool) $useLink
     ];
 
     return $form;
