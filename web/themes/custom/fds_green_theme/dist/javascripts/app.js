@@ -3460,8 +3460,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })(jQuery, Drupal);
 
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    $("button.tabnav-item").on("click", function(event) {
+      let offset = $("button.tabnav-item").offset();
+      $("html, body").animate({scrollTop: (offset.top - 100)}, "slow");
+    });
+  });
+})(jQuery);
 
 jQuery(document).ready(function () {
+  
   jQuery(".play-pause-btn").on("click", function () {
     let video = jQuery(this).next()[0]
     if (jQuery(this).attr("data-click") == 1) {
@@ -3472,6 +3482,7 @@ jQuery(document).ready(function () {
       video.play();
     }
   });
+
 });
 
 
@@ -3485,9 +3496,9 @@ const targetConfig = {
 const callback = function(mutationsList, targetObserver) {
   for (let mutation of mutationsList) {
       if (mutation.type === 'attributes') {
-          const headerToggle = document.querySelector('header.menu-toggler')
-          headerToggle.classList.toggle('open')
-          return
+          const headerToggle = document.querySelector('header.menu-toggler');
+          headerToggle.classList.toggle('open');
+          return;
       } 
   }
 };
