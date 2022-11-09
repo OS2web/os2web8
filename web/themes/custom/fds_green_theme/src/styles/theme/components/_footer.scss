@@ -41,7 +41,7 @@ footer {
       content: "";
       position: absolute;
       left: 50%;
-      bottom: 10px;
+      bottom: 60px;
       width: 310px;
       height: 530px;
     }
@@ -102,6 +102,21 @@ footer {
     a {
       font-size: 1.5rem;
     }
+    .footer-wide {
+      display: flex;
+      border-top: 1px solid #ddd;
+      width: 100%;
+      justify-content: center;
+      z-index: 2;
+        p {
+        max-width: 100%;
+        display: inline-block;
+        padding-top: 12px;
+        color: $color-gray-001;
+        font-weight: lighter;
+        word-break: keep-all;
+      }
+    }
   }
   &.footer-not-front {
     background-color: $color-green-005;
@@ -127,7 +142,6 @@ footer {
       padding-top: 0.8em;
     }
   }
-
   .social-icon-list {
     margin-top: 35px;
   }
