@@ -141,6 +141,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     button.addEventListener('click', toggle);
   }
+
+  var searchInputs = document.querySelectorAll('.search-input__input');
+  for (var i = 0; i < searchInputs.length; i++) {
+
+    var searchInput = searchInputs[i];
+    searchInput.addEventListener('keydown', function(event) {
+      if (event.keyCode === 13 && searchInput.value.length < 4) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  }
+
+
 });
  
 // Tiny Slider frontpage events.
