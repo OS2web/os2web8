@@ -53,7 +53,7 @@ function bc_utility_block_access($block, $operation, $account) {
   if ($operation == 'view') {
     if ($block->get('id') == 'indholdfield_ext_links'){
       $node = \Drupal::routeMatch()->getParameter('node');
-      if(!empty($node->field_link_til_andet_indhold->getValue())){
+      if($node && !empty($node->field_link_til_andet_indhold->getValue())){
         return AccessResult::forbidden();
       }
     }
