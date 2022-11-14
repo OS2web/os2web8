@@ -100,6 +100,15 @@ process:
       - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
       - setModerationState
     source: status
+  field_link_til_andet_indhold:
+    - plugin: callback
+      source: field_os2web_base_field_related
+      callable:
+        - 'Drupal\faxe_d7_migration\Utility\MigrationHelper'
+        - migrateRelatedLinks
+  field_ext_links:
+    plugin: field_link
+    source: field_os2web_base_field_ext_link
 destination:
   plugin: entity:node
 migration_dependencies:
