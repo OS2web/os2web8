@@ -5,18 +5,18 @@
   node.isSticky() ? 'is-sticky',
   not node.isPublished() ? 'is-unpublished',
   view_mode ? view_mode|clean_class,
+  'block-link'
 ]
 %}
+
 <div {{ attributes.addClass(classes).addClass(_context['#page_category_class']) }}>
 	<div class="field--type-link">
 		<a href="{{ url }}">
 			<h4>{{ label }}</h4>
-
 			<div class="search-results-examples">
 				{{ content }}
 			</div>
 
-			<br>
 			<div class="search-results-bread-crumbs">
 			{% for sectionLabel in _context['#section_labels'] %}
 				{{ sectionLabel }}
@@ -29,7 +29,6 @@
 				{% endif %}
 			{% endfor %}
 			</div>
-
 
 			{# {{ 'Read more' | trans }} #}
 		</a>
