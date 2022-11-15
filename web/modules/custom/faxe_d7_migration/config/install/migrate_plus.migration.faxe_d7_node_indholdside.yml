@@ -180,6 +180,9 @@ process:
     migration: faxe_d7_contact_box
     source: field_os2sub_contact_ref
     no_stub: true
+  field_ext_links:
+    plugin: field_link
+    source: field_os2web_base_field_ext_link
 destination:
   plugin: entity:node
 migration_dependencies:

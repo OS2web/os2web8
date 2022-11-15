@@ -23,6 +23,7 @@
 a.entity-list--os2web-news {
   max-width: unset;
   cursor: pointer;
+  border-radius: 6px;
 }
 .entity-list--os2web-news {
   display: flex;
@@ -39,9 +40,7 @@ a.entity-list--os2web-news {
 
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
-
       font-weight: normal;
-
       color: $color-link;
     }
   }
@@ -66,12 +65,20 @@ a.entity-list--os2web-news {
   .entity-list__body {
     padding: $grid-gutter-width / 2;
   }
+  .entity-list__image {
+
+    img {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+  }
 }
 
 a.entity-list--os2web-news {
-
+  border-radius: 6px;
   &, &:hover, &:focus, &:active {
     color: $color-text;
+    border-radius: 6px;
   }
 }
 
@@ -103,8 +110,9 @@ a.entity-list--os2web-news {
 
       img {
         display: block;
-
         width: 100%;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
       }
     }
 

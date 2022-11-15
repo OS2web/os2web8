@@ -2,6 +2,7 @@
 
 use Drupal\bc_utility\Controller\OldContentNotity;
 use Drupal\Component\Render\FormattableMarkup;
+use Drupal\Core\Access\AccessResult;
 
 /**
  * @file
@@ -41,4 +42,23 @@ function bc_utility_mail($key, &$message, $params)
     $message['subject'] = t($params['subject']);
     $message['body'][] = new FormattableMarkup($params['body'], []);
   }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ *
+ * Hide External link block if Internal links are exists
+ */
+function bc_utility_block_access($block, $operation, $account) {
+  if ($operation == 'view') {
+    if ($block->get('id') == 'indholdfield_ext_links'){
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if($node && $node->hasField('field_link_til_andet_indhold')) {
+        if (!empty($node->field_link_til_andet_indhold->getValue())) {
+          return AccessResult::forbidden();
+        }
+     }
+    }
+  }
+  return AccessResult::neutral();
 }
