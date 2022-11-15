@@ -148,6 +148,20 @@ body {
 .custom-header--static {
   display: block;
 }
+
+.menu-toggler.sticky {
+  @include media-breakpoint-up(lg) {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+}
+.header-sticky-spacer {
+  @include media-breakpoint-up(lg) {
+    min-height: 80px;
+  }
+}
+
 .custom-header--fixed {
   position: fixed;
   top: 0;
@@ -306,7 +320,14 @@ body {
 @include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
+@include media-breakpoint-only(xs, $grid-breakpoints) {
+  .menu-toggler.sticky {
+    position: relative;
+  }
+  .header-sticky-spacer {
+    min-height: unset;
+  }
+}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
@@ -332,7 +353,6 @@ body {
     }
    
   }
-
   .custom-header__meta {
     padding: 1rem;
   }
@@ -389,6 +409,7 @@ body {
       font-size: 3.2rem;
     }
   }
+
 }
 
 // Desktop - only

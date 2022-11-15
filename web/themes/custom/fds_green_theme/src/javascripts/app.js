@@ -190,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let offset = $("button.tabnav-item").offset();
       $("html, body").animate({scrollTop: (offset.top - 100)}, "slow");
     });
+
   });
 })(jQuery);
 
@@ -222,7 +223,7 @@ const callback = function(mutationsList, targetObserver) {
           const headerToggle = document.querySelector('header.menu-toggler');
           headerToggle.classList.toggle('open');
           return;
-      } 
+      }
   }
 };
 const targetObserver = new MutationObserver(callback);
