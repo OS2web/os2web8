@@ -21,21 +21,16 @@
 // --------------------------------------------------
 
 .accordion {
-
   > li {
     box-shadow: $box-shadow;
   }
 }
 .accordion-button {
   position: relative;
-
   padding: 1.6rem 2.4rem;
   padding-right: 6rem;
-
   font-weight: $font-weight-bold;
-
   border-radius: 0 !important;
-
   background-image: none !important;
 
   &, &:hover, &:focus {
@@ -162,42 +157,85 @@
     }
 }
 
-// --------------------------------------------------
-// Responsive
-// --------------------------------------------------
+aside {
+  .region-sidebar-first {
+    ul.accordion {
+      li.accordion-item {
+        margin-bottom: unset;
+        border-radius: unset;
 
-// Mobile - and up
-@include media-breakpoint-up(xs) {}
+        .accordion-button {
+          img {
+            position: unset;
+            float: left;
+          }
+          .accordion-item-head {
+            display: flex;
+            padding-top: 6px;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
 
-// Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
+    div.accordion-content {
+      padding-left: 50px;
+      .accordion-link {
+        text-decoration: none;
+        color: $color-green-001;
+        outline: none;
+        .active {
+          float: left;
+          min-height: 20px;
+          min-width: 15px;
+          outline: none;
+        }
+        &.active {
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
 
-// Tablet - and up
-@include media-breakpoint-up(sm) {}
 
-// Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
+  // --------------------------------------------------
+  // Responsive
+  // --------------------------------------------------
 
-// Desktop - and up
-@include media-breakpoint-up(md) {}
+  // Mobile - and up
+  @include media-breakpoint-up(xs) {}
 
-// Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {}
+  // Mobile - only
+  @include media-breakpoint-only(xs, $grid-breakpoints) {}
 
-// Large desktop - and up
-@include media-breakpoint-up(lg) {}
+  // Tablet - and up
+  @include media-breakpoint-up(sm) {}
 
-// Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {}
+  // Tablet - only
+  @include media-breakpoint-only(sm, $grid-breakpoints) {}
 
-// Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
+  // Desktop - and up
+  @include media-breakpoint-up(md) {}
 
-// Print
-@media print {}
+  // Desktop - only
+  @include media-breakpoint-only(md, $grid-breakpoints) {}
 
-// Touch
-.touchevents {}
+  // Large desktop - and up
+  @include media-breakpoint-up(lg) {}
 
-// No touch
-.no-touchevents {}
+  // Large desktop - only
+  @include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+  // Extra large desktop - and up
+  @include media-breakpoint-up(xl) {}
+
+  // Print
+  @media print {}
+
+  // Touch
+  .touchevents {}
+
+  // No touch
+  .no-touchevents {}
+
