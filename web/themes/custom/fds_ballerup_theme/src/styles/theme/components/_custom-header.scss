@@ -80,7 +80,7 @@
 .custom-header-row--desktop-navigation {
   background-color: $background_color__default;
   color: $color-white;
-  height: 50px;
+  height: auto;
   .menu {
 
     a {
@@ -95,11 +95,11 @@
       &:hover {
         text-decoration: underline;
       }
-      
+
       &:hover, &:focus, &.is-active {
         outline: none;
       }
-      
+
     }
     .menu-item--active-trail {
       a {
@@ -111,7 +111,7 @@
   }
 }
 .custom-header-row--mobile-navigation {
-  height: 50px;
+  height: auto;
 
   background-color: $color-white;
 }
@@ -130,6 +130,12 @@
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
+
+@media only screen and (max-width: 1000px) {
+  .flexy-row {
+    flex-direction: column;
+  }
+}
 
 // Mobile - and up
 @include media-breakpoint-up(xs) {}
@@ -175,3 +181,4 @@
 
 // No touch
 .no-touchevents {}
+
