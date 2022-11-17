@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dfe1140732669cf537aeab43d343384",
+    "content-hash": "0ecd55277d1428f27a3345fe6da68c26",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2570,12 +2570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "81daa6c1f534696fcfbad3f9bb0f4887646fe32e"
+                "reference": "28c302f77730e7e075d2b97b008b4fd4294a8df7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/81daa6c1f534696fcfbad3f9bb0f4887646fe32e",
-                "reference": "81daa6c1f534696fcfbad3f9bb0f4887646fe32e",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/28c302f77730e7e075d2b97b008b4fd4294a8df7",
+                "reference": "28c302f77730e7e075d2b97b008b4fd4294a8df7",
                 "shasum": ""
             },
             "default-branch": true,
@@ -2588,7 +2588,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/8.x-1.x",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2022-07-19T13:03:46+00:00"
+            "time": "2022-11-17T14:44:27+00:00"
         },
         {
             "name": "drupal/better_exposed_filters",
