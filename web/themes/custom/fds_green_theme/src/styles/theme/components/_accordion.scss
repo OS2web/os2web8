@@ -65,9 +65,7 @@
 
 .accordion-content {
   padding: 0.5rem 2.4rem 2rem 2.4rem;
-
   .field {
-
     + .field--name-field-os2web-hearings-reply-docs {
       margin-top: $grid-gutter-width / 2;
     }
@@ -76,29 +74,23 @@
 
 .accordion-close-button {
   display: block;
-
   margin-left: -2.4rem;
   margin-right: -2.4rem;
   margin-bottom: -2rem;
   padding: 2rem 0 3rem 0;
-
   font-weight: $font-weight-bold;
   font-size: 4rem;
   text-align: center;
   border: 0;
-
   color: $color-orange-004;
   background-color: transparent;
-
   &:focus {
     outline: 0;
   }
 }
 
 .accordion {
-
   .box__body {
-
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
     }
@@ -106,15 +98,15 @@
 }
 
 .accordion {
-  & > li {
-    border-radius: $big-border-radius!important;
-    box-shadow: none;
-    background-color: transparent;
-    & > h2 {
-      margin: 0;
-      color: $color-primary;
+    & > li {
+      border-radius: $big-border-radius!important;
+      box-shadow: none;
+      background-color: transparent;
+      & > h2 {
+        margin: 0;
+        color: $color-primary;
+      }
     }
-  }
     button {
       border-radius: $big-border-radius!important;
       background-color: $color-green-005;
@@ -160,11 +152,16 @@
 aside {
   .region-sidebar-first {
     ul.accordion {
+      border-radius: $big-border-radius!important;
+      background-color: $color-green-005;
       li.accordion-item {
         margin-bottom: unset;
         border-radius: unset;
-
+        background-color: unset;
+        border-radius: unset !important;
         .accordion-button {
+          border-radius: unset !important;
+          background-color: unset;
           img {
             position: unset;
             float: left;
@@ -176,22 +173,22 @@ aside {
           }
         }
       }
-    }
-
-    div.accordion-content {
-      padding-left: 50px;
-      .accordion-link {
-        text-decoration: none;
-        color: $color-green-001;
-        outline: none;
-        .active {
-          float: left;
-          min-height: 20px;
-          min-width: 15px;
+      div.accordion-content {
+        border-radius: unset !important;
+        padding-left: 50px;
+        .accordion-link {
+          text-decoration: none;
+          color: $color-green-001;
           outline: none;
-        }
-        &.active {
-          font-weight: bolder;
+          .active {
+            float: left;
+            min-height: 20px;
+            min-width: 15px;
+            outline: none;
+          }
+          &.active {
+            font-weight: bolder;
+          }
         }
       }
     }
