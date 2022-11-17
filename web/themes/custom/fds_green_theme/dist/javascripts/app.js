@@ -3467,11 +3467,12 @@ document.addEventListener('DOMContentLoaded', function() {
       let offset = $("button.tabnav-item").offset();
       $("html, body").animate({scrollTop: (offset.top - 100)}, "slow");
     });
+
   });
 })(jQuery);
 
 jQuery(document).ready(function () {
-  
+
   jQuery(".play-pause-btn").on("click", function () {
     let video = jQuery(this).next()[0]
     if (jQuery(this).attr("data-click") == 1) {
@@ -3499,7 +3500,7 @@ const callback = function(mutationsList, targetObserver) {
           const headerToggle = document.querySelector('header.menu-toggler');
           headerToggle.classList.toggle('open');
           return;
-      } 
+      }
   }
 };
 const targetObserver = new MutationObserver(callback);

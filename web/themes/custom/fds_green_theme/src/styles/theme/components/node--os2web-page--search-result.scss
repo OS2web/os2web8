@@ -21,8 +21,8 @@
 
   $bg-colors:
       "du-cat-hjaelp-dig-selv" $color-orange-006,
-      "du-cat-kommunale-tilbud" $color-blue-009,
-      "du-cat-hverdagsteknologi" $color-primary,
+      "du-cat-kommunale-tilbud" $color-primary,
+      "du-cat-hverdagsteknologi" $color-blue-009,
       "du-cat-eksterne-tilbud" $color-red-003,
       "du-cat-other" $color-red-003;
 
@@ -73,6 +73,7 @@
 
       }
       .search-results-examples {
+        padding-bottom: 22px;
         strong {
           background-color: #E0E9D0;
         }
