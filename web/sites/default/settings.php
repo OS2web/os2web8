@@ -811,7 +811,7 @@ $settings['config_sync_directory'] = '../config/sync';
 include __DIR__ . DIRECTORY_SEPARATOR . '/init.settings.php';
 
 // Load the required env variables.
-include __DIR__ . DIRECTORY_SEPARATOR . '/env.settings.php';
+include __DIR__ . DIRECTORY_SEPARATOR . 'env.settings.php';
 
 // Check if environment exists.
 if (!isset($settings['project_env']) && !in_array($settings['project_env'], $available_env)) {
