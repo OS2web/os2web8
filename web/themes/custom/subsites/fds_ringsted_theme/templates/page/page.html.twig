@@ -93,8 +93,6 @@
       {% set has_main_content = page.content|render|striptags(drupalTag)|trim is not empty %}
      {% if has_main_content %}
     <div class="row row-no-flex">
-      {#  Wayaround for determining visibility for regions with lazybuilder.
-      @See https://www.drupal.org/project/drupal/issues/953034 for more info. #}
       {% set has_sidebar_first = page.sidebar_first|render|striptags(drupalTag)|trim is not empty %}
       {% set has_sidebar_second = page.sidebar_second|render|striptags(drupalTag)|trim is not empty %}
 
@@ -150,7 +148,7 @@
   {{ page.featured_bottom_first }}
 </div>
 
-{% include '@fds_redwhite_theme/includes/footer.html.twig' %}
+{% include '@fds_ringsted_theme/includes/footer.html.twig' %}
 
 <div class="d-none">
   {{ page.embedded_code }}
