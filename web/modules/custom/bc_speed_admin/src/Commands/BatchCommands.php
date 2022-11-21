@@ -1,7 +1,8 @@
 <?php
-namespace Drupal\bc_speedadmin\Commands;
+namespace Drupal\bc_speed_admin\Commands;
 
 use Drush\Commands\DrushCommands;
+use Drupal\bc_speed_admin\Controller;
 
 Class BatchCommands extends DrushCommands
 {
@@ -17,8 +18,24 @@ Class BatchCommands extends DrushCommands
     {
         echo "test run\n";
 
+    }
+
+    /**
+     * speedadmin sync
+     *
+     * @command sd:sync
+     * @aliases sdsync
+     * @options $options arr AN option that takes multiple values.
+     */
+    public function sync($options=array())
+    {
+        echo "# sync #\n";
+
+        Controller\Sync::handler();
 
     }
+
+
 
 
 }

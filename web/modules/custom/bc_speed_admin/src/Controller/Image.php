@@ -1,23 +1,23 @@
 <?php
 namespace Drupal\bc_speed_admin\Controller;
 
-Class Request
+Class Image
 {
     private static $key = 'UHOaup5GM7OmvEXBvAUAbp7q4oLTUMbRYpV3m3nCEdaRV4QGGemxqTdOw4w2wLJD';
     private static $url = 'https://api.speedadmin.dk/';
 
-    public static function getRequest($url=null, $arg=null) {
+    public static function getRequest($id=null, $contentType) {
 
         $response = null;
 
-        if (!empty($url)) {
+        if (!empty($id)) {
 
-            $curl = curl_init(self::$url . $url);
+            $curl = curl_init(self::$url . '/v1/blobs/' . $id);
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
             $headers = array(
-                'Content-Type: application/json',
+                'Content-Type: ' . $contentType ?? 'application/octet-stream',
                 'Authorization: ' . self::$key
             );
 
@@ -26,9 +26,7 @@ Class Request
             curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
             $response = curl_exec($curl);
-            $json = json_decode($response);
 
-            if (json_last_error() == 0) $response = $json;
 
         }
 
@@ -37,3 +35,4 @@ Class Request
     }
 
 }
+
