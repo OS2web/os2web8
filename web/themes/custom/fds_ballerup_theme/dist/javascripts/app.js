@@ -3348,3 +3348,23 @@ window.addEventListener("resize", () => {
     });
   }
 })(jQuery);
+
+(function($, Drupal, drupalSettings) {
+  var selector = '.field--name-field-os2web-page-paragraph-bann';
+  var count = document.querySelectorAll('.field--name-field-os2web-page-paragraph-bann > .field__item');
+  if (document.querySelector(selector) !== null && count.length > 1) {
+    var items = count.length;
+    tns({
+      container: selector,
+      items: 1,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayButtonOutput: false,
+      gutter: 32,
+      rewind: false,
+      nav: true,
+      speed: 600,
+      controls: false
+    });
+  }
+})(jQuery, Drupal, drupalSettings);
