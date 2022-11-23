@@ -32,11 +32,11 @@
  */
 #}
 
-<div class="teacher-thumbnail col-12 col-md-4" style="border:1px solid grey;float:left;margin: 8px;padding: 4px;">
-{{ fields.field_image.content }}<br>
-{{ fields.name.content }}<br>
+<div class="teacher-thumbnail">
+  <div class="image-container">{{ fields.field_image.content }}</div>
+  <p class="contact-name">{{ fields.name.content }}</p>
 {#{{ fields.field_os2web_contact_firstname.content }} {{ fields.field_os2web_contact_surname.content }}<br>#}
-{{ fields.field_os2web_contact_job_task.content }}
+  <p class="job-task">{{ fields.field_os2web_contact_job_task.content }}</p>
 </div>
 
 

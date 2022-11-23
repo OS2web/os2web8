@@ -78,6 +78,41 @@
   }
 }
 
+
+
+
+.contact-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #5a7300;
+  font-family: "Museo 500", sans-serif;
+  font-size: 22px;
+  padding: 5px 0;
+}
+
+.job-task {
+  font-size: 18px;
+  font-family: "Museo 300", sans-serif;
+  color: #666666;
+  margin-top: 0;
+}
+
+
+.item-list {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    li {
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -88,6 +123,7 @@
 
 // Mobile - and up
 @include media-breakpoint-up(xs) {}
+
 
 // Mobile - only
 @include media-breakpoint-only(xs, $grid-breakpoints) {}
