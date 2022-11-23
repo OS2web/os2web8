@@ -46,6 +46,10 @@ Class Sync
                     if (!empty($teacher->City)) $Contact->set('field_by', $teacher->City);
                     if (!empty($teacher->ZipCode)) $Contact->set('field_postnummer', $teacher->ZipCode);
 
+                    if (!empty($teacher->AvailableClasses) && is_array($teacher->AvailableClasses)) {
+                        $Contact->set('field_os2web_contact_job_task', implode(", ", $teacher->AvailableClasses));
+                    }
+
                     if (!empty($teacher->Blob)) {
                         $image = Image::getRequest($teacher->Blob->BlobId, $teacher->Blob->MimeType);
                         if (!empty($image)) {
@@ -62,6 +66,7 @@ Class Sync
                     }
 
                     $Contact->save();
+
                 }
             }
         }

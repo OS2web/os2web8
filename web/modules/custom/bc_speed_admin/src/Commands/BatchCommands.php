@@ -29,10 +29,11 @@ Class BatchCommands extends DrushCommands
      */
     public function sync($options=array())
     {
-        echo "# sync #\n";
+        echo "sync ...\n";
 
         Controller\Sync::handler();
 
+        echo "done ...\n";
     }
 
 
