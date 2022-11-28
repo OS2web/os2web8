@@ -7,11 +7,12 @@
   'block-' ~ plugin_id|clean_class,
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+{% set color = content.field_alert_color[0] %}
+<div{{ attributes.addClass(classes) }} {% if color %}style="background-color: {{color}};{% endif %}">
   <div class="container">
     <div class="custom-alert">
       <div class="custom-alert__icon">
-        <img src="/{{ base_path ~ directory }}/dist/images/alert.png" alt="Advarsel ikon" />
+        {{ content.field_alert_icon }}
       </div>
       <div class="custom-alert__meta">
         {{ content.field_heading }}
