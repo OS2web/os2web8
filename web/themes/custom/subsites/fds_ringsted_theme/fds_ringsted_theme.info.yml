@@ -6,6 +6,7 @@ core_version_requirement: ^8 || ^9
 screenshot: screenshot.png
 base theme: fds_base_theme
 package: OS2web
+logo: 'dist/images/logo.png'
 
 regions:
   megamenu__navigation: 'Megamenu - navigation'
