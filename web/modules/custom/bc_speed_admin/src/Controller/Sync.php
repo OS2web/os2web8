@@ -182,8 +182,8 @@ Class Sync
 
       if (!empty($obj->treeid)) {
         $import_ref = $obj->treeid;
-      }
-      elseif (!empty($obj->CouseId)) {
+
+      } elseif (!empty($obj->CouseId)) {
         $import_ref = $obj->CouseId;
       }
 
@@ -200,8 +200,6 @@ Class Sync
           $node->set('field_import_ref', $import_ref);
       }
 
-      // TODO insert data + images
-
       if (!empty($obj->Text)) {
         $txt = trim($obj->Text);
         $txt = nl2br($txt);
@@ -212,12 +210,48 @@ Class Sync
         $node->set('field_os2web_page_intro', $txt);
       }
 
+      $description = null;
       if (!empty($obj->Description)) {
         $txt = trim($obj->Description);
         $txt = nl2br($txt);
         $txt = str_replace(array('&nbsp;', '&amp;'), '', $txt);
 
-        $node->field_os2web_page_description->set(0, array('value' => $txt, 'format' => 'wysiwyg_tekst'));
+        $description = $txt;
+      }
+
+      if (!empty($obj->SubCategories)) {
+        $html = '';
+        foreach( $obj->SubCategories AS $idx => $cat ) {
+            $html .= '<div class="course-text">' . $cat->Name . '</div><br>';
+        }
+        if (!empty($html)) {
+          $description .= '<hr><br>' . $html;
+
+          echo $description;
+        }
+      }
+
+      if (!empty($description)) {
+        $node->field_os2web_page_description->set(0, array(
+          'value' => $description,
+          'format' => 'wysiwyg_tekst'
+        ));
+      }
+      
+      if (false && !empty($obj->Blobs)) {
+        $Blob = current($obj->Blobs);
+        $image = Image::getRequest($Blob->BlobId, $Blob->MimeType);
+        if (!empty($image)) {
+          $image_object = \Drupal::service('file.repository')
+            ->writeData($image, 'public://public/' . $Blob->UniqueId . '.' . $Blob->Extention, FileSystemInterface::EXISTS_REPLACE);
+          if (is_object($image_object)) {
+            $node->set('field_os2web_page_primaryimage', array(
+              'target_id' => $image_object->id(),
+              'alt' => $node->getTitle(),
+              'title' => $node->getTitle()
+            ));
+          }
+        }
       }
 
       $node->save();
