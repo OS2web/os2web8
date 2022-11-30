@@ -236,7 +236,7 @@ Class Sync
         ));
       }
 
-      if (false && !empty($obj->Blobs)) {
+      if (!empty($obj->Blobs)) {
         $Blob = current($obj->Blobs);
         $image = Image::getRequest($Blob->BlobId, $Blob->MimeType);
         if (!empty($image)) {
