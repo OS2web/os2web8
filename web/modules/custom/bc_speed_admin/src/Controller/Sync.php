@@ -29,7 +29,7 @@ Class Sync
 
         // TODO cleanup teachers that is not importet
 
-        $go = false;
+        $go = true;
         if ( $go && $teachers && is_array($teachers)) {
             foreach ( $teachers as $teacher ) {
                 if ($teacher->Active) {
@@ -226,8 +226,6 @@ Class Sync
         }
         if (!empty($html)) {
           $description .= '<hr><br>' . $html;
-
-          echo $description;
         }
       }
 
@@ -237,7 +235,7 @@ Class Sync
           'format' => 'wysiwyg_tekst'
         ));
       }
-      
+
       if (false && !empty($obj->Blobs)) {
         $Blob = current($obj->Blobs);
         $image = Image::getRequest($Blob->BlobId, $Blob->MimeType);
