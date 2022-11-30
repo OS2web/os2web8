@@ -11,21 +11,8 @@ use Drupal\taxonomy\Entity\Term;
  */
 function fds_ringsted_theme_preprocess_page(array &$variables) {
   $variables['show_action_buttons'] = TRUE;
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    if (is_object($node) && $node->bundle() == 'os2web_page') {
-      $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-      $menu_link = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $node->id()), 'main');
-      $menu_link = reset($menu_link);
-      if ($menu_link) {
-        if ($menu_link->getParent() && count($menu_link_manager->getParentIds($menu_link->getParent())) < 2) {
-          $variables['show_action_buttons'] = FALSE;
-          unset($variables['page']['sidebar_second']['fds_ringsted_theme_sidebar_first__navigation']);
-        }
-      }
-    }
-  }
-  $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
 
+  $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
   $variables['theme_settings']['contact_information']['vispaakort'] = theme_get_setting('vispaakort');
@@ -205,23 +192,11 @@ function fds_ringsted_theme_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
 
-  if ($node->getType() == 'os2web_page' && $variables['view_mode'] == 'full') {
-    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-    $menu_link = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);
-    $menu_link = reset($menu_link);
-    if ($menu_link) {
-      $variables['show_last_update_date'] = TRUE;
-      if (!$menu_link->getParent() || count($menu_link_manager->getParentIds($menu_link->getParent())) < 2) {
-        $variables['show_last_update_date'] = FALSE;
-      }
-    }
-  }
   if ($node->getType() == 'os2web_meetings_bpa' && $variables['view_mode'] == 'teaser') {
     $body = $variables['content']['body'][0]['#text'];
     $body=str_replace(array("\n", "\t"), '', $body);
     $body = preg_replace("/<((?:style)).*>.*<\/style>/im","",$body);
     $variables['content']['body'][0]['#text'] = $body;
-
   }
 }
 
@@ -374,4 +349,18 @@ function fds_ringsted_theme_preprocess_media(&$variables) {
   }
 }
 
+
+/**
+ * Implements hook_preprocess().
+ */
+function fds_ringsted_theme_preprocess_block(&$variables, $hook) {
+
+  if ($variables['attributes']['id'] == 'block-show-sub-pages') {
+
+    print_r($variables['attributes']['id']);
+
+  }
+  // $node = \Drupal::routeMatch()->getParameter('node');
+
+}
 
