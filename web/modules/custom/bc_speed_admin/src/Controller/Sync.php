@@ -15,6 +15,7 @@ use Drupal\menu_link_content\Entity\MenuLinkContent AS MLC;
 use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 use Drupal\os2web_contact\Entity\Contact;
+use Drupal\paragraphs\Entity\Paragraph;
 
 Class Sync
 {
@@ -103,6 +104,17 @@ Class Sync
             $found = $find->fetchAll();
             if (count($found) > 0) {
               $TopPage = current($found)->entity_id;
+
+              $paragraph = Paragraph::create(array(
+                'type' => 'os2web_menu_links_paragraph'
+              ));
+              $paragraph->set('field_os2web_menu_links_vm', 'image');
+              $paragraph->save();
+
+              $node = Node::load($TopPage);
+              $node->set('field_os2web_page_paragraph_narr', $paragraph);
+              $node->save();
+
               foreach ( $tree as $obj ) {
                 self::createContent($TopPage, (object) $obj);
               }
@@ -112,42 +124,6 @@ Class Sync
     }
 
     private static function children($ChildNodes, &$courses) {
-
-//      $_tree = array();
-//      foreach ($ChildNodes as $idx => $child) {
-//        $_child = new \stdClass();
-//        $_child->_import_ref = "#_" . $child->TreeID;
-//        $_child->_title = ($child->Nodename);
-//        $_child->_subtitle = null;
-//        $_child->_description = null;
-//        $_child->_courses = [];
-//        $_child->_children = [];
-//
-//        if (!empty($child->Courses)) {
-//          foreach ($child->Courses as $course) {
-//
-//            if (isset($courses[$course->CouseId])) {
-//              $_course = $courses[$course->CouseId];
-//            } else {
-//              $_course = new \stdClass();
-//            }
-//
-//            $_course->_import_ref = '#_' . $course->CouseId;
-//            $_course->_title = trim($_course->Course ?? $course->Course);
-//            $_course->_subtitle = trim($_course->Subject ?? $course->Subject);
-//            $_course->_description = trim($_course->Description ?? $course->Description);
-//
-//            $_child->_courses[] = $_course;
-//          }
-//        }
-//
-//        if (!empty($child->ChildNodes)) {
-//          $_child->children = self::children($child->ChildNodes, $courses);
-//        }
-//
-//        $_tree[] = $_child;
-//      }
-
 
       $tree = [];
       foreach ($ChildNodes as $CategoryId => $child) {
@@ -180,9 +156,10 @@ Class Sync
 
     private static function createContent($parentId, $obj) {
 
+      $addMenuLinker = false;
       if (!empty($obj->treeid)) {
         $import_ref = $obj->treeid;
-
+        $addMenuLinker = true;
       } elseif (!empty($obj->CouseId)) {
         $import_ref = $obj->CouseId;
       }
@@ -250,6 +227,16 @@ Class Sync
             ));
           }
         }
+      }
+
+      if ($addMenuLinker) {
+        $paragraph = Paragraph::create(array(
+          'type' => 'os2web_menu_links_paragraph'
+        ));
+        $paragraph->set('field_os2web_menu_links_vm', 'image');
+        $paragraph->save();
+
+        $node->set('field_os2web_page_paragraph_narr', $paragraph);
       }
 
       $node->save();
