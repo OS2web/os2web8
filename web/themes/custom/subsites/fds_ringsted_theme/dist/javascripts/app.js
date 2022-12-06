@@ -3592,7 +3592,7 @@ const menuRow = jQuery("#block-fds-ringsted-theme-header-below-navigation");
 
 jQuery(document).mouseup(function(e) {
   if (
-    jQuery(".region.region-header__below.expand-collaps")[0] && 
+    jQuery(".region.region-header__below.expand-collaps")[0] &&
     !menuRowBtn.is(e.target) &&
     menuRowBtn.has(e.target).length === 0 &&
     !menuRow.is(e.target) &&
@@ -3617,7 +3617,7 @@ function getDynamicPaddingsAndBulletOffset() {
       aTag.style.paddingTop = Math.ceil(remainigHeight / 2) + "px"
       aTag.style.paddingBottom = Math.ceil(remainigHeight / 2) + "px"
     }
-  
+
     if(aTag.parentElement.tagName === "LI") {
       if(aTag.parentElement.firstChild === aTag) {
         if(aTag.style.paddingTop) {
@@ -3656,6 +3656,27 @@ if(allAccordionButtons) {
 }
 
 getDynamicPaddingsAndBulletOffset();
+
+(function($, Drupal, drupalSettings) {
+  var selector = '.field--name-field-os2web-page-paragraph-bann';
+  var count = document.querySelectorAll('.field--name-field-os2web-page-paragraph-bann > .field__item');
+  if (document.querySelector(selector) !== null && count.length > 1) {
+    var items = count.length;
+    tns({
+      container: selector,
+      items: 1,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayButtonOutput: false,
+      gutter: 32,
+      rewind: false,
+      nav: true,
+      speed: 600,
+      controls: true
+    });
+    }
+  })(jQuery, Drupal, drupalSettings);
+
 // Proposals form toggle.
 (function($) {
   "use strict";
