@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\media\Entity\Media;
+
 print_r('Creating missing media ' . PHP_EOL);
 
 $created_media = 0;
