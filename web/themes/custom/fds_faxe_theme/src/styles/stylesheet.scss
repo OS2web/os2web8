@@ -6,6 +6,9 @@
 @import "overrides/loader";
 @import "theme/loader";
 
+.embedded-entity {
+  line-height: 0 !important;
+}
 
 .embedded-entity.align-left {
   padding-right: 10px;
