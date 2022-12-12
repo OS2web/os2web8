@@ -22,6 +22,8 @@
 
 .tns-outer {
   position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
 
   margin-bottom: 50px;
 }
@@ -33,17 +35,18 @@
   left: 0;
   right: 0;
 
-  margin-bottom: -40px;
+  margin-bottom: -20px;
 
   button {
-    width: 14px;
-    height: 14px;
+    width: 8px;
+    height: 8px;
 
     border-width: 1px;
     border-color: $background_color__default;
 
     &.tns-nav-active {
       background-color: $background_color__default;
+      opacity: 0.8;
     }
 
     + button {
@@ -51,7 +54,7 @@
     }
   }
 }
-$contols-size: 20px;
+$controls-size: 20px;
 
 .tns-controls {
   button {
@@ -64,28 +67,28 @@ $contols-size: 20px;
     margin-top: -15px;
     padding: 0;
 
-    height: $contols-size;
-    width: $contols-size;
+    height: $controls-size;
+    width: $controls-size;
 
     align-items: center;
     justify-content: center;
 
     font-size: 0;
-    border: 0;
+    border: 1px solid #fff;
     border-radius: 100%;
 
     color: #fff;
-    background-color: $background_color__default;
+    background-color: transparent;
 
     &:before {
       display: inline-block;
 
       font-family: FontAwesome;
-      font-size: calc(#{$contols-size} - 7px);
+      font-size: calc(#{$controls-size} - 7px);
     }
 
     &[data-controls="prev"] {
-      left: 0;
+      left: 20px;
 
       &:before {
         content: "\f104";
@@ -93,7 +96,7 @@ $contols-size: 20px;
     }
 
     &[data-controls="next"] {
-      right: 0;
+      right: 20px;
 
       &:before {
         content: "\f105";
@@ -110,6 +113,34 @@ $contols-size: 20px;
 // Responsive
 // --------------------------------------------------
 
+
+
+@media only screen and (min-width: 768px) {
+  .tns-outer {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .tns-outer {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  .tns-controls {
+    button {
+      &[data-controls="prev"] {
+        left: 50px;
+      }
+      &[data-controls="next"] {
+        right: 50px;
+      }
+    }
+  }
+}
+
+
+
 // Mobile - and up
 @include media-breakpoint-up(xs) {}
 
@@ -119,16 +150,17 @@ $contols-size: 20px;
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
+
   .tns-controls {
 
     button {
       margin-top: -20px;
 
-      height: calc(#{$contols-size} + 10px);
-      width: calc(#{$contols-size} + 10px);;
+      height: calc(#{$controls-size} + 10px);
+      width: calc(#{$controls-size} + 10px);;
 
       &:before {
-        font-size: $contols-size;
+        font-size: $controls-size;
       }
 
       // &[data-controls="prev"] {
