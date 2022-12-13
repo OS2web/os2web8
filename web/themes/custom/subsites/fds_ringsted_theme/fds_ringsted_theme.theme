@@ -192,6 +192,20 @@ function fds_ringsted_theme_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
 
+  if ($node->getType() == 'os2web_page' && $variables['view_mode'] == 'full') {
+    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+    $menu_link = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);
+    if ($menu_link) {
+      $parent_link = reset($menu_link);
+      if (!empty($parent_link)) {
+        $variables['show_last_update_date'] = true;
+        if (!$parent_link->getParent() || count($menu_link_manager->getParentIds($parent_link->getParent())) < 1) {
+          $variables['show_last_update_date'] = false;
+        }
+      }
+    }
+  }
+
   if ($node->getType() == 'os2web_meetings_bpa' && $variables['view_mode'] == 'teaser') {
     $body = $variables['content']['body'][0]['#text'];
     $body=str_replace(array("\n", "\t"), '', $body);
