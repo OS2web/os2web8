@@ -3672,7 +3672,9 @@ getDynamicPaddingsAndBulletOffset();
       rewind: false,
       nav: true,
       speed: 600,
-      controls: true
+      controls: true,
+      center: true,
+
     });
     }
   })(jQuery, Drupal, drupalSettings);
