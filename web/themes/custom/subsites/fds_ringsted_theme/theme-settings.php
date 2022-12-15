@@ -27,4 +27,15 @@ function fds_ringsted_theme_form_system_theme_settings_alter(
     '#title' => t('Vis på kort (link)'),
     '#default_value' => theme_get_setting('vispaakort'),
   ];
+
+  $form['options'] = [
+    '#type' => 'details',
+    '#title' => t('Options'),
+    '#group' => 'fds_base_theme',
+  ];
+  $form['options']['show_last_update'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Vis sidst opdateret dato på level 2 sider'),
+    '#default_value' => theme_get_setting('show_last_update')
+  ];
 }
