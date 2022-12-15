@@ -22,8 +22,16 @@
 
 .tns-outer {
   position: relative;
+  max-width: 1197px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: 0.3s ease;
 
-  margin-bottom: 50px;
+  &:hover > .tns-controls > button {
+    opacity: 0.8;
+    transition: 0.3s ease;
+  }
+
 }
 
 .tns-nav {
@@ -38,9 +46,11 @@
   button {
     width: 14px;
     height: 14px;
+    background-color: #fff;
 
     border-width: 1px;
     border-color: $color-orange-004;
+
 
     &.tns-nav-active {
       background-color: $color-orange-004;
@@ -53,10 +63,11 @@
 }
 
 .tns-controls {
-
   button {
     display: flex;
     position: absolute;
+    opacity: 0;
+    transition: 0.3s ease;
 
     z-index: 100;
 
@@ -75,7 +86,13 @@
     border-radius: 100%;
 
     color: #fff;
-    background-color: $color-orange-004;
+    background-color: #fff;
+    &:hover {
+      opacity: 1 !important;
+      transition: 0.3s ease;
+    }
+
+
 
     &:before {
       display: inline-block;
@@ -85,22 +102,25 @@
     }
 
     &[data-controls="prev"] {
-      left: -15px;
+      left: -10px !important;
 
       &:before {
         content: "\f104";
+        color: red;
       }
     }
 
     &[data-controls="next"] {
-      right: -15px;
+      right: -10px !important;
 
       &:before {
         content: "\f105";
+        color: red;
       }
     }
   }
 }
+
 
 // --------------------------------------------------
 // Variants
