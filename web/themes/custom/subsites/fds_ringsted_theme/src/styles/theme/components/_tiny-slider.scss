@@ -130,6 +130,14 @@
 // Responsive
 // --------------------------------------------------
 
+@media only screen and (max-width: 1024px) {
+  .tns-controls {
+    button {
+      opacity: 1 !important;
+    }
+  }
+}
+
 // Mobile - and up
 @include media-breakpoint-up(xs) {}
 
