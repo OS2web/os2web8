@@ -32,7 +32,7 @@
 				margin-top: 40px;
 				margin-bottom: 40px;
 				font-family: 'Museo 500';
-				font-weight: 500;
+				font-weight: 600;
 			}
 		}
 	}
@@ -208,7 +208,7 @@
 	h3 {
 		font-size: 1.8rem !important;
 		font-family: 'Museo 500';
-		font-weight: 500;
+		font-weight: 600;
 	}
 	a {
 		color: $color__link;
@@ -269,7 +269,7 @@ div.field--name-field-os2web-page-description {
                 &[href$=".jpeg"] {
                     &::before {
                         content: '';
-                        display: inline-block !important;
+                        display: none !important;
                         position: relative;
                         left: 0;
                         top: 50%;
@@ -296,7 +296,7 @@ div.field--name-field-os2web-page-description {
 			a[href$=".pdf"] {
 				&::before {
 					content: '';
-					display: inline-block !important;
+					display: none !important;
 					position: relative;
 					left: 0;
 					top: 50%;
@@ -394,7 +394,7 @@ a {
     &[href$=".pptm"] {
         &::before {
             content: '';
-            display: inline-block !important;
+            display: none !important;
             position: relative;
             left: 0;
             top: 4px;
@@ -424,7 +424,7 @@ a {
     &[href$=".odt"] {
         &::before {
             content: '';
-            display: inline-block !important;
+            display: none !important;
             position: relative;
             left: 0;
             top: 4px;
@@ -1739,15 +1739,15 @@ a {
 	}
     h1,
 	.h1,
-	h2, 
-	.h2, 
+	h2,
+	.h2,
 	h3,
-	.h3, 
-	h4, 
-	.h4, 
-	h5, 
+	.h3,
+	h4,
+	.h4,
+	h5,
 	.h5,
-	h6, 
+	h6,
 	.h6 {
 		font-family: Helvetica,Arial,sans-serif;
 		font-weight: bold;
@@ -1880,8 +1880,8 @@ a {
 			border-bottom: 1px dotted var(--dark-gray1);
 		}
 	}
-	.field--name-field-os2web-page-paragraph-left, 
-	.field--name-field-os2web-page-paragraph-righ, 
+	.field--name-field-os2web-page-paragraph-left,
+	.field--name-field-os2web-page-paragraph-righ,
     .field--name-field-os2web-page-paragraph-narr {
 		& >.field__item {
 			& + {
