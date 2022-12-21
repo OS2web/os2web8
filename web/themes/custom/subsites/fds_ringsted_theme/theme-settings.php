@@ -38,4 +38,9 @@ function fds_ringsted_theme_form_system_theme_settings_alter(
     '#title' => t('Vis sidst opdateret dato på level 2 sider'),
     '#default_value' => theme_get_setting('show_last_update')
   ];
+  $form['options']['show_newsletter_action'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Vis nyhedsbrev tilmelding'),
+    '#default_value' => theme_get_setting('show_newsletter_action')
+  ];
 }

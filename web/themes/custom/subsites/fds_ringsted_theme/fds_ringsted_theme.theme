@@ -10,7 +10,9 @@ use Drupal\taxonomy\Entity\Term;
  * Implements hook_preprocess_page().
  */
 function fds_ringsted_theme_preprocess_page(array &$variables) {
+
   $variables['show_action_buttons'] = true;
+  $variables['show_newsletter_action'] = theme_get_setting('show_newsletter_action');
 
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
