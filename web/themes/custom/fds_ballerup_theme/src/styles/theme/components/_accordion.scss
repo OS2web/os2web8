@@ -69,8 +69,7 @@
   border-radius: 0 !important;
 
   background-image: none !important;
-  background-color: $gray-primary;
-  color: $color-black;
+
   &, &:hover, &:focus {
     background-color: #fff;
   }
@@ -97,15 +96,17 @@
 
     content: $fa-var-plus;
 
-    color: $color-black;
-    border: 1px solid $color-black;
-    background-color: $color-white;
+    color: #243544;
+    border: 1px solid #243544;
+    background-color: #f5f7f8;
 
     border-radius: 25px;
   }
 
   &[aria-expanded="true"] {
+
     &, &:hover, &:focus {
+      background-color: #fff;
     }
 
     &:after {
@@ -138,7 +139,7 @@
   text-align: center;
   border: 0;
 
-  color: $background_color__default;
+  color: $color-orange-004;
   background-color: transparent;
 
   &:focus {

@@ -30,7 +30,7 @@
   padding: 40px 0;
 
   color: #fff;
-  background-color: rgba($background_color__secondary, .95);
+  background-color: rgba($color-base-002, .95);
 
   p, h1, h2, h3, h4, h5, h6 {
     color: inherit;
@@ -76,7 +76,7 @@
       text-shadow: none;
 
       color: #fff;
-      background-color: $background_color__default;
+      background-color: $color-orange-004;
       background-image: none;
       border: 0;
     }

@@ -1,4 +1,4 @@
-FROM drupal:9-php7.4-apache
+FROM drupal:9-php8.1-apache
 
 # Installing additional dependencies.
 RUN set -eux; \

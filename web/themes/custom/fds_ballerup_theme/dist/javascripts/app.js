@@ -3294,28 +3294,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
-
-const layoutSidebarRight = document.querySelector('.layout-sidebar-right');
-const layoutContent = document.querySelector('.layout-content');
-const fieldOs2webPageHeading = document.querySelector('.field--name-field-os2web-page-heading h1');
-const fieldOs2webPagePrimaryimage = document.querySelector('.field--name-field-os2web-page-primaryimage');
-function changeBlockPadding() {
-  if (layoutSidebarRight && fieldOs2webPageHeading && layoutContent && window.innerWidth > 767 && !fieldOs2webPagePrimaryimage) {
-    const paddingTop = parseInt(window.getComputedStyle(layoutContent).getPropertyValue("padding-top"))
-    const marginTop = parseInt(window.getComputedStyle(fieldOs2webPageHeading).getPropertyValue("margin-top"))
-    const marginBottom = parseInt(window.getComputedStyle(fieldOs2webPageHeading).getPropertyValue("margin-bottom"))
-    const height =  parseInt(window.getComputedStyle(fieldOs2webPageHeading).getPropertyValue("height"))
-    layoutSidebarRight.style.paddingTop = paddingTop + marginTop + marginBottom + height + "px"
-  } else {
-    layoutSidebarRight.removeAttribute("style");
-  }
-}
-
-changeBlockPadding()
-window.addEventListener("resize", () => {
-  changeBlockPadding()
-});
-
 // Tooltips on mailto: links.
 (function() {
   var links = document.querySelectorAll('a[href^="mailto:"]');
@@ -3326,45 +3304,3 @@ window.addEventListener("resize", () => {
     interactive: true,
   });
 }());
-
-// menu bar search
-(function($) {
-  let menusearch = $("button.menu-search");
-  if (menusearch.length) {
-    $("button.menu-search").on("click", function() {
-      let searchvalue = $("input.menu-search").val();
-      if (searchvalue.length > 1) {
-        document.location.href = '/search/node?keys=' + searchvalue;
-      }
-    });
-    $("input.menu-search").on("keyup", function(e) {
-      let code = (e.keyCode ? e.keyCode : e.which);
-      if (code==13) {
-        let searchvalue = $("input.menu-search").val();
-        if (searchvalue.length > 1) {
-          document.location.href = '/search/node?keys=' + searchvalue;
-        }
-      }
-    });
-  }
-})(jQuery);
-
-(function($, Drupal, drupalSettings) {
-  var selector = '.field--name-field-os2web-page-paragraph-bann';
-  var count = document.querySelectorAll('.field--name-field-os2web-page-paragraph-bann > .field__item');
-  if (document.querySelector(selector) !== null && count.length > 1) {
-    var items = count.length;
-    tns({
-      container: selector,
-      items: 1,
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayButtonOutput: false,
-      gutter: 32,
-      rewind: false,
-      nav: true,
-      speed: 600,
-      controls: false
-    });
-  }
-})(jQuery, Drupal, drupalSettings);
