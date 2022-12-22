@@ -74,6 +74,7 @@
   {% if type|clean_class != 'radio' and type|clean_class != 'checkbox' %}
     {{ label }}
   {% endif %}
+
   {{ children }}
 
   {% if type|clean_class == 'radio' or type|clean_class == 'checkbox' %}

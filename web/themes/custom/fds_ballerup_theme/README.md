@@ -1,25 +1,18 @@
 
 ### Prerequisites
 
-<!-- Before being able to run this package you need to have node installed on your machine.
+Before being able to run this package you need to have node installed on your machine.
 
 After node is installed you need a global package manager, as well. We use Yarn instead of NPM as it is way faster due to the way it utilizes local caching.
 
-To install Yarn, follow the guide on: https://yarnpkg.com/en/docs/install#mac-stable  -->
-
-We use npm
-Node version on BALLERUP v14.19.0
-<!-- cannot update higher because of incompatibility 
-
-if we want to update >= Node v15 then we should update node sass, and this forces us to update font-awesome and dkfds packages. 
-Updating those packages forces us update whole website.  -->
+To install Yarn, follow the guide on: https://yarnpkg.com/en/docs/install#mac-stable 
 
 ### First time use
 When you initialize this project, you need to install all required node dependencies (listed inside package.json). 
 
 To install all node dependencies run:
 
-`npm install`
+`yarn install`
 
 ### Compile and build CSS and javascript
 
@@ -27,7 +20,7 @@ You can see which options this project has inside package.json's "scripts: { opt
 
 To compile CSS and javascript, run:
 
-`npm run watch`
+`yarn dev`
 
 ### Hot reload (live reload)
 
