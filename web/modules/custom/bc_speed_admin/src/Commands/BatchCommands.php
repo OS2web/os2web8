@@ -1,6 +1,7 @@
 <?php
 namespace Drupal\bc_speed_admin\Commands;
 
+use Drupal\Core\Site\Settings;
 use Drush\Commands\DrushCommands;
 use Drupal\bc_speed_admin\Controller;
 
@@ -17,7 +18,6 @@ Class BatchCommands extends DrushCommands
     public function testRun($options=array())
     {
         echo "test run\n";
-
     }
 
     /**
