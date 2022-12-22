@@ -117,7 +117,7 @@
       font-weight: $font-weight-bold;
       font-size: $small-font-size;
       background-color: #fff;
-      border: 1px dashed $background_color__default;
+      border: 1px dashed $color-orange-004;
       border-radius: 20px;
       outline: none;
       white-space: nowrap;
@@ -142,7 +142,7 @@
       border-radius: 20px;
 
       color: #fff;
-      background-color: $background_color__default;
+      background-color: $color-orange-004;
       white-space: normal;
     }
   }

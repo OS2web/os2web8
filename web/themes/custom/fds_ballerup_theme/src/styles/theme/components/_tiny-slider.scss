@@ -40,10 +40,10 @@
     height: 14px;
 
     border-width: 1px;
-    border-color: $background_color__default;
+    border-color: $color-orange-004;
 
     &.tns-nav-active {
-      background-color: $background_color__default;
+      background-color: $color-orange-004;
     }
 
     + button {
@@ -75,7 +75,7 @@
     border-radius: 100%;
 
     color: #fff;
-    background-color: $background_color__default;
+    background-color: $color-orange-004;
 
     &:before {
       display: inline-block;

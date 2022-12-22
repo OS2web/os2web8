@@ -25,93 +25,126 @@ $sidenav-list-dot-spacing: 22px;
 
 .region-sidebar-first,
 .region-sidebar-second {
-  .box {
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    .box__body {
-      padding: unset;
-      background-color: transparent;
-      > div {
-        padding: 16px;
-        background-color: white;
-        margin-bottom: 16px;
-        border-radius: 6px;
-      }
-    }
-  }
 
   .sidenav-list {
-    border: none;
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 0;
+    border-bottom: 0;
+
     > li {
-      background-color: $color-white;
-      border: none;
-      a:before {
-        background-color: #007ca3;
-        color: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        content: '\276f';
-        font-size: 1.4rem;
-        height: 30px;
-        width: 30px;
-        position: absolute;
+      order: 2;
+
+      border-top: 1px solid $color-neutral;
+
+      background-color: rgba($color-neutral, .3);
+
+      > .sidenav-sub_list {
+        padding-top: 12px;
+        padding-bottom: 12px;
       }
-      a {
-        outline: none;
-        color: $color-black;
+
+      &.current {
+
+        > ul {
+
+          > li {
+
+            > a {
+              padding-left: $sidenav-list-spacing-left + $sidenav-list-dot-spacing;
+            }
+          }
+        }
+      }
+
+      > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: $sidenav-list-spacing-left;
+
+        font-weight: $font-weight-bold;
+
+        color: $color-text;
+      }
+
+      &.current {
+        border-left: 0;
+      }
+
+      &.active {}
+
+      &.active,
+      &.current {
+        display: block !important;
+
+        order: 1;
+
+        border-top: 0;
+
+        background-color: $color-primary;
+
+        > a {
+          color: #fff;
+        }
       }
     }
   }
 
   .sidenav-sub_list {
-    background-color: $background_color__secondary;
+    background-color: $color-green-002;
+
     > li {
       border-top: 0;
+
       > a {
         padding-left: $sidenav-list-spacing-left + $sidenav-list-dot-spacing;
       }
+
       &.active {
+
         > a {
           font-weight: $font-weight-bold;
         }
       }
+
       &:before {
         top: 4px;
         left: $sidenav-list-spacing-left;
+
         content: "\2022" !important;
+
         font-size: 22px;
-        color: $background_color__default;
+
+        color: $color-orange-004;
       }
+
       &:hover {
         background-color: transparent;
       }
+
       &:last-child {
+
         > a {
           padding-bottom: 2px;
         }
       }
+
       a {
         padding-top: 2px;
         padding-bottom: 2px;
+
         font-size: $base-font-size;
-        //color: $color-text;
+
+        color: $color-text;
       }
     }
+
     .sidenav-sub_list {
+
       li {
+
         &:before {
           content: "\FE63" !important;
         }
@@ -120,15 +153,19 @@ $sidenav-list-dot-spacing: 22px;
   }
 
   .sidenav-list {
+
     > li > .sidenav-sub_list {
       padding-left: 0;
     }
+
     > li > .sidenav-sub_list > li > .sidenav-sub_list {
       padding-left: 13px;
     }
+
     > li > .sidenav-sub_list > li > .sidenav-sub_list > li > .sidenav-sub_list {
       padding-left: 26px;
     }
+
     > li > .sidenav-sub_list > li > .sidenav-sub_list > li > .sidenav-sub_list > li > .sidenav-sub_list {
       padding-left: 39px;
     }
@@ -172,8 +209,10 @@ $sidenav-list-dot-spacing: 22px;
 
 // Print
 @media print {
+
   .region-sidebar-first,
   .region-sidebar-second {
+
     .sidenav-list {
       display: none !important;
     }

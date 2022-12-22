@@ -1,17 +1,10 @@
-
 <header class="d-print-none">
   <div class="custom-header">
     <div class="custom-header-row custom-header-row--meta">
       <div class="container">
         <div class="flexy-row">
-
           <a href="{{ url('<front>') }}" class="custom-header__logo">
-              {% if custom_logo %}
-                <img src="{{ custom_logo }}" alt="Logo" />
-              {% else %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo" />
-              {% endif %}
-
+            <img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo" />
           </a>
 
           <div class="flexy-spacer"></div>
@@ -26,17 +19,8 @@
       <div class="container">
         <div class="flexy-row">
           <div class="flexy-spacer"></div>
+
           {{ page.header__main_navigation }}
-
-          <div class="flexy-spacer menu-search-bar">
-            <div class="form-group">
-              <input type="text" class="menu-search" placeholder="{{ "What do you search" | trans }} ?">
-              <button class="menu-search" aria-label="Brug søgning">
-                <span class="icon fa fa-search"></span>
-              </button>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -70,19 +54,22 @@
 
 {{ page.alert }}
 {{ page.banner_search }}
+{{ page.featured_top }}
 
-<div class="section section--breadcrumb-bar d-print-none layout--hidden-on-sections">
-  <div class="container">
-    <div class="flexy-row">
-      {{ page.breadcrumb }}
-      <div class="flexy-spacer"></div>
-      {% include '@fds_ballerup_theme/includes/action-buttons.html.twig' %}
-      {{ page.small_search }}
+{% if not is_front %}
+  <div class="section section--breadcrumb-bar d-print-none layout--hidden-on-sections">
+    <div class="container">
+      <div class="flexy-row">
+        {{ page.breadcrumb }}
+
+        <div class="flexy-spacer"></div>
+
+        {% include '@fds_ballerup_theme/includes/action-buttons.html.twig' %}
+        {{ page.small_search }}
+      </div>
     </div>
   </div>
-</div>
-
-{{ page.featured_top }}
+{% endif %}
 
 <div class="page-container" id="font-resize-wrapper">
   <div class="container">
@@ -91,19 +78,19 @@
     <div class="row layout--hidden-on-sections">
       {% if ((path('<current>') starts with '/brug-byen/kunst-i-ballerup') ) or ((path('<current>') starts with '/alle-kunstvaerker/')) %}
         {%
-          set content_classes = ['col-12 col-md-8']
+          set content_classes = ['col-12 col-md-9']
         %}
       {% else %}
         {%
           set content_classes = [
             page.sidebar_first ? 'col-12 col-md-6',
-            page.sidebar_first is empty ? 'col-12 col-md-8',
+            page.sidebar_first is empty ? 'col-12 col-md-9',
           ]
         %}
       {% endif %}
       {% if page.sidebar_first %}
         {% block sidebar_first %}
-          <aside class="col-12 col-md-4">
+          <aside class="col-12 col-md-3">
             <div class="layout-sidebar-left">
               {{ page.sidebar_first }}
             </div>
@@ -118,10 +105,16 @@
       </main>
 
       {% if ( not (path('<current>') starts with '/brug-byen/kunst-i-ballerup')) and ( not (path('<current>') starts with '/alle-kunstvaerker/')) %}
-        <aside class="col-12 col-md-4 d-print-none">
+        <aside class="col-12 col-md-3 d-print-none">
           <div class="layout-sidebar-right">
             {% if page.sidebar_second %}
               {% block sidebar_second %}
+                {% if ( not is_front ) %}
+                  <a href="/selvbetjening" class="button button-primary button--selvbetjening">
+                    {{ 'Genvej til al Selvbetjening' | trans }} <span class="icon fa fa-angle-right"></span>
+                  </a>
+                {% endif %}
+
                 {{ page.sidebar_second }}
               {% endblock %}
             {% endif %}
