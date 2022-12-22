@@ -18,10 +18,6 @@ Class BatchCommands extends DrushCommands
     public function testRun($options=array())
     {
         echo "test run\n";
-
-        // echo \Drupal\config\Form\('bc_speed_admin.settings')->get('apikey');
-      \Drupal::config('bc_speed_admin.settings')->get('apikey');
-
     }
 
     /**
