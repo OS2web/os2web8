@@ -4,6 +4,7 @@ namespace Drupal\bc_speed_admin\Controller;
 use Drupal\bc_speed_admin\Controller\Course;
 use \Drupal\bc_speed_admin\Controller\Teacher;
 use Drupal\Console\Bootstrap\Drupal;
+use Drupal\Core\Controller\ControllerBase;
 use \Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
@@ -17,7 +18,7 @@ use \Drupal\file\Entity\File;
 use Drupal\os2web_contact\Entity\Contact;
 use Drupal\paragraphs\Entity\Paragraph;
 
-Class Sync
+Class Sync extends ControllerBase
 {
 
     private static $db;
