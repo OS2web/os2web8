@@ -74,6 +74,9 @@
 						}
 					}
 				}
+				.h3 {
+					color: $background_color__button_hover;
+				}
 			}
 			.taxonomy-pic {
 				.field--name-field-os2web-icon {
@@ -344,6 +347,11 @@ body.domain-pilotnaturpark-ringsted-dk .rk_cover_arrow_button_wrapper {
 						margin-bottom: -10px;
 						width: auto;
 					}
+				}
+			}
+			&:hover {
+				.h3 {
+					color: $background_color__button_hover;
 				}
 			}
 		}
