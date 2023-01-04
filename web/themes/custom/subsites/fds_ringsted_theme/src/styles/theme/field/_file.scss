@@ -21,14 +21,55 @@
 // Styling
 // --------------------------------------------------
 
+a[href$=".doc"]::before,
+a[href$=".docm"]::before,
+a[href$=".jpeg"]::before,
+a[href$=".jpg"]::before,
+a[href$=".odt"]::before,
+a[href$=".pdf"]::before,
+a[href$=".ppt"]::before,
+a[href$=".pptm"]::before,
+a[href$=".pptx"]::before,
+a[href$=".xls"]::before,
+a[href$=".xlsb"]::before,
+a[href$=".xlsm"]::before,
+a[href$=".xlsx"]::before {
+  display: none !important;
+  background: none !important;
+}
 
-.file {
 
+.field--type-file>.field__item, .field--type-file>.field__items>.field__item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.field--type-file {
+  .field__item {
+    max-width: 100% !important;
+  }
+}
+
+
+.field--name-field-media-file {
+  .field__item {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    span {
+      a{
+        &:before {
+          display: none !important;
+        }
+      }
+    }
+  }
 }
 
 .file {
   display: block;
-  box-shadow: none;
+  box-shadow: none !important;
   margin-bottom: 4px;
   background-color: #fafafa;
   padding: 30px;
@@ -36,20 +77,18 @@
   margin-bottom: 15px;
   padding-left: 0 !important; // Reset.
   background-image: none !important;
-  box-shadow: $box-shadow;
   a {
     position: relative;
     display: flex;
     align-items: center;
     word-break: break-word;
-    padding: 0 (30px + 30px + 5px) 0 30px; // Width of icon + left/right spacing + gutter.
-    height: 88px;
+    padding: 10px 0 10px 30px; // Width of icon + left/right spacing + gutter.
+    height: auto;
     max-width: 100%; // Reset.
-    font-weight: bold;
+    font-weight: 500;
     &:hover,
     &:focus,
     &:visited {
-      color: var(--primary);
       text-decoration: none;
     }
     &:after {
@@ -64,6 +103,9 @@
       background-image: url("../images/download.svg");
       background-repeat: no-repeat;
       background-size: contain;
+    }
+    &:before {
+      display: none !important;
     }
   }
 }
