@@ -3676,6 +3676,8 @@ getDynamicPaddingsAndBulletOffset();
       center: true,
 
     });
+
+
     }
   })(jQuery, Drupal, drupalSettings);
 
