@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-6 col-lg-4 footer-col">
+        <div class="col-12 col-sm-6 col-lg-3 footer-col">
           <section>
             {% if theme_settings.contact_information.business_owner_name %}
                 <h2>{{ theme_settings.contact_information.business_owner_name }}</h2>
@@ -25,7 +25,7 @@
                 {{ theme_settings.contact_information.zipcode }} {{ theme_settings.contact_information.city }}
               </div>
             {% endif %}
-            
+
             {% if theme_settings.contact_information.vat_no %}
               <div>
                 CVR: {{ theme_settings.contact_information.vat_no }}
