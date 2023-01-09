@@ -21,22 +21,6 @@
 // Styling
 // --------------------------------------------------
 
-a[href$=".doc"]::before,
-a[href$=".docm"]::before,
-a[href$=".jpeg"]::before,
-a[href$=".jpg"]::before,
-a[href$=".odt"]::before,
-a[href$=".pdf"]::before,
-a[href$=".ppt"]::before,
-a[href$=".pptm"]::before,
-a[href$=".pptx"]::before,
-a[href$=".xls"]::before,
-a[href$=".xlsb"]::before,
-a[href$=".xlsm"]::before,
-a[href$=".xlsx"]::before {
-  display: none !important;
-  background: none !important;
-}
 
 
 .field--type-file>.field__item, .field--type-file>.field__items>.field__item {
@@ -105,7 +89,6 @@ a[href$=".xlsx"]::before {
       background-size: contain;
     }
     &:before {
-      display: none !important;
     }
   }
 }

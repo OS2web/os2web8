@@ -94,6 +94,8 @@
   padding: 10px 0 0;
   .container {
     padding: 0;
+
+
   }
 }
 
@@ -143,6 +145,7 @@ body {
   .menuwrapper {
     position: relative;
     padding-bottom: 80px;
+
     .form-input {
       font-size: 2.2rem;
       font-family: "Museo 300", sans-serif;
@@ -449,7 +452,7 @@ body {
     padding-top: calc(45px + 80px) !important;
   }
 
-  
+
   & .region-highlighted {
     padding-top: 100px;
   }
