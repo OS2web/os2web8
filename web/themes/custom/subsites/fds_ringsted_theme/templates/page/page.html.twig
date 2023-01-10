@@ -9,7 +9,7 @@
     <div class="custom-header custom-header--static">
       <div class="custom-header__inner">
         <div class="container">
-
+          <li style="list-style: none;" class="test-class"><a class="top-btn" href="{{ top_btn_url }}">{{ top_btn_text }}</a></li>
           <!-- Begin - top -->
           <div class="flexy-row">
 
@@ -88,7 +88,7 @@
       </div>
     {% endif %}
 
-      
+
       {% set drupalTag = '<drupal-render-placeholder>'%}
       {% set has_main_content = page.content|render|striptags(drupalTag)|trim is not empty %}
      {% if has_main_content %}

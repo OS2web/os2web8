@@ -14,6 +14,9 @@ function fds_ringsted_theme_preprocess_page(array &$variables) {
   $variables['show_action_buttons'] = true;
   $variables['show_newsletter_action'] = theme_get_setting('show_newsletter_action');
 
+  $variables['top_btn_text'] = theme_get_setting('top_btn_text');
+  $variables['top_btn_url'] = theme_get_setting('top_btn_url');
+
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
@@ -193,7 +196,7 @@ function fds_ringsted_theme_preprocess_views_view_summary(&$variables) {
 function fds_ringsted_theme_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
-  
+
   if ($node->getType() == 'os2web_page' && $variables['view_mode'] == 'full' && theme_get_setting('show_last_update')) {
     $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
     $menu_link = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);

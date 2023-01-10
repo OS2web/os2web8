@@ -3681,6 +3681,14 @@ getDynamicPaddingsAndBulletOffset();
     }
   })(jQuery, Drupal, drupalSettings);
 
+
+(function($, Drupal, drupalSettings) {
+  let source = $('.test-class');
+
+  source.clone(true).removeClass('test-class').addClass('newClass').appendTo('.menu');
+})(jQuery, Drupal, drupalSettings);
+
+
 // Proposals form toggle.
 (function($) {
   "use strict";

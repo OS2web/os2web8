@@ -43,4 +43,14 @@ function fds_ringsted_theme_form_system_theme_settings_alter(
     '#title' => t('Vis nyhedsbrev tilmelding'),
     '#default_value' => theme_get_setting('show_newsletter_action')
   ];
+  $form['options']['top_btn_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Skriv titlen på top link knap'),
+    '#default_value' => theme_get_setting('top_btn_text')
+  ];
+  $form['options']['top_btn_url'] = [
+    '#type' => 'textfield',
+    '#title' => t('Indsæt gyldig url til top link knap'),
+    '#default_value' => theme_get_setting('top_btn_url')
+  ];
 }
