@@ -13785,12 +13785,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web.git",
-                "reference": "4677ddb209adf3a29d68ee166f5485b5a6841321"
+                "reference": "54fde2c74b6d83e40c3e0dbbcd5d8550483ba4b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web/zipball/4677ddb209adf3a29d68ee166f5485b5a6841321",
-                "reference": "4677ddb209adf3a29d68ee166f5485b5a6841321",
+                "url": "https://api.github.com/repos/OS2web/os2web/zipball/54fde2c74b6d83e40c3e0dbbcd5d8550483ba4b3",
+                "reference": "54fde2c74b6d83e40c3e0dbbcd5d8550483ba4b3",
                 "shasum": ""
             },
             "require": {
@@ -13818,7 +13818,7 @@
                 "issues": "https://github.com/OS2web/os2web/issues",
                 "source": "https://github.com/OS2web/os2web/tree/master"
             },
-            "time": "2022-08-24T12:19:17+00:00"
+            "time": "2023-01-10T14:55:32+00:00"
         },
         {
             "name": "os2web/os2web_banner",
@@ -14146,12 +14146,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_logging.git",
-                "reference": "44099223dfbae5a6a65abfb5cb4aa05a02acc978"
+                "reference": "6b919667a59ad602ecfb64e4cf9a792efbcb91e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/44099223dfbae5a6a65abfb5cb4aa05a02acc978",
-                "reference": "44099223dfbae5a6a65abfb5cb4aa05a02acc978",
+                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/6b919667a59ad602ecfb64e4cf9a792efbcb91e1",
+                "reference": "6b919667a59ad602ecfb64e4cf9a792efbcb91e1",
                 "shasum": ""
             },
             "require": {
@@ -14169,7 +14169,7 @@
                 "issues": "https://github.com/OS2web/os2web_logging/issues",
                 "source": "https://github.com/OS2web/os2web_logging/tree/master"
             },
-            "time": "2022-08-24T12:25:08+00:00"
+            "time": "2023-01-10T14:52:00+00:00"
         },
         {
             "name": "os2web/os2web_meetings",
