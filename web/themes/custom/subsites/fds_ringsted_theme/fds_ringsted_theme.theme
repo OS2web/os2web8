@@ -17,6 +17,11 @@ function fds_ringsted_theme_preprocess_page(array &$variables) {
   $variables['top_btn_text'] = theme_get_setting('top_btn_text');
   $variables['top_btn_url'] = theme_get_setting('top_btn_url');
 
+  $variables['language_picker'] = theme_get_setting('language_picker');
+  $variables['language_picker_da'] = theme_get_setting('language_picker_da');
+  $variables['language_picker_en'] = theme_get_setting('language_picker_en');
+
+
   $variables['facebook'] = theme_get_setting('facebook');
   $variables['facebook_url'] = theme_get_setting('facebook_url');
   $variables['facebook_tooltip'] = theme_get_setting('facebook_tooltip');

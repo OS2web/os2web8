@@ -53,6 +53,39 @@ function fds_ringsted_theme_form_system_theme_settings_alter(
     '#title' => t('Indsæt gyldig url til top link knap'),
     '#default_value' => theme_get_setting('top_btn_url')
   ];
+
+  $form['options']['language_picker'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Vis flag'),
+    '#default_value' => theme_get_setting('language_picker'),
+  ];
+
+  $form['options']['language_picker_da'] = [
+    '#type' => 'textfield',
+    '#title' => t('Indsæt gyldig url til Dansk flag'),
+    '#default_value' => theme_get_setting('language_picker_da'),
+    '#states' => [
+      'visible' => [
+        ':input[name="language_picker"]' => [
+          'checked' => TRUE,
+        ],
+      ],
+    ],
+  ];
+  $form['options']['language_picker_en'] = [
+    '#type' => 'textfield',
+    '#title' => t('Indsæt gyldig url til Engelsk flag'),
+    '#default_value' => theme_get_setting('language_picker_en'),
+    '#states' => [
+      'visible' => [
+        ':input[name="language_picker"]' => [
+          'checked' => TRUE,
+        ],
+      ],
+    ],
+  ];
+
+
   // Facebook
   $form['social']['facebook'] = [
     '#type' => 'checkbox',
