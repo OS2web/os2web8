@@ -91,9 +91,33 @@
 
 .custom-header__inner {
   background: $background_color__navigation;
-  padding: 10px 0 0;
   .container {
     padding: 0;
+    position: relative;
+
+    .top-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      height: initial;
+      margin: 0;
+      padding: 10px 15px;
+      text-align: initial;
+      font-weight: inherit;
+      font-size: 2.2rem;
+      font-family: "Museo 300",sans-serif;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      text-decoration: none;
+      color: #333333;
+      text-transform: uppercase;
+      z-index: 99;
+
+      &:hover {
+        background-color: #ebebeb;
+      }
+    }
   }
 }
 
@@ -139,10 +163,28 @@ body {
   .flexy-row {
     display: block;
     text-align: center;
+    position: relative;
+
+    .header-flags {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      margin: 0;
+
+      li {
+        padding-left: 0 !important;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
   }
   .menuwrapper {
     position: relative;
     padding-bottom: 80px;
+
     .form-input {
       font-size: 2.2rem;
       font-family: "Museo 300", sans-serif;
@@ -317,13 +359,13 @@ body {
     text-align: center;
     display: block;
 
-    > li {
+    li {
       flex-basis: auto;
       display: inline-block;
       padding: 0;
       margin: 0;
 
-      > a {
+      a {
         position: relative;
         display: block;
         height: initial;
@@ -449,7 +491,7 @@ body {
     padding-top: calc(45px + 80px) !important;
   }
 
-  
+
   & .region-highlighted {
     padding-top: 100px;
   }
@@ -459,9 +501,27 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
+@media only screen and (max-width: 575px) {
+  .custom-header__inner {
+    .container {
+      .test-class {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .newClass {
+    display: none !important;
+  }
+}
+
 
 // Mobile - and up
 @include media-breakpoint-up(xs) {
@@ -595,15 +655,15 @@ body {
 @media screen and (min-width: 1200px) {
   .custom-header--static {
     .custom-header__inner {
-      padding: 27px 0 0;
       .flexy-row {
         display: flex;
         align-self: stretch;
         align-items: center;
         flex-wrap: wrap;
         .custom-header__logo {
-        img {
-          height: 97px;
+          margin-top: 27px;
+          img {
+            height: 97px;
           }
         }
       }
@@ -641,3 +701,5 @@ body {
 // No touch
 .no-touchevents {
 }
+
+

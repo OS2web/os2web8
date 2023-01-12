@@ -102,7 +102,7 @@
     }
 
     &[data-controls="prev"] {
-      left: -10px !important;
+      left: 0 !important;
 
       &:before {
         content: "\f104";
@@ -111,7 +111,7 @@
     }
 
     &[data-controls="next"] {
-      right: -10px !important;
+      right: 0 !important;
 
       &:before {
         content: "\f105";

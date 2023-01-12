@@ -10,5 +10,17 @@
       <a class="newsletter" href="{{ url('<front>') }}/abonner">{{ 'Nyhedsbrev' | trans }}</a>
     </div>
     {% endif %}
+    <div class="share-wrapper">
+      <p><strong>Del på:</strong></p>
+      <a title="Del på Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}">
+        <i class="fa fa-facebook-official fa-3x"></i>
+      </a>
+      <a title="Del på Twitter" href="http://www.twitter.com/share?url={{ url('<current>') }}">
+        <i class="fa fa-twitter-square fa-3x"></i>
+      </a>
+      <a title="Del på Linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ url('<current>') }}">
+        <i class="fa fa-linkedin-square fa-3x"></i>
+      </a>
+    </div>
   </div>
 </div>
