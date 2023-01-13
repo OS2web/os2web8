@@ -34,12 +34,14 @@ Class Sync extends ControllerBase
 
         $go = true;
         if ( $go && $teachers && is_array($teachers)) {
-
+            \Drupal::logger('speedadmin')->info("update " . count($teachers) . " theaters");
             $TopPersonPage = null;
             $find = self::$db->query("SELECT * FROM node__field_import_ref WHERE bundle = 'os2web_page' AND field_import_ref_value='-2';");
             $found = $find->fetchAll();
             if (count($found) == 1) {
               $TopPersonPage = Node::load(current($found)->entity_id);
+            } else {
+              \Drupal::logger('speedadmin')->info("no toppage for teachers found ( a page with -2 in import ref field) ");
             }
 
             foreach ( $teachers as $teacher ) {
@@ -130,6 +132,7 @@ Class Sync extends ControllerBase
 
         $go = true;
         if ($go && !empty($courses) && is_object($courses->tree) && !empty($courses->courses) && is_array($courses->courses)) {
+          \Drupal::logger('speedadmin')->info("update " . count($courses->courses) . " courses");
           $tree = array();
           foreach( $courses->tree->Nodes as $node) {
             if ($node->TreeID == 1 && !empty($node->ChildNodes)) {
@@ -156,6 +159,8 @@ Class Sync extends ControllerBase
               foreach ( $tree as $obj ) {
                 self::createContent($TopPage, (object) $obj);
               }
+            } else {
+              \Drupal::logger('speedadmin')->info("no toppage for courses found");
             }
           }
         }
