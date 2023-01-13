@@ -1,17 +1,21 @@
 <div class="action-buttons d-md-block">
   <div class="flexy-list">
     <div>
-      <a href="#" class="action-button print" onclick="window.print();">
-        {{ 'Print' | trans }}
-      </a>
+      <ul>
+        <li>
+          <a href="#" class="action-button print" onclick="window.print();">
+          {{ 'Print' | trans }}
+          </a>
+        </li>
+      {% if show_newsletter_action %}
+        <li>
+          <a class="newsletter" href="{{ url('<front>') }}/abonner">{{ 'Nyhedsbrev' | trans }}</a>
+        </li>
+      {% endif %}
+      </ul>
     </div>
-    {% if show_newsletter_action %}
-    <div>
-      <a class="newsletter" href="{{ url('<front>') }}/abonner">{{ 'Nyhedsbrev' | trans }}</a>
-    </div>
-    {% endif %}
+
     <div class="share-wrapper">
-      <p><strong>Del på:</strong></p>
       <a title="Del på Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}">
         <i class="fa fa-facebook-official fa-3x"></i>
       </a>
