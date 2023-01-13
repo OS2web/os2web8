@@ -24,12 +24,12 @@ body {
         button {
           &[data-controls="next"] {
             background: url(../images/sprite.png) no-repeat -154px 0;
-            right: -4px;
+            right: -3px !important;
           }
           &[data-controls="prev"] {
             background: transparent url("../images/sprite.png") no-repeat -188px
               0;
-            left: -3px;
+            left: -3px !important;
           }
         }
       }

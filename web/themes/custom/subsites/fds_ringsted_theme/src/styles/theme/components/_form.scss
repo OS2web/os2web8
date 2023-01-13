@@ -334,8 +334,11 @@ form {
       }
     }
   }
-  .form-item:not(.form-type-checkbox) {
+  .form-item:not(.form-type-checkbox):not(.form-type-radio) {
     margin-bottom: 20px;
+  }
+  .form-type-radio {
+    margin-bottom: 0 !important;
   }
 }
 
