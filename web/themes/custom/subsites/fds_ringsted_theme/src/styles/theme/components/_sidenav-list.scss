@@ -75,7 +75,7 @@ $sidenav-list-dot-spacing: 22px;
 							background: $background_color__button!important;
 							transition: all 0.2s ease-in-out;
 						}
-						
+
 					}
 					& > .facets-checkbox {
 						&:checked {
@@ -162,16 +162,20 @@ $sidenav-list-dot-spacing: 22px;
 				padding: 10px 15px;
 			}
 			& > .sidenav-sub_list {
-        padding-top: 12px;
-        padding-bottom: 12px;
+                padding-top: 12px;
+                padding-bottom: 12px;
 				a {
 					color: $color-white;
 				}
-        & >  li {
-          border-top: 0;
-          &:hover {
-            background-color: transparent;
-          }
+                & li {
+                border-top: 0;
+                  &:hover {
+                  background-color: transparent;
+                    font-weight: bold;
+                 }
+              }
+        & .current {
+          background-color: $background_color__button_hover !important;
         }
 			}
 		}
