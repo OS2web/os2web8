@@ -25,7 +25,7 @@ Class Sync extends ControllerBase
     private static $db;
 
     public static function handler() {
-
+        \Drupal::logger('speedadmin')->info("start speedadmin import ");
         $now = strftime("%Y-%m-%d %H:%M:%S", time());
         self::$db = \Drupal::database();
         $teachers = Teacher::get();
