@@ -32,11 +32,15 @@
  */
 #}
 
+{% set namepath = row.os2web_contact_field_data_name|lower|replace({' ':'-'}) %}
+
+<a class="teacher-link" href="{{ path('<current>') }}/{{ namepath }}">
+
 <div class="teacher-thumbnail">
-  <div class="image-container">{{ fields.field_image.content }}</div>
-  <p class="contact-name">{{ fields.name.content }}</p>
-  {# # { { fields.field_os2web_contact_firstname.content }} {{ fields.field_os2web_contact_surname.content }}<br> #}
-  {{ fields.field_os2web_contact_job_task.content }}
+    <div class="image-container">{{ fields.field_image.content }}</div>
+    <p class="contact-name">{{ fields.name.content }}</p>
+    {{ fields.field_os2web_contact_job_task.content }}
 </div>
+</a>
 
 

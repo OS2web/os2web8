@@ -17,6 +17,7 @@ use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
 use Drupal\os2web_contact\Entity\Contact;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\path_alias\Entity\PathAlias;
 
 Class Sync extends ControllerBase
 {
@@ -33,6 +34,14 @@ Class Sync extends ControllerBase
 
         $go = true;
         if ( $go && $teachers && is_array($teachers)) {
+
+            $TopPersonPage = null;
+            $find = self::$db->query("SELECT * FROM node__field_import_ref WHERE bundle = 'os2web_page' AND field_import_ref_value='-2';");
+            $found = $find->fetchAll();
+            if (count($found) == 1) {
+              $TopPersonPage = Node::load(current($found)->entity_id);
+            }
+
             foreach ( $teachers as $teacher ) {
                 if ($teacher->Active) {
 
@@ -85,6 +94,34 @@ Class Sync extends ControllerBase
                     }
 
                     $Contact->save();
+
+                    if ($TopPersonPage) {
+                      $url = $TopPersonPage->toUrl('canonical')->toString();
+                      $namePath = str_replace(" ", "-", strtolower($Contact->getName()));
+                      $alias = str_replace('/da', '', $url) . '/' . $namePath;
+
+                      $path_alias_manager = \Drupal::entityTypeManager()->getStorage('path_alias');
+                      $alias_objects = $path_alias_manager->loadByProperties([
+                        'langcode' => 'da',
+                        'path' => '/show-contact/' . $Contact->id()
+                      ]);
+
+                      if (empty($alias_objects)) {
+                          $path_alias = PathAlias::create(array(
+                            'langcode' => 'da',
+                            'path' => '/show-contact/' . $Contact->id(),
+                            'alias' => $alias
+                          ));
+                          $path_alias->save();
+
+                      } else {
+                          foreach( $alias_objects AS $alias_object ) {
+                            $alias_object->alias = $alias;
+                            $alias_object->save();
+                          }
+                      }
+
+                    }
                 }
             }
         }
