@@ -118,9 +118,9 @@ a.spotbox {
 .spotbox {
 
   &.spotbox--background-color-primary {
-
+      background-color: $background_color__primary !important;
     &, &:hover, &:focus, &:visited {
-      background-color: $color-green-001;
+     // background-color: $color-green-001;
     }
 
     &:after {
@@ -129,16 +129,16 @@ a.spotbox {
   }
 
   &.spotbox--background-color-secondary {
-
+      background-color: $background_color__secondary !important;
     &, &:hover, &:focus, &:visited {
-      background-color: $color-orange-005;
+     // background-color: $color-orange-005;
     }
   }
 
   &.spotbox--background-color-tertiary {
-
+    background-color: $background_color__tertiary !important;
     &, &:hover, &:focus, &:visited {
-      background-color: $color-blue-001;
+     // background-color: $color-blue-001;
     }
 
     &:after {
@@ -303,27 +303,27 @@ a.spotbox {
 
   &.spotbox {
     box-shadow: none;
-    background-color: $color-green-002 !important;
+    // background-color: $color-green-002 !important;
   }
 
   &.spotbox--background-color-primary {
 
     &, &:hover, &:focus, &:visited {
-      background-color: $color-green-001 !important;
+     // background-color: $color-green-001;
     }
   }
 
   &.spotbox--background-color-secondary {
 
     &, &:hover, &:focus, &:visited {
-      background-color: $color-orange-005 !important;
+      // background-color: $color-orange-005;
     }
   }
 
   &.spotbox--background-color-tertiary {
 
     &, &:hover, &:focus, &:visited {
-      background-color: $color-blue-001 !important;
+     // background-color: $color-blue-001;
     }
   }
 
