@@ -26,14 +26,14 @@ Class Sync extends ControllerBase
 
     public static function handler() {
         \Drupal::logger('speedadmin')->info("start speedadmin import ");
+
         $now = strftime("%Y-%m-%d %H:%M:%S", time());
         self::$db = \Drupal::database();
         $teachers = Teacher::get();
 
         // TODO cleanup teachers that is not importet
 
-        $go = true;
-        if ( $go && $teachers && is_array($teachers)) {
+        if ( $teachers && is_array($teachers)) {
             \Drupal::logger('speedadmin')->info("update " . count($teachers) . " theaters");
             $TopPersonPage = null;
             $find = self::$db->query("SELECT * FROM node__field_import_ref WHERE bundle = 'os2web_page' AND field_import_ref_value='-2';");
@@ -130,8 +130,7 @@ Class Sync extends ControllerBase
 
         $courses = Course::get();
 
-        $go = true;
-        if ($go && !empty($courses) && is_object($courses->tree) && !empty($courses->courses) && is_array($courses->courses)) {
+        if (!empty($courses) && is_object($courses->tree) && !empty($courses->courses) && is_array($courses->courses)) {
           \Drupal::logger('speedadmin')->info("update " . count($courses->courses) . " courses");
           $tree = array();
           foreach( $courses->tree->Nodes as $node) {
