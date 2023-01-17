@@ -154,7 +154,7 @@ Class Sync extends ControllerBase
               $node = Node::load($TopPage);
               $node->set('field_os2web_page_paragraph_narr', $paragraph);
               $node->save();
-
+;
               foreach ( $tree as $obj ) {
                 self::createContent($TopPage, (object) $obj);
               }
@@ -236,6 +236,7 @@ Class Sync extends ControllerBase
         $txt = str_replace(array('&nbsp;', '&amp;'), '', $txt);
 
         $description = $txt;
+
       }
 
       if (!empty($obj->SubCategories)) {
@@ -243,9 +244,14 @@ Class Sync extends ControllerBase
         foreach( $obj->SubCategories AS $idx => $cat ) {
             $html .= '<div class="course-text">' . $cat->Name . '</div><br>';
         }
+
         if (!empty($html)) {
           $description .= '<hr><br>' . $html;
         }
+      }
+
+      if (!empty($obj->CouseId) && is_numeric($obj->CouseId)) {
+        $description .= '<br><a class="course-assign" href="https://ring.speedadmin.dk/registration#/Course/' . $obj->CouseId . '" target="_blank">Tilmeld</a>';
       }
 
       if (!empty($description)) {
