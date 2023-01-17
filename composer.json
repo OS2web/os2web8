@@ -5,45 +5,6 @@
     "license": "EUPL-1.2",
     "repositories": [
         {
-            "type": "package",
-            "package": {
-                "name": "drupal/monolog",
-                "type": "drupal-module",
-                "description": "A Framework for integrating with the Monolog library.",
-                "homepage": "http://drupal.org/project/monolog",
-                "license": "GPL-2.0",
-                "authors": [
-                    {
-                        "name": "Chris Pliakas",
-                        "email": "opensource@chrispliakas.com",
-                        "role": "Project Lead"
-                    },
-                    {
-                        "name": "See contributors",
-                        "homepage": "http://drupal.org/node/1937716/committers",
-                        "role": "Developer"
-                    }
-                ],
-                "support": {
-                    "issues": "http://drupal.org/project/issues/monolog"
-                },
-                "require": {
-                    "monolog/monolog": "^2.0.0"
-                },
-                "autoload": {
-                    "psr-0": {
-                        "Drupal\\Monolog": "src/"
-                    }
-                },
-                "version": "2.x-dev",
-                "source": {
-                    "url": "https://git.drupalcode.org/project/monolog.git",
-                    "type": "git",
-                    "reference": "2.x"
-                }
-            }
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
             "exclude": ["drupal/anonymous_subscriptions"]
@@ -98,9 +59,9 @@
         "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0@alpha",
         "drupal/content_moderation_notifications": "^3.3",
-        "drupal/core-composer-scaffold": "9.3.19",
-        "drupal/core-project-message": "9.3.19",
-        "drupal/core-recommended": "9.3.19",
+        "drupal/core-composer-scaffold": "~9.5.1",
+        "drupal/core-project-message": "~9.5.1",
+        "drupal/core-recommended": "~9.5.1",
         "drupal/csv_importer": "^1.12",
         "drupal/devel": "^4.1",
         "drupal/editor_file": "^1.6",
@@ -229,9 +190,6 @@
             "drupal/textfield_counter" : {
                 "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch"
             },
-            "drupal/easy_breadcrumb" : {
-                "Fix frontpage page as part of the breadcrumb path" :  "./patches/easy-breadcrumb-include-frontpage.patch"
-            },
             "drupal/fieldblock" : {
                 "Error on node revision route due to core type upcasting change": "https://www.drupal.org/files/issues/2022-07-28/fieldblock-3281927-5.patch"
             },
@@ -244,17 +202,12 @@
             "drupal/core": {
                 "Notice: Undefined index: value in Drupal\\views\\Plugin\\views\\filter\\NumericFilter->acceptExposedInput()" : "https://www.drupal.org/files/issues/2020-06-04/2825860-exposed-filter-notice-38.patch",
                 "Allow edit Media items from Media Library modal dialog in CKEditor" : "https://www.drupal.org/files/issues/2021-04-21/3168868-13_0.patch",
-                "2961554 - Display node title by default when creating link with drupalink, allow configuration." : "https://www.drupal.org/files/issues/2021-10-14/2741945-92_1.patch",
                 "Notice: Undefined index: type in Drupal\\Core\\Render\\Element\\Date::processDate()" : "https://www.drupal.org/files/issues/2022-06-28/3189302-18.patch",
-                "Notice: Trying to access array offset on value of type null in Drupal\\views\\Plugin\\views\\display\\EntityReference->query()": "https://www.drupal.org/files/issues/2021-12-08/3180227-15.patch",
                 "Provide a way for fields with computed or custom storage to decide how to impact entity queries." : "https://www.drupal.org/files/issues/2021-12-06/3025164-33.patch",
                 "TypeError: Argument 1 passed to Drupal\\Core\\File\\FileUrlGenerator::generateString() must be of the type string, null given" : "https://www.drupal.org/files/issues/2021-12-18/file-url-generator-3254245-34.patch"
             },
             "drupal/printable": {
                  "3214729 PDF filename is generated with it's location" : "./patches/3214729_pdf_filename_generated_with_its_location.patch"
-            },
-            "drupal/scheduler_content_moderation_integration" : {
-                "Widget error when field is overridden - undefined offset 0 in $form['publish_state']" : "https://www.drupal.org/files/issues/2020-06-30/3077147-28.patch"
             },
             "drupal/csv_importer" : {
                 "Custom patch to get anonymous subscription support on csv_import" : "./patches/anonymous_subscriptions_csv_import.patch"

@@ -1,6 +1,6 @@
 name: 'Designsystem.dk - faxe'
 type: theme
-description: 'Theme for Faxe subsites.'
+description: 'Theme for Faxe.'
 core: 8.x
 core_version_requirement: ^8 || ^9
 screenshot: screenshot.png
