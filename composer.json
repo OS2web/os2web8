@@ -98,9 +98,9 @@
         "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0@alpha",
         "drupal/content_moderation_notifications": "^3.3",
-        "drupal/core-composer-scaffold": "9.3.19",
-        "drupal/core-project-message": "9.3.19",
-        "drupal/core-recommended": "9.3.19",
+        "drupal/core-composer-scaffold": "~9.5.1",
+        "drupal/core-project-message": "~9.5.1",
+        "drupal/core-recommended": "~9.5.1",
         "drupal/csv_importer": "^1.12",
         "drupal/devel": "^4.1",
         "drupal/editor_file": "^1.6",
@@ -244,9 +244,7 @@
             "drupal/core": {
                 "Notice: Undefined index: value in Drupal\\views\\Plugin\\views\\filter\\NumericFilter->acceptExposedInput()" : "https://www.drupal.org/files/issues/2020-06-04/2825860-exposed-filter-notice-38.patch",
                 "Allow edit Media items from Media Library modal dialog in CKEditor" : "https://www.drupal.org/files/issues/2021-04-21/3168868-13_0.patch",
-                "2961554 - Display node title by default when creating link with drupalink, allow configuration." : "https://www.drupal.org/files/issues/2021-10-14/2741945-92_1.patch",
                 "Notice: Undefined index: type in Drupal\\Core\\Render\\Element\\Date::processDate()" : "https://www.drupal.org/files/issues/2022-06-28/3189302-18.patch",
-                "Notice: Trying to access array offset on value of type null in Drupal\\views\\Plugin\\views\\display\\EntityReference->query()": "https://www.drupal.org/files/issues/2021-12-08/3180227-15.patch",
                 "Provide a way for fields with computed or custom storage to decide how to impact entity queries." : "https://www.drupal.org/files/issues/2021-12-06/3025164-33.patch",
                 "TypeError: Argument 1 passed to Drupal\\Core\\File\\FileUrlGenerator::generateString() must be of the type string, null given" : "https://www.drupal.org/files/issues/2021-12-18/file-url-generator-3254245-34.patch"
             },
