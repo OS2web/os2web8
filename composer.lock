@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07d6900665573a2ff218ba4994cd435d",
+    "content-hash": "b5faf8400dc349ef11c384c41d226eda",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8373,27 +8373,44 @@
         },
         {
             "name": "drupal/monolog",
-            "version": "2.x-dev",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/monolog.git",
-                "reference": "2.x"
+                "reference": "4a9ac12680868ddcc67265a4f5e215959aaa5edc"
             },
             "require": {
-                "monolog/monolog": "^2.0.0"
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "monolog/monolog": "^2.8.0",
+                "php": "^7.4|^8"
             },
             "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "2.1.0+1-dev",
+                    "datestamp": "1662121445",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Drupal\\Monolog": "src/"
                 }
             },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0"
             ],
             "authors": [
                 {
                     "name": "Chris Pliakas",
+                    "homepage": "https://www.drupal.org/user/266779",
                     "email": "opensource@chrispliakas.com",
                     "role": "Project Lead"
                 },
@@ -8401,11 +8418,16 @@
                     "name": "See contributors",
                     "homepage": "http://drupal.org/node/1937716/committers",
                     "role": "Developer"
+                },
+                {
+                    "name": "ParisLiakos",
+                    "homepage": "https://www.drupal.org/user/1011436"
                 }
             ],
             "description": "A Framework for integrating with the Monolog library.",
             "homepage": "http://drupal.org/project/monolog",
             "support": {
+                "source": "https://git.drupalcode.org/project/monolog",
                 "issues": "http://drupal.org/project/issues/monolog"
             }
         },
