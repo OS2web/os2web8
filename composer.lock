@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5faf8400dc349ef11c384c41d226eda",
+    "content-hash": "512efb9fd1726e4b2c24687df70fcea6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2566,6 +2566,59 @@
             "homepage": "http://drupal.org/project/address",
             "support": {
                 "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/admin_audit_trail",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/admin_audit_trail.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_audit_trail-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "093b64a9328261335cfb3e555c245056953f5f2b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/redirect": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1665248355",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vardot",
+                    "homepage": "https://www.drupal.org/vardot",
+                    "role": "Maintenance for D8 and D9 versions"
+                },
+                {
+                    "name": "Rajab Natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "This module track logs of specific events that you'd like to review.",
+            "homepage": "https://www.drupal.org/project/admin_audit_trail",
+            "support": {
+                "source": "http://cgit.drupalcode.org/admin_audit_trail",
+                "issues": "https://www.drupal.org/project/issues/admin_audit_trail"
             }
         },
         {
@@ -6254,6 +6307,124 @@
             }
         },
         {
+            "name": "drupal/file_mdm",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/file_mdm.git",
+                "reference": "8.x-2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/file_mdm-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "391d9902733704274594873aa9b1f6b6ba3bd319"
+            },
+            "require": {
+                "drupal/core": "^9.3 | ^10",
+                "lsolesen/pel": "^0.9.12",
+                "phenx/php-font-lib": "^0.5.4"
+            },
+            "require-dev": {
+                "drupal/vendor_stream_wrapper": "^2.0.2",
+                "fileeye/linuxlibertine-fonts": "^5.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.5",
+                    "datestamp": "1663668519",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mondrake",
+                    "homepage": "https://www.drupal.org/user/1307444"
+                }
+            ],
+            "description": "Provides a service to manage file metadata.",
+            "homepage": "https://www.drupal.org/project/file_mdm",
+            "support": {
+                "source": "https://git.drupalcode.org/project/file_mdm"
+            }
+        },
+        {
+            "name": "drupal/file_mdm_exif",
+            "version": "2.5.0",
+            "require": {
+                "drupal/core": "^9.3 | ^10",
+                "drupal/file_mdm": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.5",
+                    "datestamp": "1663668519",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mondrake",
+                    "homepage": "https://www.drupal.org/user/1307444"
+                }
+            ],
+            "description": "Provides a file metadata plugin for EXIF image information.",
+            "homepage": "https://www.drupal.org/project/file_mdm",
+            "support": {
+                "source": "https://git.drupalcode.org/project/file_mdm"
+            }
+        },
+        {
+            "name": "drupal/file_mdm_font",
+            "version": "2.5.0",
+            "require": {
+                "drupal/core": "^9.3 | ^10",
+                "drupal/file_mdm": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.5",
+                    "datestamp": "1663668519",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mondrake",
+                    "homepage": "https://www.drupal.org/user/1307444"
+                }
+            ],
+            "description": "Provides a file metadata plugin for TTF/OTF/WOFF font information.",
+            "homepage": "https://www.drupal.org/project/file_mdm",
+            "support": {
+                "source": "https://git.drupalcode.org/project/file_mdm"
+            }
+        },
+        {
             "name": "drupal/flood_control",
             "version": "2.2.4",
             "source": {
@@ -6715,6 +6886,72 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/honeypot",
                 "issues": "https://www.drupal.org/project/issues/honeypot"
+            }
+        },
+        {
+            "name": "drupal/image_effects",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/image_effects.git",
+                "reference": "8.x-3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-3.4.zip",
+                "reference": "8.x-3.4",
+                "shasum": "473ebd6a9e67adadc9111c2e91c8a4400281d74f"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "drupal/file_mdm": "^2.5",
+                "drupal/file_mdm_exif": "*",
+                "drupal/file_mdm_font": "*"
+            },
+            "conflict": {
+                "drupal/imagemagick": "<3.4",
+                "drupal/jquery_colorpicker": "<2"
+            },
+            "require-dev": {
+                "drupal/color": "*",
+                "drupal/imagemagick": "^3.4",
+                "drupal/vendor_stream_wrapper": "^1.2 | ^2",
+                "fileeye/linuxlibertine-fonts": "^5.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.4",
+                    "datestamp": "1664106631",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mondrake",
+                    "homepage": "https://www.drupal.org/user/1307444"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Provides effects and operations for the Image API.",
+            "homepage": "https://www.drupal.org/project/image_effects",
+            "support": {
+                "source": "https://git.drupalcode.org/project/image_effects"
             }
         },
         {
@@ -12903,6 +13140,66 @@
             "time": "2021-07-09T08:23:52+00:00"
         },
         {
+            "name": "lsolesen/pel",
+            "version": "0.9.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pel/pel.git",
+                "reference": "b95fe29cdacf9d36330da277f10910a13648c84c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pel/pel/zipball/b95fe29cdacf9d36330da277f10910a13648c84c",
+                "reference": "b95fe29cdacf9d36330da277f10910a13648c84c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "php-coveralls/php-coveralls": ">2.4",
+                "squizlabs/php_codesniffer": ">3.5",
+                "symfony/phpunit-bridge": "^4 || ^5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "lsolesen\\pel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Olesen",
+                    "email": "lars@intraface.dk",
+                    "homepage": "http://intraface.dk",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Martin Geisler",
+                    "email": "martin@geisler.net",
+                    "homepage": "http://geisler.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Exif Library. A library for reading and writing Exif headers in JPEG and TIFF images using PHP.",
+            "homepage": "http://pel.github.com/pel/",
+            "keywords": [
+                "exif",
+                "image"
+            ],
+            "support": {
+                "issues": "https://github.com/pel/pel/issues",
+                "source": "https://github.com/pel/pel/tree/0.9.12"
+            },
+            "time": "2022-02-18T13:20:54+00:00"
+        },
+        {
             "name": "maennchen/zipstream-php",
             "version": "2.2.6",
             "source": {
@@ -14116,12 +14413,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_contact.git",
-                "reference": "41f55c6d7beaedbd9ad1fc81605e397b39abc945"
+                "reference": "2db281df253e3c8c81b6b9cb64be4239dbf6a5a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/41f55c6d7beaedbd9ad1fc81605e397b39abc945",
-                "reference": "41f55c6d7beaedbd9ad1fc81605e397b39abc945",
+                "url": "https://api.github.com/repos/OS2web/os2web_contact/zipball/2db281df253e3c8c81b6b9cb64be4239dbf6a5a0",
+                "reference": "2db281df253e3c8c81b6b9cb64be4239dbf6a5a0",
                 "shasum": ""
             },
             "require": {
@@ -14141,7 +14438,7 @@
                 "issues": "https://github.com/OS2web/os2web_contact/issues",
                 "source": "https://github.com/OS2web/os2web_contact/tree/master"
             },
-            "time": "2022-01-28T11:42:22+00:00"
+            "time": "2023-01-18T14:37:50+00:00"
         },
         {
             "name": "os2web/os2web_datalookup",
@@ -14647,12 +14944,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "1fdfee35ddcfb50d5424a7e952cbb9dc9a1b3289"
+                "reference": "3878252893ded325dcce5a10274c365b11281a39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/1fdfee35ddcfb50d5424a7e952cbb9dc9a1b3289",
-                "reference": "1fdfee35ddcfb50d5424a7e952cbb9dc9a1b3289",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/3878252893ded325dcce5a10274c365b11281a39",
+                "reference": "3878252893ded325dcce5a10274c365b11281a39",
                 "shasum": ""
             },
             "require": {
@@ -14680,7 +14977,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2023-01-11T12:06:25+00:00"
+            "time": "2023-01-18T13:29:07+00:00"
         },
         {
             "name": "os2web/os2web_person_information",
@@ -18453,29 +18750,29 @@
         },
         {
             "name": "softcreatr/jsonpath",
-            "version": "0.8.1",
+            "version": "0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SoftCreatR/JSONPath.git",
-                "reference": "2de6614d7a9aa5e1f988c5dbc0744fa602847180"
+                "reference": "e04c02cb78bcc242c69d17dac5b29436bf3e1076"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SoftCreatR/JSONPath/zipball/2de6614d7a9aa5e1f988c5dbc0744fa602847180",
-                "reference": "2de6614d7a9aa5e1f988c5dbc0744fa602847180",
+                "url": "https://api.github.com/repos/SoftCreatR/JSONPath/zipball/e04c02cb78bcc242c69d17dac5b29436bf3e1076",
+                "reference": "e04c02cb78bcc242c69d17dac5b29436bf3e1076",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=8.0"
+                "php": ">=7.1,<8.0"
             },
             "replace": {
                 "flow/jsonpath": "*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": ">=7.0",
                 "roave/security-advisories": "dev-latest",
-                "squizlabs/php_codesniffer": "^3.7"
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
             "autoload": {
@@ -18518,7 +18815,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-27T09:53:33+00:00"
+            "time": "2022-09-27T09:27:12+00:00"
         },
         {
             "name": "solarium/solarium",
@@ -26035,5 +26332,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
