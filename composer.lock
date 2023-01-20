@@ -14536,12 +14536,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "8ffe29785e4dce5e3cbfec159fa645d33c575c23"
+                "reference": "bbe8c32a41aa2463966e67c9486565a9fa739ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/8ffe29785e4dce5e3cbfec159fa645d33c575c23",
-                "reference": "8ffe29785e4dce5e3cbfec159fa645d33c575c23",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/bbe8c32a41aa2463966e67c9486565a9fa739ce1",
+                "reference": "bbe8c32a41aa2463966e67c9486565a9fa739ce1",
                 "shasum": ""
             },
             "require": {
@@ -14558,7 +14558,7 @@
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
                 "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2022-07-01T12:07:34+00:00"
+            "time": "2023-01-20T10:35:21+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
@@ -18750,29 +18750,29 @@
         },
         {
             "name": "softcreatr/jsonpath",
-            "version": "0.8.1",
+            "version": "0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SoftCreatR/JSONPath.git",
-                "reference": "2de6614d7a9aa5e1f988c5dbc0744fa602847180"
+                "reference": "e04c02cb78bcc242c69d17dac5b29436bf3e1076"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SoftCreatR/JSONPath/zipball/2de6614d7a9aa5e1f988c5dbc0744fa602847180",
-                "reference": "2de6614d7a9aa5e1f988c5dbc0744fa602847180",
+                "url": "https://api.github.com/repos/SoftCreatR/JSONPath/zipball/e04c02cb78bcc242c69d17dac5b29436bf3e1076",
+                "reference": "e04c02cb78bcc242c69d17dac5b29436bf3e1076",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=8.0"
+                "php": ">=7.1,<8.0"
             },
             "replace": {
                 "flow/jsonpath": "*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": ">=7.0",
                 "roave/security-advisories": "dev-latest",
-                "squizlabs/php_codesniffer": "^3.7"
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
             "autoload": {
@@ -18815,7 +18815,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-27T09:53:33+00:00"
+            "time": "2022-09-27T09:27:12+00:00"
         },
         {
             "name": "solarium/solarium",
