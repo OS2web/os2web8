@@ -21,8 +21,7 @@
 // --------------------------------------------------
 
 .section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 100px;
 }
 .section-heading {}
 .section-heading__title {
@@ -122,41 +121,76 @@ body {
     background-image: url('../images/banner-search.jpg');
 
     form#views-exposed-form-os2web-search-os2web-search-page {
-      padding: 20px;
       margin: auto;
 
-      max-width: 650px;
-
-      border-radius: 5px;
-      background-color: rgba(255, 255, 255, .6);
 
       .form--inline {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form-item {
+          margin-right: 0;
+          margin-bottom: 0;
+          display: block;
+          width: 100%;
+          .form-input {
+            height: 60px;
+            margin-top: 0;
+            width: 100%;
+            border: 2px solid #fff;
+            font-weight: 700;
+            background-color: #fff;
+            font-size: 1.8rem;
+            border-radius: 0;
 
-        .form-input {
-          padding: 15px 70px 15px 25px;
+            max-width: none !important;
+            outline: none;
 
-          font-size: 1.8rem;
+            &:focus {
+              border: 2px solid #00789e;
+            }
+          }
+        }
+        .form-actions {
+          margin-top: 0;
+          margin-bottom: 0;
 
-          max-width: none !important;
+
+          input {
+            background-image: url('../images/svg-icons/magnifying-glass-solid.svg');
+            background-position: center;
+            background-size: 20px 20px;
+            width: 80px;
+            height: 60px;
+            background-color: #00789e;
+            background-repeat: no-repeat;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-indent: -9999px;
+            border-radius: 0;
+            border: 0;
+            transition: .4s ease;
+            outline: none;
+            &:hover {
+              background-color: #00516b;
+            }
+          }
+
+
+
+          &:after {
+            top: 13px;
+            right: 20px;
+
+            font-size: 2.2rem;
+          }
         }
       }
 
-      .form-actions {
-        width: 70px;
 
-        .form-submit {
-          width: 70px;
-          height: 50px;
-        }
-
-        &:after {
-          top: 13px;
-          right: 20px;
-
-          font-size: 2.2rem;
-        }
-      }
     }
   }
 }
@@ -184,10 +218,6 @@ body {
     padding-bottom: 30px;
   }
 
-  .section--banner-search {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
 }
 
 // Tablet - only
@@ -199,11 +229,6 @@ body {
   .section--alert {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-
-  .section--banner-search {
-    padding-top: 110px;
-    padding-bottom: 110px;
   }
 }
 
