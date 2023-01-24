@@ -21,11 +21,18 @@
 // --------------------------------------------------
 
 .box {
-  background-color: $gray-primary;
+  background-color: #fff;
+  text-align: center;
   .box__heading {
     padding: 20px 20px;
     color: $color-black;
-    background-color: $gray-primary;
+    background-color: #fff;
+    .field--name-field-os2web-icon {
+      img {
+        width: 65px;
+        height: 60px;
+      }
+    }
     .h4 {
       font-size: 2.4rem;
     }
@@ -34,7 +41,14 @@
     font-size: 1.6rem;
     color: $color-black;
     padding: 20px 20px;
-    background-color: $gray-primary;
+
+    a {
+      color: #2a5e6f;
+
+      &:after {
+        display: none !important;
+      }
+    }
   }
   .box__heading + .box__body {
     padding-top: 0;

@@ -22,7 +22,6 @@
                 <a href="{{ menu_link.url }}">{{ menu_link.title }}</a>
 
                 {% if menu_link['children']|length %}
-                  <hr>
                   <ul>
                     {% for node_link in menu_link['children'] %}
                       <li><a href="{{ node_link.url }}">{{ node_link.title }}</a></li>
