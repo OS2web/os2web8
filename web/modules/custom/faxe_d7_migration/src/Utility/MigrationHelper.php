@@ -20,7 +20,7 @@ class MigrationHelper {
    *
    * @return string
    */
-  function setModerationState($status) {
+  static function setModerationState($status) {
     if ($status) {
       return 'published';
     }
@@ -45,7 +45,7 @@ class MigrationHelper {
    * @return array
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function createAccordionItemParagraph($field_paragraph_text) {
+  static function createAccordionItemParagraph($field_paragraph_text) {
     if (!$field_paragraph_text) {
       return [];
     }
@@ -75,7 +75,7 @@ class MigrationHelper {
    * @return string
    *   File downloadable URL.
    */
-  function getFileDownloadUrl($field) {
+  static function getFileDownloadUrl($field) {
     $fileUrl = NULL;
     if ($field) {
       $fid = is_array($field) ? $field['fid'] : $field;
@@ -106,7 +106,7 @@ class MigrationHelper {
    * @return string
    *   File title.
    */
-  function getFileName($field) {
+  static function getFileName($field) {
     $fileName = NULL;
     if ($field) {
       $fid = is_array($field) ? $field['fid'] : $field;
@@ -134,7 +134,7 @@ class MigrationHelper {
    * @return string
    *   File destination URL.
    */
-  function generateFileDestinationPath($field) {
+  static function generateFileDestinationPath($field) {
 
     $fileUrl = '';
     if ($field) {
@@ -166,7 +166,7 @@ class MigrationHelper {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function createFileManaged($uri) {
+  static function createFileManaged($uri) {
     $properties['uri'] = $uri;
     $files = \Drupal::entityTypeManager()->getStorage('file')->loadByProperties($properties);
     $file = reset($files);
@@ -201,7 +201,7 @@ class MigrationHelper {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function createMediaEntity($id, $filename) {
+  static function createMediaEntity($id, $filename) {
     $media = Media::create([
       'bundle' => 'document',
       'uid' => '0',
@@ -225,7 +225,7 @@ class MigrationHelper {
    * @return array
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function createSpotboxParagraph($field_os2web_base_field_spotbox){
+  static function createSpotboxParagraph($field_os2web_base_field_spotbox){
 
     if (!$field_os2web_base_field_spotbox ) {
       return [];
@@ -257,7 +257,7 @@ class MigrationHelper {
    * @return array
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  function migrateNarrowParagraph($values) {
+  static function migrateNarrowParagraph($values) {
     $return = [];
     if (!is_array($values)) {
       return [];
@@ -284,7 +284,7 @@ class MigrationHelper {
     return ($return);
   }
   /**
-   * Helper function to populate links fields.
+   * Helper static function to populate links fields.
    *
    * @param $link
    *   Link field.
@@ -292,7 +292,7 @@ class MigrationHelper {
    * @return int|null
    *   Int if the local node is found. NULL otherwise.
    */
-  function getFieldLinks($link) {
+  static function getFieldLinks($link) {
     if (strpos($link['url'], 'node') === 0) {
       $urlParts = explode('/', $link['url']);
 
@@ -312,7 +312,7 @@ class MigrationHelper {
   }
 
   /**
-   * Helper function to populate menu link.
+   * Helper static function to populate menu link.
    *
    * @param $link
    *   Link field.
@@ -320,7 +320,7 @@ class MigrationHelper {
    * @return int|null
    *   Int if the local node is found. NULL otherwise.
    */
-  function getMenuLink($link) {
+  static function getMenuLink($link) {
     if (parse_url($link, PHP_URL_HOST) == parse_url(MigrationHelper::$siteUrl, PHP_URL_HOST)) {
       $link = parse_url($link, PHP_URL_PATH);
     }
@@ -338,7 +338,7 @@ class MigrationHelper {
   }
 
   /**
-   * Helper function to populate menu link.
+   * Helper static function to populate menu link.
    *
    * @param $link
    *   Link field.
@@ -346,7 +346,7 @@ class MigrationHelper {
    * @return int|null
    *   Int if the local node is found. NULL otherwise.
    */
-  function migrateRelatedLinks($links) {
+  static function migrateRelatedLinks($links) {
     if ($localNid = MigrationHelper::findLocalNode($links['nid'])) {
       return [
         'target_id' => $localNid
@@ -355,7 +355,7 @@ class MigrationHelper {
     return [];
   }
   /**
-   * Helper function to find local node by remote ID.
+   * Helper static function to find local node by remote ID.
    *
    * @param $sourceNodeId
    *   Remote node ID.
@@ -363,7 +363,7 @@ class MigrationHelper {
    * @return int|null
    *   Int if the local node is found. NULL otherwise.
    */
-  static function findLocalNode($sourceNodeId) {
+   static function findLocalNode($sourceNodeId) {
     $node_migrate_tables = [
       'migrate_map_faxe_d7_node_indholdside',
     ];
