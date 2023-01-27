@@ -58,7 +58,7 @@
         "drupal/coder": "^8.3",
         "drupal/config_delete": "^1.17",
         "drupal/console": "^1.0.2",
-        "drupal/content_access": "^1.0@alpha",
+        "drupal/content_access": "^1.0",
         "drupal/content_moderation_notifications": "^3.3",
         "drupal/core-composer-scaffold": "~9.5.1",
         "drupal/core-project-message": "~9.5.1",
@@ -216,6 +216,9 @@
             },
             "drupal/menu_block" : {
                 "Menu block renders when tree is empty" : "https://www.drupal.org/files/issues/2022-04-29/menu_block_rendered_empty-3271218-17.patch"
+            },
+            "drupal/content_access" : {
+                "deprecated php functions " : "https://www.drupal.org/files/issues/2022-07-22/3258804-14.patch"
             }
         }
     }
