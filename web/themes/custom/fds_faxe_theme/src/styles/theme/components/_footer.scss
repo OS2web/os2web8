@@ -59,12 +59,29 @@ footer {
     }
 
     .footer-col {
-
       h2 {
         margin-bottom: 8px;
         font-weight: $font-weight-bold;
         font-size: $h4-font-size;
         line-height: 2.2rem;
+      }
+    }
+
+    .customer-footer {
+      .footer-extra-info {
+        display: inline-table;
+        p {
+          padding-right: 45px;
+        }
+      }
+      .region.region-footer-first {
+        display: inline-flex;
+        padding-right: 45px;
+
+        .contextual-region.block {
+          padding-right: 45px;
+          display: table-cell;
+        }
       }
     }
 

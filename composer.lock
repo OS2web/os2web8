@@ -14536,12 +14536,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hearings.git",
-                "reference": "8ffe29785e4dce5e3cbfec159fa645d33c575c23"
+                "reference": "bbe8c32a41aa2463966e67c9486565a9fa739ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/8ffe29785e4dce5e3cbfec159fa645d33c575c23",
-                "reference": "8ffe29785e4dce5e3cbfec159fa645d33c575c23",
+                "url": "https://api.github.com/repos/OS2web/os2web_hearings/zipball/bbe8c32a41aa2463966e67c9486565a9fa739ce1",
+                "reference": "bbe8c32a41aa2463966e67c9486565a9fa739ce1",
                 "shasum": ""
             },
             "require": {
@@ -14558,7 +14558,7 @@
                 "issues": "https://github.com/OS2web/os2web_hearings/issues",
                 "source": "https://github.com/OS2web/os2web_hearings/tree/master"
             },
-            "time": "2022-07-01T12:07:34+00:00"
+            "time": "2023-01-20T10:35:21+00:00"
         },
         {
             "name": "os2web/os2web_hjemmeside",
@@ -14944,12 +14944,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_pagebuilder.git",
-                "reference": "3878252893ded325dcce5a10274c365b11281a39"
+                "reference": "da6d52ce363a7d65e1beac0d12995ab404019a6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/3878252893ded325dcce5a10274c365b11281a39",
-                "reference": "3878252893ded325dcce5a10274c365b11281a39",
+                "url": "https://api.github.com/repos/OS2web/os2web_pagebuilder/zipball/da6d52ce363a7d65e1beac0d12995ab404019a6b",
+                "reference": "da6d52ce363a7d65e1beac0d12995ab404019a6b",
                 "shasum": ""
             },
             "require": {
@@ -14977,7 +14977,7 @@
                 "issues": "https://github.com/OS2web/os2web_pagebuilder/issues",
                 "source": "https://github.com/OS2web/os2web_pagebuilder/tree/master"
             },
-            "time": "2023-01-18T13:29:07+00:00"
+            "time": "2023-01-25T09:33:13+00:00"
         },
         {
             "name": "os2web/os2web_person_information",

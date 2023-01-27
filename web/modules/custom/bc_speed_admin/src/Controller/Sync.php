@@ -27,7 +27,6 @@ Class Sync extends ControllerBase
     public static function handler() {
         \Drupal::logger('speedadmin')->info("start speedadmin import ");
 
-        $now = strftime("%Y-%m-%d %H:%M:%S", time());
         self::$db = \Drupal::database();
         $teachers = Teacher::get();
 
@@ -132,34 +131,51 @@ Class Sync extends ControllerBase
 
         if (!empty($courses) && is_object($courses->tree) && !empty($courses->courses) && is_array($courses->courses)) {
           \Drupal::logger('speedadmin')->info("update " . count($courses->courses) . " courses");
+
           $tree = array();
-          foreach( $courses->tree->Nodes as $node) {
-            if ($node->TreeID == 1 && !empty($node->ChildNodes)) {
-              $tree = self::children($node->ChildNodes, $courses->courses);
+          foreach( $courses->tree->Nodes as $course_node) {
+            if ($course_node->TreeID == 1 && !empty($course_node->ChildNodes)) {
+              $tree = self::children($course_node->ChildNodes, $courses->courses);
             }
           }
 
           if (count($tree)) {
             $find = self::$db->query("SELECT * FROM node__field_import_ref WHERE bundle = 'os2web_page' AND field_import_ref_value='-1';");
             $found = $find->fetchAll();
-            if (count($found) > 0) {
+            if (count($found) == 1) {
               $TopPage = current($found)->entity_id;
-
-              $paragraph = Paragraph::create(array(
-                'type' => 'os2web_menu_links_paragraph'
-              ));
-              $paragraph->set('field_os2web_menu_links_vm', 'image');
-              $paragraph->save();
-
               $node = Node::load($TopPage);
-              $node->set('field_os2web_page_paragraph_narr', $paragraph);
-              $node->save();
-;
-              foreach ( $tree as $obj ) {
-                self::createContent($TopPage, (object) $obj);
+              if ( $node ) {
+
+                $paragraph = null;
+                $paragraphs = $node->get('field_os2web_page_paragraph_narr');
+                foreach( $paragraphs->getValue() AS $paragraphids ) {
+                  if (!empty($paragraphids['target_id'])) {
+                    $_paragraph = \Drupal\paragraphs\Entity\Paragraph::load($paragraphids['target_id']);
+                    if ($_paragraph->getType() == 'os2web_menu_links_paragraph') {
+                      $paragraph = $_paragraph;
+                      break;
+                    }
+                  }
+                }
+
+                if (!$paragraph) {
+                  $paragraph = Paragraph::create(array(
+                    'type' => 'os2web_menu_links_paragraph'
+                  ));
+                  $paragraph->set('field_os2web_menu_links_vm', 'image');
+                  $paragraph->save();
+
+                  $node->set('field_os2web_page_paragraph_narr', $paragraph);
+                  $node->save();
+                }
+
+                foreach ( $tree as $obj ) {
+                  self::createContent($TopPage, (object) $obj);
+                }
+              } else {
+                \Drupal::logger('speedadmin')->info("no toppage or error toppages for courses found");
               }
-            } else {
-              \Drupal::logger('speedadmin')->info("no toppage for courses found");
             }
           }
         }
@@ -224,19 +240,16 @@ Class Sync extends ControllerBase
         $txt = nl2br($txt);
         $txt = str_replace(array('&nbsp;', '&amp;'), '', $txt);
         $txt = strip_tags($txt);
-        $txt = str_replace('<br>', '', $txt);
 
-        $node->set('field_os2web_page_intro', $txt);
+        $node->set('field_os2web_page_intro', trim($txt));
       }
 
       $description = null;
       if (!empty($obj->Description)) {
-        $txt = trim($obj->Description);
-        $txt = nl2br($txt);
-        $txt = str_replace(array('&nbsp;', '&amp;'), '', $txt);
-
-        $description = $txt;
-
+        $description = trim($obj->Description);
+        $description = nl2br($description);
+        $description =  html_entity_decode($description);
+        $description = strip_tags($description, '<br><a>');
       }
 
       if (!empty($obj->SubCategories)) {
@@ -246,7 +259,7 @@ Class Sync extends ControllerBase
         }
 
         if (!empty($html)) {
-          $description .= '<hr><br>' . $html;
+          $description .= '<br><br>' . $html;
         }
       }
 
@@ -278,13 +291,28 @@ Class Sync extends ControllerBase
       }
 
       if ($addMenuLinker) {
-        $paragraph = Paragraph::create(array(
-          'type' => 'os2web_menu_links_paragraph'
-        ));
-        $paragraph->set('field_os2web_menu_links_vm', 'image');
-        $paragraph->save();
+        $paragraph = false;
+        $paragraphs = $node->get('field_os2web_page_paragraph_narr');
+        foreach( $paragraphs->getValue() AS $paragraphids ) {
+          if (!empty($paragraphids['target_id'])) {
+            $_paragraph = \Drupal\paragraphs\Entity\Paragraph::load($paragraphids['target_id']);
+            if ($_paragraph->getType() == 'os2web_menu_links_paragraph') {
+              $_paragraph->set('field_os2web_menu_links_vm', 'image');
+              $_paragraph->save();
+              $paragraph = true;
+              break;
+            }
+          }
+        }
 
-        $node->set('field_os2web_page_paragraph_narr', $paragraph);
+        if (!$paragraph) {
+          $paragraph = Paragraph::create(array(
+            'type' => 'os2web_menu_links_paragraph'
+          ));
+          $paragraph->set('field_os2web_menu_links_vm', 'image');
+          $paragraph->save();
+          $node->set('field_os2web_page_paragraph_narr', $paragraph);
+        }
       }
 
       $node->save();
