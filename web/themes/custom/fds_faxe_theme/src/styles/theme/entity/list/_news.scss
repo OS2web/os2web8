@@ -20,6 +20,13 @@
 // Styling
 // --------------------------------------------------
 
+.entity-default--os2web-2-columns {
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 div.entity-list--os2web-news {
   margin-left: -($side-shift-size);
   margin-right: -($side-shift-size);
@@ -87,7 +94,11 @@ div.entity-list--os2web-news {
     position: absolute;
     top: 0;
     right: 20px;
-    color: $background_color__default;
+
+
+    time {
+      color: $background_color__default;
+    }
   }
 }
 
