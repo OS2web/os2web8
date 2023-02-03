@@ -61,8 +61,8 @@ div.entity-list--os2web-news {
       color: $blue-primary;
     }
     .h4 {
-      font-size: 2.4rem;
-      font-weight: 400;
+      font-size: 2rem;
+      font-weight: 700;
       cursor: pointer;
       &:hover {
         text-decoration: underline;
@@ -84,6 +84,10 @@ div.entity-list--os2web-news {
     font-weight: 400;
     font-size: 1.6rem;
     color: $color-black;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: $background_color__default;
   }
 }
 
