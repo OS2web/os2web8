@@ -22,9 +22,11 @@
 
 
 div.entity-list--os2web-news {
-  margin-left: -($side-shift-size);
-  margin-right: -($side-shift-size);
-  max-width: 100%;
+ // margin-left: -($side-shift-size);
+ // margin-right: -($side-shift-size);
+ // max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
   img {
     width: 100%;
     object-fit: cover;
@@ -36,10 +38,10 @@ div.entity-list--os2web-news {
     }
   }
   .entity-list__image {
-    // padding-inline: 30px;
+    padding-inline: 30px;
   }
   .entity-list__body {
-    // padding-inline: 40px;
+    padding-inline: 40px;
     font-weight: 400;
     font-size: 1.6rem;
     color: $color-black;
