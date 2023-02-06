@@ -20,6 +20,8 @@
 // Styling
 // --------------------------------------------------
 
+
+
 .entity-teaser--os2web-hearings-hearing-case {
   display: flex;
 
@@ -119,12 +121,18 @@ a.entity-teaser--os2web-hearings-hearing-case {
   .icon {
     font-size: 2.5rem;
 
-    color: $color-orange-004;
+    color: #00335b;
   }
 
   a {
     padding: 20px;
   }
+}
+
+#views-exposed-form-os2web-hearings-os2web-hearings-embed-search-tender-category {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 // --------------------------------------------------
