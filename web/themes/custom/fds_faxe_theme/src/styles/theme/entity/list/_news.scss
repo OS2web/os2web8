@@ -20,17 +20,10 @@
 // Styling
 // --------------------------------------------------
 
-.entity-default--os2web-2-columns {
-  .row {
-    margin-left: -16px !important;
-    margin-right: -16px !important;
-  }
-}
-
 div.entity-list--os2web-news {
-  margin-left: -($side-shift-size);
-  margin-right: -($side-shift-size);
-  max-width: 100%;
+ // margin-left: -($side-shift-size);
+ // margin-right: -($side-shift-size);
+ // max-width: 100%;
   img {
     width: 100%;
     object-fit: cover;
