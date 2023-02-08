@@ -219,6 +219,9 @@
             },
             "drupal/content_access" : {
                 "deprecated php functions " : "https://www.drupal.org/files/issues/2022-07-22/3258804-14.patch"
+            },
+            "drupal/facets" : {
+                "Add option to reset other facets on value change" : "https://www.drupal.org/files/issues/2023-01-25/3190289-22-reroll.patch"
             }
         }
     }
