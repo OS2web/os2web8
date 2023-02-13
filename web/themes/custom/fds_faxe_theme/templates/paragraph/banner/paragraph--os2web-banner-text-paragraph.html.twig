@@ -12,25 +12,25 @@
     <div class="slides-container">
       {% if content.field_os2web_bannertxt_heading_1|render is not empty %}
       <div class="slide-item">
-        <div class="slide-heading">{{  content.field_os2web_bannertxt_heading_1 }}</div>
+        <div class="slide-heading">{% if content.field_os2web_slide_1_link|render is not empty %}<a class="slide-link" title="{{ content.field_os2web_slide_1_link.0['#title'] }}" href="{{ content.field_os2web_slide_1_link.0['#url'] }}">{% endif %}{{  content.field_os2web_bannertxt_heading_1 }}{% if content.field_os2web_slide_1_link|render is not empty %}</a> {% endif %}</div>
         <div class="slide-content">{{ content.field_os2web_bannertxt_content_1 }}</div>
       </div>
       {% endif %}
       {% if content.field_os2web_bannertxt_heading_2|render is not empty %}
       <div class="slide-item">
-        <div class="slide-heading">{{ content.field_os2web_bannertxt_heading_2 }}</div>
+        <div class="slide-heading">{% if content.field_os2web_slide_2_link|render is not empty %}<a class="slide-link" title="{{ content.field_os2web_slide_2_link.0['#title'] }}" href="{{ content.field_os2web_slide_2_link.0['#url'] }}">{% endif %}{{ content.field_os2web_bannertxt_heading_2 }}{% if content.field_os2web_slide_2_link|render is not empty %}</a>{% endif %}</div>
         <div class="slide-content">{{ content.field_os2web_bannertxt_content_2 }}</div>
       </div>
       {% endif %}
       {% if content.field_os2web_bannertxt_heading_3|render is not empty %}
       <div class="slide-item">
-        <div class="slide-heading">{{ content.field_os2web_bannertxt_heading_3 }}</div>
+        <div class="slide-heading">{% if content.field_os2web_slide_3_link|render is not empty %}<a class="slide-link" title="{{ content.field_os2web_slide_3_link.0['#title'] }}" href="{{ content.field_os2web_slide_3_link.0['#url'] }}">{% endif %}{{ content.field_os2web_bannertxt_heading_3 }}{% if content.field_os2web_slide_3_link|render is not empty %}</a>{% endif %}</div>
         <div class="slide-content">{{ content.field_os2web_bannertxt_content_3 }}</div>
       </div>
       {% endif %}
       {% if content.field_os2web_bannertxt_heading_4|render is not empty %}
       <div class="slide-item">
-        <div class="slide-heading">{{ content.field_os2web_bannertxt_heading_4 }}</div>
+        <div class="slide-heading">{% if content.field_os2web_slide_2_link|render is not empty %}<a class="slide-link" title="{{ content.field_os2web_slide_4_link.0['#title'] }}" href="{{ content.field_os2web_slide_4_link.0['#url'] }}">{% endif %}{{ content.field_os2web_bannertxt_heading_4 }}{% if content.field_os2web_slide_4_link|render is not empty %}</a>{% endif %}</div>
         <div class="slide-content">{{ content.field_os2web_bannertxt_content_4 }}</div>
       </div>
       {% endif %}

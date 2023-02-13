@@ -3288,72 +3288,74 @@ jQuery(document).ready(function(){
 })(jQuery, Drupal, drupalSettings);
 
 
-const slider = document.querySelector('.slider');
-const slidesContainer = slider.querySelector('.slides-container');
-const slides = Array.from(slider.querySelectorAll('.slide-item'));
-const prev = slider.querySelector('.prev');
-const next = slider.querySelector('.next');
-const dots = Array.from(slider.querySelectorAll('.dot'));
+  const slider = document.querySelector('.slider');
+  const slidesContainer = slider.querySelector('.slides-container');
+  const slides = Array.from(slider.querySelectorAll('.slide-item'));
+  const prev = slider.querySelector('.prev');
+  const next = slider.querySelector('.next');
+  const dots = Array.from(slider.querySelectorAll('.dot'));
 
-let slideInterval = setInterval(nextSlide, 5000);
-let currentIndex = 0;
-
-function showSlide(index) {
-  const slideWidth = slides[0].clientWidth;
-  slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+  let slideInterval = setInterval(nextSlide, 5000);
+  let currentIndex = 0;
 
 
-  slides.forEach((slide, slideIndex) => {
-    if (slideIndex !== index) {
-      slide.classList.add('notActive');
+  function showSlide(index) {
+    const slideWidth = slides[0].clientWidth;
+    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+
+
+    slides.forEach((slide, slideIndex) => {
+      if (slideIndex !== index) {
+        slide.classList.add('notActive');
+      } else {
+        slide.classList.remove('notActive');
+      }
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      if (dotIndex !== index) {
+        dot.classList.remove('active');
+      } else {
+        dot.classList.add('active');
+      }
+    });
+
+    currentIndex = index;
+  }
+
+
+  showSlide(currentIndex);
+
+  prev.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    if (currentIndex === 0) {
+      showSlide(slides.length - 1);
     } else {
-      slide.classList.remove('notActive');
+      showSlide(currentIndex - 1);
     }
+  });
+
+  next.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    nextSlide();
   });
 
   dots.forEach((dot, dotIndex) => {
-    if (dotIndex !== index) {
-      dot.classList.remove('active');
+    dot.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      showSlide(dotIndex);
+    });
+  });
+
+  function nextSlide() {
+    if (currentIndex === slides.length - 1) {
+      showSlide(0);
     } else {
-      dot.classList.add('active');
+      showSlide(currentIndex + 1);
     }
-  });
-
-  currentIndex = index;
-}
-
-
-showSlide(currentIndex);
-
-prev.addEventListener('click', () => {
-  clearInterval(slideInterval);
-  if (currentIndex === 0) {
-    showSlide(slides.length - 1);
-  } else {
-    showSlide(currentIndex - 1);
   }
-});
-
-next.addEventListener('click', () => {
- clearInterval(slideInterval);
- nextSlide();
-});
-
-dots.forEach((dot, dotIndex) => {
-  dot.addEventListener('click', () => {
-    clearInterval(slideInterval);
-    showSlide(dotIndex);
-  });
-});
-
-function nextSlide() {
-  if (currentIndex === slides.length - 1) {
-    showSlide(0);
-  } else {
-    showSlide(currentIndex + 1);
-  }
-}
 
 
-const sliderWidth = 100 * slides.length;
-slidesContainer.style.width = `${sliderWidth}%`;
+  const sliderWidth = 100 * slides.length;
+  slidesContainer.style.width = `${sliderWidth}%`;
+  
