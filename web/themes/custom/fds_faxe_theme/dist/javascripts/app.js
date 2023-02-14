@@ -3287,6 +3287,21 @@ jQuery(document).ready(function(){
   }
 })(jQuery, Drupal, drupalSettings);
 
+(function($) {
+
+	$(".multi-search").on("click", function() {
+		console.log(" search ");
+		let form = $(".multi-search-form");
+		if ( $(form).length > 0) {
+			$(form).attr("action", "/da/" + $(this).data("search"));
+			$(form).submit();
+		}
+		return false;
+	});
+
+})(jQuery);
+
+
 
   const slider = document.querySelector('.slider');
   const slidesContainer = slider.querySelector('.slides-container');
