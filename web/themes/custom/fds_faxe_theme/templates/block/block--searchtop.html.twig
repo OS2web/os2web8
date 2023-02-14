@@ -1,0 +1,30 @@
+{%
+    set classes = [
+    'box',
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+
+    <form action="/sog" class="multi-search-form">
+        <br>
+        <div>
+            <input class="form-text form-input" name="s" value="" placeholder="{{ "Search"|trans }}">
+        </div>
+        <div style="display: inline-flex">
+            <button class="button multi-search" data-search="sog">{{ "Full search"|trans }}</button>
+        </div>
+        <div style="display: inline-flex">
+            <button class="button multi-search" data-search="sog-agenda-and-reports">{{ "Agenda and reports"|trans }}</button>
+        </div>
+        <div style="display: inline-flex">
+            <button class="button multi-search" data-search="sog-selfservice">{{ "Full search"|trans }}</button>
+        </div>
+        <div style="display: inline-flex">
+            <button class="button multi-search" data-search="sog-sitemap">{{ "Full search"|trans }}</button>
+        </div>
+    </form>
+
+</div>
