@@ -3304,11 +3304,11 @@ jQuery(document).ready(function(){
 
 
   const slider = document.querySelector('.slider');
-  const slidesContainer = slider.querySelector('.slides-container');
-  const slides = Array.from(slider.querySelectorAll('.slide-item'));
+  const slidesContainer = document.querySelector('.slides-container');
+  const slides = Array.from(document.querySelectorAll('.slide-item'));
   const prev = slider.querySelector('.prev');
   const next = slider.querySelector('.next');
-  const dots = Array.from(slider.querySelectorAll('.dot'));
+  const dots = Array.from(document.querySelectorAll('.dot'));
 
   let slideInterval = setInterval(nextSlide, 5000);
   let currentIndex = 0;
@@ -3373,4 +3373,4 @@ jQuery(document).ready(function(){
 
   const sliderWidth = 100 * slides.length;
   slidesContainer.style.width = `${sliderWidth}%`;
-  
+

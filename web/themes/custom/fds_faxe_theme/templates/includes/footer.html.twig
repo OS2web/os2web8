@@ -29,7 +29,7 @@
 					{{ page.header__main_navigation }}
 				</div> #}
 
-				<div class="col-12 col-sm-9 footer-col">
+				{# <div class="col-12 col-sm-9 footer-col">
 					<div class="block">
 						<div class="social-icon-list">
 							{% if theme_settings.social.facebook.active %}
@@ -123,11 +123,11 @@
 							</div>
 						{% endif %}
 					</div>
-				</div>
+				</div> #}
 
 				<div class="col-12 footer-col customer-footer">
 
-					<div class="d-flexx align-items-centerr footer-extra-info">
+					<div class="d-flex align-items-center footer-extra-info">
 
 						{% if theme_settings.contact_information.business_owner_name %}
 							<p>{{ theme_settings.contact_information.business_owner_name }}</p>
@@ -249,8 +249,118 @@
 						{% endif %}
 
 					</div>
+                    <div class="row">
+                      <div class="col-12 col-sm-4">
+                        {{ page.footer_first }}
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        {{ page.footer_second }}
+                      </div>
+                      <div class="socials-footer col-12 col-sm-4">
+                        <div class="social-icon-list">
+                          {% if theme_settings.social.facebook.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.facebook.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.facebook.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-facebook-f"></span>
+                                </span>
+                                Facebook
+                              </a>
+                            </div>
+                          {% endif %}
 
-					{{ page.footer_first }}
+                          {% if theme_settings.social.twitter.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.twitter.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.twitter.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-twitter-square"></span>
+                                </span>
+                                Twitter
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.googleplus.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.googleplus.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.googleplus.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-google-plus"></span>
+                                </span>
+                                Google plus
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.linkedin.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.linkedin.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.linkedin.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-linkedin"></span>
+                                </span>
+                                LinkedIn
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.pinterest.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.pinterest.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.pinterest.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-pinterest"></span>
+                                </span>
+                                Pinterest
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.instagram.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.instagram.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.instagram.tooltip }}">
+                               <span class="social-icon-frame">
+                                <span class="icon fa fa-instagram"></span>
+                               </span>
+                                Instagram
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.youtube.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.youtube.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.youtube.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-youtube"></span>
+                                </span>
+                                YouTube
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.vimeo.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.vimeo.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.vimeo.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-vimeo"></span>
+                                </span>
+                                Vimeo
+                              </a>
+                            </div>
+                          {% endif %}
+
+                          {% if theme_settings.social.github.active %}
+                            <div>
+                              <a href="{{ theme_settings.social.github.url }}" target="_blank" class="social-link" title="{{ theme_settings.social.github.tooltip }}">
+                                <span class="social-icon-frame">
+                                  <span class="icon fa fa-github"></span>
+                                </span>
+                                Github
+                              </a>
+                            </div>
+                          {% endif %}
+
+                        </div>
+                      </div>
+
+                    </div>
 
 				</div>
 			</div>

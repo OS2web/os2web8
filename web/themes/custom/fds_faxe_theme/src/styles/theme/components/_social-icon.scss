@@ -83,36 +83,39 @@ a.social-icon-teaser {
 
 .social-icon-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
 }
 
-.social-icon {
+.social-link {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon-frame {
   display: flex;
 
   justify-content: center;
   align-items: center;
 
-  height: 46px;
-  width: 46px;
+  height: 34px;
+  width: 34px;
 
   font-size: 1.7rem;
   text-decoration: none !important;
 
   background-color: #fff;
-  border-radius: 100%;
+  margin-right: 10px;
 
   &, &:hover {
     text-decoration: none;
   }
 
   .icon {
-    display: inline-block;
-
-    height: auto;
-    width: auto;
-
     color: $background_color__default;
+    font-size: 24px;
   }
 }
 
