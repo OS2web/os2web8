@@ -3269,7 +3269,6 @@ jQuery(document).ready(function(){
       var items = container.querySelectorAll(selector + " > .field__item");
       var bannerItems = container.querySelectorAll(selector + " > .field__item .banner__image-outer ");
       if (bannerItems.length > 1 && items.length == bannerItems.length) {
-        console.log("go slider " + items.length);
         tns({
           container: container,
           items: 1,
@@ -3289,18 +3288,17 @@ jQuery(document).ready(function(){
 
 (function($) {
 
-	$(".multi-search").on("click", function() {
-		console.log(" search ");
-		let form = $(".multi-search-form");
-		if ( $(form).length > 0) {
-			$(form).attr("action", "/da/" + $(this).data("search"));
-			$(form).submit();
-		}
-		return false;
-	});
+  $(".multi-search").on("click", function() {
+    console.log(" search ");
+    let form = $(".multi-search-form");
+    if ( $(form).length > 0) {
+      $(form).attr("action", "/da/" + $(this).data("search"));
+      $(form).submit();
+    }
+    return false;
+  });
 
 })(jQuery);
-
 
 
   const slider = document.querySelector('.slider');
