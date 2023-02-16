@@ -40,9 +40,9 @@
 {%- endif %}
 <div style="color: gray; font-size: 14px;">
   Filtrering:
-  <button id="testing" style="border: 0; color: #022e51; text-decoration: underline;" id="filterBtn">Fold op</button>
+  <button id="filterBtn" style="border: 0; color: #022e51; text-decoration: underline;" id="filterBtn">Fold op</button>
 </div>
-<div class="facets-widget- {{- facet.widget.type -}} " style="display: flex;">
+<div id="testing" class="facets-widget- {{- facet.widget.type -}} " style="display: flex;">
   {% if facet.widget.type %}
     {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
   {% endif %}
