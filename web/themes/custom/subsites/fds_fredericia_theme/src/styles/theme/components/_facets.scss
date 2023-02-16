@@ -24,22 +24,22 @@
 
   .facets-widget-links {
     .item-list__links {
-      display: flex;
-      flex-wrap: wrap;
+      display: flex !important;
+      flex-wrap: wrap !important;
 
       span {
-        padding-right: 10px;
+        padding-right: 10px !important;
       }
     }
   }
 
   .facets-widget-checkbox {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
 
     ul {
-      flex-grow: 1;
-      padding-right: 10px;
+      flex-grow: 1 !important;
+      padding-right: 10px !important;
     }
   }
 
