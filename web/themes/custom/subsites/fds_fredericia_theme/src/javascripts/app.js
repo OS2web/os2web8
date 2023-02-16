@@ -105,20 +105,21 @@ document.addEventListener('DOMContentLoaded', function() {
   wrapper.prepend(listNode);
 })(jQuery, Drupal, drupalSettings);
 
-const btnTest = document.getElementById('filterBtn');
+var btn2 = document.getElementById('btn2');
 
-function toggleVisibility() {
-  let e = document.getElementById('testing');
-  if(e.style.display === 'none') {
-    e.style.display = 'flex';
-    btnTest.innerHTML = 'Fold op';
+function toggleVisibility(id) {
+  var e = document.getElementById(id);
+  if(e.style.display == 'flex') {
+    e.style.display = 'none';
+    btnTest.innerHTML = 'Fold ud';
 
 
   }
   else {
-    e.style.display = 'none';
-    btnTest.innerHTML = 'Fold ud';
+    e.style.display = 'flex';
+    btnTest.innerHTML = 'Fold op';
   }
+  console.log('clicked');
+  return;
 }
 
-btnTest.addEventListener('click', toggleVisibility, {once : true});
