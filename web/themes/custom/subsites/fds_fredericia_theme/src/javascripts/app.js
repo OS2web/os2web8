@@ -104,3 +104,20 @@ document.addEventListener('DOMContentLoaded', function() {
   wrapper.innerHTML = '';
   wrapper.prepend(listNode);
 })(jQuery, Drupal, drupalSettings);
+
+const filterBtn = document.getElementById('filterBtn');
+function toggleVisibility() {
+  'use strict';
+  let e = document.getElementsByClassName('facets-widget-checkbox');
+  if(e.style.display === 'flex') {
+    e.style.display = 'none';
+
+  }
+  else {
+    e.style.display = 'flex';
+  }
+  console.log('clicked');
+  return;
+}
+
+filterBtn.addEventListener('click', toggleVisibility());

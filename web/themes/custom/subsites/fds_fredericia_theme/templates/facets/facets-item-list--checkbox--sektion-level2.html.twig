@@ -42,6 +42,10 @@
   {% if facet.widget.type %}
     {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
   {% endif %}
+  <div style="color: gray; font-size: 14px;">
+    Filtrering:
+    <button style="border: 0; color: #022e51; text-decoration: underline;" id="filterBtn" onclick="toggleVisibility();">Fold op</button>
+  </div>
   {% if items or empty %}
     {%- if title is not empty -%}
       <h3>{{ title }}</h3>
