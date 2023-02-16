@@ -106,10 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
 })(jQuery, Drupal, drupalSettings);
 
 const filterBtn = document.getElementById('filterBtn');
-function toggleVisibility() {
+function toggleVisibility(id) {
   'use strict';
-  let e = document.getElementsByClassName('facets-widget-checkbox');
-  if(e.style.display === 'flex') {
+  let e = document.getElementsByClassName(id);
+  if(e.style.display == 'flex') {
     e.style.display = 'none';
 
   }
@@ -120,4 +120,3 @@ function toggleVisibility() {
   return;
 }
 
-filterBtn.addEventListener('click', toggleVisibility());
