@@ -108,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const btnTest = document.getElementById('filterBtn');
 
 function toggleVisibility() {
-  'use strict';
   let e = document.getElementById('testing');
   if(e.style.display === 'flex') {
     e.style.display = 'none';
@@ -120,7 +119,6 @@ function toggleVisibility() {
     e.style.display = 'flex';
     btnTest.innerHTML = 'Fold op';
   }
-  return;
 }
 
-btnTest.addEventListener('click', toggleVisibility);
+btnTest.addEventListener('click', toggleVisibility, {once : true});
