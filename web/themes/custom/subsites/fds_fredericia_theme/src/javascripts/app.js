@@ -105,18 +105,22 @@ document.addEventListener('DOMContentLoaded', function() {
   wrapper.prepend(listNode);
 })(jQuery, Drupal, drupalSettings);
 
-const filterBtn = document.getElementById('filterBtn');
-function toggleVisibility(id) {
+const btnTest = document.getElementById('filterBtn');
+
+function toggleVisibility() {
   'use strict';
-  let e = document.getElementsByClassName(id);
-  if(e.style.display == 'flex') {
+  let e = document.getElementById('testing');
+  if(e.style.display === 'flex') {
     e.style.display = 'none';
+    btnTest.innerHTML = 'Fold ud';
+
 
   }
   else {
     e.style.display = 'flex';
+    btnTest.innerHTML = 'Fold op';
   }
-  console.log('clicked');
   return;
 }
 
+btnTest.addEventListener('click', toggleVisibility);
