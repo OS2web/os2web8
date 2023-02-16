@@ -111,13 +111,13 @@ function toggleVisibility(id) {
   var e = document.getElementById(id);
   if(e.style.display == 'none') {
     e.style.display = 'flex';
-    btn2.innerHTML = 'Fold op';
+    btn2.innerText = 'Fold op';
 
 
   }
   else {
     e.style.display = 'none';
-    btn2.innerHTML = 'Fold ud';
+    btn2.innerText = 'Fold ud';
   }
   return;
 }
