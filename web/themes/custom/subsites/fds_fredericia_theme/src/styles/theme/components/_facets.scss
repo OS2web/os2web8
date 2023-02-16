@@ -20,6 +20,18 @@
 // Styling
 // --------------------------------------------------
 
+
+.filterBtn-wrapper {
+  color: gray;
+  font-size: 14px;
+  padding-top: 20px;
+
+  #filterBtn {
+    border: 0;
+    color: #022e51;
+    text-decoration: underline;
+  }
+}
 .block-facets {
 
   .facets-widget-links {
