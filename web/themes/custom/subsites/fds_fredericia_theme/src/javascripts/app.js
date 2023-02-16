@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
   wrapper.prepend(listNode);
 })(jQuery, Drupal, drupalSettings);
 
-var btn2 = document.getElementById('btn2');
+const btn2 = document.getElementById('btn2');
 
 function toggleVisibility(id) {
   var e = document.getElementById(id);
