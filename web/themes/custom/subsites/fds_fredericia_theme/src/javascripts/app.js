@@ -109,17 +109,16 @@ var btn2 = document.getElementById('btn2');
 
 function toggleVisibility(id) {
   var e = document.getElementById(id);
-  if(e.style.display == 'flex') {
-    e.style.display = 'none';
-    btnTest.innerHTML = 'Fold ud';
+  if(e.style.display == 'none') {
+    e.style.display = 'flex';
+    btn2.innerHTML = 'Fold op';
 
 
   }
   else {
-    e.style.display = 'flex';
-    btnTest.innerHTML = 'Fold op';
+    e.style.display = 'none';
+    btn2.innerHTML = 'Fold ud';
   }
-  console.log('clicked');
   return;
 }
 
