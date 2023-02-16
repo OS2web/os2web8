@@ -22,6 +22,27 @@
 
 .block-facets {
 
+  .facets-widget-links {
+    .item-list__links {
+      display: flex;
+      flex-wrap: wrap;
+
+      span {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .facets-widget-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+
+    ul {
+      flex-grow: 1;
+      padding-right: 10px;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
   }
