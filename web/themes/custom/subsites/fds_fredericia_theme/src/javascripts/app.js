@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
 })(jQuery, Drupal, drupalSettings);
 
 
-document.addEventListener('DOMContentLoaded', function() {
+
   function toggleVisibility(id) {
-    const btn2 = document.getElementById('btn2');
+    var btn2 = document.getElementById('btn2');
     var e = document.getElementById(id);
     if (e.style.display == 'none') {
       e.style.display = 'flex';
@@ -122,4 +122,4 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
-});
+
