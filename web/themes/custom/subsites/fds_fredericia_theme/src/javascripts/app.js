@@ -105,20 +105,21 @@ document.addEventListener('DOMContentLoaded', function() {
   wrapper.prepend(listNode);
 })(jQuery, Drupal, drupalSettings);
 
-const btn2 = document.getElementById('btn2');
 
-function toggleVisibility(id) {
-  var e = document.getElementById(id);
-  if(e.style.display == 'none') {
-    e.style.display = 'flex';
-    btn2.innerText = 'Fold op';
+document.addEventListener('DOMContentLoaded', function() {
+  function toggleVisibility(id) {
+    const btn2 = document.getElementById('btn2');
+    var e = document.getElementById(id);
+    if (e.style.display == 'none') {
+      e.style.display = 'flex';
+      btn2.innerText = 'Fold op';
 
 
+    } else {
+      e.style.display = 'none';
+      btn2.innerText = 'Fold ud';
+    }
+    return;
   }
-  else {
-    e.style.display = 'none';
-    btn2.innerText = 'Fold ud';
-  }
-  return;
-}
 
+});
