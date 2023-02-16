@@ -109,15 +109,15 @@ const btnTest = document.getElementById('filterBtn');
 
 function toggleVisibility() {
   let e = document.getElementById('testing');
-  if(e.style.display === 'flex') {
-    e.style.display = 'none';
-    btnTest.innerHTML = 'Fold ud';
+  if(e.style.display === 'none') {
+    e.style.display = 'flex';
+    btnTest.innerHTML = 'Fold op';
 
 
   }
   else {
-    e.style.display = 'flex';
-    btnTest.innerHTML = 'Fold op';
+    e.style.display = 'none';
+    btnTest.innerHTML = 'Fold ud';
   }
 }
 
