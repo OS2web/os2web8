@@ -39,10 +39,10 @@
   -->
 {%- endif %}
 <div class="filterBtn-wrapper">
-  Filtrering:
-  <button onclick="toggleVisibility('testing');" id="btn2">Fold op</button>
+  Yderligere filtrering:
+  <button onclick="toggleVisibility('filterBtn');" id="btn2">Skjul</button>
 </div>
-<div id="testing" class="facets-widget- {{- facet.widget.type -}}">
+<div id="filterBtn" class="facets-widget- {{- facet.widget.type -}}">
   {% if facet.widget.type %}
     {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
   {% endif %}

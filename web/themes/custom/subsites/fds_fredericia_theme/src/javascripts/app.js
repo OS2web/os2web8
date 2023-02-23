@@ -112,12 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var e = document.getElementById(id);
     if (e.style.display == 'none') {
       e.style.display = 'flex';
-      btn2.innerText = 'Fold op';
+      btn2.innerText = 'Skjul';
 
 
     } else {
       e.style.display = 'none';
-      btn2.innerText = 'Fold ud';
+      btn2.innerText = 'Åben';
     }
     return;
   }
