@@ -19,6 +19,21 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+#block-fds-ringsted-theme-paragraph-banner {
+  .tns-outer {
+    position: relative;
+    max-width: 1197px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+    &:hover > .tns-controls > button {
+      opacity: 0.8;
+      transition: 0.3s ease;
+    }
+
+  }
+}
 
 .tns-outer {
   position: relative;
