@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
       autoplay: false,
       autoplayHoverPause: true,
       mouseDrag: true,
-      gutter: 32,
+      gutter: 0,
       rewind: false,
       responsive: {
         768: {
