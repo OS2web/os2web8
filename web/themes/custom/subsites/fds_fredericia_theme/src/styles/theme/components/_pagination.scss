@@ -56,6 +56,10 @@
     border-top-right-radius: 4px;
   }
 
+  &:hover {
+    color: white;
+  }
+
   .icon {
     font-size: 20px;
     font-weight: bold;
@@ -71,7 +75,7 @@
     justify-content: center;
     color: black;
 
-    &, &:hover, &:focus, &:active {
+    &:hover, &:focus, &:active {
       text-decoration: none;
       font-weight: 400;
       color: white;
