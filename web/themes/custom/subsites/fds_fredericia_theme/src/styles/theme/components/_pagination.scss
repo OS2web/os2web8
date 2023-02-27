@@ -56,9 +56,6 @@
     border-top-right-radius: 4px;
   }
 
-  &:hover {
-    color: white;
-  }
 
   .icon {
     font-size: 20px;
@@ -73,12 +70,8 @@
     font-size: $small-text;
     align-items: center;
     justify-content: center;
-    color: black;
     text-decoration: none;
 
-    &:hover, &:focus, &:active {
-      color: white;
-    }
   }
 
   &.is-active {
@@ -96,10 +89,6 @@
     }
   }
 
-  &:hover {
-    background-color: #0e203e;
-    border-color: #0e203e;
-  }
 
   &:before {
     display: none;
