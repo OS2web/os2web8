@@ -101,6 +101,7 @@ function fds_faxe_theme_preprocess_anonymous_subscriptions_message(array &$varia
   $theme = \Drupal::theme()->getActiveTheme();
   $theme_path = $base_url . '/' . $theme->getPath();
   $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
+  $variables['base_url'] = $GLOBALS['base_url'] . '/';
 
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
     $file = File::load($theme_settings['language_logo']['header_logo__' . $language]);

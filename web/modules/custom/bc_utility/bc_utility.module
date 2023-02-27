@@ -1,8 +1,10 @@
 <?php
 
 use Drupal\bc_utility\Controller\OldContentNotity;
+use Drupal\bc_utility\Plugin\Widgets\LinkWidgetValidators;
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * @file
@@ -57,8 +59,15 @@ function bc_utility_block_access($block, $operation, $account) {
         if (!empty($node->field_link_til_andet_indhold->getValue())) {
           return AccessResult::forbidden();
         }
-     }
+      }
     }
   }
   return AccessResult::neutral();
+}
+
+function bc_utility_field_widget_single_element_form_alter(array &$element, FormStateInterface $form_state, array $context) {
+  if (isset($element['uri'])) {
+    $element['uri']['#type'] = 'textfield';
+    $element['uri']['#element_validate'] = [[LinkWidgetValidators::class, 'validateUriElement']];
+  }
 }

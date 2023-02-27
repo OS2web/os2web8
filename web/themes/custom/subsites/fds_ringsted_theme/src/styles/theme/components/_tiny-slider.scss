@@ -35,6 +35,11 @@
   }
 }
 
+.tns-outer {
+  position: relative;
+
+  margin-bottom: 50px;
+}
 
 .tns-nav {
   position: absolute;
@@ -48,11 +53,9 @@
   button {
     width: 14px;
     height: 14px;
-    background-color: #fff;
 
     border-width: 1px;
     border-color: $color-orange-004;
-
 
     &.tns-nav-active {
       background-color: $color-orange-004;
@@ -65,11 +68,10 @@
 }
 
 .tns-controls {
+
   button {
     display: flex;
     position: absolute;
-    opacity: 0;
-    transition: 0.3s ease;
 
     z-index: 100;
 
@@ -88,13 +90,7 @@
     border-radius: 100%;
 
     color: #fff;
-    background-color: #fff;
-    &:hover {
-      opacity: 1 !important;
-      transition: 0.3s ease;
-    }
-
-
+    background-color: $color-orange-004;
 
     &:before {
       display: inline-block;
@@ -104,25 +100,22 @@
     }
 
     &[data-controls="prev"] {
-      left: 0 !important;
+      left: -15px;
 
       &:before {
         content: "\f104";
-        color: red;
       }
     }
 
     &[data-controls="next"] {
-      right: 0 !important;
+      right: -15px;
 
       &:before {
         content: "\f105";
-        color: red;
       }
     }
   }
 }
-
 
 // --------------------------------------------------
 // Variants
@@ -131,14 +124,6 @@
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
-
-@media only screen and (max-width: 1024px) {
-  .tns-controls {
-    button {
-      opacity: 1 !important;
-    }
-  }
-}
 
 // Mobile - and up
 @include media-breakpoint-up(xs) {}
