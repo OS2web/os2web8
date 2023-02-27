@@ -69,11 +69,12 @@
     font-size: $small-text;
     align-items: center;
     justify-content: center;
+    color: black;
 
     &, &:hover, &:focus, &:active {
       text-decoration: none;
-      color: white;
       font-weight: 400;
+      color: white;
     }
   }
 
