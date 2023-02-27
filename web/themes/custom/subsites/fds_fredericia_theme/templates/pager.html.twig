@@ -37,10 +37,11 @@
       {% if items.first %}
           <li class="pager__item pager__item--action pager__item--first">
             <a href="{{ items.first.href }}" class="pager__link pager__link--action-link" title="{{ 'Go to first page'|t }}"{{ items.first.attributes|without('href', 'title') }}>
-              <span>{{ 'First page'|t }}</span>
+              <span class="visually-hidden">{{ 'First page'|t }}</span>
               <span class="pager__item-title pager__item-title--backwards" aria-hidden="true">
               {{ items.first.text|default('First'|t)|replace({'«': ''}) }}
             </span>
+              <span class="icon fa fa-angle-left"></span>
             </a>
           </li>
       {% endif %}
@@ -91,10 +92,11 @@
       {% if items.last %}
           <li class="pager__item pager__item--action pager__item--last">
             <a href="{{ items.last.href }}" class="pager__link pager__link--action-link" title="{{ 'Go to last page'|t }}"{{ items.last.attributes|without('href', 'title') }}>
-              <span>{{ 'Last page'|t }}</span>
+              <span class="visually-hidden">{{ 'Last page'|t }}</span>
               <span class="pager__item-title pager__item-title--forward" aria-hidden="true">
               {{ items.last.text|default('Last'|t)|replace({'»': ''}) }}
             </span>
+              <span class="icon fa fa-angle-right"></span>
             </a>
           </li>
       {% endif %}
