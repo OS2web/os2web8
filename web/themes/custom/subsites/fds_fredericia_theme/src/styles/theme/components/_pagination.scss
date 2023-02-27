@@ -66,6 +66,16 @@
     font-weight: bold;
     margin-left: 5px;
   }
+  .icon-left {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+    height: 2.2rem;
+    width: 2.2rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100%;
+  }
 
   a {
     display: flex;
