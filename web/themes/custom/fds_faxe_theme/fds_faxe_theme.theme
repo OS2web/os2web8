@@ -253,29 +253,29 @@ function node2box(&$node, $showImages, $incPromoted) {
       'link' => ['uri' => 'entity:node/' . $node->id()],
     ]);
 
-  $menu_link_root = reset($menu_link_root_entities);
+    $menu_link_root = reset($menu_link_root_entities);
+    if ($menu_link_root) {
+        $menu_links = \Drupal::service('menu.tree_storage')
+          ->loadByProperties([
+            'parent' => 'menu_link_content:' . $menu_link_root->uuid(),
+          ]) ?: [];
 
-  $menu_tree = \Drupal::menuTree();
-  $menu_links = \Drupal::service('menu.tree_storage')
-    ->loadByProperties([
-      'parent' => 'menu_link_content:' . $menu_link_root->uuid(),
-    ]) ?: [];
+        $node_ids = array_map(function ($v) {
+          return $v['route_parameters']['node'];
+        }, $menu_links);
 
-  $node_ids = array_map(function ($v) {
-    return $v['route_parameters']['node'];
-  }, $menu_links);
-
-  foreach ($node_ids as $childId) {
-    $child = \Drupal\node\Entity\Node::load($childId);
-    if ($child->getType() == 'os2web_page' && ($incPromoted && $child->isPromoted())) {
-      $refNode->children[] = (object) [
-        'title' => $child->getTitle(),
-        'url' => $child->toUrl()->toString()
-      ];
+        foreach ($node_ids as $childId) {
+          $child = \Drupal\node\Entity\Node::load($childId);
+          if ($child->getType() == 'os2web_page' && ($incPromoted && $child->isPromoted())) {
+            $refNode->children[] = (object) [
+              'title' => $child->getTitle(),
+              'url' => $child->toUrl()->toString()
+            ];
+          }
+        }
     }
-  }
 
-  return $refNode;
+    return $refNode;
 }
 
 
