@@ -1,0 +1,20 @@
+name: Bellcom Theme
+type: theme
+description: A Clean and Stylistic theme
+core_version_requirement: ^8.8 || ^9
+base theme: stable
+
+libraries:
+  - bellcom_theme/global-styling
+
+regions:
+  navbar: Navbar
+  header: Header
+  content: Content
+  boilerplate: Boilerplate
+  footer: Footer
+  grid: Grid
+  hidden: Hidden
+
+ckeditor_stylesheets:
+  - assets/css/bundle.css
