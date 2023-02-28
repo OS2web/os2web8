@@ -11,7 +11,7 @@
 		  }
 		.tns-controls {
 			button[data-controls="next"] {
-				background: transparent url("../images/sprite.png") no-repeat -159px 0/285px;
+				background: transparent url("../../../../dist/images/sprite.png") no-repeat -159px 0/285px;
 				position: absolute;
 				color: transparent;
 				right: 0;
@@ -26,7 +26,7 @@
 				}
 			}
 			button[data-controls="prev"] {
-				background: transparent url("../images/sprite.png") no-repeat -190px 0/285px;
+				background: transparent url("../../../../dist/images/sprite.png") no-repeat -190px 0/285px;
 				position: absolute;
 				color: transparent;
 				left: 0;
@@ -56,7 +56,7 @@
 }
 .field--name-field-os2web-spotbox-heading h3::after {
 	content: "";
-	background: transparent url("../images/sprite.png") no-repeat -112px 0;
+	background: transparent url("../../../../dist/images/sprite.png") no-repeat -112px 0;
 	display: block;
 	position: absolute;
 	top: 50%;
@@ -99,16 +99,16 @@
 	height: 100%;
 	box-shadow: none;
 	&, &:visited {
-		background-color: $background_color__button;
+		background-color: $color-primary;
 	}
 	&:hover, &:focus {
 		background-color: $color-white;
 		.field--name-field-os2web-spotbox-heading h3 {
-			color: $background_color__button;
+			color: $color-primary;
 		}
 	}
 	&, &:hover, &:focus, &:visited {
-		outline-color: $background_color__button;
+		outline-color: $color-primary;
 		outline-offset: -2px;
   	}
 	.field--name-title,

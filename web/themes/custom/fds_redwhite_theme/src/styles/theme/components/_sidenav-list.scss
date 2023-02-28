@@ -60,7 +60,7 @@ $sidenav-list-dot-spacing: 22px;
 							padding: 16px 20px;
 							transition: all 0.2s ease-in-out;
 							&:hover, &:focus {
-								background: $background_color__button;
+								background: $color-primary;
 								color: $color-white;
 							}
 						}
@@ -72,22 +72,22 @@ $sidenav-list-dot-spacing: 22px;
 					& >  label {
 						&:hover {
 							color: $color-white!important;
-							background: $background_color__button!important;
+							background: $color-primary!important;
 							transition: all 0.2s ease-in-out;
 						}
 						
 					}
-					& > .facets-checkbox {
-						&:checked {
-							& + label {
-								&:hover {
-									&:after {
-										filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(5deg) brightness(499%) contrast(101%);
-									}
-								}
-							}
-						}
-					}
+					//& > .facets-checkbox {
+					//	&:checked {
+					//		& + label {
+					//			&:hover {
+					//				&:after {
+										//filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(5deg) brightness(499%) contrast(101%);
+									//}
+								//}
+							//}
+						//}
+					//}
 
 					label {
 						padding: 16px 40px 16px 20px;
@@ -146,10 +146,10 @@ $sidenav-list-dot-spacing: 22px;
 		display: block;
 		& > li {
 			border-top: 1px solid $color-light-gray1;
-			background-color: $background_color__button;
+			background-color: $color-primary;
 			transition: all 0.2s ease-in-out;
 			&:hover {
-				background-color: $background_color__button_hover;
+				background-color: $color-secondary;
 			}
 			a {
 				color: $color-white;
@@ -176,7 +176,7 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 		& > li.active {
-			background-color: $background_color__button_hover;
+			background-color: $color-secondary;
 			border-top: 1px solid $color-light-gray1;
 			& > a {
 				font-family: "Museo 700", sans-serif;
@@ -186,9 +186,9 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 		& > li.current {
-			background-color: $background_color__button_hover;
+			background-color: $color-secondary;
 			border-top: 1px solid $color-light-gray1;
-      border-left: 0;
+      		border-left: 0;
 			& > a {
 				font-family: "Museo 700", sans-serif;
 				font-weight: bold;
@@ -221,7 +221,7 @@ $sidenav-list-dot-spacing: 22px;
 					position: absolute;
 					display: block;
 					top: 10px;
-					background: transparent url("../images/sprite.png") no-repeat -137px -23px;
+					background: transparent url("../../../../dist/images/sprite.png") no-repeat -137px -23px;
 				}
 			}
 		}
@@ -233,26 +233,6 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 	}
-	.has-submenu {
-		.sidenav-sub_list {
-			display: none;
-		}
-	}
-	.current {
-		.sidenav-sub_list {
-			display: block;
-		}
-	}
-	.sidenav-sub_list {
-		& >  li {
-			& >  a {
-				padding-left: 15px;
-				font-size: 1.5rem;
-			}
-			&::before {
-				display: none;
-			}
-		}
 		background-color: $color-primary;
 		& > li.active {
 			a {
@@ -291,7 +271,7 @@ $sidenav-list-dot-spacing: 22px;
       display: block;
       &::before {
         content: "";
-        background: transparent url("../images/sprite.png") no-repeat 0 -48px;
+        background: transparent url("../../../../dist/images/sprite.png") no-repeat 0 -48px;
         display: block;
         position: absolute;
 		top: 3px;
@@ -309,13 +289,18 @@ $sidenav-list-dot-spacing: 22px;
       }
     }
   }
+
   #block-postlitermenu {
 	  border-bottom: 0;
   }
-}
+
+////////
+
+
 .layout-sidebar-left {
 	margin-top: 10px;
 }
+
 .layout-sidebar-right {
 	margin-top: 10px;
 	& > .box {
@@ -333,6 +318,7 @@ $sidenav-list-dot-spacing: 22px;
 		}
 	}
 }
+
 .sub-link-sub {
 	float: left;
 	width: 5%;
@@ -340,8 +326,9 @@ $sidenav-list-dot-spacing: 22px;
 	height: 24px;
 	position: relative;
 	top: 5px;
-	background: transparent url("../images/sprite.png") no-repeat -120px -70px;
+	background: transparent url("../../../../dist/images/sprite.png") no-repeat -120px -70px;
 }
+
 .sub-link-div {
 	float: right;
 	width: 95%;
@@ -350,6 +337,7 @@ $sidenav-list-dot-spacing: 22px;
 		font-weight: 700;
 	}
 }
+
 ul.limited-height >  .limited-height__toggle {
   display: none;
 }

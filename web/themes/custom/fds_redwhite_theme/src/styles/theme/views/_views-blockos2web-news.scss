@@ -36,7 +36,7 @@
 				display: none;
 			}
 			a {
-				color: $color__link !important;
+				color: $color-primary !important;
 				transition: all 0.2s ease-in-out;
 				text-decoration: none;
 				padding: 0;
@@ -44,7 +44,7 @@
 				display: block;
 				&:hover, &:focus {
 					background: none !important;
-					color: $color__link__hover !important;
+					color: $color-dark-gray2 !important;
 					padding-left: 10px;
 				}
 			}
@@ -62,7 +62,7 @@
 					margin-right: 5px;
 					display: block;
 					float: right;
-					background: transparent url("../images/sprite.png") no-repeat -136px 0;
+					background: transparent url("../../../../dist/images/sprite.png") no-repeat -136px 0;
 				}
 			}
 		}
@@ -82,7 +82,7 @@
 				display: none;
 			}
 			a {
-				color: $color__link !important;
+				color: $color-primary !important;
 				transition: all 0.2s ease-in-out;
 				text-decoration: none;
 				padding: 0;
@@ -90,7 +90,7 @@
 				display: block;
 				&:hover, &:focus {
 					background: none !important;
-					color: $color__link__hover!important;
+					color: $color-dark-gray2 !important;
 					padding-left: 10px;
 				}
 			}

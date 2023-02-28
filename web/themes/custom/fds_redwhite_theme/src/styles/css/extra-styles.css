@@ -172,7 +172,7 @@ div.field--name-field-os2web-page-description div.field__item span.file a[href$=
   transform: translateY(-50%);
   width: 19px;
   height: 19px;
-  margin-right: 5px;
+  margin-right: 6px;
   background: transparent url("../images/sprite.png") no-repeat 0 -48px;
 }
 
@@ -206,7 +206,6 @@ div.field--name-field-os2web-page-description div.field__item span.file a[href$=
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pdf"]:focus::before  */
 {
   background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-  color: blue;
 }
 
 div.field--name-field-os2web-page-description table a span.file {
@@ -233,6 +232,7 @@ div.field--name-field-os2web-page-description table a span.file {
 .file a:focus {
   color: var(--primary);
 } */
+
 a[href$=".pdf"]::before,
 a[href$=".ppt"]::before,
 a[href$=".pptx"]::before,
@@ -254,12 +254,17 @@ a[href$=".odt"]::before {
   top: 4px;
   width: 19px;
   height: 19px;
-  margin-right: 5px;
+  margin-right: 7px;
   background: transparent url("../images/sprite.png") no-repeat 0 -48px;
 }
+
+a[href$=".pdf"]:hover::before {
+  /*background: transparent url("../images/sprite.png") no-repeat -19px -48px;*/
+}
+
 a[href$=".pdf"]:hover::before, a[href$=".pdf"]:focus::before,
 a[href$=".ppt"]:hover::before, a[href$=".ppt"]:focus::before,
-a[href$=".pptx"]:hover::before, a[href$=".pptx"]:focus::before
+a[href$=".pptx"]:hover::before, a[href$=".pptx"]:focus::before,
 a[href$=".pptm"]:hover::before, a[href$=".pptm"]:focus::before,
 a[href$=".doc"]:hover::before, a[href$=".doc"]:focus::before,
 a[href$=".docm"]:hover::before, a[href$=".docm"]:focus::before,
@@ -273,6 +278,7 @@ a[href$=".jpeg"]:hover::before, a[href$=".jpeg"]:focus::before,
 a[href$=".odt"]:hover::before, a[href$=".odt"]:focus::before {
   background: transparent url("../images/sprite.png") no-repeat -19px -48px;
 }
+
 .file a::before,
 .file a::after {
   display: none !important;

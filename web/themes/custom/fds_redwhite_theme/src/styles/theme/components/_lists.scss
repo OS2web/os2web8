@@ -46,6 +46,21 @@
         //   font-size: 2rem;
         //   color: $color-blue-001;
         // }
+        margin-top: map-get($spacers, 3);
+        list-style-type: none;
+        position: relative;
+        padding-left: 40px !important;
+        line-height: $body-text-line-height;
+
+        &::before {
+          content: "■";
+          position: absolute;
+          left: 5px;
+          top: -1px;
+          font-size: 2rem;
+          color: $color-blue-001;
+        }
+
       }
     }
   }
@@ -56,7 +71,7 @@
   a {
     position: relative;
     font-weight: $font-weight-normal;
-    color: $color__link;
+    color: var(--primary);
     border-bottom: 1px dotted var(--dark-gray1);
     &:hover {
       font-weight: $font-weight-bold;

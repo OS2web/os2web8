@@ -24,8 +24,8 @@ footer {
 
   .footer {
     color: $color-dark-gray2;
-    background-color: $background_color__footer_primary;
-    background-image: url(../images/small-circle.png), url(../images/big-circle.png);
+    background-color: $color-light-gray2;
+    background-image: url(../../../../dist/images/small-circle.png), url(../../../../dist/images/big-circle.png);
     background-repeat: no-repeat;
     background-position: 110% -95px, -250px -95px;
     margin-top: 0;
@@ -71,7 +71,7 @@ footer {
     }
 
     a, a:visited {
-      color: $color__link_footer;
+      color: $color-dark-gray2;
       font-weight: inherit;
       border-bottom: 1px dotted $color-dark-gray1;
       text-decoration: none;
@@ -80,7 +80,7 @@ footer {
       }
       &:hover,
       &:focus {
-        color: $color__link;
+        color: $color-primary;
         border-bottom: none;
       }
     }
@@ -99,7 +99,7 @@ footer {
       padding: 0;
       transition: all 0.2s ease-in-out;
       &:hover {
-        color: $color__link;
+        color: $color-primary;
       }
       .menu-item a {
         transition: all 0.2s ease-in-out;
@@ -108,7 +108,7 @@ footer {
         &:focus {
           font-weight: 700;
           padding-left: 5px;
-          color: $color__link_footer;
+          color: $color-dark-gray2;
         }
       }
       ul {
@@ -153,7 +153,7 @@ footer {
       }
     }
     .block-menu.navigation .active {
-      color: $color__link;
+      color: $color-primary;
     }
   }
 
