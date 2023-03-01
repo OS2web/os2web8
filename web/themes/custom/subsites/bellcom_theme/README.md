@@ -1,6 +1,6 @@
-# nofrills
+# Bellcom
 
-nofrills is a clean **Drupal 8/9 starter theme** (or boilerplate) with Webpack, Tailwind CSS, SASS (+ Autoprefixer), Babel (ES6), Uglify, Imagemin and more.
+Bellcom is a clean **Drupal 8/9 starter theme** (or boilerplate) with Webpack, Tailwind CSS, SASS (+ Autoprefixer), Babel (ES6), Uglify, Imagemin and more.
 
 ### Features
 

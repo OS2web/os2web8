@@ -1,7 +1,7 @@
 {
-  "name": "nofrills",
+  "name": "Bellcom",
   "version": "2.2.1",
-  "description": "nofrills drupal theme package json",
+  "description": "Bellcom drupal theme package json",
   "main": "index.html",
   "scripts": {
     "cleanup": "rm -rf ./assets",
@@ -12,7 +12,7 @@
     "dev": "concurrently \"npm run css:watch\" \"npm run webpack:watch\"",
     "build": "npm run cleanup && npm run css:build && npm run webpack:build"
   },
-  "author": "Matthias Fänger <matthias.faenger@muuuh.de> (https://www.muuuh.de/)",
+  "author": "Simon L. Lange",
   "engines": {
     "node": ">=10.7.0",
     "npm": ">=6.4.0"
