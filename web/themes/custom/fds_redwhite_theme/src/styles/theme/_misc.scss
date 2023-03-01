@@ -69,7 +69,7 @@ body {
 //}
 
 body .page-container {
-  background: $background_color__default;
+  background: $color-light-gray1;
   padding-top: 0;
 }
 
@@ -134,13 +134,13 @@ body .page-container {
 }
 
 .background-color--primary {
-  background-color: $background_color__primary !important;
+  background-color: $color-white !important;
 }
 .background-color--secondary {
-  background-color: $background_color__secondary !important;
+  background-color: $color-orange-005 !important;
 }
 .background-color--tertiary {
-  background-color: $background_color__tertiary !important;
+  background-color: $color-blue-001 !important;
 }
 
 

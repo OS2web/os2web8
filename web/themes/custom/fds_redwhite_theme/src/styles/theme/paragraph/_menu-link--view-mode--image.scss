@@ -106,7 +106,7 @@
 				height: 60px;
 				padding: 0;
 				width: 100%;
-				color: $background_color__button;
+				color: $color-tertiary;
 				box-sizing: border-box;
 				font-size: 1.8rem;
 				word-break: break-word;
@@ -198,7 +198,7 @@ body.path-frontpage {
 	width: 100vw;
 	height: 15px;
 	transform: translateX(-50%);
-	background-color: $background_color__default;
+	background-color: $color-light-gray1;
 	z-index: -1;
   }
   .rk_cover_arrow_button {
@@ -207,7 +207,7 @@ body.path-frontpage {
     background: $color-white;
     cursor: pointer;
     border-radius: 50%;
-    border: 1px solid $background_color__button;
+    border: 1px solid $color-primary;
     margin: 0 auto;
     .arrows {
       position: absolute;
