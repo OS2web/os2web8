@@ -9,3 +9,8 @@
 @import 'components/_index.scss';
 @import 'sections/_index.scss';
 
+* {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
