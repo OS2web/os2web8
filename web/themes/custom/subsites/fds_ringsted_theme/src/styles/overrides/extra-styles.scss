@@ -275,7 +275,7 @@ div.field--name-field-os2web-page-description {
             left: 0;
             width: 19px;
             height: 19px;
-            margin-right: 5px;
+            margin-right: 7px;
             background: transparent url("../images/sprite.png") no-repeat 0 -48px;
           }
           &:hover {
@@ -302,6 +302,11 @@ div.field--name-field-os2web-page-description {
           height: 19px;
           margin-right: 5px;
           background: transparent url("../images/sprite.png") no-repeat 0 -48px;
+        }
+        &:hover {
+          &::before {
+            background: transparent url("../images/sprite.png") no-repeat -19px -48px;
+          }
         }
       }
     }
@@ -397,8 +402,13 @@ a {
       top: 4px;
       width: 19px;
       height: 19px;
-      margin-right: 5px;
+      margin-right: 6px;
       background: transparent url("../images/sprite.png") no-repeat 0 -48px;
+    }
+    &:hover {
+      &::before {
+        background: transparent url("../images/sprite.png") no-repeat -19px -48px;
+      }
     }
   }
 }
