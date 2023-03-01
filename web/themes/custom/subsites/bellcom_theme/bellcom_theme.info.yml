@@ -3,7 +3,7 @@ type: theme
 description: A Clean and Stylistic theme
 core_version_requirement: ^8.8 || ^9
 base theme: stable
-screenshot: screenshot.png
+screenshot: theme.png
 logo: logo.png
 
 libraries:

@@ -1,0 +1,29 @@
+.header {
+  background-color: white;
+  min-height: 80px;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  .header__inner-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .region--header  {
+      width: 50%;
+
+      nav {
+        ul {
+          display: flex;
+          text-transform: uppercase;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

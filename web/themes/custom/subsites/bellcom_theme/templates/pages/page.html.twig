@@ -1,10 +1,12 @@
 
 {% if page.header %}
 <header class="header" role="banner">
-  <div class="logo-wrapper">
-    {{ page.header__logo }}
+  <div class="header__inner-wrapper">
+    <div class="logo-wrapper">
+      {{ page.header__logo }}
+    </div>
+    {{ page.header }}
   </div>
-  {{ page.header }}
 </header>
 {% endif %}
 
