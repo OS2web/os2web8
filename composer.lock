@@ -14395,12 +14395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web.git",
-                "reference": "54fde2c74b6d83e40c3e0dbbcd5d8550483ba4b3"
+                "reference": "c72a65fc61a6241aa2af10cbcf8a66601cdbb3c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web/zipball/54fde2c74b6d83e40c3e0dbbcd5d8550483ba4b3",
-                "reference": "54fde2c74b6d83e40c3e0dbbcd5d8550483ba4b3",
+                "url": "https://api.github.com/repos/OS2web/os2web/zipball/c72a65fc61a6241aa2af10cbcf8a66601cdbb3c8",
+                "reference": "c72a65fc61a6241aa2af10cbcf8a66601cdbb3c8",
                 "shasum": ""
             },
             "require": {
@@ -14428,7 +14428,7 @@
                 "issues": "https://github.com/OS2web/os2web/issues",
                 "source": "https://github.com/OS2web/os2web/tree/master"
             },
-            "time": "2023-01-10T14:55:32+00:00"
+            "time": "2023-03-01T11:02:08+00:00"
         },
         {
             "name": "os2web/os2web_banner",

@@ -24,7 +24,38 @@ cp env.example.settings.php env.settings.php
 ```
 * Modify ```env.settings.php``` and set a correct envrironment
 ```
-$settings['project_env'] = DEV_ENV;
+$settings['project_env'] = PROD_ENV;
+```
+* Create file
+```
+touch web/sites/default/prod.settings.php
+```
+* Paste this into ```prod.settings.php```:
+```
+/**
+ * @file
+ * Production environment settings.
+ */
+
+$databases['default']['default'] = array (
+  'database' => '[DB_NAME]',
+  'username' => '[DB_USERNAME]',
+  'password' => '[DB_PASSWORD]',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+
+$settings['hash_salt'] = '[GENERATE HASH SALS]';
+
+$settings['file_private_path'] = '../private';
+$settings['file_temp_path'] = '../tmp';
+
+$settings['trusted_host_patterns'] = [
+  '^yourhost\.devel\.dk$',
+];
 ```
 * Follow the regular install process to install drupal using `drush` or UI 
   * select ```OS2Web``` as install profile
