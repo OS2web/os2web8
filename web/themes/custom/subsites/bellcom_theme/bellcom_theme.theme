@@ -21,3 +21,7 @@ function bellcom_theme_form_alter(&$form, FormStateInterface $form_state, $form_
         $form['name']['#attributes']['placeholder'] = t('email@domain.com');
     }
 }
+
+function bellcom_theme_preprocess(&$variables, $hook) {
+    $variables['base_path'] = base_path();
+}
