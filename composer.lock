@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c7bee30d844f3f5eda0a20da271cef6",
+    "content-hash": "381c16c142be79fc6a3082286f53e6bd",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -9407,20 +9407,20 @@
         },
         {
             "name": "drupal/queue_ui",
-            "version": "2.2.0",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/queue_ui.git",
-                "reference": "8.x-2.2"
+                "reference": "3.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/queue_ui-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "a5ef0514c1371e42a71fdcfef01dc391cc7da0c3"
+                "url": "https://ftp.drupal.org/files/projects/queue_ui-3.1.3.zip",
+                "reference": "3.1.3",
+                "shasum": "a6c2d3c216158d85ce0f598a8e836d4a86fea384"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.2 || ^10"
             },
             "require-dev": {
                 "drupal/queue_order": "^2"
@@ -9428,11 +9428,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1601619129",
+                    "version": "3.1.3",
+                    "datestamp": "1672387002",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
                     }
                 }
             },
