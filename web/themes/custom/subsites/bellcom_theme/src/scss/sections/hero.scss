@@ -1,7 +1,6 @@
 .hero-wrapper {
   min-height: 70vh;
   width: 100%;
-  background-color: white;
   display: flex;
   align-items: center;
   padding: 80px 0;
@@ -58,6 +57,7 @@
 
         @media (max-width: 640px) {
           flex-direction: column;
+          align-items: flex-start;
         }
       .main-cta-btn-wrapper {
         margin-right: 30px;
@@ -108,12 +108,38 @@
             display: flex;
             align-items: center;
 
+            &:hover span:after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+
             .ext {
               display: none;
             }
 
             span {
               margin-right: 20px;
+              position: relative;
+              display: inline-block;
+
+              &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+              }
+            }
+            svg {
+              transition: 0.3s ease;
+              transform: translateX(0);
+            }
+            &:hover svg {
+              transform: translateX(10px);
             }
           }
         }

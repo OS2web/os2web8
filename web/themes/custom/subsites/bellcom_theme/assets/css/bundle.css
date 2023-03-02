@@ -966,7 +966,6 @@ video {
 .hero-wrapper {
   min-height: 70vh;
   width: 100%;
-  background-color: white;
   display: flex;
   align-items: center;
   padding: 80px 0;
@@ -1019,7 +1018,8 @@ video {
       }
 @media (max-width: 640px) {
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper {
-          flex-direction: column
+          flex-direction: column;
+          align-items: flex-start
       }
         }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .main-cta-btn-wrapper {
@@ -1067,11 +1067,35 @@ video {
             display: flex;
             align-items: center;
           }
+.hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn:hover span:after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn .ext {
               display: none;
             }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn span {
               margin-right: 20px;
+              position: relative;
+              display: inline-block;
+            }
+.hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn span:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+              }
+.hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn svg {
+              transition: 0.3s ease;
+              transform: translateX(0);
+            }
+.hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn:hover svg {
+              transform: translateX(10px);
             }
 .hero-wrapper .hero__inner-wrapper .hero__element-wrapper {
       display: grid;

@@ -1,11 +1,15 @@
-<div class="hero-wrapper">
+{% set selectedBackground = content.field_hero_bgcolor['#items'].getString() %}
+<div class="hero-wrapper" style="background-color:{% if selectedBackground == 'black' %} #212529;
+{% elseif selectedBackground == 'white' %} #fff; {% elseif selectedBackground == 'green' %} #344E41
+{% elseif selectedBackground == 'blue' %} #22223B; {% elseif selectedBackground == 'grey' %} #343A40;
+{% elseif selectedBackground == 'sand' %} #DAD7CD; {% endif %}">
   <div class="hero__inner-wrapper">
     <div class="hero__text-wrapper">
       {% if paragraph.field_hero_heading.value  %}
-      <h1 data-aos="fade-in">{{ content.field_hero_heading }}</h1>
+      <h1 style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
       {% endif %}
       {% if paragraph.field_hero_body.value %}
-      <div class="hero__body-text">
+      <div style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey'] %} #fff; {% else %} #000; {% endif %}" class="hero__body-text">
         {{ content.field_hero_body }}
       </div>
       {% endif %}
@@ -13,12 +17,29 @@
       <div class="hero__cta-wrapper">
         {% if paragraph.field_main_cta_button.value %}
         <div class="main-cta-btn-wrapper">
-          <a class="main-cta-btn" href="{{ paragraph.field_main_cta_button.0.url }}"><span>{{ paragraph.field_main_cta_button.0.title }}</span>{% include "@bellcom_theme/assets/images/arrow-right-small.svg" %}</a>
+          <a style="{% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}background-color: #fff; color: black;
+          {% else %} background-color: #344e41; color: white; {% endif %}"
+             class="main-cta-btn" href="{{ paragraph.field_main_cta_button.0.url }}">
+            <span>{{ paragraph.field_main_cta_button.0.title }}</span>
+            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}
+            {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "black" } %}
+            {% else %}
+            {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
+            {% endif %}
+          </a>
         </div>
         {% endif %}
         {% if paragraph.field_secondary_cta_button.value %}
         <div class="secondary-cta-btn-wrapper">
-          <a class="secondary-cta-btn" href="{{ paragraph.field_secondary_cta_button.0.url }}"><span>{{ paragraph.field_secondary_cta_button.0.title }}</span> {% include "@bellcom_theme/assets/images/arrow-right.svg" %}</a>
+          <a style="{% if selectedBackground in ['black', 'grey', 'green', 'blue'] %} color: white;
+          {% else %} color: black; {% endif %}"
+             class="secondary-cta-btn" href="{{ paragraph.field_secondary_cta_button.0.url }}">
+            <span id="secondary-btn">{{ paragraph.field_secondary_cta_button.0.title }}</span>
+            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}
+              {% include "@bellcom_theme/assets/images/arrow-right.svg" with { custom_color: "white" } %}
+            {% else %}
+              {% include "@bellcom_theme/assets/images/arrow-right.svg" with { custom_color: "black" } %}
+            {% endif %}</a>
         </div>
         {% endif %}
       </div>
@@ -67,3 +88,9 @@
     </div>
   </div>
 </div>
+
+<style>
+ #secondary-btn:after {
+   background-color: {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %} white; {% else %} black; {% endif %}
+ }
+</style>

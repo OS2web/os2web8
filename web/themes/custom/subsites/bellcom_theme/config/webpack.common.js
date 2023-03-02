@@ -43,8 +43,8 @@ module.exports = {
     // new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { context: 'src', from: 'images/!**!/!*.+(jpg|jpeg|png|gif|svg)' },
-        { context: 'src', from: 'fonts/!*.+(woff|woff2|otf|eot|svg)' },
+        { context: 'src', from: 'images/**/*.+(jpg|jpeg|png|gif|svg)' },
+        { context: 'src', from: 'fonts/*.+(woff|woff2|otf|eot|svg)' },
       ],
     }),
     new ImageminPlugin({
