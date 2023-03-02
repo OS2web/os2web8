@@ -26,26 +26,35 @@
         width: 100%;
       }
       h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 52px;
-        line-height: 1.1;
-        margin-bottom: 25px;
-        font-weight: 500;
+        .hero-heading {
+          .hero-heading__item {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 500;
 
-        @media (max-width: 640px) {
-          font-size: 44px;
+            @media (max-width: 640px) {
+              font-size: 44px;
+            }
+          }
         }
       }
-      p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-        font-weight: 300;
-        margin-bottom: 20px;
+      .hero__body-text {
+        .hero-body {
+          .hero-body__item {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 20px;
+          }
+        }
       }
       .hero__cta-wrapper {
         display: flex;
         width: 100%;
         margin-top: 50px;
+        align-items: center;
 
         @media (max-width: 640px) {
           flex-direction: column;
@@ -58,17 +67,50 @@
         }
         .main-cta-btn {
           background-color: #344E41;
-          padding: 12px 20px;
+          padding: 12px 35px;
           border-radius: 10px;
           color: white;
           font-weight: 600;
           font-family: 'Poppins', sans-serif;
+          display: flex;
+          align-items: center;
+          transition: 0.3s ease;
+          position: relative;
+
+          &:hover svg {
+            opacity: 1;
+            transform: translateX(0);
+          }
+
+          &:hover span {
+            transform: translateX(-10px);
+          }
+
+          span {
+            transition: 0.3s ease;
+          }
+
+          svg {
+            opacity: 0;
+            transform: translateX(-25px);
+            transition: 0.3s ease;
+            position: absolute;
+            right: 15px;
+          }
+
+          .ext {
+            display: none;
+          }
         }
       }
         .secondary-cta-btn-wrapper {
           .secondary-cta-btn {
             display: flex;
             align-items: center;
+
+            .ext {
+              display: none;
+            }
 
             span {
               margin-right: 20px;

@@ -1,18 +1,28 @@
 <div class="hero-wrapper">
   <div class="hero__inner-wrapper">
     <div class="hero__text-wrapper">
-      <h1>Design bureau,<br>med intelligente løsninger</h1>
-      <p>Bellcom dækker alle digitale behov indenfor udvikling, hosting og support.</p>
-      <p>Vores primære kompetencer er teknisk rådgivning, agil udvikling, design og implementering af innovative hjemmesider
-        i open source teknologi baseret på CMS platformen Drupal.</p>
-      <div class="hero__cta-wrapper">
-        <div class="main-cta-btn-wrapper">
-          <a class="main-cta-btn" href="#">Læs mere om Bellcom</a>
-        </div>
-        <div class="secondary-cta-btn-wrapper">
-          <a class="secondary-cta-btn" href="#"><span>Gå til produkt oversigt</span> {% include "@bellcom_theme/assets/images/arrow-right.svg" %}</a>
-        </div>
+      {% if paragraph.field_hero_heading.value  %}
+      <h1 data-aos="fade-in">{{ content.field_hero_heading }}</h1>
+      {% endif %}
+      {% if paragraph.field_hero_body.value %}
+      <div class="hero__body-text">
+        {{ content.field_hero_body }}
       </div>
+      {% endif %}
+      {% if paragraph.field_main_cta_button.value or paragraph.field_secondary_cta_button.value  %}
+      <div class="hero__cta-wrapper">
+        {% if paragraph.field_main_cta_button.value %}
+        <div class="main-cta-btn-wrapper">
+          <a class="main-cta-btn" href="{{ paragraph.field_main_cta_button.0.url }}"><span>{{ paragraph.field_main_cta_button.0.title }}</span>{% include "@bellcom_theme/assets/images/arrow-right-small.svg" %}</a>
+        </div>
+        {% endif %}
+        {% if paragraph.field_secondary_cta_button.value %}
+        <div class="secondary-cta-btn-wrapper">
+          <a class="secondary-cta-btn" href="{{ paragraph.field_secondary_cta_button.0.url }}"><span>{{ paragraph.field_secondary_cta_button.0.title }}</span> {% include "@bellcom_theme/assets/images/arrow-right.svg" %}</a>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
     <div class="hero__element-wrapper">
       <a href="#" class="hero__element hero__element-one">
