@@ -19,6 +19,7 @@
 
         ul {
           display: flex;
+          flex-wrap: wrap;
 
           li {
 
@@ -29,6 +30,7 @@
             a {
               color: white;
               text-decoration: none;
+              font-size: 14px;
 
               &:hover {
                 text-decoration: underline;
