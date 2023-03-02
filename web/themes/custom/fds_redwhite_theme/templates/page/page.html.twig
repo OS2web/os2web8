@@ -122,6 +122,13 @@
     </div>
 </header>
 
+<div class="header-account-menu">
+  <div class="container">
+    <button class="account-menu-btn"><span>Brugerkontomenu</span><span class="icon fa fa-bars"></span></button>
+  {{ page.account_menu }}
+  </div>
+</div>
+
 <div class="page-alert" data-font-resize-wrapper id="">
   <div class="container">
     {{ page.alert }}
@@ -144,7 +151,7 @@
       </div>
     {% endif %}
 
-      
+
       {% set drupalTag = '<drupal-render-placeholder>'%}
       {% set has_main_content = page.content|render|striptags(drupalTag)|trim is not empty %}
      {% if has_main_content %}

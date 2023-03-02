@@ -69,3 +69,12 @@
   });
 })(jQuery);
 
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    $('.account-menu-btn').on('click', function (evt) {
+      $(this).parent().find('.region-account-menu').toggleClass('expand-collaps');
+    });
+  });
+})(jQuery);
+

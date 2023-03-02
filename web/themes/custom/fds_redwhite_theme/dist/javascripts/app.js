@@ -3155,6 +3155,15 @@ module.exports = function (button, expanded) {
   });
 })(jQuery);
 
+(function($) {
+  "use strict";
+  $(document).ready(function ($) {
+    $('.account-menu-btn').on('click', function (evt) {
+      $(this).parent().find('.region-account-menu').toggleClass('expand-collaps');
+    });
+  });
+})(jQuery);
+
 
 (function() {
 
@@ -3592,13 +3601,28 @@ const menuRow = jQuery("#block-fds-redwhite-theme-header-below-navigation");
 
 jQuery(document).mouseup(function(e) {
   if (
-    jQuery(".region.region-header__below.expand-collaps")[0] && 
+    jQuery(".region.region-header__below.expand-collaps")[0] &&
     !menuRowBtn.is(e.target) &&
     menuRowBtn.has(e.target).length === 0 &&
     !menuRow.is(e.target) &&
     menuRow.has(e.target).length === 0
   ) {
     jQuery(".region.region-header__below").removeClass('expand-collaps')
+  }
+});
+
+const accountMenuBtn = jQuery(".account-menu-btn");
+const accountMenuRow = jQuery("#block-account");
+
+jQuery(document).mouseup(function(e) {
+  if (
+    jQuery(".region.region-account-menu.expand-collaps")[0] &&
+    !accountMenuBtn.is(e.target) &&
+    accountMenuBtn.has(e.target).length === 0 &&
+    !accountMenuRow.is(e.target) &&
+    accountMenuRow.has(e.target).length === 0
+  ) {
+    jQuery(".region.region-account-menu").removeClass('expand-collaps')
   }
 });
 
@@ -3617,7 +3641,7 @@ function getDynamicPaddingsAndBulletOffset() {
       aTag.style.paddingTop = Math.ceil(remainigHeight / 2) + "px"
       aTag.style.paddingBottom = Math.ceil(remainigHeight / 2) + "px"
     }
-  
+
     if(aTag.parentElement.tagName === "LI") {
       if(aTag.parentElement.firstChild === aTag) {
         if(aTag.style.paddingTop) {
@@ -3656,6 +3680,7 @@ if(allAccordionButtons) {
 }
 
 getDynamicPaddingsAndBulletOffset();
+
 // Proposals form toggle.
 (function($) {
   "use strict";
