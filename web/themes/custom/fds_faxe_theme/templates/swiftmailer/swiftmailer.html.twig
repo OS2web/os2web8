@@ -44,18 +44,7 @@
                 </tr>
                 <tr>
                   <td style="text-align:left;font-family:Arial,sans-serif;">
-                    den.
-                    {{ "now"|date('U')|format_date("custom", "j. F Y") }}
-                  </td>
-                </tr>
-                <tr>
-                  <td style="font-family: Arial; color: #333333; font-size: 15px; padding:10px 0;text-align:left;">
-                    {{ message|raw }}
-                    {% if link %}
-                      <div class="anonymous-subscription-url">
-                        {{ link }}
-                      </div>
-                    {% endif %}
+                    {{ body|raw }}
                   </td>
                 </tr>
               </table>
