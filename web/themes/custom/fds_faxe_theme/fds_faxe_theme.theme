@@ -91,32 +91,58 @@ function fds_faxe_theme_preprocess_swiftmailer(&$variables) {
   }
 }
 
-/**
- * Implements hook_preprocess_HOOK().
- */
-function fds_faxe_theme_preprocess_anonymous_subscriptions_message(array &$variables) {
-
+function fds_faxe_theme_preprocess_anonymous_subscriptions_notification_email(&$variables) {
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();
   $theme_path = $base_url . '/' . $theme->getPath();
-  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
-  $variables['base_url'] = $GLOBALS['base_url'] . '/';
 
+  // Theme settings.
+  $theme_settings = _fds_base_theme_collect_theme_settings();
+  $variables['current_language'] = $language;
+  $variables['base_url'] = $GLOBALS['base_url'] . '/';
+  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
+  $variables['theme_settings'] = $theme_settings;
+
+  // Header logo.
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
     $file = File::load($theme_settings['language_logo']['header_logo__' . $language]);
     if (!empty($file)) {
-      $variables['logo_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
+      $variables['logo_url'] = file_create_url($file->getFileUri());
     }
   }
+}
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function fds_faxe_theme_preprocess_anonymous_subscriptions_message(array &$variables) {
+  global $base_url;
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $theme = \Drupal::theme()->getActiveTheme();
+  $theme_path = $base_url . '/' . $theme->getPath();
+
+  // Theme settings.
+  $theme_settings = _fds_base_theme_collect_theme_settings();
+  $variables['current_language'] = $language;
+  $variables['base_url'] = $GLOBALS['base_url'] . '/';
+  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
+  $variables['theme_settings'] = $theme_settings;
+
+  // Header logo.
+  if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
+    $file = File::load($theme_settings['language_logo']['header_logo__' . $language]);
+    if (!empty($file)) {
+      $variables['logo_url'] = file_create_url($file->getFileUri());
+    }
+  }
   $subscription = $variables['subscription'];
   if (!empty($subscription->type->value) && $subscription->type->value == 'os2web_hearings_hearing_case') {
     $variables['link'] = Link::fromTextAndUrl(t('Klik her for at gå til høringer og afgørelser'), Url::fromUserInput('/hoeringer-og-afgoerelser'));
   }
-
-
 }
+
+
 
 /**
  * Implements hook_preprocess_term().
