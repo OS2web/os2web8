@@ -59,6 +59,13 @@
 
 <header>
 
+  <div class="header-account-menu">
+    <div class="container">
+      <button class="account-menu-btn"><span>Brugerkontomenu</span><span class="icon fa fa-bars"></span></button>
+      {{ page.account_menu }}
+    </div>
+  </div>
+
     <div class="custom-header custom-header--static">
       <div class="custom-header__inner">
         <div class="container">
@@ -122,12 +129,6 @@
     </div>
 </header>
 
-<div class="header-account-menu">
-  <div class="container">
-    <button class="account-menu-btn"><span>Brugerkontomenu</span><span class="icon fa fa-bars"></span></button>
-  {{ page.account_menu }}
-  </div>
-</div>
 
 <div class="page-alert" data-font-resize-wrapper id="">
   <div class="container">
