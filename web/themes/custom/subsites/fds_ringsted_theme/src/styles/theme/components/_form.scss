@@ -156,7 +156,7 @@ body {
   .form-hint.description {
     font-size: $base-font-size;
   }
-  .form-label.option {
+  .option {
     font-size: 14px !important;
   }
 }
@@ -323,7 +323,7 @@ form {
       margin-left: 0;
     }
     label {
-      font-size: 14px;
+      font-size: 18px;
     }
 
     .form-hint.description {
@@ -353,7 +353,7 @@ form {
   height: 6px;
   margin: 0 0.3em;
   vertical-align: super;
-  /* Use a background image to prevent screen readers from announcing the text. */
+  background-image: none !important;
   background-repeat: no-repeat;
   background-size: 6px 6px;
 }
