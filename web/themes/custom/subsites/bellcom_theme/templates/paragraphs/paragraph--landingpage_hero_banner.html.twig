@@ -2,7 +2,7 @@
 <div class="hero-wrapper" style="background-color:{% if selectedBackground == 'black' %} #212529;
 {% elseif selectedBackground == 'white' %} #fff; {% elseif selectedBackground == 'green' %} #344E41
 {% elseif selectedBackground == 'blue' %} #22223B; {% elseif selectedBackground == 'grey' %} #343A40;
-{% elseif selectedBackground == 'sand' %} #DAD7CD; {% endif %}">
+{% elseif selectedBackground == 'sand' %} #DAD7CD; {% endif %} {% if paragraph.field_hero_bg_image.value %} background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{ file_url(paragraph.field_hero_bg_image.entity.fileuri) }}); background-size: cover; {% endif %}">
   <div class="hero__inner-wrapper">
     <div class="hero__text-wrapper">
       {% if paragraph.field_hero_heading.value  %}
