@@ -76,10 +76,11 @@ $custom-input-left-right-padding: 20px;
 .form-label,
 .form-composite > legend,
 .label {
-  font-size: 1.3rem;
+  font-size: 18px;
   font-weight: initial;
   color: $color-black;
-  margin: 12px 0 0 10px;
+  margin: 12px 0 0 0px;
+  font-family: "Museo 500", Helvetica, Arial, sans-serif;
 }
 .form-group {
   margin-top: 0;
@@ -154,6 +155,9 @@ body {
   .form-hint,
   .form-hint.description {
     font-size: $base-font-size;
+  }
+  .form-label.option {
+    font-size: 14px !important;
   }
 }
 
@@ -340,6 +344,18 @@ form {
   .form-type-radio {
     margin-bottom: 0 !important;
   }
+}
+
+.form-required:after {
+  content: '*';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 0.3em;
+  vertical-align: super;
+  /* Use a background image to prevent screen readers from announcing the text. */
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
 }
 
 // --------------------------------------------------
