@@ -358,11 +358,11 @@ form {
   background-size: 6px 6px;
 }
 
-.form-radios {
-  .description {
-    margin-top: 10px !important;
-    font-size: 13px !important;
-  }
+.form-composite > .fieldset-wrapper > .description,
+.form-item .description {
+  font-size: 13px !important;
+  margin-top: 10px !important;
+  line-height: 1.4;
 }
 
 // --------------------------------------------------
