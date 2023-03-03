@@ -365,6 +365,10 @@ form {
   line-height: 1.4;
 }
 
+.webform-element-more--link:before {
+  display: none !important;
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
