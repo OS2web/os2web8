@@ -6,7 +6,7 @@
   <div class="hero__inner-wrapper">
     <div class="hero__text-wrapper">
       {% if paragraph.field_hero_heading.value  %}
-      <h1 style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
+      <h1 data-aos="fade-right" style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
       {% endif %}
       {% if paragraph.field_hero_body.value %}
       <div style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey'] %} #fff; {% else %} #000; {% endif %}" class="hero__body-text">
@@ -94,3 +94,4 @@
    background-color: {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %} white; {% else %} black; {% endif %}
  }
 </style>
+
