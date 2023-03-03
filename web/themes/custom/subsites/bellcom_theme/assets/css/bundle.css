@@ -967,16 +967,15 @@ video {
   min-height: 70vh;
   width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 80px 0;
 }
 .hero-wrapper .hero__inner-wrapper {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 10px;
     display: flex;
     min-height: 650px;
     gap: 100px;
-    padding: 0 10px;
   }
 @media (max-width: 1064px) {
 .hero-wrapper .hero__inner-wrapper {
@@ -1200,6 +1199,51 @@ video {
 .hero-wrapper .hero__inner-wrapper .hero__element-wrapper .hero__element-three {
         grid-area: 2 / 2
       }
+.text-bg-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-bg-wrapper .text-bg__inner-wrapper {
+    max-width: 1440px;
+    margin: 100px 10px;
+    width: 100%;
+    border-radius: 10px;
+  }
+.text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper {
+      width: 100%;
+      display: flex;
+    }
+@media (max-width: 1064px) {
+.text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper {
+        flex-direction: column
+    }
+      }
+.text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-heading {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.3;
+        padding-right: 35px;
+      }
+@media (max-width: 1064px) {
+.text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-heading {
+          padding-right: 0;
+          margin-bottom: 20px;
+          font-size: 28px
+      }
+        }
+.text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-paragraph {
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+      }
+@media (max-width: 1064px) {
+.text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-paragraph {
+          font-size: 16px
+      }
+        }
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
