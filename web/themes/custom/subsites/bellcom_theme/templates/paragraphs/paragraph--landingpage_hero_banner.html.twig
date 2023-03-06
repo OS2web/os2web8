@@ -6,15 +6,15 @@
   <div class="hero__inner-wrapper">
     <div class="hero__text-wrapper">
       {% if paragraph.field_hero_heading.value  %}
-      <h1 data-aos="fade-right" style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
+      <h1 data-aos="fade-in" data-aos-duration="600" data-aos-easing="ease" data-aos-once="true" style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
       {% endif %}
       {% if paragraph.field_hero_body.value %}
-      <div style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey'] %} #fff; {% else %} #000; {% endif %}" class="hero__body-text">
+      <div data-aos="fade-in" data-aos-duration="600" data-aos-delay="500" data-aos-easing="ease" data-aos-once="true" style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey'] %} #fff; {% else %} #000; {% endif %}" class="hero__body-text">
         {{ content.field_hero_body }}
       </div>
       {% endif %}
       {% if paragraph.field_main_cta_button.value or paragraph.field_secondary_cta_button.value  %}
-      <div class="hero__cta-wrapper">
+      <div data-aos="fade-in" data-aos-duration="600" data-aos-delay="1000" data-aos-once="true" class="hero__cta-wrapper">
         {% if paragraph.field_main_cta_button.value %}
         <div class="main-cta-btn-wrapper">
           <a style="{% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}background-color: #fff; color: black;
