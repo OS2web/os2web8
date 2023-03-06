@@ -26,9 +26,8 @@
   We call a macro which calls itself to render the full tree.
   @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
-<div id="closeBtn"><i class="fa-solid fa-xmark"></i></div>
-{{ menus.menu_links(items, attributes, 0) }}
 
+{{ menus.menu_links(items, attributes, 0) }}
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}

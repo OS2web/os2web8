@@ -991,8 +991,8 @@ video {
         position: fixed;
         height: 100vh;
         background-color: white;
-        right: 0;
-        bottom: 0;
+        right: -85%;
+        top: 80px;
         display: flex;
         align-items: center;
         transition: 0.3s ease-in
@@ -1000,12 +1000,6 @@ video {
 
 
       }
-.header .header__inner-wrapper .region--header nav #closeBtn {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          font-size: 32px;
-        }
 @media only screen and (max-width: 768px) {
 .header .header__inner-wrapper .region--header nav {
           height: 80%;
@@ -1049,6 +1043,12 @@ video {
               transition: transform 0.25s ease-out;
               background-color: black;
             }
+.region.region--header.is-open {
+  right: 0 !important;
+}
+body.is-fixed {
+  position: fixed;
+}
 .hero-wrapper {
   min-height: 70vh;
   width: 100%;
