@@ -13,6 +13,7 @@ const bodyElement = document.querySelector('body');
 hamburgerBtn.addEventListener('click', () => {
   menuElement.classList.toggle('is-open');
   bodyElement.classList.toggle('is-fixed');
+  hamburgerBtn.classList.toggle('active');
 });
 
 window.onresize = function () {
@@ -20,5 +21,6 @@ window.onresize = function () {
   if (w > 768) {
     menuElement.classList.remove('is-open');
     bodyElement.classList.remove('is-fixed');
+    hamburgerBtn.classList.remove('active');
   }
 };
