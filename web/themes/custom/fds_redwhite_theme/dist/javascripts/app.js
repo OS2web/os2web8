@@ -3257,7 +3257,7 @@ module.exports = function (button, expanded) {
     input.setAttribute('aria-label', 'Indtast søgeord');
   }
 
-  for (var j = 0; j < searchSubmits.length; i++) {
+  for (var j = 0; j < searchSubmits.length; j++) {
     var submit = searchSubmits[j];
 
     submit.setAttribute('aria-label', 'Søg');
