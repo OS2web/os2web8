@@ -226,7 +226,7 @@ function fds_faxe_theme_preprocess_media(array &$variables) {
 
 
 
-function node2box(&$node, $showImages, $incPromoted) {
+function node2box(&$node, $showImages) {
 
   $refNode = new stdClass();
   $refNode->title = (string) $node->field_os2web_page_heading->value;
@@ -273,93 +273,9 @@ function node2box(&$node, $showImages, $incPromoted) {
     }
   }
 
-  $menu_link_root_entities = \Drupal::entityTypeManager()
-    ->getStorage('menu_link_content')
-    ->loadByProperties([
-      'link' => ['uri' => 'entity:node/' . $node->id()],
-    ]);
-
-    $menu_link_root = reset($menu_link_root_entities);
-    if ($menu_link_root) {
-        $menu_links = \Drupal::service('menu.tree_storage')
-          ->loadByProperties([
-            'parent' => 'menu_link_content:' . $menu_link_root->uuid(),
-          ]) ?: [];
-
-        $node_ids = array_map(function ($v) {
-          return $v['route_parameters']['node'];
-        }, $menu_links);
-
-        foreach ($node_ids as $childId) {
-          $child = \Drupal\node\Entity\Node::load($childId);
-          if ($child->getType() == 'os2web_page' && ($incPromoted && $child->isPromoted())) {
-            $refNode->children[] = (object) [
-              'title' => $child->getTitle(),
-              'url' => $child->toUrl()->toString()
-            ];
-          }
-        }
-    }
-
-    return $refNode;
-}
-
-function tax2box(&$taxonomy, $showImages, $showRelated) {
-
-  $aliasManager = \Drupal::service('path_alias.manager');
-
-  $refNode = new stdClass();
-  $refNode->title = (string) $taxonomy->name->value;
-  $refNode->url = $aliasManager->getAliasByPath('/taxonomy/term/' . $taxonomy->id());
-  $refNode->image = null;
-  $refNode->children = array();
-
-  if ($showImages) {
-    if ($taxonomy->hasField('field_primaryicon')
-      && $taxonomy->field_primaryicon instanceof EntityReferenceFieldItemListInterface
-      && $taxonomy->field_primaryicon->referencedEntities()
-    ) {
-      $refNode->image = $taxonomy->field_primaryicon->view([
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => [
-          'image_style' => 'thumbnail'
-        ],
-      ]);
-    }
-    elseif ($taxonomy->hasField('field_primaryimage')
-      && $taxonomy->field_primaryimage instanceof EntityReferenceFieldItemListInterface
-      && $taxonomy->field_primaryimage->referencedEntities()
-    ) {
-      $refNode->image = $taxonomy->field_primaryimage->view([
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => [
-          'image_style' => 'thumbnail'
-        ],
-      ]);
-    }
-  }
-
-  if ($showRelated && $taxonomy->hasField('field_os2web_base_field_related')) {
-    $relatedes = $taxonomy->get('field_os2web_base_field_related')->referencedEntities();
-    if (count($relatedes) > 0) {
-      foreach ( $relatedes AS $related ) {
-        if ( $related->getType() == 'os2web_page') {
-          $relatedNode = \Drupal\node\Entity\Node::load($related->id());
-          $refNode->children[] = (object) array(
-            'title' => $relatedNode->getTitle(),
-            'url' => $relatedNode->toUrl()->toString()
-          );
-        }
-      }
-    }
-  }
-
-
   return $refNode;
-
 }
+
 function fds_faxe_theme_preprocess_paragraph(&$variables) {
 
   $paragraph = $variables['paragraph'];
@@ -368,13 +284,6 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
 
     $showImages = ($paragraph->field_os2web_menu_box_vm->value == 'image');
     $incPromoted = ($paragraph->field_os2web_menu_links_inc_pr_p->value == 1);
-    $onlyTaxonomy = ($paragraph->field_only_taxonomy->value == 1);
-    $showTaxonomyRelated = ($paragraph->field_show_taxonomy_related->value == 1);
-
-    $showReferences = null;
-    if ($paragraph->hasField('field_show_references')) {
-      $showReferences = ($paragraph->field_show_references->value == 1);
-    }
 
     $variables['menubox'] = [];
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -386,98 +295,50 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
         $sections = $node->get('field_os2web_page_section')->referencedEntities();
         if (count($sections) > 0) {
           // there is only one but can be change in future ..
+          $storage = \Drupal::entityTypeManager()->getStorage('node');
           foreach ($sections as $section) {
+
             $children = \Drupal::entityTypeManager()
               ->getStorage('taxonomy_term')
               ->loadTree('os2web_sektion', $section->tid->value, 1, true);
-
             foreach( $children AS $child ) {
-              $variables['menubox'][] = tax2box($child, $showImages, $showTaxonomyRelated);
-            }
-          }
-        }
-      }
 
-      // Get all in section list
-      $aliasManager = \Drupal::service('path_alias.manager');
-      foreach ($paragraph->field_sektion->referencedEntities() as $taxonomy) {
-        $refNode = new stdClass();
-        $refNode->title = (string) $taxonomy->name->value;
-        $refNode->url = $aliasManager->getAliasByPath('/taxonomy/term/' . $taxonomy->id());
-        $refNode->image = null;
-        $refNode->children = array();
+              // find primary node for this child
+              if ($child->hasField('field_primarynode') && !empty($child->field_primarynode->target_id)) {
+                $primaryNode = \Drupal\node\Entity\Node::load($child->field_primarynode->target_id);
+                $entry = node2box($primaryNode, $showImages);
 
-        if ($showImages) {
-          if ($taxonomy->hasField('field_primaryicon')
-            && $taxonomy->field_primaryicon instanceof EntityReferenceFieldItemListInterface
-            && $taxonomy->field_primaryicon->referencedEntities()
-          ) {
-            $refNode->image = $taxonomy->field_primaryicon->view([
-              'label' => 'hidden',
-              'type' => 'image',
-              'settings' => [
-                'image_style' => 'thumbnail'
-              ],
-            ]);
-          }
-          elseif ($taxonomy->hasField('field_primaryimage')
-            && $taxonomy->field_primaryimage instanceof EntityReferenceFieldItemListInterface
-            && $taxonomy->field_primaryimage->referencedEntities()
-          ) {
-            $refNode->image = $taxonomy->field_primaryimage->view([
-              'label' => 'hidden',
-              'type' => 'image',
-              'settings' => [
-                'image_style' => 'thumbnail'
-              ],
-            ]);
-          }
-        }
+                // find all node that has this taxonomy in section
+                $query = $storage->getQuery()
+                  ->condition('field_os2web_page_section.target_id', $child->tid->value)
+                  ->execute();
+                if (count($query) > 0) {
+                  foreach ($query as $nodeId) {
+                    $childNode = \Drupal\node\Entity\Node::load($nodeId);
 
-        if ($incPromoted) {
-          $child_terms = \Drupal::entityTypeManager()
-            ->getStorage('taxonomy_term')
-            ->loadTree('os2web_sektion', $taxonomy->id(), 1, FALSE);
-          foreach ($child_terms as $child) {
-            $refNode->children[] = (object) [
-              'title' => $child->name,
-              'url' => $aliasManager->getAliasByPath('/taxonomy/term/' . $child->tid)
-            ];
-          }
-        }
-
-        $variables['menubox'][] = $refNode;
-      }
-
-      if (!$onlyTaxonomy && $node->hasField('field_link_til_andet_indhold')) {
-        $refs = $node->get('field_link_til_andet_indhold');
-        foreach ($refs->referencedEntities() as $idx => $ref) {
-          if ($ref->getType() == 'os2web_page') {
-            $variables['menubox'][] = node2box($ref, $showImages, $incPromoted);;
-          }
-        }
-      }
-
-      if ($showReferences && $node->hasField('field_os2web_page_section')) {
-        $sections = $node->get('field_os2web_page_section')->referencedEntities();
-        if (count( $sections ) > 0) {
-          // there is only one but can be change in future ..
-          foreach( $sections AS $section ) {
-            $refId = $section->tid->value;
-            $storage = \Drupal::entityTypeManager()->getStorage('node');
-            $query = $storage->getQuery()->condition('field_os2web_page_section.target_id', $refId);
-            $references = $query->execute();
-            if (count( $references ) > 0) {
-              foreach ($references as $refNodeid) {
-                if ($node->id() != $refNodeid) {
-                  $refNode = \Drupal\node\Entity\Node::load($refNodeid);
-                  $variables['menubox'][] = node2box($refNode, $showImages, $incPromoted);;
+                    if (
+                      $childNode->getType() == 'os2web_page' &&
+                      $childNode->isPublished() &&
+                      (
+                        !$childNode->isPromoted() ||
+                        ($incPromoted && $childNode->isPromoted())
+                      ) &&
+                      $childNode->id() !== $primaryNode->id()) {
+                      $entry->children[] = (object) [
+                          'title' => $childNode->getTitle(),
+                          'url' => $childNode->toUrl()->toString()
+                        ];
+                    }
+                  }
                 }
+
+                $variables['menubox'][] = $entry;
               }
             }
           }
         }
       }
+
     }
   }
 
