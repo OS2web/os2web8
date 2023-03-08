@@ -20,6 +20,17 @@
 
 #block-matomopagestatistics {
   background: white;
-  padding: 20px 0px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  table {
+    td {
+      padding: 5px 15px 0px 15px;
+    }
+    td:nth-child(2) {
+      text-align: right;
+    }
+  }
 }
 
