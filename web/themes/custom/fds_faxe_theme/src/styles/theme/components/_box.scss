@@ -124,6 +124,34 @@
 
 }
 
+.sidebar__box {
+  background-color: white;
+
+  .sidebar__box-heading {
+    padding: 40px;
+    position: relative;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+    h2 {
+      font-size: 2.4rem;
+      color: #00789e;
+      font-weight: normal;
+    }
+  }
+  .sidebar__box-body {
+    padding: 0 40px;
+  }
+}
+
 
 
 
