@@ -15,6 +15,7 @@ regions:
   content: Content
   footer__logo: Footer logo
   footer: Footer
+  footer__bottom: Footer bottom
   hidden: Hidden
 
 ckeditor_stylesheets:
