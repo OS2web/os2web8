@@ -13,6 +13,7 @@ regions:
   header__logo: Header logo
   header: Header
   content: Content
+  footer__logo: Footer logo
   footer: Footer
   hidden: Hidden
 

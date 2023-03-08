@@ -1060,6 +1060,86 @@ video {
 body.is-fixed {
   position: fixed;
 }
+footer {
+  border-top: 1px solid #d7d7d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+footer .footer_inner-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 60px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+  }
+footer .footer_inner-wrapper .footer_newsletter {
+      width: 30%;
+    }
+footer .footer_inner-wrapper .footer_newsletter h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+footer .footer_inner-wrapper .footer_newsletter p {
+        margin-bottom: 20px;
+      }
+footer .footer_inner-wrapper .footer_newsletter form input {
+          padding: 10px 0 10px 10px;
+          background-color: #e6e6e6;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          outline: none;
+        }
+footer .footer_inner-wrapper .footer_newsletter form button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #344E41;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          color: white;
+          font-weight: 600;
+          font-size: 15px;
+        }
+footer .footer_inner-wrapper .footer_logo {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+footer .footer_inner-wrapper .footer_logo .footer-info-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-size: 13px;
+      }
+footer .footer_inner-wrapper .footer_logo .footer-info-wrapper div h2 {
+            font-weight: bold;
+            color: #2E2E2E;
+          }
+footer .footer_inner-wrapper .footer_navigation {
+      flex-grow: 1;
+    }
+footer .footer_inner-wrapper .footer_navigation .region--footer {
+        display: flex;
+        gap: 75px;
+        margin-left: 20px;
+      }
+footer .footer_inner-wrapper .footer_navigation .region--footer nav h2 {
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+          }
+footer .footer_inner-wrapper .footer_navigation .region--footer nav ul li {
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+footer .footer_inner-wrapper .footer_navigation .region--footer nav ul li a:hover {
+                  text-decoration: underline;
+                }
 .hero-wrapper {
   min-height: 70vh;
   width: 100%;

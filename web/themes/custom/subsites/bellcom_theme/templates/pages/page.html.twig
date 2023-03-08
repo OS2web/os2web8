@@ -28,7 +28,39 @@
 
 {% if page.footer %}
 <footer class="footer" role="contentinfo">
-  {{ page.footer }}
+  <div class="footer_inner-wrapper">
+    <div class="footer_logo">
+      {{ page.footer__logo }}
+      <div class="footer-info-wrapper">
+        <div>
+          <h2>Adresse</h2>
+          <p>Bredgade 20, 6000 Kolding</p>
+        </div>
+        <div>
+          <h2>Telefon</h2>
+          <p>70 26 00 85</p>
+        </div>
+        <div>
+          <h2>Åbningstider</h2>
+          <p>Mandag - Fredag</p>
+          <p><strong>09:00 - 17:00</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer_navigation">
+      {{ page.footer }}
+    </div>
+    <div class="footer_newsletter">
+      <h2>Tilmeld dig vores nyhedsbrev</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <form>
+          <input type="email" placeholder="Skriv din e-mail her...">
+          <button type="submit" value="Abonnér">Abonnér</button>
+        </form>
+
+    </div>
+  </div>
 </footer>
 {% endif %}
 
