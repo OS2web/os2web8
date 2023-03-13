@@ -29,6 +29,7 @@
     padding: 20px 20px;
     color: $color-black;
     background-color: #fff;
+
     .field--name-field-os2web-icon {
       img {
         width: 65px;
@@ -122,6 +123,87 @@
 
 
 }
+
+.sidebar__box {
+  background-color: white;
+
+  .sidebar__box-heading {
+    padding: 40px;
+    position: relative;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+    h2 {
+      font-size: 2.4rem;
+      color: #00789e;
+      font-weight: normal;
+    }
+  }
+  .sidebar__box-body {
+    padding: 0 40px 40px 40px;
+  }
+}
+
+
+#block-indholdfield-ext-links {
+  h2 {
+    font-size: 2.4rem;
+    color: #00789e;
+    font-weight: normal;
+    position: relative;
+    padding: 40px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+
+  .field--name-field-selfbetjening-ref {
+    padding: 0 40px 40px 40px;
+
+    .field__item {
+      a {
+        padding-left: 35px;
+        text-decoration: none;
+        position: relative;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:before {
+          top: -1px;
+          left: 0;
+          position: absolute;
+          font-size: 2.4rem;
+          font-family: "Material Icons";
+          content: "keyboard_backspace";
+
+          color: $color__bullets;
+
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
 
 
 // --------------------------------------------------

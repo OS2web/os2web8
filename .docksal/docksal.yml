@@ -14,6 +14,16 @@ services:
       - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
     labels:
       - io.docksal.virtual-host=pma.${VIRTUAL_HOST}
+  solr:
+    image: docksal/solr:7.5-edge
+    volumes:
+      - ${PROJECT_ROOT}/.docksal/etc/solr/conf:/var/lib/solr/conf:ro
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: solr
+    labels:
+      - 'io.docksal.virtual-host=solr.${VIRTUAL_HOST}'
+
 
 #  blackfire:
 #    extends:

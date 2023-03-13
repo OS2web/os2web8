@@ -178,6 +178,34 @@
         position: relative;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         transition: 0.3s ease;
+        overflow: hidden;
+        transform-origin: center top;
+        transform-style: preserve-3d;
+        transform: translateZ(0);
+
+        &:after {
+          position: absolute;
+          content: '';
+          z-index: 10;
+          width: 200%;
+          height: 100%;
+          top: -90%;
+          left: -20px;
+          opacity: .1;
+          transform: rotate(45deg);
+          background: #fff;
+          filter: blur(30px);
+          transition: .3s ease;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+          &:after {
+            transform: rotate(25deg);
+            top: -40%;
+            opacity: .15;
+          }
+        }
 
         @media (max-width: 1200px) {
           display: block;
@@ -195,9 +223,6 @@
           width: 95%;
         }
 
-        &:hover {
-          transform: scale(1.01);
-        }
 
         img {
           position: absolute;
