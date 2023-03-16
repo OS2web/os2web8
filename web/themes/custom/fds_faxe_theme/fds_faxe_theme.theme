@@ -39,7 +39,7 @@ function fds_faxe_theme_preprocess_block(&$variables) {
 
   if ($variables['elements']['#id'] == 'lastupdated') {
     $node = \Drupal::routeMatch()->getParameter('node');
-    if (!empty($node->getType()) && $node->getType() == 'os2web_page') {
+    if ($node && !empty($node->getType()) && $node->getType() == 'os2web_page') {
       $variables['lastupdated'] = strftime("%d.%m.%Y", $node->getChangedTime());
     }
   }
