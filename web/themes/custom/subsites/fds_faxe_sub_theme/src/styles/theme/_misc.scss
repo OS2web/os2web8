@@ -440,18 +440,18 @@ body .page-container {
     hyphens: auto;
   }
 }
-.layout-sidebar-left,
-.layout-sidebar-right,
-// .layout-content
-{
-  padding-top: $grid-gutter-width;
-}
-.layout-sidebar-right {
-  padding-top: 10px;
-  @include media($sm) {
-    padding-top: $grid-gutter-width;
-  };
-}
+//.layout-sidebar-left,
+//.layout-sidebar-right,
+//// .layout-content
+//{
+//  padding-top: $grid-gutter-width;
+//}
+//.layout-sidebar-right {
+//  padding-top: 10px;
+//  @include media($sm) {
+//    padding-top: $grid-gutter-width;
+//  };
+//}
 .layout-content.entity-teaser--os2web-event-wrapper {
   padding-top: 40px;
 }
