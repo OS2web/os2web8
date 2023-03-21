@@ -26,6 +26,7 @@
     margin: 0 auto;
     overflow: hidden;
     transition: 0.3s ease;
+    padding-bottom: 30px;
 
     &:hover > .tns-controls > button {
       opacity: 0.8;
@@ -55,10 +56,10 @@
     height: 14px;
 
     border-width: 1px;
-    border-color: $color-orange-004;
+    border-color: white;
 
     &.tns-nav-active {
-      background-color: $color-orange-004;
+      background-color: white;
     }
 
     + button {
@@ -104,6 +105,7 @@
 
       &:before {
         content: "\f104";
+        color: red;
       }
     }
 
@@ -112,6 +114,7 @@
 
       &:before {
         content: "\f105";
+        color: red;
       }
     }
   }
@@ -139,19 +142,19 @@
     button {
       margin-top: -20px;
 
-      height: 40px;
-      width: 40px;
+      height: 45px;
+      width: 45px;
 
       &:before {
         font-size: 2.6rem;
       }
 
       &[data-controls="prev"] {
-        left: -20px;
+        left: -15px;
       }
 
       &[data-controls="next"] {
-        right: -20px;
+        right: -15px;
       }
     }
   }
