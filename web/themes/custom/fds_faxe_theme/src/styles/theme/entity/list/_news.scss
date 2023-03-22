@@ -20,10 +20,13 @@
 // Styling
 // --------------------------------------------------
 
+
 div.entity-list--os2web-news {
-  margin-left: -($side-shift-size);
-  margin-right: -($side-shift-size);
-  max-width: 100%;
+ // margin-left: -($side-shift-size);
+ // margin-right: -($side-shift-size);
+ // max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
   img {
     width: 100%;
     object-fit: cover;
@@ -61,8 +64,8 @@ div.entity-list--os2web-news {
       color: $blue-primary;
     }
     .h4 {
-      font-size: 2.4rem;
-      font-weight: 400;
+      font-size: 2rem;
+      font-weight: 700;
       cursor: pointer;
       &:hover {
         text-decoration: underline;
@@ -84,6 +87,14 @@ div.entity-list--os2web-news {
     font-weight: 400;
     font-size: 1.6rem;
     color: $color-black;
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+
+    time {
+      color: $background_color__default;
+    }
   }
 }
 

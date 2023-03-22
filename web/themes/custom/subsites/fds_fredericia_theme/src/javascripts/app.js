@@ -104,3 +104,22 @@ document.addEventListener('DOMContentLoaded', function() {
   wrapper.innerHTML = '';
   wrapper.prepend(listNode);
 })(jQuery, Drupal, drupalSettings);
+
+
+
+  function toggleVisibility(id) {
+    var btn2 = document.getElementById('btn2');
+    var e = document.getElementById(id);
+    if (e.style.display == 'none') {
+      e.style.display = 'flex';
+      btn2.innerText = 'Skjul';
+
+
+    } else {
+      e.style.display = 'none';
+      btn2.innerText = 'Åben';
+    }
+    return;
+  }
+
+

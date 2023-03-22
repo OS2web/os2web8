@@ -103,6 +103,19 @@
   margin-right: 5px;
 }
 
+.course-assign {
+  background-color: #96c31e;
+  padding: 12px 20px !important;
+  color: black !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: .4s ease !important;
+
+  &:hover {
+    background-color: #5a7300;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

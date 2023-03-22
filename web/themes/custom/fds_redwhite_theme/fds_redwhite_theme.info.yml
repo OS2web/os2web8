@@ -14,6 +14,7 @@ regions:
   megamenu__selfservice: 'Megamenu - self service'
   header__search: 'Header - search'
   header__below: 'Header - below'
+  account_menu: 'Account menu'
   alert: 'Alert'
   page_top: 'Page top'
   page_bottom: 'Page bottom'

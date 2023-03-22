@@ -3241,63 +3241,134 @@ jQuery(document).ready(function(){
 });
 
 
-// // Items for "Senest besøgte indhold".
-// (function($, Drupal, drupalSettings) {
-//   function addToLocalStorage(path) {
-//     var heading = document.querySelectorAll('h1');
-//     var currentLocalStorage = JSON.parse(localStorage.getItem('visitedContent')) || [];
+// double banner to slider
+(function($, Drupal, drupalSettings) {
 
-//     // Filter away current path if its already there.
-//     const filteredLocalStorage = currentLocalStorage.filter(function(item) {
-//       if (item.path === path) {
-//         return false;
-//       }
+  var bannerSelector = '.field--name-field-os2web-page-paragraph-bann';
+  var bannerCount = document.querySelectorAll('.field--name-field-os2web-page-paragraph-bann > .field__item');
+  if (document.querySelector(bannerSelector) !== null && bannerCount.length > 1) {
+    tns({
+      container: bannerSelector,
+      items: 1,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayButtonOutput: false,
+      gutter: 32,
+      rewind: false,
+      nav: true,
+      speed: 600,
+      controls: false
+    });
+  }
 
-//       return true;
-//     });
 
-//     // Add new path.
-//     filteredLocalStorage.push({
-//       label: (heading[0] && heading[0].innerText) || document.title,
-//       path: path,
-//     });
+  var selector = ".field--name-field-os2web-paragraphs.field__items";
+  if (document.querySelectorAll(selector).length > 0) {
+    var searchContainers  = document.querySelectorAll(selector);
+    searchContainers.forEach(function(container, elm) {
+      var items = container.querySelectorAll(selector + " > .field__item");
+      var bannerItems = container.querySelectorAll(selector + " > .field__item .banner__image-outer ");
+      if (bannerItems.length > 1 && items.length == bannerItems.length) {
+        tns({
+          container: container,
+          items: 1,
+          autoplay: true,
+          autoplayHoverPause: true,
+          autoplayButtonOutput: false,
+          gutter: 32,
+          rewind: false,
+          nav: true,
+          speed: 600,
+          controls: false
+        });
+      }
+    });
+  }
+})(jQuery, Drupal, drupalSettings);
 
-//     // Convert back into a string.
-//     var updatedLocalStorageObj = JSON.stringify(filteredLocalStorage);
+(function($) {
 
-//     return localStorage.setItem('visitedContent', updatedLocalStorageObj);
-//   }
+  $(".multi-search").on("click", function() {
+    console.log(" search ");
+    let form = $(".multi-search-form");
+    if ( $(form).length > 0) {
+      $(form).attr("action", "/da/" + $(this).data("search"));
+      $(form).submit();
+    }
+    return false;
+  });
 
-//   var allowedNodeTypeClassnames = [
-//     'page-node-type-os2web-news',
-//     'page-node-type-os2web-page',
-//   ];
+})(jQuery);
 
-//   // Run through allowed classes.
-//   for (var i = 0; i < allowedNodeTypeClassnames.length; i += 1) {
-//     var allowedClassname = allowedNodeTypeClassnames[i];
 
-//     // The current page is supposed to be logged.
-//     if (document.body.classList.contains(allowedClassname)) {
-//       var currentPath = drupalSettings.path.currentPath;
+  const slider = document.querySelector('.slider');
+  const slidesContainer = document.querySelector('.slides-container');
+  const slides = Array.from(document.querySelectorAll('.slide-item'));
+  const prev = slider.querySelector('.prev');
+  const next = slider.querySelector('.next');
+  const dots = Array.from(document.querySelectorAll('.dot'));
 
-//       addToLocalStorage(currentPath);
-//     }
-//   }
+  let slideInterval = setInterval(nextSlide, 5000);
+  let currentIndex = 0;
 
-//   var wrapper = document.getElementById('js-visited-content');
-//   var items = JSON.parse(localStorage.getItem('visitedContent'));
-//   var listNode = document.createElement('UL');
-//   var noOfItemsToDisplay = 6;
 
-//   for (var i = 0; i < items.length && i < noOfItemsToDisplay; i += 1) {
-//     var item = items[i];
-//     var listItemNode = document.createElement('LI');
-//     listItemNode.innerHTML = '<a href=' + item.path + '>' + item.label + '</a>';
+  function showSlide(index) {
+    const slideWidth = slides[0].clientWidth;
+    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
 
-//     listNode.prepend(listItemNode);
-//   }
 
-//   wrapper.innerHTML = '';
-//   wrapper.prepend(listNode);
-// })(jQuery, Drupal, drupalSettings);
+    slides.forEach((slide, slideIndex) => {
+      if (slideIndex !== index) {
+        slide.classList.add('notActive');
+      } else {
+        slide.classList.remove('notActive');
+      }
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      if (dotIndex !== index) {
+        dot.classList.remove('active');
+      } else {
+        dot.classList.add('active');
+      }
+    });
+
+    currentIndex = index;
+  }
+
+
+  showSlide(currentIndex);
+
+  prev.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    if (currentIndex === 0) {
+      showSlide(slides.length - 1);
+    } else {
+      showSlide(currentIndex - 1);
+    }
+  });
+
+  next.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    nextSlide();
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      showSlide(dotIndex);
+    });
+  });
+
+  function nextSlide() {
+    if (currentIndex === slides.length - 1) {
+      showSlide(0);
+    } else {
+      showSlide(currentIndex + 1);
+    }
+  }
+
+
+  const sliderWidth = 100 * slides.length;
+  slidesContainer.style.width = `${sliderWidth}%`;
+

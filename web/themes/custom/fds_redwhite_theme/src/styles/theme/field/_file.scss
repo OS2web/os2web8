@@ -21,52 +21,63 @@
 // Styling
 // --------------------------------------------------
 
-
-.file {
-
-}
-
-.file {
-  display: block;
-  box-shadow: none;
-  margin-bottom: 4px;
-  background-color: #fafafa;
-  padding: 30px;
-  border: 1px solid var(--light-gray2);
-  margin-bottom: 15px;
-  padding-left: 0 !important; // Reset.
-  background-image: none !important;
-  box-shadow: $box-shadow;
-  a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    word-break: break-word;
-    padding: 0 (30px + 30px + 5px) 0 30px; // Width of icon + left/right spacing + gutter.
-    height: 88px;
-    max-width: 100%; // Reset.
-    font-weight: bold;
-    &:hover,
-    &:focus,
-    &:visited {
-      color: var(--primary);
-      text-decoration: none;
+.field--name-field-media-file {
+  .field__item {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    .file {
+      display: block;
+      box-shadow: none;
+      margin-bottom: 4px;
+      background-color: #fafafa;
+      padding: 30px;
+      border: 1px solid var(--light-gray2);
+      margin-bottom: 15px;
+      padding-left: 0 !important; // Reset.
+      background-image: none !important;
+      box-shadow: $box-shadow;
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        word-break: break-word;
+        padding: 0 (30px + 30px + 5px) 0 30px; // Width of icon + left/right spacing + gutter.
+        height: 88px;
+        max-width: 100%; // Reset.
+        font-weight: bold;
+        &:hover,
+        &:focus,
+        &:visited {
+          color: var(--primary);
+          text-decoration: none;
+        }
+        &:after {
+          display: inline-block;
+          position: absolute;
+          content: "";
+          top: 50%;
+          right: 30px;
+          margin-top: -15px; // Half the height.
+          width: 30px;
+          height: 30px;
+          background-image: url("../images/download.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
     }
-    &:after {
-      display: inline-block;
-      position: absolute;
-      content: "";
-      top: 50%;
-      right: 30px;
-      margin-top: -15px; // Half the height.
-      width: 30px;
-      height: 30px;
-      background-image: url("../images/download.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
+
+    span {
+      a{
+        &:before {
+          display: none !important;
+        }
+      }
     }
   }
 }
+
 
 .field--name-field-os2web-m-bp-enclosures {
   span.file {

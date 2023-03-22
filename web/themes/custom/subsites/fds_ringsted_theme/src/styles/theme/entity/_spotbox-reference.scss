@@ -59,6 +59,7 @@ field--name-field-os2web-spotbox-reference > .tns-item {
 	content: "";
 	background: transparent url("../images/sprite.png") no-repeat -112px 0;
 	display: block;
+    visibility: hidden;
 	position: absolute;
 	top: 50%;
 	transform: translate(0, -50%);
@@ -106,6 +107,10 @@ field--name-field-os2web-spotbox-reference > .tns-item {
 		background-color: $color-white;
 		.field--name-field-os2web-spotbox-heading h3 {
 			color: $background_color__button;
+
+        &::after {
+          visibility: visible !important;
+        }
 		}
 	}
 	&, &:hover, &:focus, &:visited {

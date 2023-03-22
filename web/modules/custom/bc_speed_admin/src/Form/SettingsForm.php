@@ -5,7 +5,6 @@ namespace Drupal\bc_speed_admin\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-
 /**
  * Configure bc speed admin settings for this site.
  */
@@ -58,6 +57,11 @@ class SettingsForm extends ConfigFormBase {
       '#description' => $this->t('How to run speedadmin.'),
     );
 
+    $form['speedAdminConfig']['runnow'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('run import now'),
+    );
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -67,10 +71,15 @@ class SettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
 
+    if ($values['runnow'] == 1) {
+      \Drupal\bc_speed_admin\Controller\Sync::handler();
+    }
+
     $config = $this->config(SettingsForm::$configName);
     foreach ($values as $key => $value) {
       $config->set($key, $value);
     }
+
     $config->save();
 
     parent::submitForm($form, $form_state);
