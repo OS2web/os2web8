@@ -193,7 +193,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/textfield_counter" : {
-                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch"
+                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch",
+                "fix static call" : "./patches/3272128-9.patch"
             },
             "drupal/field_group" : {
                 "HTML5 Validation Prevents Submission in Tabs" : "https://www.drupal.org/files/issues/2019-10-04/field_group-HTML5_validation_prevents_submission_in_tabs-2969051-9.patch"
