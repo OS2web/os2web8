@@ -190,7 +190,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/textfield_counter" : {
-                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch"
+                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch",
+                "fix static call" : "./patches/3272128-9.patch"
             },
             "drupal/fieldblock" : {
                 "Error on node revision route due to core type upcasting change": "https://www.drupal.org/files/issues/2022-07-28/fieldblock-3281927-5.patch"
