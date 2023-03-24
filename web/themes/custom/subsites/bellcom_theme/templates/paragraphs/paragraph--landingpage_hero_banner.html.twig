@@ -52,7 +52,7 @@
         paragraph.field_image_4.value is empty %} grid-area: 1 / 1 / 3 / 3;
          {% elseif paragraph.field_image_4.value is empty %} grid-area: 1 / 1 / 3 / 2; {% endif %}">
         {% if paragraph.field_image_1.value %}
-        <img src="{{ file_url(paragraph.field_image_1.entity.fileuri) }}">
+        <img src="{{ file_url(paragraph.field_image_1.entity.fileuri) }}"  alt="{{ paragraph.field_image_1.entity.alt }}" title="{{ paragraph.field_image_1.entity.title }}">
         {% endif %}
         <div class="hero__element-overlay"></div>
         {% if paragraph.field_title_image_1.value %}
