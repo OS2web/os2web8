@@ -136,3 +136,61 @@ function fds_fredericia_theme_preprocess_node(array &$variables) {
     }
   }
 }
+
+
+
+function fds_fredericia_theme_views_pre_render(Drupal\views\ViewExecutable &$view) {
+
+  if ($view->id() == 'taxonomy_term' && count($view->result) > 1) {
+
+    $resultSort = [];
+
+    if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+      $tax_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+
+      foreach ($view->result as $itemIdx => &$item) {
+        $node = $node = \Drupal\node\Entity\Node::load($item->nid);
+        if ($node && $node->hasField('field_os2web_page_section_sort')) {
+
+          $sorting_found = false;
+          $sections = $node->get('field_os2web_page_section_sort');
+          foreach ( $sections->referencedEntities() AS $idx => $paragraph ) {
+            if ($paragraph->hasField('field_os2web_page_section_sort') && $paragraph->hasField('field_sorting')) {
+              if ($paragraph->field_os2web_page_section_sort->target_id == $tax_id) {
+                $sorting_found = true;
+                $resultSort[] = (object) array(
+                  'name' => $node->getTitle(),
+                  'sort' => $paragraph->field_sorting->value,
+                  'itemIdx' => $itemIdx
+                );
+              }
+            }
+          }
+
+          if (!$sorting_found) {
+            $resultSort[] = (object) array(
+              'name' => $node->getTitle(),
+              'sort' => ((count($view->result) + $itemIdx) * 100),
+              'itemIdx' => $itemIdx
+            );
+          }
+        }
+      }
+
+      $sort = array();
+      foreach ( $resultSort AS $key => $row ) {
+        $sort[$key] = $row->sort;
+      }
+      array_multisort($sort, SORT_ASC, $resultSort);
+
+      $res = array();
+      foreach ( $resultSort AS $sortRow ) {
+        $res[] = $view->result[$sortRow->itemIdx];
+      }
+
+      $view->result = $res;
+
+    }
+  }
+
+}

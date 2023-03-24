@@ -23,6 +23,7 @@ regions:
   featured_bottom_first: 'Featured bottom first'
   footer__latest_content: 'Footer - latest content'
   footer_first: 'Footer first'
+  footer_second: 'Footer second'
   embedded_code: 'Embedded code'
 
 libraries:

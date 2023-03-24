@@ -88,7 +88,8 @@ $header-top-menu-size-sm: 50px;
       }
     }
     a {
-      font-size: 2rem;
+      font-size: 1.6rem;
+      font-weight: 700;
       &.is-active {
         text-decoration: none;
       }
@@ -131,7 +132,7 @@ $header-bottom-menu-size: 70px;
           list-style: none;
           float: left;
           min-height: 70px;
-          display: flex;
+          display: flex !important;
           align-items: center;
           padding-left: 0;
           &:before {
@@ -144,7 +145,7 @@ $header-bottom-menu-size: 70px;
             color: $color-black;
             min-height: 70px;
             padding: 0 25px;
-            display: flex;
+            display: flex !important;
             align-items: center;
             transition: .4s ease;
             &:focus {

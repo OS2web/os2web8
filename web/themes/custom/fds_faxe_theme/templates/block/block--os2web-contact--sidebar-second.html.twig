@@ -1,6 +1,6 @@
 {%
   set classes = [
-  'box',
+  'sidebar__box',
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
@@ -9,7 +9,7 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <div class="box__heading">
+    <div class="sidebar__box-heading">
       <h2{{ title_attributes.addClass('h4') }}>{{ label }}</h2>
     </div>
   {% endif %}

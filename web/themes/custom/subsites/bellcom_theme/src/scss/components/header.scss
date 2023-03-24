@@ -1,0 +1,137 @@
+.header {
+  background-color: white;
+  min-height: 80px;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 99;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  .header__inner-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+
+    .hamburger {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      margin-right: 5px;
+      cursor: pointer;
+
+      @media only screen and (min-width: 768px) {
+        display: none;
+      }
+
+      .bar {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        display: block;
+        transition: all 300ms ease-in-out;
+      }
+
+      .bar-2 {
+        margin: 5px 0;
+      }
+
+      &.active .bar-1 {
+        transform: translateY(8px) rotate(45deg);
+      }
+      &.active .bar-2 {
+        opacity: 0;
+      }
+      &.active .bar-3 {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+
+
+
+
+    .region--header  {
+      width: 50%;
+
+      @media only screen and (max-width: 1024px) {
+        width: 70%;
+      }
+
+      @media only screen and (max-width: 768px) {
+        width: 80%;
+        position: fixed;
+        height: 100vh;
+        background-color: white;
+        right: -85%;
+        top: 80px;
+        display: flex;
+        align-items: center;
+        transition: 0.3s ease-in;
+
+
+      }
+
+
+
+      nav {
+
+        @media only screen and (max-width: 768px) {
+          height: 80%;
+          margin: 0 50px;
+        }
+        ul {
+          display: flex;
+          text-transform: uppercase;
+          justify-content: space-between;
+          align-items: center;
+
+          @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          li {
+            position: relative;
+            display: inline-block;
+
+            .menu-children {
+              display: block;
+            }
+
+            @media only screen and (max-width: 768px) {
+              margin-bottom: 50px;
+            }
+
+            &:hover:after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+
+            &:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 2px;
+              bottom: -3px;
+              left: 0;
+              transform-origin: bottom right;
+              transition: transform 0.25s ease-out;
+              background-color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.region.region--header.is-open {
+  right: 0 !important;
+}
+
+body.is-fixed {
+  position: fixed;
+}

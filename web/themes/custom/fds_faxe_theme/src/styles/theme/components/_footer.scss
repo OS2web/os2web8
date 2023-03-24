@@ -23,7 +23,8 @@
 footer {
   border-top: 70px solid $background_color__secondary;
   background-color: $background_color__default;
- 
+  color: white !important;
+
   .footer {
     padding-block: 80px;
     border: 0;
@@ -64,22 +65,28 @@ footer {
         font-weight: $font-weight-bold;
         font-size: $h4-font-size;
         line-height: 2.2rem;
+        color: white !important;
+      }
+      h3 {
+        color: white !important;
+
+        a {
+          font-size: 2rem;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+      }
+      h4 {
+        color: white !important;
+        font-size: 20px;
       }
     }
 
     .customer-footer {
-      .footer-extra-info {
-        display: inline-table;
-        p {
-          padding-right: 45px;
-        }
-      }
       .region.region-footer-first {
         display: inline-flex;
-        padding-right: 45px;
 
         .contextual-region.block {
-          padding-right: 45px;
           display: table-cell;
         }
       }
@@ -90,7 +97,7 @@ footer {
     }
 
     a {
-      font-size: 2rem;
+      font-size: 16px;
       color: $color-white;
       &:focus {
         outline-color: rgba(255, 255, 255, .5);
@@ -167,7 +174,7 @@ footer {
           &:before {
             display: none;
           }
-         
+
           a {
             font-size: 2rem;
             display: block;
@@ -186,6 +193,24 @@ footer {
               text-decoration: none;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+#block-fds-faxe-theme-sidefod {
+  ul {
+    li {
+      padding-left: 0 !important;
+
+      &:before {
+        display: none;
+      }
+
+      a {
+        &:hover {
+          text-decoration: none;
         }
       }
     }

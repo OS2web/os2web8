@@ -28,10 +28,7 @@ $custom-input-left-right-padding: 20px;
 .form-email,
 .form-select {
   padding: $custom-input-top-bottom-padding $custom-input-left-right-padding;
-
-  border-radius: 4px;
-
-  background-color: #fff;
+  border: 1px solid #000;
 }
 
 .form-checkbox,
@@ -40,7 +37,7 @@ $custom-input-left-right-padding: 20px;
   + label {
 
     &:before {
-      border-color: $color-red-001;
+      border-color: $background_color__default;
     }
   }
 
@@ -49,7 +46,7 @@ $custom-input-left-right-padding: 20px;
     + label {
 
       &:before {
-        background-color: $color-red-001;
+        background-color: $background_color__default;
       }
     }
   }
@@ -280,6 +277,17 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   }
 }
 .form-type-search-api-autocomplete {}
+
+.form-radio:checked+label:after {
+  content: "";
+  height: calc(18px - 10px);
+  width: calc(18px - 10px);
+  background-color: #fff;
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  border-radius: 100%;
+}
 
 // --------------------------------------------------
 // Responsive

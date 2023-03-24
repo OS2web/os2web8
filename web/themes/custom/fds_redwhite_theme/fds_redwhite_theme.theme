@@ -29,6 +29,13 @@ function fds_redwhite_theme_preprocess_page(array &$variables) {
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
   $variables['theme_settings']['contact_information']['vispaakort'] = theme_get_setting('vispaakort');
+
+  $logo = theme_get_setting('logo');
+  if (!empty($logo) && !empty($logo['url']) && $logo['use_default'] == 0) {
+    file_put_contents('/var/www/debug.log', print_r( $logo, true). "\n", FILE_APPEND);
+    $variables['custom_logo'] = $logo['url'];
+  }
+
 }
 
 /**
@@ -254,14 +261,14 @@ function fds_redwhite_theme_preprocess_office_hours(&$variables) {
   foreach ($office_hours as $info) {
     $label = $info['label'];
     $label_length = max($label_length, mb_strlen($label));
-
     $items[] = [
       'label' => $label,
       'slots' => ['#type' => 'markup', '#markup' => $info['formatted_slots']],
       'comments' => ['#type' => 'markup', '#markup' => $info['comments']],
       'suffix' => $variables['item_separator'],
       // Is open indicator.
-      'is_open' => $info['closed'] == null,
+//      'is_open' => ($info['closed'] == null)
+      'is_open' => true,
       // @todo Use $variables['item_separator'] in office-hours.html.twig.
     ];
   }
@@ -324,18 +331,6 @@ function fds_redwhite_theme_preprocess_field(&$variables) {
   }
 }
 
-/**
- * Implements hook_preprocess_term().
- */
-function fds_redwhite_theme_preprocess_taxonomy_term(array &$variables) {
-  /** @var \Drupal\taxonomy\TermInterface $term */
-  $term = $variables['term'];
-
-  // Background color
-  if ($term->field_os2web_color && $term->field_os2web_color->value) {
-    $variables['background_color'] = $term->field_os2web_color->value;
-  }
-}
 /**
  * Implements hook_preprocess_file_link().
  */
