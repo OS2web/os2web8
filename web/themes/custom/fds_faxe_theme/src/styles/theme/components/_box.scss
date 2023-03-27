@@ -23,8 +23,6 @@
 .box {
   background-color: #fff;
   text-align: center;
-  min-height: 350px;
-  margin: 0 -15px;
   .box__heading {
     padding: 20px 20px;
     color: $color-black;
@@ -67,6 +65,8 @@
 // Variants.
 .box--section-link {
   margin-bottom: 14px;
+  min-height: 350px;
+  margin: 0 -15px;
 
   .box__body {
     min-height: 40px;
