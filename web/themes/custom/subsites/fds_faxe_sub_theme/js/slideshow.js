@@ -18,11 +18,12 @@
         container: selector,
         items: 1,
         autoplay: true,
+        autoHeight: true,
         autoplayHoverPause: true,
         mouseDrag: true,
         gutter: 0,
         rewind: true,
-        controls: true,
+        controls: false,
         nested: false,
       });
     }
