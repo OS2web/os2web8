@@ -57,6 +57,7 @@
 $controls-size: 20px;
 
 .tns-controls {
+  display: none;
   button {
     display: flex;
     position: absolute;
