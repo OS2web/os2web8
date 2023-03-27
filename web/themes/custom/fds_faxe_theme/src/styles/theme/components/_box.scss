@@ -64,9 +64,8 @@
 
 // Variants.
 .box--section-link {
-  margin-bottom: 14px;
   min-height: 350px;
-  margin: 0 -15px;
+  margin: 0 -15px 14px -15px;
 
   .box__body {
     min-height: 40px;
