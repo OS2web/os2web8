@@ -25,6 +25,7 @@ $sidenav-list-dot-spacing: 22px;
 
 .region-sidebar-first,
 .region-sidebar-second {
+  background-color: transparent;
 	& > div {
 		h2 {
 			margin: 0 0 20px;
@@ -44,7 +45,7 @@ $sidenav-list-dot-spacing: 22px;
 					li {
 						padding: 0;
 						border-bottom: 1px solid $color-light-gray1;
-						background-color: $color-white;
+						background-color: transparent;
 						position: relative;
 						margin-top: 0;
 						&::before {
@@ -75,7 +76,7 @@ $sidenav-list-dot-spacing: 22px;
 							background: $color-primary!important;
 							transition: all 0.2s ease-in-out;
 						}
-						
+
 					}
 					//& > .facets-checkbox {
 					//	&:checked {
