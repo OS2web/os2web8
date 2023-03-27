@@ -1,7 +1,13 @@
 
 .block-last-updated {
   background-color: $background-normal;
-  color: rgb(65, 65, 65);
+  color: #000;
   padding: 12px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  .last-updated-date {
+    font-weight: bold;
+  }
 }
