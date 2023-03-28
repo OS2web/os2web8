@@ -153,6 +153,27 @@ svg.ext {
 .table-responsive {
   overflow-x: auto;
 }
+
+#block-fds-portal-ringsted-theme-main-content--2 {
+  .action-links {
+    li {
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+      a {
+        color: $color-primary;
+        text-decoration: none;
+        padding: 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
