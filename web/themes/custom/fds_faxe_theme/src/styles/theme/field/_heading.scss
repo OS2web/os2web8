@@ -22,6 +22,19 @@
 
 .field--name-field-os2web-simple-text-heading {}
 
+.field--name-field-os2web-page-primaryicon {
+  display: inline-flex;
+  padding-right: 10px;
+  img {
+    margin: auto;
+    display: block;
+  }
+}
+
+.field--name-field-os2web-page-heading {
+  display: inline-flex;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
