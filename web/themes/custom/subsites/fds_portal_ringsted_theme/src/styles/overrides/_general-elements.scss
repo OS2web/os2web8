@@ -172,6 +172,35 @@ svg.ext {
       }
     }
   }
+  .forum {
+    .table-responsive {
+      table {
+        tbody {
+          tr {
+            .container {
+              .indented {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.comment-wrapper {
+  article {
+    .content {
+      .links {
+        li {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 // --------------------------------------------------
