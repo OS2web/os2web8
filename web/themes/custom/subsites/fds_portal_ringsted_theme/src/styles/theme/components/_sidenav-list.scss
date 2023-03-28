@@ -25,7 +25,7 @@ $sidenav-list-dot-spacing: 22px;
 
 .region-sidebar-first,
 .region-sidebar-second {
-  background-color: transparent;
+  background-color: transparent !important;
 	& > div {
 		h2 {
 			margin: 0 0 20px;
