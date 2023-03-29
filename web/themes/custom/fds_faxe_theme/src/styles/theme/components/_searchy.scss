@@ -180,6 +180,11 @@
                       justify-content: space-evenly;
                       align-items: center;
                       margin-top: 20px;
+                      gap: 10px;
+
+                      @media only screen and (max-width: 768px) {
+                        flex-direction: column;
+                      }
 
                       a {
                         background-color: #5e5e5e;
@@ -199,6 +204,7 @@
                         text-decoration: none;
                         flex-basis: 33%;
                         transition: .3s ease;
+                        width: 100%;
 
                         &:hover {
                           background-color: #404040;
@@ -222,6 +228,12 @@
                     padding-inline-start: 0;
                     list-style-type: none;
                     .views-row {
+                      background-color: white;
+                      .entity-teaser--os2web-news {
+                        background-color: white;
+                        border-radius: 0px;
+                        box-shadow: none;
+                      }
                       a {
                         padding: 0 30px;
 
