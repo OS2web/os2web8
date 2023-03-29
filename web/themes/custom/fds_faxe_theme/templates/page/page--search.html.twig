@@ -13,6 +13,13 @@
       ]
       %}
 
+
+
+      <main {{ content_attributes.addClass(content_classes) }}>
+        <div class="layout-content">
+          {{ page.content }}
+        </div>
+      </main>
       {% if page.sidebar_first %}
         {% block sidebar_first %}
           <aside class="col-12 col-sm-4 sidebar-column">
@@ -22,12 +29,6 @@
           </aside>
         {% endblock %}
       {% endif %}
-
-      <main {{ content_attributes.addClass(content_classes) }}>
-        <div class="layout-content">
-          {{ page.content }}
-        </div>
-      </main>
     </div>
   </div>
 
