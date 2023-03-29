@@ -180,6 +180,7 @@
                       justify-content: space-evenly;
                       align-items: center;
                       margin-top: 20px;
+                      gap: 10px;
 
                       a {
                         background-color: #5e5e5e;
@@ -222,6 +223,7 @@
                     padding-inline-start: 0;
                     list-style-type: none;
                     .views-row {
+                      background-color: white;
                       a {
                         padding: 0 30px;
 
