@@ -8,7 +8,7 @@
 %}
 {% if lastupdated %}
 <div{{ attributes.addClass(classes) }}>
-    {{ "Last updated"|trans }}<br>
-{{ lastupdated }}
+  <div class="last-updated-title">{{ "Last updated"|trans }}</div>
+<div class="last-updated-date">{{ lastupdated }}</div>
 </div>
 {% endif %}

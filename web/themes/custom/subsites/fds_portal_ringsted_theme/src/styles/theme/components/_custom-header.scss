@@ -59,6 +59,18 @@
       max-width: 685px;
       margin: 0 auto;
       &#views-exposed-form-os2web-search-os2web-search-page {
+        .form--inline {
+          .form-group {
+            label {
+              display: none;
+            }
+          }
+          .form-actions {
+            .form-submit {
+              opacity: 0;
+            }
+          }
+        }
         .form-input {
           margin: 0;
           padding: 20px 50px 20px 20px;

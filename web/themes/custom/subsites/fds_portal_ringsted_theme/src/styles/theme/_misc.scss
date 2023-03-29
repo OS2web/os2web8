@@ -14,6 +14,17 @@
 // Styling
 // --------------------------------------------------
 
+
+//Content Links
+
+.view-display-id-links {
+  padding: 20px 0;
+
+  .view-header {
+    margin-bottom: 10px;
+  }
+}
+
 // Increased specificity to win over base theme.
 body .container-fluid {
   padding-left: $grid-gutter-width;
