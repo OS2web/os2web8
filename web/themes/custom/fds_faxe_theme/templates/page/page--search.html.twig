@@ -9,13 +9,13 @@
     <div class="row layout--hidden-on-sections">
       {%
         set content_classes = [
-        'col-12 content-column'
+        'col-12 col-sm-8 content-column'
       ]
       %}
 
       {% if page.sidebar_first %}
         {% block sidebar_first %}
-          <aside class="col-12 col-md-3 sidebar-column">
+          <aside class="col-12 col-sm-4 sidebar-column">
             <div class="layout-sidebar-left">
               {{ page.sidebar_first }}
             </div>
