@@ -52,6 +52,30 @@
   }
 }
 
+.field--name-field-link-til-andet-indhold {
+  .field__item {
+    a {
+      &::before {
+        content: '';
+        display: inline-block !important;
+        position: relative;
+        left: 0;
+        top: 4px;
+        width: 19px;
+        height: 19px;
+        margin-right: 5px;
+        background: url('../images/sprite.png') no-repeat 0 -48px;
+      }
+      &:hover {
+        &::before {
+          background-position: -19px -48px;
+        }
+      }
+    }
+  }
+}
+
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

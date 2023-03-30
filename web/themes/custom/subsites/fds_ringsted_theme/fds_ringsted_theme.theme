@@ -42,7 +42,6 @@ function fds_ringsted_theme_preprocess_page(array &$variables) {
   $variables['youtube_url'] = theme_get_setting('youtube_url');
   $variables['youtube_tooltip'] = theme_get_setting('youtube_tooltip');
 
-
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
@@ -399,13 +398,6 @@ function fds_ringsted_theme_preprocess_media(&$variables) {
  * Implements hook_preprocess().
  */
 function fds_ringsted_theme_preprocess_block(&$variables, $hook) {
-
-  if ($variables['attributes']['id'] == 'block-show-sub-pages') {
-
-    print_r($variables['attributes']['id']);
-
-  }
-  // $node = \Drupal::routeMatch()->getParameter('node');
 
 }
 
