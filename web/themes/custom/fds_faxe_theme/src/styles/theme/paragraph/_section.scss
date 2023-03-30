@@ -20,6 +20,20 @@
 // Styling
 // --------------------------------------------------
 
+.node--type-os2web-page {
+  .node__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .field--name-field-os2web-page-heading {
+      padding-top: 0 !important;
+    }
+  }
+}
+
+
 .paragraph--type--os2web-section-paragraph {
   .field--name-field-os2web-section-par-image {
     display: inline-block;
