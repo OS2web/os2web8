@@ -23,12 +23,12 @@
 .node--type-os2web-page {
   .node__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     .field--name-field-os2web-page-heading {
-      padding-top: 0 !important;
+      padding: 0;
+      margin: 0;
     }
   }
 }
