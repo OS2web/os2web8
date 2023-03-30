@@ -36,7 +36,7 @@ function fds_faxe_sub_theme_preprocess_page(array &$variables) {
  * Implements hook_form_search_block_form_alter().
  */
 function fds_faxe_sub_theme_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
-  $form['keys']['#attributes']['placeholder'] = t('Hvad søger du?');
+  $form['keys']['#attributes']['placeholder'] = t('Søg på hjemmesiden');
 }
 
 /**
