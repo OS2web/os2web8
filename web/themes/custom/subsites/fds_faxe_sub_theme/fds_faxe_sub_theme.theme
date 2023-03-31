@@ -179,3 +179,12 @@ function fds_faxe_sub_theme_preprocess_media(array &$variables) {
     }
   }
 }
+
+function fds_faxe_sub_theme_preprocess_field(&$variables) {
+  // Check if the field is "field_selfbetjening_ref" and if the current user is
+  // in the "editor" role.
+  if ($variables['element']['#field_name'] == 'field_selfbetjening_ref' && in_array('editor', $variables['element']['#view_mode'])) {
+    // Hide the field output for the "editor" role.
+    $variables['items'] = array();
+  }
+}
