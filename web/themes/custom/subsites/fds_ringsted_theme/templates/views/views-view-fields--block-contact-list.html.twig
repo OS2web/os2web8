@@ -39,7 +39,12 @@
 <div class="teacher-thumbnail"s>
     <div class="image-container">{{ fields.field_image.content }}</div>
     <p class="contact-name">{{ fields.name.content }}</p>
-    <span class="contact-jobtask">{{ fields.field_os2web_contact_job_task.content }}</span>
+    {% set title = fields.field_os2web_contact_job_title.content|striptags|trim %}
+    {% if title|length > 0 %}
+        <span class="contact-jobtask">{{ title }}</span>
+    {% else %}
+        <span class="contact-jobtask">{{ fields.field_os2web_contact_job_task.content }}</span>
+    {% endif %}
 </div>
 </a>
 

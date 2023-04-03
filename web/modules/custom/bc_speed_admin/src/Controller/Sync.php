@@ -57,7 +57,6 @@ Class Sync extends ControllerBase
                         );
                         $Contact = Contact::create($ContactInfo);
                         $Contact->set('field_import_ref', $teacher->TeacherId);
-                        $Contact->set('field_os2web_contact_job_title', $teacher->UserType);
                     }
 
                     if (!empty($teacher->Name)) $Contact->set('field_os2web_contact_firstname', $teacher->Name);
