@@ -32,7 +32,6 @@ function fds_redwhite_theme_preprocess_page(array &$variables) {
 
   $logo = theme_get_setting('logo');
   if (!empty($logo) && !empty($logo['url']) && $logo['use_default'] == 0) {
-    file_put_contents('/var/www/debug.log', print_r( $logo, true). "\n", FILE_APPEND);
     $variables['custom_logo'] = $logo['url'];
   }
 
