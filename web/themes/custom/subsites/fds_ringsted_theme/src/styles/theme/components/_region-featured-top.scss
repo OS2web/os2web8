@@ -44,10 +44,13 @@
         background: rgba(255, 255, 255, 0.8);
         margin-left: 0;
         transition: all 0.2s ease-in-out;
-        font-family: "Museo300", sans-serif;
+        font-family: "Museo 300", sans-serif;
         .banner__heading + .banner__body,
         .banner__heading + .banner__actions {
           margin-bottom: 25px;
+        }
+        .banner__body {
+          max-width: 355px;
         }
         .field--type-text-long a {
           font-weight: 400;
