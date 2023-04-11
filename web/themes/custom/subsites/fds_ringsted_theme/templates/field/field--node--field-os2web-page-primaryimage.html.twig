@@ -59,7 +59,7 @@
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
           {{ item.content }}
-          <div class="node-slide-description menu-link-text">{{ item.content['#alt_text'] }}</div>
+          <div style="visibility: hidden;" class="node-slide-description menu-link-text">{{ item.content['#alt_text'] }}</div>
         </div>
       {% endfor %}
     </div>
@@ -67,7 +67,7 @@
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
         {{ item.content }}
-        <div class="node-slide-description menu-link-text">{{ item.content['#alt_text'] }}</div>
+        <div style="visibility: hidden;" class="node-slide-description menu-link-text">{{ item.content['#alt_text'] }}</div>
       </div>
     {% endfor %}
   {% endif %}
@@ -80,7 +80,7 @@
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
           {{ item.content }}
-          <div class="node-slide-description menu-link-text">{{ item.content['#alt_text'] }}</div>
+          <div style="visibility: hidden;" class="node-slide-description menu-link-text">{{ item.content['#alt_text'] }}</div>
         </div>
       {% endfor %}
       {% if multiple %}
