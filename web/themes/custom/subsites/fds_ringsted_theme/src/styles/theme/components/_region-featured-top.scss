@@ -41,7 +41,6 @@
       margin: 0 auto;
       .banner__box {
         padding: 15px 20px;
-        max-width: 355px;
         background: rgba(255, 255, 255, 0.8);
         margin-left: 0;
         transition: all 0.2s ease-in-out;
@@ -55,6 +54,10 @@
         h2 {
           line-height: 1em;
           color: $color-dark-gray2;
+          font-size: 40px;
+        }
+        p {
+          font-size: 26px;
         }
         .banner__actions {
           margin-bottom: 0;
