@@ -39,7 +39,7 @@
   dom_id ? 'js-view-dom-id-' ~ dom_id,
 ]
 %}
-<a href="#">Vis alle</a>
+<a class="events-show-all" href="/begivenheder"><span>Vis alle</span> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if title %}
