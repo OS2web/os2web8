@@ -11,14 +11,16 @@
     </div>
     <div class="content-wrapper {% if selectedLayout == 'image_right' %} content-wrapper-image-right {% endif %}  {% if selectedTextImgBackground is empty %} content-wrapper-no-bg {% endif %}" style="{% if selectedTextImgBackground in ['black', 'grey', 'blue', 'green'] %}color: #fff; {% endif %}">
       <div class="heading-wrapper">
+        {% if paragraph.field_text_image_prefix is not empty %}
         <div class="prefix-container">
         {% if selectedTextImgBackground is empty or selectedTextImgBackground == 'sand' %}
         {% include "@bellcom_theme/assets/images/arrowcircleright.svg" with { custom_color: "#344E41" } %}
         {% else %}
         {% include "@bellcom_theme/assets/images/arrowcircleright.svg" with { custom_color: "white" } %}
         {% endif %}
-          <span style="{% if selectedTextImgBackground is empty or selectedTextImgBackground == 'sand' %}color: #344E41; {% endif %}">Om produktet</span>
+          <span style="{% if selectedTextImgBackground is empty or selectedTextImgBackground == 'sand' %}color: #344E41; {% endif %}">{{ content.field_text_image_prefix }}</span>
         </div>
+        {% endif %}
         <h2>
         {{ content.field_text_image_heading }}
         </h2>
