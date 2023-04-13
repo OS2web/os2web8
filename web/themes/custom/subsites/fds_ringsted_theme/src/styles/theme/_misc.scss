@@ -14,26 +14,29 @@
 // Styling
 // --------------------------------------------------
 
-.events-show-all {
-  text-align: right;
+.events-show-all-wrapper {
   width: 100%;
-  text-decoration: none;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  color: $background_color__tertiary;
-  font-family: "Museo 300", sans-serif;
-  transition: .2s ease;
+  align-items: center;
+  .events-show-all {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    color: $background_color__tertiary;
+    font-family: "Museo 300", sans-serif;
+    transition: .2s ease;
 
-  &:hover {
-    color: #96c31e;
-  }
+    &:hover {
+      color: #96c31e;
+    }
 
-  span {
-    margin-right: 10px;
-  }
-  .fa-chevron-right {
-    font-size: 12px;
+    span {
+      margin-right: 10px;
+    }
+    .fa-chevron-right {
+      font-size: 12px;
+    }
   }
 }
 
