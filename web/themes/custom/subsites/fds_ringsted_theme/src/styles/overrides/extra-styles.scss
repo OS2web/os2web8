@@ -1102,6 +1102,8 @@ body.path-frontpage {
       color: white;
       text-transform: lowercase;
       background-color: #5a7300;
+      font-size: $small-text;
+      max-height: 70px;
     }
   }
   .field--type-text-with-summary {
