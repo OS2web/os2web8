@@ -1087,7 +1087,7 @@ body.path-frontpage {
       padding: 0;
       z-index: 1;
 
-      &:hover .os2web-event-date {
+      &:hover ~ .row > .os2web-event-date {
         background-color: transparent !important;
         border: 1px solid #597300 !important;
         color: #597300 !important;
