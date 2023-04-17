@@ -7,7 +7,9 @@
   {% elseif selectedTextImgBackground == 'blue' %} #22223B; {% elseif selectedTextImgBackground == 'grey' %} #343A40;
   {% elseif selectedTextImgBackground == 'sand' %} #DAD7CD; {% endif %}{% if selectedTextImgBackground is empty %} border-radius: 0px;{% endif %}">
     <div class="image-wrapper">
-      <img style="{% if selectedTextImgBackground is empty %} border-radius: 10px; {% endif %}" src="/themes/custom/subsites/bellcom_theme/assets/images/placeholder-img-4.jpg">
+      {% if paragraph.field_text_image_img.value %}
+        <img style="{% if selectedTextImgBackground is empty %} border-radius: 10px; {% endif %}" src="{{ file_url(paragraph.field_text_image_img.entity.fileuri) }}"  alt="{{ paragraph.field_text_image_img.alt }}" title="{{ paragraph.field_text_image_img.title }}">
+      {% endif %}
     </div>
     <div class="content-wrapper {% if selectedLayout == 'image_right' %} content-wrapper-image-right {% endif %}  {% if selectedTextImgBackground is empty %} content-wrapper-no-bg {% endif %}" style="{% if selectedTextImgBackground in ['black', 'grey', 'blue', 'green'] %}color: #fff; {% endif %}">
       <div class="heading-wrapper">
@@ -47,10 +49,12 @@
             <span>{{ paragraph.field_text_image_btn_1.0.title }}</span>
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
           </a>
+          {% if paragraph.field_text_image_btn_2.value is not empty %}
           <a class="text_image_btn_2" href="{{ paragraph.field_text_image_btn_2.0.url }}">
             <span>{{ paragraph.field_text_image_btn_2.0.title }}</span>
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
           </a>
+          {% endif %}
         </div>
         {% endif %}
       </div>

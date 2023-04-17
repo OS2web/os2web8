@@ -1,0 +1,16 @@
+{% set images = paragraph.field_client_logo %}
+<div class="clients-wrapper">
+  <div class="clients_inner-wrapper">
+    {% if images|length %}
+      {% set counter = 0 %}
+      {% for item in images %}
+        {% if counter < 8 %}
+          <div class="client-element">
+            <img src="{{ file_url(item.entity.uri.value) }}" alt="{{ item.alt }}" />
+          </div>
+          {% set counter = counter + 1 %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>

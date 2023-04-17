@@ -1918,7 +1918,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .content-body {
         font-family: "Poppins", sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         margin: 20px 0;
       }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .content-element .text_image_btn_wrapper {
@@ -2044,6 +2044,63 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .content-element form button:active {
               opacity: 1;
             }
+.clients-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-wrapper .clients_inner-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: 80px 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+@media only screen and (max-width: 1024px) {
+.clients-wrapper .clients_inner-wrapper {
+      grid-template-columns: repeat(3, 1fr)
+  }
+    }
+@media only screen and (max-width: 768px) {
+.clients-wrapper .clients_inner-wrapper {
+      grid-template-columns: repeat(2, 1fr)
+  }
+    }
+.clients-wrapper .clients_inner-wrapper .client-element {
+      background-color: #F5F7F9;
+      height: 230px;
+      border-radius: 10px;
+      position: relative;
+    }
+@media only screen and (max-width: 500px) {
+.clients-wrapper .clients_inner-wrapper .client-element {
+        height: 180px
+    }
+      }
+.clients-wrapper .clients_inner-wrapper .client-element:hover img {
+        filter: grayscale(0%);
+
+      }
+.clients-wrapper .clients_inner-wrapper .client-element img {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        object-fit: contain;
+        transform: translateY(-50%) translateX(-50%);
+        filter: grayscale(100%);
+        transition: 0.3s ease-in-out;
+
+      }
+@media only screen and (max-width: 500px) {
+.clients-wrapper .clients_inner-wrapper .client-element img {
+          width: 75%
+
+      }
+        }
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
