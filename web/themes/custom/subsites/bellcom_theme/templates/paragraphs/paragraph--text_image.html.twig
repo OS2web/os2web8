@@ -45,14 +45,22 @@
         {% endif %}
         {% if paragraph.field_text_image_btn_1.value is not empty %}
         <div class="text_image_btn_wrapper">
-          <a class="text_image_btn_1" href="{{ paragraph.field_text_image_btn_1.0.url }}">
+          <a class="text_image_btn_1" style="{% if selectedTextImgBackground in ['green', 'blue', 'grey', 'black'] %}background-color: white; color: black; {% endif %}" href="{{ paragraph.field_text_image_btn_1.0.url }}">
             <span>{{ paragraph.field_text_image_btn_1.0.title }}</span>
+            {% if selectedTextImgBackground in ['green', 'blue', 'grey', 'black'] %}
+            {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "black" } %}
+            {% else %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
+            {% endif %}
           </a>
           {% if paragraph.field_text_image_btn_2.value is not empty %}
-          <a class="text_image_btn_2" href="{{ paragraph.field_text_image_btn_2.0.url }}">
+          <a class="text_image_btn_2" style="{% if selectedTextImgBackground in ['green', 'blue', 'grey', 'black'] %}background-color: white; color: black;½½½½½½½½ {% endif %}" href="{{ paragraph.field_text_image_btn_2.0.url }}">
             <span>{{ paragraph.field_text_image_btn_2.0.title }}</span>
+            {% if selectedTextImgBackground in ['green', 'blue', 'grey', 'black'] %}
+            {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "black" } %}
+            {% else %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
+            {% endif %}
           </a>
           {% endif %}
         </div>
