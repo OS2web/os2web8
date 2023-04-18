@@ -255,6 +255,8 @@ div.field--name-field-os2web-page-description {
     }
     span.file {
       a {
+        display: flex;
+        align-items: center;
         &[href$=".odt"],
         &[href$=".ppt"],
         &[href$=".pptx"],
@@ -268,45 +270,30 @@ div.field--name-field-os2web-page-description {
         &[href$=".xlsb"],
         &[href$=".jpg"],
         &[href$=".jpeg"] {
+          display: flex;
+          align-items: center;
           &::before {
-            content: '';
+            content: '\f138';
             display: inline-block !important;
             position: relative;
             left: 0;
             width: 19px;
             height: 19px;
-            margin-right: 7px;
-            background: transparent url("../images/sprite.png") no-repeat 0 -48px;
-          }
-          &:hover {
-            &::before {
-              background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-              color: blue;
-            }
-          }
-          &:focus {
-            &::before {
-              background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-              color: blue;
-            }
+            font-family: "FontAwesome";
           }
         }
       }
       a[href$=".pdf"] {
+        display: flex;
+        align-items: center;
         &::before {
-          content: '';
+          content: '\f138';
           display: inline-block !important;
           position: relative;
           left: 0;
           width: 19px;
           height: 19px;
-          margin-right: 5px;
-          background: transparent url("../images/sprite.png") no-repeat 0 -48px;
-        }
-        &:hover {
-          &::before {
-            background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-          }
+          font-family: "FontAwesome";
         }
       }
     }
@@ -362,60 +349,20 @@ div.field--name-field-os2web-page-description {
     }
   }
 }
-a[href$=".pdf"],
-a[href$=".ppt"] {
-  &:hover,
-  &:focus {
-    &::before {
-      background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-    }
-  }
-}
-a[href$=".pptx"] {
-  &:hover {
-    &::before {
-      background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-    }
-  }
-  &:focus {
-    &::before {
-      a[href$=".pptm"] {
-        &:hover {
-          &::before {
-            background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-          }
-        }
-      }
-    }
-  }
-}
+
 a {
   &[href$=".pdf"],
   &[href$=".ppt"],
   &[href$=".pptx"],
   &[href$=".pptm"] {
     &::before {
-      content: '';
+      content: '\f138';
       display: inline-block !important;
       position: relative;
       left: 0;
-      top: 4px;
       width: 19px;
       height: 19px;
-      margin-right: 6px;
-      background: transparent url("../images/sprite.png") no-repeat 0 -48px;
-    }
-    &:hover {
-      &::before {
-        background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-      }
-    }
-  }
-}
-a[href$=".pptm"] {
-  &:focus {
-    &::before {
-      background: transparent url("../images/sprite.png") no-repeat -19px -48px;
+      font-family: "FontAwesome";
     }
   }
 }
@@ -430,25 +377,13 @@ a {
   &[href$=".jpeg"],
   &[href$=".odt"] {
     &::before {
-      content: '';
+      content: '\f138';
       display: inline-block !important;
       position: relative;
       left: 0;
-      top: 4px;
       width: 19px;
       height: 19px;
-      margin-right: 5px;
-      background: transparent url("../images/sprite.png") no-repeat 0 -48px;
-    }
-    &:hover {
-      &::before {
-        background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-      }
-    }
-    &:focus {
-      &::before {
-        background: transparent url("../images/sprite.png") no-repeat -19px -48px;
-      }
+      font-family: "FontAwesome";
     }
   }
 }
@@ -1937,14 +1872,15 @@ a {
 }
 
 a[data-entity-type="media"] {
+  display: flex;
+  align-items: center;
   &:before {
-    content: '';
+    content: '\f138';
     display: inline-block !important;
     position: relative;
     left: 0;
     width: 19px;
     height: 19px;
-    margin-right: 7px;
-    background: transparent url("../images/sprite.png") no-repeat 0 -48px;
+    font-family: "FontAwesome";
   }
 }
