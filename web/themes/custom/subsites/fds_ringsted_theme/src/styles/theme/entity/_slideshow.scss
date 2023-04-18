@@ -24,6 +24,7 @@
 			cursor: pointer;
 			border-radius: 0;
 			transform: translateY(-50%);
+            opacity: 1 !important;
 			&:before {
 				content: "";
 				display: none;
@@ -41,6 +42,7 @@
 			cursor: pointer;
 			border-radius: 0;
 			transform: translateY(-50%);
+            opacity: 1 !important;
 			&:before {
 				content: "";
 				display: none;
