@@ -1935,3 +1935,16 @@ a {
     }
   }
 }
+
+a[data-entity-type="media"] {
+  &:before {
+    content: '';
+    display: inline-block !important;
+    position: relative;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    margin-right: 7px;
+    background: transparent url("../images/sprite.png") no-repeat 0 -48px;
+  }
+}
