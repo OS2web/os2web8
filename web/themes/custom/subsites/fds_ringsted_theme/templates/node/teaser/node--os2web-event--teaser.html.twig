@@ -85,10 +85,16 @@
   {{ title_prefix }}
   {% if label and not page %}
     <div role="region" aria-label="{{'Teaser'| t}}" class="row no-gutters">
+      {{ node.field_os2web_event_start_date.value }}
+
       <time class="col-2 os2web-event-date">
-        {{ node.field_os2web_event_start_date.value|date('d') }}
+        {% if node.field_os2web_event_start_date|length %}
+          {{ node.field_os2web_event_start_date.value|date('d') }}
+        {% endif %}
         <br />
-        {{ node.field_os2web_event_start_date.value|date('M') | t }}
+        {% if node.field_os2web_event_start_date|length %}
+          {{ node.field_os2web_event_start_date.value|date('M') | t }}
+        {% endif %}
       </time>
       <div class="col-10 os2web-event-title">
         <h2{{ title_attributes }}>{{ label }}</h2>
