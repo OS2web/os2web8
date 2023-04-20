@@ -1,9 +1,30 @@
 .entity-teaser--os2web-event {
+  .fullhref {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 0;
+    z-index: 1;
+
+    &:hover ~ .row > .os2web-event-date {
+      background-color: transparent !important;
+      border: 1px solid #597300 !important;
+      color: #597300 !important;
+    }
+  }
   .os2web-event-date {
-    padding: 10px 0;
+    align-self: flex-start;
+    width: 50px;
+    height: auto;
+    padding: 5px;
     text-align: center;
-    background: var(--primary);
-    color: var(--white);
+    color: white;
+    text-transform: lowercase;
+    background-color: #5a7300;
     font-size: $small-text;
     max-height: 70px;
   }

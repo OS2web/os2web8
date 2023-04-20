@@ -40,13 +40,17 @@
       width: 100%;
       margin: 0 auto;
       .banner__box {
-        padding: 40px 37px 60px;
+        padding: 15px 20px;
         background: rgba(255, 255, 255, 0.8);
         margin-left: 0;
         transition: all 0.2s ease-in-out;
+        font-family: "Museo 300", sans-serif;
         .banner__heading + .banner__body,
         .banner__heading + .banner__actions {
-          margin-top: 50px;
+          margin-bottom: 25px;
+        }
+        .banner__body {
+          max-width: 355px;
         }
         .field--type-text-long a {
           font-weight: 400;
@@ -54,6 +58,10 @@
         h2 {
           line-height: 1em;
           color: $color-dark-gray2;
+          font-size: 26px;
+        }
+        p {
+          font-size: 16px;
         }
         .banner__actions {
           margin-bottom: 0;

@@ -93,6 +93,55 @@
   }
 }
 
+#block-fds-portal-ringsted-theme-main-content--2 {
+  .views-element-container {
+    .view {
+      .view-content {
+        .item-list {
+          ul {
+            li {
+              margin: 0 0 40px 0;
+
+              &:before {
+                display: none !important;
+              }
+              .views-field {
+                .views-label {
+                  font-weight: bold;
+                }
+                .field-content {
+                  .dropbutton-wrapper {
+                    .dropbutton-widget {
+                      .dropbutton {
+                        li {
+                          margin: 0;
+                          padding: 0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .view-filters {
+        .views-exposed-form {
+          .form--inline {
+            .form-item {
+              .form-label {
+                margin: 0;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

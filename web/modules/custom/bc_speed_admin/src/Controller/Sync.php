@@ -45,7 +45,6 @@ Class Sync extends ControllerBase
 
             foreach ( $teachers as $teacher ) {
                 if ($teacher->Active) {
-
                     $find = self::$db->query("SELECT * FROM os2web_contact__field_import_ref WHERE field_import_ref_value='{$teacher->TeacherId}';");
                     $found = $find->fetchAll();
                     if (count($found) > 0) {
@@ -57,7 +56,6 @@ Class Sync extends ControllerBase
                         );
                         $Contact = Contact::create($ContactInfo);
                         $Contact->set('field_import_ref', $teacher->TeacherId);
-                        $Contact->set('field_os2web_contact_job_title', $teacher->UserType);
                     }
 
                     if (!empty($teacher->Name)) $Contact->set('field_os2web_contact_firstname', $teacher->Name);
@@ -123,6 +121,14 @@ Class Sync extends ControllerBase
                       }
 
                     }
+                } else {
+                  $find = self::$db->query("SELECT * FROM os2web_contact__field_import_ref WHERE field_import_ref_value='{$teacher->TeacherId}';");
+                  $found = $find->fetchAll();
+                  if (count($found) > 0) {
+                    $first = current($found);
+                    $Contact = Contact::load($first->entity_id);
+                    $Contact->status = 0;
+                  }
                 }
             }
         }
@@ -252,7 +258,7 @@ Class Sync extends ControllerBase
         $description = strip_tags($description, '<br><a>');
       }
 
-      if (!empty($obj->SubCategories)) {
+      if (false && !empty($obj->SubCategories)) {
         $html = '';
         foreach( $obj->SubCategories AS $idx => $cat ) {
             $html .= '<div class="course-text">' . $cat->Name . '</div><br>';
@@ -264,7 +270,7 @@ Class Sync extends ControllerBase
       }
 
       if (!empty($obj->CouseId) && is_numeric($obj->CouseId)) {
-        $description .= '<br><a class="course-assign" href="https://ring.speedadmin.dk/registration#/Course/' . $obj->CouseId . '" target="_blank">Tilmeld</a>';
+        $description .= '<br><br><a class="course-assign" href="https://ring.speedadmin.dk/registration#/Course/' . $obj->CouseId . '" target="_blank">Tilmeld</a>';
       }
 
       if (!empty($description)) {

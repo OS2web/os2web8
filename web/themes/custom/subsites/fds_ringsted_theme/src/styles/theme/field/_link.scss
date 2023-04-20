@@ -52,6 +52,23 @@
   }
 }
 
+.field--name-field-link-til-andet-indhold {
+  .field__item {
+    a {
+      &::before {
+        content: '\f138';
+        display: inline-block !important;
+        position: relative;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        font-family: "FontAwesome";
+      }
+    }
+  }
+}
+
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

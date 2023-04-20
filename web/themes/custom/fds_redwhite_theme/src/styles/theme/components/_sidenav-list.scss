@@ -243,14 +243,29 @@ $sidenav-list-dot-spacing: 22px;
 			}
 		}
 	}
-		& > li.active {
-			a {
-				&::before {
-					color: $color-white;
-				}
+	& > li.active {
+		a {
+			&::before {
+				color: $color-white;
 			}
 		}
 	}
+	li.is-collapsed {
+		& a {
+			&::after {
+				content: '';
+				width: 8px;
+				height: 24px;
+				position: absolute;
+				right: 15px;
+				position: absolute;
+				display: block;
+				top: 10px;
+				background: transparent url("../images/sprite.png") no-repeat -137px -23px;
+			}
+		}
+	}
+}
 	.block-facets ul ul li {
 		margin-left: 0;
 		label {

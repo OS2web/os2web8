@@ -36,7 +36,7 @@ function fds_faxe_sub_theme_preprocess_page(array &$variables) {
  * Implements hook_form_search_block_form_alter().
  */
 function fds_faxe_sub_theme_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
-  $form['keys']['#attributes']['placeholder'] = t('Hvad søger du?');
+  $form['keys']['#attributes']['placeholder'] = t('Søg på hjemmesiden');
 }
 
 /**
@@ -177,5 +177,18 @@ function fds_faxe_sub_theme_preprocess_media(array &$variables) {
       $file = \Drupal\file\Entity\File::load($fileId);
       $file->setFilename($name);
     }
+  }
+}
+
+function fds_faxe_sub_theme_preprocess_field(&$variables) {
+  $field_name = $variables['element']['#field_name'];
+  $view_mode = $variables['element']['#view_mode'];
+  $user = \Drupal::currentUser();
+
+  // Check if the field is "field_selfbetjening_ref" and if the current user is
+  // in the "editor" role.
+  if ($field_name == 'field_selfbetjening_ref' && $user->hasRole('editor') && $view_mode == 'full') {
+    // Hide the field output for the "editor" role.
+    $variables['items'] = [];
   }
 }
