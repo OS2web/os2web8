@@ -7,7 +7,7 @@
   {% elseif selectedBackground == 'grey' %} background-color: #343A40;
   {% else %} background-color: transparent; {% endif %}">
     <div class="text-bg__element-wrapper" style="{% if selectedBackground in ['black', 'green', 'blue', 'grey'] %} color: #fff;
-     {% else %} color: black; {% endif %}">
+     {% elseif selectedBackground == 'sand' or selectedBackground is empty %} color: black; {% endif %}{% if selectedBackground is empty %} padding: 0; {% endif %}">
       <h2 data-aos="fade-in" data-aos-duration="800" data-aos-easing="ease" data-aos-once="true" data-aos-delay="500" class="text-bg__element-heading">
         {{ content.field_text_heading }}
       </h2>
