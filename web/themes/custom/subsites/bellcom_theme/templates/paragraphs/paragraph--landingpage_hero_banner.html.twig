@@ -21,7 +21,7 @@
           {% else %} background-color: #344e41; color: white; {% endif %}"
              class="main-cta-btn" href="{{ paragraph.field_main_cta_button.0.url }}">
             <span>{{ paragraph.field_main_cta_button.0.title }}</span>
-            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}
+            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] or paragraph.field_hero_bg_image.value is not empty %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "black" } %}
             {% else %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
