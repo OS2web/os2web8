@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f871dfd1cc115bbe96b70945a9b23090",
+    "content-hash": "4c096b2b0b478ee412295cfdff3c9ceb",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4724,28 +4724,29 @@
         },
         {
             "name": "drupal/devel",
-            "version": "4.2.1",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "4.2.1"
+                "reference": "5.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-4.2.1.zip",
-                "reference": "4.2.1",
-                "shasum": "aa08379bad81cb2e604ee9a0b9e2aabd86fae13f"
+                "url": "https://ftp.drupal.org/files/projects/devel-5.1.1.zip",
+                "reference": "5.1.1",
+                "shasum": "d7423dfe9c2333508618975c37f3b63026adca50"
             },
             "require": {
-                "doctrine/common": "^2.7",
-                "drupal/core": "^8.8 || ^9",
-                "symfony/var-dumper": "^4 || ^5"
+                "doctrine/common": "^2.7 || ^3.4",
+                "drupal/core": "^9 || ^10",
+                "php": ">=7.4",
+                "symfony/var-dumper": "^4 || ^5 || ^6"
             },
             "conflict": {
                 "kint-php/kint": "<3"
             },
             "require-dev": {
-                "drush/drush": "^10"
+                "drush/drush": "^11"
             },
             "suggest": {
                 "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
@@ -4753,8 +4754,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.1",
-                    "datestamp": "1664317444",
+                    "version": "5.1.1",
+                    "datestamp": "1671644739",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4762,7 +4763,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": "^9 || ^10 || ^11"
                     }
                 }
             },
@@ -6578,6 +6579,108 @@
             "homepage": "https://www.drupal.org/project/form_options_attributes",
             "support": {
                 "source": "https://git.drupalcode.org/project/form_options_attributes"
+            }
+        },
+        {
+            "name": "drupal/forum",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/forum.git",
+                "reference": "4978fff629e3ba1eabe1222c4f59a168788c82f1"
+            },
+            "require": {
+                "drupal/core": ">=9.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "1.x-dev",
+                    "datestamp": "1649110640",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Majmesku",
+                    "homepage": "https://www.drupal.org/user/786132"
+                },
+                {
+                    "name": "andypost",
+                    "homepage": "https://www.drupal.org/user/118908"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Provides discussion forums.",
+            "homepage": "https://www.drupal.org/project/forum",
+            "support": {
+                "source": "https://git.drupalcode.org/project/forum"
+            }
+        },
+        {
+            "name": "drupal/forum_notifications_subscription",
+            "version": "1.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/forum_notifications_subscription.git",
+                "reference": "1.0.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/forum_notifications_subscription-1.0.0-alpha2.zip",
+                "reference": "1.0.0-alpha2",
+                "shasum": "bac08d066eb9397d6eb19e3a5b0d2c91ff60f5e0"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/forum": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha2",
+                    "datestamp": "1675709468",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "andileco",
+                    "homepage": "https://www.drupal.org/user/2054544"
+                },
+                {
+                    "name": "diaodiallo",
+                    "homepage": "https://www.drupal.org/user/3574365"
+                },
+                {
+                    "name": "mwebaze",
+                    "homepage": "https://www.drupal.org/user/3201071"
+                }
+            ],
+            "description": "Allow subscription to forum notifications",
+            "homepage": "https://www.drupal.org/project/forum_notifications_subscription",
+            "support": {
+                "source": "https://git.drupalcode.org/project/forum_notifications_subscription"
             }
         },
         {
@@ -26626,6 +26729,7 @@
         "drupal/ckeditor_balloonpanel": 20,
         "drupal/entity_clone": 10,
         "drupal/file_management": 20,
+        "drupal/forum_notifications_subscription": 15,
         "drupal/gdpr": 15,
         "drupal/gin_login": 5,
         "drupal/upgrade_rector": 15,
