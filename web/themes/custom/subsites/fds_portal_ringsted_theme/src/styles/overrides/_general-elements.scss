@@ -187,7 +187,53 @@ svg.ext {
       }
     }
   }
+  article {
+    .node__meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+
+      .profile {
+        background-color: #c30a32;
+        color: white;
+        padding: 2px 4px;
+        border-radius: 5px;
+
+        .form-item {
+          font-size: 12px;
+          text-transform: uppercase;
+          color: white;
+          font-weight: 600;
+
+          .label {
+            text-transform: uppercase;
+            color: white;
+            font-weight: 600;
+            font-family: "MuseoSans", sans-serif;
+            margin: 0 !important;
+            font-size: 12px;
+          }
+        }
+      }
+      .node__submitted {
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        padding: 2px 4px;
+        font-size: 12px;
+
+        a {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
 }
+
+
 
 .comment-wrapper{
   .comment {
@@ -243,8 +289,34 @@ svg.ext {
       }
     }
     .content {
+      h3 {
+        font-weight: 600;
+        a {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+          text-decoration: none;
+        }
+      }
+      .field--name-comment-body {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border-radius: 5px;
+      }
       .links {
+        display: flex !important;
+        margin-top: 20px !important;
+        margin-bottom: 0 !important;
+        gap: 20px;
         li {
+          padding-left: 0 !important;
+          padding: 0 !important;
+          a {
+            background-color: #c30a32;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 2px 4px;
+          }
           &:before {
             display: none;
           }
