@@ -196,9 +196,6 @@
       {% if has_sidebar_second %}
         <aside {{ attributes.addClass(sidebar_second_classes) }}>
           <div class="layout-sidebar-right">
-            {% if show_action_buttons %}
-              {% include '@fds_redwhite_theme/includes/action-buttons.html.twig' %}
-            {% endif %}
             <div class="box">
               <div class="box__body">
                 {{ page.sidebar_second }}
