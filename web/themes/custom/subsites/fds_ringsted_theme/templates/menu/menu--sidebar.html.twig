@@ -18,7 +18,7 @@
           item.in_active_trail ? 'current',
           item.is_active ? 'active',
           (item.is_expanded and item.below) ? 'has-submenu',
-          item.is_collapsed ? 'is-collapsed'
+          (item.is_collapsed and item.below) ? 'is-collapsed'
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>

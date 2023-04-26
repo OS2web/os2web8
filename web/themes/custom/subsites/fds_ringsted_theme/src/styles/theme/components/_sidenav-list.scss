@@ -239,7 +239,7 @@ $sidenav-list-dot-spacing: 22px;
 				}
 			}
 		}
-		li.has-submenu {
+		li.is-collapsed {
 			& a {
 				&::after {
 					content: '';
