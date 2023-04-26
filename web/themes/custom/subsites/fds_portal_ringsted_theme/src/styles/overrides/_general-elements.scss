@@ -230,6 +230,34 @@ svg.ext {
         }
       }
     }
+    .node__content {
+      .forum-topic-subscription-options {
+        margin: 20px 0;
+        a {
+          background-color: #c30a32;
+          color: white;
+          text-decoration: none;
+          padding: 10px 20px;
+
+          &:after {
+            content: '\f0f3';
+            font-family: "FontAwesome";
+            padding-left: 10px;
+          }
+        }
+      }
+      .field--type-entity-reference {
+        background-color: white;
+        display: inline-block;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .field--name-body {
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #f2e9e4;
+      }
+    }
   }
 
 }
