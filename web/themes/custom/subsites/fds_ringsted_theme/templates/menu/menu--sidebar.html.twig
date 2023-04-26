@@ -13,12 +13,20 @@
     {% endif %}
 
     {% for item in items %}
+
+      {% set has_published_children = false %}
+      {% for child in item.below %}
+        {% if child.isPublished() %}
+          {% set has_published_children = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
       {%
         set classes = [
           item.in_active_trail ? 'current',
           item.is_active ? 'active',
           (item.is_expanded and item.below) ? 'has-submenu',
-          (item.is_collapsed and item.below) ? 'is-collapsed'
+          has_published_children ? 'is-collapsed'
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
