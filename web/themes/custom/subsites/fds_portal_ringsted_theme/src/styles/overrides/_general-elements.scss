@@ -199,6 +199,7 @@ svg.ext {
         color: white;
         padding: 2px 4px;
         border-radius: 5px;
+        display: none;
 
         .form-item {
           font-size: 12px;
@@ -238,15 +239,15 @@ svg.ext {
 .comment-wrapper{
   .comment {
     background-color: white;
-    border-radius: 10px;
+    border: 1px solid #ccc;
     padding: 20px;
     margin: 20px 0;
     .comment__meta {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       gap: 5px;
       .profile {
+        display: none;
         .form-item {
           font-size: 1.3rem;
           text-transform: uppercase;
@@ -277,15 +278,10 @@ svg.ext {
         }
       }
       a {
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
+        padding: 0 !important;
         font-size: 12px;
         text-decoration: none;
-        background-color: #f3f3f3;
         color: #c30a32;
-        padding-left: 4px;
-        padding-right: 4px;
-        border-radius: 5px;
       }
     }
     .content {
@@ -314,7 +310,6 @@ svg.ext {
             background-color: #c30a32;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
             padding: 2px 4px;
           }
           &:before {
