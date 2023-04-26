@@ -349,6 +349,24 @@ svg.ext {
   }
 }
 
+.entity-teaser--os2web-document {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h2 {
+    margin-top: 0 !important;
+  }
+}
+
+.field--type-file {
+  margin-top: 20px;
+
+  .file {
+    box-shadow: none !important
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
