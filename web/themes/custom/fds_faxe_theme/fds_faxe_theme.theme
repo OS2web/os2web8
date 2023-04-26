@@ -331,6 +331,7 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
 
     $showImages = ($paragraph->field_os2web_menu_box_vm->value == 'image');
     $incPromoted = ($paragraph->field_os2web_menu_links_inc_pr_p->value == 1);
+    $onlyUnique = ($paragraph->field_only_unique_links->value == 1);
 
     $variables['menubox'] = [];
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -338,7 +339,29 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
     // if current page is a node
     if ($node instanceof \Drupal\node\NodeInterface) {
 
-      if ($node->hasField('field_os2web_page_section')) {
+
+      if ($onlyUnique && $node->hasField('field_uniq_link')) {
+        
+        $links = $node->get('field_uniq_link')->referencedEntities();
+        if (count($links) > 0) {
+          foreach ( $links AS $idx => $linknode ) {
+            $nodebox = node2box($linknode, $showImages);
+            if ($linknode->hasField('field_uniq_link')) {
+              $nodebox_links = $linknode->get('field_uniq_link')->referencedEntities();
+              if (count($nodebox_links) > 0) {
+                foreach ($nodebox_links as $idx => $nodebox_link) {
+                  $nodebox->children[] = (object) array(
+                    'title' => $nodebox_link->getTitle(),
+                    'url' => $nodebox_link->toUrl()->toString()
+                  );
+                }
+              }
+            }
+            $variables['menubox'][] = $nodebox;
+          }
+        }
+
+      } elseif ($node->hasField('field_os2web_page_section')) {
         $sections = $node->get('field_os2web_page_section')->referencedEntities();
         if (count($sections) > 0) {
           // there is only one but can be change in future ..

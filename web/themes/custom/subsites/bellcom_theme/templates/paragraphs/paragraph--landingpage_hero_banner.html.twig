@@ -21,7 +21,7 @@
           {% else %} background-color: #344e41; color: white; {% endif %}"
              class="main-cta-btn" href="{{ paragraph.field_main_cta_button.0.url }}">
             <span>{{ paragraph.field_main_cta_button.0.title }}</span>
-            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}
+            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] or paragraph.field_hero_bg_image.value is not empty %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "black" } %}
             {% else %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
@@ -45,7 +45,7 @@
       </div>
       {% endif %}
     </div>
-    <div class="hero__element-wrapper">
+    <div class="hero__element-wrapper" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1500" data-aos-once="true">
       {% if paragraph.field_image_1.value %}
       <a href="{{ paragraph.field_link_image_1.0.url }}" class="hero__element hero__element-one" style="{% if paragraph.field_image_2.value is empty and
         paragraph.field_image_3.value is empty and

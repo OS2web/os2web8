@@ -2106,15 +2106,308 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #DAD7CD;
   min-height: 550px;
+  margin: 80px 0;
 }
 .page-banner-wrapper .page-banner__inner-wrapper {
     width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+
+
 
   }
+.page-banner-wrapper .page-banner__inner-wrapper.page-banner-image-left {
+      flex-direction: row-reverse;
+    }
+@media only screen and (max-width: 1024px) {
+.page-banner-wrapper .page-banner__inner-wrapper.page-banner-image-left {
+        flex-direction: column-reverse
+    }
+      }
+@media only screen and (max-width: 1024px) {
+.page-banner-wrapper .page-banner__inner-wrapper {
+      flex-direction: column;
+      padding: 30px 10px;
+      gap: 30px
+
+
+
+  }
+    }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+@media only screen and (max-width: 1024px) {
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper {
+        width: 100%
+    }
+      }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__prefix {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__prefix span {
+          margin-left: 10px;
+          text-transform: uppercase;
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-size: 13px;
+          color: #344E41;
+        }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper h2 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__body {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+      }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta {
+        display: flex;
+        width: 100%;
+        margin-top: 40px;
+
+
+      }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta .page-banner__cta_button {
+          background-color: #344E41;
+          padding: 12px 35px;
+          border-radius: 10px;
+          color: white;
+          font-weight: 600;
+          font-family: 'Poppins', sans-serif;
+          display: flex;
+          align-items: center;
+          transition: 0.3s ease;
+          position: relative;
+          margin-right: 10px;
+        }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta .page-banner__cta_button:hover svg {
+            opacity: 1;
+            transform: translateX(0);
+          }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta .page-banner__cta_button:hover span {
+            transform: translateX(-10px);
+          }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta .page-banner__cta_button span {
+            transition: 0.3s ease;
+          }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta .page-banner__cta_button svg {
+            opacity: 0;
+            transform: translateX(-25px);
+            transition: 0.3s ease;
+            position: absolute;
+            right: 15px;
+          }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta .page-banner__cta_button .ext {
+            display: none;
+          }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__image {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+@media only screen and (max-width: 1024px) {
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__image {
+        width: 100%;
+        justify-content: center
+    }
+      }
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__image img {
+        width: 550px;
+        border-radius: 10px;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+@media only screen and (max-width: 1024px) {
+.page-banner-wrapper .page-banner__inner-wrapper .page-banner__image img {
+          width: 100%
+      }
+        }
+.contact-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form-wrapper .contact-form__inner-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 80px 10px;
+    display: flex;
+  }
+@media only screen and (max-width: 1024px) {
+.contact-form-wrapper .contact-form__inner-wrapper {
+      flex-direction: column;
+      gap: 50px
+  }
+    }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 200px;
+
+    }
+@media only screen and (max-width: 1364px) {
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content {
+        padding-right: 100px
+
+    }
+      }
+@media only screen and (max-width: 1096px) {
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content {
+        padding-right: 25px
+
+    }
+      }
+@media only screen and (max-width: 1024px) {
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content {
+        padding-right: 0;
+        width: 50%
+
+    }
+      }
+@media only screen and (max-width: 767px) {
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content {
+        width: 100%
+
+    }
+      }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body .contact-form__prefix {
+          display: flex;
+          font-family: 'Poppins', sans-serif;
+          text-transform: uppercase;
+          align-items: center;
+        }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body .contact-form__prefix span {
+            font-weight: 500;
+            font-size: 13px;
+            color: #344e41;
+            margin-left: 10px;
+          }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body h2 {
+          font-family: "Playfair Display", serif;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 1.2;
+        }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body .contact-form__body {
+          font-family: "Poppins", sans-serif;
+          font-size: 15px;
+        }
+@media only screen and (max-width: 1024px) {
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body {
+          margin-top: 50px
+      }
+        }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body .socials {
+          display: flex;
+          gap: 20px;
+
+
+        }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body .socials .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #d7d7d7;
+            border-radius: 50%;
+          }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body .socials .contact-icon:hover i {
+              color: white;
+            }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body .socials .facebook:hover {
+              background-color: #4267B2;
+              border-color: transparent;
+            }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body .socials .linkedin:hover {
+              background-color: #0077b5;
+              border-color: transparent;
+            }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__socials-body .socials .instagram:hover {
+              background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+              border-color: transparent;
+            }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform {
+      width: 65%;
+    }
+@media only screen and (max-width: 1024px){
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform {
+        width: 100%
+    }
+      }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 20px;
+            }
+@media only screen and (max-width: 540px) {
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form {
+                display: flex;
+                flex-direction: column
+            }
+              }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .js-form-item {
+                display: flex;
+                flex-direction: column;
+              }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .js-form-item label {
+                  font-size: 15px;
+                  font-family: "Poppins", sans-serif;
+                  font-weight: 500;
+                  margin-bottom: 5px;
+                }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .js-form-item input {
+                  background-color: #f3f3f3;
+                  border-radius: 10px;
+                  height: 45px;
+                  width: 100%;
+                  padding-left: 10px;
+
+                }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .form-item-message {
+                grid-column: span 2;
+              }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .form-item-message textarea {
+                  border-radius: 10px;
+                  background-color: #f3f3f3;
+                  resize: none;
+                  width: 100%;
+                  padding: 10px 0 0 10px;
+
+                }
+.contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .form-actions #edit-actions-submit {
+                  border-radius: 10px;
+                  padding: 12px 35px;
+                  font-family: "Poppins", sans-serif;
+                  font-weight:600;
+                  background-color: #344e41;
+                  color: white;
+                  cursor: pointer;
+                }
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
-
+:focus {
+  outline: 2px solid #344e41;
+}

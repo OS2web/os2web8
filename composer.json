@@ -65,13 +65,14 @@
         "drupal/core-project-message": "~9.5.1",
         "drupal/core-recommended": "~9.5.1",
         "drupal/csv_importer": "^1.12",
-        "drupal/devel": "^4.1",
+        "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
         "drupal/entity_clone": "^2.0@beta",
         "drupal/fancy_file_delete": "^2.0",
         "drupal/file_management": "1.x-dev@dev",
         "drupal/flood_control": "^2.2",
         "drupal/form_options_attributes": "^1.2",
+        "drupal/forum_notifications_subscription": "^1.0@alpha",
         "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
@@ -225,10 +226,14 @@
             "drupal/facets" : {
                 "Add option to reset other facets on value change" : "https://www.drupal.org/files/issues/2023-01-25/3190289-22-reroll.patch"
             },
-	    "drupal/color" :  {
-		"fix color php8 issues " : "./patches/20230320-color-php8.patch"
-	    }
-
+            "drupal/forum_notifications_subscription" : {
+                "Error sending email, subscribe button is not displayed correctly" : "https://www.drupal.org/files/issues/2023-02-22/forum_notifications_subscription.patch",
+                "Warning on user form submission when no forums or topics subscribed to" : "https://www.drupal.org/files/issues/2023-04-14/prevent-foreach.patch",
+                "Anonym user subscription prevention": "./patches/forum_notifications_subscription-anonym-user-subscription.diff"
+            },
+	        "drupal/color" :  {
+		        "fix color php8 issues " : "./patches/20230320-color-php8.patch"
+            }
         }
     }
 }
