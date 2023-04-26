@@ -39,7 +39,7 @@
   dom_id ? 'js-view-dom-id-' ~ dom_id,
 ]
 %}
-{% if url('<current>').starts with '/begivenheder'%}
+{% if url('<current>') starts with '/begivenheder' with {} %}
 {# renders nothing #}
 {% else %}
 <div class="events-show-all-wrapper">
