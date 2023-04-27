@@ -277,9 +277,9 @@ class MigrationHelper {
       ->fetchField();
 
     if ($fullName) {
-      return "$fullName ($name):<br/><br/>";
+      return "Oprettet af: $fullName ($name)<br/><br/>";
     }
-    return "$name:<br/><br/>";
+    return "Oprettet af: $name<br/><br/>";
   }
 
 }
