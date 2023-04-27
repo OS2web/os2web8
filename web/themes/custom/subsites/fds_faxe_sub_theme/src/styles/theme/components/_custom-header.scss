@@ -37,6 +37,7 @@ $header-top-menu-size-sm: 50px;
   }
   display: flex;
   .flexy-row {
+    flex-wrap: nowrap;
     height: $header-top-menu-size-sm;
     @include media-breakpoint-up(md) {
       height: $header-top-menu-size-md;
