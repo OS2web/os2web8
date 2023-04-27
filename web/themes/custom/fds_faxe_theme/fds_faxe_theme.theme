@@ -277,6 +277,7 @@ function node2box(&$node, $showImages) {
 
   $refNode = new stdClass();
   $refNode->title = (string) $node->field_os2web_page_heading->value;
+  $refNode->title = (string) $node->getTitle();
   $refNode->url = $node->toUrl()->toString();
   $refNode->image = null;
   $refNode->children = array();
@@ -339,9 +340,8 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
     // if current page is a node
     if ($node instanceof \Drupal\node\NodeInterface) {
 
-
       if ($onlyUnique && $node->hasField('field_uniq_link')) {
-        
+
         $links = $node->get('field_uniq_link')->referencedEntities();
         if (count($links) > 0) {
           foreach ( $links AS $idx => $linknode ) {
