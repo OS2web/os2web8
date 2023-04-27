@@ -32,6 +32,20 @@ process:
     plugin: default_value
     default_value: 9
   sticky: sticky
+  migrate_author_name:
+    - plugin: callback
+      source: node_uid
+      callable:
+        - 'Drupal\byradsportal_d7_migration\Utility\MigrationHelper'
+        - getUsernameFromUid
+  body/value:
+      plugin: concat
+      source:
+        - '@migrate_author_name'
+        - body/0/value
+  body/format:
+    plugin: default_value
+    default_value: 'wysiwyg_tekst'
   field_forum_file:
     - plugin: sub_process
       source: field_file

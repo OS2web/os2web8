@@ -249,4 +249,37 @@ class MigrationHelper {
     return NULL;
   }
 
+  /**
+   * Helper static function to get full username from migrate DB.
+   *
+   * @param $uid
+   *   Remove user UID.
+   *
+   * @return string|null
+   *   Int if the local node is found. NULL otherwise.
+   */
+  static function getUsernameFromUid($uid) {
+    // Getting connection to migrate database.
+    $connection = Database::getConnection('default', 'migrate');
+
+    // Getting user name.
+    $name = $connection->select('users', 'u')
+      ->fields('u', array('name'))
+      ->condition('u.uid', $uid)
+      ->execute()
+      ->fetchField();
+
+    // Getting user full name.
+    $fullName = $connection->select('field_data_field_fullname', 'f')
+      ->fields('f', array('field_fullname_value'))
+      ->condition('f.entity_id', $uid)
+      ->execute()
+      ->fetchField();
+
+    if ($fullName) {
+      return "$fullName ($name):<br/><br/>";
+    }
+    return "$name:<br/><br/>";
+  }
+
 }
