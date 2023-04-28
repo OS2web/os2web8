@@ -21,4 +21,14 @@ drush migrate:reset byradsportal_d7_forum_comment
 drush migrate:import byradsportal_d7_forum_comment
 echo "Migration byradsportal_d7_forum_comment - END"
 
+echo "Migration byradsportal_d7_node_news_paragraph_files - START"
+drush migrate:reset byradsportal_d7_node_news_paragraph_files
+drush migrate:import byradsportal_d7_node_news_paragraph_files
+echo "Migration byradsportal_d7_node_news_paragraph_files - END"
+
+echo "Migration byradsportal_d7_node_news - START"
+drush migrate:reset byradsportal_d7_node_news
+drush migrate:import byradsportal_d7_node_news
+echo "Migration byradsportal_d7_node_news - END"
+
 echo "Migration finished"
