@@ -80,7 +80,7 @@
 ] %}
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
-<a class="fullhref" target="_blank" href="{{ node.field_os2web_event_url.value }}" rel="bookmark">{{ label }}</a>
+<a class="fullhref" target="_blank" href="{{ url('entity.node.canonical', {'node': node.id}) }}" rel="bookmark">{{ label }}</a>
 
   {{ title_prefix }}
   {% if label and not page %}
