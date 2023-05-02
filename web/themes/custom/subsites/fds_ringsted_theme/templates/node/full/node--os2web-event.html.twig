@@ -112,7 +112,7 @@
 
         <div>
           {{ node.field_os2web_event_start_date.value|date('D')|trans }}
-          {{ node.field_os2web_event_start_date.value|date('d/m/Y') }} - {{ node.field_os2web_event_start_date.value|date("H:i") }}</div>
+          {{ node.field_os2web_event_start_date.value|date('d/m/Y') }}</div>
         {% if startdate != enddate %}
           <div>{{ node.field_os2web_event_end_date.value|render }}</div>
         {% endif %}
