@@ -100,31 +100,61 @@
 
   <div{{ content_attributes.addClass('node__content') }}>
 
-{#    {{ content }}#}
-
     <div{{ attributes.addClass(classes) }}>
       {{ content.field_os2web_evnet_image }}
       <div{{ title_attributes.addClass(title_classes) }}>
-        {% set startdate = node.field_os2web_event_start_date.value|date('Ymd') %}
-        {% set starttime = node.field_os2web_event_start_date.value|date("Hi") %}
-        {% set enddate = node.field_os2web_event_end_date.value|date('Ymd') %}
-        {% set starttime = node.field_os2web_event_start_date.value|date("Hi") %}
 
-        <div>
-          {{ node.field_os2web_event_start_date.value|date('D')|trans }}
-          {{ node.field_os2web_event_start_date.value|date('d/m/Y') }} - {{ node.field_os2web_event_start_date.value|date("H:i") }}</div>
-        {% if startdate != enddate %}
-          <div>{{ node.field_os2web_event_end_date.value|render }}</div>
+        {% set startdate = false %}
+        {% set starttime = false %}
+        {% if content.start_datetime %}
+            {% set startdate = content.start_datetime|date('Ymd') %}
+            {% set starttime = content.start_datetime|date("Hi") %}
+            {{ content.start_datetime|date('D')|trans }}
+            {{ content.start_datetime|date('d/m/Y') }}
+            {% if starttime != '0000' %}
+              , {{ content.start_datetime|date("H:i") }}
+            {% endif %}
+        {% endif %}
+        {% if content.end_datetime %}
+            {% set enddate = content.end_datetime|date('Ymd') %}
+            {% set endtime = content.end_datetime|date("Hi") %}
+            {#  if no start date #}
+            {% if not startdate %}
+              {{ "until "|trans }}
+              {{ content.end_datetime|date('D')|trans }}
+              {{ content.end_datetime|date('d/m/Y') }}
+              {% if endtime != '0000' %}
+                , {{ content.end_datetime|date("H:i") }}
+              {% endif %}
+            {% endif %}
+            {#  if startdate and startdate is not enddate #}
+            {% if startdate and startdate != enddate %}
+              <br>
+              {{ content.end_datetime|date('D')|trans }}
+              {{ content.end_datetime|date('d/m/Y') }}
+              {% if endtime != '0000' %}
+                , {{ content.end_datetime|date("H:i") }}
+              {% endif %}
+            {% endif %}
+            {# if startdate and enddate is alike #}
+            {% if startdate and startdate == enddate %}
+              {% if starttime != '0000' and starttime != endtime %}
+                {% if endtime != '0000' %}
+                  - {{ content.end_datetime|date("H:i") }}
+                {% endif %}
+              {% endif %}
+              {% if starttime == '0000' and starttime != endtime %}
+                {% if endtime != '0000' %}
+                  , - {{ content.end_datetime|date("H:i") }}
+                {% endif %}
+              {% endif %}
+            {% endif %}
         {% endif %}
 
-        {{ content.body|raw }}
-
+        <div>
+          {{ content.body|raw }}
+        </div>
       </div>
-
-
-
-    </div>
-
   </div>
 
 </article>
