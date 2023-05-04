@@ -2677,6 +2677,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           margin-right: 25px;
           color: #4E4E4E;
         }
+@media only screen and (max-width: 640px) {
+.simple-accordion-wrapper .simple-accordion__inner-wrapper .accordion-wrapper .accordion-header span {
+            margin-right: 10px
+        }
+          }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .accordion-wrapper .accordion-header.active {
           background-color: #344e41;
           color: white;
