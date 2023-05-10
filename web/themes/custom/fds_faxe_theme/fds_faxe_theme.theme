@@ -30,21 +30,6 @@ function fds_faxe_theme_form_system_theme_settings_alter(&$form, FormStateInterf
   ];
 }
 
-/**
- * Implements hook_preprocess_HOOK() for block templates.
- */
-function fds_faxe_theme_preprocess_block(&$variables) {
-  // Get the theme setting for the background image.
-  $background_image_fid = theme_get_setting('fds_faxe_theme_background_image');
-
-  // Load the file entity for the background image.
-  if (!empty($background_image_fid)) {
-    $file = \Drupal\file\Entity\File::load($background_image_fid);
-    if ($file) {
-      $variables['fds_faxe_theme_background_image_url'] = file_create_url($file->getFileUri());
-    }
-  }
-}
 
 
 
@@ -64,6 +49,17 @@ function fds_faxe_theme_theme_suggestions_block_alter(array &$suggestions, array
  * Implements hook_preprocess_block().
  */
 function fds_faxe_theme_preprocess_block(&$variables) {
+
+// Get the theme setting for the background image.
+  $background_image_fid = theme_get_setting('fds_faxe_theme_background_image');
+
+  // Load the file entity for the background image.
+  if (!empty($background_image_fid)) {
+    $file = \Drupal\file\Entity\File::load($background_image_fid);
+    if ($file) {
+      $variables['fds_faxe_theme_background_image_url'] = file_create_url($file->getFileUri());
+    }
+  }
 
   if ($variables['elements']['#id'] == 'fds_faxe_theme_indholdfield') {
     $node = $variables['content']['field']['#object'];
