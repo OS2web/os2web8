@@ -37,14 +37,15 @@ function fds_faxe_theme_form_system_theme_settings_alter(
   ];
 
   // Add a vertical tab for custom theme settings.
-  $form['fds_faxe_theme_settings'] = [
-    '#type' => 'vertical_tabs',
+  $form['banner_search_settings'] = [
+    '#type' => 'details',
     '#title' => t('Banner Search settings'),
     '#weight' => -10,
+    '#group' => 'fds_base_theme'
   ];
 
   // Add the image upload field.
-  $form['fds_faxe_theme_settings']['fds_faxe_theme_background_image'] = [
+  $form['banner_search_settings']['fds_faxe_theme_background_image'] = [
     '#type' => 'managed_file',
     '#title' => t('Background Image'),
     '#description' => t('Upload the background image for the block.'),
