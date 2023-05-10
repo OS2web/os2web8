@@ -35,4 +35,23 @@ function fds_faxe_theme_form_system_theme_settings_alter(
     '#title' => t('Tekst'),
     '#default_value' => theme_get_setting('branding_text'),
   ];
+
+  // Add a vertical tab for custom theme settings.
+  $form['fds_faxe_theme_settings'] = [
+    '#type' => 'vertical_tabs',
+    '#title' => t('Banner Search settings'),
+    '#weight' => -10,
+  ];
+
+  // Add the image upload field.
+  $form['fds_faxe_theme_settings']['fds_faxe_theme_background_image'] = [
+    '#type' => 'managed_file',
+    '#title' => t('Background Image'),
+    '#description' => t('Upload the background image for the block.'),
+    '#default_value' => theme_get_setting('fds_faxe_theme_background_image'),
+    '#upload_location' => 'public://fds_faxe_theme/background-images/',
+    '#upload_validators' => [
+      'file_validate_extensions' => ['png gif jpg jpeg'],
+    ],
+  ];
 }
