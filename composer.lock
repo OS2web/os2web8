@@ -14849,12 +14849,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_citizen_proposals.git",
-                "reference": "8d0511f3985c15c82a96f6770b6ae53fd8dde43d"
+                "reference": "74d7167b5ed0b8f9e61f3cef26e32e3a79e5c7a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_citizen_proposals/zipball/8d0511f3985c15c82a96f6770b6ae53fd8dde43d",
-                "reference": "8d0511f3985c15c82a96f6770b6ae53fd8dde43d",
+                "url": "https://api.github.com/repos/OS2web/os2web_citizen_proposals/zipball/74d7167b5ed0b8f9e61f3cef26e32e3a79e5c7a9",
+                "reference": "74d7167b5ed0b8f9e61f3cef26e32e3a79e5c7a9",
                 "shasum": ""
             },
             "require": {
@@ -14871,7 +14871,7 @@
                 "issues": "https://github.com/OS2web/os2web_citizen_proposals/issues",
                 "source": "https://github.com/OS2web/os2web_citizen_proposals/tree/master"
             },
-            "time": "2023-04-26T11:57:40+00:00"
+            "time": "2023-05-10T11:59:49+00:00"
         },
         {
             "name": "os2web/os2web_contact",
