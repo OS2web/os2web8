@@ -33,7 +33,7 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="section section--banner-search">
+  <div class="section section--banner-search" style="background-image: url('{{ file_url(theme_get_setting('fds_faxe_theme_block_background_image')) }}')">
     <div class="container">
 
       {% block content %}
