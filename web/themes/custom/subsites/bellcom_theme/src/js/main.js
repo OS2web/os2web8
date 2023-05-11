@@ -29,6 +29,7 @@ const subscribeBtn = document.querySelector('#subscribe-btn');
 
 function removeSuccess() {
   subscribeBtn.classList.remove('success');
+  subscribeBtnTextImage.classList.remove('success');
 }
 
 subscribeBtn.addEventListener('click', (e) => {
@@ -38,5 +39,17 @@ subscribeBtn.addEventListener('click', (e) => {
     removeSuccess();
   }, 3000);
 });
+
+
+const subscribeBtnTextImage = document.querySelector('#subscribe-btn-text-image');
+
+subscribeBtnTextImage.addEventListener('click', (e) => {
+  subscribeBtnTextImage.classList.add('success');
+  e.preventDefault();
+  setTimeout(() => {
+    removeSuccess();
+  }, 3000);
+});
+
 
 

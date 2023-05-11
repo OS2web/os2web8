@@ -242,7 +242,7 @@
           bottom: 0;
           right: 0;
           background-color: black;
-          opacity: 0.3;
+          opacity: 0.1;
           border-radius: 10px;
         }
         .hero__element-widget {
@@ -278,13 +278,16 @@
       }
 
       .hero__element-one {
-        grid-area: 1 / 1 / 3 / 2;
+        grid-area: 1 / 1 / 2 / 2;
       }
       .hero__element-two {
         grid-area: 1 / 2 / 2 / 3;
       }
       .hero__element-three {
-        grid-area: 2 / 2
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .hero__element-four {
+        grid-area: 2 / 2 / 3 / 3;
       }
     }
   }

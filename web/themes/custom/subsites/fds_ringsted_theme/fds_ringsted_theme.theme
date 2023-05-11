@@ -42,7 +42,6 @@ function fds_ringsted_theme_preprocess_page(array &$variables) {
   $variables['youtube_url'] = theme_get_setting('youtube_url');
   $variables['youtube_tooltip'] = theme_get_setting('youtube_tooltip');
 
-
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
@@ -243,6 +242,40 @@ function fds_ringsted_theme_preprocess_node(&$variables) {
     $body = preg_replace("/<((?:style)).*>.*<\/style>/im","",$body);
     $variables['content']['body'][0]['#text'] = $body;
   }
+
+
+  if ($node->getType() == 'os2web_event' && $variables['view_mode'] == 'full') {
+    $variables['content']['start_datetime'] = null;
+    $variables['content']['end_datetime'] = null;
+    $variables['content']['timezone'] = 'UTC';
+    if (date_default_timezone_get() != 'UTC') date_default_timezone_set('UTC');
+    if (
+      $node->hasField('field_os2web_event_start_date') ||
+      $node->hasField('field_os2web_event_end_date')
+    ) {
+      $tz = \Drupal::config('system.date')->get('timezone')['default'];
+      $variables['content']['timezone'] = $tz;
+
+      if ($node->hasField('field_os2web_event_start_date')) {
+        $sdt = $node->get('field_os2web_event_start_date')->getString();
+        if (strlen($sdt) > 0) {
+          $dt = new \Drupal\Core\Datetime\DrupalDateTime($sdt);
+          $dt->setTimezone(new \DateTimeZone($tz));
+          $variables['content']['start_datetime'] = $dt->format('Y-m-d H:i:s');
+        }
+      }
+
+      if ($node->hasField('field_os2web_event_end_date')) {
+        $edt = $node->get('field_os2web_event_end_date')->getString();
+        if (strlen($edt) > 0) {
+          $dt = new \Drupal\Core\Datetime\DrupalDateTime($edt);
+          $dt->setTimezone(new \DateTimeZone($tz));
+          $variables['content']['end_datetime'] = $dt->format('Y-m-d H:i:s');
+        }
+      }
+    }
+  }
+
 }
 
 /**
@@ -278,19 +311,19 @@ function fds_ringsted_theme_preprocess_office_hours(&$variables) {
   }
 
   foreach ($office_hours as $info) {
-    $label = $info['label'];
-    $label_length = max($label_length, mb_strlen($label));
-
-    $items[] = [
-      'label' => $label,
-      'slots' => ['#type' => 'markup', '#markup' => $info['formatted_slots']],
-      'comments' => ['#type' => 'markup', '#markup' => $info['comments']],
-      'suffix' => $variables['item_separator'],
-      // Is open indicator.
-      'is_open' => $info['closed'] == null,
-      // @todo Use $variables['item_separator'] in office-hours.html.twig.
-    ];
-  }
+      $label = $info['label'];
+      $label_length = max($label_length, mb_strlen($label));
+      $items[] = [
+        'label' => $label,
+        'slots' => ['#type' => 'markup', '#markup' => $info['formatted_slots']],
+        'comments' => ['#type' => 'markup', '#markup' => $info['comments']],
+        'suffix' => $variables['item_separator'],
+        // Is open indicator.
+  //      'is_open' => ($info['closed'] == null)
+        'is_open' => true,
+        // @todo Use $variables['item_separator'] in office-hours.html.twig.
+      ];
+    }
 
   $variables['items'] = $items;
   $variables['label_length'] = $label_length;
@@ -399,13 +432,6 @@ function fds_ringsted_theme_preprocess_media(&$variables) {
  * Implements hook_preprocess().
  */
 function fds_ringsted_theme_preprocess_block(&$variables, $hook) {
-
-  if ($variables['attributes']['id'] == 'block-show-sub-pages') {
-
-    print_r($variables['attributes']['id']);
-
-  }
-  // $node = \Drupal::routeMatch()->getParameter('node');
 
 }
 

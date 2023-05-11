@@ -173,11 +173,14 @@ $sidenav-list-dot-spacing: 22px;
                   background-color: transparent;
                     font-weight: bold;
                  }
-              }
-        & .current {
-          background-color: $background_color__button_hover !important;
-        }
+              	}
+				& .current {
+				  background-color: $background_color__button_hover !important;
+				}
 			}
+
+
+
 		}
 		& > li.active {
 			background-color: $background_color__button_hover;
@@ -192,7 +195,7 @@ $sidenav-list-dot-spacing: 22px;
 		& > li.current {
 			background-color: $background_color__button_hover;
 			border-top: 1px solid $color-light-gray1;
-      border-left: 0;
+			border-left: 0;
 			& > a {
 				font-family: "Museo 700", sans-serif;
 				font-weight: bold;
@@ -233,6 +236,21 @@ $sidenav-list-dot-spacing: 22px;
 			& > a {
 				&::after {
 					transform: rotate(90deg);
+				}
+			}
+		}
+		li.is-collapsed {
+			& a {
+				&::after {
+					content: '';
+					width: 8px;
+					height: 24px;
+					position: absolute;
+					right: 15px;
+					position: absolute;
+					display: block;
+					top: 10px;
+					background: transparent url("../images/sprite.png") no-repeat -137px -23px;
 				}
 			}
 		}

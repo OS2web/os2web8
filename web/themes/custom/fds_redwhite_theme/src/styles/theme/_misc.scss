@@ -147,6 +147,12 @@ body .page-container {
 .node--unpublished {
   background-color: transparent;
 }
+
+.field--name-field-link-til-andet-indhold {
+  a {
+    position: relative;
+  }
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

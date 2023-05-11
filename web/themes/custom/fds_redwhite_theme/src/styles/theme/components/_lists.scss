@@ -32,20 +32,6 @@
       line-height: $body-text-line-height;
 
       li {
-        // margin-top: map-get($spacers, 3);
-        // list-style-type: none;
-        // position: relative;
-        // padding-left: 40px !important;
-        // line-height: $body-text-line-height;
-
-        // &::before {
-        //   content: "■";
-        //   position: absolute;
-        //   left: 5px;
-        //   top: -1px;
-        //   font-size: 2rem;
-        //   color: $color-blue-001;
-        // }
         margin-top: map-get($spacers, 3);
         list-style-type: none;
         position: relative;
@@ -60,7 +46,6 @@
           font-size: 2rem;
           color: $color-blue-001;
         }
-
       }
     }
   }

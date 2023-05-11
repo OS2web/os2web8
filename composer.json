@@ -66,13 +66,14 @@
         "drupal/core-project-message": "~9.5.1",
         "drupal/core-recommended": "~9.5.1",
         "drupal/csv_importer": "^1.12",
-        "drupal/devel": "^4.1",
+        "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
         "drupal/entity_clone": "^2.0@beta",
         "drupal/fancy_file_delete": "^2.0",
         "drupal/file_management": "1.x-dev@dev",
         "drupal/flood_control": "^2.2",
         "drupal/form_options_attributes": "^1.2",
+        "drupal/forum_notifications_subscription": "^1.0@alpha",
         "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
@@ -86,9 +87,11 @@
         "drupal/memcache": "^2.2",
         "drupal/menu_block": "^1.8",
         "drupal/menu_breadcrumb": "^1.16",
+        "drupal/menu_link_attributes": "^1.3",
         "drupal/modules_weight": "^1.9",
         "drupal/monitoring": "^1.9",
         "drupal/pdf_api": "^2.0",
+        "drupal/permissions_filter": "^1.3",
         "drupal/photoswipe": "^3.1",
         "drupal/popular_search_keywords": "^1.0",
         "drupal/queue_mail": "^1.4",
@@ -194,7 +197,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/textfield_counter" : {
-                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch"
+                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch",
+                "fix static call" : "./patches/3272128-9.patch"
             },
             "drupal/field_group" : {
                 "HTML5 Validation Prevents Submission in Tabs" : "https://www.drupal.org/files/issues/2019-10-04/field_group-HTML5_validation_prevents_submission_in_tabs-2969051-9.patch"
@@ -224,10 +228,14 @@
             "drupal/facets" : {
                 "Add option to reset other facets on value change" : "https://www.drupal.org/files/issues/2023-01-25/3190289-22-reroll.patch"
             },
-	    "drupal/color" :  {
-		"fix color php8 issues " : "./patches/20230320-color-php8.patch"
-	    }
-
+            "drupal/forum_notifications_subscription" : {
+                "Error sending email, subscribe button is not displayed correctly" : "https://www.drupal.org/files/issues/2023-02-22/forum_notifications_subscription.patch",
+                "Warning on user form submission when no forums or topics subscribed to" : "https://www.drupal.org/files/issues/2023-04-14/prevent-foreach.patch",
+                "Anonym user subscription prevention": "./patches/forum_notifications_subscription-anonym-user-subscription.diff"
+            },
+	        "drupal/color" :  {
+		        "fix color php8 issues " : "./patches/20230320-color-php8.patch"
+            }
         }
     }
 }
