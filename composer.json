@@ -61,6 +61,7 @@
         "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0",
         "drupal/content_moderation_notifications": "^3.3",
+        "drupal/cookieinformation": "^2.0",
         "drupal/core-composer-scaffold": "~9.5.1",
         "drupal/core-project-message": "~9.5.1",
         "drupal/core-recommended": "~9.5.1",
