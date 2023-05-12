@@ -1,0 +1,48 @@
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'page-node-type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+    path_info.args ? 'path-' ~ path_info.args,
+  ]
+%}
+<!DOCTYPE html>
+<html {{ html_attributes }}>
+  <head>
+    <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" type="text/javascript"></script>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+      <script type="text/javascript">
+        window._monsido = window._monsido || {
+          token: "SIVyjaDAw39OpmqGPSw3yg",
+          statistics: {
+            enabled: true,
+            cookieLessTracking: true,
+            documentTracking: {
+              enabled: false,
+              documentCls: "monsido_download",
+              documentIgnoreCls: "monsido_ignore_download",
+              documentExt: [],
+            },
+          },
+          pageCorrect: {
+            enabled: true,
+          },
+        };
+      </script>
+      <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
