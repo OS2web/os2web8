@@ -147,11 +147,16 @@
 }
 
 .prev, .next {
-  padding: 10px 16px;
-  background-color: #00789e;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e82f4c;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
+  border-radius: 50%;
   &:hover {
     background-color: white;
   }
@@ -189,6 +194,8 @@
         background-color: #fff;
         width: 100%;
         margin: 10px 0;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
 
         @media only screen and (max-width: 992px) {
           width: 100%;
@@ -198,6 +205,8 @@
         a {
           text-decoration: none;
           color: #000;
+          border-bottom-left-radius: 50px;
+          border-top-left-radius: 50px;
           width: 100%;
           position: relative;
           display: block;
@@ -207,7 +216,7 @@
           font-size: 2rem;
           font-weight: 700;
            &:hover {
-             background-color: #00789e;
+             background-color: #e82f4c;
              color: white;
            }
 

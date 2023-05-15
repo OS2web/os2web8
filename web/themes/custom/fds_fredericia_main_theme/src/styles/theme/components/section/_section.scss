@@ -118,9 +118,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-image: url('../images/Volden.jpg');
+    min-height: 450px;
+    display: flex;
+    align-items: center;
 
     form#views-exposed-form-os2web-search-os2web-search-page, form#views-exposed-form-os2web-search-page-1 {
       margin: auto;
+      display: flex;
+      justify-content: center;
 
 
       .form--inline {
@@ -128,26 +134,29 @@ body {
         height: 60px;
         display: flex;
         justify-content: center;
+        display: flex;
+        justify-content: center;
+        width: 60%;
         .form-item {
           margin-right: 0;
           margin-bottom: 0;
-          display: block;
+          display: flex;
           width: 100%;
           .form-input {
-            height: 60px;
+            height: 70px;
             margin-top: 0;
             width: 100%;
             border: 2px solid #fff;
             font-weight: 700;
             background-color: #fff;
             font-size: 1.8rem;
-            border-radius: 0;
+            border-radius: 50px;
 
             max-width: none !important;
             outline: none;
 
             &:focus {
-              border: 2px solid #00789e;
+              border: 2px solid #e82f4c;
             }
           }
         }
@@ -160,21 +169,19 @@ body {
             background-image: url('../images/svg-icons/magnifying-glass-solid.svg');
             background-position: center;
             background-size: 20px 20px;
-            width: 80px;
-            height: 60px;
-            background-color: #00789e;
+            width: 70px;
+            height: 70px;
+            background-color: #e82f4c;
             background-repeat: no-repeat;
-            top: 0;
-            left: 0;
             right: 0;
-            bottom: 0;
             text-indent: -9999px;
-            border-radius: 0;
+            border-radius: 50%;
             border: 0;
             transition: .4s ease;
             outline: none;
+            position: absolute;
             &:hover {
-              background-color: #00516b;
+              background-color: #bf263e;
             }
           }
 

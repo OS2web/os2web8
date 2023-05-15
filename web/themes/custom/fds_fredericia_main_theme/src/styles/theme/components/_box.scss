@@ -20,6 +20,80 @@
 // Styling
 // --------------------------------------------------
 
+
+
+.fredericia-menu-link-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+
+  .fredericia-menu-link__inner-wrapper {
+    min-height: 175px;
+    background-color: #294e75;
+    width: 20%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: .3s ease;
+    border-radius: 5px;
+
+    @media only screen and (max-width: 992px) {
+      width: 30%;
+    }
+
+    @media only screen and (max-width: 640px) {
+      width: 45%;
+    }
+
+    @media only screen and (max-width: 460px) {
+      width: 100%;
+    }
+
+    &:hover .fredericia-box-arrow svg {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fredericia-box-arrow {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      svg {
+        fill: white;
+        width: 35px;
+        height: 35px;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: .3s ease;
+      }
+    }
+
+    .fredericia-box {
+      .fredericia-box__body {
+        padding: 0 20px;
+        text-align: center;
+
+        span {
+          color: white;
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+          hyphens: none !important;
+        }
+      }
+    }
+
+
+  }
+}
+
+
 .box {
   background-color: #fff;
   text-align: center;
