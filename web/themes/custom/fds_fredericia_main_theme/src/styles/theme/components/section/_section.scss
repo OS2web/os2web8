@@ -122,6 +122,23 @@ body {
     min-height: 450px;
     display: flex;
     align-items: center;
+    position: relative;
+
+    .status-banner {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: yellow;
+      padding: 10px 0;
+
+      .status-banner__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+    }
 
     form#views-exposed-form-os2web-search-os2web-search-page, form#views-exposed-form-os2web-search-page-1 {
       margin: auto;
@@ -137,6 +154,10 @@ body {
         display: flex;
         justify-content: center;
         width: 60%;
+
+        @media only screen and (max-width: 992px) {
+          width: 100%;
+        }
         .form-item {
           margin-right: 0;
           margin-bottom: 0;
@@ -200,6 +221,8 @@ body {
     }
   }
 }
+
+
 
 // --------------------------------------------------
 // Responsive
