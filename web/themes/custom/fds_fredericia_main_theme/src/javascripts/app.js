@@ -158,6 +158,33 @@ jQuery(document).ready(function(){
 })(jQuery);
 
 
+// Tiny Slider for spotboxes slideshow.
+(function() {
+  var selector = '.paragraph--type--os2web-spotbox-reference.paragraph--slider .field__items';
+
+  if (document.querySelector(selector) !== null) {
+
+    // Run tiny slider.
+    tns({
+      container: selector,
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      autoplayHoverPause: true,
+      mouseDrag: true,
+      gutter: 5,
+      rewind: false,
+      responsive: {
+        768: {
+          items: 3,
+          slideBy: 3,
+        },
+      },
+    });
+  }
+})();
+
+
   const slider = document.querySelector('.slider');
   const slidesContainer = document.querySelector('.slides-container');
   const slides = Array.from(document.querySelectorAll('.slide-item'));
