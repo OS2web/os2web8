@@ -99,8 +99,6 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
       return;
     }
 
-    $found = $query->getResults()->getResultCount();
-    if ($found > 0) {
       $database->insert('popular_search')->fields([
           's_name' => $server,
           'i_name' => $index->id(),
@@ -113,8 +111,6 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
           'sort' => '',
           'language' => $language->getId(),
       ])->execute();
-
-    }
 
     $query->keys('');
   }
