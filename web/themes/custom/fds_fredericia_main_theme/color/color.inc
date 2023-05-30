@@ -16,6 +16,9 @@ $info = [
     // 'color__link__hover' => t('Link:hover color'),
     // 'color__footer_link' => t('Footer link color'),
     // 'color__bullets' => t('Bullets color'),
+    'spotbox_color__primary' => t('Spotbox color - primary'),
+    'spotbox_color__secondary' => t('Spotbox color - secondary'),
+    'spotbox_color__tertiary' => t('Spotbox color - tertiary')
   ],
 
   // Pre-defined color schemes.
@@ -36,6 +39,9 @@ $info = [
         // 'color__link__hover' => '#01233e',
         // 'color__footer_link' => '#6dcff6',
         // 'color__bullets' => '#a5122f',
+        'spotbox_color__primary' => '#2a9d8f',
+        'spotbox_color__secondary' => '#457b9d',
+        'spotbox_color__tertiary' => '#e63946'
       ],
     ],
   ],

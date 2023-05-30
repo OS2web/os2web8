@@ -33,22 +33,6 @@
       }
     }
   }
-
-  a {
-    @extend .button;
-
-    min-height: auto;
-    padding: 13px 15px;
-
-    border-radius: 30px;
-
-    &, &:hover, &:focus {
-      font-weight: $font-weight-bold;
-
-      color: #fff;
-      background-color: $color-orange-004;
-    }
-  }
 }
 
 

@@ -21,6 +21,7 @@
 // --------------------------------------------------
 
 .entity-default--os2web-spotbox-reference {
+  margin: 20px 0;
   .field--name-field-os2web-spotbox-reference-h {
     h2 {
       text-transform: uppercase;
@@ -46,6 +47,37 @@
         line-height: 0;
         text-decoration: none;
         height: 100%;
+
+        &.spotbox--background-color-transparent {
+          background-color: transparent;
+
+          .spotbox__heading {
+            h3 {
+              color: black;
+            }
+          }
+          .spotbox__link_text {
+            .field--name-field-os2web-spotbox-link-text {
+              color: black;
+
+            }
+          }
+          .spotbox__arrow svg {
+            fill: black;
+          }
+        }
+        &.spotbox--background-color-primary {
+          background-color: $spotbox_color__primary !important;
+          color: white;
+        }
+        &.spotbox--background-color-secondary {
+          background-color: $spotbox_color__secondary !important;
+          color: white;
+        }
+        &.spotbox--background-color-tertiary {
+          background-color: $spotbox_color__tertiary !important;
+          color: white;
+        }
 
         &:hover .spotbox__arrow {
           transform: translateX(0);
@@ -73,7 +105,6 @@
         }
       }
       .spotbox__content {
-        background-color: blueviolet;
         line-height: 1;
         width: 70%;
         padding: 5px 20px;
@@ -116,6 +147,7 @@
             height: auto;
             min-height: auto;
             box-shadow: none;
+
           }
         }
       }

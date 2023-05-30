@@ -30,7 +30,7 @@
 
   .fredericia-menu-link__inner-wrapper {
     min-height: 175px;
-    background-color: #294e75;
+    background-color: $background_color__primary;
     width: 20%;
     flex-grow: 1;
     display: flex;
@@ -40,7 +40,6 @@
     position: relative;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     transition: .3s ease;
-    border-radius: 5px;
 
     @media only screen and (max-width: 992px) {
       width: 30%;

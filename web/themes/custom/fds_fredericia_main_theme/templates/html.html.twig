@@ -10,31 +10,12 @@
 <!DOCTYPE html>
 <html {{ html_attributes }}>
   <head>
-    <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" type="text/javascript"></script>
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
-      <script type="text/javascript">
-        window._monsido = window._monsido || {
-          token: "SIVyjaDAw39OpmqGPSw3yg",
-          statistics: {
-            enabled: true,
-            cookieLessTracking: true,
-            documentTracking: {
-              enabled: false,
-              documentCls: "monsido_download",
-              documentIgnoreCls: "monsido_ignore_download",
-              documentExt: [],
-            },
-          },
-          pageCorrect: {
-            enabled: true,
-          },
-        };
-      </script>
-      <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
-  </head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </head>
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable skip-link">
       {{ 'Skip to main content'|t }}

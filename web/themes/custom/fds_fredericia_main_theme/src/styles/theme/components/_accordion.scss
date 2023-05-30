@@ -28,6 +28,7 @@
 .accordion {
   & > li {
     margin-bottom: 0.5rem;
+    background-color: transparent;
   }
 
 }
@@ -35,64 +36,64 @@
 
   .accordion-button {
     position: relative;
-    font-size: 1.6rem;
-    padding: 10px 50px 10px 20px;
+    font-size: 2rem;
+    padding: 25px 50px 25px 20px;
     font-weight: 700;
-    border-radius: 0 !important;
     background-image: none !important;
-    background-color: $gray-primary;
-    color: $color-black;
+    background-color: #d6ecf1;
+    border: 1px solid $gray-helper;
+    color: #00335b;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     &:after {
       display: flex;
       position: absolute;
-  
+
       align-items: center;
       justify-content: center;
-  
+
       padding-top: 2px;
-  
+
       top: 50%;
       transform: translateY(-50%);
       right: 20px;
-  
+
       width: 26px;
       height: 26px;
-  
-      font-size: 1rem;
+
+      font-size: 1.8rem;
       font-family: FontAwesome;
-  
+
       content: $fa-var-plus;
-  
-      color: $color-black;      
-      background-color: $color-white;
-  
-      border-radius: 25px;
+
+      color: #8b0f23;
     }
     &:focus {
       outline: 0;
     }
     &[aria-expanded="true"] { //accordion button is open
-      background-color: $background_color__default;
-      color: $color-white;
+      background-color: #00335b;
+      color: white;
+
       &:after {
         content: $fa-var-minus;
-        font-size: 0.8rem;
+        font-size: 1.8rem;
+        color: white;
       }
     }
   }
-  
+
   .accordion-content {
     border: 1px solid $gray-helper;
     border-top: 0;
     padding: 15px 20px;
-    background-color: $color-white;
-    color: $color-black;
+    background-color: white;
+    color: black;
     overflow: hidden;
     * {
-      color: $color-black;
+      color: black;
     }
     .field {
-  
+
       + .field--name-field-os2web-hearings-reply-docs {
         margin-top: $grid-gutter-width / 2;
       }
