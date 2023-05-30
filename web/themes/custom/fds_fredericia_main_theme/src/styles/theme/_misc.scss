@@ -19,8 +19,8 @@ body {
 
 // Increased specificity to win over base theme.
 body .container-fluid {
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .path-taxonomy {

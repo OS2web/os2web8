@@ -61,6 +61,38 @@
   }
 }
 
+.paragraph--type--os2web-cnt-paragraph-reference {
+  background-color: #d6ecf1;
+  width: 100%;
+
+  .field--name-field-os2web-cnt-par-ref {
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+
+    .os2web_contact {
+      .sidebar__box-heading {
+        .field--name-field-os2web-contact-heading {
+          h2 {
+            color: #00335b;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .sidebar__box-body {
+        .field--name-field-os2web-contact-body {
+          * {
+            color: #00335b;
+          }
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
