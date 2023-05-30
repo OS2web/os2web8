@@ -7,12 +7,6 @@ use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
-
-
-
-
-
-
 /**
  * Implements hook_theme_suggestions_page().
  */
@@ -381,33 +375,35 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
               // find primary node for this child
               if ($child->hasField('field_primarynode') && !empty($child->field_primarynode->target_id)) {
                 $primaryNode = \Drupal\node\Entity\Node::load($child->field_primarynode->target_id);
-                $entry = node2box($primaryNode, $showImages);
+                if ($primaryNode) {
+                    $entry = node2box($primaryNode, $showImages);
 
-                // find all node that has this taxonomy in section
-                $query = $storage->getQuery()
-                  ->condition('field_os2web_page_section.target_id', $child->tid->value)
-                  ->execute();
-                if (count($query) > 0) {
-                  foreach ($query as $nodeId) {
-                    $childNode = \Drupal\node\Entity\Node::load($nodeId);
+                    // find all node that has this taxonomy in section
+                    $query = $storage->getQuery()
+                        ->condition('field_os2web_page_section.target_id', $child->tid->value)
+                        ->execute();
+                    if (count($query) > 0) {
+                        foreach ($query as $nodeId) {
+                            $childNode = \Drupal\node\Entity\Node::load($nodeId);
 
-                    if (
-                      $childNode->getType() == 'os2web_page' &&
-                      $childNode->isPublished() &&
-                      (
-                        !$childNode->isPromoted() ||
-                        ($incPromoted && $childNode->isPromoted())
-                      ) &&
-                      $childNode->id() !== $primaryNode->id()) {
-                      $entry->children[] = (object) [
-                          'title' => $childNode->getTitle(),
-                          'url' => $childNode->toUrl()->toString()
-                        ];
+                            if (
+                                $childNode->getType() == 'os2web_page' &&
+                                $childNode->isPublished() &&
+                                (
+                                    !$childNode->isPromoted() ||
+                                    ($incPromoted && $childNode->isPromoted())
+                                ) &&
+                                $childNode->id() !== $primaryNode->id()) {
+                                $entry->children[] = (object)[
+                                    'title' => $childNode->getTitle(),
+                                    'url' => $childNode->toUrl()->toString()
+                                ];
+                            }
+                        }
                     }
-                  }
-                }
 
-                $variables['menubox'][] = $entry;
+                    $variables['menubox'][] = $entry;
+                }
               }
             }
           }
