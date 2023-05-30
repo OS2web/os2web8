@@ -5,6 +5,8 @@ use Drupal\bc_utility\Plugin\Widgets\LinkWidgetValidators;
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\search_api\Query\QueryInterface;
+use Drupal\Core\Database\Database;
 
 /**
  * @file
@@ -71,3 +73,47 @@ function bc_utility_field_widget_single_element_form_alter(array &$element, Form
     $element['uri']['#element_validate'] = [[LinkWidgetValidators::class, 'validateUriElement']];
   }
 }
+
+
+function bc_utility_search_api_query_alter(QueryInterface &$query)
+{
+  $user = Drupal::currentUser();
+  $language = Drupal::languageManager()->getCurrentLanguage();
+  $database = Database::getConnection();
+  $index = $query->getIndex();
+
+  if (!empty($index)) {
+    $server = $index->get('server');
+  }
+
+  if (empty($index) || empty($server)) {
+    return;
+  }
+
+  $originalKeys = $query->getOriginalKeys();
+  $lowerOriginalKeys = mb_strtolower($originalKeys);
+  $keywords = trim($lowerOriginalKeys);
+
+  if (!empty($keywords)) {
+    if (!preg_match('/^[a-zA-Z0-9\s-]+$/', $keywords) || strlen($keywords) < 3 || strlen($keywords) > 30) {
+      return;
+    }
+
+      $database->insert('popular_search')->fields([
+          's_name' => $server,
+          'i_name' => $index->id(),
+          'timestamp' => \Drupal::time()->getRequestTime(),
+          'numfound' => $query->getResults()->getResultCount(),
+          'uid' => $user->id(),
+          'sid' => session_id(),
+          'keywords' => $keywords,
+          'filters' => '',
+          'sort' => '',
+          'language' => $language->getId(),
+      ])->execute();
+
+    $query->keys('');
+  }
+
+}
+

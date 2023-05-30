@@ -235,6 +235,9 @@
             },
 	        "drupal/color" :  {
 		        "fix color php8 issues " : "./patches/20230320-color-php8.patch"
+            },
+            "drupal/popular_search_keywords" : {
+                "fix deprecated mbstrtolower" : "https://www.drupal.org/files/issues/2023-02-17/deprecated-mbstrtolower-3342692.patch"
             }
         }
     }
