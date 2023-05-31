@@ -21,112 +21,17 @@
 {% endif %}
 
 <footer class="d-print-none">
+
+	{% if theme_settings.footer.footer_image and theme_settings.footer.footer_image_url %}
+	<div class="row footer-top">
+		<img src="{{ theme_settings.footer.footer_image_url }}" class="footer-top-image" style="width: 100%; ">
+	</div>
+	{% endif %}
+
 	<div class="footer">
 		<div class="container">
 			<div class="row">
-
-				{#  <div class="col-12 mb-8">
-					{{ page.header__main_navigation }}
-				</div> #}
-
-				{# <div class="col-12 col-sm-9 footer-col">
-					<div class="block">
-						<div class="social-icon-list">
-							{% if theme_settings.social.facebook.active %}
-							<div>
-								<a href="{{ theme_settings.social.facebook.url }}" target="_blank" class="social-icon social-icon--facebook social-icon--image" title="{{ theme_settings.social.facebook.tooltip }}">
-									<span class="icon fa fa-facebook-f"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-							{% if theme_settings.social.twitter.active %}
-							<div>
-								<a href="{{ theme_settings.social.twitter.url }}" target="_blank" class="social-icon social-icon--twitter social-icon--image" title="{{ theme_settings.social.twitter.tooltip }}">
-									<span class="icon fa fa-twitter-square"></span>
-								</a>
-							</div>
-							{% endif %}
-
-							{% if theme_settings.social.googleplus.active %}
-							<div>
-								<a href="{{ theme_settings.social.googleplus.url }}" target="_blank" class="social-icon social-icon--google-plus" title="{{ theme_settings.social.googleplus.tooltip }}">
-									<span class="icon fa fa-google-plus"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-							{% if theme_settings.social.linkedin.active %}
-								<div>
-									<a href="{{ theme_settings.social.linkedin.url }}" target="_blank" class="social-icon social-icon--linkedin" title="{{ theme_settings.social.linkedin.tooltip }}">
-										<span class="icon fa fa-linkedin"></span>
-									</a>
-								</div>
-							{% endif %}
-
-							{% if theme_settings.social.pinterest.active %}
-							<div>
-								<a href="{{ theme_settings.social.pinterest.url }}" target="_blank" class="social-icon social-icon--pinterest" title="{{ theme_settings.social.pinterest.tooltip }}">
-									<span class="icon fa fa-pinterest"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-							{% if theme_settings.social.instagram.active %}
-							<div>
-								<a href="{{ theme_settings.social.instagram.url }}" target="_blank" class="social-icon social-icon--instagram social-icon--image" title="{{ theme_settings.social.instagram.tooltip }}">
-									<span class="icon fa fa-instagram"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-							{% if theme_settings.social.youtube.active %}
-							<div>
-								<a href="{{ theme_settings.social.youtube.url }}" target="_blank" class="social-icon social-icon--youtube" title="{{ theme_settings.social.youtube.tooltip }}">
-									<span class="icon fa fa-youtube"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-							{% if theme_settings.social.vimeo.active %}
-							<div>
-								<a href="{{ theme_settings.social.vimeo.url }}" target="_blank" class="social-icon social-icon--vimeo" title="{{ theme_settings.social.vimeo.tooltip }}">
-									<span class="icon fa fa-vimeo"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-							{% if theme_settings.social.github.active %}
-							<div>
-								<a href="{{ theme_settings.social.github.url }}" target="_blank" class="social-icon social-icon--github" title="{{ theme_settings.social.github.tooltip }}">
-									<span class="icon fa fa-github"></span>
-								</a>
-							</div>
-              				{% endif %}
-
-						</div>
-          			</div>
-				</div>
-
-				<div class="col-12 col-sm-3 footer-col">
-					<div class="d-flex align-items-center">
-						<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}">
-								{% if theme_settings.footer.footer_use_default_logo %}
-									<img src="{{ base_path ~ directory }}/dist/images/logo__white.png" alt="" class="logo mr-5 logo--footer"/>
-								{% else %}
-									<img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}" alt="" class="logo mr-5 logo--footer">
-								{% endif %}
-						</a>
-						{% if theme_settings.branding.branding_toggle %}
-							<div class="footer-free-text">
-								{{ theme_settings.branding.branding_text }}
-							</div>
-						{% endif %}
-					</div>
-				</div> #}
-
 				<div class="col-12 footer-col customer-footer">
-
 					<div class="d-flex align-items-center footer-extra-info">
 
 						{% if theme_settings.contact_information.business_owner_name %}
