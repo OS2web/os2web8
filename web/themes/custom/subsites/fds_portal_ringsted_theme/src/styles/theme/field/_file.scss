@@ -32,10 +32,11 @@
         background-color: transparent;
         padding: 0;
         margin-bottom: 0;
+        background-image: none !important;
 
         a {
-          padding: 0 15px;
-          font-size: 1.6rem;
+          padding: 0 15px !important;
+          font-size: 1.6rem !important;
         }
       }
     }
