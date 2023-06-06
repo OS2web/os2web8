@@ -21,121 +21,26 @@
 // Styling
 // --------------------------------------------------
 
-.field--name-field-media-file {
-  .field__item {
-    max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.field--name-field-os2web-doc-files {
+  display: flex;
+  align-items: center;
 
-    span {
-      a{
-        &:before {
-          display: none !important;
+  .field__items {
+    .field__item {
+      file {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+
+        a {
+          padding: 0 15px;
+          font-size: 1.6rem;
         }
       }
     }
   }
-}
 
-.file {
-  display: block;
-  box-shadow: none;
-  margin-bottom: 4px;
-  background-color: #fafafa;
-  padding: 30px;
-  border: 1px solid var(--light-gray2);
-  margin-bottom: 15px;
-  padding-left: 0 !important; // Reset.
-  background-image: none !important;
-  box-shadow: $box-shadow;
-  a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    word-break: break-word;
-    padding: 0 (30px + 30px + 5px) 0 30px; // Width of icon + left/right spacing + gutter.
-    height: 88px;
-    max-width: 100%; // Reset.
-    font-weight: bold;
-    &:hover,
-    &:focus,
-    &:visited {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    &:after {
-      display: inline-block;
-      position: absolute;
-      content: "";
-      top: 50%;
-      right: 30px;
-      margin-top: -15px; // Half the height.
-      width: 30px;
-      height: 30px;
-      background-image: url("../images/download.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-  }
-}
-
-.field--name-field-os2web-m-bp-enclosures {
-  span.file {
-    all: revert;
-    a {
-      font-size: 15px;
-      position: relative;
-      margin-bottom: 5px;
-      margin-left: 23px;
-      padding: 0;
-      display: inline;
-      &::before {
-        content: "";
-        display: block !important;
-        background-image: url("../images/sprite.png");
-        background-repeat: no-repeat;
-        background-position: 0 -48px;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: -25px;
-        width: 19px;
-        height: 19px;
-      }
-      &:hover,
-      &:focus {
-        font-weight: initial;
-        font-family: "Museo 700", Helvetica, Arial, sans-serif;
-        &::before,
-        &::before {
-          background-position: -19px -48px;
-        }
-      }
-    }
-  }
-}
-
-.field--type-file {
-  > .field__items,
-  &.field__items {
-    display: flex;
-    flex-wrap: wrap;
-
-    margin-right: ($grid-gutter-width / -4);
-    margin-left: ($grid-gutter-width / -4);
-  }
-
-  > .field__items > .field__item,
-  > .field__item {
-    // Column.
-    position: relative;
-    width: 100%;
-    min-height: 1px; // Prevent columns from collapsing when empty
-    padding-right: ($grid-gutter-width / 4);
-    padding-left: ($grid-gutter-width / 4);
-
-    @include grid-col(12, 12);
-  }
 }
 
 // --------------------------------------------------
