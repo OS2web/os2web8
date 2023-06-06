@@ -33,7 +33,6 @@
   .field--name-field-os2web-twi-subheading {}
   .field--name-field-os2web-twi-body {}
   .field--name-field-os2web-twi-link {
-    margin-left: -10px;
   }
   .field--name-field-os2web-twi-image {}
 
@@ -81,6 +80,9 @@
   .field--name-field-os2web-twm-body {}
   .field--name-field-os2web-twm-link {
     color: #c30a32;
+    a {
+      color: #c30a32;
+    }
   }
   .field--name-field-os2web-twm-image {}
 
