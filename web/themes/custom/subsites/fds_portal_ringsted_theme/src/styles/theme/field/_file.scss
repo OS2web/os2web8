@@ -27,17 +27,13 @@
 
   .field__items {
     .field__item {
+      margin-left: 15px;
       file {
         border: none;
         background-color: transparent;
         padding: 0;
         margin-bottom: 0;
         background-image: none !important;
-
-        a {
-          padding: 0 15px !important;
-          font-size: 1.6rem !important;
-        }
       }
     }
   }
