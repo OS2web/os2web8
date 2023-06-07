@@ -112,7 +112,6 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
           'language' => $language->getId(),
       ])->execute();
 
-    $query->keys('');
   }
 
 }
