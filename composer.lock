@@ -15022,12 +15022,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_events.git",
-                "reference": "d31b321f9f2dc8ea60059cd97750b143b3f3a65a"
+                "reference": "01f93f42132c537f66128e5d6421a709bc223381"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_events/zipball/d31b321f9f2dc8ea60059cd97750b143b3f3a65a",
-                "reference": "d31b321f9f2dc8ea60059cd97750b143b3f3a65a",
+                "url": "https://api.github.com/repos/OS2web/os2web_events/zipball/01f93f42132c537f66128e5d6421a709bc223381",
+                "reference": "01f93f42132c537f66128e5d6421a709bc223381",
                 "shasum": ""
             },
             "require": {
