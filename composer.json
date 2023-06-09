@@ -69,6 +69,7 @@
         "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
         "drupal/entity_clone": "^2.0@beta",
+        "drupal/entity_update": "^3.0@RC",
         "drupal/fancy_file_delete": "^2.0",
         "drupal/file_management": "1.x-dev@dev",
         "drupal/flood_control": "^2.2",
