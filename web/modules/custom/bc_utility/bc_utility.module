@@ -7,6 +7,9 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\search_api\Query\QueryInterface;
 use Drupal\Core\Database\Database;
+use Drupal\Core\Session\AccountInterface;
+
+
 
 /**
  * @file
@@ -116,3 +119,19 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
 
 }
 
+/**
+ * Convert user name to full name on ringsted portal
+ *
+ * @param $name
+ * @param \Drupal\Core\Session\AccountInterface $account
+ *
+ * @return void
+ */
+function bc_utility_user_format_name_alter(&$name, AccountInterface $account) {
+  $teamName = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  if ($teamName == 'fds_portal_ringsted_theme') {
+    if (!empty($account->field_full_name) && !empty($account->field_full_name->value)) {
+      $name = $account->field_full_name->value;
+    }
+  }
+}
