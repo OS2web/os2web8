@@ -16,6 +16,7 @@
  * @ingroup themeable
  */
 #}
+
 {% if time and topic.created %}
   <span>{{ 'By' | trans }} {{author}} {{ topic.created | date('l') | trans | lower }} {{ topic.created|date('d/m/Y - H.m') }} </span>
 {% else %}
