@@ -106,6 +106,14 @@
       </div>
     </div>
 
+    {% if node.field_forum_file|length > 0 %}
+    <div class="forum-question-files" style="padding: 10px;">
+      {% for link in node.field_forum_file %}
+        <a href="{{ file_url(link.entity.uri.value) }}" target="_blank">{{ link.entity.filename.value }}</a><br>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {{ content.comment_forum }}
 
     {% if show_last_update_date %}
