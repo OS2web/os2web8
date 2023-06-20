@@ -93,7 +93,7 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
     return;
   }
 
-  $originalKeys = $query->getOriginalKeys();
+  $originalKeys = $query->getOriginalKeys() ?? '';
   $lowerOriginalKeys = mb_strtolower($originalKeys);
   $keywords = trim($lowerOriginalKeys);
 
