@@ -226,6 +226,18 @@ footer {
   }
 }
 
+body:has(.paragraph--type--footer-alternativ) {
+  footer {
+    display: none;
+  }
+  .region.region-featured-bottom-first {
+    margin-top: 12px;
+  }
+  .page-container.page-container-not-front {
+    margin-bottom: 0 !important;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
