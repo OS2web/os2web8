@@ -15,25 +15,6 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
-      <script type="text/javascript">
-        window._monsido = window._monsido || {
-          token: "SIVyjaDAw39OpmqGPSw3yg",
-          statistics: {
-            enabled: true,
-            cookieLessTracking: true,
-            documentTracking: {
-              enabled: false,
-              documentCls: "monsido_download",
-              documentIgnoreCls: "monsido_ignore_download",
-              documentExt: [],
-            },
-          },
-          pageCorrect: {
-            enabled: true,
-          },
-        };
-      </script>
-      <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable skip-link">
