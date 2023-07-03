@@ -229,3 +229,6 @@ jQuery(document).ready(function(){
   const sliderWidth = 100 * slides.length;
   slidesContainer.style.width = `${sliderWidth}%`;
 
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
