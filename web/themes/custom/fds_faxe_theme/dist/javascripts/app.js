@@ -3375,3 +3375,9 @@ jQuery(document).ready(function(){
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
+
+// Set focus on the first navigational element on page load
+window.addEventListener('load', () => {
+  const firstTabElement = document.querySelector('#skip-to-main');
+  firstTabElement.focus();
+});
