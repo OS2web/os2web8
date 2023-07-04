@@ -151,6 +151,7 @@ $header-bottom-menu-size: 70px;
             transition: .4s ease;
             &:focus {
               outline: 0;
+              text-decoration: underline !important;
             }
             &:hover {
               text-decoration: none;
@@ -230,6 +231,7 @@ $header-bottom-menu-size: 70px;
 .custom-header {
 
   .logo {
+    display: block;
 
     img {
       display: block;
