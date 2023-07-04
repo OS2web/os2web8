@@ -61,6 +61,10 @@ a.entity-teaser--os2web-event {
 
   &, &:hover, &:focus, &:active {
     color: $color-text;
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    cursor: pointer;
   }
 }
 
