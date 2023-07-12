@@ -256,3 +256,57 @@ jQuery(document).ready(function(){
   const sliderWidth = 100 * slides.length;
   slidesContainer.style.width = `${sliderWidth}%`;
 
+document.addEventListener('DOMContentLoaded', function () {
+  var closeBtns = document.querySelectorAll('.status-banner-close-btn');
+  for (var i = 0; i < closeBtns.length; i++) {
+    closeBtns[i].addEventListener('click', function () {
+      var statusBanner = this.closest('.status-banner');
+      if (statusBanner) {
+        statusBanner.style.display = 'none';
+
+        // Get the node ID
+        var nodeId = statusBanner.getAttribute('data-node-id');
+
+        // Store the closed state in local storage
+        localStorage.setItem('status_banner_' + nodeId, 'closed');
+      }
+    });
+  }
+
+  // Check local storage for closed banners
+  var banners = document.querySelectorAll('.status-banner');
+  for (var i = 0; i < banners.length; i++) {
+    var banner = banners[i];
+    var nodeId = banner.getAttribute('data-node-id');
+    var bannerState = localStorage.getItem('status_banner_' + nodeId);
+
+    if (bannerState === 'closed') {
+      banner.style.display = 'none';
+    }
+  }
+});
+
+// Get a reference to the nav-search button
+var navSearchButton = document.getElementById('nav-search');
+
+var closeSearchButton = document.getElementById('close-search');
+
+// Get a reference to the top-search-wrapper element
+var topSearchWrapper = document.querySelector('.top-search-wrapper');
+
+function toggleScrolling() {
+  document.body.classList.toggle('no-scroll');
+}
+
+// Add an event listener to the nav-search button
+navSearchButton.addEventListener('click', function() {
+  // Toggle the 'transformed' class on the top-search-wrapper element
+  topSearchWrapper.classList.toggle('transformed');
+  toggleScrolling();
+});
+
+closeSearchButton.addEventListener('click', function() {
+  topSearchWrapper.classList.toggle('transformed');
+  toggleScrolling();
+});
+

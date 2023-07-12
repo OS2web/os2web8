@@ -5,43 +5,57 @@
         <div class="flexy-row">
           {{ page.header__logo }}
 
-          <div class="flexy-spacer"></div>
-
           <div class="d-none d-lg-block">
             {{ page.header__top_navigation }}
           </div>
-          <div class="flexy-row font-resize-row">
+           {# <div class="flexy-row font-resize-row">
             <button class="visible-sm js-decrease-font-size">A-</button>
             <button class="visible-sm js-increase-font-size">A+</button>
-          </div>
-          <div class="d-lg-none">
-            {{ page.small_search }}
-          </div>
-            <div class="custom-header-row custom-header-row--mobile-navigation d-lg-none">
-              <div class="flexy-row">
-                <div class="flexy-spacer"></div>
-
-                <div class="custom-mobile-navigation">
-                  <div class="custom-mobile-navigation__overlay"></div>
-
-                  <button class="custom-mobile-navigation-toggle js-custom-mobile-navigation-toggle">
-                    <span class="icon fa fa-bars"></span>
-                  </button>
-
-                  <div class="custom-mobile-navigation-popup">
-                    <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--vertical">
-                      {{ page.header__main_navigation }}
-                    </div>
-                    {# <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
-                      {{ page.header__top_navigation }}
-                    </div> #}
-                  </div>
-                </div>
+          </div> #}
+          <div class="top-search-wrapper">
+            <div class="top-search-inner-wrapper">
+              {{ page.small_search }}
+              <div class="close-search-wrapper">
+                <button id="close-search" class="close-search-btn"><i class="fa-solid fa-xmark"></i></button>
               </div>
             </div>
+
+          </div>
+
+          <div class="search-megamenu-btns-wrapper">
+            <div class="search-btn-wrapper">
+              <button id="nav-search" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass" style="color: #e82f4c;"></i>
+              </button>
+            </div>
+
+            <div class="megamenu-burger-button-wrapper">
+              <button class="burger-btn">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    {% if node.field_status_banner_reference.entity and node.field_status_banner_reference.entity.field_status_banner_color.value is not empty %}
+
+      <div data-node-id="{{ node.id }}" class="status-banner" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'alert' %} background-color: #e82f2f;
+        {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %} background-color: #f2ef96;
+        {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'alright' %}background-color: #007200; {% endif  %}">
+        <div class="container">
+          <div class="status-banner-heading" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value in ['alert', 'alright'] %} color: white; {% else %} color:black; {% endif %}">
+            {{ node.field_status_banner_reference.entity.field_status_heading.value }}
+          </div>
+          <div class="status-banner-body {% if node.field_status_banner_reference.entity.field_status_banner_color.value in ['alert', 'alright'] %} white-text {% endif  %}">
+            {{ node.field_status_banner_reference.entity.field_status_body.value|raw }}
+            <button class="status-banner-close-btn">{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %}{% include '@fds_fredericia_main_theme/src/images/svg-icons/close.svg' with { close_icon_color: "black" } %} {% else %}{% include '@fds_fredericia_main_theme/src/images/svg-icons/close.svg' with { close_icon_color: "white" } %} {% endif%} </button>
+          </div>
+        </div>
+      </div>
+    {% endif %}
     {{ page.alert_banner }}
     {{ page.banner_search }}
     <div class="custom-header-row custom-header-row--desktop-navigation d-none d-lg-flex">
@@ -49,18 +63,6 @@
         <div class="flexy-row">
           {{ page.header__main_navigation }}
           <div class="flexy-spacer"></div>
-          {#  <div class="flexy-header__social-icons d-none d-lg-block">
-            <ul class="flexy-list list-unstyled">
-              <li class="m-0">
-                <a href="{{ theme_settings.social.facebook.url }}" target="_blank" class="social-icon social-icon--facebook" data-toggle="tooltip" data-placement="top" title="" rel="noopener noreferrer" data-original-title="Find os på Facebook">
-                  <span class="icon fa fa-facebook-f"></span>
-                </a>
-              </li>
-            </ul>
-          </div>#}
-          <div class="d-none d-lg-block">
-            {{ page.small_search }}
-          </div>
         </div>
       </div>
     </div>

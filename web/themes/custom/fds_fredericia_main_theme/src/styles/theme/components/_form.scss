@@ -101,31 +101,21 @@ form#search-block-form,
     right: 0;
     z-index: 500;
 
-    width: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     margin: 0;
 
     .form-submit {
-      position: absolute;
-
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      z-index: 500;
-
-      min-width: auto;
-      width: 30px;
-      height: 100%;
-
-      padding: 0 !important;
-
-      font-size: 0;
-
-      border: 0;
-
-      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50px;
+      background-color: #e82f4c;
     }
 
     &:after {
@@ -133,8 +123,8 @@ form#search-block-form,
       display: inline-block;
 
       top: 50%;
-      transform: translateY(-50%);
-      right: 10px;
+      transform: translateY(-50%) translateX(50%);
+      right: 50%;
 
       z-index: 100;
       pointer-events: none;
@@ -151,17 +141,14 @@ form#search-block-form,
     margin: 0;
     padding: 4px 40px 4px 15px;
 
-    max-width: 200px;
-
-    background-color: $background_color__default;
+    max-width: 350px;
 
     color: $color-white;
-    display: none;
     @include media($md) {
       display: block;
     };
     &::placeholder {
-      color: $color-white;
+      color: #7b7b7b;
     }
   }
 
