@@ -123,6 +123,28 @@
 
 }
 
+#block-primaernavigation-2 {
+  h2 {
+    background-color: white;
+    margin: 0;
+    padding: 40px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #00789e;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+}
+
 .sidebar__box {
   background-color: white;
 
@@ -144,6 +166,7 @@
       font-size: 2.4rem;
       color: #00789e;
       font-weight: normal;
+      margin-top: 0 !important;
     }
   }
   .sidebar__box-body {
