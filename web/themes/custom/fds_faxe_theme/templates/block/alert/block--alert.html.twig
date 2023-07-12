@@ -7,14 +7,16 @@
   'block-' ~ plugin_id|clean_class,
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+
+{% set colorValue = content.field_os2web_alert_page_ref['#items'].entity.field_alert_color.value %}
+<div{{ attributes.addClass(classes) }} style="{% if colorValue == 'white' %} background-color: white;
+{% elseif colorValue == 'yellow' %} background-color: yellow; {% elseif colorValue == 'red' %}background-color: red; color: white;" {% endif %}>
   <div class="container">
     <div class="custom-alert">
       <div class="custom-alert__icon">
         <img src="/{{ base_path ~ directory }}/dist/images/alert.png" alt="Advarsel ikon" />
       </div>
       <div class="custom-alert__meta">
-        <h2 class="alert-heading">{{ content.field_os2web_alert_page_ref['#title'].entity.title.value }}</h2>
         {{ content.field_os2web_alert_page_ref['#items'].entity.field_os2web_system_page_content.value|raw }}
       </div>
       <div class="custom-alert__button">
