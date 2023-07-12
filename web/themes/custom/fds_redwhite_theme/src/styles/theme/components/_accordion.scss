@@ -74,10 +74,17 @@ button.accordion-button {
 .accordion-content {
   padding: 0.5rem 2.4rem 2rem 2.4rem;
 
+
   .field {
 
     + .field--name-field-os2web-hearings-reply-docs {
       margin-top: $grid-gutter-width / 2;
+    }
+
+    .field__item {
+      img {
+        margin: 0 15px 0 15px;
+      }
     }
   }
   .field__label {
