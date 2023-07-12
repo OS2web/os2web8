@@ -14,8 +14,8 @@
         <img src="/{{ base_path ~ directory }}/dist/images/alert.png" alt="Advarsel ikon" />
       </div>
       <div class="custom-alert__meta">
-        <h2 class="alert-heading">{{ content.field_os2web_alert_page_ref['#title'] }}</h2>
-        {{ content.field_os2web_alert_page_ref['#title'].entity.field_os2web_system_page_content.value }}
+        <h2 class="alert-heading">{{ content.field_os2web_alert_page_ref['#title'].entity.label }}</h2>
+        {{ content.field_os2web_alert_page_ref['#items'].entity.field_os2web_system_page_content.value }}
       </div>
       <div class="custom-alert__button">
         {{ content.field_link }}
