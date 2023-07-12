@@ -98,8 +98,26 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  color: #000;
-  background-color: #ff9e18;
+  .container {
+
+    .custom-alert {
+
+      .custom-alert__icon {
+        .fa-solid {
+          color: white;
+          font-size: 45px;
+        }
+      }
+
+      .red-text {
+
+        h1, h2, h3, h4, h5, h6, p, a {
+          color: white;
+        }
+      }
+    }
+  }
+
 }
 
 .section--breadcrumb-bar {
