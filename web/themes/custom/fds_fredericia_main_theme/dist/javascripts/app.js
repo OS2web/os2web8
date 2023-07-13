@@ -3453,3 +3453,27 @@ closeSearchButton.addEventListener('click', function() {
   toggleScrolling();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var megamenuOverlay = document.querySelector('.megamenu-overlay');
+  var megamenuWrapper = document.querySelector('.megamenu-wrapper');
+  var hamburgerButton = document.querySelector('.burger-btn');
+  var closeButton = document.querySelector('.megamenu-close');
+
+  // Toggle megamenu visibility when the hamburger button is clicked
+  hamburgerButton.addEventListener('click', function() {
+    megamenuOverlay.style.display = 'block';
+    megamenuWrapper.style.display = 'block';
+  });
+
+  // Hide megamenu and overlay when the close button is clicked
+  closeButton.addEventListener('click', function() {
+    megamenuOverlay.style.display = 'none';
+    megamenuWrapper.style.display = 'none';
+  });
+
+  // Hide megamenu and overlay when the overlay area is clicked
+  megamenuOverlay.addEventListener('click', function() {
+    megamenuOverlay.style.display = 'none';
+    megamenuWrapper.style.display = 'none';
+  });
+});

@@ -116,6 +116,11 @@ form#search-block-form,
       border: none;
       border-radius: 50px;
       background-color: #e82f4c;
+      transition: .3s ease;
+
+      &:hover {
+        background-color: #bf263e;
+      }
     }
 
     &:after {

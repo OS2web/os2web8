@@ -12,6 +12,7 @@ regions:
   header__logo: 'Header - logo'
   header__top_navigation: 'Header - top navigation'
   header__main_navigation: 'Header - main navigation'
+  header__megamenu_navigation: 'Header - Megamenu'
   banner_search: 'Banner search'
   alert_banner: 'Alert banner'
   small_search: 'Small search'

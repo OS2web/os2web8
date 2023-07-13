@@ -22,6 +22,14 @@
 
           </div>
 
+          <div class="megamenu-overlay"></div>
+          <div class="megamenu-wrapper">
+            <button class="megamenu-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="megamenu-inner-wrapper">
+              {{ page.header__megamenu_navigation }}
+            </div>
+          </div>
+
           <div class="search-megamenu-btns-wrapper">
             <div class="search-btn-wrapper">
               <button id="nav-search" class="search-btn">
@@ -42,7 +50,7 @@
     </div>
     {% if node.field_status_banner_reference.entity and node.field_status_banner_reference.entity.field_status_banner_color.value is not empty %}
 
-      <div data-node-id="{{ node.id }}" class="status-banner" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'alert' %} background-color: #e82f2f;
+      <div data-node-id="{{ node.id }}" class="status-banner" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'alert' %} background-color: #e82f4c;
         {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %} background-color: #f2ef96;
         {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'alright' %}background-color: #007200; {% endif  %}">
         <div class="container">
