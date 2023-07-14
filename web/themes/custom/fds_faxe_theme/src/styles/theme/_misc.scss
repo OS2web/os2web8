@@ -444,12 +444,14 @@ body .page-container {
 .layout-sidebar-right,
 // .layout-content
 {
-  padding-top: $grid-gutter-width;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .layout-sidebar-right {
-  padding-top: 10px;
+  padding-top: 0;
   @include media($sm) {
-    padding-top: $grid-gutter-width;
+    padding-top: 0;
   };
 }
 .layout-content.entity-teaser--os2web-event-wrapper {

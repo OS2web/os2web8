@@ -13,13 +13,6 @@
 {% elseif colorValue == 'yellow' %} background-color: #eed202; {% elseif colorValue == 'red' %}background-color: #ff2e2e; color: white; {% endif %}">
   <div class="container">
     <div class="custom-alert">
-      <div class="custom-alert__icon">
-        {% if colorValue == 'white' or colorValue == 'yellow' %}
-        <img src="/{{ base_path ~ directory }}/dist/images/alert.png" alt="Advarsel ikon" />
-        {% elseif colorValue == 'red' %}
-        <i class="fa-solid fa-triangle-exclamation"></i>
-        {% endif %}
-      </div>
       <div class="custom-alert__meta {% if colorValue == 'red' %} red-text {% endif %}">
         {{ content.field_os2web_alert_page_ref['#items'].entity.field_os2web_system_page_content.value|raw }}
       </div>
