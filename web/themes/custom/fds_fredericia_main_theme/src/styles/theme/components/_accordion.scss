@@ -40,9 +40,9 @@
     padding: 25px 50px 25px 20px;
     font-weight: 700;
     background-image: none !important;
-    background-color: #d6ecf1;
-    border: 1px solid $gray-helper;
-    color: #00335b;
+    background-color:   #00335b;
+    border: none;
+    color: white;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     &:after {
       display: flex;
@@ -65,7 +65,7 @@
 
       content: $fa-var-plus;
 
-      color: #8b0f23;
+      color: white;
     }
     &:focus {
       outline: 0;

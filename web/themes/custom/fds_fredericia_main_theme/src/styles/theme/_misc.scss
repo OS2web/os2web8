@@ -14,7 +14,7 @@
 // --------------------------------------------------
 
 body {
-  background-color: $gray-secondary;
+  background-color: #fff;
 }
 
 // Increased specificity to win over base theme.
@@ -59,57 +59,6 @@ body a {
   }
 }
 
-.button {
-  font-weight: bold;
-
-  &.form-submit {
-    color: $button-primary-color;
-    background-color: $button-primary-bg;
-    border-color: $button-primary-border-color;
-
-    &:hover,
-    &.button-hover {
-      background-color: $button-primary-hover-bg;
-      border-color: $button-primary-hover-border-color;
-    }
-
-    &:active,
-    &.button-active {
-      background-color: $button-primary-active-bg;
-      border-color: $button-primary-active-border-color;
-    }
-
-    &.focus,
-    &:focus {
-      background-color: $button-primary-focus-bg;
-      border-color: $button-primary-focus-border-color;
-    }
-
-    &:disabled,
-    &.disabled {
-      opacity:0.3;
-      box-shadow: none !important;
-      cursor: not-allowed;
-
-      &:hover {
-        color: $button-primary-color !important;
-        background-color: $button-primary-bg !important;
-        border-color: $button-primary-border-color !important;
-        opacity:0.3 !important;
-        box-shadow: none !important;
-      }
-    }
-  }
-}
-.button.button--selvbetjening {
-  display: block;
-
-  margin-bottom: $grid-gutter-width / 2;
-  padding: 15px 30px;
-
-  text-align: left;
-  font-size: 2rem;
-}
 
 //.paragraph a,
 //.region-content a,

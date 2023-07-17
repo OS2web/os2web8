@@ -286,35 +286,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Get a reference to the nav-search button
-var navSearchButton = document.getElementById('nav-search');
 
-var closeSearchButton = document.getElementById('close-search');
-
-// Get a reference to the top-search-wrapper element
-var topSearchWrapper = document.querySelector('.top-search-wrapper');
-
-function toggleScrolling() {
-  document.body.classList.toggle('no-scroll');
-}
-
-// Add an event listener to the nav-search button
-navSearchButton.addEventListener('click', function() {
-  // Toggle the 'transformed' class on the top-search-wrapper element
-  topSearchWrapper.classList.toggle('transformed');
-  toggleScrolling();
-});
-
-closeSearchButton.addEventListener('click', function() {
-  topSearchWrapper.classList.toggle('transformed');
-  toggleScrolling();
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   var megamenuOverlay = document.querySelector('.megamenu-overlay');
   var megamenuWrapper = document.querySelector('.megamenu-wrapper');
   var hamburgerButton = document.querySelector('.burger-btn');
   var closeButton = document.querySelector('.megamenu-close');
+
+  // Get a reference to the nav-search button
+  var navSearchButton = document.getElementById('nav-search');
+
+  var closeSearchButton = document.getElementById('close-search');
+
+// Get a reference to the top-search-wrapper element
+  var topSearchWrapper = document.querySelector('.top-search-wrapper');
 
   // Toggle megamenu visibility when the hamburger button is clicked
   hamburgerButton.addEventListener('click', function() {
@@ -332,5 +318,21 @@ document.addEventListener('DOMContentLoaded', function() {
   megamenuOverlay.addEventListener('click', function() {
     megamenuOverlay.style.display = 'none';
     megamenuWrapper.style.display = 'none';
+  });
+
+  function toggleScrolling() {
+    document.body.classList.toggle('no-scroll');
+  }
+
+// Add an event listener to the nav-search button
+  navSearchButton.addEventListener('click', function() {
+    // Toggle the 'transformed' class on the top-search-wrapper element
+    topSearchWrapper.classList.toggle('transformed');
+    toggleScrolling();
+  });
+
+  closeSearchButton.addEventListener('click', function() {
+    topSearchWrapper.classList.toggle('transformed');
+    toggleScrolling();
   });
 });

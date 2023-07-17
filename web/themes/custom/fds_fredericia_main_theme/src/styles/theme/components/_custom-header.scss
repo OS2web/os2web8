@@ -184,6 +184,7 @@ $header-top-menu-size-sm: 50px;
     right: 10px;
     border: none;
     background-color: transparent;
+    z-index: 10;
 
     i {
       color: white;
@@ -191,6 +192,7 @@ $header-top-menu-size-sm: 50px;
     }
   }
   .megamenu-inner-wrapper {
+    padding: 25px;
     .region-header__megamenu-navigation {
       nav {
         .menu-level-0 {
