@@ -103,11 +103,11 @@
   <div{{ content_attributes.addClass('node__content') }}>
     <h2>{{ node.title.value }}</h2>
     <span>
-      {{ 'Date'|trans }} : {{  node.field_os2web_event_start_date.value|date('l')|trans }}
+      {{  node.field_os2web_event_start_date.value|date('l')|trans }}
       {{ node.field_os2web_event_start_date.value|date('j') }}.
       {{ node.field_os2web_event_start_date.value|date('F')|trans }}
       {{ node.field_os2web_event_start_date.value|date('Y') }},
-      {{ 'Clock'|trans }} {{ node.field_os2web_event_start_date.value|date('H:i') }} -
+      {{ 'kl.'|trans }} {{ node.field_os2web_event_start_date.value|date('H:i') }} -
       {{ node.field_os2web_event_end_date.value|date('H:i') }}
     </span>
     {{ node.body.value|raw }}
