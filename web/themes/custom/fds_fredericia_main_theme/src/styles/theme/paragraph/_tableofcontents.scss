@@ -1,0 +1,30 @@
+.toc-outer-wrapper {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+
+  .toc-inner-wrapper {
+    width: 20%;
+    padding: 0 25px;
+
+    .toc-heading {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #00335b;
+      font-weight: 600;
+    }
+
+    ul {
+      li {
+        padding-left: 0;
+        a {
+          color: #00335b;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

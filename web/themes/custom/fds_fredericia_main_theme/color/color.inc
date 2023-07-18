@@ -15,10 +15,7 @@ $info = [
     // 'color__link' => t('Link color'),
     // 'color__link__hover' => t('Link:hover color'),
     // 'color__footer_link' => t('Footer link color'),
-    // 'color__bullets' => t('Bullets color'),
-    'spotbox_color__primary' => t('Spotbox color - primary'),
-    'spotbox_color__secondary' => t('Spotbox color - secondary'),
-    'spotbox_color__tertiary' => t('Spotbox color - tertiary')
+    // 'color__bullets' => t('Bullets color')
   ],
 
   // Pre-defined color schemes.

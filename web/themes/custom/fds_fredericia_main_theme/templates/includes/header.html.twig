@@ -66,6 +66,7 @@
     {% endif %}
     {{ page.alert_banner }}
     {{ page.banner_search }}
+    {% if page.header__main_navigation is not empty %}
     <div class="custom-header-row custom-header-row--desktop-navigation d-none d-lg-flex">
       <div class="container">
         <div class="flexy-row">
@@ -74,6 +75,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
   </div>
 </header>
 

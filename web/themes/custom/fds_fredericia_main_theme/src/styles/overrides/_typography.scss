@@ -19,13 +19,12 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 html {
   font-family: $font-family;
   line-height: $base-line-height;
 }
 * {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 html body {
   line-height: $base-line-height;
@@ -39,7 +38,7 @@ h5, .h5,
 h6, .h6 {
   margin-top: 30px;
 
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   color: $color-text;
   line-height: 1.1;
