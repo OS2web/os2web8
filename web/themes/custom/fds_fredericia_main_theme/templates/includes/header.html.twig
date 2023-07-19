@@ -1,3 +1,44 @@
+{% if theme_settings.external_links.link1_url and theme_settings.external_links.link1_label is not empty %}
+<div class="custom-external-links-banner">
+  <div class="container custom-external-links-inner">
+  <select class="custom-external-links-select">
+        {% if theme_settings.external_links.link1_url and theme_settings.external_links.link1_label %}
+        <option value="{{ theme_settings.external_links.link1_url }}"> {{ theme_settings.external_links.link1_label }} </option>
+        {% endif %}
+    {% if theme_settings.external_links.link2_url and theme_settings.external_links.link2_label %}
+      <option value="{{ theme_settings.external_links.link2_url }}"> {{ theme_settings.external_links.link2_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link3_url and theme_settings.external_links.link3_label %}
+      <option value="{{ theme_settings.external_links.link3_url }}"> {{ theme_settings.external_links.link3_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link4_url and theme_settings.external_links.link4_label %}
+      <option value="{{ theme_settings.external_links.link4_url }}"> {{ theme_settings.external_links.link4_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link5_url and theme_settings.external_links.link5_label %}
+      <option value="{{ theme_settings.external_links.link5_url }}"> {{ theme_settings.external_links.link5_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link6_url and theme_settings.external_links.link6_label %}
+      <option value="{{ theme_settings.external_links.link6_url }}"> {{ theme_settings.external_links.link6_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link7_url and theme_settings.external_links.link7_label %}
+      <option value="{{ theme_settings.external_links.link7_url }}"> {{ theme_settings.external_links.link7_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link8_url and theme_settings.external_links.link8_label %}
+      <option value="{{ theme_settings.external_links.link8_url }}"> {{ theme_settings.external_links.link8_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link9_url and theme_settings.external_links.link9_label %}
+      <option value="{{ theme_settings.external_links.link9_url }}"> {{ theme_settings.external_links.link9_label }} </option>
+    {% endif %}
+    {% if theme_settings.external_links.link10_url and theme_settings.external_links.link10_label %}
+      <option value="{{ theme_settings.external_links.link10_url }}"> {{ theme_settings.external_links.link10_label }} </option>
+    {% endif %}
+
+
+  </select>
+  <button class="custom-external-links-button">Gå til hjemmesiden</button>
+  </div>
+</div>
+{% endif %}
 <header class="d-print-none">
   <div class="custom-header">
     <div class="custom-header-row custom-header-row--meta">
@@ -44,6 +85,7 @@
                 <span class="bar bar-3"></span>
               </button>
             </div>
+            <button class="custom-external-links-toggle"><i class="fa-solid fa-link"></i></button>
           </div>
         </div>
       </div>

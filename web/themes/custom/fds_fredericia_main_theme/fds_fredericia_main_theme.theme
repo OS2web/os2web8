@@ -52,6 +52,42 @@ function fds_fredericia_main_theme_preprocess_page(array &$variables) {
   $variables['theme_settings']['footer']['footer_image_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('footer_image_path'));
   $variables['theme_settings']['branding']['branding_toggle'] = theme_get_setting('branding_toggle');
   $variables['theme_settings']['branding']['branding_text'] = theme_get_setting('branding_text');
+
+  $variables['theme_settings']['external_links']['link1_url'] = theme_get_setting('link1_url');
+  $variables['theme_settings']['external_links']['link1_label'] = theme_get_setting('link1_label');
+
+  $variables['theme_settings']['external_links']['link2_url'] = theme_get_setting('link2_url');
+  $variables['theme_settings']['external_links']['link2_label'] = theme_get_setting('link2_label');
+
+  $variables['theme_settings']['external_links']['link3_url'] = theme_get_setting('link3_url');
+  $variables['theme_settings']['external_links']['link3_label'] = theme_get_setting('link3_label');
+
+  $variables['theme_settings']['external_links']['link4_url'] = theme_get_setting('link4_url');
+  $variables['theme_settings']['external_links']['link4_label'] = theme_get_setting('link4_label');
+
+  $variables['theme_settings']['external_links']['link5_url'] = theme_get_setting('link5_url');
+  $variables['theme_settings']['external_links']['link5_label'] = theme_get_setting('link5_label');
+
+  $variables['theme_settings']['external_links']['link6_url'] = theme_get_setting('link6_url');
+  $variables['theme_settings']['external_links']['link6_label'] = theme_get_setting('link6_label');
+
+  $variables['theme_settings']['external_links']['link7_url'] = theme_get_setting('link7_url');
+  $variables['theme_settings']['external_links']['link7_label'] = theme_get_setting('link7_label');
+
+  $variables['theme_settings']['external_links']['link8_url'] = theme_get_setting('link8_url');
+  $variables['theme_settings']['external_links']['link8_label'] = theme_get_setting('link8_label');
+
+  $variables['theme_settings']['external_links']['link9_url'] = theme_get_setting('link9_url');
+  $variables['theme_settings']['external_links']['link9_label'] = theme_get_setting('link9_label');
+
+  $variables['theme_settings']['external_links']['link10_url'] = theme_get_setting('link10_url');
+  $variables['theme_settings']['external_links']['link10_label'] = theme_get_setting('link10_label');
+
+
+
+
+
+
   $variables['lastupdated'] = time();
 }
 
@@ -91,7 +127,7 @@ function fds_fredericia_main_theme_form_search_form_alter(&$form, FormStateInter
 /**
  * Implements template_preprocess_swiftmailer().
  */
-function fds_fredericia_main_theme_preprocess_swiftmailer(&$variables) {
+function fds_fredericia_main_theme_preprocesfos_swiftmailer(&$variables) {
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();

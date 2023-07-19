@@ -291,6 +291,16 @@ $header-top-menu-size-sm: 50px;
       }
     }
   }
+
+  .custom-external-links-toggle {
+    border: 0;
+    background-color: transparent;
+
+    i {
+      font-size: 32px;
+      color: #e82f4c;
+    }
+  }
 }
 
 $header-bottom-menu-size: 70px;
@@ -352,6 +362,7 @@ $header-bottom-menu-size: 70px;
             border-radius: 5px;
             min-width: 250px;
             justify-content: center;
+            text-decoration: none;
             &:focus {
               outline: 0;
             }
@@ -401,6 +412,43 @@ $header-bottom-menu-size: 70px;
     }
   }
 }
+
+
+.custom-external-links-banner {
+  height: 10vh;
+  background-color: #00325b;
+  display: flex;
+  align-items: center;
+
+  .custom-external-links-inner {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    .custom-external-links-select {
+      border-radius: 50px;
+      border: 0;
+      padding: 0 15px;
+    }
+
+    .custom-external-links-button {
+      padding: 5px 25px;
+      border-radius: 50px;
+      border: 0;
+      background-color: #e82f4c;
+      color: white;
+      font-weight: 600;
+
+      @media only screen and (max-width: 438px) {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+    }
+
+
+  }
+}
+
 
 // --------------------------------------------------
 // Variants

@@ -336,8 +336,30 @@ document.addEventListener('DOMContentLoaded', function() {
   slidesContainer.style.width = `${sliderWidth}%`;
 });
 
+(function ($, Drupal) {
+  Drupal.behaviors.customExternalLinks = {
+    attach: function (context, settings) {
+      var $banner = $('.custom-external-links-banner');
+      var $button = $('.custom-external-links-toggle');
 
+      $banner.hide(); // Hide the banner initially
 
+      $button.on('click', function () {
+        $banner.toggle(); // Toggle the visibility of the banner on button click
 
+        // Change the FontAwesome icon
+        var $icon = $(this).find('.fa-solid');
+        $icon.toggleClass('fa-link fa-link-slash');
+      });
+
+      $('.custom-external-links-button', context).on('click', function () {
+        var url = $('.custom-external-links-select', context).val();
+        if (url) {
+          window.open(url, '_blank');
+        }
+      });
+    }
+  };
+})(jQuery, Drupal);
 
 

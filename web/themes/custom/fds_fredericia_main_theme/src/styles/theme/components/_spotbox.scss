@@ -35,13 +35,17 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 
+    &.tns-slider {
+      display: flex;
+      gap: 20px;
+    }
+
     @media only screen and (max-width: 992px) {
       grid-template-columns: repeat(1, 1fr);
     }
 
     .field__item {
       min-height: 150px;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
       .spotbox--image {
         display: flex;
         line-height: 0;
@@ -67,15 +71,15 @@
           }
         }
         &.spotbox--background-color-primary {
-          background-color: $spotbox_color__primary !important;
+          background-color: $background_color__primary !important;
           color: white;
         }
         &.spotbox--background-color-secondary {
-          background-color: $spotbox_color__secondary !important;
+          background-color: $background_color__secondary !important;
           color: white;
         }
         &.spotbox--background-color-tertiary {
-          background-color: $spotbox_color__tertiary !important;
+          background-color: $background_color__tertiary !important;
           color: white;
         }
 
@@ -150,6 +154,41 @@
 
           }
         }
+      }
+    }
+  }
+}
+
+.spotbox--default {
+  text-decoration: none;
+  color: #000 !important;
+
+  .field--name-field-os2web-spotbox-bg-image {
+    box-shadow: none !important;
+  }
+
+  .field--name-field-os2web-spotbox-link-text {
+    box-shadow: none !important;
+    font-size: 20px;
+    padding: 20px 0;
+
+  }
+
+  .read-more-spotbox {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    span {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+
+      i {
+        margin-left: 15px;
+        color: #e82f4c;
+        font-size: 24px;
       }
     }
   }
