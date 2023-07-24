@@ -659,6 +659,10 @@ a:not([class]) {
   }
 }
 
+p, .manchet {
+  line-height: 1.42857 !important;
+}
+
 
 .caption figcaption {
   font-size: 0.8em !important;
