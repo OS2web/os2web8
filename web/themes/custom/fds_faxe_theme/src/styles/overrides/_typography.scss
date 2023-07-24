@@ -42,7 +42,7 @@ h6, .h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   color: $color-text;
-  line-height: 1.1;
+  line-height: 1.42857;
   + p,
   + .body-text {
     margin-top: 0;
@@ -142,7 +142,7 @@ p, .body-text {
   p, .body-text, .body-copy-text,
   body {
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 1.42857;
   }
 }
 
