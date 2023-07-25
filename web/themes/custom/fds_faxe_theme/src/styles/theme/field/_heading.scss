@@ -33,6 +33,11 @@
 
 .field--name-field-os2web-page-heading {
   display: inline-flex;
+  padding: 25px !important;
+
+  h1 {
+    padding: 0 !important;
+  }
 }
 
 // --------------------------------------------------
