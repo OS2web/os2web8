@@ -66,6 +66,28 @@
   }
 }
 
+.block-system-breadcrumb-block-search-result {
+  .breadcrumb {
+    padding: 10px;
+
+    li {
+
+      &:before {
+        font-size: 1.4rem;
+      }
+
+      i {
+        &:before {
+          font-size: 1.4rem;
+        }
+      }
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
