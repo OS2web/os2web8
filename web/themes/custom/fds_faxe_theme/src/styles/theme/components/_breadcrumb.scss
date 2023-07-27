@@ -20,6 +20,21 @@
 // Styling
 // --------------------------------------------------
 
+.breadcrumb-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+.region-breadcrumb {
+  width: fit-content;
+}
+
 .breadcrumb {
   background-color: $color-white;
   margin: 0;
