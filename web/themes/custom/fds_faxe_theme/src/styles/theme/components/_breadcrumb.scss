@@ -40,10 +40,12 @@
   margin: 0;
   padding: 16px 30px;
   border-radius: 0;
+  display: flex;
   li {
-    display: inline-block;
+    display: flex;
+    font-weight: 600;
 
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: $blue-primary;
     a {
       color: $color-black;
@@ -63,16 +65,23 @@
       margin-left: 10px;
       margin-right: 10px;
 
-      font-size: 2rem;
+      font-size: 0.4rem;
       font-family: FontAwesome;
-      content: $fa-var-angle-right;
+      content: $fa-var-circle;
 
       color: #000;
+      transform: translateY(2px);
+    }
+  }
+
+  li:last-child {
+    a {
+      color: $blue-primary !important;
     }
   }
 
   a {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: $color-black;
     cursor: pointer;
     &, &:hover, &:visited {
