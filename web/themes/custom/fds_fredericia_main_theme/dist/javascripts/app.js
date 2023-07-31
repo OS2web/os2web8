@@ -3410,33 +3410,60 @@ jQuery(document).ready(function(){
 
 
 
-(function ($, Drupal) {
-  Drupal.behaviors.customExternalLinks = {
-    attach: function (context, settings) {
-      $(context).once('customExternalLinks').each(function () {
-        var $banner = $('.custom-external-links-banner', this);
-        var $button = $('.custom-external-links-toggle', this);
+// (function ($, Drupal) {
+//   Drupal.behaviors.customExternalLinks = {
+//     attach: function (context, settings) {
+//       var $banner = $('.custom-external-links-banner');
+//       var $button = $('.custom-external-links-toggle');
+//
+//       $banner.hide(); // Hide the banner initially
+//
+//       $button.on('click', function () {
+//         $banner.toggle(); // Toggle the visibility of the banner on button click
+//
+//         // Change the FontAwesome icon
+//         var $icon = $(this).find('.fa-solid');
+//         $icon.toggleClass('fa-link fa-link-slash');
+//       });
+//
+//       $('.custom-external-links-button', context).on('click', function () {
+//         var url = $('.custom-external-links-select', context).val();
+//         if (url) {
+//           window.open(url, '_blank');
+//         }
+//       });
+//     }
+//   };
+// })(jQuery, Drupal);
 
-        $banner.hide(); // Hide the banner initially
+function customExternalLinks() {
+  var banner = document.querySelector('.custom-external-links-banner');
+  var button = document.querySelector('.custom-external-links-toggle');
 
-        $button.on('click', function () {
-          $banner.toggle(); // Toggle the visibility of the banner on button click
+  banner.style.display = 'none'; // Hide the banner initially
 
-          // Change the FontAwesome icon
-          var $icon = $(this).find('.fa-solid');
-          $icon.toggleClass('fa-link fa-link-slash');
-        });
+  button.addEventListener('click', function () {
+    banner.style.display = banner.style.display === 'none' ? 'flex' : 'none'; // Toggle the visibility of the banner on button click
 
-        $('.custom-external-links-button', this).on('click', function () {
-          var url = $('.custom-external-links-select', this).val();
-          if (url) {
-            window.open(url, '_blank');
-          }
-        });
-      });
+    // Change the FontAwesome icon
+    var icon = this.querySelector('.fa-solid');
+    icon.classList.toggle('fa-link');
+    icon.classList.toggle('fa-link-slash');
+  });
+
+  var customExternalLinksButton = document.querySelector('.custom-external-links-button');
+  customExternalLinksButton.addEventListener('click', function () {
+    var selectElement = document.querySelector('.custom-external-links-select');
+    var url = selectElement.value;
+    if (url) {
+      window.open(url, '_blank');
     }
-  };
-})(jQuery, Drupal);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  customExternalLinks();
+});
 
 
 
