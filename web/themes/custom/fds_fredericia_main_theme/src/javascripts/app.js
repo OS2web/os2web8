@@ -363,3 +363,78 @@ document.addEventListener('DOMContentLoaded', function() {
 })(jQuery, Drupal);
 
 
+(function ($, Drupal) {
+  Drupal.behaviors.anchorLinkHighlight = {
+    attach: function (context, settings) {
+      // Select all anchor links in the ToC
+      var anchorLinks = $('.toc-outer-wrapper a', context);
+
+      // Select all anchor paragraphs in the content
+      var anchorParagraphs = $('.anchor', context);
+
+      // Update the active link based on the scroll position
+      function updateActiveLink() {
+        var activeAnchor = null;
+
+        // Loop through each anchor paragraph and check if any part of its content is visible
+        anchorParagraphs.each(function () {
+          var top = $(this).offset().top;
+          var bottom = top + $(this).outerHeight();
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+
+          // Check if any part of the content is visible in the viewport
+          if ((top >= scroll && top <= scroll + windowHeight) || (bottom >= scroll && bottom <= scroll + windowHeight) || (top <= scroll && bottom >= scroll + windowHeight)) {
+            activeAnchor = $(this).attr('id');
+            return false; // Exit the loop early if an active anchor is found
+          }
+        });
+
+        // Remove the active class from all links and add it to the active anchor
+        anchorLinks.removeClass('active');
+        if (activeAnchor) {
+          anchorLinks.filter('[href="#' + activeAnchor + '"]').addClass('active');
+        }
+      }
+
+      // Call the updateActiveLink function when the page loads and when the user scrolls
+      $(window, context).on('load scroll', function () {
+        updateActiveLink();
+      });
+
+      // Handle the click event for the ToC links
+      anchorLinks.on('click', function (event) {
+        event.preventDefault();
+        var targetAnchor = $(this).attr('href');
+
+        // Scroll smoothly to the target section
+        $('html, body').animate({
+          scrollTop: $(targetAnchor).offset().top
+        }, 150);
+      });
+    }
+  };
+})(jQuery, Drupal);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const showMoreButton = document.querySelector('.show-more-button');
+  const hiddenLinks = document.querySelector('.hidden-links');
+  const showMoreButtonContent = document.querySelector('.show-more-button-content');
+
+  if (showMoreButton && hiddenLinks) {
+    showMoreButton.addEventListener('click', function () {
+      if (hiddenLinks.style.display === 'none') {
+        hiddenLinks.style.display = 'flex';
+        showMoreButtonContent.textContent = 'Skjul';
+        showMoreButton.classList.remove('fa-plus');
+        showMoreButton.classList.add('fa-minus');
+      } else {
+        hiddenLinks.style.display = 'none';
+        showMoreButtonContent.textContent = 'Se flere muligheder';
+        showMoreButton.classList.remove('fa-minus');
+        showMoreButton.classList.add('fa-plus');
+      }
+    });
+  }
+});

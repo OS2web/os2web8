@@ -59,8 +59,10 @@ $header-top-menu-size-sm: 50px;
     ul {
       display: flex;
       margin: 0;
+      gap: 20px;
       li {
         margin: 0;
+        padding: 0;
         &::before {
           content: none;
         }
@@ -70,6 +72,10 @@ $header-top-menu-size-sm: 50px;
           text-transform: uppercase;
           text-decoration: none;
           color: #002f5c;
+
+          @media only screen and (max-width: 1200px) {
+            font-size: 1.4rem;
+          }
           &.is-active {
             text-decoration: none;
           }
@@ -172,8 +178,8 @@ $header-top-menu-size-sm: 50px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  height: 80%;
+  width: 95%;
+  height: 90%;
   background-color: rgba(0,0,0, 0.6);
   z-index: 9999;
   overflow-y: auto;
@@ -198,10 +204,12 @@ $header-top-menu-size-sm: 50px;
         .menu-level-0 {
           display: flex;
           gap: 20px;
+          flex-wrap: wrap;
           li {
             list-style: none;
             padding-left: 0;
             flex: 1;
+            min-width: 350px;
 
             &:before {
               display: none;
@@ -252,6 +260,10 @@ $header-top-menu-size-sm: 50px;
   gap: 20px;
   align-items: center;
 
+  @media only screen and (max-width: 1200px) {
+    gap: 10px;
+  }
+
   .search-btn-wrapper {
     .search-btn {
       background-color: transparent;
@@ -260,6 +272,10 @@ $header-top-menu-size-sm: 50px;
       .fa-magnifying-glass {
         font-size: 32px;
         color: #e82f4c;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -273,6 +289,10 @@ $header-top-menu-size-sm: 50px;
 
       &:hover .bar-1 {
         width: 40px;
+
+        @media only screen and (max-width: 1200px) {
+          width: 30px;
+        }
       }
 
       .bar-1 {
@@ -281,6 +301,11 @@ $header-top-menu-size-sm: 50px;
         background-color: #e82f4c;
         display: block;
         transition: .3s ease;
+
+        @media only screen and (max-width: 1200px) {
+          width: 20px;
+          height: 4px;
+        }
       }
 
       .bar-2, .bar-3 {
@@ -288,6 +313,11 @@ $header-top-menu-size-sm: 50px;
         height: 5px;
         background-color: #e82f4c;
         display: block;
+
+        @media only screen and (max-width: 1200px) {
+          width: 30px;
+          height: 4px;
+        }
       }
     }
   }
@@ -299,6 +329,10 @@ $header-top-menu-size-sm: 50px;
     i {
       font-size: 32px;
       color: #e82f4c;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 22px;
+      }
     }
   }
 }
@@ -407,7 +441,7 @@ $header-bottom-menu-size: 70px;
       display: block;
       max-height: 15px;
       @include media-breakpoint-up(sm) {
-        max-height: 24px;
+        max-height: 40px;
       }
     }
   }
@@ -478,7 +512,7 @@ $header-bottom-menu-size: 70px;
     .logo {
 
       img {
-        max-height: 80px;
+        max-height: 60px;
       }
     }
   }

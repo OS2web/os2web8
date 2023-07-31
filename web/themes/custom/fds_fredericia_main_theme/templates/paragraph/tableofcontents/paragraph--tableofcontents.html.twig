@@ -34,7 +34,7 @@
 
         {# Render the anchor paragraph with the corresponding anchor ID #}
         <div id="{{ anchorId }}" class="anchor">
-          <h2>{{ titles[key].value }}</h2>
+          <h2 class="content-heading">{{ titles[key].value }}</h2>
           {{ content.value|raw }}
         </div>
       {% endif %}

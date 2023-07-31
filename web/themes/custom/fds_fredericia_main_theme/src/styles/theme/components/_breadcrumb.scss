@@ -20,10 +20,18 @@
 // Styling
 // --------------------------------------------------
 
+
+.breadcrumb-wrapper {
+  transform: translateY(-55px);
+  background-color: white;
+}
+
+
+
 .breadcrumb {
   background-color: $color-white;
   margin: 0;
-  padding: 16px 30px;
+  padding: 15px 5px;
   border-radius: 0;
   li {
     display: inline-block;
@@ -48,13 +56,21 @@
       margin-left: 10px;
       margin-right: 10px;
 
-      font-size: 2rem;
+      font-size: 1.2rem;
       font-family: FontAwesome;
-      content: $fa-var-angle-right;
+      content: $fa-var-minus;
 
       color: #000;
     }
   }
+
+  li:last-child {
+    a {
+      color: #00325b !important;
+      font-weight: 700;
+    }
+  }
+
 
   a {
     font-size: 1.6rem;
