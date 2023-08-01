@@ -15,9 +15,6 @@
 	{{ content }}
 	</p>
     <div class="search-result-breadcrumb">
-      {{ menuTrail }}
+      {% include '@fds_faxe_theme/custom/breadcrumb.html.twig' %}
     </div>
-	<div>
-		{{ _context['#section_labels']|last }}
-	</div>
 </a>
