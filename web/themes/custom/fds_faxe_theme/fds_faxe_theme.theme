@@ -209,25 +209,28 @@ function fds_faxe_theme_preprocess_taxonomy_term(array &$variables) {
 function fds_faxe_theme_preprocess_node(array &$variables) {
 
   $node = $variables['node'];
-  $view_mode = $variables['elements']['#view_mode'];
+    $view_mode = $variables['elements']['#view_mode'];
 
-  if ($view_mode == 'search_result' && $node->getType() == 'os2web_page') {
-    $routeName = $node->toUrl()->getRouteName();
-    $routeParameters = $node->toUrl()->getRouteParameters();
-    $route = Drupal::service('router.route_provider')->getRouteByName($routeName);
-    $routeMatch = new Drupal\Core\Routing\RouteMatch($routeName, $route, $routeParameters, $routeParameters);
-    $breadcrumbs = Drupal::service('breadcrumb')->build($routeMatch)->toRenderable();
-    $breadcrumb = array();
-    if (!empty($breadcrumbs['#links']) && count($breadcrumbs['#links']) > 1) {
-      foreach ($breadcrumbs['#links'] as $link) {
-        $breadcrumb[] = array(
-          'text' => $link->getText(),
-          'url' => $link->getUrl()->toString()
-        );
+    if ($view_mode == 'teaser' && $node->getType() == 'os2web_page') {
+      $routeName = $node->toUrl()->getRouteName();
+      $routeParameters = $node->toUrl()->getRouteParameters();
+      $route = Drupal::service('router.route_provider')->getRouteByName($routeName);
+      $routeMatch = new Drupal\Core\Routing\RouteMatch($routeName, $route, $routeParameters, $routeParameters);
+      $breadcrumbs = Drupal::service('breadcrumb')->build($routeMatch)->toRenderable();
+      $breadcrumb = array();
+
+      // Flatten the breadcrumb array to remove unnecessary <a> tags.
+      if (!empty($breadcrumbs['#links']) && count($breadcrumbs['#links']) > 1) {
+        foreach ($breadcrumbs['#links'] as $link) {
+          $breadcrumb[] = array(
+            'text' => $link['#title'],
+            'url' => $link['#url']->toString(),
+          );
+        }
       }
+
+      $variables['breadcrumb'] = $breadcrumb;
     }
-    $variables['breadcrumb'] = $breadcrumb;
-  }
 
 
   if ($variables['view_mode'] == 'search_result' && $node->getType() == 'os2web_page') {
