@@ -124,6 +124,7 @@
     .found-under {
       margin: 0 10px 0 0;
       color: #007ca3;
+      min-width: 85px;
     }
   }
 
@@ -135,6 +136,7 @@
     padding: 0;
     margin: 0;
     flex-grow: 1;
+    flex-wrap: wrap;
 
     a:first-child {
       display: none;
