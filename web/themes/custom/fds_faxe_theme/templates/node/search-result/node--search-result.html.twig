@@ -17,10 +17,10 @@
 
   {% if breadcrumb %}
     <div class="search-result-breadcrumb">
-      <ul>
+      <ul class="breadcrumb-ul-list">
         {% for crumb in breadcrumb %}
-          <li>
-            <a href="{{ crumb.url }}">{{ crumb.text }}</a>
+          <li class="breadcrumb-list-item">
+            <a class="breadcrumb-link-item" href="{{ crumb.url }}">{{ crumb.text }} <span class="breadcrumb-icon"><i class="fa-solid fa-angle-right"></i></span></a>
           </li>
         {% endfor %}
       </ul>
