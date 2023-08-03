@@ -218,17 +218,14 @@ function fds_faxe_theme_preprocess_node(array &$variables) {
       $routeMatch = new Drupal\Core\Routing\RouteMatch($routeName, $route, $routeParameters, $routeParameters);
       $breadcrumbs = Drupal::service('breadcrumb')->build($routeMatch)->toRenderable();
       $breadcrumb = array();
-
-      // Flatten the breadcrumb array to remove unnecessary <a> tags.
       if (!empty($breadcrumbs['#links']) && count($breadcrumbs['#links']) > 1) {
         foreach ($breadcrumbs['#links'] as $link) {
           $breadcrumb[] = array(
-            'text' => $link['#title'],
-            'url' => $link['#url']->toString(),
+            'text' => $link->getText(),
+            'url' => $link->getUrl()->toString()
           );
         }
       }
-
       $variables['breadcrumb'] = $breadcrumb;
     }
 
