@@ -119,13 +119,15 @@
   padding: 10px 30px;
   font-size: 13px;
   a:first-child {
-    display: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    .found-under {
+      margin: 0 10px 0 0;
+      color: #007ca3;
+    }
   }
 
-  .found-under {
-    margin: 0 10px 0 0;
-    color: #007ca3;
-  }
+
 
   .breadcrumb-ul-list {
     display: flex;
@@ -163,7 +165,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        padding: 0;
+        padding: 0 !important;
         margin: 0;
 
         &:hover {
