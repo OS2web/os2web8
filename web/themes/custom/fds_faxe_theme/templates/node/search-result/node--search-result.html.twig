@@ -15,8 +15,16 @@
 	{{ content }}
 	</p>
 
+  {% if breadcrumb %}
     <div class="search-result-breadcrumb">
-      {{ page.breadcrumb }}
+      <ul>
+        {% for crumb in breadcrumb %}
+          <li>
+            <a href="{{ crumb.url }}">{{ crumb.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
+  {% endif %}
 
 </a>
