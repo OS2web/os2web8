@@ -14,9 +14,31 @@
 	<p>
 	{{ content }}
 	</p>
-  {% if breadcrumb %}
+  {% if row._entity.get('path') %}
     <div class="search-result-breadcrumb">
-      {% include 'breadcrumb.html.twig' %}
+      <nav class="breadcrumb">
+        <ol>
+          {# Split nodens sti ved hjælp af '/'-tegn #}
+          {% set node_path_segments = row._entity.get('path').getAlias()|split('/') %}
+
+          {# Byg brødkrumme-array med de enkelte sti-segmenter #}
+          {% set breadcrumb = [{ text: 'Home', url: '/' }] %}
+          {% for i, segment in node_path_segments %}
+            {% set breadcrumb_item = { text: segment, url: breadcrumb[i].url ~ '/' ~ segment } %}
+            {% set breadcrumb = breadcrumb|merge([breadcrumb_item]) %}
+          {% endfor %}
+
+          {% for item in breadcrumb %}
+            <li{{ loop.last ? ' class="active"' : '' }}>
+              {% if item.url %}
+                <a href="{{ item.url }}">{{ item.text }}</a>
+              {% else %}
+                {{ item.text }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </nav>
     </div>
   {% endif %}
 </a>
