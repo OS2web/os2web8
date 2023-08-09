@@ -21,6 +21,40 @@ body {
 body .container-fluid {
   padding-left: 0;
   padding-right: 0;
+
+  .field--name-field-os2web-paragraphs {
+    .field__item {
+      .paragraph--type--os2web-simple-text-paragraph {
+        max-width: 1500px;
+        padding: 0 25px;
+
+        @media only screen and (max-width: 1200px) {
+          max-width: 1000px;
+          padding: 0 30px;
+          margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 992px)  {
+          max-width: 700px;
+          margin: 0 auto;
+          padding: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+          max-width: 100%;
+          padding: 0 30px;
+        }
+
+        .field--name-field-os2web-simple-text-body {
+          h1 {
+            color: #00315b;
+            margin-bottom: 15px !important;
+            margin-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 .path-taxonomy {
@@ -122,7 +156,7 @@ body .page-container {
     }
   }
   &.page-container-not-front {
-    margin-bottom: 120px;
+    margin-bottom: 0;
   }
 }
 
@@ -604,6 +638,8 @@ a:not([class]) {
 .caption figcaption {
   font-size: 0.8em !important;
 }
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

@@ -27,9 +27,11 @@
         max-width: 270px;
 
         @media only screen and (max-width: 992px) {
-          flex: 1 1 40%;
+          flex: 1 1 100%;
           max-width: none;
         }
+
+
 
         a {
           color: white;
@@ -40,6 +42,9 @@
           height: 100%;
           text-align: center;
           padding: 25px 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &:hover {
             text-decoration: underline;

@@ -57,7 +57,7 @@
             <div class="top-search-inner-wrapper">
               {{ page.small_search }}
               <div class="close-search-wrapper">
-                <button id="close-search" class="close-search-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button id="close-search" class="close-search-btn"><span class="close-search-text">Luk</span><i class="fa-solid fa-xmark"></i></button>
               </div>
             </div>
 
@@ -65,7 +65,7 @@
 
           <div class="megamenu-overlay"></div>
           <div class="megamenu-wrapper">
-            <button class="megamenu-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="megamenu-close"><span class="close-text">Luk</span><i class="fa-solid fa-xmark"></i></button>
             <div class="megamenu-inner-wrapper">
               {{ page.header__megamenu_navigation }}
             </div>
@@ -74,18 +74,22 @@
           <div class="search-megamenu-btns-wrapper">
             <div class="search-btn-wrapper">
               <button id="nav-search" class="search-btn">
+                <span>Søg</span>
                 <i class="fa-solid fa-magnifying-glass" style="color: #e82f4c;"></i>
               </button>
             </div>
 
             <div class="megamenu-burger-button-wrapper">
               <button class="burger-btn">
-                <span class="bar bar-1"></span>
-                <span class="bar bar-2"></span>
-                <span class="bar bar-3"></span>
+                <span class="burger-btn-text">Menu</span>
+                <div class="bar-wrapper">
+                  <span class="bar bar-1"></span>
+                  <span class="bar bar-2"></span>
+                  <span class="bar bar-3"></span>
+                </div>
               </button>
             </div>
-            <button class="custom-external-links-toggle"><i class="fa-solid fa-link"></i></button>
+            <button class="custom-external-links-toggle"><span>Links</span><i class="fa-solid fa-link"></i></button>
           </div>
         </div>
       </div>

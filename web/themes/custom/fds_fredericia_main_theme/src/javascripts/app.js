@@ -267,100 +267,61 @@ jQuery(document).ready(function(){
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  const slidesContainer = document.querySelector('.slides-container');
-  const slides = Array.from(document.querySelectorAll('.slide-item'));
-  const prev = slider.querySelector('.prev');
-  const next = slider.querySelector('.next');
-  const dots = Array.from(document.querySelectorAll('.dot'));
+// (function ($, Drupal) {
+//   Drupal.behaviors.customExternalLinks = {
+//     attach: function (context, settings) {
+//       var $banner = $('.custom-external-links-banner');
+//       var $button = $('.custom-external-links-toggle');
+//
+//       $banner.hide(); // Hide the banner initially
+//
+//       $button.on('click', function () {
+//         $banner.toggle(); // Toggle the visibility of the banner on button click
+//
+//         // Change the FontAwesome icon
+//         var $icon = $(this).find('.fa-solid');
+//         $icon.toggleClass('fa-link fa-link-slash');
+//       });
+//
+//       $('.custom-external-links-button', context).on('click', function () {
+//         var url = $('.custom-external-links-select', context).val();
+//         if (url) {
+//           window.open(url, '_blank');
+//         }
+//       });
+//     }
+//   };
+// })(jQuery, Drupal);
 
-  let slideInterval = setInterval(nextSlide, 5000);
-  let currentIndex = 0;
+function customExternalLinks() {
+  var banner = document.querySelector('.custom-external-links-banner');
+  var button = document.querySelector('.custom-external-links-toggle');
 
-  function showSlide(index) {
-    const slideWidth = slides[0].clientWidth;
-    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+  banner.style.display = 'none'; // Hide the banner initially
 
-    slides.forEach((slide, slideIndex) => {
-      if (slideIndex !== index) {
-        slide.classList.add('notActive');
-      } else {
-        slide.classList.remove('notActive');
-      }
-    });
+  button.addEventListener('click', function () {
+    banner.style.display = banner.style.display === 'none' ? 'flex' : 'none'; // Toggle the visibility of the banner on button click
 
-    dots.forEach((dot, dotIndex) => {
-      if (dotIndex !== index) {
-        dot.classList.remove('active');
-      } else {
-        dot.classList.add('active');
-      }
-    });
+    // Change the FontAwesome icon
+    var icon = this.querySelector('.fa-solid');
+    icon.classList.toggle('fa-link');
+    icon.classList.toggle('fa-link-slash');
+  });
 
-    currentIndex = index;
-  }
-
-  showSlide(currentIndex);
-
-  prev.addEventListener('click', () => {
-    clearInterval(slideInterval);
-    if (currentIndex === 0) {
-      showSlide(slides.length - 1);
-    } else {
-      showSlide(currentIndex - 1);
+  var customExternalLinksButton = document.querySelector('.custom-external-links-button');
+  customExternalLinksButton.addEventListener('click', function () {
+    var selectElement = document.querySelector('.custom-external-links-select');
+    var url = selectElement.value;
+    if (url) {
+      window.open(url, '_blank');
     }
   });
+}
 
-  next.addEventListener('click', () => {
-    clearInterval(slideInterval);
-    nextSlide();
-  });
-
-  dots.forEach((dot, dotIndex) => {
-    dot.addEventListener('click', () => {
-      clearInterval(slideInterval);
-      showSlide(dotIndex);
-    });
-  });
-
-  function nextSlide() {
-    if (currentIndex === slides.length - 1) {
-      showSlide(0);
-    } else {
-      showSlide(currentIndex + 1);
-    }
-  }
-
-  const sliderWidth = 100 * slides.length;
-  slidesContainer.style.width = `${sliderWidth}%`;
+document.addEventListener('DOMContentLoaded', function () {
+  customExternalLinks();
 });
 
-(function ($, Drupal) {
-  Drupal.behaviors.customExternalLinks = {
-    attach: function (context, settings) {
-      var $banner = $('.custom-external-links-banner');
-      var $button = $('.custom-external-links-toggle');
-
-      $banner.hide(); // Hide the banner initially
-
-      $button.on('click', function () {
-        $banner.toggle(); // Toggle the visibility of the banner on button click
-
-        // Change the FontAwesome icon
-        var $icon = $(this).find('.fa-solid');
-        $icon.toggleClass('fa-link fa-link-slash');
-      });
-
-      $('.custom-external-links-button', context).on('click', function () {
-        var url = $('.custom-external-links-select', context).val();
-        if (url) {
-          window.open(url, '_blank');
-        }
-      });
-    }
-  };
-})(jQuery, Drupal);
 
 
 (function ($, Drupal) {
@@ -437,4 +398,74 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+  const slidesContainer = document.querySelector('.slides-container');
+  const slides = Array.from(document.querySelectorAll('.slide-item'));
+  const prev = slider.querySelector('.prev');
+  const next = slider.querySelector('.next');
+  const dots = Array.from(document.querySelectorAll('.dot'));
+
+  let slideInterval = setInterval(nextSlide, 5000);
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slideWidth = slides[0].clientWidth;
+    slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    slides.forEach((slide, slideIndex) => {
+      if (slideIndex !== index) {
+        slide.classList.add('notActive');
+      } else {
+        slide.classList.remove('notActive');
+      }
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      if (dotIndex !== index) {
+        dot.classList.remove('active');
+      } else {
+        dot.classList.add('active');
+      }
+    });
+
+    currentIndex = index;
+  }
+
+  showSlide(currentIndex);
+
+  prev.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    if (currentIndex === 0) {
+      showSlide(slides.length - 1);
+    } else {
+      showSlide(currentIndex - 1);
+    }
+  });
+
+  next.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    nextSlide();
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      showSlide(dotIndex);
+    });
+  });
+
+  function nextSlide() {
+    if (currentIndex === slides.length - 1) {
+      showSlide(0);
+    } else {
+      showSlide(currentIndex + 1);
+    }
+  }
+
+  const sliderWidth = 100 * slides.length;
+  slidesContainer.style.width = `${sliderWidth}%`;
 });
