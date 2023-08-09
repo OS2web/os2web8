@@ -63,9 +63,9 @@
         "drupal/content_access": "^1.0",
         "drupal/content_moderation_notifications": "^3.3",
         "drupal/cookieinformation": "^2.0",
-        "drupal/core-composer-scaffold": "~9.5.1",
-        "drupal/core-project-message": "~9.5.1",
-        "drupal/core-recommended": "~9.5.1",
+        "drupal/core-composer-scaffold": "9.5.8",
+        "drupal/core-project-message": "9.5.8",
+        "drupal/core-recommended": "9.5.8",
         "drupal/csv_importer": "^1.12",
         "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
@@ -103,6 +103,7 @@
         "drupal/scroll_top_button": "^2.0",
         "drupal/siteimprove": "^1.10",
         "drupal/stage_file_proxy": "^1.0",
+        "drupal/textfield_counter": "^2.3",
         "drupal/upgrade_rector": "^1.0@alpha",
         "drupal/upgrade_status": "^3.5",
         "drupal/video": "^1.5@alpha",
@@ -199,10 +200,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/textfield_counter" : {
-                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch",
-                "fix static call" : "./patches/3272128-9.patch"
-            },
             "drupal/field_group" : {
                 "HTML5 Validation Prevents Submission in Tabs" : "https://www.drupal.org/files/issues/2019-10-04/field_group-HTML5_validation_prevents_submission_in_tabs-2969051-9.patch"
             },

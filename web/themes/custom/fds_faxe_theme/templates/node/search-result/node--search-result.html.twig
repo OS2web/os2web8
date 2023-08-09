@@ -14,10 +14,18 @@
 	<p>
 	{{ content }}
 	</p>
-	<p>
-  {{ node.type.entity.label }}
-	</p>
-	<div>
-		{{ _context['#section_labels']|last }}
-	</div>
+
+  {% if breadcrumb %}
+    <div class="search-result-breadcrumb">
+      <p class="found-under">Fundet under:</p>
+      <ul class="breadcrumb-ul-list">
+        {% for crumb in breadcrumb %}
+          <li class="breadcrumb-list-item">
+            <a class="breadcrumb-link-item" href="{{ crumb.url }}">{{ crumb.text }} <span class="breadcrumb-icon"><i class="fa-solid fa-angle-right"></i></span></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
 </a>
