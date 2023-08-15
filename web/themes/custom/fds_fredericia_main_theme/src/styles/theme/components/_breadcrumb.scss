@@ -53,12 +53,12 @@
       margin-right: 10px;
     }
     &:before {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
 
       font-size: 1.2rem;
       font-family: FontAwesome;
-      content: $fa-var-minus;
+      content: $fa-var-angle-right;
 
       color: #000;
     }

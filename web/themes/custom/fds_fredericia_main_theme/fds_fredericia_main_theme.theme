@@ -5,6 +5,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\taxonomy\Entity\Term;
 
 /**
@@ -365,6 +366,21 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
 
   $paragraph = $variables['paragraph'];
 
+// Check if the paragraph type is "latest_news_card".
+  if ($paragraph->bundle() === 'latest_news_card') {
+    // Fetch the latest news articles of the "os2web_news" type.
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'os2web_news')
+      ->sort('created', 'DESC')
+      ->range(0, 3);
+    $nids = $query->execute();
+
+    // Load the article entities.
+    $articles = \Drupal\node\Entity\Node::loadMultiple($nids);
+
+    $variables['latest_news_articles'] = $articles;
+  }
+
   if ($paragraph->bundle() === 'os2web_menu_box_paragraph') {
 
     $showImages = ($paragraph->field_os2web_menu_box_vm->value == 'image');
@@ -453,3 +469,6 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
 
 }
 
+function fds_fredericia_main_theme_preprocess(&$variables, $hook) {
+    $variables['base_path'] = base_path();
+}

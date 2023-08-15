@@ -31,21 +31,27 @@
   }
 
   .field--name-field-os2web-spotbox-reference {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    gap: 20px;
+
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+
 
     &.tns-slider {
       display: flex;
       gap: 20px;
+
+      @media only screen and (max-width: 992px) {
+        flex-direction: row !important;
+      }
     }
 
-    @media only screen and (max-width: 992px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
 
     .field__item {
       min-height: 150px;
+      width: 100%;
       .spotbox--image {
         display: flex;
         line-height: 0;

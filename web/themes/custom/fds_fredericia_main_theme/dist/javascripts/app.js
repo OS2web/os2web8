@@ -3444,11 +3444,6 @@ function customExternalLinks() {
 
   button.addEventListener('click', function () {
     banner.style.display = banner.style.display === 'none' ? 'flex' : 'none'; // Toggle the visibility of the banner on button click
-
-    // Change the FontAwesome icon
-    var icon = this.querySelector('.fa-solid');
-    icon.classList.toggle('fa-link');
-    icon.classList.toggle('fa-link-slash');
   });
 
   var customExternalLinksButton = document.querySelector('.custom-external-links-button');
