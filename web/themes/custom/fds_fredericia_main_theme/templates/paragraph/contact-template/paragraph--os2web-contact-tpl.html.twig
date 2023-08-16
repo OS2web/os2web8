@@ -11,11 +11,33 @@
       <div class="inner-contact-wrapper">
 
 
-        <div class="contact-col-1">
+        <div class="contact-col-1 {% if paragraph.field_cnt_monday.value is empty
+          and paragraph.field_cnt_tuesday.value is empty
+          and paragraph.field_cnt_wednesday.value is empty
+          and paragraph.field_cnt_thursday.value is empty
+          and paragraph.field_cnt_friday.value is empty
+          and paragraph.field_cnt_phone_monday.value is empty
+          and paragraph.field_cnt_phone_tuesday.value is empty
+          and paragraph.field_cnt_phone_wednesday.value is empty
+          and paragraph.field_cnt_phone_thursday.value is empty
+          and paragraph.field_cnt_phone_friday.value is empty %}
+  no-col-2
+{% endif %} ">
 
           {% if paragraph.field_contact_location.value or paragraph.field_contact_address.value is not empty %}
 
-          <div class="contact-template-address">
+          <div class="contact-template-address {% if paragraph.field_cnt_monday.value is empty
+            and paragraph.field_cnt_tuesday.value is empty
+            and paragraph.field_cnt_wednesday.value is empty
+            and paragraph.field_cnt_thursday.value is empty
+            and paragraph.field_cnt_friday.value is empty
+            and paragraph.field_cnt_phone_monday.value is empty
+            and paragraph.field_cnt_phone_tuesday.value is empty
+            and paragraph.field_cnt_phone_wednesday.value is empty
+            and paragraph.field_cnt_phone_thursday.value is empty
+            and paragraph.field_cnt_phone_friday.value is empty %}
+  no-col-2-item
+{% endif %}">
             <div class="contact-template-icon address-icon">
               <i class="fa-solid fa-location-dot"></i>
             </div>
@@ -31,7 +53,18 @@
 
           {% if paragraph.field_contact_tlf is not empty %}
 
-          <div class="contact-template-phone">
+          <div class="contact-template-phone {% if paragraph.field_cnt_monday.value is empty
+            and paragraph.field_cnt_tuesday.value is empty
+            and paragraph.field_cnt_wednesday.value is empty
+            and paragraph.field_cnt_thursday.value is empty
+            and paragraph.field_cnt_friday.value is empty
+            and paragraph.field_cnt_phone_monday.value is empty
+            and paragraph.field_cnt_phone_tuesday.value is empty
+            and paragraph.field_cnt_phone_wednesday.value is empty
+            and paragraph.field_cnt_phone_thursday.value is empty
+            and paragraph.field_cnt_phone_friday.value is empty %}
+  no-col-2-item
+{% endif %}">
             <div class="contact-template-icon phone-icon">
               <i class="fa-solid fa-phone-flip"></i>
             </div>
@@ -45,7 +78,18 @@
 
           {% if paragraph.field_contact_mail is not empty %}
 
-          <div class="contact-template-mail">
+          <div class="contact-template-mail {% if paragraph.field_cnt_monday.value is empty
+            and paragraph.field_cnt_tuesday.value is empty
+            and paragraph.field_cnt_wednesday.value is empty
+            and paragraph.field_cnt_thursday.value is empty
+            and paragraph.field_cnt_friday.value is empty
+            and paragraph.field_cnt_phone_monday.value is empty
+            and paragraph.field_cnt_phone_tuesday.value is empty
+            and paragraph.field_cnt_phone_wednesday.value is empty
+            and paragraph.field_cnt_phone_thursday.value is empty
+            and paragraph.field_cnt_phone_friday.value is empty %}
+  no-col-2-item
+{% endif %}">
             <div class="contact-template-icon mail-icon">
               <i class="fa-regular fa-envelope"></i>
             </div>
@@ -59,7 +103,18 @@
 
           {% if paragraph.field_vigtig_info is not empty %}
 
-          <div class="contact-template-warning">
+          <div class="contact-template-warning {% if paragraph.field_cnt_monday.value is empty
+            and paragraph.field_cnt_tuesday.value is empty
+            and paragraph.field_cnt_wednesday.value is empty
+            and paragraph.field_cnt_thursday.value is empty
+            and paragraph.field_cnt_friday.value is empty
+            and paragraph.field_cnt_phone_monday.value is empty
+            and paragraph.field_cnt_phone_tuesday.value is empty
+            and paragraph.field_cnt_phone_wednesday.value is empty
+            and paragraph.field_cnt_phone_thursday.value is empty
+            and paragraph.field_cnt_phone_friday.value is empty %}
+  no-col-2-item
+{% endif %}">
             <div class="contact-template-icon warning-icon">
               <i class="fa-solid fa-circle-exclamation"></i>
             </div>
@@ -75,7 +130,7 @@
         </div>
 
 
-
+        {% if paragraph.field_cnt_monday.value or paragraph.field_cnt_tuesday.value or paragraph.field_cnt_wednesday.value or paragraph.field_cnt_thursday.value or paragraph.field_cnt_friday.value or paragraph.field_cnt_phone_monday.value or paragraph.field_cnt_phone_tuesday.value or paragraph.field_cnt_phone_wednesday.value or paragraph.field_cnt_phone_thursday.value or paragraph.field_cnt_phone_friday.value is not empty  %}
         <div class="contact-col-2">
 
           {% if paragraph.field_cnt_monday.value or paragraph.field_cnt_tuesday.value or paragraph.field_cnt_wednesday.value or paragraph.field_cnt_thursday.value or paragraph.field_cnt_friday.value is not empty %}
@@ -189,6 +244,7 @@
           </div>
           {% endif %}
         </div>
+        {% endif %}
 
 
 

@@ -35,8 +35,20 @@
 
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 35px;
         width: 70%;
+
+        &.no-col-2 {
+          flex-direction: row;
+          width: 100% !important;
+          gap: 35px 10px !important;
+          flex-wrap: wrap;
+
+          @media only screen and (max-width: 768px) {
+            flex-direction: column !important;
+          }
+
+        }
 
         @media only screen and (max-width: 992px) {
           width: 100%;
@@ -45,6 +57,11 @@
           display: flex;
           gap: 20px;
           max-width: 90%;
+
+          &.no-col-2-item {
+            max-width: 100% !important;
+            flex: 45%;
+          }
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
@@ -74,6 +91,11 @@
           display: flex;
           gap: 20px;
           max-width: 90%;
+
+          &.no-col-2-item {
+            max-width: 100% !important;
+            flex: 45%;
+          }
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
@@ -105,6 +127,11 @@
           gap: 20px;
           max-width: 90%;
 
+          &.no-col-2-item {
+            max-width: 100% !important;
+            flex: 45%;
+          }
+
           @media only screen and (max-width: 992px) {
             max-width: 100%;
           }
@@ -133,6 +160,11 @@
           display: flex;
           gap: 20px;
           max-width: 90%;
+
+          &.no-col-2-item {
+            max-width: 100% !important;
+            flex: 45%;
+          }
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
@@ -165,7 +197,7 @@
       .contact-col-2 {
         width: 30%;
         display: flex;
-        gap: 50px;
+        gap: 35px;
         flex-direction: column;
 
         @media only screen and (max-width: 992px) {
