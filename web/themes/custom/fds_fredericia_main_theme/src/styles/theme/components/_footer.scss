@@ -33,10 +33,10 @@ footer {
 
     .footer-top-image {
       max-height: 600px;
-      object-fit: cover;
+      object-fit: contain;
       width: 100%;
       border-radius: 0 0 50% 50% / 0 0 30% 30%;
-      transform: scaleX(1.2);
+      transform: scaleX(1.15);
     }
   }
 
