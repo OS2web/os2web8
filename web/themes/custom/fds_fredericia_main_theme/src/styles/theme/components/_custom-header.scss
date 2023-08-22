@@ -102,7 +102,7 @@ $header-top-menu-size-sm: 50px;
   bottom: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   z-index: 200;
   background-color: white;
@@ -111,6 +111,7 @@ $header-top-menu-size-sm: 50px;
 
   &.transformed {
     transform: translateX(0);
+    display: flex;
   }
 
   .top-search-inner-wrapper {
