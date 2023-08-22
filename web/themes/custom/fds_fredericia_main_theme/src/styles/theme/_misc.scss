@@ -15,6 +15,7 @@
 
 body {
   background-color: #fff;
+  overflow-x: hidden !important;
 }
 
 // Increased specificity to win over base theme.
