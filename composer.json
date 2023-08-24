@@ -238,6 +238,9 @@
             },
             "drupal/popular_search_keywords" : {
                 "fix deprecated mbstrtolower" : "https://www.drupal.org/files/issues/2023-02-17/deprecated-mbstrtolower-3342692.patch"
+            },
+            "drupal/anonymous_subscriptions" : {
+                "fix theme hook subscribe_block not found" : "https://www.drupal.org/files/issues/2023-04-05/3352304-remove-subscribe-block-theme-3.patch"
             }
         }
     }
