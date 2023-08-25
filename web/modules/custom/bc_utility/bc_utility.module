@@ -135,3 +135,24 @@ function bc_utility_user_format_name_alter(&$name, AccountInterface $account) {
     }
   }
 }
+
+function bc_utility_preprocess_status_messages(&$variables) {
+
+  if (isset($variables['message_list'])) {
+
+    $config = \Drupal::config('bc_utility_status_messages.settings');
+
+    if (isset($variables['message_list']['status']) && $config->get('status')) {
+      unset( $variables['message_list']['status'] );
+    }
+
+    if (isset($variables['message_list']['warning']) && $config->get('warning')) {
+      unset( $variables['message_list']['warning'] );
+    }
+
+    if (isset($variables['message_list']['error'])  && $config->get('error')) {
+      unset( $variables['message_list']['error'] );
+    }
+
+  }
+}
