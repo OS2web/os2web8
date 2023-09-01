@@ -212,6 +212,20 @@ function fds_fredericia_main_theme_form_system_theme_settings_alter(&$form, Drup
     '#title' => t('Link 10 Label'),
     '#default_value' => theme_get_setting('link10_label'),
   ];
+  $theme_settings = \Drupal::configFactory()->getEditable('fds_fredericia_main_theme.settings');
+  $form['banner_image'] = [
+    '#type' => 'managed_file',
+    '#title' => t('Banner Image'),
+    '#description' => t('Upload an image for the banner section.'),
+    '#default_value' => $theme_settings->get('banner_image'),
+    '#upload_location' => 'public://fds_fredericia_main_theme/images/',
+    '#upload_validators' => [
+      'file_validate_extensions' => ['png gif jpg jpeg'],
+    ],
+  ];
+
+  $form['#submit'][] = 'fds_fredericia_main_theme_custom_theme_settings_submit';
+
 }
 
 
@@ -230,3 +244,20 @@ function fds_base_theme_footer_image_validate($element, FormStateInterface $form
     }
 }
 
+function fds_fredericia_main_theme_custom_theme_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // Get the uploaded file's fid from the form state.
+  $file_fid = $form_state->getValue('banner_image');
+
+  // Check if a file was uploaded.
+  if (!empty($file_fid)) {
+    // Load the file entity.
+    $file = \Drupal\file\Entity\File::load($file_fid[0]);
+
+    // Check if the file entity exists.
+    if ($file) {
+      // Set the file status to "Permanent."
+      $file->setPermanent();
+      $file->save();
+    }
+  }
+}

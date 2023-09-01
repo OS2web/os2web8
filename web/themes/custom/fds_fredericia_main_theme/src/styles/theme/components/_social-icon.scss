@@ -81,10 +81,13 @@ a.social-icon-teaser {
   }
 }
 
+.socials-footer {
+  margin-top: 50px;
+}
+
 .social-icon-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   height: 100%;
   gap: 10px;
 }
@@ -105,6 +108,7 @@ a.social-icon-teaser {
 
   font-size: 1.7rem;
   text-decoration: none !important;
+  border-radius: 50px;
 
   background-color: #fff;
   margin-right: 10px;
@@ -116,6 +120,7 @@ a.social-icon-teaser {
   .icon {
     color: $background_color__default;
     font-size: 24px;
+    font-family: FontAwesome;
   }
 }
 

@@ -26,8 +26,15 @@ regions:
   footer__latest_content: 'Footer - latest content'
   footer_first: 'Footer first'
   footer_second: 'Footer second'
+  footer_third: 'Footer third'
   embedded_code: 'Embedded code'
 
+theme-settings:
+  banner_image:
+    label: 'Banner Search Billede'
+    description: 'Upload et billede for banner search sektionen.'
+    type: image
+    default_value: null
 libraries:
   - 'fds_fredericia_main_theme/fonts'
   - 'fds_fredericia_main_theme/styles'

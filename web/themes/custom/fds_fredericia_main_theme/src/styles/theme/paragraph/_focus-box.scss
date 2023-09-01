@@ -15,6 +15,9 @@
     height: 100%;
     padding: 50px;
     background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
     @media only screen and (max-width: 480px) {
       padding: 30px;
@@ -22,43 +25,35 @@
 
     .box-content {
       display: none;
-      flex-direction: column;
-      gap: 25px;
 
-      .sidebar-body-prefix {
+      a {
+        background-color: white;
+        color: black;
+        padding: 30px;
         display: flex;
         align-items: center;
+        text-decoration: none;
+        gap: 30px;
 
-        span {
-          color: #344e41;
-          font-size: 13px;
-          text-transform: uppercase;
-          font-weight: 500;
-          margin-left: 10px;
+        i {
+          font-size: 28px;
         }
-      }
-      h3 {
-        font-size: 28px;
-        font-weight: 700;
-        color: white;
-      }
-      .sidebar-product-description {
-        font-size: 15px;
-        width: 75%;
+        .sidebar-product-description {
+          font-size: 18px;
+          width: 100%;
 
-        .field__item {
-          p, h2, h3, h4, h5, h6 {
-            color: white;
+          .field__item {
+            p, h2, h3, h4, h5, h6 {
+              color: white;
+            }
+          }
+
+          @media only screen and (max-width: 1368px) {
+            width: 100%;
           }
         }
-
-        @media only screen and (max-width: 1368px) {
-          width: 100%;
-        }
-      }
-      .sidebar-product-btn {
-        display: flex;
-        a {
+        .sidebar-product-btn {
+          display: flex;
           background-color: #353535;
           padding: 8px 35px;
           border-radius: 50px;
@@ -69,13 +64,9 @@
           position: relative;
           text-decoration: none;
           transition: .3s ease;
-
-          &:hover {
-            background-color: white;
-            color: black;
-          }
         }
       }
+
       .sidebar-product-image {
         position: absolute;
         top: 0;
@@ -169,9 +160,9 @@
 
 
           &.active {
-            background-color: #e82f4c;
+            background-color: $background_color__primary;
             color: white;
-            border: 1px solid #e82f4c;
+            border: 1px solid ;
 
             svg {
               stroke: white !important;

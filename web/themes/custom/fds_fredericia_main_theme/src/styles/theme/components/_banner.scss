@@ -225,7 +225,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e82f4c;
+  background-color: $background_color__primary;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
@@ -294,7 +294,7 @@
             border-radius: 50px;
           }
            &:hover {
-             background-color: #e82f4c;
+             background-color: $background_color__primary;
              color: white;
            }
 
