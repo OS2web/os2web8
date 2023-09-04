@@ -536,36 +536,14 @@ body .page-container {
   border-color: $background_color__default;
   color: $color-white;
   transition: all 0.3s ease;
-  &:hover {
-    background-color: $background_color__secondary;
-    border-color: $background_color__secondary;
-  }
 }
-.button.button-secondary {
-  background-color: $background_color__secondary;
-  border-color: $background_color__secondary;
-  color: $color-white;
-  transition: all 0.3s ease;
-  &:hover {
-    background-color: $background_color__default;
-    border-color: $background_color__default;
-  }
-}
+
 
 .button--rounded {
   padding-left: 30px;
   padding-right: 30px;
 
   border-radius: 30px;
-}
-
-.background-color--secondary {
-  color: #fff !important;
-  background-color: $background_color__secondary !important;
-}
-.background-color--tertiary {
-  color: #fff !important;
-  background-color: $background_color__tertiary !important;
 }
 
 // Remove max-width on all text elements.
@@ -600,7 +578,7 @@ body {
 }
 a:not([class]) {
   text-decoration: none;
-  color: $color__link;
+  color: #000;
   font-weight: 400;
   &:hover {
     text-decoration: underline;

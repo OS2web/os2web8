@@ -72,10 +72,10 @@ $controls-size: 20px;
 
     font-size: 0;
     border-radius: 100%;
-    border: 1px solid #e82f4c;
+    border: 1px solid $background_color__primary;
 
     color: #fff;
-    background-color: #e82f4c;
+    background-color: $background_color__primary;
 
     &:before {
       display: inline-block;

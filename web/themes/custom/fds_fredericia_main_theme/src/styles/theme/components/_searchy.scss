@@ -46,14 +46,14 @@
 
       .form-actions {
 
-        background-color: #e82f4c;
+        background-color: $background_color__primary !important;
         border: none;
         position: relative;
         flex-grow: 1;
 
 
         .search-input__button {
-          background-color: #e82f4c;
+          background-color: $background_color__primary !important;
           border-radius: 0;
           position: relative;
           border: none;
@@ -68,7 +68,7 @@
           transition: .3s ease;
 
           &:hover {
-            background-color: #bf263e;
+            filter: brightness(90%);
           }
         }
       }
@@ -96,7 +96,7 @@
       }
 
       a {
-        background-color: #e82f4c;
+        background-color: $background_color__primary;
         padding: 10px 20px;
         flex-grow: 1;
         text-align: center;
@@ -126,7 +126,7 @@
       display: flex;
 
       .sidebar-selvbetjening-button {
-        background-color: #e82f4c;
+        background-color: $background_color__primary;
         padding: 10px 20px;
         flex-grow: 1;
         color: white;

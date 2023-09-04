@@ -154,7 +154,7 @@ $header-top-menu-size-sm: 50px;
         width: 100%;
         border-radius: 50px;
         border: none;
-        background-color: #e82f4c;
+        background-color: $background_color__primary;
         color: white;
         transition: .3s ease;
         display: flex;
@@ -324,7 +324,7 @@ $header-top-menu-size-sm: 50px;
 
       .fa-magnifying-glass {
         font-size: 20px;
-        color: #e82f4c;
+        color: $background_color__primary;
 
         @media only screen and (max-width: 1200px) {
           font-size: 22px;
@@ -368,7 +368,7 @@ $header-top-menu-size-sm: 50px;
         .bar-1 {
           width: 25px;
           height: 4px;
-          background-color: #e82f4c;
+          background-color: $background_color__primary;
           display: block;
           transition: .3s ease;
 
@@ -377,7 +377,7 @@ $header-top-menu-size-sm: 50px;
         .bar-2, .bar-3 {
           width: 25px;
           height: 4px;
-          background-color: #e82f4c;
+          background-color: $background_color__primary;
           display: block;
 
         }
@@ -417,7 +417,7 @@ $header-top-menu-size-sm: 50px;
 
     i {
       font-size: 20px;
-      color: #e82f4c;
+      color: $background_color__primary;
 
       @media only screen and (max-width: 1200px) {
         font-size: 22px;
@@ -466,7 +466,7 @@ $header-bottom-menu-size: 70px;
           align-items: center;
           padding-left: 0;
           padding-top: 0;
-          background-color: #e82f4c;
+          background-color: $background_color__primary;
           &:before {
             display: none;
           }
@@ -491,7 +491,7 @@ $header-bottom-menu-size: 70px;
             }
             &:hover {
               text-decoration: none;
-              background-color: #bf263e;
+              background-color: $background_color__primary;
               border-radius: 5px;
             }
             & + ul {
@@ -511,7 +511,6 @@ $header-bottom-menu-size: 70px;
   .social-icon {
     height: $header-bottom-menu-size;
     width: $header-bottom-menu-size;
-    background-color: $background_color__secondary;
     border-radius: 0;
 
     .icon {
@@ -539,7 +538,7 @@ $header-bottom-menu-size: 70px;
 
 .custom-external-links-banner {
   height: 10vh;
-  background-color: #00325b;
+  background-color: $background_color__default;
   display: flex;
   align-items: center;
 
@@ -558,7 +557,7 @@ $header-bottom-menu-size: 70px;
       padding: 5px 25px;
       border-radius: 50px;
       border: 0;
-      background-color: #e82f4c;
+      background-color: $background_color__primary;
       color: white;
       font-weight: 600;
 

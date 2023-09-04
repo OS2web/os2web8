@@ -22,10 +22,6 @@
 
 footer {
 
-  &:has(.footer-top) {
-    border-top: 0px solid $background_color__secondary;
-  }
-
   .footer-top {
     justify-content: center;
     position: relative;
@@ -213,13 +209,52 @@ footer {
       }
 
       a {
+        text-decoration: none;
         &:hover {
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
     }
   }
 }
+
+.menu--tilgaengelighed {
+  ul {
+    li {
+      padding-left: 0 !important;
+
+      &:before {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.laes-hoejt {
+  margin-top: 50px;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none !important;
+
+    &:hover span {
+    text-decoration: underline !important;
+    }
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
 
 body:has(.paragraph--type--footer-alternativ) {
   footer {
