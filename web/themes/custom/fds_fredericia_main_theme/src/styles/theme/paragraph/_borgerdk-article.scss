@@ -25,6 +25,64 @@
   .field--name-byline {
     margin-bottom: $grid-gutter-width / 2;
   }
+  .field--type-os2web-borgerdk-article-reference {
+    .field__item {
+      .accordion {
+        .has-selfservice-links {
+          position: relative;
+
+          .selfservice-links {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+          }
+          .accordion-button {
+            .field--name-title {
+              max-width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.selvbetjening-borgerdk-link {
+  background-color: $background_color__default;
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &:hover i {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  &:hover {
+    color: white;
+  }
+
+  span {
+    text-transform: uppercase;
+  }
+  .spotbox__content {
+    .field--name-title {
+      h3 {
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+  i {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: .3s ease;
+  }
 }
 
 // --------------------------------------------------
