@@ -7,6 +7,8 @@ use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
 
+
+
 /**
  * Implements hook_preprocess_block().
  */
@@ -24,7 +26,34 @@ function fds_faxe_sub_theme_preprocess_block(&$variables) {
       }
     }
   }
+
 }
+
+
+function fds_faxe_sub_theme_preprocess_paragraph(array &$variables) {
+
+  $paragraph = $variables['paragraph'];
+  $parentBundle = $paragraph->bundle();
+  if ($paragraph->bundle() == 'os2web_news_block') {
+    $variables['content']['news_count'] = 0;
+
+    $values = $paragraph->get('field_os2web_news_par_section')->getValue();
+    $section_target_ids = array();
+    if (!empty($values)) {
+      $section_target_ids = array_column($values, 'target_id');
+    }
+
+    $view = \Drupal\views\Views::getView('os2web_news');
+    $view->setDisplay('os2web_news_embed_limited');
+    $view->setArguments($section_target_ids);
+    $result = $view->execute();
+    if ($result) {
+      $variables['content']['news_count'] = count($view->result);
+    }
+  }
+}
+
+
 
 /**
  * Implements hook_preprocess_page().

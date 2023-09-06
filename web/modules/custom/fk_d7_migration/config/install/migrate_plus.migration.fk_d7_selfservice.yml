@@ -1,0 +1,24 @@
+id: fk_d7_selfservice
+label: Fredericiakommune D7 selfservice
+migration_tags:
+  - 'Drupal 7'
+migration_group: fk_d7
+deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
+source:
+  plugin: d7_node
+  node_type: os2web_base_selfservice_link
+  track_changes: true
+process:
+  title: title
+  label: field_vist_navn
+  selfserviceUrl:
+    - plugin: extract
+      source: field_spot_link
+      index:
+        - 0
+        - url
+  lang:
+    plugin: default_value
+    default_value: 'da'
+destination:
+  plugin: 'entity:os2web_borgerdk_selfservice'
