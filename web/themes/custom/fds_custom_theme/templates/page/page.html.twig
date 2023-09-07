@@ -78,7 +78,11 @@
 
             <!-- Begin - logo -->
             <a href="{{ url('<front>') }}" class="custom-header__logo">
-              <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
+              {% if custom_logo %}
+                <img src="{{ custom_logo }}" alt="Logo" />
+              {% else %}
+                <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
+              {% endif %}
             </a>
             <!-- End - logo -->
 
@@ -142,7 +146,11 @@
 
             <!-- Begin - logo -->
             <a href="{{ url('<front>') }}" class="custom-header__logo">
-              <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
+              {% if custom_logo %}
+                <img src="{{ custom_logo }}" alt="Logo" />
+              {% else %}
+                <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
+              {% endif %}
             </a>
             <!-- End - logo -->
 
