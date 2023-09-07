@@ -21,6 +21,11 @@ drush migrate:reset faxekommune_d7_os2web_contentpage_paragraph_files
 drush migrate:import faxekommune_d7_os2web_contentpage_paragraph_files
 echo "Migration faxekommune_d7_os2web_contentpage_paragraph_files - END"
 
+echo "Migration faxekommune_d7_news_type - START"
+drush migrate:reset faxekommune_d7_news_type
+drush migrate:import faxekommune_d7_news_type
+echo "Migration faxekommune_d7_news_type - END"
+
 echo "Migration faxekommune_d7_node_news - START"
 drush migrate:reset faxekommune_d7_node_news
 drush migrate:import faxekommune_d7_node_news
@@ -75,5 +80,10 @@ echo "Migration faxekommune_d7_main_menu - START"
 drush migrate:reset faxekommune_d7_main_menu
 drush migrate:import faxekommune_d7_main_menu
 echo "Migration faxekommune_d7_main_menu - END"
+
+echo "Migration faxekommune_d7_user - START"
+drush migrate:reset faxekommune_d7_user
+drush migrate:import faxekommune_d7_user
+echo "Migration faxekommune_d7_user - END"
 
 echo "Migration finished"

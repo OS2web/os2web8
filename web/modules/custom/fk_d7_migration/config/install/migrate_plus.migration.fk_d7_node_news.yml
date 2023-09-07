@@ -1,6 +1,6 @@
-id: faxekommune_d7_node_news
-label: Faxekommune D7 Node News
-migration_group: faxe_d7
+id: fk_d7_node_news
+label: Fredericiakommune D7 Node News
+migration_group: fk_d7
 migration_tags:
   - Drupal 7
   - Content
@@ -21,7 +21,7 @@ process:
   field_os2web_news_heading: title
   field_os2web_news_section:
     plugin: migration_lookup
-    migration: faxekommune_d7_taxonomy_section
+    migration: fk_d7_taxonomy_section
     source: field_os2web_news_section
     no_stub: true
   field_os2web_news_intro: field_os2web_base_field_summary
@@ -32,7 +32,7 @@ process:
   sticky: sticky
   uid:
     plugin: migration_lookup
-    migration: faxekommune_d7_user
+    migration: fk_d7_user
     source: node_uid
   field_os2web_news_article_date:
     plugin: format_date
@@ -57,7 +57,7 @@ process:
         - 0
     - plugin: callback
       callable:
-        - 'Drupal\faxekommune_d7_migration\Utility\MigrationHelper'
+        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
         - getFileDownloadUrl
   migrate_file_url_destination:
     - plugin: extract
@@ -67,26 +67,29 @@ process:
         - 0
     - plugin: callback
       callable:
-        - 'Drupal\faxekommune_d7_migration\Utility\MigrationHelper'
+        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
         - generateFileDestinationPath
   migrate_file_fid:
     - plugin: skip_on_empty
       method: process
       source: '@migrate_file_url_source'
       message: 'Image is missing'
+    - plugin: skip_on_404
+      method: process
+      source: '@migrate_file_url_source'
     - plugin: file_copy
       source:
         - '@migrate_file_url_source'
         - '@migrate_file_url_destination'
     - plugin: callback
       callable:
-        - 'Drupal\faxekommune_d7_migration\Utility\MigrationHelper'
+        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
         - createFileManaged
   field_os2web_news_primaryimage/target_id: '@migrate_file_fid'
   field_os2web_news_primaryimage/alt: title
   migrate_paragraph_files:
     plugin: migration_lookup
-    migration: faxekommune_d7_os2web_contentpage_paragraph_files
+    migration: fk_d7_os2web_contentpage_paragraph_files
     source: nid
     no_stub: true
   field_os2web_news_paragraph_narr:
@@ -99,25 +102,20 @@ process:
   moderation_state:
     plugin: callback
     callable:
-      - 'Drupal\faxekommune_d7_migration\Utility\MigrationHelper'
+      - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
       - setModerationState
     source: status
-  field_os2web_news_page_type:
-    plugin: migration_lookup
-    migration: faxekommune_d7_taxonomy_news_type
-    source: field_os2web_news_page_type
-    no_stub: true
   field_os2web_news_kle:
     - plugin: callback
       source: field_os2web_base_field_kle_ref
       callable:
-        - 'Drupal\faxekommune_d7_migration\Utility\MigrationHelper'
+        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
         - findLocalKleTerm
   field_link_til_andet_indhold:
     - plugin: callback
       source: field_os2web_base_field_related
       callable:
-        - 'Drupal\faxekommune_d7_migration\Utility\MigrationHelper'
+        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
         - migrateRelatedLinks
   field_ext_links:
     plugin: field_link
