@@ -11,6 +11,13 @@ function fds_custom_theme_preprocess_page(array &$variables) {
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
   $variables['theme_settings']['texts']['frontpage_banner_heading'] = theme_get_setting('frontpage_banner_heading');
   $variables['theme_settings']['texts']['frontpage_banner_subheading'] = theme_get_setting('frontpage_banner_subheading');
+  
+  $logo = theme_get_setting('logo');
+  if (!empty($logo) && !empty($logo['url']) && $logo['use_default'] == 0) {
+    $variables['custom_logo'] = $logo['url'];
+  }
+
+
 }
 
 /**
