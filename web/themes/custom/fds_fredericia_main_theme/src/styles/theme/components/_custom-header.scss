@@ -99,7 +99,7 @@ $header-top-menu-size-sm: 50px;
 }
 
 .top-search-wrapper {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -149,7 +149,6 @@ $header-top-menu-size-sm: 50px;
     }
     .close-search-wrapper {
       height: 50px;
-      width: 50px;
 
       .close-search-btn {
         height: 100%;

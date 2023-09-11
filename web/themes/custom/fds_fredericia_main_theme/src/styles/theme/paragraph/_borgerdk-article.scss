@@ -21,6 +21,7 @@
 // --------------------------------------------------
 
 .paragraph--type--os2web-borgerdk-article {
+  margin: 40px 0;
 
   .field--name-byline {
     margin-bottom: $grid-gutter-width / 2;
@@ -47,6 +48,18 @@
   }
 }
 
+.selvbetjening-first:not(:first-child) {
+  display: none;
+}
+
+.selvbetjening-first {
+  background-color: #aabfcf;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
 .selvbetjening-borgerdk-link {
   background-color: $background_color__default;
   color: white;
@@ -54,7 +67,6 @@
   text-decoration: none;
   padding: 10px 20px;
   position: relative;
-  margin-bottom: 20px;
 
   &:hover i {
     opacity: 1;
@@ -62,6 +74,7 @@
   }
   &:hover {
     color: white;
+    text-decoration: underline;
   }
 
   span {

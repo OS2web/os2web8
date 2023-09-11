@@ -25,6 +25,7 @@
         justify-content: center;
         align-items: center;
         max-width: 270px;
+        min-height: 100px;
 
         @media only screen and (max-width: 992px) {
           flex: 1 1 100%;

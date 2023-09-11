@@ -83,6 +83,10 @@ a.social-icon-teaser {
 
 .socials-footer {
   margin-top: 50px;
+
+  @media only screen and (max-width: 575px) {
+    margin-bottom: 50px;
+  }
 }
 
 .social-icon-list {
@@ -103,8 +107,8 @@ a.social-icon-teaser {
   justify-content: center;
   align-items: center;
 
-  height: 34px;
-  width: 34px;
+  height: 40px;
+  width: 40px;
 
   font-size: 1.7rem;
   text-decoration: none !important;

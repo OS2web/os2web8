@@ -26,7 +26,7 @@ main.col-lg-8 {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 40px 0;
+    margin-bottom: 40px;
 
     @media only screen and (max-width: 1200px) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -99,7 +99,7 @@ main.col-lg-8 {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 40px 0;
+  margin-bottom: 40px;
 
   @media only screen and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
