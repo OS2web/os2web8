@@ -3328,34 +3328,61 @@ jQuery(document).ready(function(){
 })();
 
 
-
+document.addEventListener('DOMContentLoaded', function () {
   var closeBtns = document.querySelectorAll('.status-banner-close-btn');
+
   for (var i = 0; i < closeBtns.length; i++) {
     closeBtns[i].addEventListener('click', function () {
       var statusBanner = this.closest('.status-banner');
+
       if (statusBanner) {
-        statusBanner.style.display = 'none';
+        statusBanner.style.transform = 'translateY(-100%)';
 
         // Get the node ID
         var nodeId = statusBanner.getAttribute('data-node-id');
 
         // Store the closed state in local storage
         localStorage.setItem('status_banner_' + nodeId, 'closed');
+
+      }
+    });
+  }
+
+  var openBtns = document.querySelectorAll('.status-banner-open-btn');
+
+  for (var j = 0; j < openBtns.length; j++) {
+    openBtns[j].addEventListener('click', function () {
+      var bannerId = this.getAttribute('data-banner-id');
+      var statusBanner = document.querySelector('.status-banner[data-banner-id="' + bannerId + '"]');
+
+      if (statusBanner) {
+        statusBanner.style.transform = 'translateY(0)'; // Display the banner
+
+        var nodeId = statusBanner.getAttribute('data-node-id');
+
+        // Remove the 'closed' state from localStorage
+        localStorage.removeItem('status_banner_' + nodeId);
+
       }
     });
   }
 
   // Check local storage for closed banners
   var banners = document.querySelectorAll('.status-banner');
-  for (var i = 0; i < banners.length; i++) {
-    var banner = banners[i];
+
+  for (var k = 0; k < banners.length; k++) {
+    var banner = banners[k];
     var nodeId = banner.getAttribute('data-node-id');
     var bannerState = localStorage.getItem('status_banner_' + nodeId);
 
     if (bannerState === 'closed') {
-      banner.style.display = 'none';
+      banner.style.transform = 'translateY(-100%)';
+    } else {
+      banner.style.transform = 'translateY(0)'; // Or set to your desired display value for open banners
     }
+
   }
+});
 
 
 
@@ -3436,29 +3463,29 @@ jQuery(document).ready(function(){
 //   };
 // })(jQuery, Drupal);
 
-function customExternalLinks() {
-  var banner = document.querySelector('.custom-external-links-banner');
-  var button = document.querySelector('.custom-external-links-toggle');
-
-  banner.style.display = 'none'; // Hide the banner initially
-
-  button.addEventListener('click', function () {
-    banner.style.display = banner.style.display === 'none' ? 'flex' : 'none'; // Toggle the visibility of the banner on button click
-  });
-
-  var customExternalLinksButton = document.querySelector('.custom-external-links-button');
-  customExternalLinksButton.addEventListener('click', function () {
-    var selectElement = document.querySelector('.custom-external-links-select');
-    var url = selectElement.value;
-    if (url) {
-      window.open(url, '_blank');
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  customExternalLinks();
-});
+// /*function customExternalLinks() {
+//   var banner = document.querySelector('.custom-external-links-banner');
+//   var button = document.querySelector('.custom-external-links-toggle');
+//
+//   banner.style.display = 'none'; // Hide the banner initially
+//
+//   button.addEventListener('click', function () {
+//     banner.style.display = banner.style.display === 'none' ? 'flex' : 'none'; // Toggle the visibility of the banner on button click
+//   });
+//
+//   var customExternalLinksButton = document.querySelector('.custom-external-links-button');
+//   customExternalLinksButton.addEventListener('click', function () {
+//     var selectElement = document.querySelector('.custom-external-links-select');
+//     var url = selectElement.value;
+//     if (url) {
+//       window.open(url, '_blank');
+//     }
+//   });
+// }
+//
+// document.addEventListener('DOMContentLoaded', function () {
+//   customExternalLinks();
+// });*/
 
 
 

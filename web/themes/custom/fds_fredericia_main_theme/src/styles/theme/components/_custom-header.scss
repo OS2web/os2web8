@@ -25,6 +25,8 @@ $header-top-menu-size-sm: 50px;
 .custom-header-row.custom-header-row--meta {
   background-color: $color-white;
   height: $header-top-menu-size-sm;
+  position: relative;
+  z-index: 10;
 
   @include media-breakpoint-up(md) {
     height: $header-top-menu-size-md;
