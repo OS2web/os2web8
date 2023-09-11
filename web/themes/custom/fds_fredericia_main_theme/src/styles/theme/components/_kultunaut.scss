@@ -1,0 +1,28 @@
+.nautdata {
+  #nautcontent {
+    .nautblock {
+      padding: 0 !important;
+
+      div:first-child {
+        .nautevent {
+          .buyticket {
+            display: flex !important;
+            align-items: center;
+            background-color: #00335b !important;
+          }
+          .eventdate {
+            &:after {
+              content: '\f073';
+              font-family: "FontAwesome";
+              font-size:18px;
+              margin-left: 15px;
+            }
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
