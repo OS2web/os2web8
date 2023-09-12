@@ -30,12 +30,10 @@ ul.related-links {
       left: 0;
 
       font-size: 2.4rem;
-      font-family: "Material Icons";
-      content: "keyboard_backspace";
+      font-family: "FontAwesome";
+      content: "\f178";
 
       color: $color-orange-004;
-
-      transform: rotate(180deg);
     }
 
     &:nth-child(n+4) {
