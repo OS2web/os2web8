@@ -145,7 +145,7 @@ function fds_fredericia_main_theme_form_search_form_alter(&$form, FormStateInter
 /**
  * Implements template_preprocess_swiftmailer().
  */
-function fds_fredericia_main_theme_preprocesfos_swiftmailer(&$variables) {
+function fds_fredericia_main_theme_preprocess_swiftmailer(&$variables) {
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();
