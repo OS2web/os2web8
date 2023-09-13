@@ -1,0 +1,23 @@
+id: fk_d7_paragraph_simple_text
+label: Fredericiakommune D7 Paragraph Simple Text
+migration_tags:
+  - 'Drupal 7'
+migration_group: fk_d7
+source:
+  plugin: d7_field_collection_item
+  bundle: field_os2web_paragraphs
+process:
+  field_os2web_simple_text_heading:
+    - plugin: default_value
+      default_value: ''
+  field_os2web_simple_text_body:
+    - plugin: sub_process
+      source: field_os2web_paragraph_text
+      process:
+        value: value
+        format:
+          plugin: default_value
+          default_value: 'wysiwyg_tekst'
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: os2web_simple_text_paragraph

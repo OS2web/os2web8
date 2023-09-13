@@ -36,6 +36,21 @@ drush migrate:reset fk_d7_taxonomy_keywords
 drush migrate:import fk_d7_taxonomy_keywords
 echo "Migration fk_d7_taxonomy_keywords - END"
 
+echo "Migration fk_d7_paragraph_simple_text - START"
+drush migrate:reset fk_d7_paragraph_simple_text
+drush migrate:import fk_d7_paragraph_simple_text
+echo "Migration fk_d7_paragraph_simple_text - END"
+
+echo "Migration fk_d7_paragraph_accordion_items - START"
+drush migrate:reset fk_d7_paragraph_accordion_items
+drush migrate:import fk_d7_paragraph_accordion_items
+echo "Migration fk_d7_paragraph_accordion_items - END"
+
+echo "Migration fk_d7_paragraph_accordion - START"
+drush migrate:reset fk_d7_paragraph_accordion
+drush migrate:import fk_d7_paragraph_accordion
+echo "Migration fk_d7_paragraph_accordion - END"
+
 echo "Migration fk_d7_selfservice - START"
 drush migrate:reset fk_d7_selfservice
 drush migrate:import fk_d7_selfservice
