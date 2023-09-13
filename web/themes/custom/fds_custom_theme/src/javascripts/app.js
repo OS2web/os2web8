@@ -143,5 +143,51 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+(function ($) {
+  $(document).ready(function () {
+    var $container = $('.os2web-slideshow-container');
+    var $slides = $('.os2web-slides');
+    var slideWidth = $container.width();
+    var currentSlide = 0;
 
+    // Function to calculate and update slide width on window resize
+    function updateSlideWidth() {
+      slideWidth = $container.width();
+      $slides.css('width', slideWidth * $slides.children().length);
+      updateSlide();
+    }
+
+    // Initial slide width calculation
+    updateSlideWidth();
+
+    // Handle window resize to ensure responsiveness
+    $(window).resize(function () {
+      updateSlideWidth();
+    });
+
+    // Handle next button click
+    $('.os2web-next').click(function () {
+      currentSlide++;
+      if (currentSlide >= $slides.children().length) {
+        currentSlide = 0;
+      }
+      updateSlide();
+    });
+
+    // Handle previous button click
+    $('.os2web-prev').click(function () {
+      currentSlide--;
+      if (currentSlide < 0) {
+        currentSlide = $slides.children().length - 1;
+      }
+      updateSlide();
+    });
+
+    // Function to update the slide based on currentSlide value
+    function updateSlide() {
+      var translateX = -currentSlide * slideWidth;
+      $slides.css('transform', 'translateX(' + translateX + 'px)');
+    }
+  });
+})(jQuery);
 
