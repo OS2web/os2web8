@@ -1,8 +1,8 @@
-id: faxekommune_d7_paragraph_accordion
-label: Faxekommune D7 Paragraph Accordion
+id: fk_d7_paragraph_accordion
+label: Fredericiakommune D7 Paragraph Accordion
 migration_tags:
   - 'Drupal 7'
-migration_group: faxe_d7
+migration_group: fk_d7
 source:
   plugin: d7_node
   node_type: os2web_base_contentpage
@@ -10,12 +10,12 @@ source:
 process:
   field_os2web_accordion_reference:
     plugin: sub_process
-    source: field_afsnit_paragraphs
+    source: field_os2web_paragraphs
     process:
       target_id:
         - plugin: migration_lookup
           migration:
-            - faxekommune_d7_paragraph_accordion_items
+            - fk_d7_paragraph_accordion_items
           source: value
         - plugin: extract
           index:
@@ -23,7 +23,7 @@ process:
       target_revision_id:
         - plugin: migration_lookup
           migration:
-            - faxekommune_d7_paragraph_accordion_items
+            - fk_d7_paragraph_accordion_items
           source: value
         - plugin: extract
           index:
@@ -34,4 +34,4 @@ destination:
 migration_dependencies:
   required: {}
   optional:
-    - faxekommune_d7_paragraph_accordion_items
+    - fk_d7_paragraph_accordion_items
