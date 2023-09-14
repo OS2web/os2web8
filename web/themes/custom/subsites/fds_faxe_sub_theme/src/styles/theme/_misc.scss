@@ -276,12 +276,9 @@ body .page-container {
     }
     .field--name-field-link-til-andet-indhold,
     .field--name-field-ext-links {
-      padding: 0 10px 30px 10px;
-      @include media-breakpoint-up(md) {
-        padding: 0 40px 30px;
-      }
+
       a {
-        padding: 25px 15px;
+        padding: 15px 25px 15px 40px;
         font-size: 2rem;
         position: relative;
         display: block;
