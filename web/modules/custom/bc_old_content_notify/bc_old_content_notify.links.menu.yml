@@ -1,0 +1,7 @@
+
+bc_old_content_notify.settings:
+  title: 'Bellcom Old content notify'
+  route_name: bc_old_content_notify.settings
+  description: 'Bellcom old content notify configuration'
+  parent: bc_basic.admin_config_bellcom
+  weight: 99

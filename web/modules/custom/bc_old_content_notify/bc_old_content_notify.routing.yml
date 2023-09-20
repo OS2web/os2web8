@@ -1,0 +1,10 @@
+
+bc_old_content_notify.settings:
+  path: '/admin/config/bellcom/old-content-notify'
+  defaults:
+    _form: '\Drupal\bc_old_content_notify\Form\SettingsForm'
+    _title: 'Old content notify'
+  requirements:
+    _permission: 'administer site configuration'
+
+
