@@ -34,7 +34,7 @@
 
     .container {
       .banner-box {
-        background-color: rgba(255,255,255,0.6);
+        background-color: rgba(255,255,255,0.9);
         width: 500px;
         padding: 30px;
         display: flex;
@@ -75,11 +75,18 @@
               margin: 0;
 
               a {
-                background-color: #353535;
+                background-color: $background_color__button;
                 color: white;
-                border-radius: 50px;
+                border-radius: 4px;
                 font-weight: normal;
-                border-color: #353535;
+                border-color: $background_color__button;
+                transition: .3s ease;
+                font-weight: 600;
+
+                &:hover {
+                  background-color: $background_color__button_hover;
+                  border-color: $background_color__button_hover;
+                }
 
               }
 
