@@ -3634,3 +3634,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const sliderWidth = 100 * slides.length;
   slidesContainer.style.width = `${sliderWidth}%`;
 });
+
+
+(function ($) {
+  $(document).ready(function () {
+    $(".toggle-btn").click(function () {
+      var $this = $(this);
+      $(".cta-btn-content .cta-link.hidden").toggle(); // toggles the visibility of hidden links
+
+      // Toggle the button text
+      if ($this.text() === "+ Vis flere") {
+        $this.text("- Skjul");
+      } else {
+        $this.text("+ Vis flere");
+      }
+    });
+  });
+})(jQuery);
