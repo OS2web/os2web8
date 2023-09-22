@@ -12,7 +12,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 50px;
+      margin-top: 25px;
 
       @media only screen and (max-width: 420px) {
         flex-direction: column;
@@ -44,10 +44,10 @@
 
 
   .latest-news-innerwrapper {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     display: flex;
-    gap: 50px;
+    gap: 25px;
 
     @media only screen and (max-width: 992px) {
       flex-direction: column;
@@ -70,11 +70,12 @@
       .news-content-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
+        min-height: 325px;
 
         .news-date {
           color: white;
-          padding: 10px 0;
+          padding: 0;
           font-size: 14px;
         }
 
@@ -97,6 +98,9 @@
 
         .news-intro {
           color: white;
+          margin: 0;
+          padding: 10px 0;
+          flex-grow: 1;
         }
 
         .news-readmore {
