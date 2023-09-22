@@ -25,17 +25,18 @@ main.col-lg-8 {
   .fredericia-menu-link-wrapper {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-bottom: 40px;
 
     @media only screen and (max-width: 1200px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     @media only screen and (max-width: 768px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
     }
     @media only screen and (max-width: 470px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
     .fredericia-menu-link__inner-wrapper {
@@ -81,7 +82,6 @@ main.col-lg-8 {
             font-size: 20px;
             font-weight: 600;
             text-transform: uppercase;
-            hyphens: none !important;
 
             @media only screen and (max-width: 640px) {
               font-size: 14px;
@@ -98,17 +98,21 @@ main.col-lg-8 {
 .fredericia-menu-link-wrapper {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
   margin-bottom: 40px;
 
   @media only screen and (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
   }
   @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
   }
   @media only screen and (max-width: 470px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
   }
 
   .fredericia-menu-link__inner-wrapper {
@@ -154,7 +158,6 @@ main.col-lg-8 {
           font-size: 20px;
           font-weight: 600;
           text-transform: uppercase;
-          hyphens: none !important;
 
           @media only screen and (max-width: 640px) {
             font-size: 14px;
