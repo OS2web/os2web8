@@ -15,10 +15,12 @@
 %}
 
 <div{{ attributes.addClass(classes) }}>
-
   <div class="field__items">
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
+      {% set imageUrl = file_url(item.content['#item'].entity.uri.value) %}
+      {% set caption = item.content['#item'].alt %}
+      <a href="{{ imageUrl }}" data-fancybox="gallery" data-caption="{{ caption }}" class="fancy-slide">
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      </a>    {% endfor %}
   </div>
 </div>
