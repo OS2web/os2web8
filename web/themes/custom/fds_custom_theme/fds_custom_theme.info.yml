@@ -33,3 +33,7 @@ libraries:
   - 'fds_custom_theme/fancybox'
   - 'fds_custom_theme/material.icons'
 
+libraries-override:
+ fds_base_theme/javascripts:
+   js:
+    js/accordion.js: js/accordion.js

@@ -70,6 +70,11 @@
 
 .accordion-content {
   padding: 0.5rem 2.4rem 2rem 2.4rem;
+  display: none;
+  background-color: #fff;
+  &.opened {
+    display: block;
+  }
 
   .field {
 
