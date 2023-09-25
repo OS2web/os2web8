@@ -30,3 +30,6 @@ libraries:
   - 'fds_custom_theme/fonts'
   - 'fds_custom_theme/styles'
   - 'fds_custom_theme/javascripts'
+  - 'fds_custom_theme/fancybox'
+  - 'fds_custom_theme/material.icons'
+
