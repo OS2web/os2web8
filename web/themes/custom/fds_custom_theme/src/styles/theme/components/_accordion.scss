@@ -73,6 +73,10 @@
 
   .field {
 
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
     + .field--name-field-os2web-hearings-reply-docs {
       margin-top: $grid-gutter-width / 2;
     }
