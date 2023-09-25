@@ -82,17 +82,13 @@
 <article{{ attributes.addClass(classes) }}>
   {% set link_event_url = node.field_os2web_event_url.value ? node.field_os2web_event_url.value : url('entity.node.canonical', {'node': node.id}) %}
 <a class="fullhref" target="_blank" href="{{ link_event_url }}" rel="bookmark">{{ label }}</a>
-
   {{ title_prefix }}
   {% if label and not page %}
     <div role="region" aria-label="{{'Teaser'| t}}" class="row no-gutters">
       <time class="col-2 os2web-event-date">
-        {% if node.field_os2web_event_start_date|length %}
-          {{ node.field_os2web_event_start_date.value|date('d') }}
-        {% endif %}
-        <br />
-        {% if node.field_os2web_event_start_date|length %}
-          {{ node.field_os2web_event_start_date.value|date('M') | t }}
+        {% if content.start_datetime|length %}
+          {{ content.start_datetime|date('d') }} <br>
+          {{ content.start_datetime|date('M') | t }}
         {% endif %}
       </time>
       <div class="col-10 os2web-event-title">
