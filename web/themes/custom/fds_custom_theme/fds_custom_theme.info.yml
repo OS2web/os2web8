@@ -37,3 +37,4 @@ libraries-override:
  fds_base_theme/javascripts:
    js:
     js/accordion.js: js/accordion.js
+    js/slideshow.js: js/slideshow.js
