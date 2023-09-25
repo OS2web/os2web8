@@ -32,11 +32,12 @@
 
 })(jQuery, Drupal, drupalSettings);
 
-$(document).ready(function() {
-  $('.fancy-slide').fancybox({
-    loop: true
-    // Add any other Fancybox options you'd like here.
+(function ($) {
+  $(document).ready(function() {
+    $('.fancy-slide').fancybox({
+      loop: true
+      // Add any other Fancybox options you'd like here.
+    });
   });
-});
-
+})(jQuery);
 
