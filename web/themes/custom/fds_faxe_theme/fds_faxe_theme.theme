@@ -333,6 +333,19 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
 
   $paragraph = $variables['paragraph'];
 
+  $current_path = \Drupal::service('path.current')->getPath();
+      $path_args = explode('/', $current_path);
+
+      if (isset($path_args[1]) && $path_args[1] == 'node' && is_numeric($path_args[2])) {
+          $node = \Drupal\node\Entity\Node::load($path_args[2]);
+          if ($node instanceof \Drupal\node\NodeInterface) {
+              $variables['current_node_title'] = $node->getTitle();
+              $nodebox = node2box($node, true);
+              $variables['current_node_primary_icon'] = $nodebox->image;
+          }
+      }
+
+
   if ($paragraph->bundle() === 'os2web_menu_box_paragraph') {
 
     $showImages = ($paragraph->field_os2web_menu_box_vm->value == 'image');
@@ -417,4 +430,6 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
     }
   }
 
+
 }
+

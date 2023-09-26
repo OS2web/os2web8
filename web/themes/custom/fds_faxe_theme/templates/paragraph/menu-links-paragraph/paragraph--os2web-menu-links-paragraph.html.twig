@@ -8,6 +8,15 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
+      {% if current_node_title %}
+      <div class="menu-linker-page-title">
+        {% if current_node_primary_icon %}
+          {{ current_node_primary_icon }}
+        {% endif %}
+        <span>{{ current_node_title }}</span>
+      </div>
+      {% endif %}
+
       <div class="menu-linker-wrapper">
         {% for menu_link in _context['#menu_links'] %}
           <div class="menu-linker-item">

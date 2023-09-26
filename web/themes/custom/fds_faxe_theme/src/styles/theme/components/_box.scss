@@ -28,10 +28,10 @@
     color: $color-black;
     background-color: #fff;
 
-    .field--name-field-os2web-icon {
+    .field--name-field-os2web-page-primaryicon {
       img {
-        width: 65px;
-        height: 60px;
+        width: auto;
+        max-height: 60px;
       }
     }
     .h4 {
@@ -233,14 +233,46 @@
 }
 
 
+.menu-linker-page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+
+  .field--name-field-os2web-page-primaryicon {
+    img {
+      max-height: 50px;
+      width: auto;
+    }
+  }
+  span {
+    color: #00789e;
+    font-weight: 700;
+    margin-left: 20px;
+    font-size: 3.2rem;
+  }
+}
+
 .menu-linker-wrapper {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 30px;
 
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+
+  @media only screen and (max-width: 992px) {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  @media only screen and (max-width: 640px) {
+    grid-template-columns: repeat(1, minmax(0,1fr));
+  }
+
   .menu-linker-item {
     background-color: #fff;
-    padding: 10px 40px;
+    padding: 20px;
     min-height: 250px;
 
     .menu-linker-box {
