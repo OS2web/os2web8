@@ -89,7 +89,7 @@
     background-color: white;
     color: #00335b;
     overflow: hidden;
-    *:not(.field__item .paragraph--type--os2web-accordion-item .accordion-button .field--name-field-os2web-accordion-item-head) {
+    p, li, span, h1, h2, h3, h4, h5, h6 {
       color: #00335b;
     }
     .field {
