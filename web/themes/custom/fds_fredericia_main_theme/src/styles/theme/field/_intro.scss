@@ -32,7 +32,12 @@
 }
 .field--name-field-os2web-page-intro {
   p {
-    color: #2c3d50;
+    color: #00335b;
+    font-size: 2rem;
+
+    strong {
+      font-weight: 400;
+    }
   }
 }
 // --------------------------------------------------
