@@ -1,6 +1,6 @@
 .toc-outer-wrapper {
   display: flex;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-top: 50px;
 
   @media only screen and (max-width: 1200px) {
@@ -40,7 +40,7 @@
     .toc-heading {
       text-transform: uppercase;
       font-size: 18px;
-      color: #183D60;
+      color:  #00335B;
       font-weight: 600;
     }
 
@@ -48,7 +48,7 @@
       li {
         padding-left: 0;
         a {
-          color: #183D60;
+          color:  #00335B;
           font-size: 16px;
           font-weight: 400;
           text-decoration: none;
@@ -78,10 +78,10 @@
       .content-heading {
         font-weight: 600;
         font-size: 3rem;
-        color: #183D60;
+        color:  #00335B;
       }
       p, h3, h4, h5, h6 {
-        color: #2c3e50;
+        color:  #00335B;
       }
     }
   }

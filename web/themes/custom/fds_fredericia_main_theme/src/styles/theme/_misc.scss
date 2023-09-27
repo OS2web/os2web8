@@ -47,10 +47,13 @@ body .container-fluid {
         }
 
         .field--name-field-os2web-simple-text-body {
-          h1 {
-            color: #00315b;
+          h1,h2,h3,h4,h5,h6 {
+            color: #00305b;
             margin-bottom: 15px !important;
             margin-top: 0 !important;
+          }
+          p {
+            color: #00335b !important;
           }
         }
       }

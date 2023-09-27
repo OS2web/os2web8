@@ -371,9 +371,9 @@ body.path-frontpage .region-featured-bottom-first {
   font-size: 3rem;
   margin: 0;
 }
-/*.field--type-text-long h2 + p {
+.field--type-text-long h2 + p {
   margin-top: 10px;
-}*/
+}
 
 /*FRONT-NYHEDER*/
 @media screen and (max-width: 767px) {
@@ -1151,7 +1151,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .node__content > .field > .field__item h2 {
   font-size: 32px;
-  margin: 30px 0 0 0;
+  margin: 30px 0 0 0!important;
   line-height: normal;
 }
 .node__content > .field > .field__item h3 {
