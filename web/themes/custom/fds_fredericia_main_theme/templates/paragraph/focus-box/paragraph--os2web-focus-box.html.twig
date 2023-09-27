@@ -169,31 +169,37 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var sidebarItems = document.querySelectorAll('.sidebar-item');
-    var boxContent = document.querySelector('.box-content');
 
-    sidebarItems.forEach(function(item) {
-      item.addEventListener('click', function() {
-        var bodyText = item.querySelector('.sidebar-body').innerHTML;
-        boxContent.innerHTML = bodyText;
-        boxContent.style.display = 'flex';
+    var accordions = document.querySelectorAll('.sidebar-accordion-wrapper');
 
-        var activeItems = document.querySelectorAll('.sidebar-item.active');
-        activeItems.forEach(function(activeItem) {
-          if (activeItem !== item) {
-            activeItem.classList.remove('active');
-          }
+    accordions.forEach(function(accordion) {
+      var sidebarItems = accordion.querySelectorAll('.sidebar-item');
+      var boxContent = accordion.querySelector('.box-content');
+
+      sidebarItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+          var bodyText = item.querySelector('.sidebar-body').innerHTML;
+          boxContent.innerHTML = bodyText;
+          boxContent.style.display = 'flex';
+
+          var activeItems = accordion.querySelectorAll('.sidebar-item.active');
+          activeItems.forEach(function(activeItem) {
+            if (activeItem !== item) {
+              activeItem.classList.remove('active');
+            }
+          });
+
+          item.classList.add('active');
         });
-
-        item.classList.add('active');
       });
+
+      var firstSidebarItem = accordion.querySelector('.sidebar-item');
+      if(firstSidebarItem) {
+        firstSidebarItem.classList.add('active');
+        boxContent.innerHTML = firstSidebarItem.querySelector('.sidebar-body').innerHTML;
+        boxContent.style.display = 'flex';
+      }
     });
-
-    var firstSidebarItem = document.querySelector('.sidebar-item');
-    firstSidebarItem.classList.add('active');
-    boxContent.innerHTML = firstSidebarItem.querySelector('.sidebar-body').innerHTML;
-    boxContent.style.display = 'flex';
   });
-
 
 </script>

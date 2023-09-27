@@ -38,9 +38,14 @@
         i {
           font-size: 28px;
         }
+
+        &:hover .sidebar-product-description {
+          transform: translateX(5px);
+        }
         .sidebar-product-description {
           font-size: 18px;
           width: 100%;
+          transition: .3s ease;
 
           .field__item {
             p, h2, h3, h4, h5, h6 {
@@ -109,6 +114,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 450px;
 
   .sidebar-accordion__inner-wrapper {
     display: flex;
@@ -139,7 +145,7 @@
         .sidebar-item {
           cursor: pointer;
           background-color: #F5F7F9;
-          padding: 20px;
+          padding: 30px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -153,9 +159,16 @@
             display: none;
           }
 
+          &:hover span {
+            transform: translateX(10px);
+          }
+
+
+
           span {
             display: flex;
             align-items: center;
+            transition: .3s ease;
           }
 
 
