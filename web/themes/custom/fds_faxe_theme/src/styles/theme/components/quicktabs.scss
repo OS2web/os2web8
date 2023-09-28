@@ -35,9 +35,9 @@
   display: flex;
 
   a {
-    color: white;
+    color: white !important;
     position: relative;
-    max-width: 290px;
+    max-width: 290px !important;
     text-align: left;
     white-space: normal;
     font-size: 1.6rem;
