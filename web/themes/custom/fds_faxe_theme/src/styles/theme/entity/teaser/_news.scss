@@ -35,10 +35,15 @@
     h1, h2, h3, h4, h5, h6 {
       margin: 0 0 15px 0;
       font-size: 2rem;
+      cursor: pointer;
 
       font-weight: 700;
 
       color: #00789e;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -70,6 +75,29 @@ a.entity-teaser--os2web-news {
 
   &, &:hover, &:focus, &:active {
     color: $color-text;
+  }
+}
+
+#block-primaernavigation-3 {
+  h2 {
+    background-color: #fff;
+    margin: 0;
+    padding: 40px;
+    color: #00789e;
+    font-size: 2.4rem;
+    font-weight: 400;
+    position: relative;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
   }
 }
 
