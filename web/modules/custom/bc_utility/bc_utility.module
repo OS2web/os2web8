@@ -65,9 +65,6 @@ function bc_utility_field_widget_single_element_form_alter(array &$element, Form
 
 function bc_utility_search_api_query_alter(QueryInterface &$query)
 {
-  $user = Drupal::currentUser();
-  $language = Drupal::languageManager()->getCurrentLanguage();
-  $database = Database::getConnection();
   $index = $query->getIndex();
 
   if (!empty($index)) {
@@ -84,22 +81,8 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
 
   if (!empty($keywords)) {
     if (!preg_match('/^[a-zA-Z0-9\s-]+$/', $keywords) || strlen($keywords) < 3 || strlen($keywords) > 30) {
-      return;
+        $query->keys("");
     }
-
-      $database->insert('popular_search')->fields([
-          's_name' => $server,
-          'i_name' => $index->id(),
-          'timestamp' => \Drupal::time()->getRequestTime(),
-          'numfound' => $query->getResults()->getResultCount(),
-          'uid' => $user->id(),
-          'sid' => session_id(),
-          'keywords' => $keywords,
-          'filters' => '',
-          'sort' => '',
-          'language' => $language->getId(),
-      ])->execute();
-
   }
 
 }
@@ -141,3 +124,9 @@ function bc_utility_preprocess_status_messages(&$variables) {
 
   }
 }
+
+// kontekstuelle filtre
+// We pass the user ID as the Entity ID.
+
+// Forbindelser
+// OG membership: Group Indholdselement from OG membership
