@@ -1,0 +1,31 @@
+.quicktabs-tabs {
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+  li {
+    margin:0;
+    display: flex;
+
+    &.active {
+      a {
+        background-color: #00789e;
+        color: #fff;
+        transition: .3s ease;
+      }
+    }
+
+
+    a {
+      padding: 18px 30px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &:before {
+      display: none;
+    }
+  }
+}
