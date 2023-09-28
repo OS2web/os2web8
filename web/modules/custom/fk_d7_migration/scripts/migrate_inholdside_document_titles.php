@@ -28,6 +28,7 @@ if (file_exists($jsonFilePath) && is_readable($jsonFilePath)) {
           $body = $node->field_os2web_page_description->value;
           $body .= '<p>Dokumenter: ' . $row . '</p>';
           $node->field_os2web_page_description->value = $body;
+          $node->field_os2web_page_description->format = 'wysiwyg_tekst';
           $node->save();
           print_r(PHP_EOL);
           $i++;
