@@ -31,12 +31,6 @@ div.entity-list--os2web-news {
     width: 100%;
     object-fit: cover;
   }
-  &:hover {
-    background-color: $gray-tertiary;
-    *:not( .field--name-field-os2web-news-heading .h4) {
-      color: $background_color__default;
-    }
-  }
   .entity-list__image {
     padding-inline: 30px;
   }
