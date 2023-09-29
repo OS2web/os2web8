@@ -208,8 +208,10 @@ main.col-lg-8 {
 }
 
 .field--name-field-os2web-files-media {
-  background-color: $gray-primary;
   padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 

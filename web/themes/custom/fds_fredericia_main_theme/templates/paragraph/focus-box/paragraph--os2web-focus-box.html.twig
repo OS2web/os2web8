@@ -1,4 +1,20 @@
 {#  #}
+{% macro link_color_class(color_value) %}
+  {% if color_value == 'red_focusbox_link' %}
+    {{ 'red-link-class' }}
+  {% elseif color_value == 'lightred_focusbox_link' %}
+    {{ 'lightred-link-class' }}
+  {% elseif color_value == 'blue_focusbox_link' %}
+    {{ 'blue-link-class' }}
+  {% elseif color_value == 'lightblue_focusbox_link' %}
+    {{ 'lightblue-link-class' }}
+  {% else %}
+    {{ '' }}
+  {% endif %}
+{% endmacro %}
+
+{% import _self as macros %}
+
 <div class="sidebar-accordion-wrapper">
   <div class="sidebar-accordion__inner-wrapper">
     <div class="sidebar">
@@ -12,11 +28,10 @@
             <i class="fa-solid fa-chevron-right"></i>
             <div class="sidebar-body" style="display: none;">
               {% if paragraph.field_focusbox_body_1 is not empty %}
-                <a href="{{ paragraph.field_focusbox_link_1.0.url }}">
+                <a href="{{ paragraph.field_focusbox_link_1.0.url }}" class="{{ macros.link_color_class(paragraph.field_focusbox_link_color_1.value) }}">
                   <div class="sidebar-product-description">
                     {{ content.field_focusbox_body_1 }}
                   </div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               {% endif %}
               {% if paragraph.field_focusbox_image_1 is not empty %}
@@ -41,11 +56,10 @@
             <i class="fa-solid fa-chevron-right"></i>
             <div class="sidebar-body" style="display: none;">
               {% if paragraph.field_focusbox_body_2 is not empty %}
-                <a href="{{ paragraph.field_focusbox_link_2.0.url }}">
+                <a href="{{ paragraph.field_focusbox_link_2.0.url }}" class="{{ macros.link_color_class(paragraph.field_focusbox_link_color_2.value) }}">
                   <div class="sidebar-product-description">
                     {{ content.field_focusbox_body_2 }}
                   </div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               {% endif %}
               {% if paragraph.field_focusbox_image_2 is not empty %}
@@ -70,11 +84,10 @@
             <i class="fa-solid fa-chevron-right"></i>
             <div class="sidebar-body" style="display: none;">
               {% if paragraph.field_focusbox_body_3 is not empty %}
-                <a href="{{ paragraph.field_focusbox_link_3.0.url }}">
+                <a href="{{ paragraph.field_focusbox_link_3.0.url }}" class="{{ macros.link_color_class(paragraph.field_focusbox_link_color_3.value) }}">
                   <div class="sidebar-product-description">
                     {{ content.field_focusbox_body_3 }}
                   </div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               {% endif %}
               {% if paragraph.field_focusbox_image_3 is not empty %}
@@ -99,11 +112,10 @@
             <i class="fa-solid fa-chevron-right"></i>
             <div class="sidebar-body" style="display: none;">
               {% if paragraph.field_focusbox_body_4 is not empty %}
-                <a href="{{ paragraph.field_focusbox_link_4.0.url }}">
+                <a href="{{ paragraph.field_focusbox_link_4.0.url }}" class="{{ macros.link_color_class(paragraph.field_focusbox_link_color_4.value) }}">
                   <div class="sidebar-product-description">
                     {{ content.field_focusbox_body_4 }}
                   </div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               {% endif %}
               {% if paragraph.field_focusbox_image_4 is not empty %}
@@ -128,11 +140,10 @@
             <i class="fa-solid fa-chevron-right"></i>
             <div class="sidebar-body" style="display: none;">
               {% if paragraph.field_focusbox_body_5 is not empty %}
-                <a href="{{ paragraph.field_focusbox_link_5.0.url }}">
+                <a href="{{ paragraph.field_focusbox_link_5.0.url }}" class="{{ macros.link_color_class(paragraph.field_focusbox_link_color_5.value) }}">
                   <div class="sidebar-product-description">
                     {{ content.field_focusbox_body_5 }}
                   </div>
-                  <i class="fa-solid fa-circle-arrow-right"></i>
                 </a>
               {% endif %}
               {% if paragraph.field_focusbox_image_5 is not empty %}

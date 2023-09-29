@@ -21,6 +21,30 @@
 // --------------------------------------------------
 
 .file {
+  display: flex;
+  background-image: none;
+  padding-left: 0;
+
+  a {
+    padding: 15px 25px;
+    position: relative;
+    background-color: #00335b;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+
+    &:after {
+      content: '\f019';
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "FontAwesome";
+      font-size: 22px;
+      position: absolute;
+    }
+  }
 
 }
 
@@ -42,8 +66,6 @@
     position: relative;
     width: 100%;
     min-height: 1px; // Prevent columns from collapsing when empty
-    padding-right: ($grid-gutter-width / 4);
-    padding-left: ($grid-gutter-width / 4);
 
     @include grid-col(12, 12);
   }

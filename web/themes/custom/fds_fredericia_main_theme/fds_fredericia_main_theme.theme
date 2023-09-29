@@ -490,3 +490,40 @@ function fds_fredericia_main_theme_preprocess(&$variables, $hook) {
     $variables['base_path'] = base_path();
 }
 
+
+function fds_fredericia_main_theme_preprocess_field(&$variables) {
+  if ($variables['element']['#bundle'] == 'os2web_banner_paragraph' && $variables['element']['#field_name'] == 'field_os2web_banner_links') {
+    $paragraph = $variables['element']['#object'];
+    if ($paragraph->hasField('field_banner_link_color') && !$paragraph->get('field_banner_link_color')->isEmpty()) {
+      $link_color_value = $paragraph->get('field_banner_link_color')->getString();
+      switch ($link_color_value) {
+        case 'red_link':
+          $variables['link_color_class'] = 'red-link-class';
+          break;
+        case 'lightred_link':
+          $variables['link_color_class'] = 'lightred-link-class';
+          break;
+        case 'blue_link':
+          $variables['link_color_class'] = 'blue-link-class';
+          break;
+        case 'lightblue_link':
+          $variables['link_color_class'] = 'lightblue-link-class';
+          break;
+      }
+    }
+  }
+}
+
+function fds_fredericia_main_theme_preprocess_paragraph__os2web_focus_box(array &$variables) {
+  $paragraph = $variables['paragraph'];
+
+  for ($i = 1; $i <= 5; $i++) {
+    $colorFieldName = "field_focusbox_link_color_" . $i;
+
+    if ($paragraph->hasField($colorFieldName) && !$paragraph->get($colorFieldName)->isEmpty()) {
+      $link_color_value = $paragraph->get($colorFieldName)->getString();
+      $variables["link_color_value_$i"] = $link_color_value;
+    }
+  }
+}
+
