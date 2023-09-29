@@ -62,7 +62,7 @@
         "drupal/config_delete": "^1.17",
         "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0",
-        "drupal/content_moderation_notifications": "^3.3",
+        "drupal/content_moderation_notifications": "^3.6",
         "drupal/cookieinformation": "^2.0",
         "drupal/core-composer-scaffold": "9.5.10",
         "drupal/core-project-message": "9.5.10",
