@@ -38,5 +38,3 @@ libraries-override:
    js:
     js/accordion.js: js/accordion.js
     js/slideshow.js: js/slideshow.js
-    js/micro-modal.js: false
-    'https://unpkg.com/micromodal/dist/micromodal.min.js': false
