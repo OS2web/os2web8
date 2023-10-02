@@ -24,7 +24,14 @@
   'spotbox--' ~ spotbox_type,
   background_color ? ('spotbox--background-color-' ~ background_color),
 ] %}
-<a href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}>
+{% set spotbox_url_string = spotbox_url.toString() %}
+{% set starts_with_http = spotbox_url_string starts with 'http' %}
+{% set contains_base_url = spotbox_url_string matches ('/' ~ base_url ~ '/') %}
+{% set is_external = starts_with_http and not contains_base_url %}
+{% set is_file = (spotbox_url_string ends with '.pdf' or spotbox_url_string ends with '.docx') %}
+
+<a href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}
+  {% if is_external or is_file %}target="_blank" rel="noopener noreferrer"{% endif %}>
   <div class="row">
     <div class="col-12 col-sm-4 col-md-5">
       <div class="spotbox__image">
