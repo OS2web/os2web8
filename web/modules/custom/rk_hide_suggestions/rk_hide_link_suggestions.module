@@ -1,0 +1,14 @@
+/**
+* Implements hook_form_alter().
+*/
+function rk_hide_link_suggestions_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+$hide_links_path = '/hide-link-suggestions';  // Adjust this if your view's path is different.
+
+// Traverse the entire form and look for entity reference fields with autocomplete functionality.
+array_walk_recursive($form, function (&$element) use ($custom_path) {
+// Check if the current element is an entity reference with autocomplete.
+if (isset($element['#autocomplete_route_name']) && $element['#autocomplete_route_name'] == 'entity.autocomplete') {
+$element['#autocomplete_route_path'] = $hide_links_path;
+}
+});
+}
