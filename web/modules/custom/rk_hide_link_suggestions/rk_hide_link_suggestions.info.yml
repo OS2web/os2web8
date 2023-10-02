@@ -4,6 +4,6 @@ description: 'Hides a specific content type from the link suggestions'
 core_version_requirement: ^9
 package: Custom
 dependencies:
-  -drupal:views
+  - drupal:views
 version: "1.0"
 project: "rk_hide_link_suggestions"
