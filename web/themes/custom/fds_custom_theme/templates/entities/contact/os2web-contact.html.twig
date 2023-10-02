@@ -1,18 +1,37 @@
 {% set modalId = 'modal-' ~ random() %}
 
 <div{{ attributes.addClass('os2web_contact') }}>
-  {{ content.field_os2web_contact_heading }}
 
-  {{ content.field_os2web_contact_body }}
-  {{ content.field_os2web_contact_phone }}
-  {{ content.field_os2web_contact_email }}
-  {{ content.field_os2web_contact_more }}
+    <div class="contact-heading">
+      {{ content.field_os2web_contact_heading }}
+    </div>
+  <div class="contact-box-wrapper">
+    <div class="contact-body">
+      {{ content.field_os2web_contact_body }}
+    </div>
+    <div class="contact-phone">
+      <i class="fa-solid fa-phone"></i>
+      {{ content.field_os2web_contact_phone }}
+    </div>
 
-  {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value%}
-    <button data-micromodal-trigger="{{ modalId }}" class="button button-primary">
-      {{ content.field_os2web_contact_modal_butt }}
-    </button>
-  {% endif %}
+    <div class="contact-email">
+      <i class="fa-solid fa-envelope"></i>
+      {{ content.field_os2web_contact_email }}
+    </div>
+
+    <div class="contact-more">
+      {{ content.field_os2web_contact_more }}
+    </div>
+
+
+    {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value%}
+    <div class="contact-button">
+      <button data-micromodal-trigger="{{ modalId }}" class="button button-primary">
+        {{ content.field_os2web_contact_modal_butt }}
+      </button>
+    </div>
+    {% endif %}
+  </div>
 </div>
 
 {% if contact.field_os2web_contact_modal.value %}
