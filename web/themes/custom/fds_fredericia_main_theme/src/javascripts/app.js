@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showMoreButton.classList.add('fa-minus');
       } else {
         hiddenLinks.style.display = 'none';
-        showMoreButtonContent.textContent = 'Se flere muligheder';
+        showMoreButtonContent.textContent = 'Vis flere';
         showMoreButton.classList.remove('fa-minus');
         showMoreButton.classList.add('fa-plus');
       }
