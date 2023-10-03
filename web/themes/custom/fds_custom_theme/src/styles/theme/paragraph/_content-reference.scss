@@ -98,32 +98,36 @@
 
 .block-os2web-contact {
   .os2web_contact {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    .contact-phone-email-wrapper {
+
+    .contact-box-wrapper {
       display: flex;
-      gap: 20px;
       flex-direction: column;
-
-      .contact-phone {
+      gap: 20px;
+      .contact-email-phone-wrapper {
         display: flex;
-        gap: 15px;
-        align-items: center;
+        gap: 20px;
+        flex-direction: column;
 
-        i {
-          font-family: "FontAwesome";
-          font-style: normal;
+        .contact-phone {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+
+          i {
+            font-family: "FontAwesome";
+            font-style: normal;
+          }
         }
-      }
-      .contact-email {
-        display: flex;
-        gap: 15px;
-        align-items: center;
 
-        i {
-          font-family: "FontAwesome";
-          font-style: normal;
+        .contact-email {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+
+          i {
+            font-family: "FontAwesome";
+            font-style: normal;
+          }
         }
       }
     }
