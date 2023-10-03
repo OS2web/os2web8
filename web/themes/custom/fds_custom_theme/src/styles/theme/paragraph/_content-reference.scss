@@ -96,6 +96,40 @@
   }
 }
 
+.block-os2web-contact {
+  .os2web_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .contact-phone-email-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+
+      .contact-phone {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        i {
+          font-family: "FontAwesome";
+          font-style: normal;
+        }
+      }
+      .contact-email {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        i {
+          font-family: "FontAwesome";
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
 .paragraph--type--os2web-cnt-paragraph-reference {
   .field--name-field-os2web-cnt-par-ref {
     background-color: rgb(206, 191, 211);
@@ -127,43 +161,48 @@
             }
           }
         }
-
-        .contact-phone {
+        .contact-email-phone-wrapper {
           display: flex;
-          align-items: center;
-          gap: 15px;
+          gap: 30px;
+          .contact-phone {
+            display: flex;
+            align-items: center;
+            gap: 15px;
 
-          i {
-            font-size: 20px;
-            font-style: normal;
-            font-family: "FontAwesome";
+            i {
+              font-size: 20px;
+              font-style: normal;
+              font-family: "FontAwesome";
+            }
+
+            .field--name-field-os2web-contact-phone {
+              font-size: 16px;
+            }
           }
 
-          .field--name-field-os2web-contact-phone {
-            font-size: 18px;
-          }
-        }
+          .contact-email {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            gap: 15px;
 
-        .contact-email {
-          display: flex;
-          align-items: center;
-          font-size: 20px;
-          gap: 15px;
-
-          i {
-            font-family: "FontAwesome";
-            font-style: normal;
-          }
-          .field--name-field-os2web-contact-email {
-            svg {
-              display: none;
+            i {
+              font-family: "FontAwesome";
+              font-style: normal;
+            }
+            .field--name-field-os2web-contact-email {
+              svg {
+                display: none;
+              }
             }
           }
         }
 
+
         .contact-button {
           button {
             width: fit-content;
+            background-color: rgb(72,15,99);
           }
         }
 
