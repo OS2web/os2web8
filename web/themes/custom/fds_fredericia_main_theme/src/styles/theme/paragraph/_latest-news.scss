@@ -58,7 +58,7 @@
       flex: 1;
 
       .news-image-wrapper {
-        height: 250px;
+        height: 200px;
         display: flex;
 
         img {
@@ -100,7 +100,7 @@
           color: white;
           margin: 0;
           padding: 10px 0;
-          flex-grow: 1;
+          min-height: 200px;
         }
 
         .news-readmore {
