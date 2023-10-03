@@ -2,6 +2,8 @@
   #nautcontent {
     .nautblock {
       padding: 0 !important;
+      display: flex;
+      flex-direction: column-reverse;
 
       div:first-child {
         .nautevent {
@@ -22,6 +24,9 @@
             }
           }
         }
+      }
+      div:nth-child(2) {
+        padding-bottom: 50px;
       }
     }
   }
