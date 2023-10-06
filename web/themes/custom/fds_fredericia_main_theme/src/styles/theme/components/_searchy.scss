@@ -20,61 +20,79 @@
 // Styling
 // --------------------------------------------------
 
-#block-fds-fredericia-main-theme-os2web-search-os2web-search-page-content {
-  #views-exposed-form-os2web-search-os2web-search-page {
-    .form--inline {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
 
-      @media only screen and (max-width: 425px) {
-        flex-direction: column;
-      }
-      .form-item {
-        margin-right: 20px;
-        margin-bottom: 0;
-        flex-grow: 1;
+.page-search-container {
+  #main-content {
+    main {
+      .region-content {
+        padding-top: 0;
+        padding-bottom: 0;
 
-        @media only screen and (max-width: 425px) {
-          margin-right: 0;
-        }
-        .search-input__input {
-          border-radius: 0;
-        }
-      }
+        .views-exposed-form {
+          .upper-search-wrapper {
+            height: 200px;
+            background-color: #00335b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-      .form-actions {
+            form {
+              max-width: 1200px;
+              margin: 0 auto;
+              width: 100%;
+              padding: 0 15px;
 
-        background-color: $background_color__primary !important;
-        border: none;
-        position: relative;
-        flex-grow: 1;
+              .form--inline {
+                display: flex;
+                align-items: center;
+                position: relative;
+                background-color: white;
 
+                .form-item {
+                  width: 100%;
+                  margin: 0;
 
-        .search-input__button {
-          background-color: $background_color__primary !important;
-          border-radius: 0;
-          position: relative;
-          border: none;
-          width: 100%;
-          background-image: url('../images/svg-icons/magnifying-glass-solid.svg');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 20px 20px;
-          padding: 0;
-          margin: 0;
-          min-width: 80px;
-          transition: .3s ease;
+                  .search-input__input {
+                    height: 75px;
+                    border-radius: 0;
+                    padding: 0 0 0 20px;
+                    border: 0;
+                    width: 100%;
+                    margin: 0;
+                  }
+                }
+                  .form-actions {
+                    position: absolute;
+                    right: 20px;
+                    margin: 0;
 
-          &:hover {
-            filter: brightness(90%);
+                    input {
+                      background-color: transparent;
+                      border: 0;
+                      width: 50px;
+                    }
+
+                    &:after {
+                      content: '\f002';
+                      font-family: "FontAwesome";
+                      position: absolute;
+                      color: #00335b;
+                      display: block;
+                      top: 50%;
+                      transform: translateY(-50%) translateX(-50%);
+                      left: 50%;
+                      pointer-events: none;
+                    }
+                  }
+              }
+            }
           }
         }
       }
     }
   }
 }
+
 
 .view-os2web-search {
   .view-header {
