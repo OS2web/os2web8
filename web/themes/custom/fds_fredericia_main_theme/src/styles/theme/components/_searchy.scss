@@ -30,11 +30,11 @@
 
         .views-exposed-form {
           .upper-search-wrapper {
-            height: 200px;
+            padding: 60px 0 50px 0;
             background-color: #00335b;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
 
             form {
               max-width: 1200px;
@@ -85,6 +85,37 @@
                     }
                   }
               }
+            }
+            .block-facets {
+              max-width: 1200px;
+              margin: 0 auto;
+              width: 100%;
+              padding: 0 15px;
+              display:flex;
+              align-items: center;
+              gap: 20px;
+
+              h2 {
+                margin: 0;
+                color: white;
+                font-weight: 700;
+              }
+
+              .facets-widget-checkbox {
+                ul {
+                  display: flex;
+                  margin: 0;
+
+                  .facet-item {
+                    color: white;
+
+                  }
+
+
+                }
+
+              }
+
             }
           }
         }
