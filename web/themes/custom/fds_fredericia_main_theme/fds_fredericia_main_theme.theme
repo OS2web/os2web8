@@ -563,7 +563,7 @@ function fds_fredericia_main_theme_preprocess_paragraph__tableofcontents(array &
 
 
 function fds_fredericia_main_theme_preprocess_block__fds_fredericia_main_theme_os2web_search_os2web_search_page_content(array &$variables) {
-  $block_id = 'fds_fredericia_main_theme_os2web_search_section_facet';
+  $block_id = 'fds_fredericia_main_theme_os2web_search_type_facet';
 
   $block = \Drupal\block\Entity\Block::load($block_id);
   if ($block) {
