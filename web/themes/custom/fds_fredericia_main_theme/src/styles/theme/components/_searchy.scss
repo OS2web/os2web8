@@ -102,7 +102,7 @@
                 font-size: 18px;
               }
 
-              .facets-widget-checkbox {
+              .facets-widget-links {
                 ul {
                   display: flex;
                   margin: 0;
@@ -126,6 +126,36 @@
             }
           }
         }
+        .block-system-main-block {
+          margin-top: 100px;
+
+          .views-element-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            .view {
+              .view-content {
+
+                .views-row {
+                  box-shadow: 0 2px 20px rgba(0,0,0,.16078);
+
+                   a {
+                     margin: 0;
+                   }
+
+                }
+
+              }
+
+            }
+
+          }
+
+
+        }
+
       }
     }
   }
