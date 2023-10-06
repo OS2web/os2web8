@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (showMoreButton && hiddenLinks) {
     showMoreButton.addEventListener('click', function () {
       if (hiddenLinks.style.display === 'none') {
-        hiddenLinks.style.display = 'flex';
+        hiddenLinks.style.display = 'grid';
         showMoreButtonContent.textContent = 'Skjul';
         showMoreButton.classList.remove('fa-plus');
         showMoreButton.classList.add('fa-minus');
