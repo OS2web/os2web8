@@ -16,7 +16,7 @@
     .banner-content-links {
       display: flex;
       gap: 20px;
-      justify-content: center;
+      justify-content: flex-start;
 
       @media only screen and (max-width: 992px) {
         flex-wrap: wrap;

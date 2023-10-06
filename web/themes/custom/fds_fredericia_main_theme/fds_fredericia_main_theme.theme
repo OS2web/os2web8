@@ -527,3 +527,37 @@ function fds_fredericia_main_theme_preprocess_paragraph__os2web_focus_box(array 
   }
 }
 
+function fds_fredericia_main_theme_preprocess_paragraph__tableofcontents(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  $original_contents = $paragraph->get('field_toc_content')->getValue();
+
+  // Loop through each item to process any media entities.
+  foreach ($original_contents as $key => &$content_item) {
+    // Check if there's a media entity placeholder in the text.
+    if (strpos($content_item['value'], '<drupal-entity') !== FALSE) {
+      $dom = new \DOMDocument();
+      @$dom->loadHTML(mb_convert_encoding($content_item['value'], 'HTML-ENTITIES', 'UTF-8'), LIBXML_NOERROR | LIBXML_NOWARNING);
+
+      // Locate and replace each <drupal-entity> tag.
+      foreach ($dom->getElementsByTagName('drupal-entity') as $entity_tag) {
+        $uuid = $entity_tag->getAttribute('data-entity-uuid');
+
+        // Load and render the media entity.
+        $media = \Drupal::service('entity.repository')->loadEntityByUuid('media', $uuid);
+        if ($media) {
+          $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+          $render_output = $view_builder->view($media, 'default'); // make sure you use a valid view mode
+          $rendered_media = \Drupal::service('renderer')->renderRoot($render_output)->__toString();
+
+          // Replace the placeholder with rendered output.
+          $entity_tag->nodeValue = '';
+          $cdata = $dom->createCDATASection($rendered_media);
+          $entity_tag->appendChild($cdata);
+        }
+      }
+      $content_item['value'] = $dom->saveHTML();
+    }
+  }
+  $variables['processed_contents'] = $original_contents;
+}
+
