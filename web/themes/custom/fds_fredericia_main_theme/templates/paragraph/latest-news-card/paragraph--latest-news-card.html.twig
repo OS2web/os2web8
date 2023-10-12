@@ -22,7 +22,7 @@
         <span class="news-date">{{ article.created.value|date('F j, Y') }}</span>
         <a class="news-heading-link" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}"><h3 class="news-heading">{{ article.field_os2web_news_heading.value }}</h3></a>
         <p class="news-intro">
-          {{ article.field_os2web_news_intro.value|length > 200 ? article.field_os2web_news_intro.value|slice(0, 200) ~ '...' : article.field_os2web_news_intro.value }}
+          {{ article.field_os2web_news_intro.value|length > 200 ? article.field_os2web_news_intro.value|slice(0, 150) ~ '...' : article.field_os2web_news_intro.value }}
         </p>
         <a class="news-readmore" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}">Læs mere</a>
       </div>
