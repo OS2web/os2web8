@@ -11,6 +11,7 @@
             display: flex !important;
             align-items: center;
             background-color: #00335b !important;
+            color: white !important;
           }
           .eventdate {
             &:after {
@@ -25,7 +26,7 @@
           }
         }
       }
-      div:nth-child(2) {
+      div:nth-child(2):not(.eventdate) {
         padding-bottom: 50px;
       }
     }
