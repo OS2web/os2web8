@@ -13,6 +13,18 @@
 // Styling
 // --------------------------------------------------
 
+.entity-default--os2web-wrapper.background-color--primary {
+  background-color: $background_color__primary;
+}
+
+.entity-default--os2web-wrapper.background-color--secondary {
+  background-color: $background_color__secondary;
+}
+
+.entity-default--os2web-wrapper.background-color--tertiary {
+  background-color: $background_color__tertiary;
+}
+
 body {
   background-color: #fff;
   overflow-x: hidden !important;
