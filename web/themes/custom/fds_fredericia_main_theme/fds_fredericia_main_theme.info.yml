@@ -40,7 +40,7 @@ libraries:
   - 'fds_fredericia_main_theme/styles'
   - 'fds_fredericia_main_theme/javascripts'
 
-# libraries-override:
-#   fds_base_theme/javascripts:
-#     js:
-#       js/slideshow.js: js/slideshow.js
+libraries-override:
+   fds_base_theme/javascripts:
+     js:
+       js/slideshow.js: js/slideshow.js
