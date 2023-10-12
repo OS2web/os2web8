@@ -52,14 +52,17 @@
     // Add tab
     for (var i = 0; i < info.slideItems.length; i++) {
       var slide = info.slideItems[i];
-      if (slide.classList.contains('tns-slide-active')) {
-        slide.querySelector('a').removeAttribute('tabindex');
-      }
-      else {
-        slide.querySelector('a').setAttribute('tabindex', '-1');
+      var anchor = slide.querySelector('a');
+
+      if (anchor) { // Check if the anchor exists before accessing it
+        if (slide.classList.contains('tns-slide-active')) {
+          anchor.removeAttribute('tabindex');
+        } else {
+          anchor.setAttribute('tabindex', '-1');
+        }
       }
     }
-  }
+  };
 
   // Modified to select and initialize all slide containers.
   var slideshowContainers = document.querySelectorAll('.field--name-field-os2web-slideshow-image .field__items');
