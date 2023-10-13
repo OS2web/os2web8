@@ -83,8 +83,13 @@
       },
     });
 
+
     // Bind transitionEndCallback to this slider instance
     slider.events.on('transitionEnd', transitionEndCallback);
     transitionEndCallback(slider.getInfo());
   });
+
+
 })();
+
+
