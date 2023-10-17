@@ -35,10 +35,17 @@ theme-settings:
     description: 'Upload et billede for banner search sektionen.'
     type: image
     default_value: null
+  placeholder_image:
+    label: 'Placeholder Image'
+    description: 'Upload et billede som skal være placeholder for news cards visningen.'
+    type: image
+    default_value: null
+
 libraries:
   - 'fds_fredericia_main_theme/fonts'
   - 'fds_fredericia_main_theme/styles'
   - 'fds_fredericia_main_theme/javascripts'
+  - 'fds_fredericia_main_theme/swiper'
 
 libraries-override:
    fds_base_theme/javascripts:

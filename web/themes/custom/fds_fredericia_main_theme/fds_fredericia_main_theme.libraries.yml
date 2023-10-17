@@ -16,6 +16,13 @@ javascripts:
     js/slideshow.js: {}
     dist/javascripts/app.js: {}
     'https://cdhsign.dk/cdh_player.js': { type: external }
+swiper:
+  version: 1.x
+  css:
+    theme:
+      'https://unpkg.com/swiper/swiper-bundle.min.css': { type: external, minified: true }
+  js:
+    'https://unpkg.com/swiper/swiper-bundle.min.js': { type: external, minified: true }
   dependencies:
     - core/drupal
     - core/jquery
