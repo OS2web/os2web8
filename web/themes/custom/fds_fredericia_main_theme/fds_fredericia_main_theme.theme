@@ -589,3 +589,31 @@ function fds_fredericia_main_theme_preprocess_block__fds_fredericia_main_theme_o
     $variables['facet_block'] = [];
   }
 }
+
+function fds_fredericia_main_theme_preprocess_text_formatted(array &$variables) {
+  $text = $variables['text']['#text'];
+
+  if (strpos($text, '<drupal-entity') !== FALSE) {
+    $dom = new \DOMDocument();
+    @$dom->loadHTML(mb_convert_encoding($text, 'HTML-ENTITIES', 'UTF-8'), LIBXML_NOERROR | LIBXML_NOWARNING);
+
+    // Locate and replace each <drupal-entity> tag.
+    foreach ($dom->getElementsByTagName('drupal-entity') as $entity_tag) {
+      $uuid = $entity_tag->getAttribute('data-entity-uuid');
+
+      // Load and render the media entity.
+      $media = \Drupal::service('entity.repository')->loadEntityByUuid('media', $uuid);
+      if ($media) {
+        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+        $render_output = $view_builder->view($media, 'default'); // Make sure you use a valid view mode.
+        $rendered_media = \Drupal::service('renderer')->renderRoot($render_output)->__toString();
+
+        // Replace the placeholder with rendered output.
+        $entity_tag->nodeValue = '';
+        $cdata = $dom->createCDATASection($rendered_media);
+        $entity_tag->appendChild($cdata);
+      }
+    }
+    $variables['text']['#text'] = $dom->saveHTML();
+  }
+}
