@@ -1,7 +1,7 @@
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.navigateBack = {
     attach: function (context, settings) {
-      $('.navigate-back-button', context).once('navigate-back').click(function (e) {
+      $('.search-close-btn', context).once('navigate-back').click(function (e) {
         e.preventDefault();
 
         let referrer = document.referrer;
