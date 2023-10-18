@@ -6,7 +6,7 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
-{% set align_value = node.field_os2web_align_content.value %}
+{% set align_value = paragraph.field_os2web_align_content.value %}
 {% block paragraph %}
   <div class="banner__image-outer" {% if background_image %} style="background-image: url({{ background_image }})" {% endif %}>
     <div {{ attributes.addClass(classes) }}>
