@@ -101,6 +101,22 @@ a.entity-teaser {
 .page-teaser-wrapper {
   box-shadow: 0 2px 20px rgba(0,0,0, .16078);
   padding: 40px;
+  position: relative;
+
+  .fa-arrow-right {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00335b;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .element-wrapper-link {
 
@@ -150,6 +166,22 @@ a.entity-teaser {
 .news-teaser-wrapper {
   box-shadow: 0 2px 20px rgba(0,0,0, .16078);
   padding: 40px;
+  position: relative;
+
+  .fa-arrow-right {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00335b;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .element-wrapper-link {
     padding: 0;
@@ -162,7 +194,7 @@ a.entity-teaser {
       margin-bottom: 25px;
       padding: 0;
 
-      .field--name-field-os2web-page-heading {
+      .field--name-field-os2web-news-heading {
         margin-bottom: 15px;
 
         h1, h2, h3, h4, h5, h6 {
