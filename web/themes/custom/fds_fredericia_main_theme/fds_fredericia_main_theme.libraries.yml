@@ -16,6 +16,15 @@ javascripts:
     js/slideshow.js: {}
     dist/javascripts/app.js: {}
     'https://cdhsign.dk/cdh_player.js': { type: external }
+
+navigate_back:
+  version: 1.x
+  js:
+    js/navigate-back.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
 swiper:
   version: 1.x
   css:

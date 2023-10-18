@@ -46,6 +46,7 @@ libraries:
   - 'fds_fredericia_main_theme/styles'
   - 'fds_fredericia_main_theme/javascripts'
   - 'fds_fredericia_main_theme/swiper'
+  - 'fds_fredericia_main_theme/navigate_back'
 
 libraries-override:
    fds_base_theme/javascripts:
