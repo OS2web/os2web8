@@ -13,6 +13,9 @@
         // Check if the previous page was within your site and is not a paginated page or the search page
         if (referrer.indexOf(window.location.hostname) !== -1 && !isSearchPage && !referrer.match(/page=\d+/)) {
           window.history.back();
+        } else if (referrer.indexOf(window.location.hostname) !== -1 && (isSearchPage || referrer.match(/page=\d+/))) {
+          // If the user came from another internal page (not search or pagination), send them back to that page
+          window.history.go(-(window.history.length - 1));
         } else {
           window.location.href = drupalSettings.path.baseUrl; // Navigate to the front page
         }
