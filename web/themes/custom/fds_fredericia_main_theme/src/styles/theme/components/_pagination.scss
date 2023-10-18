@@ -66,9 +66,9 @@
   &.is-active {
     a {
       cursor: default;
-      background-color: $background_color__primary;
+      background-color: $background_color__default;
       color: $color-white;
-      border-color: $background_color__primary;
+      border-color: $background_color__default;
       &:hover, &:focus, &:active {
         text-decoration: none!important;
         color: $color-white;

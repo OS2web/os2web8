@@ -119,6 +119,7 @@ a.entity-teaser {
   }
 
   .element-wrapper-link {
+    cursor: pointer;
 
     .entity-teaser__body {
       margin-bottom: 25px;
@@ -131,6 +132,10 @@ a.entity-teaser {
           margin: 0;
           color: #000;
           font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -186,8 +191,9 @@ a.entity-teaser {
   .element-wrapper-link {
     padding: 0;
     border-radius: 0;
-    background-color: none;
+    background-color: transparent;
     color: #000;
+    cursor: pointer;
 
 
     .entity-teaser__body {
@@ -201,6 +207,10 @@ a.entity-teaser {
           margin: 0;
           color: #000;
           font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
