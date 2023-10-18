@@ -6,10 +6,15 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
+{% set align_value = node.field_os2web_align_content.value %}
 {% block paragraph %}
   <div class="banner__image-outer" {% if background_image %} style="background-image: url({{ background_image }})" {% endif %}>
     <div {{ attributes.addClass(classes) }}>
-      <div class="container">
+      <div class="container" {% if align_value == 'left' %}
+        style="justify-content: flex-start;"
+      {% elseif align_value == 'right' %}
+        style="justify-content: flex-end;"
+        {% endif %}>
         {% block content %}
           {% if paragraph.field_os2web_banner_heading.value or paragraph.field_os2web_banner_subheading.value or paragraph.field_os2web_banner_body.value %}
 
