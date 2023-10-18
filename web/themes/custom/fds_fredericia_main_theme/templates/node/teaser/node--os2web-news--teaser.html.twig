@@ -8,9 +8,9 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
+<div class="news-teaser-wrapper">
 <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
   <div class="entity-{{ view_mode|clean_class }}__body">
-    {{ content.field_os2web_news_article_date }}
     {{ content.field_os2web_news_heading }}
 
     {% set text = content.field_os2web_news_description | render %}
@@ -25,3 +25,4 @@
   {% include 'breadcrumb.html.twig' %}
 </div>
 {% endif %}
+</div>
