@@ -35,32 +35,38 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            align-items: center;
 
-            form {
+            .search-form-button-wrapper {
+              display: flex;
               max-width: 1200px;
-              margin: 0 auto;
               width: 100%;
-              padding: 0 15px;
 
-              .form--inline {
-                display: flex;
-                align-items: center;
-                position: relative;
-                background-color: white;
+              form {
+                max-width: 1200px;
+                width: 100%;
+                padding: 0 15px;
 
-                .form-item {
-                  width: 100%;
-                  margin: 0;
+                .form--inline {
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  background-color: white;
 
-                  .search-input__input {
-                    height: 75px;
-                    border-radius: 0;
-                    padding: 0 0 0 20px;
-                    border: 0;
+                  .form-item {
                     width: 100%;
                     margin: 0;
+
+                    .search-input__input {
+                      height: 75px;
+                      border-radius: 0;
+                      padding: 0 0 0 20px;
+                      border: 0;
+                      width: 100%;
+                      margin: 0;
+                    }
                   }
-                }
+
                   .form-actions {
                     position: absolute;
                     right: 20px;
@@ -84,6 +90,7 @@
                       pointer-events: none;
                     }
                   }
+                }
               }
             }
             .block-facets {
@@ -132,7 +139,8 @@
           }
         }
         .block-system-main-block {
-          margin-top: 100px;
+          max-width: 1200px;
+          margin: 50px auto;
 
           .views-element-container {
             max-width: 1200px;
