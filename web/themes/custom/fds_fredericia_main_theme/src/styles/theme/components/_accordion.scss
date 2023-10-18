@@ -71,13 +71,13 @@
       outline: 0;
     }
     &[aria-expanded="true"] { //accordion button is open
-      background-color: #00335b;
-      color: white;
+      background-color: white;
+      color: #00335b;
 
       &:after {
         content: $fa-var-minus;
         font-size: 1.8rem;
-        color: white;
+        color: #00335b;
       }
     }
   }

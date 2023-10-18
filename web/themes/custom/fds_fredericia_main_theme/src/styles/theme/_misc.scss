@@ -613,6 +613,13 @@ a:not([class]) {
   font-size: 0.8em !important;
 }
 
+.field--name-field-media-video-file {
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 // --------------------------------------------------
 // Responsive
