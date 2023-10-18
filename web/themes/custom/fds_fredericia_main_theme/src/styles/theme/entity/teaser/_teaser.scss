@@ -116,6 +116,10 @@ a.entity-teaser {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 440px) {
+      display: none;
+    }
   }
 
   .element-wrapper-link {
@@ -124,6 +128,7 @@ a.entity-teaser {
     .entity-teaser__body {
       margin-bottom: 25px;
       padding: 0;
+      max-width: 90%;
 
       .field--name-field-os2web-page-heading {
         margin-bottom: 15px;
@@ -186,6 +191,10 @@ a.entity-teaser {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 440px) {
+      display: none;
+    }
   }
 
   .element-wrapper-link {
@@ -199,6 +208,7 @@ a.entity-teaser {
     .entity-teaser__body {
       margin-bottom: 25px;
       padding: 0;
+      max-width: 90%;
 
       .field--name-field-os2web-news-heading {
         margin-bottom: 15px;

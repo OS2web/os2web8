@@ -40,9 +40,12 @@
   {% endif %}
   {{ title_suffix }}
   <div class="upper-search-wrapper">
+    <div class="search-form-button-wrapper">
     {% block content %}
       {{ content }}
     {% endblock %}
+      <button><i class="fa-solid fa-xmark"></i></button>
+    </div>
      {% if facet_block %}
       {{ facet_block }}
     {% endif %}
