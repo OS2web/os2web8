@@ -8,7 +8,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
-      <div class="row">
+      <div class="fredericia-menu-link-wrapper">
         {% for menu_link in _context['#menu_links'] %}
           {#<div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="box box--section-link">
@@ -37,7 +37,7 @@
               {% include '@fds_fredericia_main_theme/src/images/svg-icons/arrow-right.svg' %}
             </div>
             <div class="fredericia-box fredericia-box--section-link">
-              
+
               <div class="fredericia-box__body">
                 <span>{{ menu_link.title }}</span>
 
