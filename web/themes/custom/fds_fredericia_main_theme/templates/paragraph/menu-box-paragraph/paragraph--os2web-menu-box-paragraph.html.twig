@@ -9,7 +9,7 @@
     {% block content %}
 
         <div class="fredericia-menu-link-wrapper">
-            {% for menu_link in menubox %}
+          {% for menu_link in _context['#menu_links'] %}
             <a href="{{ menu_link.url }}" class="fredericia-menu-link__inner-wrapper">
 
               <div class="fredericia-box-arrow">
