@@ -10,7 +10,7 @@
 
       <div class="row">
         {% for menu_link in _context['#menu_links'] %}
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          {#<div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="box box--section-link">
                 <div class="box__heading" >
                     {% set rendered_content = menu_link.content.field_os2web_icon|render %}
@@ -30,7 +30,20 @@
                 {% endif %}
               </div>
             </div>
-          </div>
+          </div>#}
+          <a href="{{ menu_link.url }}" class="fredericia-menu-link__inner-wrapper">
+
+            <div class="fredericia-box-arrow">
+              {% include '@fds_fredericia_main_theme/src/images/svg-icons/arrow-right.svg' %}
+            </div>
+            <div class="fredericia-box fredericia-box--section-link">
+              
+              <div class="fredericia-box__body">
+                <span>{{ menu_link.title }}</span>
+
+              </div>
+            </div>
+          </a>
         {% endfor %}
       </div>
 
