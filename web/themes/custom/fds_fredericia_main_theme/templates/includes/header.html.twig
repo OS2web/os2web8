@@ -115,16 +115,25 @@
     {% endif %}
     {{ page.alert_banner }}
     {{ page.banner_search }}
-    {% if page.header__main_navigation is not empty %}
+    {#{% if page.header__main_navigation is not empty %}
     <div class="custom-header-row custom-header-row--desktop-navigation d-none d-lg-flex">
       <div class="container">
         <div class="flexy-row">
-          {{ page.header__main_navigation }}
+          {{ page.header__below }}
           <div class="flexy-spacer"></div>
         </div>
       </div>
     </div>
-    {% endif %}
+    {% endif %}#}
+    <div class="custom-header custom-header--static">
+      <div class="custom-header__inner">
+        <div class="container">
+          <!-- Begin - below -->
+          {{ page.header__below }}
+          <!-- End - below -->
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
