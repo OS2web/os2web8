@@ -509,3 +509,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })(jQuery);
 
+document.addEventListener('DOMContentLoaded', function() {
+  let showMoreButton = document.querySelector('.show-more-btn-selfservice');
+
+  if (showMoreButton) {
+    showMoreButton.addEventListener('click', function() {
+      let hiddenLinks = document.querySelectorAll('.hidden-link');
+
+      hiddenLinks.forEach(function(link) {
+        // Check the current display status and toggle accordingly
+        if (link.style.display === 'flex') {
+          link.style.display = 'none';
+        } else {
+          link.style.display = 'flex';
+        }
+      });
+
+      // Toggle button text
+      showMoreButton.textContent = showMoreButton.textContent === 'Vis flere' ? 'Skjul' : 'Vis flere';
+    });
+  }
+});
