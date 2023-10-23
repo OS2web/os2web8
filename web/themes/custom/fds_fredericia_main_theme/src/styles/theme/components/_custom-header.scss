@@ -593,6 +593,11 @@ $header-bottom-menu-size: 70px;
 
       list-style: none;
 
+      @media only screen and (max-width: 992px) {
+        flex-basis: 50%;
+        padding: 10px;
+      }
+
       &:before {
         display: none;
       }
@@ -647,6 +652,10 @@ $header-bottom-menu-size: 70px;
         border: 1px solid #ebebeb;
         color: #00335b;
         background-color: #fff;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 14px;
+        }
 
         svg {
 
@@ -715,6 +724,14 @@ $header-bottom-menu-size: 70px;
 
     margin-top: 30px;
 
+    @media only screen and (max-width: 992px) {
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
     > li {
 
       min-height: 140px;
@@ -727,12 +744,21 @@ $header-bottom-menu-size: 70px;
         flex-direction: column;
         position: relative;
 
+        @media only screen and (max-width: 600px) {
+          font-size: 14px;
+          padding: 20px 5px;
+        }
+
         &::after {
           content: attr(title);
           font-size: 14px;
           font-weight: 400;
           text-transform: none;
           padding-top: 5px;
+
+          @media only screen and (max-width: 600px) {
+            font-size: 12px;
+          }
         }
 
         &::before {
