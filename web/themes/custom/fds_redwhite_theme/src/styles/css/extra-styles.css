@@ -369,7 +369,7 @@ body.path-frontpage .region-featured-bottom-first {
 }
 .field--type-text-long h2 {
   font-size: 3rem;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px 0 !important;
 }
 .field--type-text-long h2 + p {
   margin-top: 10px;
