@@ -114,11 +114,15 @@ svg.ext {
 
 .field--type-text-long h2 + p {
   margin-top: 0 !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 30px !important;
+}
+
+.field--type-text-long ul {
+  margin-bottom: 30px !important;
 }
 
 .node__content > .field > .field__item h2 {
-  margin: 30px 0 10px 0 !important;
+  margin: 30px 0 13px 0 !important;
 }
 // --------------------------------------------------
 // Variants
