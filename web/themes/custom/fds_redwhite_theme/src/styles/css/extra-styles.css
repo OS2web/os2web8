@@ -1150,7 +1150,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .node__content > .field > .field__item h2 {
   font-size: 32px;
-  margin: 30px 0 0 0!important;
+  margin: 30px 0 10px 0!important;
   line-height: normal;
 }
 .node__content > .field > .field__item h3 {
