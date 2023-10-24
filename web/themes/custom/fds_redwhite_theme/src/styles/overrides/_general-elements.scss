@@ -112,6 +112,11 @@ svg.ext {
   overflow-x: auto;
 }
 
+.field--type-text-long h2 {
+  font-size: 3rem;
+  margin: 0 0 13px 0 !important;
+}
+
 .field--type-text-long h2 + p {
   margin-top: 0 !important;
   margin-bottom: 30px !important;

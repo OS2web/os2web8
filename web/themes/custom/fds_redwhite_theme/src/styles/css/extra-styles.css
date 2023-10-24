@@ -367,10 +367,7 @@ body.path-frontpage .region-featured-bottom-first {
   color: var(--primary);
   padding-left: 10px;
 }
-.field--type-text-long h2 {
-  font-size: 3rem;
-  margin: 0 0 13px 0 !important;
-}
+
 .field--type-text-long h2 + p {
   margin-top: 10px;
 }
