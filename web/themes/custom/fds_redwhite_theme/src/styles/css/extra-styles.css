@@ -369,7 +369,7 @@ body.path-frontpage .region-featured-bottom-first {
 }
 .field--type-text-long h2 {
   font-size: 3rem;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 .field--type-text-long h2 + p {
   margin-top: 10px;
@@ -688,7 +688,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   text-decoration: none;
 }
 .view-display-id-embed_3 .entity-default--os2web-simple-text-paragraph h2 {
-  margin: 0;
+  margin: 0 0 20px 0;
   font-weight: 400;
   font-size: 3rem;
 }
