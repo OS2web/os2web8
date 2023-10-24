@@ -92,7 +92,7 @@ svg.ext {
 		font-weight: 400;
 		text-decoration: none;
 		color: $color-primary;
-		padding: 0;
+		padding: 0 !important;
 		&::after {
 			content: "";
 			display: inline-block;
@@ -114,6 +114,7 @@ svg.ext {
 
 .field--type-text-long h2 + p {
   margin-top: 0 !important;
+  margin-bottom: 20px !important;
 }
 
 .node__content > .field > .field__item h2 {
