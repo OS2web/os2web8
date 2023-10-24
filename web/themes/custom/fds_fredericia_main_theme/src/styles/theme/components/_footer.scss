@@ -276,7 +276,14 @@ body:has(.paragraph--type--footer-alternativ) {
   }
 }
 
+body:has(footer.footer-alternativ-wrapper) {
+  footer.d-print-none {
+    display: none;
+  }
+}
+
 .footer-alternativ-wrapper {
+
   width: 100%;
   padding: 30px 0;
 
