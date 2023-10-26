@@ -96,6 +96,7 @@
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 0 30px;
 
   .single-cta-link {
     text-decoration: none;
@@ -105,11 +106,24 @@
       opacity: 1;
       transform: translateX(0);
     }
+    &:hover .single-cta-link-content .single-cta-link-upper-text i {
+      opacity: 1;
+      transform: translateX(0);
+    }
     .single-cta-link-content {
       padding: 10px 25px;
 
       .single-cta-link-upper-text {
         font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: .3s ease;
+        }
       }
       .single-cta-link-bottom-text {
         display: flex;
@@ -123,5 +137,7 @@
         }
       }
     }
+
   }
+
 }
