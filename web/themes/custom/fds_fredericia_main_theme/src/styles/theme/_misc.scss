@@ -60,7 +60,7 @@ body .container-fluid {
 
         .field--name-field-os2web-simple-text-body {
           h1,h2,h3,h4,h5,h6 {
-            color: #00305b;
+            color: #00335b;
             margin-bottom: 15px !important;
             margin-top: 0 !important;
           }
@@ -70,6 +70,17 @@ body .container-fluid {
         }
       }
     }
+  }
+}
+
+.field--name-field-os2web-simple-text-body {
+  h1,h2,h3,h4,h5,h6 {
+    color: #00335b;
+    margin-bottom: 15px !important;
+    margin-top: 0 !important;
+  }
+  p {
+    color: #00335b !important;
   }
 }
 
