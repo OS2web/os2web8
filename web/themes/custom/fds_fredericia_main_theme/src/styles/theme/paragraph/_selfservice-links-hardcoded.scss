@@ -66,11 +66,11 @@
       display: flex;
       align-items: center;
       font-size: 18px;
-      transition: .4s ease;
+      transition: .4s;
 
       &:hover {
         font-weight: 700;
-        transform: translateX(10px);
+        transform: translateX(8px);
 
         span {
           opacity: 1;
@@ -85,7 +85,7 @@
       span {
         opacity: 0;
         transform: translateX(-10px);
-        transition: .4s ease;
+        transition: .4s;
         margin-left: 20px;
         i {
           font-size: 24px;
