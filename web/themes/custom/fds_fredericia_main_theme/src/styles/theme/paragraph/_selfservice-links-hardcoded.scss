@@ -65,13 +65,14 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       font-size: 18px;
+      transition: .4s ease;
 
       &:hover {
-        text-decoration: underline;
+        font-weight: 700;
+        transform: translateX(10px);
 
-        span i {
+        span {
           opacity: 1;
           transform: translateX(0);
         }
@@ -81,11 +82,14 @@
         display: none;
       }
 
-      span i {
-        font-size: 24px;
+      span {
         opacity: 0;
         transform: translateX(-10px);
-        transition: .3s ease;
+        transition: .4s ease;
+        margin-left: 20px;
+        i {
+          font-size: 24px;
+        }
       }
     }
   }
