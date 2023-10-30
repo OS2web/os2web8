@@ -603,3 +603,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+(function ($, Drupal) {
+  Drupal.behaviors.myCustomBehavior = {
+    attach: function (context, settings) {
+      $('body', context).once('footerToggle').each(function () {
+        if ($(this).has('footer.footer-alternativ-wrapper').length) {
+          $('footer.d-print-none').css('display', 'none');
+        }
+      });
+    }
+  };
+})(jQuery, Drupal);

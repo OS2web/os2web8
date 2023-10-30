@@ -265,7 +265,7 @@ footer {
 
 body:has(.paragraph--type--footer-alternativ) {
   footer {
-    display: none !important;
+    display: none;
   }
   .region.region-featured-bottom-first {
     margin-top: 12px;
@@ -277,12 +277,12 @@ body:has(.paragraph--type--footer-alternativ) {
 
 body:has(footer.footer-alternativ-wrapper) {
   footer.d-print-none {
-    display: none !important;
+    display: none;
   }
 }
 
 .footer-alternativ-wrapper {
-  margin-top: 80px;
+  margin-top: 40px;
   width: 100%;
   padding: 30px 0;
 
