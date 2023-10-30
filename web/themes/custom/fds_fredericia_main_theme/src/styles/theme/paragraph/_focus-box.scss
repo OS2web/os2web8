@@ -35,6 +35,7 @@
         text-decoration: none;
         gap: 30px;
         position: relative;
+        z-index: 1;
 
         &.red-link-class {
             background-color: #9D0425;
@@ -63,9 +64,11 @@
           position: absolute;
           top: 50%;
           right: 30px;
-          transform: translateY(-50%);
+          transform: translateY(-50%) translateX(-10px);
           font-family: "FontAwesome";
           font-size: 22px;
+          opacity: 0;
+          transition: .3s ease;
         }
 
         &.ext {
@@ -74,16 +77,22 @@
             position: absolute;
             top: 50%;
             right: 30px;
-            transform: translateY(-50%);
+            transform: translateY(-50%) translateX(-10px);
             font-family: "FontAwesome";
             font-size: 22px;
+            opacity: 0;
+            transition: .3s ease;
+          }
+        }
+
+        &:hover {
+          &:after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
           }
         }
 
 
-        &:hover .sidebar-product-description {
-          transform: translateX(5px);
-        }
         .sidebar-product-description {
           font-size: 18px;
           width: 100%;
