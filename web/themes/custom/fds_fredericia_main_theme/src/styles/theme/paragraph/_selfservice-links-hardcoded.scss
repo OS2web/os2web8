@@ -51,21 +51,10 @@
 .selvbetjening-labels {
   display: flex;
   flex-direction: column;
-  padding: 25px 35px;
-  margin: 15px 0;
+  padding: 18px 20px;
+  margin: 25px 0;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-  .selvbetjening-btn-header {
-    margin-bottom: 15px;
-
-    h2 {
-      margin: 0;
-      font-weight: 700;
-      color: white;
-      font-size: 24px;
-      text-transform: uppercase;
-    }
-  }
   .selvbetjening-links {
     display: flex;
     flex-direction: column;
@@ -81,6 +70,11 @@
 
       &:hover {
         text-decoration: underline;
+
+        span i {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
 
       &.hidden-link {
@@ -89,6 +83,9 @@
 
       span i {
         font-size: 24px;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: .3s ease;
       }
     }
   }
@@ -96,12 +93,11 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: flex-end;
+    margin-top: 10px;
     .show-more-btn-selfservice {
       background-color: transparent;
       border: 0;
       width: fit-content;
-      margin-top: 20px;
       color: white;
       font-size: 18px;
       font-weight: 700;

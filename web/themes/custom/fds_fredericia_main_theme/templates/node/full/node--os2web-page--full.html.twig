@@ -38,9 +38,6 @@
     {% if node.field_selvbetjening_btn is not empty %}
       <div class="selvbetjening-labels" style="{% if colorValue == 'red' %} background-color: #e82f4c; {% elseif colorValue == 'blue' %}
       background-color: #00335b; {% elseif colorValue == 'white' %} background-color: white; border: 1px solid black; {% elseif colorValue == "black" %} background-color: #121212; {% else %} background-color: #00335b; {% endif %}">
-        <div class="selvbetjening-btn-header">
-          <h2 style="{% if colorValue == 'white' %} color: #121212; {% endif %}">Selvbejtening</h2>
-        </div>
         <div class="selvbetjening-links">
           {% for item in node.field_selvbetjening_btn %}
             {% if item.entity %}
