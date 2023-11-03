@@ -54,6 +54,7 @@
         "drupal/admin_toolbar": "^3.4",
         "drupal/anonymous_subscriptions": "dev-8.x-1.x",
         "drupal/autologout": "^1.4",
+        "drupal/checklistapi": "^2.1",
         "drupal/ckeditor_balloonpanel": "1.x-dev@dev",
         "drupal/ckeditor_iframe": "^2.1",
         "drupal/ckeditor_resize": "^1.3",
@@ -61,7 +62,7 @@
         "drupal/color": "^1.0",
         "drupal/config_delete": "^1.17",
         "drupal/console": "^1.0.2",
-        "drupal/content_access": "^1.0",
+        "drupal/content_access": "^2.0",
         "drupal/content_moderation_notifications": "^3.6",
         "drupal/cookieinformation": "^2.0",
         "drupal/core-composer-scaffold": "9.5.11",
@@ -71,6 +72,7 @@
         "drupal/ctools": "^3.14",
         "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
+        "drupal/embed": "^1.7",
         "drupal/entity_clone": "^2.0@beta",
         "drupal/entity_update": "^3.0@RC",
         "drupal/fancy_file_delete": "^2.0",
@@ -97,6 +99,7 @@
         "drupal/migrate_skip_on_404": "^1.1",
         "drupal/modules_weight": "^3.0",
         "drupal/monitoring": "^1.9",
+        "drupal/pathauto": "^1.12",
         "drupal/pdf_api": "^2.0",
         "drupal/permissions_filter": "^1.3",
         "drupal/photoswipe": "^3.1",
@@ -109,15 +112,18 @@
         "drupal/redirect_after_login": "^2.7",
         "drupal/save_edit": "^1.6",
         "drupal/scroll_top_button": "^2.0",
+        "drupal/search_api": "^1.30",
+        "drupal/search_api_autocomplete": "^1.8",
         "drupal/search_api_solr": "^4.2.12",
         "drupal/siteimprove": "^1.10",
         "drupal/stage_file_proxy": "^1.0",
         "drupal/textfield_counter": "^2.3",
+        "drupal/token": "^1.13",
         "drupal/upgrade_rector": "^1.0@alpha",
         "drupal/upgrade_status": "^3.5",
         "drupal/video": "^1.5@alpha",
         "drupal/views_local_tasks": "^1.0",
-        "drupal/webform": "^6.1",
+        "drupal/webform": "^6.2",
         "drupal/workbench": "^1.3",
         "drupal/workbench_access": "^1.0@beta",
         "drush/drush": "^9.7.1 | ^10.0.0",
@@ -231,9 +237,6 @@
             "drupal/menu_block" : {
                 "Menu block renders when tree is empty" : "https://www.drupal.org/files/issues/2022-04-29/menu_block_rendered_empty-3271218-17.patch"
             },
-            "drupal/content_access" : {
-                "deprecated php functions " : "https://www.drupal.org/files/issues/2022-07-22/3258804-14.patch"
-            },
             "drupal/facets" : {
                 "Add option to reset other facets on value change" : "https://www.drupal.org/files/issues/2023-01-25/3190289-22-reroll.patch"
             },
@@ -249,9 +252,6 @@
             },
             "drupal/anonymous_subscriptions" : {
                 "fix theme hook subscribe_block not found" : "https://www.drupal.org/files/issues/2023-04-05/3352304-remove-subscribe-block-theme-3.patch"
-            },
-            "drupal/search_api_autocomplete": {
-                "fix missing constant" : "https://www.drupal.org/files/issues/2023-10-01/3382226-22--solr_version_check_bug.patch"
             }
         }
     }
