@@ -63,7 +63,7 @@ body {
   }
 }
 
-.ext {
+svg.ext {
   display: none;
 }
 
@@ -132,13 +132,40 @@ body .page-container {
 }
 
 .background-color--primary {
-  background-color: $color-green-002 !important;
+  background-color: $color-green-002;
 }
 .background-color--secondary {
-  background-color: $color-orange-005 !important;
+  background-color: $color-orange-005;
 }
 .background-color--tertiary {
-  background-color: $color-blue-001 !important;
+
+
+  .box__heading {
+    background-color: rgb(122,159,189);
+    color: black;
+
+    h3 {
+      color: black;
+    }
+  }
+
+  .box__body {
+    background-color: rgb(181,207,228);
+  }
+}
+
+.background-color--transparent {
+  .box__heading {
+    background-color: rgb(217,217,217);
+    color: black;
+
+    h3 {
+      color: black;
+    }
+  }
+  .box__body {
+    background-color: rgb(244,244,244);
+  }
 }
 
 // --------------------------------------------------

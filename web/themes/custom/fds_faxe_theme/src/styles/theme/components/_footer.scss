@@ -64,7 +64,7 @@ footer {
         margin-bottom: 8px;
         font-weight: $font-weight-bold;
         font-size: $h4-font-size;
-        line-height: 2.2rem;
+        line-height: 1.42857;
         color: white !important;
       }
       h3 {
@@ -179,7 +179,7 @@ footer {
             font-size: 2rem;
             display: block;
             color: $color-white;
-            line-height: 2.8rem;
+            line-height: 1.42857;
             &:focus {
               outline: 0;
             }

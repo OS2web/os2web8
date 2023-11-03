@@ -1,10 +1,7 @@
 <?php
 use Drupal\Core\Form\FormStateInterface;
 
-function fds_faxe_theme_form_system_theme_settings_alter(
-  &$form,
-  Drupal\Core\Form\FormStateInterface $form_state
-) {
+function fds_faxe_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;

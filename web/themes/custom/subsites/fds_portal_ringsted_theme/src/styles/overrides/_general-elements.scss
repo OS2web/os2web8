@@ -182,6 +182,9 @@ svg.ext {
                 margin-left: 0;
               }
             }
+            td.forum__topic {
+              width: 60%;
+            }
           }
         }
       }
@@ -365,6 +368,18 @@ svg.ext {
   .file {
     box-shadow: none !important
   }
+}
+
+.field--name-field-os2web-doc-category {
+  display: none !important;
+}
+
+.field--name-field-os2web-doc-subcategory {
+  display: none !important;
+}
+
+.news-more-link {
+  font-size: 1.6rem;
 }
 
 // --------------------------------------------------

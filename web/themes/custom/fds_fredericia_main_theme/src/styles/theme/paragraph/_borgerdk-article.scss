@@ -1,0 +1,143 @@
+// |--------------------------------------------------------------------------
+// | BorgerDK article
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .paragraph--type--os2web-borgerdk-article
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin paragraph--type--os2web-borgerdk-article-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.paragraph--type--os2web-borgerdk-article {
+  margin: 80px 0;
+
+  .field--name-byline {
+    margin-bottom: $grid-gutter-width / 2;
+  }
+  .field--type-os2web-borgerdk-article-reference {
+    .field__item {
+      .accordion {
+        .has-selfservice-links {
+          position: relative;
+
+          .selfservice-links {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+          }
+          .accordion-button {
+            .field--name-title {
+              max-width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.selvbetjening-first:not(:first-child) {
+  display: none;
+}
+
+.selvbetjening-first {
+  background-color: #aabfcf;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+.selvbetjening-borgerdk-link {
+  background-color: $background_color__default;
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+
+  &:hover i {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  span {
+    text-transform: uppercase;
+  }
+  .spotbox__content {
+    .field--name-title {
+      h3 {
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+  i {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: .3s ease;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

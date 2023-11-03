@@ -40,36 +40,33 @@
     font-weight: 700;
     border-radius: 0 !important;
     background-image: none !important;
-    background-color: $gray-primary;
+    background-color: #f1f1f1;
     color: $color-black;
     &:after {
       display: flex;
       position: absolute;
-  
+
       align-items: center;
       justify-content: center;
-  
+
       padding-top: 2px;
-  
+
       top: 50%;
       transform: translateY(-50%);
       right: 20px;
-  
+
       width: 26px;
       height: 26px;
-  
+
       font-size: 1rem;
       font-family: FontAwesome;
-  
+
       content: $fa-var-plus;
-  
-      color: $color-black;      
+
+      color: $color-black;
       background-color: $color-white;
-  
+
       border-radius: 25px;
-    }
-    &:focus {
-      outline: 0;
     }
     &[aria-expanded="true"] { //accordion button is open
       background-color: $background_color__default;
@@ -80,7 +77,7 @@
       }
     }
   }
-  
+
   .accordion-content {
     border: 1px solid $gray-helper;
     border-top: 0;
@@ -92,7 +89,7 @@
       color: $color-black;
     }
     .field {
-  
+
       + .field--name-field-os2web-hearings-reply-docs {
         margin-top: $grid-gutter-width / 2;
       }
@@ -163,7 +160,11 @@
 @include media-breakpoint-up(xl) {}
 
 // Print
-@media print {}
+@media print {
+  .accordion-content {
+    display: block !important;
+  }
+}
 
 // Touch
 .touchevents {}

@@ -4,7 +4,11 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   paragraph.isPublished() ? null : 'paragraph--unpublished'
 ] %}
+
+{% if content['news_count'] > 0 %}
+
 {% block paragraph %}
+
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 
@@ -13,6 +17,7 @@
       </div>
 
       {{ content | without('field_os2web_news_block_header', 'field_os2web_news_details_link') }}
+
       {% if content.field_os2web_news_details_link %}
         <div class="preheader">
           {{ content.field_os2web_news_details_link }}
@@ -20,4 +25,7 @@
       {% endif %}
     {% endblock %}
   </div>
+
 {% endblock paragraph %}
+
+{% endif %}

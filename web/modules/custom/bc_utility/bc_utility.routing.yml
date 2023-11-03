@@ -1,0 +1,7 @@
+bc_utility_status_messages.settings:
+  path: '/admin/config/development/status-messages'
+  defaults:
+    _form: '\Drupal\bc_utility\Form\StatusMessagesForm'
+    _title: 'Status messages settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -38,11 +38,17 @@ process:
       callable:
         - 'Drupal\byradsportal_d7_migration\Utility\MigrationHelper'
         - getUsernameFromUid
+  body_nl2p:
+    - plugin: callback
+      source: body/0/value
+      callable:
+        - 'Drupal\byradsportal_d7_migration\Utility\MigrationHelper'
+        - textNl2p
   body/value:
       plugin: concat
       source:
         - '@migrate_author_name'
-        - body/0/value
+        - '@body_nl2p'
   body/format:
     plugin: default_value
     default_value: 'wysiwyg_tekst'

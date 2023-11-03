@@ -14,6 +14,7 @@
     align-items: center;
     width: 100%;
     padding: 0 10px;
+    position: relative;
 
     .hamburger {
       border: none;
@@ -54,6 +55,7 @@
 
     .region--header  {
       width: 50%;
+      height: 100%;
 
       @media only screen and (max-width: 1024px) {
         width: 70%;
@@ -76,6 +78,8 @@
 
 
       nav {
+        height: 100%;
+        position: static;
 
         @media only screen and (max-width: 768px) {
           height: 80%;
@@ -86,41 +90,184 @@
           text-transform: uppercase;
           justify-content: space-between;
           align-items: center;
+          height: 100%;
 
           @media only screen and (max-width: 768px) {
             flex-direction: column;
             align-items: flex-start;
           }
 
-          li {
-            position: relative;
-            display: inline-block;
+          .digital {
+            position: static;
 
-            .menu-children {
-              display: none;
+            &:hover ul {
+              visibility: visible;
+              transition-delay: 0s;
+              opacity: 1;
+              transform: translateY(0);
+            }
+            ul {
               position: absolute;
               background-color: white;
-              border-radius: 10px;
-              box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-              flex-direction: column;
-              top: 58px;
-              right: 0;
+              top: 94px;
+              width: 100%;
+              height: auto;
+              display: flex;
               align-items: flex-start;
-              padding: 30px;
-              gap: 10px;
+              flex-direction: column;
+              border-radius: 10px;
+              left: 0;
+              gap: 45px;
+              visibility: hidden;
+              transform: translateY(-10px);
+              opacity: 0;
+              transition: 0.2s 0.2s;
+            }
+          }
 
+          .services {
+            position: relative;
+
+            &:hover ul {
+              visibility: visible;
+              opacity: 1;
+              transition-delay: 0s;
+              transform: translateY(0);
+            }
+            &:focus ul {
+              visibility: visible;
+              opacity: 1;
+              transition-delay: 0s;
+              transform: translateY(0);
+            }
+            ul {
+              position: absolute;
+              background-color: white;
+              top: 100px;
+              width: 400px;
+              height: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 10px 10px 45px 10px;
+              border-radius: 10px;
+              right: 0;
+              gap: 45px;
+              visibility: hidden;
+              transform: translateY(-10px);
+              opacity: 0;
+              transition: 0.2s 0.2s;
+
+            &:after {
+              content: '';
+              position: absolute;
+              background-color: white;
+              width: 8px;
+              height: 8px;
+              transform: rotate(45deg);
+              top: -4px;
+              right: 9%;
+            }
+
+              li {
+                width: 100%;
+                height: 100%;
+                a {
+                  width: 95%;
+                  margin: 0 auto;
+                  font-weight: 500;
+                  font-size: 16px;
+                  text-transform: none;
+                  padding: 10px 10px 0 65px;
+                  border-top-right-radius: 10px;
+                  border-top-left-radius: 10px;
+                  transition: 0.3s ease;
+                  &:hover {
+                    background-color: #f5f5f5;
+
+                    &:after {
+                      background-color: #f5f5f5;
+                      border-bottom-left-radius: 10px;
+                      border-bottom-right-radius: 10px;
+                    }
+
+                  }
+                  &:after {
+                    content: attr(data-description);
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    color: #7C7C7C;
+                    font-size: 14px;
+                    padding-left: 65px;
+                    text-transform: none;
+                    height: 100%;
+                    bottom: -100%;
+                    transition: 0.3s ease;
+                  }
+
+                }
+                .hosting:before {
+                  content: '';
+                  background-image: url('../images/monitor.svg');
+                  width: 24px;
+                  height: 24px;
+                  background-size: 24px 24px;
+                  background-repeat: no-repeat;
+                  display: block;
+                  position: absolute;
+                  left: 20px;
+                  top: 50%;
+                  z-index: 2;
+                }
+                .support:before {
+                  content: '';
+                  background-image: url('../images/headphone.svg');
+                  width: 24px;
+                  height: 24px;
+                  background-size: 24px 24px;
+                  background-repeat: no-repeat;
+                  display: block;
+                  position: absolute;
+                  left: 20px;
+                  top: 50%;
+                  z-index: 2;
+                }
+                .udvikling:before {
+                  content: '';
+                  background-image: url('../images/directright.svg');
+                  width: 24px;
+                  height: 24px;
+                  background-size: 24px 24px;
+                  background-repeat: no-repeat;
+                  display: block;
+                  position: absolute;
+                  left: 20px;
+                  top: 50%;
+                  z-index: 2;
+                }
+              }
+            }
+          }
+
+          li {
+            height: 115%;
+            display: flex;
+            align-items: center;
+            .contextual-region {
+              position: static;
             }
 
             @media only screen and (max-width: 768px) {
               margin-bottom: 50px;
             }
 
-            &:hover:after {
+            &:hover a:not([data-description]):after {
               transform: scaleX(1);
               transform-origin: bottom left;
             }
 
-            &:after {
+            a:not([data-description]):after {
               content: '';
               position: absolute;
               width: 100%;
@@ -131,6 +278,11 @@
               transform-origin: bottom right;
               transition: transform 0.25s ease-out;
               background-color: black;
+            }
+
+            a {
+              position: relative;
+              display: inline-block;
             }
           }
         }

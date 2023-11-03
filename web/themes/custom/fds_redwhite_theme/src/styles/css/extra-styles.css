@@ -367,12 +367,9 @@ body.path-frontpage .region-featured-bottom-first {
   color: var(--primary);
   padding-left: 10px;
 }
-.field--type-text-long h2 {
-  font-size: 3rem;
-  margin: 0;
-}
+
 .field--type-text-long h2 + p {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /*FRONT-NYHEDER*/
@@ -437,7 +434,6 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12:last-of-type {
   left: 0;
 }
 .view-os2web-page-content h2 {
-  margin: 0;
   font-weight: 400;
   font-size: 3rem;
 }
@@ -688,7 +684,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   text-decoration: none;
 }
 .view-display-id-embed_3 .entity-default--os2web-simple-text-paragraph h2 {
-  margin: 0;
+  margin: 0 0 13px 0;
   font-weight: 400;
   font-size: 3rem;
 }
@@ -1151,7 +1147,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 .node__content > .field > .field__item h2 {
   font-size: 32px;
-  margin: 0 0 30px;
+  margin: 30px 0 13px 0!important;
   line-height: normal;
 }
 .node__content > .field > .field__item h3 {

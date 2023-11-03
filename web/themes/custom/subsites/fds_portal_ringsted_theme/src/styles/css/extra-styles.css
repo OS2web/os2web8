@@ -28,7 +28,6 @@
 .field--name-field-os2web-news-intro {
   font-size: 1.8rem;
   /* line-height: 1.3em; */
-  margin: 30px 0 40px;
 }
 .field--name-field-os2web-page-intro p,
 .field--name-field-os2web-hearings-intro p,
@@ -128,28 +127,6 @@
 
 
 
-div.field--name-field-os2web-page-description div.field__item > span.file {
-  background-color: inherit;
-  border: none;
-  padding: 4px;
-}
-
-div.field--name-field-os2web-page-description div.field__item > span.file a {
-  padding-left: unset;
-  padding-right: unset;
-  display: inline-block;
-  font-size: inherit;
-  border-bottom: 1px dotted var(--dark-gray1);
-  line-height: 1.05;
-}
-div.field--name-field-os2web-page-description p + .embedded-entity .file {
-  padding: 0 !important;
-  margin:0 !important;
-}
-div.field--name-field-os2web-page-description .embedded-entity + .embedded-entity .file {
-  margin-top: 1rem;
-}
-
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".odt"]::before,
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".ppt"]::before,
 div.field--name-field-os2web-page-description div.field__item span.file a[href$=".pptx"]::before,
@@ -219,11 +196,11 @@ div.field--name-field-os2web-page-description table a span.file {
   position: relative;
   display: block;
   word-break: break-word;
-  padding: 0 30px;
+  padding: 0;
   height: auto;
   max-width: 100%;
   font-weight: normal;
-  font-size: 2.3rem;
+  font-size: 1.6rem;
   color: var(--primary);
   text-decoration: none;
   border-bottom: none;

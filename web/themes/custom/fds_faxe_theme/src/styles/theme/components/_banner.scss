@@ -274,7 +274,7 @@
   h2 {
     font-size: 2.5rem;
     color: $color-white;
-    line-height: 2.7rem;
+    line-height: 1.42857;
     @include media-breakpoint-up(md) {
       font-size: 5rem;
       line-height: 5rem;
@@ -284,7 +284,7 @@
 .field--name-field-os2web-banner-text-sub {
   font-size: 1.9rem;
   color: $color-white;
-  line-height: 2.2rem;
+  line-height: 1.42857;
   strong {
     color: $color-white;
   }
@@ -307,7 +307,7 @@
 .field--name-field-os2web-banner-subheading {
   font-size: 1.9rem;
   color: $color-white;
-  line-height: 2.2rem;
+  line-height: 1.42857;
   strong {
     color: $color-white;
   }

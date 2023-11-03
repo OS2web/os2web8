@@ -1,0 +1,26 @@
+{% set modalId = 'modal-' ~ random() %}
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="field__items">
+    {% for item in items %}
+      {% set imageUrl = file_url(item.content['#item'].entity.uri.value) %}
+      {% set caption = item.content['#item'].alt %}
+      <a href="{{ imageUrl }}" data-fancybox="gallery" data-caption="{{ caption }}" class="fancy-slide">
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      </a>    {% endfor %}
+  </div>
+</div>

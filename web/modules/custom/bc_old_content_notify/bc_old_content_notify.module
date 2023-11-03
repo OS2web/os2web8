@@ -1,0 +1,7 @@
+<?php
+
+function bc_old_content_notify_cron() {
+
+  \Drupal\bc_old_content_notify\Controller\OldContentNofity::handler();
+
+}

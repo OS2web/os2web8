@@ -5,6 +5,11 @@ use Drupal\bc_utility\Plugin\Widgets\LinkWidgetValidators;
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\search_api\Query\QueryInterface;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Session\AccountInterface;
+
+
 
 /**
  * @file
@@ -12,23 +17,8 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function bc_utility_cron()
 {
-  $run = FALSE;
-  $last_start = \Drupal::keyValue('bc_utility_cron')->get('last_start');
-  if (empty($last_start)) {
-    $run = TRUE;
-  } else {
-    $oneMonthAgoTs = strtotime("-1 months");
-    // If last run was 30 day ago or more.
-    if ($last_start <= $oneMonthAgoTs) {
-      $run = TRUE;
-    }
-  }
 
-  if ($run) {
-    Drupal::logger('bc_utility')->info("bc utility cron run");
-    \Drupal::keyValue('bc_utility_cron')->set('last_start', time());
-    OldContentNotity::handler();
-  }
+
 }
 
 function bc_utility_mail($key, &$message, $params)
@@ -71,3 +61,72 @@ function bc_utility_field_widget_single_element_form_alter(array &$element, Form
     $element['uri']['#element_validate'] = [[LinkWidgetValidators::class, 'validateUriElement']];
   }
 }
+
+
+function bc_utility_search_api_query_alter(QueryInterface &$query)
+{
+  $index = $query->getIndex();
+
+  if (!empty($index)) {
+    $server = $index->get('server');
+  }
+
+  if (empty($index) || empty($server)) {
+    return;
+  }
+
+  $originalKeys = $query->getOriginalKeys() ?? '';
+  $lowerOriginalKeys = mb_strtolower($originalKeys);
+  $keywords = trim($lowerOriginalKeys);
+
+  if (!empty($keywords)) {
+    if (!preg_match('/^[a-zA-Z0-9\s-]+$/', $keywords) || strlen($keywords) < 3 || strlen($keywords) > 30) {
+        $query->keys("");
+    }
+  }
+
+}
+
+/**
+ * Convert user name to full name on ringsted portal
+ *
+ * @param $name
+ * @param \Drupal\Core\Session\AccountInterface $account
+ *
+ * @return void
+ */
+function bc_utility_user_format_name_alter(&$name, AccountInterface $account) {
+  $teamName = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  if ($teamName == 'fds_portal_ringsted_theme') {
+    if (!empty($account->field_full_name) && !empty($account->field_full_name->value)) {
+      $name = $account->field_full_name->value;
+    }
+  }
+}
+
+function bc_utility_preprocess_status_messages(&$variables) {
+
+  if (isset($variables['message_list'])) {
+
+    $config = \Drupal::config('bc_utility_status_messages.settings');
+
+    if (isset($variables['message_list']['status']) && $config->get('status')) {
+      unset( $variables['message_list']['status'] );
+    }
+
+    if (isset($variables['message_list']['warning']) && $config->get('warning')) {
+      unset( $variables['message_list']['warning'] );
+    }
+
+    if (isset($variables['message_list']['error'])  && $config->get('error')) {
+      unset( $variables['message_list']['error'] );
+    }
+
+  }
+}
+
+// kontekstuelle filtre
+// We pass the user ID as the Entity ID.
+
+// Forbindelser
+// OG membership: Group Indholdselement from OG membership

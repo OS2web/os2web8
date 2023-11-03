@@ -282,4 +282,43 @@ class MigrationHelper {
     return "Oprettet af: $name<br/><br/>";
   }
 
+  /**
+   * Converts texts new lines to p tags.
+   *
+   * @param $string
+   *   Text with new lines.
+   *
+   * @return string
+   *
+   */
+  static function textNl2p($string) {
+    $line_breaks = TRUE;
+    $xml = TRUE;
+
+    $string = str_replace(['<p>', '</p>', '<br>', '<br />'], '', $string);
+
+    // It is conceivable that people might still want single line-breaks
+    // without breaking into a new paragraph.
+    if ($line_breaks == TRUE) {
+      return '<p>' . preg_replace([
+          "/([\n]{2,})/i",
+          "/([^>])\n([^<])/i",
+        ], [
+          "</p>\n<p>",
+          '$1<br' . ($xml == TRUE ? ' /' : '') . '>$2',
+        ], trim($string)) . '</p>';
+    }
+    else {
+      return '<p>' . preg_replace(
+          ["/([\n]{2,})/i", "/([\r\n]{3,})/i", "/([^>])\n([^<])/i"],
+          [
+            "</p>\n<p>",
+            "</p>\n<p>",
+            '$1<br' . ($xml == TRUE ? ' /' : '') . '>$2',
+          ],
+
+          trim($string)) . '</p>';
+    }
+  }
+
 }

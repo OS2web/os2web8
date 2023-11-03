@@ -86,6 +86,7 @@
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
   {% endif %}
+
   {{ title_suffix }}
 
   {% if display_submitted %}
@@ -98,8 +99,18 @@
     </footer>
   {% endif %}
 
+
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    <h2>{{ node.title.value }}</h2>
+    <span>
+      {{  node.field_os2web_event_start_date.value|date('l')|trans }}
+      {{ node.field_os2web_event_start_date.value|date('j') }}.
+      {{ node.field_os2web_event_start_date.value|date('F')|trans }}
+      {{ node.field_os2web_event_start_date.value|date('Y') }},
+      {{ 'kl.'|trans }} {{ node.field_os2web_event_start_date.value|date('H:i') }} -
+      {{ node.field_os2web_event_end_date.value|date('H:i') }}
+    </span>
+    {{ node.body.value|raw }}
   </div>
 
 </article>

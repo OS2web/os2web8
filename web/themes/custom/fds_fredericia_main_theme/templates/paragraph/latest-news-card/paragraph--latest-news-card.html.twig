@@ -1,0 +1,60 @@
+<div class="latest-news-display">
+  <div class="container">
+    <div class="news-title-wrapper">
+      <h2>Nyheder</h2>
+      <div class="see-all-news-btn">
+        <a href="/nyheder">Se flere nyheder</a>
+      </div>
+    </div>
+  <div class="latest-news-innerwrapper swiper-container">
+    <div class="swiper-wrapper">
+  {% for article in latest_news_articles %}
+    <div class="news-card swiper-slide">
+      <a href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}" class="news-image-wrapper">
+        {% if article.field_os2web_news_primaryimage.entity.fileuri %}
+          <img src="{{ file_url(article.field_os2web_news_primaryimage.entity.fileuri) }}" alt="{{ article.field_os2web_news_primaryimage.alt }}">
+        {% else %}
+          <img src="{{ placeholder_image_url }}" alt="Default placeholder image">
+
+        {% endif %}
+
+      </a>
+      <div class="news-content-wrapper">
+        <span class="news-date">{{ article.created.value|date('F j, Y') }}</span>
+        <a class="news-heading-link" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}"><h3 class="news-heading">{{ article.field_os2web_news_heading.value }}</h3></a>
+        <p class="news-intro">
+          {{ article.field_os2web_news_intro.value|length > 200 ? article.field_os2web_news_intro.value|slice(0, 150) ~ '...' : article.field_os2web_news_intro.value }}
+        </p>
+        <a class="news-readmore" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}">Læs mere</a>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      slidesPerView: 1,
+      spaceBetween: 10,
+      // Responsive breakpoints
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 25
+        }
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
+

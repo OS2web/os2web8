@@ -72,14 +72,10 @@
 
 {% if not is_front %}
   <div class="section section--breadcrumb-bar d-print-none layout--hidden-on-sections">
-    <div class="">
-      <div class="flexy-row">
-        {{ page.breadcrumb }}
+         <div class="container breadcrumb-container">
+           {{ page.breadcrumb }}
+           {% include '@fds_faxe_theme/includes/action-buttons.html.twig' %}
+         </div>
 
-        <div class="flexy-spacer"></div>
-
-        {% include '@fds_faxe_theme/includes/action-buttons.html.twig' %}
-      </div>
-    </div>
   </div>
 {% endif %}

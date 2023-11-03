@@ -14,6 +14,7 @@ regions:
   header__main_navigation: 'Header - main navigation'
   banner_search: 'Banner search'
   small_search: 'Small search'
+  alert: 'Alert'
   highlighted: Highlighted
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb

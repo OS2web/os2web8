@@ -22,6 +22,7 @@
 
 .action-buttons {
 
+  display: flex !important;
   .flexy-list {
 
     > * {
@@ -74,7 +75,7 @@ html[style*="font-size: 20px"] .js-increase-font-size
     @supports not (hyphens: auto) {
       word-break: break-all;
     }
-    
+
   }
 }
 

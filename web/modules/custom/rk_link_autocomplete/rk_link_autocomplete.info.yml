@@ -1,0 +1,9 @@
+name: 'RK Link Autocomplete'
+type: module
+description: 'Hides specific content types from the link autocomplete'
+core_version_requirement: ^8 || ^9
+package: Custom
+dependencies:
+  - drupal:views
+version: "1.0"
+project: "rk_link_autocomplete"

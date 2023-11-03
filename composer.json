@@ -51,7 +51,10 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal/access_latest": "^0.0.1",
         "drupal/admin_audit_trail": "^1.0",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/anonymous_subscriptions": "dev-8.x-1.x",
+        "drupal/autologout": "^1.4",
+        "drupal/checklistapi": "^2.1",
         "drupal/ckeditor_balloonpanel": "1.x-dev@dev",
         "drupal/ckeditor_iframe": "^2.1",
         "drupal/ckeditor_resize": "^1.3",
@@ -59,16 +62,21 @@
         "drupal/color": "^1.0",
         "drupal/config_delete": "^1.17",
         "drupal/console": "^1.0.2",
-        "drupal/content_access": "^1.0",
-        "drupal/content_moderation_notifications": "^3.3",
-        "drupal/core-composer-scaffold": "~9.5.1",
-        "drupal/core-project-message": "~9.5.1",
-        "drupal/core-recommended": "~9.5.1",
+        "drupal/content_access": "^2.0",
+        "drupal/content_moderation_notifications": "^3.6",
+        "drupal/cookieinformation": "^2.0",
+        "drupal/core-composer-scaffold": "9.5.11",
+        "drupal/core-project-message": "9.5.11",
+        "drupal/core-recommended": "9.5.11",
         "drupal/csv_importer": "^1.12",
+        "drupal/ctools": "^3.14",
         "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
+        "drupal/embed": "^1.7",
         "drupal/entity_clone": "^2.0@beta",
+        "drupal/entity_update": "^3.0@RC",
         "drupal/fancy_file_delete": "^2.0",
+        "drupal/feeds": "^3.0@beta",
         "drupal/file_management": "1.x-dev@dev",
         "drupal/flood_control": "^2.2",
         "drupal/form_options_attributes": "^1.2",
@@ -87,8 +95,11 @@
         "drupal/menu_block": "^1.8",
         "drupal/menu_breadcrumb": "^1.16",
         "drupal/menu_link_attributes": "^1.3",
-        "drupal/modules_weight": "^1.9",
+        "drupal/metatag": "^1.26",
+        "drupal/migrate_skip_on_404": "^1.1",
+        "drupal/modules_weight": "^3.0",
         "drupal/monitoring": "^1.9",
+        "drupal/pathauto": "^1.12",
         "drupal/pdf_api": "^2.0",
         "drupal/permissions_filter": "^1.3",
         "drupal/photoswipe": "^3.1",
@@ -96,14 +107,23 @@
         "drupal/queue_mail": "^1.4",
         "drupal/queue_ui": "^3.1",
         "drupal/quick_node_clone": "^1.14",
+        "drupal/quicktabs": "^3.0@alpha",
+        "drupal/redirect": "^1.9",
         "drupal/redirect_after_login": "^2.7",
+        "drupal/save_edit": "^1.6",
+        "drupal/scroll_top_button": "^2.0",
+        "drupal/search_api": "^1.30",
+        "drupal/search_api_autocomplete": "^1.8",
+        "drupal/search_api_solr": "^4.2.12",
         "drupal/siteimprove": "^1.10",
         "drupal/stage_file_proxy": "^1.0",
+        "drupal/textfield_counter": "^2.3",
+        "drupal/token": "^1.13",
         "drupal/upgrade_rector": "^1.0@alpha",
         "drupal/upgrade_status": "^3.5",
         "drupal/video": "^1.5@alpha",
         "drupal/views_local_tasks": "^1.0",
-        "drupal/webform": "^6.1",
+        "drupal/webform": "^6.2",
         "drupal/workbench": "^1.3",
         "drupal/workbench_access": "^1.0@beta",
         "drush/drush": "^9.7.1 | ^10.0.0",
@@ -195,10 +215,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/textfield_counter" : {
-                "Fix scrolltop prevent" :  "./patches/textfield_counter-scrolltop-fix.patch",
-                "fix static call" : "./patches/3272128-9.patch"
-            },
             "drupal/field_group" : {
                 "HTML5 Validation Prevents Submission in Tabs" : "https://www.drupal.org/files/issues/2019-10-04/field_group-HTML5_validation_prevents_submission_in_tabs-2969051-9.patch"
             },
@@ -221,19 +237,21 @@
             "drupal/menu_block" : {
                 "Menu block renders when tree is empty" : "https://www.drupal.org/files/issues/2022-04-29/menu_block_rendered_empty-3271218-17.patch"
             },
-            "drupal/content_access" : {
-                "deprecated php functions " : "https://www.drupal.org/files/issues/2022-07-22/3258804-14.patch"
-            },
             "drupal/facets" : {
                 "Add option to reset other facets on value change" : "https://www.drupal.org/files/issues/2023-01-25/3190289-22-reroll.patch"
             },
             "drupal/forum_notifications_subscription" : {
                 "Error sending email, subscribe button is not displayed correctly" : "https://www.drupal.org/files/issues/2023-02-22/forum_notifications_subscription.patch",
-                "Warning on user form submission when no forums or topics subscribed to" : "https://www.drupal.org/files/issues/2023-04-14/prevent-foreach.patch",
                 "Anonym user subscription prevention": "./patches/forum_notifications_subscription-anonym-user-subscription.diff"
             },
 	        "drupal/color" :  {
 		        "fix color php8 issues " : "./patches/20230320-color-php8.patch"
+            },
+            "drupal/popular_search_keywords" : {
+                "fix deprecated mbstrtolower" : "https://www.drupal.org/files/issues/2023-02-17/deprecated-mbstrtolower-3342692.patch"
+            },
+            "drupal/anonymous_subscriptions" : {
+                "fix theme hook subscribe_block not found" : "https://www.drupal.org/files/issues/2023-04-05/3352304-remove-subscribe-block-theme-3.patch"
             }
         }
     }

@@ -1,0 +1,12 @@
+name: 'Bellcom old content notify'
+type: module
+description: 'Bellcom send old content notify if node has forældet status'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Bellcom'
+dependencies:
+  - bc_basic
+  - drupal:config
+project: 'bc_old_content_nofity'
+'interface translation project': 'bc_old_content_notify'
+'interface translation server pattern': modules/custom/bc_old_content_notify/translations/bc_old_content_notify-da.po

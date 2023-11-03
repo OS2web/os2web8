@@ -1,0 +1,31 @@
+id: fk_d7_paragraph_accordion_items
+label: Fredericiakommune D7 Paragraph Accordion Items
+migration_tags:
+  - 'Drupal 7'
+migration_group: fk_d7
+source:
+  plugin: d7_field_collection_item
+  bundle: field_os2web_paragraphs
+  track_changes: true
+process:
+  field_os2web_accordion_item_head: field_os2web_paragraph_title
+  migrate_paragraph_simple_text:
+    plugin: migration_lookup
+    migration:
+      - fk_d7_paragraph_simple_text
+    source: item_id
+    no_stub: true
+  field_os2web_accordion_item_ref:
+    plugin: sub_process
+    source:
+      - '@migrate_paragraph_simple_text'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: os2web_accordion_item
+migration_dependencies:
+  required: {}
+  optional:
+    - fk_d7_paragraph_simple_text

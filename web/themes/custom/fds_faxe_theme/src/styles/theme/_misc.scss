@@ -34,12 +34,18 @@ body .container-fluid {
   }
 }
 
+.sidebar-column {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 
 .layout-content {
-  background-color: $color-white;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 0;
+  padding-bottom: 10px;
+  background-color: #fff;
   @include media-breakpoint-up(md) {
     padding-left: 20px;
     padding-right: 20px;
@@ -121,7 +127,7 @@ body a {
 //}
 
 .region-content {
-  padding-bottom: 40px;
+  margin: 50px 0;
 }
 
 svg.mailto {
@@ -195,7 +201,7 @@ body .page-container {
       border: none;
       & > a {
         padding: 25px 40px;
-        font-size: 2rem;
+        font-size: 1.8rem;
         position: relative;
         display: block;
         color: #000;
@@ -276,18 +282,16 @@ body .page-container {
     }
     .field--name-field-link-til-andet-indhold,
     .field--name-field-ext-links {
-      padding: 0 10px 30px 10px;
-      @include media-breakpoint-up(md) {
-        padding: 0 40px 30px;
-      }
+      padding: 0;
       a {
-        padding: 25px 15px;
-        font-size: 2rem;
+        padding: 25px 15px 25px 40px;
+        font-size: 1.8rem;
         position: relative;
         display: block;
         color: $color-black;
         transition: all 0.3s ease;
         text-decoration: none;
+        width: 100%;
         &:before {
           background-color: $background_color__primary;
           color: $color-white;
@@ -420,6 +424,7 @@ body .page-container {
 
 .layout-sidebar-left,
 .layout-sidebar-right {
+  margin: 50px 0;
 
   h1, h2, h3, h4, h5, h6 {
 
@@ -444,12 +449,14 @@ body .page-container {
 .layout-sidebar-right,
 // .layout-content
 {
-  padding-top: $grid-gutter-width;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .layout-sidebar-right {
-  padding-top: 10px;
+  padding-top: 0;
   @include media($sm) {
-    padding-top: $grid-gutter-width;
+    padding-top: 0;
   };
 }
 .layout-content.entity-teaser--os2web-event-wrapper {
@@ -647,14 +654,40 @@ a:not([class]) {
     color: inherit;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 1.1;
+    line-height: 1.42857;
   }
+}
+
+p, .manchet {
+  line-height: 1.42857 !important;
 }
 
 
 .caption figcaption {
   font-size: 0.8em !important;
 }
+
+#block-fds-faxe-theme-indholdfield {
+  h2 {
+    font-size: 2.4rem;
+    color: #00789e;
+    font-weight: 400;
+    position: relative;
+    padding: 40px;
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

@@ -10,30 +10,10 @@
 <!DOCTYPE html>
 <html {{ html_attributes }}>
   <head>
-    <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" type="text/javascript"></script>
-    <head-placeholder token="{{ placeholder_token|raw }}">
+    <head-placeholder token="{{ placeholder_token|raw }}"></head-placeholder>
     <title>{{ head_title|safe_join(' | ') }}</title>
-    <css-placeholder token="{{ placeholder_token|raw }}">
-    <js-placeholder token="{{ placeholder_token|raw }}">
-      <script type="text/javascript">
-        window._monsido = window._monsido || {
-          token: "SIVyjaDAw39OpmqGPSw3yg",
-          statistics: {
-            enabled: true,
-            cookieLessTracking: true,
-            documentTracking: {
-              enabled: false,
-              documentCls: "monsido_download",
-              documentIgnoreCls: "monsido_ignore_download",
-              documentExt: [],
-            },
-          },
-          pageCorrect: {
-            enabled: true,
-          },
-        };
-      </script>
-      <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+      <css-placeholder token="{{ placeholder_token|raw }}"></css-placeholder>
+      <js-placeholder token="{{ placeholder_token|raw }}"></js-placeholder>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable skip-link">

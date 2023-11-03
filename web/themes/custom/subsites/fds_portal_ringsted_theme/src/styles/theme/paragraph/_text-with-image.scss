@@ -33,7 +33,6 @@
   .field--name-field-os2web-twi-subheading {}
   .field--name-field-os2web-twi-body {}
   .field--name-field-os2web-twi-link {
-    margin-left: -10px;
   }
   .field--name-field-os2web-twi-image {}
 
@@ -67,8 +66,67 @@
   }
 }
 
+.paragraph--type--os2web-twm-paragraph {
+
+  .field--name-field-os2web-twm-heading {
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+
+      color: $color-text;
+    }
+  }
+  .field--name-field-os2web-twm-subheading { font-weight: 600;}
+  .field--name-field-os2web-twm-body {}
+  .field--name-field-os2web-twm-link {
+    color: #c30a32;
+    a {
+      color: #c30a32;
+    }
+  }
+  .field--name-field-os2web-twm-image {}
+
+  .field {
+
+    + .field--name-field-os2web-twm-heading,
+    + .field--name-field-os2web-twm-subheading,
+    + .field--name-field-os2web-twm-body {
+      margin-top: 10px;
+    }
+
+    + .field--name-field-os2web-twm-link {
+      margin-top: 20px;
+    }
+  }
+}
+
+.field--name-field-os2web-twm-heading {
+  background-color: #e3e3e3;
+  padding: 5px;
+  border-bottom: 2px solid #c30a32;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #333;
+  font-family: "Museo 300", sans-serif;
+  h2 {
+    background-color: #e3e3e3;
+    padding: 5px;
+    border-bottom: 2px solid #c30a32;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #333;
+    font-family: "Museo 300", sans-serif;
+  }
+}
+
+.paragraph--type--os2web-twm-paragraph {
+  .row {
+    align-items: flex-start !important
+  }
+}
+
 .text_image_content {
-  padding: 20px 20px 20px 0;
+  padding: 20px;
 }
 
 // --------------------------------------------------
@@ -89,6 +147,12 @@
 @include media-breakpoint-up(sm) {
 
   .paragraph--type--os2web-twi-paragraph {
+
+    .row {
+      align-items: center;
+    }
+  }
+  .paragraph--type--os2web-twm-paragraph {
 
     .row {
       align-items: center;

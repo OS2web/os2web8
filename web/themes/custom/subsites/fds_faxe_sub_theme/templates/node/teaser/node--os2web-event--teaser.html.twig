@@ -8,27 +8,31 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-<a href="{{ node.field_os2web_event_url.value }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Læs mere om' | trans }} {{ node.field_o2web_event_resume.value | raw }}" title="{{ 'Læs mere om' | trans }} {{ node.field_o2web_event_resume.value | raw }}">
+
+{% set link = node.field_os2web_event_url.value | default(url) %}
+<a href="{{ link }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Læs mere om' | trans }} {{ node.field_o2web_event_resume.value | raw }}" title="{{ 'Læs mere om' | trans }} {{ node.field_o2web_event_resume.value | raw }}">
+
   <div class="entity-{{ view_mode|clean_class }}__image">
     {{ content.field_os2web_evnet_image }}
   </div>
 
   <div class="entity-{{ view_mode|clean_class }}__body">
-    <div class="field field--name-field-os2web-event-heading">
-      <h2>{{ label }}</h2>
-    </div>
-    {{ content.field_os2web_event_start_date }}
 
+    <div>
+      <div class="" style="color: white; display: inline-block; max-width: 15%; vertical-align: top; padding: 10px; background-color: #007ca3;">
+        {{ node.field_os2web_event_start_date.value|date("l")|trans }}
+        {{ node.field_os2web_event_start_date.value|date("d") }}. <br>
+        <div style="color: white; display: flex; justify-content: center;">
+          {{ node.field_os2web_event_start_date.value|date("F")|trans }}
+        </div>
+      </div>
 
-    {% set text = content.body | render %}
-    <div class="field field--type-body">
-      {{ text | striptags }}
+      {% set text = content.body | render %}
+      <div class="field field--type-body" style="display: inline-block; max-width: 82%; padding: 0 0 12px 12px;">
+        <h2 style="margin-top: -4px; color: #007ca3;">{{ node.title.value }}</h2>
+        {{ text }}
+      </div>
     </div>
 
-    <div class="field--type-link">
-      <span class="fake-link">
-        Læs mere
-      </span>
-    </div>
   </div>
 </a>

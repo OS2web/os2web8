@@ -1,0 +1,5 @@
+bc_utility_status_messages.settings:
+  title: 'Status messages settings'
+  description: 'Configure status messages.'
+  route_name: bc_utility_status_messages.settings
+  parent: 'system.admin_config_development'

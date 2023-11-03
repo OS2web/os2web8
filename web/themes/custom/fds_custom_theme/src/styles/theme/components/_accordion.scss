@@ -70,8 +70,17 @@
 
 .accordion-content {
   padding: 0.5rem 2.4rem 2rem 2.4rem;
+  display: none;
+  background-color: #fff;
+  &.opened {
+    display: block;
+  }
 
   .field {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     + .field--name-field-os2web-hearings-reply-docs {
       margin-top: $grid-gutter-width / 2;

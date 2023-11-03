@@ -6,6 +6,12 @@
 @import "overrides/loader";
 @import "theme/loader";
 
+* {
+  font-family: "Lato", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 .embedded-entity {
   line-height: 0 !important;
 }

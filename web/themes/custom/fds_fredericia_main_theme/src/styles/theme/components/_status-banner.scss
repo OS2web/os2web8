@@ -1,0 +1,58 @@
+.status-banner-open-btn-wrapper {
+  position: relative;
+  .status-banner-open-btn {
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    transition: .4s ease;
+    top: 5px;
+    background-color: $background_color__default;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border-radius: 6px;
+
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+.status-banner {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 10px 0;
+  transition: .4s ease;
+
+  .container {
+    position: relative;
+    .status-banner-heading {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      max-width: 95%;
+    }
+    .status-banner-close-btn {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      border: none;
+      background-color: transparent;
+    }
+    .status-banner-body {
+      p, h1, h2, h3, h4, h5, h6, span {
+        margin-bottom: 0;
+      }
+    }
+    .white-text {
+      p {
+        color: white !important;
+      }
+    }
+  }
+}

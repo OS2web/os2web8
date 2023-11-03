@@ -1,5 +1,9 @@
 .layout-content.node--type-os2web-event-wrapper {
-    padding-top: 40px;
+    padding: 0;
+
+  .region-content {
+    padding: 0;
+  }
 }
 .node--type-os2web-event {
   .field--name-field-os2web-evnet-image {
@@ -10,5 +14,14 @@
   }
   .field--type-datetime {
     display: inline;
+  }
+  .node__content {
+    padding: 30px;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
   }
 }

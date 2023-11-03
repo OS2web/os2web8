@@ -1,0 +1,341 @@
+// |--------------------------------------------------------------------------
+// | Searchy
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .searchy
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin searchy-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+
+.page-search-container {
+  #main-content {
+    main {
+      .region-content {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .views-exposed-form {
+          .upper-search-wrapper {
+            padding: 60px 0 50px 0;
+            background-color: #00335b;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+
+            .search-form-button-wrapper {
+              display: flex;
+              max-width: 1400px;
+              width: 100%;
+              gap: 20px;
+
+              .search-close-btn {
+                background-color: transparent;
+                border: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+
+                i {
+                  background-color: white;
+                  width: 45px;
+                  height: 45px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 24px;
+                  border-radius: 50%;
+                  color: #00335b;
+                }
+
+                span {
+                  color: white;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  font-size: 16px;
+                }
+              }
+
+              form {
+                max-width: 1400px;
+                width: 100%;
+                padding: 0 15px;
+
+                .form--inline {
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  background-color: white;
+
+                  .form-item {
+                    width: 100%;
+                    margin: 0;
+
+                    .search-input__input {
+                      height: 75px;
+                      border-radius: 0;
+                      padding: 0 0 0 20px;
+                      border: 0;
+                      width: 100%;
+                      margin: 0;
+                    }
+                  }
+
+                  .form-actions {
+                    position: absolute;
+                    right: 20px;
+                    margin: 0;
+
+                    input {
+                      background-color: transparent;
+                      border: 0;
+                      width: 50px;
+                    }
+
+                    &:after {
+                      content: '\f002';
+                      font-family: "FontAwesome";
+                      position: absolute;
+                      color: #00335b;
+                      display: block;
+                      top: 50%;
+                      transform: translateY(-50%) translateX(-50%);
+                      left: 50%;
+                      pointer-events: none;
+                    }
+                  }
+                }
+              }
+            }
+            .block-facets {
+              max-width: 1400px;
+              margin: 0 auto;
+              width: 100%;
+              padding: 0 15px;
+              display:flex;
+              align-items: center;
+              gap: 15px;
+
+              @media only screen and (max-width: 400px) {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              h2 {
+                margin: 0;
+                color: white;
+                font-weight: 700;
+                font-size: 18px;
+              }
+
+              .facets-widget-links {
+                ul {
+                  display: flex;
+                  margin: 0;
+                  gap: 20px;
+
+                  .facet-item {
+                    color: white;
+                    margin: 0;
+
+                    a {
+                      color: white;
+
+                      &:hover {
+                        text-decoration: underline;
+                      }
+
+                      &.is-active {
+                        text-decoration: none;
+                        font-weight: bold;
+                      }
+
+                      .facet-item__status {
+                        display: none;
+                      }
+                    }
+
+                  }
+
+
+                }
+
+              }
+
+            }
+          }
+        }
+        .block-system-main-block {
+          max-width: 1200px;
+          margin: 50px auto;
+
+          .views-element-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+
+            .view {
+              .view-content {
+
+                .views-row {
+                  box-shadow: 0 2px 20px rgba(0,0,0,.16078);
+
+                   a {
+                     margin: 0;
+                   }
+
+                }
+
+              }
+
+            }
+
+          }
+
+
+        }
+
+      }
+    }
+  }
+}
+
+
+.view-os2web-search {
+  padding-bottom: 50px;
+  .view-header {
+    background-color: #dee2e6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    color: #000;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      a {
+        background-color: $background_color__primary;
+        padding: 10px 20px;
+        flex-grow: 1;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: .3s ease;
+
+        &:hover {
+          background-color: #bf263e;
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .view-empty {
+    padding: 50px 0;
+  }
+}
+
+#block-fds-fredericia-main-theme-sitemap-link {
+  .field__item {
+    p {
+      display: flex;
+
+      .sidebar-selvbetjening-button {
+        background-color: $background_color__primary;
+        padding: 10px 20px;
+        flex-grow: 1;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: .3s ease;
+
+        &:hover {
+          background-color: #bf263e;
+        }
+
+        &:after {
+          content: '\f061';
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: "FontAwesome";
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
