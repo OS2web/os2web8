@@ -10,7 +10,7 @@ use Drupal\media\Entity\Media;
 
 class MigrationHelper {
 
-  public static $siteUrl = '/var/www/web';
+  public static $siteUrl = '/var/www/portal.devel.dk/web';
   public static $fileFolderPath = 'default';
 
   /**
