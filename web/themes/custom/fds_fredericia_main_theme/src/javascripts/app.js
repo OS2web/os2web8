@@ -603,8 +603,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+
 (function ($, Drupal) {
-  Drupal.behaviors.myCustomBehavior = {
+  Drupal.behaviors.myFooterBehaviour = {
     attach: function (context, settings) {
       $('body', context).once('footerToggle').each(function () {
         if ($(this).has('footer.footer-alternativ-wrapper').length) {
@@ -614,3 +615,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 })(jQuery, Drupal);
+
+(function ($, Drupal) {
+  Drupal.behaviors.showDefaultBannerBehavior = {
+    attach: function (context, settings) {
+      $('body', context).once('bannerToggle').each(function () {
+        if (!$(this).has('#block-fds-fredericia-main-theme-paragraph-banner').length &&
+          !$(this).has('#block-fds-fredericia-main-theme-os2web-search-os2web-search-page-banner-search').length) {
+          $('.default-banner-wrapper').css('display', 'block');
+        }
+      });
+    }
+  };
+})(jQuery, Drupal);
+
