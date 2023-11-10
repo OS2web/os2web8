@@ -21000,12 +21000,17 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
      object-fit: cover;
 }
 .paragraph-50-50-wrapper .text-side {
-  padding: 20px;
+  padding: 20px 60px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .paragraph-50-50-wrapper .text-side {
+    padding: 20px;
+  }
 }
 .paragraph-50-50-wrapper .text-side h2, .paragraph-50-50-wrapper .text-side p {
   margin: 0;

@@ -30,9 +30,13 @@
 
   // Styling for the text side
   .text-side {
-    padding: 20px; // Adjust padding as needed
+    padding: 20px 60px; // Adjust padding as needed
     flex-direction: column;
     gap: 20px;
+
+    @media only screen and (max-width: 992px) {
+      padding: 20px;
+    }
 
     h2, p {
       margin: 0;
