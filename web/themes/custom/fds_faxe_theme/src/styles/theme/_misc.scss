@@ -284,7 +284,7 @@ body .page-container {
     .field--name-field-ext-links {
       padding: 0;
       a {
-        padding: 25px 15px 25px 40px;
+        padding: 25px 40px;
         font-size: 1.8rem;
         position: relative;
         display: block;
@@ -679,6 +679,27 @@ p, .manchet {
       display: block;
       position: absolute;
       content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+}
+
+#block-fds-faxe-theme-indholdfield-ext-links {
+  h2 {
+    font-size: 2.4rem;
+    color: #00789e;
+    font-weight: 400;
+    position: relative;
+    padding: 40px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
       height: 2px;
       width: 140px;
       left: 0;
