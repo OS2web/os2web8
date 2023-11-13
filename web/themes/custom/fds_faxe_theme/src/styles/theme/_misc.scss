@@ -175,7 +175,7 @@ body .page-container {
   &.page-container-front {
     margin-bottom: 10px;
     .paragraph--type--os2web-news-block {
-      margin-top: 60px;
+      margin-bottom: 30px;
     }
   }
   &.page-container-not-front {
@@ -269,6 +269,7 @@ body .page-container {
   .block-fieldblock {
     background-color: $color-white;
     padding: 0!important;
+    margin-bottom: 30px;
     h2 {
       padding: 40px 10px;
       font-size: 1.9rem;
