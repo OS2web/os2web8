@@ -307,6 +307,13 @@ body:has(footer.footer-alternativ-wrapper) {
     }
 
     .footer-alternativ-column-1 {
+      &.black-footer-text {
+        .field--name-field-footer-column-1 {
+          p, h1, h2, h3, h4, h5, h6, a {
+            color: black !important;
+          }
+        }
+      }
       .field--name-field-footer-column-1 {
         p, h1, h2, h3, h4, h5, h6, a {
           color: white;
@@ -315,6 +322,21 @@ body:has(footer.footer-alternativ-wrapper) {
     }
 
     .footer-alternativ-column-2 {
+      &.black-footer-text {
+        h2 {
+          color: black !important;
+        }
+
+        .column-2-links {
+          .field--name-field-footer-column-2 {
+            .field__item {
+              a {
+                color: black !important;
+              }
+            }
+          }
+        }
+      }
       h2 {
         margin-bottom: 8px;
         font-weight: 700;
@@ -341,6 +363,12 @@ body:has(footer.footer-alternativ-wrapper) {
         align-items: center;
         margin-top: 25px;
 
+        &.black-footer-text {
+          .icon {
+            color: black !important;
+          }
+        }
+
         .icon {
           font-family: FontAwesome;
           font-size: 26px;
@@ -349,6 +377,21 @@ body:has(footer.footer-alternativ-wrapper) {
       }
     }
     .footer-alternativ-column-3 {
+
+      &.black-footer-text {
+        h2 {
+          color: black !important;
+        }
+        .column-3-links {
+          .field--name-field-footer-column-3 {
+            .field__item {
+              a {
+                color: black !important;
+              }
+            }
+          }
+        }
+      }
       h2 {
         margin-bottom: 8px;
         font-weight: 700;

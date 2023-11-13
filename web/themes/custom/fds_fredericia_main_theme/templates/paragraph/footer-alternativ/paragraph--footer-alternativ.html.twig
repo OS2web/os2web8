@@ -1,20 +1,22 @@
-<footer class="footer-alternativ-wrapper">
+{% set bg_color_footer = content.field_bg_fa_hex[0]['#context']['value'] %}
+{% set footerTextColor = content.field_footer_text_color[0]['#markup'] == 'Sort' ? 'black-footer-text' : '' %}
+<footer class="footer-alternativ-wrapper" style="background-color: {{ bg_color_footer }};">
   <div class="footer-alternativ-inner container">
-    <div class="footer-alternativ-column-1">
+    <div class="footer-alternativ-column-1 {{ footerTextColor }}">
       {{ content.field_footer_column_1 }}
     </div>
 
 
-    <div class="footer-alternativ-column-2">
+    <div class="footer-alternativ-column-2 {{ footerTextColor }}">
       {% if content.field_footer_column_2_heading is not empty %}
       <h2>{{ content.field_footer_column_2_heading }}</h2>
       {% endif %}
       {% if content.field_footer_column_2 is not empty %}
-      <div class="column-2-links">
+      <div class="column-2-links {{ footerTextColor }}">
         {{ content.field_footer_column_2 }}
       </div>
       {% endif %}
-      <div class="socials-footer-alternativ">
+      <div class="socials-footer-alternativ {{ footerTextColor }}">
         {% if content.field_footer_alternativ_facebook.0 %}
         <div>
           <a href="{{ content.field_footer_alternativ_facebook.0['#url'] }}" title="{{ content.field_footer_alternativ_facebook.0['#title'] }}">
@@ -46,12 +48,12 @@
       </div>
     </div>
 
-    <div class="footer-alternativ-column-3">
+    <div class="footer-alternativ-column-3 {{ footerTextColor }}">
       {% if content.field_footer_column_3_heading is not empty %}
       <h2>{{ content.field_footer_column_3_heading }}</h2>
       {% endif %}
       {% if content.field_footer_column_3 is not empty %}
-      <div class="column-3-links">
+      <div class="column-3-links {{ footerTextColor }}">
         {{ content.field_footer_column_3 }}
       </div>
       {% endif %}

@@ -14481,8 +14481,17 @@ body:has(footer.footer-alternativ-wrapper) footer.d-print-none {
     padding-left: 0;
   }
 }
+.footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 p, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 h1, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 h2, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 h3, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 h4, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 h5, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 h6, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1.black-footer-text .field--name-field-footer-column-1 a {
+  color: black !important;
+}
 .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 p, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 h1, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 h2, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 h3, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 h4, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 h5, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 h6, .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-1 .field--name-field-footer-column-1 a {
   color: white;
+}
+.footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-2.black-footer-text h2 {
+  color: black !important;
+}
+.footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-2.black-footer-text .column-2-links .field--name-field-footer-column-2 .field__item a {
+  color: black !important;
 }
 .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-2 h2 {
   margin-bottom: 8px;
@@ -14514,10 +14523,19 @@ body:has(footer.footer-alternativ-wrapper) footer.d-print-none {
           align-items: center;
   margin-top: 25px;
 }
+.footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-2 .socials-footer-alternativ.black-footer-text .icon {
+  color: black !important;
+}
 .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-2 .socials-footer-alternativ .icon {
   font-family: FontAwesome;
   font-size: 26px;
   color: white;
+}
+.footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-3.black-footer-text h2 {
+  color: black !important;
+}
+.footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-3.black-footer-text .column-3-links .field--name-field-footer-column-3 .field__item a {
+  color: black !important;
 }
 .footer-alternativ-wrapper .footer-alternativ-inner .footer-alternativ-column-3 h2 {
   margin-bottom: 8px;
