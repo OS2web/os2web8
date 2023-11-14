@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var accordionButtons = document.querySelectorAll('.js-accordion-add-link');
+  var accordionButtons = document.querySelectorAll('.accordion-button');
 
   function hideAllContents() {
     var allContents = document.querySelectorAll('.accordion-content.opened');
