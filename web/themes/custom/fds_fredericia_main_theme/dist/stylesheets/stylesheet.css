@@ -18080,29 +18080,36 @@ ul.related-links a:hover {
 }
 .entity-default--os2web-news-block .preheader {
   background-color: #ffffff;
-  padding: 40px;
+  padding: 20px 0;
 }
 .entity-default--os2web-news-block .preheader h2 {
   margin: 0;
   padding: 0 !important;
-  color: inherit;
+  color: #00335b;
   font-size: 2.4rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0;
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper {
   position: relative;
-  padding: 15px 40px;
-  background-color: #ffffff;
+  padding: 18px 50px 18px 20px;
+  background-color: #ebebec;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper:hover {
   color: #ebebec !important;
-  background-color: #E6E3E1;
+  background-color: #ffffff;
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper:hover a {
   color: #ebebec !important;
+}
+.entity-default--os2web-news-block .view-os2web-news-wrapper:hover .views-field-field-os2web-news-article-date .field-content {
+  color: #ebebec;
+}
+.entity-default--os2web-news-block .view-os2web-news-wrapper:hover:after {
+  color: #00335b;
+  background-color: transparent;
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper:after {
   position: absolute;
@@ -18136,7 +18143,6 @@ ul.related-links a:hover {
   font-size: 1.6rem;
   letter-spacing: 0;
   line-height: 1.1;
-  margin-bottom: 8px;
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper .views-field-title a {
   display: block;
@@ -18144,7 +18150,7 @@ ul.related-links a:hover {
   width: 100%;
   z-index: 2;
   font-weight: 700;
-  color: #000;
+  color: #ffffff;
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper .views-field-title a:hover {
   text-decoration: none;
@@ -18152,9 +18158,9 @@ ul.related-links a:hover {
 .entity-default--os2web-news-block .view-os2web-news-wrapper .views-field-field-os2web-news-article-date .field-content {
   position: absolute;
   bottom: 15px;
-  left: 40px;
+  left: 20px;
   pointer-events: none;
-  color: #ebebec;
+  color: #ffffff;
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -18722,6 +18728,7 @@ a.entity-teaser {
           box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
   padding: 40px;
   position: relative;
+  min-height: 200px;
 }
 .page-teaser-wrapper .fa-arrow-right {
   position: absolute;
