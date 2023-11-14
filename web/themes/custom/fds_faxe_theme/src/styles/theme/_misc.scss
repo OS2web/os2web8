@@ -175,7 +175,7 @@ body .page-container {
   &.page-container-front {
     margin-bottom: 10px;
     .paragraph--type--os2web-news-block {
-      margin-top: 60px;
+      margin-bottom: 30px;
     }
   }
   &.page-container-not-front {
@@ -245,7 +245,7 @@ body .page-container {
   }
 
   .block + .block {
-    margin-top: $grid-gutter-width;
+    margin-bottom: 30px;
   }
 }
 
@@ -269,6 +269,7 @@ body .page-container {
   .block-fieldblock {
     background-color: $color-white;
     padding: 0!important;
+    margin-bottom: 30px;
     h2 {
       padding: 40px 10px;
       font-size: 1.9rem;
@@ -284,7 +285,7 @@ body .page-container {
     .field--name-field-ext-links {
       padding: 0;
       a {
-        padding: 25px 15px 25px 40px;
+        padding: 25px 40px;
         font-size: 1.8rem;
         position: relative;
         display: block;
@@ -679,6 +680,27 @@ p, .manchet {
       display: block;
       position: absolute;
       content: "";
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+}
+
+#block-fds-faxe-theme-indholdfield-ext-links {
+  h2 {
+    font-size: 2.4rem;
+    color: #00789e;
+    font-weight: 400;
+    position: relative;
+    padding: 40px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
       height: 2px;
       width: 140px;
       left: 0;
