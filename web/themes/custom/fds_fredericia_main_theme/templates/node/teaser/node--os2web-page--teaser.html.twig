@@ -8,7 +8,7 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-<div class="page-teaser-wrapper">
+<a class="page-teaser-wrapper" href="{{ url }}" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
   <i class="fa-solid fa-arrow-right"></i>
 <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
 
@@ -29,4 +29,4 @@
     {% include 'breadcrumb.html.twig' %}
   </div>
 {% endif %}
-</div>
+</a>
