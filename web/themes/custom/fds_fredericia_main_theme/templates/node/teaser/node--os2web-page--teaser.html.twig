@@ -9,25 +9,15 @@
 ]
 %}
 {% set pageTeaserText = content.field_os2web_page_description | render %}
-{#<div class="page-teaser-wrapper">
-  <i class="fa-solid fa-arrow-right"></i>
-  <a href="{{ url }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
-
-    <div class="entity-{{ view_mode|clean_class }}__body">
-      {{ content.field_os2web_page_heading }}
-      {% set text = content.field_os2web_page_description | render %}
-      <div class="field field--type-body">
-        {{ text | striptags }}
-      </div>
-    </div>
-  </a>
-</div>#}
 
 <a href="{{ url }}" class="page-teaser" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
   <div class="page-teaser-body">
     {{ content.field_os2web_page_heading }}
     <div class="page-teaser-text">
       {{ pageTeaserText | striptags }}
+    </div>
+    <div class="block-system-breadcrumb-block-search-result">
+      {% include 'breadcrumb.html.twig' %}
     </div>
   </div>
 </a>
