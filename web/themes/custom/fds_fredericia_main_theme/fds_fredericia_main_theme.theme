@@ -321,9 +321,12 @@ function fds_fredericia_main_theme_get_menu_hierarchy_for_node($node) {
     $menu_links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()], 'main');
 
     foreach ($menu_links as $link) {
-        while ($link = $link->getParent()) {
-            $parent = $menu_link_manager->createInstance($link);
-            $breadcrumbs[] = $parent->getTitle();
+        while ($link && is_object($link) && method_exists($link, 'getParent')) {
+            $link = $link->getParent();
+            if ($link) {
+                $parent = $menu_link_manager->createInstance($link->getPluginId());
+                $breadcrumbs[] = $parent->getTitle();
+            }
         }
     }
 
