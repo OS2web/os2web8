@@ -260,6 +260,9 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
 
   $node = $variables['node'];
   $view_mode = $variables['elements']['#view_mode'];
+  if ($variables['view_mode'] == 'teaser' && $variables['node']->getType() == 'os2web_page') {
+          $variables['menu_hierarchy'] = fds_fredericia_main_theme_get_menu_hierarchy_for_node($variables['node']);
+      }
 
   if ($view_mode == 'teaser' && $node->getType() == 'os2web_page') {
     $routeName = $node->toUrl()->getRouteName();
@@ -308,6 +311,23 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
   $variables['#lastupdated'] = time();
 
 
+}
+
+function fds_fredericia_main_theme_get_menu_hierarchy_for_node($node) {
+    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+    $breadcrumbs = [];
+
+    // Get the menu link for the node
+    $menu_links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()], 'main');
+
+    foreach ($menu_links as $link) {
+        while ($link = $link->getParent()) {
+            $parent = $menu_link_manager->createInstance($link);
+            $breadcrumbs[] = $parent->getTitle();
+        }
+    }
+
+    return array_reverse($breadcrumbs); // Reverse to get the correct order
 }
 
 /**
