@@ -16988,14 +16988,15 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   transition: 0.3s ease;
 }
 main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body {
-  padding: 0 20px;
+  padding: 0 15px;
   text-align: center;
 }
 main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body span {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  word-break: break-word;
 }
 @media only screen and (max-width: 640px) {
   main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body span {

@@ -80,14 +80,15 @@ main.col-lg-8 {
 
       .fredericia-box {
         .fredericia-box__body {
-          padding: 0 20px;
+          padding: 0 15px;
           text-align: center;
 
           span {
             color: white;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
+            word-break: break-word;
 
             @media only screen and (max-width: 640px) {
               font-size: 14px;
