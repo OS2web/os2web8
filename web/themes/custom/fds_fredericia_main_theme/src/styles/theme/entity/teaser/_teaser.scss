@@ -104,10 +104,16 @@ a.entity-teaser {
   text-decoration: none;
   color: black;
   min-height: 200px;
+  transition: 0.3s;
 
   &:visited {
     color: black;
     text-decoration: none;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 20px rgba(0,0,0,.21569);
   }
 
   .page-teaser-body, .news-teaser-body {
@@ -132,6 +138,7 @@ a.entity-teaser {
         color: #494641;
         background-color: #ebebeb;
         font-weight: 600;
+        padding: 5px 8px;
       }
     }
   }
