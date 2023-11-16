@@ -101,7 +101,7 @@
 
           {% endif %}
 
-          {% if paragraph.field_vigtig_info is not empty %}
+          {% if paragraph.field_vigtig_info is not empty or paragraph.field_info_heading is not empty %}
 
           <div class="contact-template-warning {% if paragraph.field_cnt_monday.value is empty
             and paragraph.field_cnt_tuesday.value is empty
@@ -120,7 +120,7 @@
             </div>
 
             <div class="warning-info">
-              <h3 class="info-heading">Vigtig info</h3>
+              <h3 class="info-heading">{{ content.field_info_heading }}</h3>
               {{ content.field_vigtig_info }}
             </div>
           </div>
