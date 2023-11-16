@@ -19,8 +19,8 @@
     {% if menu_hierarchy %}
       <div class="my-breadcrumbs">
         {% for item in menu_hierarchy %}
-          {{ item }}
-          {% if not loop.last %} > {% endif %}
+          <div class="breadcrumb-item">{{ item }}</div>
+          {% if not loop.last %} {% endif %}
         {% endfor %}
       </div>
     {% endif %}
