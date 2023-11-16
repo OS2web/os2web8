@@ -31,11 +31,15 @@ function fds_faxe_theme_preprocess_block(&$variables) {
 
   if ($variables['elements']['#id'] == 'fds_faxe_theme_indholdfield') {
     $node = $variables['content']['field']['#object'];
-    $ext_links =  $node->get('field_ext_links')->getValue();
-    foreach( $ext_links as $ext_link) {
-      $url = Url::fromUri($ext_link['uri']);
-      $link = new Link($ext_link['title'], $url);
-      $variables['content']['field'][] = $link->toRenderable();
+
+    // Check if $node is not null
+    if ($node) {
+      $ext_links =  $node->get('field_ext_links')->getValue();
+      foreach( $ext_links as $ext_link) {
+        $url = Url::fromUri($ext_link['uri']);
+        $link = new Link($ext_link['title'], $url);
+        $variables['content']['field'][] = $link->toRenderable();
+      }
     }
   }
 
