@@ -21,3 +21,19 @@
     </div>
   </a>
 </div>#}
+
+<a href="{{ url }}" class="page-teaser" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
+ <i class="fa-solid fa-arrow-right"></i>
+  <div class="page-teaser-body">
+    {{ content.field_os2web_page_heading }}
+    {% set text = content.field_os2web_page_description | render %}
+    <div class="page-teaser-body-text">
+      {{ text | striptags }}
+    </div>
+    {% if breadcrumb %}
+      <div class="block-system-breadcrumb-block-search-result">
+        {% include 'breadcrumb.html.twig' %}
+      </div>
+    {% endif %}
+  </div>
+</a>
