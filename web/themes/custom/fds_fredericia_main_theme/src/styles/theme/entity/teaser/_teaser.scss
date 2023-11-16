@@ -116,11 +116,19 @@ a.entity-teaser {
     box-shadow: 0 3px 20px rgba(0,0,0,.21569);
   }
 
+  &:hover .page-teaser-body .fa-solid {
+    transform: translateX(5px);
+  }
+  &:hover .news-teaser-body .fa-solid {
+    transform: translateX(5px);
+  }
+
   .page-teaser-body, .news-teaser-body {
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 
     .field--name-field-os2web-page-heading, .field--name-field-os2web-news-heading {
       h2, h3 {
@@ -140,6 +148,21 @@ a.entity-teaser {
         font-weight: 600;
         padding: 5px 8px;
       }
+    }
+    .fa-solid {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      background-color: #00335b;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      transition: 0.3s;
     }
   }
 }
