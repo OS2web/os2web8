@@ -16587,10 +16587,6 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   margin: 0 auto;
   padding: 0 15px;
 }
-.page-search-container #main-content main .region-content .block-system-main-block .views-element-container .view .view-content .views-row {
-  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
-          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
-}
 .page-search-container #main-content main .region-content .block-system-main-block .views-element-container .view .view-content .views-row a {
   margin: 0;
 }
