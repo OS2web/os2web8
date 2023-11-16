@@ -28,6 +28,18 @@
     object-fit: cover; // Adjusts the size of the image to fill the container
   }
 
+  .image-side .media--type-os2web-video {
+    height: 100%;
+  }
+
+  .image-side .field--name-field-media-video-file {
+    height: 100%;
+  }
+
+  .image-side .field--name-field-media-video-file .field__item {
+    height: 100%;
+  }
+
   // Styling for the text side
   .text-side {
     padding: 20px 60px; // Adjust padding as needed

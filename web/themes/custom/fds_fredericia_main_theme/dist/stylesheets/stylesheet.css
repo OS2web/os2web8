@@ -20947,6 +20947,15 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -o-object-fit: cover;
      object-fit: cover;
 }
+.paragraph-50-50-wrapper .image-side .media--type-os2web-video {
+  height: 100%;
+}
+.paragraph-50-50-wrapper .image-side .field--name-field-media-video-file {
+  height: 100%;
+}
+.paragraph-50-50-wrapper .image-side .field--name-field-media-video-file .field__item {
+  height: 100%;
+}
 .paragraph-50-50-wrapper .text-side {
   padding: 20px 60px;
   -webkit-box-orient: vertical;
