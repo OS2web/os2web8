@@ -18111,7 +18111,6 @@ ul.related-links a:hover {
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper:after {
   position: absolute;
-  background-color: #ebebec;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
