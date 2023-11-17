@@ -11,14 +11,14 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-  <div {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }}-{{ node.field_os2web_news_heading.value|striptags|trim }} ">
+  <div {{ attributes.addClass(classes) }} aria-label="{{ 'Read more about' | trans }}-{{ node.field_os2web_news_heading.value }} ">
 
     <div class="col-lg-4 col-12 entity-{{ view_mode|clean_class }}__image">
       <a href="{{ url }}" >
         {{ content.field_os2web_news_primaryimage }}
       </a>
     </div>
-  
+
     <div class="col-lg-8 col-12 py-6 entity-{{ view_mode|clean_class }}__body">
       <a href="{{ url }}" >
         {{ content.field_os2web_news_heading }}

@@ -34,13 +34,13 @@
 
     {{ content.field_os2web_news_primaryimage }}
     <div class="node--os2web-news--full-inner-wrap">
-      <h1>{{ content.field_os2web_news_heading | render | striptags }}</h1>
+      <h1>{{ content.field_os2web_news_heading | render  }}</h1>
       <div class="news-metadata">
         <div class="">
           <span class="date">
-            {{ content.field_os2web_news_article_date | render | striptags }}
+            {{ content.field_os2web_news_article_date | render  }}
           </span>
-          <span>{{ content.field_os2web_news_article_author | render | striptags }}</span>
+          <span>{{ content.field_os2web_news_article_author | render  }}</span>
         </div>
       </div>
       <div><strong>{{ content.field_os2web_news_intro }}</strong></div>
