@@ -3250,14 +3250,14 @@ jQuery(document).ready(function(){
     tns({
       container: bannerSelector,
       items: 1,
-      autoplay: true,
+      autoplay: false,
       autoplayHoverPause: true,
       autoplayButtonOutput: false,
       gutter: 32,
       rewind: false,
       nav: true,
       speed: 600,
-      controls: false
+      controls: true
     });
   }
 
