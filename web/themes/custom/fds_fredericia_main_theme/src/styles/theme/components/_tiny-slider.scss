@@ -145,11 +145,11 @@ $controls-size: 20px;
       }
 
        &[data-controls="prev"] {
-         left: -15px;
+         left: 15px;
        }
 
        &[data-controls="next"] {
-         right: -15px;
+         right: 15px;
        }
     }
   }

@@ -15651,10 +15651,10 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
     font-size: 30px;
   }
   .tns-controls button[data-controls=prev] {
-    left: -15px;
+    left: 15px;
   }
   .tns-controls button[data-controls=next] {
-    right: -15px;
+    right: 15px;
   }
 }
 .block-language ul {
