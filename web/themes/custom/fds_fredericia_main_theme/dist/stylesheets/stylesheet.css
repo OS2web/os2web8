@@ -18597,19 +18597,25 @@ div.entity-list--os2web-news, div.entity-list--os2web-news:hover, div.entity-lis
 .node--os2web-news--full .node--os2web-news--full-inner-wrap {
   padding: 60px 0;
   font-size: 1.6rem;
-  color: #000000;
+  color: #00335b;
 }
 .node--os2web-news--full .node--os2web-news--full-inner-wrap h1 {
   margin: 0;
   margin-bottom: 30px;
   font-size: 3.2rem;
-  color: #000000;
+  color: #00335b;
 }
 .node--os2web-news--full .node--os2web-news--full-inner-wrap .news-metadata {
   border: 0;
 }
 .node--os2web-news--full .node--os2web-news--full-inner-wrap .box .box__body {
   padding: 0;
+}
+.node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro h1, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro h2, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro h3, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro h4, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro h5, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro h6, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro p, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro strong, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-intro span {
+  color: #00335b;
+}
+.node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description h1, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description h2, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description h3, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description h4, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description h5, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description h6, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description p, .node--os2web-news--full .node--os2web-news--full-inner-wrap .field--name-field-os2web-news-description strong {
+  color: #00335b;
 }
 
 @media (min-width: 576px) {
