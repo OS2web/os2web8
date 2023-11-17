@@ -15864,7 +15864,7 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 }
 
 #block-fds-fredericia-main-theme-indholdfield-ext-links {
-  background-color: #aabfcf;
+  background-color: #ffffff;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15874,13 +15874,14 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
 }
 #block-fds-fredericia-main-theme-indholdfield-ext-links h2 {
   padding: 0;
   margin: 0;
   font-size: 24px;
+  color: #00335b;
 }
 #block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref {
   display: -webkit-box;
@@ -15892,11 +15893,26 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
           flex-direction: column;
   gap: 5px;
 }
-#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:before {
+#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:after {
   content: "\f178";
   font-family: "FontAwesome";
-  margin-right: 15px;
+  margin-left: 15px;
   display: inline-block;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+  font-weight: bold;
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:hover:after {
+  opacity: 1;
 }
 
 .eu-cookie-withdraw-banner,
