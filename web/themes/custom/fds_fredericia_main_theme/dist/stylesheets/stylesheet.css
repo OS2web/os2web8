@@ -15905,14 +15905,16 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 #block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:hover {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
   font-weight: bold;
 }
 #block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:hover:after {
   opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .eu-cookie-withdraw-banner,

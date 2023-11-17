@@ -76,14 +76,15 @@
           display: inline-block;
           opacity: 0;
           transition: 0.3s;
+          transform: translateX(-5px);
         }
 
         &:hover {
-          transform: translateX(5px);
           font-weight: bold;
         }
         &:hover:after {
           opacity: 1;
+          transform: translateX(0);
         }
       }
     }
