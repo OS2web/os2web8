@@ -15615,9 +15615,9 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
           justify-content: center;
   font-size: 0;
   border-radius: 100%;
-  border: 1px solid #feffff;
+  border: none;
   color: #fff;
-  background-color: #feffff;
+  background-color: transparent;
 }
 .tns-controls button:before {
   display: inline-block;
@@ -15625,13 +15625,13 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   font-size: calc(20px - 7px);
 }
 .tns-controls button[data-controls=prev] {
-  left: -15px;
+  left: 15px;
 }
 .tns-controls button[data-controls=prev]:before {
   content: "\f104";
 }
 .tns-controls button[data-controls=next] {
-  right: -15px;
+  right: 15px;
 }
 .tns-controls button[data-controls=next]:before {
   content: "\f105";
@@ -15644,8 +15644,8 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 @media (min-width: 576px) {
   .tns-controls button {
     margin-top: -20px;
-    height: calc(20px + 10px);
-    width: calc(20px + 10px);
+    height: calc(20px + 20px);
+    width: calc(20px + 20px);
   }
   .tns-controls button:before {
     font-size: 20px;

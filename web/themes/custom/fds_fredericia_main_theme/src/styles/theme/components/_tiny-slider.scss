@@ -72,10 +72,10 @@ $controls-size: 20px;
 
     font-size: 0;
     border-radius: 100%;
-    border: 1px solid $background_color__primary;
+    border: none;
 
     color: #fff;
-    background-color: $background_color__primary;
+    background-color: transparent;
 
     &:before {
       display: inline-block;
@@ -85,7 +85,7 @@ $controls-size: 20px;
     }
 
     &[data-controls="prev"] {
-      left: -15px;
+      left: 15px;
 
       &:before {
         content: "\f104";
@@ -93,7 +93,7 @@ $controls-size: 20px;
     }
 
     &[data-controls="next"] {
-      right: -15px;
+      right: 15px;
 
       &:before {
         content: "\f105";
@@ -137,8 +137,8 @@ $controls-size: 20px;
     button {
       margin-top: -20px;
 
-      height: calc(#{$controls-size} + 10px);
-      width: calc(#{$controls-size} + 10px);;
+      height: calc(#{$controls-size} + 20px);
+      width: calc(#{$controls-size} + 20px);;
 
       &:before {
         font-size: $controls-size;
