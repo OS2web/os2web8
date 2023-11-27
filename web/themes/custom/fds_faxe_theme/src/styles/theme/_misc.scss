@@ -710,6 +710,42 @@ p, .manchet {
   }
 }
 
+#block-unikke-links {
+  h2 {
+    font-size: 2.4rem;
+    color: #00789e;
+    font-weight: 400;
+    position: relative;
+    padding: 40px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 140px;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+  .field--name-field-uniq-link {
+    .field__item {
+      a {
+        &::before {
+          content: '\f138';
+          display: inline-block !important;
+          position: relative;
+          left: 0;
+          width: 19px;
+          height: 19px;
+          font-family: "FontAwesome";
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
