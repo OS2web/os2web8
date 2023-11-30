@@ -14,6 +14,7 @@ javascripts:
     'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js': { type: external }
     js/tns.js: {}
     js/slideshow.js: {}
+    js/accordion.js: {}
     dist/javascripts/app.js: {}
     'https://cdhsign.dk/cdh_player.js': { type: external }
 

@@ -16174,9 +16174,13 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   background-color: white;
   color: #00335b;
   overflow: hidden;
+  display: none;
 }
 .paragraph--type--os2web-accordion-item .accordion-content p, .paragraph--type--os2web-accordion-item .tabnav-panel p, .paragraph--type--os2web-accordion-item .accordion-content li, .paragraph--type--os2web-accordion-item .tabnav-panel li, .paragraph--type--os2web-accordion-item .accordion-content span, .paragraph--type--os2web-accordion-item .tabnav-panel span, .paragraph--type--os2web-accordion-item .accordion-content h1, .paragraph--type--os2web-accordion-item .tabnav-panel h1, .paragraph--type--os2web-accordion-item .accordion-content h2, .paragraph--type--os2web-accordion-item .tabnav-panel h2, .paragraph--type--os2web-accordion-item .accordion-content h3, .paragraph--type--os2web-accordion-item .tabnav-panel h3, .paragraph--type--os2web-accordion-item .accordion-content h4, .paragraph--type--os2web-accordion-item .tabnav-panel h4, .paragraph--type--os2web-accordion-item .accordion-content h5, .paragraph--type--os2web-accordion-item .tabnav-panel h5, .paragraph--type--os2web-accordion-item .accordion-content h6, .paragraph--type--os2web-accordion-item .tabnav-panel h6 {
   color: #00335b;
+}
+.paragraph--type--os2web-accordion-item .accordion-content.opened, .paragraph--type--os2web-accordion-item .opened.tabnav-panel {
+  display: block;
 }
 .paragraph--type--os2web-accordion-item .accordion-content .field + .field--name-field-os2web-hearings-reply-docs, .paragraph--type--os2web-accordion-item .tabnav-panel .field + .field--name-field-os2web-hearings-reply-docs {
   margin-top: 30px;
