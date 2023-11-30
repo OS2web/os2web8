@@ -54,6 +54,14 @@ footer {
       color: $color-white;
     }
 
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     .logo {
       width: 42px;
       height: 50px;
