@@ -51,6 +51,11 @@
     {{ content.field_fifty_fifty_video }}
   </div>
   {% endif %}
+  {% if paragraph.field_fifty_fifty_iframe is not empty and paragraph.field_fifty_fifty_image is empty and paragraph.field_fifty_fifty_video is empty %}
+  <div class="image-side">
+    {{ content.field_fifty_fifty_iframe }}
+  </div>
+  {% endif %}
   <div style="background-color: {{ background_color }};" class="text-side {{ text_position_class }} {{ text_color_class }}">
     <h2>{{ content.field_fifty_fifty_heading }}</h2>
     <div class="paragraph-50-50-description">
