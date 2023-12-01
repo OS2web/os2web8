@@ -22,8 +22,13 @@
 
 .social-icon-teasers {}
 
+.social-icon-teaser-wrapper {
+  min-height: 300px;
+}
+
 a.social-icon-teaser {
   display: block;
+  height: 100%;
 }
 .social-icon-teaser {
   position: relative;
@@ -34,7 +39,8 @@ a.social-icon-teaser {
 
   img {
     display: block;
-
+    height: 100%;
+    object-fit: cover;
     width: 100%;
   }
 }
