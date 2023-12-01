@@ -15914,10 +15914,41 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   -webkit-transform: translateX(-3px);
           transform: translateX(-3px);
 }
+#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:visited {
+  color: #00335b;
+}
 #block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:hover:after {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .go-to-all-selfservice {
+  background-color: #00335b;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  border-color: #00335b;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: relative;
+  padding: 5px 50px 5px 10px;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .go-to-all-selfservice:after {
+  content: "\f0a9";
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "FontAwesome";
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .go-to-all-selfservice:hover {
+  opacity: 0.9;
 }
 
 .eu-cookie-withdraw-banner,
