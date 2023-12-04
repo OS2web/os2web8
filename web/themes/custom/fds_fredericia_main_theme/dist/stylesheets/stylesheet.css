@@ -16145,6 +16145,12 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 .field__item.paragraph--type--os2web-accordion-wrapper + .field__item.paragraph--type--os2web-accordion-wrapper {
   margin-top: 0;
 }
+.field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black h2 {
+  color: #00335b;
+}
+.field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description p, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description span, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description h1, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description h2, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description h3, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description h4, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description h5, .field__item.paragraph--type--os2web-accordion-wrapper .paragraph-50-50-wrapper text-side-black .paragraph-50-50-description h6 {
+  color: #00335b;
+}
 
 .accordion > li, .tabnav > li {
   margin-bottom: 0.5rem;

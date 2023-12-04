@@ -24,6 +24,19 @@
   & + .field__item.paragraph--type--os2web-accordion-wrapper {
     margin-top: 0;
   }
+
+  .paragraph-50-50-wrapper {
+    text-side-black {
+      h2 {
+        color: #00335b;
+      }
+      .paragraph-50-50-description {
+        p, span, h1, h2, h3, h4, h5, h6 {
+          color: #00335b;
+        }
+      }
+    }
+  }
 }
 
 .accordion {
