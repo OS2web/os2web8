@@ -27,9 +27,19 @@ if (file_exists($jsonFilePath) && is_readable($jsonFilePath)) {
           print_r($i . '. ' . $node->label() . ' [' . $node->id() . ']: ' . $node->toUrl()->setAbsolute()->toString());
           $body = $node->field_os2web_page_description->value;
           $body .= '<p>Dokumenter: ' . $row . '</p>';
+
+          $body .= '<p>Dokumenter:</p>';
+          $documentTitles = explode(',', $row);
+          $body .= '<ul>';
+          foreach ($documentTitles as $title) {
+            $body .= '<li>' . $title;
+          }
+          $body .= '</ul>';
+
           $node->field_os2web_page_description->value = $body;
           $node->field_os2web_page_description->format = 'wysiwyg_tekst';
           $node->save();
+          
           print_r(PHP_EOL);
           $i++;
         }
