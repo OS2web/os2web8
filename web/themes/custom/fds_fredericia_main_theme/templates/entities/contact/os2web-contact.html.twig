@@ -181,6 +181,74 @@
 
         {% endif %}
 
+        {% if contact.field_os2web_contact_surname is not empty or contact.field_os2web_contact_firstname is not empty %}
+
+          <div class="contact-template-person {% if contact.field_cnt_monday.value is empty
+            and contact.field_cnt_tuesday.value is empty
+            and contact.field_cnt_wednesday.value is empty
+            and contact.field_cnt_thursday.value is empty
+            and contact.field_cnt_friday.value is empty
+            and contact.field_cnt_phone_monday.value is empty
+            and contact.field_cnt_phone_tuesday.value is empty
+            and contact.field_cnt_phone_wednesday.value is empty
+            and contact.field_cnt_phone_thursday.value is empty
+            and contact.field_cnt_phone_friday.value is empty %}
+  no-col-2-item
+{% endif %}">
+            <div class="contact-template-icon user-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="contact-person-info">
+
+              {% if contact.field_os2web_contact_heading is not empty %}
+              <div class="contact-person-heading">{{ content.field_os2web_contact_heading }}</div>
+              {% endif %}
+
+              {% if contact.field_os2web_contact_firstname is not empty or contact.field_os2web_contact_surname is not empty %}
+              <div class="contact-person-name">
+                {{ content.field_os2web_contact_firstname }} {{ content.field_os2web_contact_surname }}
+              </div>
+              {% endif %}
+
+              {% if contact.field_os2web_contact_job_title is not empty or contact.field_os2web_contact_job_task is not empty %}
+              <div class="contact-person-job">
+                {% if contact.field_os2web_contact_job_title is not empty %}
+                <div class="job-title">
+                  {{ content.field_os2web_contact_job_title }}
+                </div>
+                {% endif %}
+                {% if contact.field_os2web_contact_job_task is not empty %}
+                <div class="job-task">
+                  {{ content.field_os2web_contact_job_task }}
+                </div>
+                {% endif %}
+              </div>
+              {% endif %}
+
+              {% if contact.field_os2web_contact_email is not empty %}
+              <div class="contact-person-email">
+                 <span>E-mail:</span>
+                  {{ content.field_os2web_contact_email }}
+              </div>
+              {% endif %}
+
+              {% if contact.field_os2web_contact_main_phone is not empty %}
+              <div class="contact-person-phone">
+                <span>Telefonnummer:</span>
+                {{ content.field_os2web_contact_main_phone }}
+              </div>
+              {% endif %}
+
+            </div>
+
+
+
+
+          </div>
+
+        {% endif %}
+
       </div>
 
 

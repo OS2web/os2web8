@@ -20614,6 +20614,79 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: #00325b;
   margin-bottom: 10px;
 }
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  max-width: 90%;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person.no-col-2-item {
+  max-width: 100% !important;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person {
+    max-width: 100%;
+  }
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-template-icon {
+  font-size: 32px;
+  color: #00325b;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-template-icon i {
+  width: 50px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-heading .field--name-field-os2web-contact-heading h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #00325b;
+  margin-bottom: 10px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-weight: 600;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-job .job-title {
+  font-weight: 600;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-job .job-task {
+  font-style: italic;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-email span {
+  font-weight: 600;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-phone span {
+  font-weight: 600;
+}
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-2 {
   width: 30%;
   display: -webkit-box;
