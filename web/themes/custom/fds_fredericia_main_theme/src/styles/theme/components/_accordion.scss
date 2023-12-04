@@ -24,32 +24,6 @@
   & + .field__item.paragraph--type--os2web-accordion-wrapper {
     margin-top: 0;
   }
-  .entity-default--os2web-accordion {
-    .field--name-field-os2web-accordion-reference {
-      li {
-        .paragraph--type--os2web-accordion-item {
-          .accordion-content {
-            .field--name-field-os2web-accordion-item-ref {
-              .field__item {
-                .paragraph-50-50-wrapper {
-                  text-side-black {
-                    h2 {
-                      color: #00335b !important;
-                    }
-                    .paragraph-50-50-description {
-                      p, span, h1, h2, h3, h4, h5, h6 {
-                        color: #00335b !important;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 .accordion {
@@ -118,7 +92,7 @@
     overflow: hidden;
     display: none;
     p, li, span, h1, h2, h3, h4, h5, h6 {
-      color: #00335b;
+      color: #00335b !important;
     }
     &.opened {
       display: block;
