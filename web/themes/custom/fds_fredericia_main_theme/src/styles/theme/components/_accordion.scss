@@ -41,9 +41,10 @@
     padding: 25px 50px 25px 20px;
     font-weight: 700;
     background-image: none !important;
-    background-color:   #00335b;
+    background-color:  white;
     border: none;
-    color: white;
+    color: #00335b;
+    border: 1px solid #ddd;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     &:after {
       display: flex;
@@ -66,19 +67,19 @@
 
       content: $fa-var-plus;
 
-      color: white;
+      color: #00335b;
     }
     &:focus {
       outline: 0;
     }
     &[aria-expanded="true"] { //accordion button is open
-      background-color: white;
-      color: #00335b;
+      background-color: #00335b;;
+      color: white;
 
       &:after {
         content: $fa-var-minus;
         font-size: 1.8rem;
-        color: #00335b;
+        color: white;
       }
     }
   }

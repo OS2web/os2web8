@@ -16157,9 +16157,10 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   padding: 25px 50px 25px 20px;
   font-weight: 700;
   background-image: none !important;
-  background-color: #00335b;
+  background-color: white;
   border: none;
-  color: white;
+  color: #00335b;
+  border: 1px solid #ddd;
   -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
@@ -16184,19 +16185,19 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   font-size: 1.8rem;
   font-family: FontAwesome;
   content: "\f067";
-  color: white;
+  color: #00335b;
 }
 .paragraph--type--os2web-accordion-item .accordion-button:focus, .paragraph--type--os2web-accordion-item .tabnav > button:focus {
   outline: 0;
 }
 .paragraph--type--os2web-accordion-item .accordion-button[aria-expanded=true], .paragraph--type--os2web-accordion-item .tabnav > button[aria-expanded=true] {
-  background-color: white;
-  color: #00335b;
+  background-color: #00335b;
+  color: white;
 }
 .paragraph--type--os2web-accordion-item .accordion-button[aria-expanded=true]:after, .paragraph--type--os2web-accordion-item .tabnav > button[aria-expanded=true]:after {
   content: "\f068";
   font-size: 1.8rem;
-  color: #00335b;
+  color: white;
 }
 .paragraph--type--os2web-accordion-item .accordion-content, .paragraph--type--os2web-accordion-item .tabnav-panel {
   border: 1px solid #eceae8;
