@@ -17574,24 +17574,28 @@ ul.related-links a:hover {
   background-color: #00335b;
 }
 
-.paragraph--type--os2web-wrapper.background-color--secondary, .paragraph--type--os2web-wrapper.background-color--secondary p, .paragraph--type--os2web-wrapper.background-color--secondary h1, .paragraph--type--os2web-wrapper.background-color--secondary h2, .paragraph--type--os2web-wrapper.background-color--secondary h3, .paragraph--type--os2web-wrapper.background-color--secondary h4, .paragraph--type--os2web-wrapper.background-color--secondary h5, .paragraph--type--os2web-wrapper.background-color--secondary h6, .paragraph--type--os2web-wrapper.background-color--tertiary, .paragraph--type--os2web-wrapper.background-color--tertiary p, .paragraph--type--os2web-wrapper.background-color--tertiary h1, .paragraph--type--os2web-wrapper.background-color--tertiary h2, .paragraph--type--os2web-wrapper.background-color--tertiary h3, .paragraph--type--os2web-wrapper.background-color--tertiary h4, .paragraph--type--os2web-wrapper.background-color--tertiary h5, .paragraph--type--os2web-wrapper.background-color--tertiary h6 {
-  color: #fff;
+.paragraph--type--os2web-wrapper.background-color--transparent a, .paragraph--type--os2web-wrapper.background-color--transparent h1, .paragraph--type--os2web-wrapper.background-color--transparent h2, .paragraph--type--os2web-wrapper.background-color--transparent h3, .paragraph--type--os2web-wrapper.background-color--transparent h4, .paragraph--type--os2web-wrapper.background-color--transparent h5, .paragraph--type--os2web-wrapper.background-color--transparent h6, .paragraph--type--os2web-wrapper.background-color--transparent p {
+  color: #00335b !important;
 }
-.paragraph--type--os2web-wrapper.background-color--secondary a, .paragraph--type--os2web-wrapper.background-color--tertiary a {
-  outline-color: #00335b;
+.paragraph--type--os2web-wrapper.background-color--primary p, .paragraph--type--os2web-wrapper.background-color--primary h1, .paragraph--type--os2web-wrapper.background-color--primary h2, .paragraph--type--os2web-wrapper.background-color--primary h3, .paragraph--type--os2web-wrapper.background-color--primary h4, .paragraph--type--os2web-wrapper.background-color--primary h5, .paragraph--type--os2web-wrapper.background-color--primary h6, .paragraph--type--os2web-wrapper.background-color--primary a {
+  color: white !important;
 }
-.paragraph--type--os2web-wrapper.background-color--secondary a, .paragraph--type--os2web-wrapper.background-color--secondary a:active, .paragraph--type--os2web-wrapper.background-color--secondary a:visited, .paragraph--type--os2web-wrapper.background-color--secondary a:focus, .paragraph--type--os2web-wrapper.background-color--tertiary a, .paragraph--type--os2web-wrapper.background-color--tertiary a:active, .paragraph--type--os2web-wrapper.background-color--tertiary a:visited, .paragraph--type--os2web-wrapper.background-color--tertiary a:focus {
-  color: #fff;
+.paragraph--type--os2web-wrapper.background-color--secondary p, .paragraph--type--os2web-wrapper.background-color--secondary h1, .paragraph--type--os2web-wrapper.background-color--secondary h2, .paragraph--type--os2web-wrapper.background-color--secondary h3, .paragraph--type--os2web-wrapper.background-color--secondary h4, .paragraph--type--os2web-wrapper.background-color--secondary h5, .paragraph--type--os2web-wrapper.background-color--secondary h6, .paragraph--type--os2web-wrapper.background-color--secondary a {
+  color: white !important;
 }
-.paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block p, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block h1, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block h2, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block h3, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block h4, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block h5, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block h6, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block p, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h1, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h2, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h3, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h4, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h5, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h6 {
+.paragraph--type--os2web-wrapper.background-color--tertiary, .paragraph--type--os2web-wrapper.background-color--tertiary p, .paragraph--type--os2web-wrapper.background-color--tertiary h1, .paragraph--type--os2web-wrapper.background-color--tertiary h2, .paragraph--type--os2web-wrapper.background-color--tertiary h3, .paragraph--type--os2web-wrapper.background-color--tertiary h4, .paragraph--type--os2web-wrapper.background-color--tertiary h5, .paragraph--type--os2web-wrapper.background-color--tertiary h6 {
+  color: #00335b !important;
+}
+.paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block p, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h1, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h2, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h3, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h4, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h5, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block h6 {
   color: #000000;
 }
-.paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block a, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a {
+.paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a {
   outline-color: #00335b;
 }
-.paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block a, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block a:active, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block a:visited, .paragraph--type--os2web-wrapper.background-color--secondary .paragraph--type--os2web-news-block a:focus, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a:active, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a:visited, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a:focus {
+.paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a:active, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a:visited, .paragraph--type--os2web-wrapper.background-color--tertiary .paragraph--type--os2web-news-block a:focus {
   color: #000000;
 }
+
 .banner__image-outer {
   background-repeat: no-repeat;
   background-size: cover;
@@ -21823,6 +21827,10 @@ a:not([class]):hover {
 .field--name-field-media-video-file video {
   width: 100%;
   height: 100%;
+}
+
+.paragraph--type--os2web-3-columns .row {
+  padding: 25px 0;
 }
 
 @media (min-width: 992px) {
