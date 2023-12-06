@@ -509,17 +509,17 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     }
   }
 
-  $variables['theme_settings'] = \Drupal::config('fds_fredericia_main_theme.settings')->get();
+  $theme_settings = \Drupal::config('fds_fredericia_main_theme.settings');
+  $variables['placeholder_images_urls'] = [];
 
-    if (isset($variables['theme_settings']['placeholder_image'][0])) {
-      $placeholder_image_id = $variables['theme_settings']['placeholder_image'][0];
-      $placeholder_image_file = File::load($placeholder_image_id);
-
-      if ($placeholder_image_file) {
-        $placeholder_image_url = $placeholder_image_file->createFileUrl();
-        $variables['placeholder_image_url'] = $placeholder_image_url;
+  if ($placeholder_image_fids = $theme_settings->get('placeholder_images')) {
+    foreach ($placeholder_image_fids as $fid) {
+      $file = \Drupal\file\Entity\File::load($fid);
+      if ($file) {
+        $variables['placeholder_images_urls'][] = $file->createFileUrl();
       }
     }
+  }
 
 }
 

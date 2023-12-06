@@ -11,6 +11,7 @@
   {% for article in latest_news_articles %}
     <div class="news-card swiper-slide">
       <a href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}" class="news-image-wrapper">
+        {% set placeholder_image_url = placeholder_images_urls[loop.index0 % placeholder_images_urls|length] %}
         {% if article.field_os2web_news_primaryimage.entity.fileuri %}
           <img src="{{ file_url(article.field_os2web_news_primaryimage.entity.fileuri) }}" alt="{{ article.field_os2web_news_primaryimage.alt }}">
         {% else %}

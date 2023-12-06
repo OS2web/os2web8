@@ -223,15 +223,16 @@ function fds_fredericia_main_theme_form_system_theme_settings_alter(&$form, Drup
       'file_validate_extensions' => ['png gif jpg jpeg'],
     ],
   ];
-  $form['placeholder_image'] = [
+  $form['placeholder_images'] = [
     '#type' => 'managed_file',
-    '#title' => t('Nyheder Placeholder Image'),
-    '#description' => t('Upload et billede som skal bruges som placeholder til nyheder.'),
-    '#default_value' => $theme_settings->get('placeholder_image'),
+    '#title' => t('Nyheder Placeholder Images'),
+    '#description' => t('Upload images to be used as placeholders for news articles.'),
+    '#default_value' => $theme_settings->get('placeholder_images'),
     '#upload_location' => 'public://fds_fredericia_main_theme/images/',
     '#upload_validators' => [
       'file_validate_extensions' => ['png gif jpg jpeg'],
     ],
+    '#multiple' => TRUE, // Allow multiple file uploads
   ];
 
   $form['#submit'][] = 'fds_fredericia_main_theme_custom_theme_settings_submit';
@@ -270,12 +271,14 @@ function fds_fredericia_main_theme_custom_theme_settings_submit(&$form, \Drupal\
       $file->save();
     }
   }
-  $placeholder_fid = $form_state->getValue('placeholder_image');
-  if (!empty($placeholder_fid)) {
-    $file = \Drupal\file\Entity\File::load($placeholder_fid[0]);
-    if ($file) {
-      $file->setPermanent();
-      $file->save();
+  $placeholder_fids = $form_state->getValue('placeholder_images');
+  if (!empty($placeholder_fids)) {
+    foreach ($placeholder_fids as $fid) {
+      $file = \Drupal\file\Entity\File::load($fid);
+      if ($file) {
+        $file->setPermanent();
+        $file->save();
+      }
     }
   }
 }

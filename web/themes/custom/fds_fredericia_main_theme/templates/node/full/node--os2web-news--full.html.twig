@@ -30,11 +30,10 @@
     </footer>
   {% endif %}
 
-  <div {{ content_attributes.addClass('node__content') }}>
+  <div {{ content_attributes.addClass('node__content', 'container') }}>
 
     {{ content.field_os2web_news_primaryimage }}
     <div class="node--os2web-news--full-inner-wrap">
-      <h1>{{ content.field_os2web_news_heading | render | striptags }}</h1>
       <div class="news-metadata">
         <div class="">
           <span class="date">
@@ -43,6 +42,7 @@
           <span>{{ content.field_os2web_news_article_author | render | striptags }}</span>
         </div>
       </div>
+      <h1>{{ content.field_os2web_news_heading | render | striptags }}</h1>
       <div><strong>{{ content.field_os2web_news_intro }}</strong></div>
       <div>{{ content.field_os2web_news_description }}</div>
       {{ content | without('field_os2web_news_primaryimage', 'field_os2web_news_description', 'field_os2web_news_heading','field_os2web_news_article_date', 'field_os2web_news_article_author', 'field_os2web_news_intro') }}
