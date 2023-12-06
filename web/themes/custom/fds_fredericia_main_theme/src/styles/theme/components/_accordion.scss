@@ -104,6 +104,12 @@
         margin-top: $grid-gutter-width / 2;
       }
     }
+    .paragraph--type--os2web-pi {
+      margin: 0 !important;
+    }
+    .paragraph--type--os2web-slideshow {
+      margin-bottom: 15px !important;
+    }
   }
 }
 

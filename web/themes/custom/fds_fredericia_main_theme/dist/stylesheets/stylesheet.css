@@ -16214,6 +16214,12 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 .paragraph--type--os2web-accordion-item .accordion-content .field + .field--name-field-os2web-hearings-reply-docs, .paragraph--type--os2web-accordion-item .tabnav-panel .field + .field--name-field-os2web-hearings-reply-docs {
   margin-top: 30px;
 }
+.paragraph--type--os2web-accordion-item .accordion-content .paragraph--type--os2web-pi, .paragraph--type--os2web-accordion-item .tabnav-panel .paragraph--type--os2web-pi {
+  margin: 0 !important;
+}
+.paragraph--type--os2web-accordion-item .accordion-content .paragraph--type--os2web-slideshow, .paragraph--type--os2web-accordion-item .tabnav-panel .paragraph--type--os2web-slideshow {
+  margin-bottom: 15px !important;
+}
 
 .accordion-close-button {
   display: block;
