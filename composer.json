@@ -119,6 +119,7 @@
         "drupal/stage_file_proxy": "^1.0",
         "drupal/textfield_counter": "^2.3",
         "drupal/token": "^1.13",
+        "drupal/unmanaged_files": "^1.0",
         "drupal/upgrade_rector": "^1.0@alpha",
         "drupal/upgrade_status": "^3.5",
         "drupal/video": "^1.5@alpha",
@@ -252,6 +253,9 @@
             },
             "drupal/anonymous_subscriptions" : {
                 "fix theme hook subscribe_block not found" : "https://www.drupal.org/files/issues/2023-04-05/3352304-remove-subscribe-block-theme-3.patch"
+            },
+            "drupal/unmanaged_files": {
+                "fix db connection": "https://www.drupal.org/files/issues/2022-11-14/database-type-erro-3320989-3.patch"
             }
         }
     }
