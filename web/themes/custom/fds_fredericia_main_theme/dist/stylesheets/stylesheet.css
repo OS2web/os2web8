@@ -19893,7 +19893,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 18px 20px;
+  padding: 10px 0px;
   margin: 0 0 80px 0;
   -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
@@ -19906,7 +19906,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
 }
 .selvbetjening-labels .selvbetjening-links a {
   color: white;
@@ -19918,13 +19917,13 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-align: center;
           align-items: center;
   font-size: 18px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 10px 20px;
+  border-bottom: 1px solid white;
 }
 .selvbetjening-labels .selvbetjening-links a:hover {
   font-weight: 700;
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
 }
 .selvbetjening-labels .selvbetjening-links a:hover span {
   opacity: 1;
@@ -19953,7 +19952,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
+  padding: 10px 20px 0 20px;
 }
 .selvbetjening-labels .show-more-btn-selfservice-wrapper .show-more-btn-selfservice {
   background-color: transparent;

@@ -36,7 +36,7 @@
     {% set colorValue = node.field_selfservice_color.value %}
 
     {% if node.field_selvbetjening_btn is not empty %}
-      <div class="selvbetjening-labels" style="{% if colorValue == 'red' %} background-color: #e82f4c; {% elseif colorValue == 'blue' %}
+      <div class="selvbetjening-labels" style="{% if colorValue == 'red' %} background-color: #A51D38; {% elseif colorValue == 'blue' %}
       background-color: #00335b; {% elseif colorValue == 'white' %} background-color: white; border: 1px solid black; {% elseif colorValue == "black" %} background-color: #121212; {% else %} background-color: #00335b; {% endif %}">
         <div class="selvbetjening-links">
           {% for item in node.field_selvbetjening_btn %}
@@ -48,7 +48,7 @@
         {# Show the 'Show more' button if there are more than 3 items #}
         {% if node.field_selvbetjening_btn|length > 3 %}
           <div class="show-more-btn-selfservice-wrapper">
-            <button class="show-more-btn-selfservice" style="{% if colorValue == 'white' %} color: #121212; {% endif %}">Vis flere</button>
+            <button class="show-more-btn-selfservice" style="{% if colorValue == 'white' %} color: #121212; {% endif %}">+ Vis flere</button>
           </div>
         {% endif %}
       </div>

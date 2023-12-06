@@ -3669,7 +3669,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Toggle button text
-      showMoreButton.textContent = showMoreButton.textContent === 'Vis flere' ? 'Skjul' : 'Vis flere';
+      showMoreButton.textContent = showMoreButton.textContent === '+ Vis flere' ? '- Skjul' : '+ Vis flere';
     });
   }
 });

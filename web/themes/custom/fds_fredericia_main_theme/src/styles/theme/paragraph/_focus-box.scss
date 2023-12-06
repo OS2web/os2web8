@@ -1,6 +1,3 @@
-
-
-
 .sidebar-content {
   width: 65%;
   box-sizing: border-box;
@@ -38,25 +35,25 @@
         z-index: 1;
 
         &.red-link-class {
-            background-color: #9D0425;
-            color: white;
+          background-color: #9D0425;
+          color: white;
 
         }
         &.lightred-link-class {
-            background-color: #F3E7E7;
-            color: #9d0425;
+          background-color: #F3E7E7;
+          color: #9d0425;
 
         }
         &.blue-link-class {
 
-            background-color: #00335B;
-            color: #fff;
+          background-color: #00335B;
+          color: #fff;
 
         }
         &.lightblue-link-class {
 
-            background-color: #aabfcf;
-            color: #00335b;
+          background-color: #aabfcf;
+          color: #00335b;
         }
 
         &:not(.ext):after {
@@ -275,5 +272,3 @@
     }
   }
 }
-
-
