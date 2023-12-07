@@ -17624,6 +17624,10 @@ ul.related-links a:hover {
   color: #000000;
 }
 
+.field--name-field-os2web-paragraphs .field__item .banner__image-outer {
+  margin-bottom: 80px;
+}
+
 .banner__image-outer {
   background-repeat: no-repeat;
   background-size: cover;
