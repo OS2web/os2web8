@@ -155,6 +155,7 @@ a.entity-teaser {
     .my-breadcrumbs {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
 
       .breadcrumb-item {
         color: #494641;

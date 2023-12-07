@@ -28,6 +28,10 @@
   align-items: flex-end;
   padding: 20px 0;
 
+  @media only screen and (max-width: 640px) {
+    min-height: 200px !important;
+  }
+
   .entity-default--os2web-banner-paragraph {
     background-color: transparent;
     width: 100%;
@@ -45,6 +49,7 @@
 
         @media only screen and (max-width: 640px) {
           width: 100%;
+          display: none;
         }
 
         .banner-headings-wrapper {
@@ -181,6 +186,150 @@
 
   }
 
+}
+
+.banner-box-mobile {
+  background-color: rgba(255,255,255,0.9);
+  width: 100%;
+  padding: 30px;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+
+  @media only screen and (max-width: 640px) {
+    width: 100%;
+    display: flex;
+  }
+
+  .banner-headings-wrapper {
+    .banner-heading {
+      .field--name-field-os2web-banner-heading {
+        h2 {
+          font-weight: bold;
+          color: #00335b;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .banner-body {
+    .field--name-field-os2web-banner-body {
+      p {
+        color: #00335b;
+      }
+    }
+  }
+  .banner-actions {
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      li {
+        padding: 0;
+        margin: 0;
+
+        &.red-link-class {
+          a {
+            background-color: #9D0425;
+            color: white;
+            border-color: #9D0425;
+
+
+            &:hover {
+              background-color: rgba(157, 4, 37, 0.9);
+              border-color: rgba(157, 4, 37, 0.9);
+            }
+          }
+        }
+        &.lightred-link-class {
+          a {
+            background-color: #F3E7E7;
+            color: #9d0425;
+            border-color: #F3E7E7;
+
+
+            &:hover {
+              background-color: rgba(243, 231, 231, 0.9);
+              border-color: rgba(243, 231, 231, 0.9);
+            }
+          }
+        }
+        &.blue-link-class {
+          a {
+            background-color: #00335B;
+            color: #fff;
+            border-color: #00335B;
+
+
+            &:hover {
+              background-color: rgba(0, 51, 91, 0.9);
+              border-color: rgba(0, 51, 91, 0.9);
+            }
+          }
+        }
+        &.lightblue-link-class {
+          a {
+            background-color: #aabfcf;
+            color: #00335B;
+            border-color: #aabfcf;
+
+
+            &:hover {
+              background-color: rgba(170, 191, 207, 0.9);
+              border-color: rgba(170, 191, 207, 0.9);
+            }
+          }
+        }
+
+        a {
+          background-color: $background_color__button;
+          color: white;
+          border-radius: 4px;
+          font-weight: normal;
+          border-color: $background_color__button;
+          transition: .3s ease;
+          font-weight: 600;
+          position: relative;
+          padding-right: 50px;
+
+          &:not(.ext):after {
+            content: '\f0a9';
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-family: "FontAwesome";
+          }
+
+          &.ext:after {
+            content: '\f35d';
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-family: "FontAwesome";
+          }
+
+          &:hover {
+            background-color: $background_color__button_hover;
+            border-color: $background_color__button_hover;
+          }
+
+        }
+
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 .banner__text-outer {
   background-position: center;

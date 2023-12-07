@@ -5,6 +5,7 @@
 
   @media only screen and (max-width: 940px) {
     width: 100%;
+    min-height: 400px;
   }
 
   .sidebar-box {
@@ -16,8 +17,8 @@
     align-items: flex-end;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 480px) {
-      padding: 30px;
+    @media only screen and (max-width: 940px) {
+      padding: 10px;
     }
 
     .box-content {
@@ -33,6 +34,10 @@
         gap: 30px;
         position: relative;
         z-index: 1;
+
+        @media only screen and (max-width: 940px) {
+          padding: 20px;
+        }
 
         &.red-link-class {
           background-color: #9D0425;
@@ -108,6 +113,14 @@
 
           @media only screen and (max-width: 1368px) {
             width: 100%;
+          }
+
+          @media only screen and (max-width: 940px) {
+            font-size: 16px;
+          }
+
+          @media only screen and (max-width: 480px) {
+            font-size: 14px;
           }
         }
       }
