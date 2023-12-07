@@ -34,6 +34,7 @@
   .field--name-field-os2web-spotbox-reference {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: 992px) {
       flex-direction: column;
@@ -52,7 +53,7 @@
 
     .field__item {
       min-height: 150px;
-      width: 100%;
+      flex: 49%;
       .spotbox--image {
         display: flex;
         line-height: 0;

@@ -16775,6 +16775,8 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media only screen and (max-width: 992px) {
   .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference {
@@ -16800,7 +16802,9 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item {
   min-height: 150px;
-  width: 100%;
+  -webkit-box-flex: 49%;
+      -ms-flex: 49%;
+          flex: 49%;
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image {
   display: -webkit-box;
