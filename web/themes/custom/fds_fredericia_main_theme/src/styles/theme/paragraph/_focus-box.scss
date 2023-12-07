@@ -6,6 +6,9 @@
   @media only screen and (max-width: 940px) {
     width: 100%;
     min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
   .sidebar-box {
