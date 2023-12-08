@@ -9,7 +9,7 @@
 {% set banner_height_type = content.field_banner_type_height[0]['#markup'] == '500px' ? '500px' : '350px' %}
 {% set align_value = paragraph.field_os2web_align_content.value %}
 {% block paragraph %}
-  <div class="banner__image-outer" {% if background_image %} style="background-image: url({{ background_image }}); min-height: {{ banner_height_type }};" {% endif %}>
+  <div class="banner__image-outer {% if paragraph.field_hide_image_mobile %} mobile-hide {% endif %}" {% if background_image %} style="background-image: url({{ background_image }}); min-height: {{ banner_height_type }};" {% endif %}>
     <div {{ attributes.addClass(classes) }}>
       <div class="container" {% if align_value == 'left' %}
         style="justify-content: flex-start;"

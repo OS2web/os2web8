@@ -17646,6 +17646,11 @@ ul.related-links a:hover {
     min-height: 150px !important;
   }
 }
+@media only screen and (max-width: 640px) {
+  .banner__image-outer.mobile-hide {
+    display: none;
+  }
+}
 .banner__image-outer .entity-default--os2web-banner-paragraph {
   background-color: transparent;
   width: 100%;
