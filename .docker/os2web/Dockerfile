@@ -1,4 +1,4 @@
-FROM drupal:9-php8.1-apache
+FROM drupal:9-php8.1-apache-bullseye
 
 # Installing additional dependencies.
 RUN set -eux; \
@@ -14,11 +14,10 @@ RUN set -eux; \
 	docker-php-ext-install soap; \
 	curl -fsSL "https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar" -o /usr/local/bin/drush && chmod +x /usr/local/bin/drush; \
 	# Addind mysql-client
-	wget https://repo.mysql.com/mysql-apt-config_0.8.20-1_all.deb; \
-	echo 4 | dpkg -i mysql-apt-config_0.8.20-1_all.deb; \
-	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29; \
+	wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb; \ 
+	echo 4 | dpkg -i mysql-apt-config_0.8.24-1_all.deb; \
 	apt update; \
-	apt install -qq -y mysql-client; \
+	apt install -qq -y mariadb-client; \
 	echo "[client]" >> /etc/mysql/my.cnf; echo "ssl-mode=DISABLED" >> /etc/mysql/my.cnf; \
 	rm -rf /var/lib/apt/lists/*
 

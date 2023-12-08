@@ -8,7 +8,7 @@ if [ $# -eq 0 ]; then
 fi
 
 echo "Updating base image"
-docker image pull drupal:9-php7.4-apache
+docker image pull drupal:9-php8.1-apache
 
 docker build ./ --build-arg OS2WEB8_TAG=$1 -t dkbellcom/os2web8:$1
 
