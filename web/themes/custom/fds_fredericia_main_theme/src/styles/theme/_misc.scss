@@ -634,6 +634,14 @@ a:not([class]) {
   }
 }
 
+.paragraph--type--os2web-files-paragraph {
+  margin-bottom: 80px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
 .paragraph--type--os2web-3-columns {
   .row {
     padding: 25px 0;
