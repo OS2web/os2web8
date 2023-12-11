@@ -380,6 +380,44 @@ a.spotbox {
   }
 }
 
+.paragraph--type--os2web-accordion-item {
+  .accordion-content {
+    .field--name-field-os2web-accordion-item-ref {
+      .field__item {
+        .paragraph--type--os2web-spotbox-reference.paragraph--grid_1 {
+
+          .field--name-field-os2web-spotbox-reference {
+
+            @media only screen and (max-width: 1320px) {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+            }
+
+            @media only screen and (max-width: 768px) {
+              display: grid;
+            }
+
+            @media only screen and (max-width: 674px) {
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+            }
+
+            .spotbox {
+              height: 100% !important;
+
+              .spotbox__image {
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .paragraph--grid_1 {
 
   .spotbox {
