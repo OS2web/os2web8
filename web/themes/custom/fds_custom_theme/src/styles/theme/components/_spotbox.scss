@@ -406,6 +406,10 @@ a.spotbox {
 
             .spotbox {
               height: 100% !important;
+
+              .spotbox__image {
+                justify-content: center;
+              }
             }
           }
         }
