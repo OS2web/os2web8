@@ -57,6 +57,10 @@
   }
 }
 
+.region-alert-banner {
+  position: relative;
+}
+
 .status-bar-wrapper {
   display: flex;
   align-items: center;
@@ -97,6 +101,9 @@
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
 
   .reopen-button {
     background-color: #121212;
@@ -116,7 +123,7 @@
     }
 
     &.visible {
-      visibility: visible;
+      visibility: visible !important;
     }
 
     svg {

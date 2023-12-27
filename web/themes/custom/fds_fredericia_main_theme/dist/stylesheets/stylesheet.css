@@ -18460,6 +18460,10 @@ ul.related-links a:hover {
   color: white !important;
 }
 
+.region-alert-banner {
+  position: relative;
+}
+
 .status-bar-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18509,6 +18513,10 @@ ul.related-links a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 .reopen-btn-wrapper .reopen-button {
   background-color: #121212;
@@ -18532,7 +18540,7 @@ ul.related-links a:hover {
   text-decoration: none;
 }
 .reopen-btn-wrapper .reopen-button.visible {
-  visibility: visible;
+  visibility: visible !important;
 }
 .reopen-btn-wrapper .reopen-button svg {
   margin-left: 10px;
