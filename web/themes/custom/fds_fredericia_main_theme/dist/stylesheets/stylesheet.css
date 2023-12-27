@@ -18531,7 +18531,7 @@ ul.related-links a:hover {
   background-color: #ebebec;
   color: white;
   border: none;
-  padding: 3px 6px;
+  padding: 5px 6px;
   font-weight: 500;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
@@ -18540,7 +18540,7 @@ ul.related-links a:hover {
   font-size: 24px;
 }
 .reopen-btn-wrapper .reopen-button i {
-  margin-left: 10px;
+  margin-left: 2px;
 }
 .reopen-btn-wrapper .reopen-button:hover {
   text-decoration: none;
