@@ -18498,6 +18498,26 @@ ul.related-links a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.status-bar-wrapper .container .field--name-body {
+  padding: 10px 0;
+  max-width: 95%;
+  width: 100%;
+}
+.status-bar-wrapper .container.green-text .field--name-body p, .status-bar-wrapper .container.green-text .field--name-body h1, .status-bar-wrapper .container.green-text .field--name-body h2, .status-bar-wrapper .container.green-text .field--name-body h3, .status-bar-wrapper .container.green-text .field--name-body h4, .status-bar-wrapper .container.green-text .field--name-body h5, .status-bar-wrapper .container.green-text .field--name-body h6, .status-bar-wrapper .container.green-text .field--name-body strong, .status-bar-wrapper .container.green-text .field--name-body i, .status-bar-wrapper .container.green-text .field--name-body span {
+  color: white;
+}
+.status-bar-wrapper .container.red-text .field--name-body p, .status-bar-wrapper .container.red-text .field--name-body h1, .status-bar-wrapper .container.red-text .field--name-body h2, .status-bar-wrapper .container.red-text .field--name-body h3, .status-bar-wrapper .container.red-text .field--name-body h4, .status-bar-wrapper .container.red-text .field--name-body h5, .status-bar-wrapper .container.red-text .field--name-body h6, .status-bar-wrapper .container.red-text .field--name-body strong, .status-bar-wrapper .container.red-text .field--name-body i, .status-bar-wrapper .container.red-text .field--name-body span {
+  color: white;
+}
+.status-bar-wrapper .container.yellow-text .field--name-body p, .status-bar-wrapper .container.yellow-text .field--name-body h1, .status-bar-wrapper .container.yellow-text .field--name-body h2, .status-bar-wrapper .container.yellow-text .field--name-body h3, .status-bar-wrapper .container.yellow-text .field--name-body h4, .status-bar-wrapper .container.yellow-text .field--name-body h5, .status-bar-wrapper .container.yellow-text .field--name-body h6, .status-bar-wrapper .container.yellow-text .field--name-body strong, .status-bar-wrapper .container.yellow-text .field--name-body i, .status-bar-wrapper .container.yellow-text .field--name-body span {
+  color: black;
+}
+.status-bar-wrapper .container .close-status-bar {
+  position: absolute;
+  top: 5px;
+  right: 30px;
 }
 .status-bar-wrapper .container .close-status-bar .close-button {
   background-color: transparent;

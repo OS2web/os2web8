@@ -13,7 +13,7 @@
   background-color: {{ background_color }};
   color: {{ text_color }};
   ">
-  <div class="container">
+  <div class="container {% if content.field_status_banner_color[0]['#markup'] == 'Grøn' %} green-text {% elseif content.field_status_banner_color[0]['#markup'] == 'Rød' %} red-text {% elseif content.field_status_banner_color[0]['#markup'] == 'Gul' %} yellow-text {% endif %}">
     {{ content.body }}
     <div class="close-status-bar">
       <button class="close-button" aria-label="Luk Banner">

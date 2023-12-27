@@ -85,9 +85,41 @@
     align-items: center;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    .field--name-body {
+      padding: 10px 0;
+      max-width: 95%;
+      width: 100%;
+    }
+
+    &.green-text {
+      .field--name-body {
+        p, h1, h2, h3, h4, h5, h6, strong, i, span {
+          color: white;
+        }
+      }
+    }
+    &.red-text {
+      .field--name-body {
+        p, h1, h2, h3, h4, h5, h6, strong, i, span {
+          color: white;
+        }
+      }
+    }
+    &.yellow-text {
+      .field--name-body {
+        p, h1, h2, h3, h4, h5, h6, strong, i, span {
+          color: black;
+        }
+      }
+    }
 
 
     .close-status-bar {
+      position: absolute;
+      top: 5px;
+      right: 30px;
       .close-button {
         background-color: transparent;
         border: none;
