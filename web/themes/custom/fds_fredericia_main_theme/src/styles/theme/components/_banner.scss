@@ -24,6 +24,10 @@
   .field__item {
     .banner__image-outer {
       margin-bottom: 80px;
+
+      @media only screen and (max-width: 640px) {
+        margin-bottom: 0;
+      }
     }
   }
 }

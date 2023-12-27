@@ -17627,6 +17627,11 @@ ul.related-links a:hover {
 .field--name-field-os2web-paragraphs .field__item .banner__image-outer {
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 640px) {
+  .field--name-field-os2web-paragraphs .field__item .banner__image-outer {
+    margin-bottom: 0;
+  }
+}
 
 .banner__image-outer {
   background-repeat: no-repeat;
