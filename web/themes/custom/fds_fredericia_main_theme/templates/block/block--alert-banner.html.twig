@@ -43,8 +43,7 @@
 
     if (isBannerClosed) {
       banner.classList.add('initial-closed'); // Add class to disable transition on initial load when closed
-      banner.style.transform = 'translateY(-60px)';
-      banner.style.marginBottom = '-50px';
+      banner.style.transform = 'translateY(-100%)';
       reopenButton.style.opacity = '1';
       reopenButton.style.visibility = 'visible';
       reopenButton.classList.add('visible');
@@ -60,8 +59,7 @@
 
     if (closeButton) {
       closeButton.addEventListener('click', function () {
-        banner.style.transform = 'translateY(-60px)';
-        banner.style.marginBottom = '-50px';
+        banner.style.transform = 'translateY(-100%)';
         document.cookie = 'banner_closed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
         reopenButton.style.opacity = '1';
         reopenButton.classList.add('visible');
@@ -72,7 +70,6 @@
       reopenButton.addEventListener('click', function () {
         document.cookie = 'banner_closed=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
         banner.style.transform = 'translateY(0)';
-        banner.style.marginBottom = '0';
         banner.classList.add('reopening'); // Add class to enable transition on reopening
         reopenButton.style.opacity = '0';
         reopenButton.style.visibility = 'hidden';
