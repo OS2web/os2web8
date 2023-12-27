@@ -1,13 +1,13 @@
 <div class="status-bar-wrapper" style="
 {% set background_color = '' %}
     {% if content.field_status_banner_farve[0]['#markup'] == 'Rød' %}
-      {% set background_color = '#e63946' %}
+      {% set background_color = '#b8092e' %}
       {% set text_color = "#ffffff" %}
     {% elseif content.field_status_banner_farve[0]['#markup'] == 'Gul' %}
       {% set background_color = '#FFCA3A' %}
       {% set text_color = "#000000" %}
     {% elseif content.field_status_banner_farve[0]['#markup'] == 'Grøn' %}
-      {% set background_color = '#52b788' %}
+      {% set background_color = '#3e8346' %}
       {% set text_color = "#ffffff" %}
     {% endif %}
   background-color: {{ background_color }};
