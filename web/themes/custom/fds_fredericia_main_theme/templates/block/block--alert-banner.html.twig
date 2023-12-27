@@ -1,12 +1,12 @@
 <div class="status-bar-wrapper" style="
 {% set background_color = '' %}
-    {% if content.field_status_banner_farve[0]['#markup'] == 'Rød' %}
+    {% if content.field_status_banner_color[0]['#markup'] == 'Rød' %}
       {% set background_color = '#b8092e' %}
       {% set text_color = "#ffffff" %}
-    {% elseif content.field_status_banner_farve[0]['#markup'] == 'Gul' %}
+    {% elseif content.field_status_banner_color[0]['#markup'] == 'Gul' %}
       {% set background_color = '#FFCA3A' %}
       {% set text_color = "#000000" %}
-    {% elseif content.field_status_banner_farve[0]['#markup'] == 'Grøn' %}
+    {% elseif content.field_status_banner_color[0]['#markup'] == 'Grøn' %}
       {% set background_color = '#3e8346' %}
       {% set text_color = "#ffffff" %}
     {% endif %}
@@ -17,7 +17,7 @@
     {{ content.body }}
     <div class="close-status-bar">
       <button class="close-button" aria-label="Luk Banner">
-        {% if content.field_status_banner_farve[0]['#markup'] == 'Gul' %}
+        {% if content.field_status_banner_color[0]['#markup'] == 'Gul' %}
           {% include '@fds_fredericia_main_theme/src/images/svg-icons/close-circle-outline.svg' with { close_color: '#292D32'  } %}
         {% else %}
           {% include '@fds_fredericia_main_theme/src/images/svg-icons/close-circle-outline.svg' with { close_color: '#ffffff'  } %}
@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="container reopen-btn-wrapper">
-  <button style="background-color: {{ background_color }}; {% if content.field_status_banner_farve[0]['#markup'] == 'Gul' %} color: #000; text-shadow: none; {% endif %}" class="reopen-button">Vis information {% if content.field_status_banner_farve[0]['#markup'] == 'Gul' %} {% include '@valgsted_theme/src/images/info-circle.svg' with {info_color: '#000'} %} {% else %} {% include '@valgsted_theme/src/images/info-circle.svg' with {info_color: '#fff'} %} {% endif %}
+  <button style="background-color: {{ background_color }}; {% if content.field_status_banner_color[0]['#markup'] == 'Gul' %} color: #000; text-shadow: none; {% endif %}" class="reopen-button">Vis information {% if content.field_status_banner_color[0]['#markup'] == 'Gul' %} {% include '@fds_fredericia_main_theme/src/images/info-circle.svg' with {info_color: '#000'} %} {% else %} {% include '@fds_fredericia_main_theme/src/images/info-circle.svg' with {info_color: '#fff'} %} {% endif %}
   </button>
 </div>
 
