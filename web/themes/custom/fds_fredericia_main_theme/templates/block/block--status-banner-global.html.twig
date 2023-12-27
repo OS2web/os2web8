@@ -1,0 +1,94 @@
+<div class="status-bar-wrapper" style="
+{% set background_color = '' %}
+    {% if content.field_status_banner_farve[0]['#markup'] == 'Rød' %}
+      {% set background_color = '#e63946' %}
+      {% set text_color = "#ffffff" %}
+    {% elseif content.field_status_banner_farve[0]['#markup'] == 'Gul' %}
+      {% set background_color = '#FFCA3A' %}
+      {% set text_color = "#000000" %}
+    {% elseif content.field_status_banner_farve[0]['#markup'] == 'Grøn' %}
+      {% set background_color = '#52b788' %}
+      {% set text_color = "#ffffff" %}
+    {% endif %}
+  background-color: {{ background_color }};
+  color: {{ text_color }};
+  ">
+  <div class="container">
+    {{ content.body }}
+    <div class="close-status-bar">
+      <button class="close-button" aria-label="Luk Banner">
+        {% if content.field_status_banner_farve[0]['#markup'] == 'Gul' %}
+          {% include '@fds_fredericia_main_theme/src/images/svg-icons/close-circle-outline.svg' with { close_color: '#292D32'  } %}
+        {% else %}
+          {% include '@fds_fredericia_main_theme/src/images/svg-icons/close-circle-outline.svg' with { close_color: '#ffffff'  } %}
+        {% endif %}
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container reopen-btn-wrapper">
+  <button style="background-color: {{ background_color }}; {% if content.field_status_banner_farve[0]['#markup'] == 'Gul' %} color: #000; text-shadow: none; {% endif %}" class="reopen-button">Vis information {% if content.field_status_banner_farve[0]['#markup'] == 'Gul' %} {% include '@valgsted_theme/src/images/info-circle.svg' with {info_color: '#000'} %} {% else %} {% include '@valgsted_theme/src/images/info-circle.svg' with {info_color: '#fff'} %} {% endif %}
+  </button>
+</div>
+
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var closeButton = document.querySelector('.close-button');
+    var reopenButton = document.querySelector('.reopen-button');
+
+    var banner = document.querySelector('.status-bar-wrapper');
+    var isBannerClosed = getCookie('banner_closed');
+
+    if (isBannerClosed) {
+      banner.classList.add('initial-closed'); // Add class to disable transition on initial load when closed
+      banner.style.transform = 'translateY(-60px)';
+      banner.style.marginBottom = '-50px';
+      reopenButton.style.opacity = '1';
+      reopenButton.style.visibility = 'visible';
+      reopenButton.classList.add('visible');
+    } else {
+      banner.style.transform = 'translateY(0)'; // Ensure the banner is initially hidden
+      banner.style.marginBottom = '0';
+      banner.classList.remove('initial-closed');
+
+      reopenButton.style.opacity = '0';
+      reopenButton.style.visibility = 'hidden';
+      reopenButton.classList.remove('visible');
+    }
+
+    if (closeButton) {
+      closeButton.addEventListener('click', function () {
+        banner.style.transform = 'translateY(-60px)';
+        banner.style.marginBottom = '-50px';
+        document.cookie = 'banner_closed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+        reopenButton.style.opacity = '1';
+        reopenButton.classList.add('visible');
+      });
+    }
+
+    if (reopenButton) {
+      reopenButton.addEventListener('click', function () {
+        document.cookie = 'banner_closed=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        banner.style.transform = 'translateY(0)';
+        banner.style.marginBottom = '0';
+        banner.classList.add('reopening'); // Add class to enable transition on reopening
+        reopenButton.style.opacity = '0';
+        reopenButton.style.visibility = 'hidden';
+        reopenButton.classList.remove('visible');
+
+        // Remove the reopening class after the animation duration
+
+      });
+    }
+
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+  });
+
+
+</script>
