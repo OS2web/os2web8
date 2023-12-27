@@ -66,6 +66,8 @@
   align-items: center;
   min-height: 45px;
   transition: .4s ease;
+  position: relative;
+  z-index: 2;
 
   &.initial-closed {
     transition: none;
@@ -99,8 +101,7 @@
   display: flex;
   justify-content: flex-start;
   position: absolute;
-  right: 50%;
-  transform: translateX(50%);
+  left: 0;
   z-index: 20;
 
   .reopen-button {
@@ -116,11 +117,13 @@
     padding: 3px 6px;
     font-weight: 500;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    border-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 24px;
 
 
-    span {
-      margin-right: 10px;
+    i {
+      margin-left: 10px;
     }
 
     &:hover {

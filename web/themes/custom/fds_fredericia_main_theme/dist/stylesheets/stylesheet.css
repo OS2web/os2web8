@@ -18474,6 +18474,8 @@ ul.related-links a:hover {
   min-height: 45px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  position: relative;
+  z-index: 2;
 }
 .status-bar-wrapper.initial-closed {
   -webkit-transition: none;
@@ -18511,9 +18513,7 @@ ul.related-links a:hover {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: absolute;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  left: 0;
   z-index: 20;
 }
 .reopen-btn-wrapper .reopen-button {
@@ -18535,10 +18535,12 @@ ul.related-links a:hover {
   font-weight: 500;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  font-size: 24px;
 }
-.reopen-btn-wrapper .reopen-button span {
-  margin-right: 10px;
+.reopen-btn-wrapper .reopen-button i {
+  margin-left: 10px;
 }
 .reopen-btn-wrapper .reopen-button:hover {
   text-decoration: none;
