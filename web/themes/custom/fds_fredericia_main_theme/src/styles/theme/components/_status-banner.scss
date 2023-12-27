@@ -84,9 +84,6 @@
     justify-content: space-between;
     align-items: center;
 
-    .field__item {
-      text-shadow: 1px 1px 2px black;
-    }
 
     .close-status-bar {
       .close-button {
@@ -100,23 +97,31 @@
 .reopen-btn-wrapper {
   margin-top: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
+  z-index: 20;
 
   .reopen-button {
-    background-color: #121212;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-weight: 600;
     display: flex;
     align-items: center;
     transition: .4s ease;
     visibility: hidden;
-    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    z-index: 1;
+    background-color: $background_color__default;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border-radius: 6px;
+
+
+    span {
+      margin-right: 10px;
+    }
 
     &:hover {
       text-decoration: none;
@@ -124,11 +129,6 @@
 
     &.visible {
       visibility: visible !important;
-    }
-
-    svg {
-      margin-left: 10px;
-      width: 25px;
     }
   }
 }

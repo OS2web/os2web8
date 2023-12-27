@@ -27,7 +27,7 @@
   </div>
 </div>
 <div class="container reopen-btn-wrapper">
-  <button style="background-color: {{ background_color }}; {% if content.field_status_banner_color[0]['#markup'] == 'Gul' %} color: #000; text-shadow: none; {% endif %}" class="reopen-button">Vis information {% if content.field_status_banner_color[0]['#markup'] == 'Gul' %} {% include '@fds_fredericia_main_theme/src/images/svg-icons/info-circle.svg' with {info_color: '#000', info_stroke_color: '#fff'} %} {% else %} {% include '@fds_fredericia_main_theme/src/images/svg-icons/info-circle.svg' with {info_color: '#fff', info_stroke_color: '#000'} %} {% endif %}
+  <button style="background-color: {{ background_color }}; {% if content.field_status_banner_color[0]['#markup'] == 'Gul' %} color: #000; text-shadow: none; {% endif %}" class="reopen-button">Vis information <i class="fa-solid fa-circle-info"></i>
   </button>
 </div>
 

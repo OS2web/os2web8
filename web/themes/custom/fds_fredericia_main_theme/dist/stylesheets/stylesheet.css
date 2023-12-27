@@ -18497,9 +18497,6 @@ ul.related-links a:hover {
           justify-content: space-between;
   align-items: center;
 }
-.status-bar-wrapper .container .field__item {
-  text-shadow: 1px 1px 2px black;
-}
 .status-bar-wrapper .container .close-status-bar .close-button {
   background-color: transparent;
   border: none;
@@ -18510,21 +18507,16 @@ ul.related-links a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+  z-index: 20;
 }
 .reopen-btn-wrapper .reopen-button {
-  background-color: #121212;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18534,17 +18526,25 @@ ul.related-links a:hover {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   visibility: hidden;
-  text-shadow: 1px 1px 2px black;
+  position: absolute;
+  z-index: 1;
+  background-color: #ebebec;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  font-weight: 500;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.reopen-btn-wrapper .reopen-button span {
+  margin-right: 10px;
 }
 .reopen-btn-wrapper .reopen-button:hover {
   text-decoration: none;
 }
 .reopen-btn-wrapper .reopen-button.visible {
   visibility: visible !important;
-}
-.reopen-btn-wrapper .reopen-button svg {
-  margin-left: 10px;
-  width: 25px;
 }
 
 .banner-content-links-wrapper {
