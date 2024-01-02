@@ -3,7 +3,6 @@ namespace Drupal\bc_speed_admin\Controller;
 
 Class Image
 {
-    private static $key = 'UHOaup5GM7OmvEXBvAUAbp7q4oLTUMbRYpV3m3nCEdaRV4QGGemxqTdOw4w2wLJD';
     private static $url = 'https://api.speedadmin.dk/';
 
     public static function getRequest($id=null, $contentType) {
@@ -12,21 +11,22 @@ Class Image
 
         if (!empty($id)) {
 
-            $curl = curl_init(self::$url . '/v1/blobs/' . $id);
-            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+          $key = \Drupal::config('bc_speed_admin.settings')->get('apikey');
 
-            $headers = array(
-                'Content-Type: ' . $contentType ?? 'application/octet-stream',
-                'Authorization: ' . self::$key
-            );
+          $curl = curl_init(self::$url . '/v1/blobs/' . $id);
+          curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+          curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-            curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 3);
-            curl_setopt($curl, CURLOPT_TIMEOUT, 3);
+          $headers = array(
+              'Content-Type: ' . $contentType ?? 'application/octet-stream',
+              'Authorization: ' . $key
+          );
 
-            $response = curl_exec($curl);
+          curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+          curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 3);
+          curl_setopt($curl, CURLOPT_TIMEOUT, 3);
 
+          $response = curl_exec($curl);
 
         }
 
