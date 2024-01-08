@@ -8,10 +8,12 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-{% set descriptionText = content.field_os2web_page_description|render|striptags|trim %}
-{% set pageTeaserText = content.field_os2web_page_intro is empty
-  ? descriptionText
-  : content.field_os2web_page_intro %}
+{% set descriptionRendered = content.field_os2web_page_description|render %}
+{% set descriptionText = descriptionRendered|striptags|trim %}
+{% set introText = content.field_os2web_page_intro|render|trim %}
+
+{% set pageTeaserText = introText is empty ? descriptionText : introText %}
+
 
 
 
