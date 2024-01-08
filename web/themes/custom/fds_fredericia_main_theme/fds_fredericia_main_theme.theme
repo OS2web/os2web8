@@ -44,7 +44,7 @@ function fds_fredericia_main_theme_preprocess_block(&$variables) {
   }
 
     $variables['theme_settings'] = \Drupal::config('fds_fredericia_main_theme.settings')->get();
-    if ($variables['theme_settings']['banner_image'][0]) {
+    if (!empty($variables['theme_settings']['banner_image'][0])) {
         // Load the file entity using the file ID.
         $banner_image_id = $variables['theme_settings']['banner_image'][0];
         $banner_image_file = File::load($banner_image_id);

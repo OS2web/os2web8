@@ -3,7 +3,7 @@ namespace Drupal\bc_speed_admin\Controller;
 
 Class Request
 {
-//    private static $key = 'UHOaup5GM7OmvEXBvAUAbp7q4oLTUMbRYpV3m3nCEdaRV4QGGemxqTdOw4w2wLJD';
+
     private static $url = 'https://api.speedadmin.dk/';
 
     public static function getRequest($url=null, $arg=null) {
