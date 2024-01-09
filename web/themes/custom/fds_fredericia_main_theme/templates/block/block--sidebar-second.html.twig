@@ -14,7 +14,7 @@
   {% block content %}
     {{ content }}
   {% endblock %}
-  {% set selfserviceLinkText = theme_setting('selfservice_link_text') %}
-  {% set selfserviceLinkUrl = theme_setting('selfservice_link_url') %}
+  {% set sidebarLinkText = theme_get_setting('sidebar_link_text') %}
+  {% set sidebarLinkUrl = theme_get_setting('sidebar_link_url') %}
   <a class="go-to-all-selfservice" href="{{ selfserviceLinkUrl }}">{{ selfserviceLinkText }}</a>
 </div>
