@@ -57,44 +57,25 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
-        {% if item.entity %}
-          <div{{ item.attributes.addClass('field__item') }}>
-            <a href="{{ item.entity.selfserviceUrl.value }}">{{ item.entity.label() }}</a>
-          </div>
-        {% endif %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      {% if item.entity %}
-        <div{{ attributes.addClass(classes, 'field__item') }}>
-          <a href="{{ item.entity.selfserviceUrl.value }}">{{ item.entity.label() }}</a>
-        </div>
-      {% endif %}
+      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div class="field__items">
-        {% for item in items %}
-          {% if item.entity %}
-            <div{{ item.attributes.addClass('field__item') }}>
-              <a href="{{ item.entity.selfserviceUrl.value }}">{{ item.entity.label() }}</a>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    {% else %}
+    <div class="field__items">
+      {% endif %}
       {% for item in items %}
-        {% if item.entity %}
-          <div{{ attributes.addClass(classes, 'field__item') }}>
-            <a href="{{ item.entity.selfserviceUrl.value }}">{{ item.entity.label() }}</a>
-          </div>
-        {% endif %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
+      {% if multiple %}
+    </div>
     {% endif %}
   </div>
 {% endif %}
-
