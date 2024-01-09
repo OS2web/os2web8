@@ -20707,9 +20707,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 
 .contact-template-wrapper {
   width: 100%;
-  background-color: white;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+}
+.contact-template-wrapper.bg-white {
+  background-color: white;
+}
+.contact-template-wrapper.bg-lightblue {
+  background-color: #c4e3fe;
 }
 .contact-template-wrapper .container {
   display: -webkit-box;

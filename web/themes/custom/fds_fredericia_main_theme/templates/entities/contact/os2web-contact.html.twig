@@ -53,8 +53,15 @@
 
 
 #}
+{% set bgColorClass = '' %}
+{% if contact.field_contact_bg.value == 'lightblue' %}
+  {% set bgColorClass = 'bg-lightblue' %}
+{% elseif node.field_contact_bg.value == 'white' %}
+  {% set bgColorClass = 'bg-white' %}
+{% endif %}
 
-<div class="contact-template-wrapper">
+
+<div class="contact-template-wrapper {{ bgColorClass }}">
 
   <div class="container">
 

@@ -1,8 +1,15 @@
 .contact-template-wrapper {
   width: 100%;
-  background-color: white;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  &.bg-white {
+    background-color: white;
+  }
+
+  &.bg-lightblue {
+    background-color: #c4e3fe;
+  }
 
   .container {
     display: flex;
