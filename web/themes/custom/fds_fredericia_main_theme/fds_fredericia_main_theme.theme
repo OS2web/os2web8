@@ -26,6 +26,11 @@ function fds_fredericia_main_theme_theme_suggestions_block_alter(array &$suggest
  */
 function fds_fredericia_main_theme_preprocess_block(&$variables) {
 
+if ($variables['elements']['#id'] == 'fds_fredericia_main_theme_indholdfield_ext_links') {
+        $variables['selfservice_link_text'] = theme_get_setting('selfservice_link_text');
+        $variables['selfservice_link_url'] = theme_get_setting('selfservice_link_url');
+    }
+
   if ($variables['elements']['#id'] == 'fds_fredericia_main_theme_indholdfield') {
     $node = $variables['content']['field']['#object'];
     $ext_links =  $node->get('field_ext_links')->getValue();
