@@ -57,7 +57,7 @@
   <div{{ attributes.addClass(classes, 'field__items') }}>
     {% for item in items %}
       {% set referencedEntity = item.content['#node'].field_selfbetjening_ref.entity %}
-      {% set selfServiceUrl = referencedEntity.field_selfserviceUrl.value %}
+      {% set selfServiceUrl = referencedEntity.selfserviceUrl.value %}
       <div{{ item.attributes.addClass('field__item') }}>
         <a href="{{ selfServiceUrl }}">{{ referencedEntity.title.value }}</a>
       </div>
@@ -66,7 +66,7 @@
 {% else %}
   {% for item in items %}
     {% set referencedEntity = item.content['#node'].field_selfbetjening_ref.entity %}
-    {% set selfServiceUrl = referencedEntity.field_selfserviceUrl.value %}
+    {% set selfServiceUrl = referencedEntity.selfserviceUrl.value %}
     <div{{ attributes.addClass(classes, 'field__item') }}>
       <a href="{{ selfServiceUrl }}">{{ referencedEntity.title.value }}</a>
     </div>
