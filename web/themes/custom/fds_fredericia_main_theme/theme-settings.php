@@ -237,6 +237,22 @@ function fds_fredericia_main_theme_form_system_theme_settings_alter(&$form, Drup
 
   $form['#submit'][] = 'fds_fredericia_main_theme_custom_theme_settings_submit';
 
+
+  $form['selfservice_link_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Selvbetjening Link Tekst'),
+    '#default_value' => theme_get_setting('selfservice_link_text'),
+    '#description' => t('Indtast linkteksten for knappen i selvbetjening sidebaren.'),
+  ];
+
+  // Define a field for the link URL
+  $form['selfservice_link_url'] = [
+    '#type' => 'textfield',
+    '#title' => t('Selvbetjening Link URL'),
+    '#default_value' => theme_get_setting('selfservice_link_url'),
+    '#description' => t('Indtast link URL for knappen i selvbetjening sidebaren.'),
+  ];
+
 }
 
 

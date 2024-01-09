@@ -15914,6 +15914,7 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 #block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-decoration: none;
 }
 #block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:after {
   content: "\f178";
@@ -15933,6 +15934,9 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+#block-fds-fredericia-main-theme-indholdfield-ext-links .field--name-field-selfbetjening-ref .field__item a:hover {
+  text-decoration: underline;
 }
 #block-fds-fredericia-main-theme-indholdfield-ext-links .go-to-all-selfservice {
   background-color: #00335b;
