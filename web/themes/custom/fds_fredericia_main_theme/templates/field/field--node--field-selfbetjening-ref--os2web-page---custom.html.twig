@@ -53,42 +53,23 @@
 ]
 %}
 
-{% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items') }}>
-      {% for item in items %}
-        {% set referencedEntity = item.content['#url'].entity %}
-        {% set selfServiceUrl = referencedEntity.selfserviceUrl.value %}
-        <div{{ item.attributes.addClass('field__item') }}>
-          <a href="{{ selfServiceUrl }}">{{ referencedEntity.label }}</a>
-        </div>
-      {% endfor %}
-    </div>
-  {% else %}
+{% if multiple %}
+  <div{{ attributes.addClass(classes, 'field__items') }}>
     {% for item in items %}
-      {% set referencedEntity = item.content['#url'].entity %}
-      {% set selfServiceUrl = referencedEntity.selfserviceUrl.value %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>
-        <a href="{{ selfServiceUrl }}">{{ referencedEntity.label }}</a>
+      {% set referencedEntity = item.content['#node'].field_selfbetjening_ref.entity %}
+      {% set selfServiceUrl = referencedEntity.field_selfserviceUrl.value %}
+      <div{{ item.attributes.addClass('field__item') }}>
+        <a href="{{ selfServiceUrl }}">{{ referencedEntity.title.value }}</a>
       </div>
     {% endfor %}
-  {% endif %}
-{% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-    <div class="field__items">
-      {% endif %}
-      {% for item in items %}
-        {% set referencedEntity = item.content['#url'].entity %}
-        {% set selfServiceUrl = referencedEntity.selfserviceUrl.value %}
-        <div{{ item.attributes.addClass('field__item') }}>
-          <a href="{{ selfServiceUrl }}">{{ referencedEntity.label }}</a>
-        </div>
-      {% endfor %}
-      {% if multiple %}
-    </div>
-    {% endif %}
   </div>
+{% else %}
+  {% for item in items %}
+    {% set referencedEntity = item.content['#node'].field_selfbetjening_ref.entity %}
+    {% set selfServiceUrl = referencedEntity.field_selfserviceUrl.value %}
+    <div{{ attributes.addClass(classes, 'field__item') }}>
+      <a href="{{ selfServiceUrl }}">{{ referencedEntity.title.value }}</a>
+    </div>
+  {% endfor %}
 {% endif %}
 
