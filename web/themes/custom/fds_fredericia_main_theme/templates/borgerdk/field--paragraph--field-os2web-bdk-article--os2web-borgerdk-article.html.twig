@@ -57,11 +57,11 @@
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-          {{ item.content.pre_text }}
-          {{ item.content.article }}
           <div class="bdk-selfservice">
             {{ item.content.selfservices }}
           </div>
+          {{ item.content.pre_text }}
+          {{ item.content.article }}
           <ul class="accordion">
             {{ item.content.microarticles }}
             {{ item.content.legislation }}
@@ -75,11 +75,11 @@
   {% else %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
-        {{ item.content.pre_text }}
-        {{ item.content.article }}
         <div class="bdk-selfservice">
           {{ item.content.selfservices }}
         </div>
+        {{ item.content.pre_text }}
+        {{ item.content.article }}
         <ul class="accordion">
           {{ item.content.microarticles }}
           {{ item.content.legislation }}
@@ -98,11 +98,11 @@
       {% endif %}
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-          {{ item.content.pre_text }}
-          {{ item.content.article }}
           <div class="bdk-selfservice">
             {{ item.content.selfservices }}
           </div>
+          {{ item.content.pre_text }}
+          {{ item.content.article }}
           <ul class="accordion">
             {{ item.content.microarticles }}
             {{ item.content.legislation }}
