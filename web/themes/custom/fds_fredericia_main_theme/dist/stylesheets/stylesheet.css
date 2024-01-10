@@ -16170,6 +16170,57 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   margin-bottom: 0.5rem;
   background-color: transparent;
 }
+.accordion > li .accordion-button, .tabnav > li .accordion-button, .accordion > li .tabnav > button, .tabnav > li .tabnav > button {
+  font-size: 2rem;
+  padding: 25px 50px 25px 20px;
+  font-weight: 700;
+  background-color: white;
+  border: none;
+  color: #00335b;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  background-position: right 1.6rem center;
+  position: relative;
+  background-image: none !important;
+}
+.accordion > li .accordion-button:after, .tabnav > li .accordion-button:after, .accordion > li .tabnav > button:after, .tabnav > li .tabnav > button:after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  font-size: 1.8rem;
+  font-family: FontAwesome;
+  content: "\f067";
+  color: #00325b;
+}
+.accordion > li .accordion-button[aria-expanded=true], .tabnav > li .accordion-button[aria-expanded=true], .accordion > li .tabnav > button[aria-expanded=true], .tabnav > li .tabnav > button[aria-expanded=true] {
+  background-color: #00325b;
+  color: white;
+}
+.accordion > li .accordion-button[aria-expanded=true]:after, .tabnav > li .accordion-button[aria-expanded=true]:after, .accordion > li .tabnav > button[aria-expanded=true]:after, .tabnav > li .tabnav > button[aria-expanded=true]:after {
+  content: "\f068";
+  font-size: 1.8rem;
+  color: white;
+  font-family: FontAwesome;
+}
+.accordion > li .accordion-content, .tabnav > li .accordion-content, .accordion > li .tabnav-panel, .tabnav > li .tabnav-panel {
+  border: 1px solid #eceae8;
+  border-top: 0;
+}
 
 .paragraph--type--os2web-accordion-item .accordion-button, .paragraph--type--os2web-accordion-item .tabnav > button {
   position: relative;
@@ -20054,28 +20105,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .paragraph--type--os2web-borgerdk-article .field--name-byline {
   margin-bottom: 30px;
 }
-.paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .accordion .has-selfservice-links, .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .tabnav .has-selfservice-links {
-  position: relative;
-}
 .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .accordion .has-selfservice-links .selfservice-links, .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .tabnav .has-selfservice-links .selfservice-links {
-  position: absolute;
-  top: 8px;
-  right: 20px;
+  display: none;
 }
 .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .accordion .has-selfservice-links .accordion-button .field--name-title, .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .tabnav .has-selfservice-links .accordion-button .field--name-title, .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .accordion .has-selfservice-links .tabnav > button .field--name-title, .paragraph--type--os2web-borgerdk-article .field--type-os2web-borgerdk-article-reference .field__item .tabnav .has-selfservice-links .tabnav > button .field--name-title {
   max-width: 75%;
 }
-
-.selvbetjening-first:not(:first-child) {
-  display: none;
-}
-
-.selvbetjening-first {
-  background-color: #aabfcf;
-  color: white;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 10px 20px;
+.paragraph--type--os2web-borgerdk-article .bdk-selfservice {
+  margin: 25px 0;
 }
 
 .selvbetjening-borgerdk-link {
@@ -20085,15 +20122,18 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   text-decoration: none;
   padding: 10px 20px;
   position: relative;
+  border-bottom: 1px solid white;
 }
 .selvbetjening-borgerdk-link:hover i {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+.selvbetjening-borgerdk-link:hover .spotbox__content .field--name-title h3 {
+  text-decoration: underline;
+}
 .selvbetjening-borgerdk-link:hover {
   color: white;
-  text-decoration: underline;
 }
 .selvbetjening-borgerdk-link span {
   text-transform: uppercase;
@@ -20101,6 +20141,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .selvbetjening-borgerdk-link .spotbox__content .field--name-title h3 {
   margin: 0;
   color: white;
+  font-weight: normal;
 }
 .selvbetjening-borgerdk-link i {
   position: absolute;
@@ -20111,6 +20152,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           transform: translateX(-10px);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  font-size: 18px;
 }
 
 .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-heading h1, .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-heading h2, .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-heading h3, .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-heading h4, .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-heading h5, .paragraph--type--os2web-cnt-paragraph .field--name-field-os2web-cnt-heading h6 {
@@ -20211,9 +20253,12 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   transition: 0.3s;
   padding: 10px 20px;
   border-bottom: 1px solid white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .selvbetjening-labels .selvbetjening-links a:hover {
-  font-weight: 700;
+  text-decoration: underline;
 }
 .selvbetjening-labels .selvbetjening-links a:hover span {
   opacity: 1;
@@ -20232,7 +20277,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin-left: 20px;
 }
 .selvbetjening-labels .selvbetjening-links a span i {
-  font-size: 24px;
+  font-size: 18px;
 }
 .selvbetjening-labels .show-more-btn-selfservice-wrapper {
   display: -webkit-box;
