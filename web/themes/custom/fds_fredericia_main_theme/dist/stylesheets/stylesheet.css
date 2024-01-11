@@ -21121,6 +21121,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   width: 120px;
 }
 
+.contact-section-hearings {
+  margin: 80px 0;
+}
+
 .cta-section-wrapper {
   width: 100%;
   background-color: #00325b;
@@ -22199,6 +22203,36 @@ a:not([class]):hover {
 
 .paragraph--type--os2web-3-columns .row {
   padding: 25px 0;
+}
+
+.hearings-back {
+  background-color: #00335b;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.hearings-back:hover {
+  background-color: rgba(0, 51, 91, 0.9);
+  color: white;
+}
+.hearings-back:visited {
+  color: white;
+}
+
+.box-hearings {
+  margin: 80px 0;
+}
+.box-hearings .box__body-hearings .row-hearings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (min-width: 992px) {
