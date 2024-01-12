@@ -19872,8 +19872,24 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   min-height: 400px;
   overflow: hidden;
 }
+@media only screen and (max-width: 992px) {
+  .banner-event-fk {
+    max-height: none;
+    min-height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .banner-event-fk .banner-event-image {
   width: 65%;
+}
+@media only screen and (max-width: 992px) {
+  .banner-event-fk .banner-event-image {
+    width: 100%;
+    max-height: 400px;
+  }
 }
 .banner-event-fk .banner-event-image .field--name-field-os2web-evnet-image {
   height: 100%;
@@ -19893,6 +19909,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .banner-event-fk .banner-event-info {
+    width: 100%;
+  }
 }
 .banner-event-fk .banner-event-info h1 {
   color: white;
@@ -20926,7 +20947,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 0;
+  padding: 30px 20px;
 }
 .contact-template-wrapper .container .contact-template-heading {
   margin-bottom: 50px;
@@ -21022,6 +21043,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-weight: 600;
   color: #00325b;
   margin-bottom: 10px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address p, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h1, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h2, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h3, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h4, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h5, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h6, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address span {
+  color: #00335b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone {
   display: -webkit-box;
@@ -21176,18 +21200,22 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: flex;
   gap: 5px;
   font-weight: 600;
+  color: #00335b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-job .job-title {
   font-weight: 600;
+  color: #00335b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-job .job-task {
   font-style: italic;
+  color: #00335b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  color: #00335b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-email span {
   font-weight: 600;
@@ -21197,6 +21225,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  color: #00335b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-phone span {
   font-weight: 600;
