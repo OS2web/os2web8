@@ -75,7 +75,7 @@
   {% else %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
-        <div class="bdk-selfservice">
+        <div class="bdk-selfservice" style="background-color: #A51D38;">
           {{ item.content.selfservices }}
         </div>
         {{ item.content.pre_text }}
@@ -98,7 +98,7 @@
       {% endif %}
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-          <div class="bdk-selfservice">
+          <div class="bdk-selfservice" style="background-color: #A51D38;">
             {{ item.content.selfservices }}
           </div>
           {{ item.content.pre_text }}
