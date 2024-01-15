@@ -45,12 +45,48 @@
   }
   .bdk-selfservice {
     margin: 25px 0;
+    background-color: #A51D38;
+  }
+  .field--name-pre-text {
+    field__item {
+      h1 {
+        margin: 0 0 2.8rem 0;
+        color: #00335b;
+      }
+
+      h2, h3, h4, h5, h6, p {
+        color: #00335b;
+      }
+    }
+  }
+  article {
+    .field--name-header {
+      field__item {
+        p {
+          color: #00335b;
+        }
+      }
+    }
+  }
+  .field--name-byline {
+    field__item {
+      p {
+        color: #00335b;
+      }
+    }
+  }
+  .field--name-post-text {
+    .field__item {
+      h1, h2, h3, h4, h5, h6, p {
+        color: #00335b;
+      }
+    }
   }
 }
 
 
 .selvbetjening-borgerdk-link {
-  background-color: #A51D38;
+  background-color: transparent;
   color: white;
   display: block;
   text-decoration: none;

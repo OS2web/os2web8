@@ -20283,10 +20283,27 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-borgerdk-article .bdk-selfservice {
   margin: 25px 0;
+  background-color: #A51D38;
+}
+.paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item h1 {
+  margin: 0 0 2.8rem 0;
+  color: #00335b;
+}
+.paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item h2, .paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item h3, .paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item h4, .paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item h5, .paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item h6, .paragraph--type--os2web-borgerdk-article .field--name-pre-text field__item p {
+  color: #00335b;
+}
+.paragraph--type--os2web-borgerdk-article article .field--name-header field__item p {
+  color: #00335b;
+}
+.paragraph--type--os2web-borgerdk-article .field--name-byline field__item p {
+  color: #00335b;
+}
+.paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item h1, .paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item h2, .paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item h3, .paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item h4, .paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item h5, .paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item h6, .paragraph--type--os2web-borgerdk-article .field--name-post-text .field__item p {
+  color: #00335b;
 }
 
 .selvbetjening-borgerdk-link {
-  background-color: #A51D38;
+  background-color: transparent;
   color: white;
   display: block;
   text-decoration: none;
