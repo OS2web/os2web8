@@ -8,7 +8,9 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-{% set pageTeaserText = content.field_os2web_news_description | render %}
+{% set pageTeaserText = content.field_os2web_news_intro is empty
+  ? content.field_os2web_news_description|render
+  : content.field_os2web_news_intro|render %}
 
 <a href="{{ url }}" class="news-teaser" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
   <i class="fa-solid fa-arrow-right"></i>

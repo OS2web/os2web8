@@ -67,9 +67,10 @@
       transition: .3s;
       padding: 10px 20px;
       border-bottom: 1px solid white;
+      justify-content: space-between;
 
       &:hover {
-        font-weight: 700;
+        text-decoration: underline;
 
         span {
           opacity: 1;
@@ -87,7 +88,7 @@
         transition: .4s;
         margin-left: 20px;
         i {
-          font-size: 24px;
+          font-size: 18px;
         }
       }
     }

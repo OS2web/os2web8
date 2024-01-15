@@ -17,17 +17,16 @@
   {% if not content['#is_decision'] %}
   {{ content.field_os2web_hearings_reply }}
 
-  <h2>{{ 'Skriv dit høringssvar' | trans }}</h2>
-  <div class="box">
-    <div class="box__body">
-      <div class="row">
-        <div class="col-12 col-md-auto">
+  <div class="box-hearings">
+    <div class="box__body-hearings">
+      <div class="row-hearings">
+        <div class="hearings-end-date">
           {{ content.field_os2web_hearings_end_date }}
         </div>
-        <div class="col-12 col-md-auto">
+        <div class="hearings-publiished">
           {{ content.field_os2web_hearings_published }}
         </div>
-        <div class="col-12 col-md-auto">
+        <div class="hearings-closed">
           {% if not content['#closed'] %}
             {{ content.links }}
           {% endif %}
@@ -36,14 +35,22 @@
     </div>
   </div>
 {% endif %}
-  <br />
+
+  {% if content.field_hearings_cnt is not empty %}
+
+  <div class="contact-section-hearings">
+
+    {{ content.field_hearings_cnt }}
+
+  </div>
+
+  {% endif %}
+
 
   {# Link back to result overview. Hardcoded! #}
-  <div class="node__links">
-    <a href="/hoeringer-og-afgoerelser" role="button">
+  <div class="back-btn-hearings">
+    <a class="hearings-back" href="/hoeringer-og-afgoerelser" role="button">
       {{ 'Tilbage' | trans }}
     </a>
   </div>
-
-  <br><br>
 </div>

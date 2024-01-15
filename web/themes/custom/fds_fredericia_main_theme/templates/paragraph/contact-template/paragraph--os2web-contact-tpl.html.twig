@@ -1,6 +1,13 @@
 {# #}
 
-<div class="contact-template-wrapper">
+{% set bgColorClass = '' %}
+{% if paragraph.field_cnt_bg.value == 'lightblue' %}
+  {% set bgColorClass = 'bg-lightblue' %}
+{% elseif paragraph.field_cnt_bg.value == 'white' %}
+  {% set bgColorClass = 'bg-white' %}
+{% endif %}
+
+<div class="contact-template-wrapper {{ bgColorClass }}">
 
     <div class="container">
 

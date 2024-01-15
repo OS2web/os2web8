@@ -30,12 +30,9 @@
     .field__item {
       .accordion {
         .has-selfservice-links {
-          position: relative;
 
           .selfservice-links {
-            position: absolute;
-            top: 8px;
-            right: 20px;
+            display: none;
           }
           .accordion-button {
             .field--name-title {
@@ -46,35 +43,66 @@
       }
     }
   }
+  .bdk-selfservice {
+    margin: 25px 0;
+  }
+  .field--name-pre-text {
+    .field__item {
+      h1 {
+        margin: 0 0 2.8rem 0;
+        color: #00335b;
+      }
+
+      h2, h3, h4, h5, h6, p {
+        color: #00335b;
+      }
+    }
+  }
+  article {
+    .field--name-header {
+      .field__item {
+        p {
+          color: #00335b;
+        }
+      }
+    }
+  }
+  .field--name-byline {
+    .field__item {
+      p {
+        color: #00335b;
+      }
+    }
+  }
+  .field--name-post-text {
+    .field__item {
+      h1, h2, h3, h4, h5, h6, p {
+        color: #00335b;
+      }
+    }
+  }
 }
 
-.selvbetjening-first:not(:first-child) {
-  display: none;
-}
-
-.selvbetjening-first {
-  background-color: #aabfcf;
-  color: white;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 10px 20px;
-}
 
 .selvbetjening-borgerdk-link {
-  background-color: $background_color__default;
+  background-color: transparent;
   color: white;
   display: block;
   text-decoration: none;
   padding: 10px 20px;
   position: relative;
+  border-bottom: 1px solid white;
 
   &:hover i {
     opacity: 1;
     transform: translateX(0);
   }
+  &:hover .spotbox__content .field--name-title h3 {
+    text-decoration: underline;
+  }
+
   &:hover {
     color: white;
-    text-decoration: underline;
   }
 
   span {
@@ -85,6 +113,7 @@
       h3 {
         margin: 0;
         color: white;
+        font-weight: normal;
       }
     }
   }
@@ -95,6 +124,7 @@
     opacity: 0;
     transform: translateX(-10px);
     transition: .3s ease;
+    font-size: 18px;
   }
 }
 

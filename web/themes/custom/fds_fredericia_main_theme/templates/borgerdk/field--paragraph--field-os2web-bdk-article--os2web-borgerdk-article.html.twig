@@ -43,7 +43,6 @@
   'field--name-' ~ field_name|clean_class,
   'field--type-' ~ field_type|clean_class,
   'field--label-' ~ label_display,
-  label_display == 'inline' ? 'clearfix',
 ]
 %}
 {%
@@ -57,59 +56,65 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
-        {% if item.content['#options'].entity %}
-          {% set referencedEntity = item.content['#options'].entity %}
-          {% set selfServiceUrl = referencedEntity.get('selfserviceUrl').getValue %}
-          {% if selfServiceUrl and selfServiceUrl[0] and selfServiceUrl[0]['value'] %}
-            <div{{ item.attributes.addClass('field__item') }}>
-              <a href="{{ selfServiceUrl[0]['value'] }}">{{ referencedEntity.label() }}</a>
-            </div>
-          {% endif %}
-        {% endif %}
+        <div{{ item.attributes.addClass('field__item') }}>
+          <div class="bdk-selfservice" style="background-color: #A51D38;">
+            {{ item.content.selfservices }}
+          </div>
+          {{ item.content.pre_text }}
+          {{ item.content.article }}
+          <ul class="accordion">
+            {{ item.content.microarticles }}
+            {{ item.content.legislation }}
+            {{ item.content.recommendation }}
+          </ul>
+          {{ item.content.byline }}
+          {{ item.content.post_text }}
+        </div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      {% if item.content['#options'].entity %}
-        {% set referencedEntity = item.content['#options'].entity %}
-        {% set selfServiceUrl = referencedEntity.get('selfserviceUrl').getValue %}
-        {% if selfServiceUrl and selfServiceUrl[0] and selfServiceUrl[0]['value'] %}
-          <div{{ item.attributes.addClass('field__item') }}>
-            <a href="{{ selfServiceUrl[0]['value'] }}">{{ referencedEntity.label() }}</a>
-          </div>
-        {% endif %}
-      {% endif %}
+      <div{{ attributes.addClass(classes, 'field__item') }}>
+        <div class="bdk-selfservice" style="background-color: #A51D38;">
+          {{ item.content.selfservices }}
+        </div>
+        {{ item.content.pre_text }}
+        {{ item.content.article }}
+        <ul class="accordion">
+          {{ item.content.microarticles }}
+          {{ item.content.legislation }}
+          {{ item.content.recommendation }}
+        </ul>
+        {{ item.content.byline }}
+        {{ item.content.post_text }}
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div class="field__items">
-        {% for item in items %}
-          {% if item.content['#options'].entity %}
-            {% set referencedEntity = item.content['#options'].entity %}
-            {% set selfServiceUrl = referencedEntity.get('selfserviceUrl').getValue %}
-            {% if selfServiceUrl and selfServiceUrl[0] and selfServiceUrl[0]['value'] %}
-              <div{{ item.attributes.addClass('field__item') }}>
-                <a href="{{ selfServiceUrl[0]['value'] }}">{{ referencedEntity.label() }}</a>
-              </div>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    {% else %}
+    <div class="field__items">
+      {% endif %}
       {% for item in items %}
-        {% if item.content['#options'].entity %}
-          {% set referencedEntity = item.content['#options'].entity %}
-          {% set selfServiceUrl = referencedEntity.get('selfserviceUrl').getValue %}
-          {% if selfServiceUrl and selfServiceUrl[0] and selfServiceUrl[0]['value'] %}
-            <div{{ item.attributes.addClass('field__item') }}>
-              <a href="{{ selfServiceUrl[0]['value'] }}">{{ referencedEntity.label() }}</a>
-            </div>
-          {% endif %}
-        {% endif %}
+        <div{{ item.attributes.addClass('field__item') }}>
+          <div class="bdk-selfservice" style="background-color: #A51D38;">
+            {{ item.content.selfservices }}
+          </div>
+          {{ item.content.pre_text }}
+          {{ item.content.article }}
+          <ul class="accordion">
+            {{ item.content.microarticles }}
+            {{ item.content.legislation }}
+            {{ item.content.recommendation }}
+          </ul>
+          {{ item.content.byline }}
+          {{ item.content.post_text }}
+        </div>
       {% endfor %}
+      {% if multiple %}
+    </div>
     {% endif %}
   </div>
 {% endif %}
+
