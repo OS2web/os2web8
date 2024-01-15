@@ -45,10 +45,10 @@
   }
   .bdk-selfservice {
     margin: 25px 0;
-    background-color: #A51D38;
+    background-color: #A51D38 !important;
   }
   .field--name-pre-text {
-    field__item {
+    .field__item {
       h1 {
         margin: 0 0 2.8rem 0;
         color: #00335b;
@@ -61,7 +61,7 @@
   }
   article {
     .field--name-header {
-      field__item {
+      .field__item {
         p {
           color: #00335b;
         }
@@ -69,7 +69,7 @@
     }
   }
   .field--name-byline {
-    field__item {
+    .field__item {
       p {
         color: #00335b;
       }
