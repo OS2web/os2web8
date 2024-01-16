@@ -526,6 +526,15 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     }
   }
 
+  if ($variables['paragraph']->getType() == 'os2web_menu_links_paragraph' && isset($variables['content']['field_os2web_page_intro'])) {
+          $text = strip_tags(render($variables['content']['field_os2web_page_intro']));
+          if (strlen($text) > 110) {
+              $variables['intro_text_truncated'] = substr($text, 0, 110) . '…';
+          } else {
+              $variables['intro_text_truncated'] = $text;
+          }
+      }
+
 }
 
 function fds_fredericia_main_theme_preprocess(&$variables, $hook) {
