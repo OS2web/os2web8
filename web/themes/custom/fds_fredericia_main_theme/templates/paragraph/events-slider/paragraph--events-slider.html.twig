@@ -1,12 +1,12 @@
 {% if content %}
   <div class="events-slider">
-    {% if paragraph.field_your_boolean_field.value %}
+    {% if paragraph.show_recent_events.value %}
       {# Render the view for recent events #}
       {{ events_view }}
     {% else %}
       {# Loop through the handpicked events and display them #}
       <div class="handpicked-events">
-        {% for item in paragraph.field_your_entity_reference_field %}
+        {% for item in paragraph.field_event_ref %}
           <div class="event-item">
             {# Display fields from the event content type #}
             <h3>{{ item.entity.label }}</h3>
