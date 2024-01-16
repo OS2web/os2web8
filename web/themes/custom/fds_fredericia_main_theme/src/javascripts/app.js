@@ -629,4 +629,20 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 })(jQuery, Drupal);
 
+document.addEventListener('DOMContentLoaded', function() {
+  var showMoreButtons = document.querySelectorAll('.show-more-button-selfservice');
+  showMoreButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var moreItemsWrapper = this.previousElementSibling;
+      if (moreItemsWrapper.style.display === 'none') {
+        moreItemsWrapper.style.display = 'block';
+        this.textContent = '- Skjul';
+      } else {
+        moreItemsWrapper.style.display = 'none';
+        this.textContent = '+ Vis flere';
+      }
+    });
+  });
+});
+
 

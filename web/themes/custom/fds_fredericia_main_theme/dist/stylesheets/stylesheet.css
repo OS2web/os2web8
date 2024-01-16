@@ -20284,6 +20284,17 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .paragraph--type--os2web-borgerdk-article .bdk-selfservice {
   margin: 25px 0;
 }
+.paragraph--type--os2web-borgerdk-article .bdk-selfservice .show-more-button-selfservice {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 700;
+}
+.paragraph--type--os2web-borgerdk-article .bdk-selfservice .show-more-button-selfservice:hover {
+  text-decoration: underline;
+}
 .paragraph--type--os2web-borgerdk-article .field--name-pre-text .field__item h1 {
   margin: 0 0 2.8rem 0;
   color: #00335b;

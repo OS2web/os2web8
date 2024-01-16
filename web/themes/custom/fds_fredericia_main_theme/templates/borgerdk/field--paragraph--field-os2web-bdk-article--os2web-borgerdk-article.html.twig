@@ -58,7 +58,17 @@
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
           <div class="bdk-selfservice" style="background-color: #A51D38;">
-            {{ item.content.selfservices }}
+            {% set link_count = item.content.selfservices|length %}
+            {% for link in item.content.selfservices %}
+            {% if loop.index == 4 %}
+            <div class="more-items-wrapper" style="display: none;">
+              {% endif %}
+              {{ link }}
+              {% endfor %}
+              {% if link_count > 3 %}
+            </div> <!-- Close the more-items-wrapper -->
+            <button class="show-more-button-selfservice">+ Vis flere</button>
+            {% endif %}
           </div>
           {{ item.content.pre_text }}
           {{ item.content.article }}
@@ -76,7 +86,17 @@
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
         <div class="bdk-selfservice" style="background-color: #A51D38;">
-          {{ item.content.selfservices }}
+          {% set link_count = item.content.selfservices|length %}
+          {% for link in item.content.selfservices %}
+          {% if loop.index == 4 %}
+          <div class="more-items-wrapper" style="display: none;">
+            {% endif %}
+            {{ link }}
+            {% endfor %}
+            {% if link_count > 3 %}
+          </div> <!-- Close the more-items-wrapper -->
+          <button class="show-more-button-selfservice">+ Vis flere</button>
+          {% endif %}
         </div>
         {{ item.content.pre_text }}
         {{ item.content.article }}
@@ -99,7 +119,17 @@
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
           <div class="bdk-selfservice" style="background-color: #A51D38;">
-            {{ item.content.selfservices }}
+            {% set link_count = item.content.selfservices|length %}
+            {% for link in item.content.selfservices %}
+            {% if loop.index == 4 %}
+            <div class="more-items-wrapper" style="display: none;">
+              {% endif %}
+              {{ link }}
+              {% endfor %}
+              {% if link_count > 3 %}
+            </div> <!-- Close the more-items-wrapper -->
+            <button class="show-more-button-selfservice">+ Vis flere</button>
+            {% endif %}
           </div>
           {{ item.content.pre_text }}
           {{ item.content.article }}

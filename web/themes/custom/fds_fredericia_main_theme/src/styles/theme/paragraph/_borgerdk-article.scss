@@ -45,6 +45,19 @@
   }
   .bdk-selfservice {
     margin: 25px 0;
+
+    .show-more-button-selfservice {
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: transparent;
+      font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .field--name-pre-text {
     .field__item {
