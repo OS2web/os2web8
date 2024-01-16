@@ -40,11 +40,10 @@
 
               <div class="fredericia-box__body">
                 <span>{{ menu_link.title }}</span>
-                {% set characterLimit = 110 %} {# Set your desired character limit here #}
 
                 {% if paragraph.field_os2web_menu_links_show_int.value %}
                   <div class="intro-text">
-                    {{ intro_text_truncated|raw }}
+                      {{ menu_link['intro_text'] }}
                   </div>
                 {% endif %}
 
@@ -57,4 +56,19 @@
 
     {% endblock %}
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var characterLimit = 110;
+      var introTextElements = document.querySelectorAll('.intro-text');
+
+      introTextElements.forEach(function(el) {
+        var text = el.textContent || el.innerText;
+        if (text.length > characterLimit) {
+          var truncated = text.substring(0, characterLimit) + '…';
+          el.textContent = truncated;
+        }
+      });
+    });
+  </script>
+
 {% endblock paragraph %}
