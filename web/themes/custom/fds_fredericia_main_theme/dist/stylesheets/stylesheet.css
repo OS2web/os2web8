@@ -17141,6 +17141,15 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
     font-size: 14px;
   }
 }
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text .field--name-field-os2web-page-intro {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text .field--name-field-os2web-page-intro p {
+  color: white;
+  font-size: 13px;
+  line-height: 1.4;
+}
 
 .fredericia-menu-link-wrapper {
   display: grid;

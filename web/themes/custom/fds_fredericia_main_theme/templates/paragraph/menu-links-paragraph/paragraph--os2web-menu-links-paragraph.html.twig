@@ -40,8 +40,16 @@
 
               <div class="fredericia-box__body">
                 <span>{{ menu_link.title }}</span>
-                {% if menu_link['intro_text']|length %}
-                  <div class="intro-text">{{ menu_link['intro_text'] }}</div>
+                {% set characterLimit = 110 %} {# Set your desired character limit here #}
+
+                {% if paragraph.field_os2web_menu_links_show_int.value %}
+                  <div class="intro-text">
+                    {% if menu_link['intro_text']|length > characterLimit %}
+                      {{ menu_link['intro_text']|slice(0, characterLimit) }}…
+                    {% else %}
+                      {{ menu_link['intro_text'] }}
+                    {% endif %}
+                  </div>
                 {% endif %}
 
 
