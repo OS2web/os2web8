@@ -102,7 +102,6 @@ main.col-lg-8 {
             .field--name-field-os2web-page-intro {
               margin-bottom: 0;
               margin-top: 5px;
-
               p {
                 color: white;
                 font-size: 13px;
@@ -149,6 +148,11 @@ main.col-lg-8 {
     position: relative;
     box-shadow: 0 4px 24px hsl(0deg 0% 0% / 0.8);
     transition: .3s ease;
+    color: white;
+
+    &:visited {
+      color: white;
+    }
 
     @media only screen and (max-width: 640px) {
       min-height: 100px;
@@ -195,8 +199,8 @@ main.col-lg-8 {
         }
         .intro-text {
           color: white;
-          font-size: 13px;
-          line-height: 1.4;
+          font-size: 13px !important;
+          line-height: 1.4 !important;
           margin-top: 5px;
 
           .field--name-field-os2web-page-intro {
