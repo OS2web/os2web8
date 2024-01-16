@@ -528,6 +528,16 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
 
 }
 
+function fds_fredericia_main_theme_preprocess_paragraph__events_slider(&$variables) {
+  // Check if the paragraph is of type 'events_slider'
+  if ($variables['paragraph']->getType() == 'events_slider') {
+    // Load the view programmatically
+    $view = views_embed_view('os2web_events', 'events');
+    // Pass the rendered view to the template
+    $variables['events_view'] = $view;
+  }
+}
+
 function fds_fredericia_main_theme_preprocess(&$variables, $hook) {
     $variables['base_path'] = base_path();
 }
