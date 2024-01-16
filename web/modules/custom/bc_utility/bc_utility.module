@@ -57,7 +57,6 @@ function bc_utility_block_access($block, $operation, $account) {
 
 function bc_utility_field_widget_single_element_form_alter(array &$element, FormStateInterface $form_state, array $context) {
   if (isset($element['uri'])) {
-    $element['uri']['#type'] = 'textfield';
     $element['uri']['#element_validate'] = [[LinkWidgetValidators::class, 'validateUriElement']];
   }
 }
