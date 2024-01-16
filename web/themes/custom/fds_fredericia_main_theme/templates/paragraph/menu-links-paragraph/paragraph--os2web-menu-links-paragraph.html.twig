@@ -40,7 +40,10 @@
 
               <div class="fredericia-box__body">
                 <span>{{ menu_link.title }}</span>
-                <span class="intro-text">{{ dump(menu_link) }}</span>
+                {% if menu_link['intro_text']|length %}
+                  <div class="intro-text">{{ menu_link['intro_text'] }}</div>
+                {% endif %}
+
 
               </div>
             </div>
