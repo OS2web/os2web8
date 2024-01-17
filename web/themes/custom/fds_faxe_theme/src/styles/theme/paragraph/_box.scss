@@ -22,8 +22,19 @@
 
 .paragraph--type--os2web-box-paragraph {
 
+  text-align: left;
+  background-color: #e6e3e1;
+
   h1, h2, h3, h4, h5, h6, p {
     color: inherit;
+  }
+
+  .box__heading {
+    background-color: #e6e3e1;
+  }
+
+  .box__body {
+    padding: 0 20px 30px;
   }
 
   &.background-color--transparent {
