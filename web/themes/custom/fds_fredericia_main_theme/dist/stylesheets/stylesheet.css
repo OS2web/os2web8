@@ -15457,7 +15457,7 @@ a.social-icon-teaser {
   }
 }
 .region-header__below .menu-level-1 > li {
-  min-height: 140px;
+  min-height: 200px;
 }
 .region-header__below .menu-level-1 > li > a {
   color: #00335b;
