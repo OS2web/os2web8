@@ -3336,7 +3336,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var statusBanner = this.closest('.status-banner');
 
       if (statusBanner) {
-        statusBanner.style.transform = 'translateY(-100%)';
+        statusBanner.style.display = 'none';
 
         // Get the node ID
         var nodeId = statusBanner.getAttribute('data-node-id');
@@ -3356,7 +3356,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var statusBanner = document.querySelector('.status-banner[data-banner-id="' + bannerId + '"]');
 
       if (statusBanner) {
-        statusBanner.style.transform = 'translateY(0)'; // Display the banner
+        statusBanner.style.display = 'block'; // Display the banner
 
         var nodeId = statusBanner.getAttribute('data-node-id');
 
@@ -3376,9 +3376,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var bannerState = localStorage.getItem('status_banner_' + nodeId);
 
     if (bannerState === 'closed') {
-      banner.style.transform = 'translateY(-100%)';
+      banner.style.display = 'none';
     } else {
-      banner.style.transform = 'translateY(0)'; // Or set to your desired display value for open banners
+      banner.style.block = 'block'; // Or set to your desired display value for open banners
     }
 
   }
