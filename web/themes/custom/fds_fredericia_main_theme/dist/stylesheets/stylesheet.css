@@ -21959,6 +21959,18 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin: 20px 0;
   color: #00335b;
 }
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-view-node {
+  text-align: right;
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-view-node .field-content a {
+  color: #00335b;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-view-node .field-content a:hover {
+  text-decoration: underline;
+}
 .events-slider .eventkalender-link {
   width: 100%;
   text-align: right;

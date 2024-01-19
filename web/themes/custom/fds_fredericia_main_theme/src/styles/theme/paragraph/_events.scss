@@ -61,6 +61,22 @@
               color: #00335b;
             }
           }
+          .views-field-view-node {
+            text-align: right;
+
+            .field-content {
+              a {
+                color: #00335b;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
         }
       }
     }
