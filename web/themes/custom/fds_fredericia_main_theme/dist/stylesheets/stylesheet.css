@@ -21941,12 +21941,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-size: 13px;
   color: #00335b;
 }
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title {
+  min-height: 50px;
+}
 .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title .field-content a {
   margin: 10px 0 0 0;
   color: #00335b;
   font-size: 22px;
   font-weight: 600;
-  min-height: 50px;
   text-decoration: none;
 }
 .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title .field-content a:hover {

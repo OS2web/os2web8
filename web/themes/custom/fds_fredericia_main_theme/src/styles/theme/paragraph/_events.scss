@@ -38,13 +38,13 @@
             }
           }
           .views-field-title {
+            min-height: 50px;
             .field-content {
               a {
                 margin: 10px 0 0 0;
                 color: #00335b;
                 font-size: 22px;
                 font-weight: 600;
-                min-height: 50px;
                 text-decoration: none;
 
                 &:hover {
