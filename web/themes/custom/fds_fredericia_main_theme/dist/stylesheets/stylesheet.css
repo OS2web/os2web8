@@ -21903,6 +21903,62 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           align-items: center;
 }
 
+.events-slider .views-element-container .view-os2web-events .view-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (max-width: 992px) {
+  .events-slider .views-element-container .view-os2web-events .view-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 10px;
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-evnet-image .field-content img {
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto;
+}
+@media only screen and (max-width: 992px) {
+  .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-evnet-image .field-content img {
+    width: 100%;
+  }
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-event-start-date .field-content time {
+  font-style: italic;
+  font-size: 13px;
+  color: #00335b;
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title .field-content a {
+  margin: 10px 0 0 0;
+  color: #00335b;
+  font-size: 22px;
+  font-weight: 600;
+  min-height: 50px;
+  text-decoration: none;
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title .field-content a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #00335b;
+          text-decoration-color: #00335b;
+}
+.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-event-resume .field-content {
+  min-height: 110px;
+  margin: 20px 0;
+  color: #00335b;
+}
 .events-slider .eventkalender-link {
   width: 100%;
   text-align: right;
@@ -21927,6 +21983,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media only screen and (max-width: 992px) {
+  .events-slider .handpicked-events {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .events-slider .handpicked-events .event-item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -21939,6 +22003,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
      object-fit: cover;
   width: auto;
 }
+@media only screen and (max-width: 992px) {
+  .events-slider .handpicked-events .event-item .event-image-link .event-image img {
+    width: 100%;
+  }
+}
 .events-slider .handpicked-events .event-item .event-date {
   font-style: italic;
   font-size: 13px;
@@ -21949,16 +22018,23 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .handpicked-events .event-item .event-heading-link:hover {
   text-decoration: underline;
+  -webkit-text-decoration-color: #00335b;
+          text-decoration-color: #00335b;
+}
+.events-slider .handpicked-events .event-item .event-heading-link:visited, .events-slider .handpicked-events .event-item .event-heading-link:focus, .events-slider .handpicked-events .event-item .event-heading-link:focus-within {
+  color: #00335b;
 }
 .events-slider .handpicked-events .event-item .event-heading-link h2 {
   margin: 10px 0 0 0;
   color: #00335b;
   font-size: 22px;
   font-weight: 600;
+  min-height: 50px;
 }
 .events-slider .handpicked-events .event-item .event-resume {
   margin: 20px 0;
   color: #00335b;
+  min-height: 110px;
 }
 .events-slider .handpicked-events .event-item .event-link {
   width: 100%;

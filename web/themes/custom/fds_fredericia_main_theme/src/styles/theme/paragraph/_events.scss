@@ -1,4 +1,70 @@
 .events-slider {
+
+
+  .views-element-container {
+    .view-os2web-events {
+      .view-content {
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 992px) {
+          flex-direction: column;
+        }
+
+        .views-row {
+          flex: 1;
+          margin: 0 10px;
+
+          .views-field-field-os2web-evnet-image {
+            .field-content {
+              img {
+                height: 240px;
+                object-fit: cover;
+                width: auto;
+
+                @media only screen and (max-width: 992px) {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .views-field-field-os2web-event-start-date {
+            .field-content {
+              time {
+                font-style: italic;
+                font-size: 13px;
+                color: #00335b;
+              }
+            }
+          }
+          .views-field-title {
+            .field-content {
+              a {
+                margin: 10px 0 0 0;
+                color: #00335b;
+                font-size: 22px;
+                font-weight: 600;
+                min-height: 50px;
+                text-decoration: none;
+
+                &:hover {
+                  text-decoration: underline;
+                  text-decoration-color: #00335b;
+                }
+              }
+            }
+          }
+          .views-field-field-os2web-event-resume {
+            .field-content {
+              min-height: 110px;
+              margin: 20px 0;
+              color: #00335b;
+            }
+          }
+        }
+      }
+    }
+  }
   .eventkalender-link {
     width: 100%;
     text-align: right;
@@ -22,6 +88,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+
     .event-item {
       flex: 1;
       margin: 0 10px;
@@ -32,6 +102,10 @@
             height: 240px;
             object-fit: cover;
             width: auto;
+
+            @media only screen and (max-width: 992px) {
+              width: 100%;
+            }
           }
         }
       }
@@ -45,6 +119,11 @@
 
         &:hover {
           text-decoration: underline;
+          text-decoration-color: #00335b;
+        }
+
+        &:visited, &:focus, &:focus-within {
+          color: #00335b;
         }
 
         h2 {
@@ -52,12 +131,14 @@
           color: #00335b;
           font-size: 22px;
           font-weight: 600;
+          min-height: 50px;
         }
       }
 
       .event-resume {
         margin: 20px 0;
         color: #00335b;
+        min-height: 110px;
       }
 
       .event-link {
