@@ -18582,10 +18582,8 @@ ul.related-links a:hover {
   opacity: 0;
 }
 .status-bar-wrapper.reopening {
-  -webkit-transition: height 0.4s ease, -webkit-transform 0.4s ease;
-  transition: height 0.4s ease, -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease, height 0.4s ease;
-  transition: transform 0.4s ease, height 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   opacity: 1;
 }
 .status-bar-wrapper .container {
