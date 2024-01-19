@@ -18566,7 +18566,6 @@ ul.related-links a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 45px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   position: relative;
@@ -18575,6 +18574,7 @@ ul.related-links a:hover {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
+  overflow: hidden;
 }
 .status-bar-wrapper.initial-closed {
   -webkit-transition: none;
