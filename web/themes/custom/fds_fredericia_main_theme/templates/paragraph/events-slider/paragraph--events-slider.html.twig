@@ -1,5 +1,9 @@
 {% if content %}
   <div class="events-slider">
+    <div class="eventkalender-link">
+      <a href="https://www.visitfredericia.dk/events" target="_blank">Se alle begivenheder<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
     {% if paragraph.field_show_recent_events.value %}
       {# Render the view for recent events #}
       {{ events_view }}
@@ -9,8 +13,25 @@
         {% for item in paragraph.field_event_ref %}
           <div class="event-item">
             {# Display fields from the event content type #}
-            <h3>{{ item.entity.label }}</h3>
-            {# Add more fields as needed, e.g., item.entity.field_event_date #}
+            <a class="event-image-link" href="{{ path('entity.node.canonical', {'node': item.entity.id}) }}">
+              <div class="event-image">
+                <img src="{{ file_url(item.entity.field_os2web_evnet_image.entity.fileuri) }}" alt="{{ item.entity.field_os2web_evnet_image.alt }}" />
+              </div>
+            </a>
+            <div class="event-date">
+              {% if item.entity.field_os2web_event_start_date %}
+                {{ item.entity.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
+              {% endif %}
+            </div>
+            <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': item.entity.id}) }}">
+              <h2>{{ item.entity.label }}</h2>
+            </a>
+            <div class="event-resume">
+              {{ item.entity.field_os2web_event_resume.value|raw }}
+            </div>
+            <div class="event-link">
+              <a href="{{ path('entity.node.canonical', {'node': item.entity.id}) }}">Læs mere</a>
+            </div>
           </div>
         {% endfor %}
       </div>

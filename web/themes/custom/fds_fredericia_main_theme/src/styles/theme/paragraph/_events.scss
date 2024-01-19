@@ -1,0 +1,75 @@
+.events-slider {
+  .eventkalender-link {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+
+    a {
+      color: #00335b;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
+  .handpicked-events {
+    display: flex;
+    justify-content: space-between;
+
+    .event-item {
+      flex: 1;
+      margin: 0 10px;
+
+      .event-image-link {
+        .event-image {
+          img {
+            height: 240px;
+            object-fit: cover;
+            width: auto;
+          }
+        }
+      }
+      .event-date {
+        font-style: italic;
+        font-size: 13px;
+        color: #00335b;
+      }
+      .event-heading-link {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        h2 {
+          margin: 10px 0 0 0;
+          color: #00335b;
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+
+      .event-resume {
+        margin: 20px 0;
+        color: #00335b;
+      }
+
+      .event-link {
+        width: 100%;
+        text-align: right;
+        a {
+          color: #00335b;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+
+    }
+  }
+}
