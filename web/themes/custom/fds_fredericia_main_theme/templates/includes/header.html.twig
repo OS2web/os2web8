@@ -99,7 +99,7 @@
         <button class="status-banner-open-btn" data-banner-id="{{ node.id }}"><span>Vis information</span><i class="fa-solid fa-circle-info"></i></button>
       </div>
 
-      <div data-node-id="{{ node.id }}" data-banner-id="{{ node.id }}" class="status-banner" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'alert' %} background-color: #b8092e;
+      <div data-node-id="{{ node.id }}" data-banner-id="{{ node.id }}" class="status-banner" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'alert' %} background-color: #A51D38;
         {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %} background-color: #f2ef96;
         {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'alright' %}background-color: #3e8346; {% endif  %}">
         <div class="container">
