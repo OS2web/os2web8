@@ -200,30 +200,64 @@
   }
 
   .field--name-field-selfbetjening-ref {
-    padding: 0 40px 40px 40px;
-
     .field__item {
+      //a {
+      //  padding-left: 35px;
+      //  text-decoration: none;
+      //  position: relative;
+      //  color: black;
+      //
+      //  &:hover {
+      //    text-decoration: underline;
+      //  }
+      //
+      //  &:before {
+      //    top: -5px;
+      //    left: 0;
+      //    position: absolute;
+      //    font-size: 2.4rem;
+      //    font-family: "Material Icons";
+      //    content: "keyboard_backspace";
+      //
+      //    color: $color__bullets;
+      //
+      //    transform: rotate(180deg);
+      //  }
+      //}
       a {
-        padding-left: 35px;
-        text-decoration: none;
+        padding: 25px 40px;
+        font-size: 1.8rem;
         position: relative;
-        color: black;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
+        display: block;
+        color: $color-black;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        width: 100%;
         &:before {
-          top: -5px;
-          left: 0;
+          background-color: $background_color__primary;
+          color: $color-white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          content: $fa-var-angle-right;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          height: 40px;
+          width: 40px;
           position: absolute;
-          font-size: 2.4rem;
-          font-family: "Material Icons";
-          content: "keyboard_backspace";
-
-          color: $color__bullets;
-
-          transform: rotate(180deg);
+        }
+        &:hover {
+          background-color: $gray-primary;
+          color: $background_color__primary;
+        }
+        &:focus {
+          outline: 0;
         }
       }
     }

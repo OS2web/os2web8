@@ -32,6 +32,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  margin: 80px 0;
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
