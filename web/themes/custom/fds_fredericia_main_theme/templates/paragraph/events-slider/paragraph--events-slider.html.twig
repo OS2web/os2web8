@@ -13,25 +13,24 @@
         {% for item in paragraph.field_event_ref %}
           <div class="event-item">
             {# Display fields from the event content type #}
-            <a class="event-image-link" href="{{ item.entity.field_os2web_event_url }}" target="_blank">
+            <a class="event-image-link" href="{{ path('entity.node.canonical', {'node': item.entity.id}) }}">
               <div class="event-image">
                 <img src="{{ file_url(item.entity.field_os2web_evnet_image.entity.fileuri) }}" alt="{{ item.entity.field_os2web_evnet_image.alt }}" />
               </div>
             </a>
             <div class="event-date">
               {% if item.entity.field_os2web_event_start_date %}
-                <i class="fa fa-calendar" aria-hidden="true"></i>
                 {{ item.entity.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
               {% endif %}
             </div>
-            <a class="event-heading-link" href="{{ item.entity.field_os2web_event_url }}" target="_blank">
+            <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': item.entity.id}) }}">
               <h2>{{ item.entity.label }}</h2>
             </a>
             <div class="event-resume">
               {{ item.entity.field_os2web_event_resume.value|raw }}
             </div>
             <div class="event-link">
-              <a href="{{ item.entity.field_os2web_event_url }}" target="_blank">Læs mere</a>
+              <a href="{{ path('entity.node.canonical', {'node': item.entity.id}) }}">Læs mere</a>
             </div>
           </div>
         {% endfor %}
