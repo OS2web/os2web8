@@ -22056,6 +22056,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: #00335b;
   font-size: 20px;
   font-weight: 600;
+  text-decoration: none;
+}
+.events-slider .handpicked-events .event-item .event-link a:hover {
+  text-decoration: underline;
 }
 
 .webform-button--submit {

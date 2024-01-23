@@ -162,6 +162,11 @@
           color: #00335b;
           font-size: 20px;
           font-weight: 600;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
 
