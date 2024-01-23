@@ -28,7 +28,12 @@
               <h2>{{ item.entity.label }}</h2>
             </a>
             <div class="event-resume">
-              {{ item.entity.field_os2web_event_resume.value|raw }}
+              {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
+              {% if resume_text|length > 150 %}
+                {{ resume_text|slice(0, 150) ~ '...' }}
+              {% else %}
+                {{ resume_text }}
+              {% endif %}
             </div>
             <div class="event-link">
               <a href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">Læs mere</a>
