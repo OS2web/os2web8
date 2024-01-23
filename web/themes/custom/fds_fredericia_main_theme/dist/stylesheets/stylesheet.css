@@ -21943,9 +21943,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-size: 13px;
   color: #00335b;
 }
-.events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title {
-  min-height: 50px;
-}
 .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-title .field-content a {
   margin: 10px 0 0 0;
   color: #00335b;
@@ -21959,7 +21956,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           text-decoration-color: #00335b;
 }
 .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-event-resume .field-content {
-  min-height: 110px;
   margin: 20px 0;
   color: #00335b;
 }
