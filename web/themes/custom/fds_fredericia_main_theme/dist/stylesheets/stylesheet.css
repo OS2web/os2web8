@@ -14743,6 +14743,10 @@ a.social-icon-teaser {
   .region-header__top-navigation nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .region-header__top-navigation nav ul li {
