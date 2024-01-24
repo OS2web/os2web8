@@ -19688,8 +19688,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 .field--type-file > .field__items > .field__item,
 .field--type-file > .field__item {
