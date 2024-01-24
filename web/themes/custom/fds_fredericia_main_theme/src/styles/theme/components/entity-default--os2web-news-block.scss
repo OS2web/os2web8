@@ -3,6 +3,7 @@
     .row {
         padding: 0;
         margin: 0;
+        border: 1px solid #00335b;
     }
     .preheader {
         background-color: $color-white;
@@ -19,27 +20,32 @@
     .view-os2web-news-wrapper {
         position: relative;
         padding: 18px 50px 18px 20px;
-        background-color: $background_color__default;
+        background-color: white;
         transition: all 0.3s ease;
+        border-bottom: 1px solid #00335b;
+
+        &:last-of-type {
+          border: none;
+        }
         &:hover {
-            color: $background_color__default !important;
-            background-color: $color-white;
+            color: white !important;
+            background-color: $background_color__default;
             a {
-                color: $background_color__default !important;
+                color: white !important;
             }
           .views-field-field-os2web-news-article-date {
             .field-content {
-              color: $background_color__default;
+              color: white;
             }
           }
           &:after {
-            color: #00335b;
+            color: white;
             background-color: transparent;
           }
         }
         &:after {
             position: absolute;
-            color: $color-white;
+            color: $background_color__default;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,7 +74,7 @@
                 width: 100%;
                 z-index: 2;
                 font-weight: 700;
-                color: $color-white;
+                color: $background_color__default;
                 &:hover {
                     text-decoration: none;
                 }
@@ -80,7 +86,7 @@
                 bottom: 15px;
                 left: 20px;
                 pointer-events: none;
-                color: $color-white;
+                color: $background_color__default;
                 font-size: 1.4rem;
                 font-weight: 700;
             }
