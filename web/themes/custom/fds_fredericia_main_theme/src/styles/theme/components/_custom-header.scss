@@ -332,6 +332,9 @@ $header-top-menu-size-sm: 50px;
               &:hover {
                 text-decoration: underline;
               }
+              &:visited {
+                color: white;
+              }
             }
           }
         }

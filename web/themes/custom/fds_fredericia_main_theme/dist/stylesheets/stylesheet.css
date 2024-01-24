@@ -15015,6 +15015,9 @@ a.social-icon-teaser {
 .megamenu-wrapper .megamenu-inner-wrapper .megamenu-selvbetjening .region-header__selfservice .block .field--name-field-selfservice-block-link a:hover {
   text-decoration: underline;
 }
+.megamenu-wrapper .megamenu-inner-wrapper .megamenu-selvbetjening .region-header__selfservice .block .field--name-field-selfservice-block-link a:visited {
+  color: white;
+}
 
 .search-megamenu-btns-wrapper {
   display: -webkit-box;
