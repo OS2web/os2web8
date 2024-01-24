@@ -56,16 +56,16 @@ $header-top-menu-size-sm: 50px;
 }
 .region-header__top-navigation {
   display: flex;
-
-  @media only screen and (max-width: 1200px) {
-    display: none;
-  }
   nav {
     display: flex;
     ul {
       display: flex;
       margin: 0;
       gap: 20px;
+
+      @media only screen and (max-width: 992px) {
+        flex-wrap: wrap;
+      }
       li {
         margin: 0;
         padding: 0;
@@ -81,6 +81,10 @@ $header-top-menu-size-sm: 50px;
 
           @media only screen and (max-width: 1200px) {
             font-size: 1.4rem;
+          }
+
+          @media only screen and (max-width: 992px) {
+            color: #fff;
           }
           &.is-active {
             text-decoration: none;
@@ -290,6 +294,13 @@ $header-top-menu-size-sm: 50px;
           }
         }
       }
+    }
+  }
+  .top-navigation-megamenu-mobile {
+    display: none;
+
+    @media only screen and (max-width: 992px) {
+      display: block;
     }
   }
 }

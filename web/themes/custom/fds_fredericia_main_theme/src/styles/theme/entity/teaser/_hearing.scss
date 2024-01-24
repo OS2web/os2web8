@@ -33,6 +33,10 @@
 
   box-shadow: $box-shadow;
 
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+
   .icon {
     transform: rotate(180deg);
   }
@@ -120,6 +124,10 @@ a.entity-teaser--os2web-hearings-hearing-case {
   align-items: center;
   text-align: center;
 
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
+
   .icon {
     font-size: 2.5rem;
 
@@ -201,6 +209,7 @@ a.entity-teaser--os2web-hearings-hearing-case {
         }
 
         #edit-field-os2web-hearings-status-target-id--wrapper {
+          width: 100%;
           legend {
             width: 100%;
             display: flex;
@@ -217,6 +226,10 @@ a.entity-teaser--os2web-hearings-hearing-case {
               .form-radios {
                 display: flex;
                 gap: 10px;
+
+                @media only screen and (max-width: 640px) {
+                  flex-direction: column;
+                }
 
                 .form-item {
                   width: 100%;
