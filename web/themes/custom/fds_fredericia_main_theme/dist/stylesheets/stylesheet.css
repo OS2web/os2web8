@@ -19475,7 +19475,7 @@ a.entity-teaser--os2web-event, a.entity-teaser--os2web-event:hover, a.entity-tea
 }
 .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h1, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h2, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h3, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h4, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h5, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h6 {
   margin: 0;
-  font-size: 3.2rem;
+  font-size: 2rem;
   color: #00335b;
 }
 
