@@ -14989,6 +14989,28 @@ a.social-icon-teaser {
     display: block;
   }
 }
+.megamenu-wrapper .megamenu-selvbetjening {
+  margin: 30px 0;
+}
+.megamenu-wrapper .megamenu-selvbetjening .block .field--name-field-selfservice-block-heading {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.megamenu-wrapper .megamenu-selvbetjening .block .field--name-body {
+  margin-bottom: 1rem;
+}
+.megamenu-wrapper .megamenu-selvbetjening .block .field--name-body h1, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body h2, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body h3, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body h4, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body h5, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body h6, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body span, .megamenu-wrapper .megamenu-selvbetjening .block .field--name-body p {
+  color: white;
+}
+.megamenu-wrapper .megamenu-selvbetjening .block .field--name-field-selfservice-block-link a {
+  font-weight: 700;
+  text-decoration: none;
+}
+.megamenu-wrapper .megamenu-selvbetjening .block .field--name-field-selfservice-block-link a:hover {
+  text-decoration: underline;
+}
 
 .search-megamenu-btns-wrapper {
   display: -webkit-box;
