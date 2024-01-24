@@ -19475,6 +19475,8 @@ a.entity-teaser--os2web-event, a.entity-teaser--os2web-event:hover, a.entity-tea
 }
 .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h1, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h2, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h3, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h4, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h5, .entity-teaser--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h6 {
   margin: 0;
+  font-size: 3.2rem;
+  color: #00335b;
 }
 
 a.entity-teaser--os2web-hearings-hearing-case, a.entity-teaser--os2web-hearings-hearing-case:hover, a.entity-teaser--os2web-hearings-hearing-case:focus, a.entity-teaser--os2web-hearings-hearing-case:active, a.entity-teaser--os2web-hearings-hearing-case:visited {
@@ -19581,6 +19583,29 @@ a.entity-teaser--os2web-hearings-hearing-case:focus {
 }
 #views-exposed-form-os2web-hearings-os2web-hearings-embed-search-tender-category .form--inline .form-group .form-select:focus {
   outline: 2px solid #747474 !important;
+}
+
+.entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h1, .entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h2, .entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h3, .entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h4, .entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h5, .entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-heading h6 {
+  font-size: 3.2rem;
+  color: #00335b;
+  margin: 0;
+  padding: 0 0 26px 0;
+}
+.entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-intro {
+  margin-bottom: 2.8rem;
+}
+.entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-intro p {
+  color: #00335b;
+  font-size: 2rem;
+}
+.entity-full--os2web-hearings-hearing-case .field--name-field-os2web-hearings-intro p strong {
+  font-weight: 400;
+}
+.entity-full--os2web-hearings-hearing-case .field--name-body {
+  margin-bottom: 80px;
+}
+.entity-full--os2web-hearings-hearing-case .field--name-body p, .entity-full--os2web-hearings-hearing-case .field--name-body span, .entity-full--os2web-hearings-hearing-case .field--name-body h1, .entity-full--os2web-hearings-hearing-case .field--name-body h2, .entity-full--os2web-hearings-hearing-case .field--name-body h3, .entity-full--os2web-hearings-hearing-case .field--name-body h4, .entity-full--os2web-hearings-hearing-case .field--name-body h5, .entity-full--os2web-hearings-hearing-case .field--name-body h6, .entity-full--os2web-hearings-hearing-case .field--name-body span {
+  color: #00335b;
 }
 
 .node__links ul {
@@ -22622,7 +22647,8 @@ a:not([class]):hover {
 }
 
 .box-hearings {
-  margin: 80px 0;
+  color: #00335b;
+  margin-bottom: 2.8rem;
 }
 .box-hearings .box__body-hearings .row-hearings {
   display: -webkit-box;

@@ -10,31 +10,38 @@
 {% set timestamp = node.field_os2web_m_start_date.value|date('U') %}
 <div {{ attributes.addClass(classes) }}>
   {{ content.field_os2web_hearings_heading }}
+
+  {% if not content['#is_decision'] %}
+    {% if content.field_show_hearing_date.value %}
+
+      <div class="box-hearings">
+        <div class="box__body-hearings">
+          <div class="row-hearings">
+            <div class="hearings-end-date">
+              {{ content.field_os2web_hearings_end_date }}
+            </div>
+            <div class="hearings-publiished">
+              {{ content.field_os2web_hearings_published }}
+            </div>
+            <div class="hearings-closed">
+              {% if not content['#closed'] %}
+                {{ content.links }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endif %}
+  {% endif %}
+
   {{ content.field_os2web_hearings_intro }}
   {{ content.body }}
   {{ content.field_os2web_hearings_attac_doc }}
 
   {% if not content['#is_decision'] %}
-  {{ content.field_os2web_hearings_reply }}
-
-  <div class="box-hearings">
-    <div class="box__body-hearings">
-      <div class="row-hearings">
-        <div class="hearings-end-date">
-          {{ content.field_os2web_hearings_end_date }}
-        </div>
-        <div class="hearings-publiished">
-          {{ content.field_os2web_hearings_published }}
-        </div>
-        <div class="hearings-closed">
-          {% if not content['#closed'] %}
-            {{ content.links }}
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-{% endif %}
+   {{ content.field_os2web_hearings_reply }}
+  {% endif %}
 
   {% if content.field_hearings_cnt is not empty %}
 

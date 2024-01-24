@@ -41,6 +41,8 @@
 
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
+      font-size: 3.2rem;
+      color: #00335b;
     }
   }
 }
@@ -147,6 +149,36 @@ a.entity-teaser--os2web-hearings-hearing-case {
           outline: 2px solid #747474 !important;
         }
       }
+    }
+  }
+}
+
+.entity-full--os2web-hearings-hearing-case {
+  .field--name-field-os2web-hearings-heading {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 3.2rem;
+      color: #00335b;
+      margin: 0;
+      padding: 0 0 26px 0;
+    }
+  }
+  .field--name-field-os2web-hearings-intro {
+    margin-bottom: 2.8rem;
+    p {
+      color: #00335b;
+      font-size: 2rem;
+
+      strong {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .field--name-body {
+    margin-bottom: 80px;
+
+    p, span, h1, h2, h3, h4, h5, h6, span {
+      color: #00335b;
     }
   }
 }
