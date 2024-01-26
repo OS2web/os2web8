@@ -660,4 +660,27 @@ function fds_fredericia_main_theme_preprocess_text_formatted(array &$variables) 
 
 
 
+/**
+ * Fetches the latest published nodes of the "events" content type.
+ *
+ * @param int $limit
+ *   The number of nodes to fetch.
+ *
+ * @return \Drupal\node\NodeInterface[]
+ *   An array of node entities.
+ */
+function fds_fredericia_main_theme_fetch_latest_events($limit = 4) {
+  $query = \Drupal::entityQuery('node')
+    ->condition('status', 1) // Only published nodes
+    ->condition('type', 'os2web_event') // Adjust this to your content type machine name
+    ->sort('created', 'DESC') // Latest first
+    ->range(0, $limit); // Limit the number of results
+  $nids = $query->execute();
 
+  return Node::loadMultiple($nids);
+}
+
+function fds_fredericia_main_theme_preprocess_paragraph__events_slider(&$variables) {
+  // Fetch the latest events and add them to the variables.
+  $variables['latest_events'] = fds_fredericia_main_theme_fetch_latest_events();
+}
