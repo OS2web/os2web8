@@ -22170,12 +22170,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .handpicked-events {
   position: relative;
-}
-.events-slider .handpicked-events .swiper-wrapper {
   overflow: hidden;
-}
-.events-slider .handpicked-events .swiper-wrapper .event-item {
-  margin: 0 10px;
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
   height: 150px;
@@ -22233,10 +22228,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: #00335b;
 }
 .events-slider .handpicked-events .swiper-button-next .swiper-button-next, .events-slider .handpicked-events .swiper-button-prev .swiper-button-next {
-  right: -20px;
+  right: -20px !important;
 }
 .events-slider .handpicked-events .swiper-button-next .swiper-button-prev, .events-slider .handpicked-events .swiper-button-prev .swiper-button-prev {
-  left: -20px;
+  left: -20px !important;
 }
 
 .webform-button--submit {

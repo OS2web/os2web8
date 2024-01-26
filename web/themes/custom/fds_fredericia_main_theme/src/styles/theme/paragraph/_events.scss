@@ -100,12 +100,11 @@
   }
   .handpicked-events {
     position: relative;
+    overflow: hidden;
 
     .swiper-wrapper {
-      overflow: hidden;
 
       .event-item {
-        margin: 0 10px;
 
 
         .event-image-link {
@@ -180,11 +179,11 @@
       }
 
       .swiper-button-next {
-        right: -20px;
+        right: -20px !important;
       }
 
       .swiper-button-prev {
-        left: -20px;
+        left: -20px !important;
       }
     }
   }
