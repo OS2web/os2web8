@@ -20020,16 +20020,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   width: 100%;
 }
 
-@media only screen and (max-width: 992px) {
-  .field--name-field-os2web-page-primaryimage {
-    margin: 0px -20px 0px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .field--name-field-os2web-page-primaryimage {
-    margin: 0px -10px 0px;
-  }
-}
 @media (min-width: 768px) {
   .node__content > .field--name-field-os2web-page-primaryimage img {
     display: block;
@@ -22215,7 +22205,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-resume, .events-slider .swiper-events .swiper-wrapper .event-item .event-resume {
   margin: 20px 0;
   color: #00335b;
-  min-height: 110px;
+  min-height: 70px;
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-link, .events-slider .swiper-events .swiper-wrapper .event-item .event-link {
   width: 100%;
