@@ -22168,33 +22168,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .eventkalender-link a i {
   margin-left: 5px;
 }
-.events-slider .handpicked-events {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-@media only screen and (max-width: 992px) {
-  .events-slider .handpicked-events {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
 .events-slider .handpicked-events .event-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin: 0 10px;
 }
 .events-slider .handpicked-events .event-item .event-image-link .event-image img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: auto;
+  width: 100%;
 }
 @media only screen and (max-width: 992px) {
   .events-slider .handpicked-events .event-item .event-image-link .event-image img {
@@ -22241,6 +22222,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .handpicked-events .event-item .event-link a:hover {
   text-decoration: underline;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  color: #00335b;
 }
 
 .webform-button--submit {

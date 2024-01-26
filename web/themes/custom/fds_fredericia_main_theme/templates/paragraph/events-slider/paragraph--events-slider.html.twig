@@ -9,9 +9,10 @@
       {{ events_view }}
     {% else %}
       {# Loop through the handpicked events and display them #}
-      <div class="handpicked-events">
+      <div class="handpicked-events swiper-container">
+        <div class="swiper-wrapper">
         {% for item in paragraph.field_event_ref %}
-          <div class="event-item">
+          <div class="event-item swiper-slide">
             {# Display fields from the event content type #}
             <a class="event-image-link" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">
               <div class="event-image">
@@ -29,8 +30,8 @@
             </a>
             <div class="event-resume">
               {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
-              {% if resume_text|length > 150 %}
-                {{ resume_text|slice(0, 150) ~ '...' }}
+              {% if resume_text|length > 100 %}
+                {{ resume_text|slice(0, 100) ~ '...' }}
               {% else %}
                 {{ resume_text }}
               {% endif %}
@@ -42,5 +43,32 @@
         {% endfor %}
       </div>
     {% endif %}
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
   </div>
 {% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      slidesPerView: 1,
+      spaceBetween: 10,
+      observer: true,
+      observeParents: true,
+      // Responsive breakpoints
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 25
+        }
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>

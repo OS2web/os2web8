@@ -99,23 +99,18 @@
     }
   }
   .handpicked-events {
-    display: flex;
-    justify-content: space-between;
 
-    @media only screen and (max-width: 992px) {
-      flex-direction: column;
-    }
 
     .event-item {
-      flex: 1;
       margin: 0 10px;
+
 
       .event-image-link {
         .event-image {
           img {
             height: 150px;
             object-fit: cover;
-            width: auto;
+            width: 100%;
 
             @media only screen and (max-width: 992px) {
               width: 100%;
@@ -171,5 +166,12 @@
       }
 
     }
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+
+  &::after {
+    color: #00335b;
   }
 }
