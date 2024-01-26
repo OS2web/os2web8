@@ -9,7 +9,7 @@
       {{ events_view }}
     {% else %}
       {# Loop through the handpicked events and display them #}
-      <div class="handpicked-events swiper-container">
+      <div class="handpicked-events swiper-events">
         <div class="swiper-wrapper">
         {% for item in paragraph.field_event_ref %}
           <div class="event-item swiper-slide">
@@ -51,7 +51,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.swiper-events', {
       // Optional parameters
       slidesPerView: 1,
       spaceBetween: 10,
