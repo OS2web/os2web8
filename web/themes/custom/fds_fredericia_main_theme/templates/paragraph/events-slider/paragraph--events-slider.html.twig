@@ -5,10 +5,45 @@
       </a>
     </div>
     {% if paragraph.field_show_recent_events.value %}
-      {# Render the view for recent events #}
-      {{ events_view }}
+      {% if latest_events %}
+        <div class="swiper-events">
+          <div class="swiper-wrapper">
+            {% for node in latest_events %}
+              <div class="swiper-slide event-item">
+                <div class="event-item swiper-slide">
+                  {# Display fields from the event content type #}
+                  <a class="event-image-link" href="{{ node.field_os2web_event_url.value }}" target="_blank">
+                    <div class="event-image">
+                      <img src="{{ file_url(node.field_os2web_evnet_image.entity.fileuri) }}" alt="{{ node.field_os2web_evnet_image.alt }}" />
+                    </div>
+                  </a>
+                  <div class="event-date">
+                    {% if node.field_os2web_event_start_date %}
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      {{ node.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
+                    {% endif %}
+                  </div>
+                  <a class="event-heading-link" href="{{ node.field_os2web_event_url.value }}" target="_blank">
+                    <h2>{{ node.label }}</h2>
+                  </a>
+                  <div class="event-resume">
+                    {% set resume_text = node.field_os2web_event_resume.value|striptags %}
+                    {% if resume_text|length > 100 %}
+                      {{ resume_text|slice(0, 100) ~ '...' }}
+                    {% else %}
+                      {{ resume_text }}
+                    {% endif %}
+                  </div>
+                  <div class="event-link">
+                    <a href="{{ node.field_os2web_event_url.value }}" target="_blank">Læs mere</a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
     {% else %}
-      {# Loop through the handpicked events and display them #}
       <div class="handpicked-events swiper-events">
         <div class="swiper-wrapper">
         {% for item in paragraph.field_event_ref %}

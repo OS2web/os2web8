@@ -22107,15 +22107,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .views-element-container .view-os2web-events .view-content .views-row {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 10px;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-evnet-image .field-content img {
-  height: 240px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: auto;
+  width: 100%;
 }
 @media only screen and (max-width: 992px) {
   .events-slider .views-element-container .view-os2web-events .view-content .views-row .views-field-field-os2web-evnet-image .field-content img {
@@ -22171,68 +22170,73 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .eventkalender-link a i {
   margin-left: 5px;
 }
-.events-slider .handpicked-events {
+.events-slider .handpicked-events, .events-slider .swiper-events {
   overflow: hidden;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
+.events-slider .handpicked-events .swiper-wrapper .event-item, .events-slider .swiper-events .swiper-wrapper .event-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link .event-image img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
 }
 @media only screen and (max-width: 992px) {
-  .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
+  .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link .event-image img {
     width: 100%;
   }
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-date {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-date, .events-slider .swiper-events .swiper-wrapper .event-item .event-date {
   font-style: italic;
   font-size: 13px;
   color: #00335b;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link, .events-slider .swiper-events .swiper-wrapper .event-item .event-heading-link {
   text-decoration: none;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:hover {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:hover, .events-slider .swiper-events .swiper-wrapper .event-item .event-heading-link:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #00335b;
           text-decoration-color: #00335b;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:visited, .events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:focus, .events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:focus-within {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:visited, .events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:focus, .events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:focus-within, .events-slider .swiper-events .swiper-wrapper .event-item .event-heading-link:visited, .events-slider .swiper-events .swiper-wrapper .event-item .event-heading-link:focus, .events-slider .swiper-events .swiper-wrapper .event-item .event-heading-link:focus-within {
   color: #00335b;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link h2 {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link h2, .events-slider .swiper-events .swiper-wrapper .event-item .event-heading-link h2 {
   margin: 10px 0 0 0;
   color: #00335b;
   font-size: 22px;
   font-weight: 600;
   min-height: 50px;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-resume {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-resume, .events-slider .swiper-events .swiper-wrapper .event-item .event-resume {
   margin: 20px 0;
   color: #00335b;
   min-height: 110px;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-link {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link, .events-slider .swiper-events .swiper-wrapper .event-item .event-link {
   width: 100%;
   text-align: right;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a {
   color: #00335b;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
 }
-.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a:hover {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a:hover, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a:hover {
   text-decoration: underline;
 }
-.events-slider .handpicked-events .swiper-button-next::after, .events-slider .handpicked-events .swiper-button-prev::after {
+.events-slider .handpicked-events .swiper-button-next::after, .events-slider .handpicked-events .swiper-button-prev::after, .events-slider .swiper-events .swiper-button-next::after, .events-slider .swiper-events .swiper-button-prev::after {
   color: #00335b;
 }
-.events-slider .handpicked-events .swiper-button-next {
+.events-slider .handpicked-events .swiper-button-next, .events-slider .swiper-events .swiper-button-next {
   right: -30px !important;
 }
-.events-slider .handpicked-events .swiper-button-prev {
+.events-slider .handpicked-events .swiper-button-prev, .events-slider .swiper-events .swiper-button-prev {
   left: -30px !important;
 }
 
