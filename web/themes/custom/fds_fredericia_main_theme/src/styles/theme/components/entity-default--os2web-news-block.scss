@@ -3,7 +3,9 @@
     .row {
         padding: 0;
         margin: 0;
-        border: 1px solid #00335b;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem
     }
     .preheader {
         background-color: $color-white;
@@ -22,11 +24,10 @@
         padding: 18px 50px 18px 20px;
         background-color: white;
         transition: all 0.3s ease;
-        border-bottom: 1px solid #00335b;
+        border: 1px solid #ddd;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
-        &:last-of-type {
-          border: none;
-        }
+
         &:hover {
             color: white !important;
             background-color: $background_color__default;

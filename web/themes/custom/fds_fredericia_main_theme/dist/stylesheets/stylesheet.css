@@ -18435,7 +18435,14 @@ ul.related-links a:hover {
 .entity-default--os2web-news-block .row {
   padding: 0;
   margin: 0;
-  border: 1px solid #00335b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
 }
 .entity-default--os2web-news-block .preheader {
   background-color: #ffffff;
@@ -18455,10 +18462,9 @@ ul.related-links a:hover {
   background-color: white;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  border-bottom: 1px solid #00335b;
-}
-.entity-default--os2web-news-block .view-os2web-news-wrapper:last-of-type {
-  border: none;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 .entity-default--os2web-news-block .view-os2web-news-wrapper:hover {
   color: white !important;
