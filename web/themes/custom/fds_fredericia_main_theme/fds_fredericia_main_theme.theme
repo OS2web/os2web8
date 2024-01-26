@@ -659,10 +659,17 @@ function fds_fredericia_main_theme_preprocess_text_formatted(array &$variables) 
  *   An array of node entities.
  */
 function fds_fredericia_main_theme_fetch_latest_events($limit = 4) {
+  // Get the current date in a format that Drupal can compare against stored dates
+  $current_date = new DrupalDateTime('now');
+  // Format to match the storage format of your date field
+  $current_date_string = $current_date->format('Y-m-d\TH:i:s');
+
   $query = \Drupal::entityQuery('node')
     ->condition('status', 1) // Only published nodes
-    ->condition('type', 'os2web_event') // Adjust this to your content type machine name
-    ->sort('created', 'DESC') // Latest first
+    ->condition('type', 'os2web_event') // Your specific content type machine name
+    // Ensure we only get events that haven't started yet
+    ->condition('field_os2web_event_start_date', $current_date_string, '>=')
+    ->sort('field_os2web_event_start_date', 'ASC') // Sort by event start date, soonest first
     ->range(0, $limit); // Limit the number of results
   $nids = $query->execute();
 
