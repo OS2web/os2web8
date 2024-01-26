@@ -21838,7 +21838,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 
 .swiper-button-next {
-  right: 0 !important;
+  right: 0;
 }
 .swiper-button-next::after {
   font-size: 20px !important;
@@ -21846,7 +21846,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 
 .swiper-button-prev {
-  left: 0 !important;
+  left: 0;
 }
 .swiper-button-prev::after {
   font-size: 20px !important;
@@ -22168,64 +22168,75 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .eventkalender-link a i {
   margin-left: 5px;
 }
-.events-slider .handpicked-events .event-item {
+.events-slider .handpicked-events {
+  position: relative;
+}
+.events-slider .handpicked-events .swiper-wrapper {
+  overflow: hidden;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item {
   margin: 0 10px;
 }
-.events-slider .handpicked-events .event-item .event-image-link .event-image img {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
 }
 @media only screen and (max-width: 992px) {
-  .events-slider .handpicked-events .event-item .event-image-link .event-image img {
+  .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
     width: 100%;
   }
 }
-.events-slider .handpicked-events .event-item .event-date {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-date {
   font-style: italic;
   font-size: 13px;
   color: #00335b;
 }
-.events-slider .handpicked-events .event-item .event-heading-link {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link {
   text-decoration: none;
 }
-.events-slider .handpicked-events .event-item .event-heading-link:hover {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #00335b;
           text-decoration-color: #00335b;
 }
-.events-slider .handpicked-events .event-item .event-heading-link:visited, .events-slider .handpicked-events .event-item .event-heading-link:focus, .events-slider .handpicked-events .event-item .event-heading-link:focus-within {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:visited, .events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:focus, .events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link:focus-within {
   color: #00335b;
 }
-.events-slider .handpicked-events .event-item .event-heading-link h2 {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-heading-link h2 {
   margin: 10px 0 0 0;
   color: #00335b;
   font-size: 22px;
   font-weight: 600;
   min-height: 50px;
 }
-.events-slider .handpicked-events .event-item .event-resume {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-resume {
   margin: 20px 0;
   color: #00335b;
   min-height: 110px;
 }
-.events-slider .handpicked-events .event-item .event-link {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link {
   width: 100%;
   text-align: right;
 }
-.events-slider .handpicked-events .event-item .event-link a {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a {
   color: #00335b;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
 }
-.events-slider .handpicked-events .event-item .event-link a:hover {
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a:hover {
   text-decoration: underline;
 }
-
-.swiper-button-next::after, .swiper-button-prev::after {
+.events-slider .handpicked-events .swiper-button-next::after, .events-slider .handpicked-events .swiper-button-prev::after {
   color: #00335b;
+}
+.events-slider .handpicked-events .swiper-button-next .swiper-button-next, .events-slider .handpicked-events .swiper-button-prev .swiper-button-next {
+  right: -20px;
+}
+.events-slider .handpicked-events .swiper-button-next .swiper-button-prev, .events-slider .handpicked-events .swiper-button-prev .swiper-button-prev {
+  left: -20px;
 }
 
 .webform-button--submit {
