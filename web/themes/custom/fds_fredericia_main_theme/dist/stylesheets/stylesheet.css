@@ -22086,6 +22086,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           align-items: center;
 }
 
+.events-slider {
+  position: relative;
+}
 .events-slider .views-element-container .view-os2web-events .view-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22169,7 +22172,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin-left: 5px;
 }
 .events-slider .handpicked-events {
-  position: relative;
   overflow: hidden;
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
@@ -22227,11 +22229,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .handpicked-events .swiper-button-next::after, .events-slider .handpicked-events .swiper-button-prev::after {
   color: #00335b;
 }
-.events-slider .handpicked-events .swiper-button-next .swiper-button-next, .events-slider .handpicked-events .swiper-button-prev .swiper-button-next {
-  right: -20px !important;
+.events-slider .handpicked-events .swiper-button-next {
+  right: -30px !important;
 }
-.events-slider .handpicked-events .swiper-button-next .swiper-button-prev, .events-slider .handpicked-events .swiper-button-prev .swiper-button-prev {
-  left: -20px !important;
+.events-slider .handpicked-events .swiper-button-prev {
+  left: -30px !important;
 }
 
 .webform-button--submit {
