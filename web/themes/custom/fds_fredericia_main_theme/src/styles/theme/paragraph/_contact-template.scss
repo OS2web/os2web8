@@ -71,6 +71,9 @@
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
           .contact-template-icon {
@@ -78,6 +81,10 @@
             color: #00325b;
             i {
               width: 50px;
+
+              @media only screen and (max-width: 992px) {
+                width: auto;
+              }
             }
 
           }
@@ -112,6 +119,9 @@
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
           .contact-template-icon {
@@ -120,11 +130,19 @@
 
             i {
               width: 50px;
+
+              @media only screen and (max-width: 992px) {
+                width: auto;
+              }
             }
 
           }
           .phone-info {
             color: #00325b;
+
+            @media only screen and (max-width: 992px) {
+              text-align: center;
+            }
             .info-heading {
               margin-top: 0;
               font-size: 20px;
@@ -147,6 +165,9 @@
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
           .contact-template-icon {
@@ -155,11 +176,16 @@
 
             i {
               width: 50px;
+
+              @media only screen and (max-width: 992px) {
+                width: auto;
+              }
             }
 
           }
           .mail-info {
             color: #00325b;
+            text-align: center;
             .info-heading {
               margin-top: 0;
               font-size: 20px;
@@ -181,6 +207,9 @@
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
           }
 
           .contact-template-icon {
@@ -189,11 +218,16 @@
 
             i {
               width: 50px;
+
+              @media only screen and (max-width: 992px) {
+                width: auto;
+              }
             }
 
           }
           .warning-info {
             color: #00325b;
+            text-align: center;
             .info-heading {
               margin-top: 0;
               font-size: 20px;
@@ -215,6 +249,9 @@
 
           @media only screen and (max-width: 992px) {
             max-width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
           .contact-template-icon {
@@ -223,6 +260,10 @@
 
             i {
               width: 50px;
+
+              @media only screen and (max-width: 992px) {
+                width: auto;
+              }
             }
 
           }
@@ -230,6 +271,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            text-align: center;
             .contact-person-heading {
               .field--name-field-os2web-contact-heading {
                 h2 {
@@ -246,6 +288,11 @@
               gap: 5px;
               font-weight: 600;
               color: #00335b;
+
+              @media only screen and (max-width: 992px) {
+                justify-content: center;
+                align-items: center;
+              }
             }
             .contact-person-job {
               .job-title {
@@ -266,6 +313,11 @@
 
               span {
                 font-weight: 600;
+              }
+              @media only screen and (max-width: 992px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
               }
             }
             .contact-person-phone {

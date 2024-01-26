@@ -21259,6 +21259,16 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address {
     max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .contact-template-icon {
@@ -21267,6 +21277,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .contact-template-icon i {
   width: 50px;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .contact-template-icon i {
+    width: auto;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info {
   color: #00325b;
@@ -21297,6 +21312,16 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone {
     max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone .contact-template-icon {
@@ -21306,8 +21331,18 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone .contact-template-icon i {
   width: 50px;
 }
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone .contact-template-icon i {
+    width: auto;
+  }
+}
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone .phone-info {
   color: #00325b;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone .phone-info {
+    text-align: center;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-phone .phone-info .info-heading {
   margin-top: 0;
@@ -21332,6 +21367,16 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail {
     max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .contact-template-icon {
@@ -21341,8 +21386,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .contact-template-icon i {
   width: 50px;
 }
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .contact-template-icon i {
+    width: auto;
+  }
+}
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .mail-info {
   color: #00325b;
+  text-align: center;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .mail-info .info-heading {
   margin-top: 0;
@@ -21367,6 +21418,16 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning {
     max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .contact-template-icon {
@@ -21376,8 +21437,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .contact-template-icon i {
   width: 50px;
 }
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .contact-template-icon i {
+    width: auto;
+  }
+}
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info {
   color: #00325b;
+  text-align: center;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info .info-heading {
   margin-top: 0;
@@ -21402,6 +21469,16 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person {
     max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-template-icon {
@@ -21410,6 +21487,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-template-icon i {
   width: 50px;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-template-icon i {
+    width: auto;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info {
   display: -webkit-box;
@@ -21420,6 +21502,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
+  text-align: center;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-heading .field--name-field-os2web-contact-heading h2 {
   margin-top: 0;
@@ -21435,6 +21518,16 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   gap: 5px;
   font-weight: 600;
   color: #00335b;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-name {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-job .job-title {
   font-weight: 600;
@@ -21453,6 +21546,20 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-email span {
   font-weight: 600;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-phone {
   display: -webkit-box;
