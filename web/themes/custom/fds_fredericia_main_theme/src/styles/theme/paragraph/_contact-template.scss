@@ -98,6 +98,10 @@
               margin-bottom: 10px;
             }
             .info-content {
+
+              @media only screen and (max-width: 992px) {
+                text-align: center;
+              }
               .field--name-field-contact-address {
                 p, h1, h2, h3, h4, h5, h6, span {
                   color: #00335b;
@@ -271,7 +275,9 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            text-align: center;
+            @media only screen and (max-width: 992px) {
+              text-align: center;
+            }
             .contact-person-heading {
               .field--name-field-os2web-contact-heading {
                 h2 {

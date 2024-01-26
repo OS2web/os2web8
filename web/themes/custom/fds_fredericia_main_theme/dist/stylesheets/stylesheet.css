@@ -21293,6 +21293,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: #00325b;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content {
+    text-align: center;
+  }
+}
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address p, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h1, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h2, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h3, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h4, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h5, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address h6, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content .field--name-field-contact-address span {
   color: #00335b;
 }
@@ -21502,7 +21507,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info {
+    text-align: center;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person .contact-person-info .contact-person-heading .field--name-field-os2web-contact-heading h2 {
   margin-top: 0;
