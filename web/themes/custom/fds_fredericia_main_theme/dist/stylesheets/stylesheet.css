@@ -22174,6 +22174,19 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .handpicked-events {
   overflow: hidden;
 }
+.events-slider .handpicked-events .swiper-wrapper .event-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+@media only screen and (max-width: 992px) {
+  .events-slider .handpicked-events .swiper-wrapper .event-item {
+    min-width: auto;
+    max-width: none;
+  }
+}
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img {
   height: 150px;
   -o-object-fit: cover;

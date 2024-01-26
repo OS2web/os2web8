@@ -107,6 +107,15 @@
 
       .event-item {
 
+        flex-grow: 1;
+        min-width: 250px;
+        max-width: 300px;
+
+        @media only screen and (max-width: 992px) {
+          min-width: auto;
+          max-width: none;
+        }
+
 
         .event-image-link {
           .event-image {
