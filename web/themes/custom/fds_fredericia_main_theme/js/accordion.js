@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
       content.classList.add('opened');
       button.setAttribute('aria-expanded', 'true');
       window.location.hash = contentId;
+
+      button.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       content.classList.remove('opened');
       button.setAttribute('aria-expanded', 'false');
