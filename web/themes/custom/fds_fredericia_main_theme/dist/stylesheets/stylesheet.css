@@ -21161,7 +21161,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-size: 3rem;
   color: #00335B;
 }
-.entity-default--tableofcontents .toc-content-wrapper .anchor p, .entity-default--tableofcontents .toc-content-wrapper .anchor h3, .entity-default--tableofcontents .toc-content-wrapper .anchor h4, .entity-default--tableofcontents .toc-content-wrapper .anchor h5, .entity-default--tableofcontents .toc-content-wrapper .anchor h6 {
+.entity-default--tableofcontents .toc-content-wrapper .anchor p, .entity-default--tableofcontents .toc-content-wrapper .anchor h3, .entity-default--tableofcontents .toc-content-wrapper .anchor h4, .entity-default--tableofcontents .toc-content-wrapper .anchor h5, .entity-default--tableofcontents .toc-content-wrapper .anchor h6, .entity-default--tableofcontents .toc-content-wrapper .anchor ul, .entity-default--tableofcontents .toc-content-wrapper .anchor li {
   color: #00335B;
 }
 
