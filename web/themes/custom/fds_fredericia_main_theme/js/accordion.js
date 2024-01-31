@@ -26,12 +26,20 @@ document.addEventListener("DOMContentLoaded", function() {
     if (isOpening) {
       content.classList.add('opened');
       button.setAttribute('aria-expanded', 'true');
-      window.location.hash = contentId;
+      updateURLHash(contentId);
 
-      button.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       content.classList.remove('opened');
       button.setAttribute('aria-expanded', 'false');
+      updateURLHash('');
+    }
+  }
+
+  function updateURLHash(contentId) {
+    if (history.pushState) {
+      var newurl = new URL(window.location.href);
+      newurl.searchParams.set('accordion', contentId);
+      window.history.pushState({ path: newurl.href }, '', newurl.href);
     }
   }
 
@@ -43,9 +51,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  if (window.location.hash) {
-    var hash = window.location.hash.substring(1); // Remove the '#' from the hash
-    var targetAccordionButton = document.querySelector(`[aria-controls="${hash}"]`);
+  // Check the URL on page load to open the appropriate accordion
+  var urlParams = new URLSearchParams(window.location.search);
+  var accordionId = urlParams.get('accordion');
+  if (accordionId) {
+    var targetAccordionButton = document.querySelector(`[aria-controls="${accordionId}"]`);
     if (targetAccordionButton) {
       toggleAccordion(targetAccordionButton, true);
     }
