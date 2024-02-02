@@ -86,7 +86,7 @@
                     width: 100%;
                     margin: 0;
 
-                    .search-input__input {
+                    .search-input__input, .form-input {
                       height: 75px;
                       border-radius: 0;
                       padding: 0 0 0 20px;
@@ -216,15 +216,15 @@
 }
 
 
-.view-os2web-search {
+.view-os2web-search, .view-os2web-meetings-search-page {
   padding-bottom: 50px;
   .view-header {
-    background-color: #dee2e6;
+    background-color: #00335bM;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    color: #000;
+    color: #fff;
 
     div {
       display: flex;
@@ -237,17 +237,17 @@
       }
 
       a {
-        background-color: $background_color__primary;
+        background-color: #fff;
         padding: 10px 20px;
         flex-grow: 1;
         text-align: center;
-        color: white;
         text-decoration: none;
         font-weight: 500;
+        color: #00335b;
         transition: .3s ease;
 
         &:hover {
-          background-color: #bf263e;
+          transform: scale(1.02);
         }
 
         @media only screen and (max-width: 768px) {
