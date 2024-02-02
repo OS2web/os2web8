@@ -3,8 +3,8 @@
     attach: function (context, settings) {
       // Updated check for multiple search pages
       const onSearchPage = window.location.href.indexOf('/s?sq=') !== -1 ||
-        window.location.href.includes("/sog-selvbetjening?sq=") ||
-        window.location.href.includes("/sog-dagsorden?sq=");
+        window.location.href.indexOf("/sog-selvbetjening?sq=") !== -1 ||
+        window.location.href.indexOf("/sog-dagsorden?sq=") !== -1;
 
       // If not on a search page, store the current URL
       if (!onSearchPage) {
