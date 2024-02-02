@@ -16755,11 +16755,11 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   display: none;
 }
 .page-search-container #main-content main .region-content .block-system-main-block {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 50px auto;
 }
 .page-search-container #main-content main .region-content .block-system-main-block .views-element-container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -16782,6 +16782,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
           flex-direction: column;
   gap: 20px;
   padding: 20px;
+  color: #fff;
 }
 .view-os2web-search .view-header p, .view-os2web-meetings-search-page .view-header p, .view-os2web-search-selfservice .view-header p {
   color: #fff;

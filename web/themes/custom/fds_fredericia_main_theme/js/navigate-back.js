@@ -1,10 +1,12 @@
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.navigateBack = {
     attach: function (context, settings) {
-      // Check if we're on the search page.
-      const onSearchPage = window.location.href.indexOf('/s?sq=') !== -1;
+      // Updated check for multiple search pages
+      const onSearchPage = window.location.href.indexOf('/s?sq=') !== -1 ||
+        window.location.href.includes("/sog-selvbetjening") ||
+        window.location.href.includes("/sog-dagsorden");
 
-      // If not on search page, store the current URL.
+      // If not on a search page, store the current URL
       if (!onSearchPage) {
         localStorage.setItem('lastNonSearchPage', window.location.href);
       }
@@ -15,7 +17,7 @@
         const storedURL = localStorage.getItem('lastNonSearchPage');
         const referrerIsExternal = !document.referrer.includes(window.location.host);
 
-        // If there's a stored URL and we're not coming from an external source or empty tab, use it.
+        // Redirect logic
         if (storedURL && (!referrerIsExternal || onSearchPage)) {
           window.location.href = storedURL;
         } else {
