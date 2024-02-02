@@ -271,7 +271,7 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
           $variables['menu_hierarchy'] = fds_fredericia_main_theme_get_menu_hierarchy_for_node($variables['node']);
       }
 
-  if ($view_mode == 'teaser' && $node->getType() == 'os2web_page') {
+  if ($view_mode == 'teaser' && $node->getType() == 'os2web_page' || $node->getType() == 'os2web_news') {
     $routeName = $node->toUrl()->getRouteName();
     $routeParameters = $node->toUrl()->getRouteParameters();
     $route = Drupal::service('router.route_provider')->getRouteByName($routeName);

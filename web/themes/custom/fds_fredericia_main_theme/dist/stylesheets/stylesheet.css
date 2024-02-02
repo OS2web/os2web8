@@ -16829,6 +16829,12 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
     width: 100%;
   }
 }
+.view-os2web-search .view-header div a.active, .view-os2web-meetings-search-page .view-header div a.active, .view-os2web-search-selfservice .view-header div a.active {
+  background-color: #333;
+  border: 1px solid #ddd;
+  color: #fff;
+  font-weight: bold;
+}
 .view-os2web-search .view-empty, .view-os2web-meetings-search-page .view-empty, .view-os2web-search-selfservice .view-empty {
   padding: 50px 0;
 }
