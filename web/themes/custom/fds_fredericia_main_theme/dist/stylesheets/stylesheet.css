@@ -14891,9 +14891,9 @@ a.social-icon-teaser {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 95%;
-  height: 90%;
-  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  background-color: #00335b;
   z-index: 9999;
   overflow-y: auto;
 }
@@ -14939,9 +14939,11 @@ a.social-icon-teaser {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: 0;
+  margin-top: 20px;
 }
 .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li {
   list-style: none;
@@ -14970,17 +14972,15 @@ a.social-icon-teaser {
 }
 .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li a {
   color: white;
-  position: relative;
+  display: inline-block;
 }
 .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li a:not(.parent-link):before {
-  content: "■";
+  content: "\f111";
   color: white;
-  font-size: 24px;
-  top: 50%;
-  -webkit-transform: translateY(-65%);
-          transform: translateY(-65%);
-  position: absolute;
-  left: -25px;
+  font-size: 8px;
+  margin-right: 5px;
+  font-family: FontAwesome;
+  display: inline-block;
 }
 .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .menu-dropdown-0 {
   margin: 15px 0;
@@ -21414,7 +21414,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .mail-info {
   color: #00325b;
-  text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .mail-info {
+    text-align: center;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-mail .mail-info .info-heading {
   margin-top: 0;
@@ -21465,7 +21469,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info {
   color: #00325b;
-  text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info {
+    text-align: center;
+  }
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info .info-heading {
   margin-top: 0;

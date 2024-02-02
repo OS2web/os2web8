@@ -189,7 +189,9 @@
           }
           .mail-info {
             color: #00325b;
-            text-align: center;
+            @media only screen and (max-width: 992px) {
+              text-align: center;
+            }
             .info-heading {
               margin-top: 0;
               font-size: 20px;
@@ -231,7 +233,9 @@
           }
           .warning-info {
             color: #00325b;
-            text-align: center;
+            @media only screen and (max-width: 992px) {
+              text-align: center;
+            }
             .info-heading {
               margin-top: 0;
               font-size: 20px;
