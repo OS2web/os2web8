@@ -19,13 +19,10 @@
     <div class="news-teaser-text">
       {{ pageTeaserText | striptags }}
     </div>
-    {% if menu_hierarchy %}
       <div class="my-breadcrumbs">
-        {% for item in menu_hierarchy %}
-          <div class="breadcrumb-item">{{ item }}</div>
-          {% if not loop.last %} {% endif %}
-        {% endfor %}
+          <div class="breadcrumb-item">
+            Nyheder
+          </div>
       </div>
-    {% endif %}
   </div>
 </a>
