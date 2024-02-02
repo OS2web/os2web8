@@ -16768,11 +16768,11 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   margin: 0;
 }
 
-.view-os2web-search, .view-os2web-meetings-search-page {
+.view-os2web-search, .view-os2web-meetings-search-page, .view-os2web-search-selfservice {
   padding-bottom: 50px;
 }
-.view-os2web-search .view-header, .view-os2web-meetings-search-page .view-header {
-  background-color: #00335b M;
+.view-os2web-search .view-header, .view-os2web-meetings-search-page .view-header, .view-os2web-search-selfservice .view-header {
+  background-color: #00335b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16782,9 +16782,11 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
           flex-direction: column;
   gap: 20px;
   padding: 20px;
+}
+.view-os2web-search .view-header p, .view-os2web-meetings-search-page .view-header p, .view-os2web-search-selfservice .view-header p {
   color: #fff;
 }
-.view-os2web-search .view-header div, .view-os2web-meetings-search-page .view-header div {
+.view-os2web-search .view-header div, .view-os2web-meetings-search-page .view-header div, .view-os2web-search-selfservice .view-header div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16797,14 +16799,14 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   gap: 20px;
 }
 @media only screen and (max-width: 768px) {
-  .view-os2web-search .view-header div, .view-os2web-meetings-search-page .view-header div {
+  .view-os2web-search .view-header div, .view-os2web-meetings-search-page .view-header div, .view-os2web-search-selfservice .view-header div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-.view-os2web-search .view-header div a, .view-os2web-meetings-search-page .view-header div a {
+.view-os2web-search .view-header div a, .view-os2web-meetings-search-page .view-header div a, .view-os2web-search-selfservice .view-header div a {
   background-color: #fff;
   padding: 10px 20px;
   -webkit-box-flex: 1;
@@ -16817,16 +16819,16 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.view-os2web-search .view-header div a:hover, .view-os2web-meetings-search-page .view-header div a:hover {
+.view-os2web-search .view-header div a:hover, .view-os2web-meetings-search-page .view-header div a:hover, .view-os2web-search-selfservice .view-header div a:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 @media only screen and (max-width: 768px) {
-  .view-os2web-search .view-header div a, .view-os2web-meetings-search-page .view-header div a {
+  .view-os2web-search .view-header div a, .view-os2web-meetings-search-page .view-header div a, .view-os2web-search-selfservice .view-header div a {
     width: 100%;
   }
 }
-.view-os2web-search .view-empty, .view-os2web-meetings-search-page .view-empty {
+.view-os2web-search .view-empty, .view-os2web-meetings-search-page .view-empty, .view-os2web-search-selfservice .view-empty {
   padding: 50px 0;
 }
 

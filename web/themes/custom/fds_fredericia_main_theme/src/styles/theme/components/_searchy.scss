@@ -216,15 +216,18 @@
 }
 
 
-.view-os2web-search, .view-os2web-meetings-search-page {
+.view-os2web-search, .view-os2web-meetings-search-page, .view-os2web-search-selfservice {
   padding-bottom: 50px;
   .view-header {
-    background-color: #00335bM;
+    background-color: #00335b;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    color: #fff;
+
+    p {
+      color: #fff;
+    }
 
     div {
       display: flex;
