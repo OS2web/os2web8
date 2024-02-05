@@ -127,13 +127,14 @@
               form {
                 .form--inline {
                   width: 100%;
+                  display: flex;
 
                   .form-item {
                     margin: 0;
                     width: 100%;
                     display: flex;
 
-                    .search-input__input {
+                    .search-input__input, .form-input {
                       border: none;
                       background-color: #f4f4f4;
                       height: 55px;
@@ -167,7 +168,7 @@
             }
             #block-fds-faxe-theme-main-content {
               .views-element-container {
-                .view-os2web-search {
+                .view-os2web-search, .view-os2web-search-selfservice {
                   margin: 0 !important;
                   padding: 0 !important;
 
