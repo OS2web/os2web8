@@ -142,6 +142,7 @@
                   }
                   .form-actions {
                     margin: 0;
+                    position: relative;
 
                     &:before {
                       position: absolute;
@@ -231,6 +232,10 @@
                     list-style-type: none;
                     .views-row {
                       background-color: white;
+
+                      .views-field-label {
+                        padding: 30px 0;
+                      }
                       .entity-teaser--os2web-news {
                         background-color: white;
                         border-radius: 0px;
