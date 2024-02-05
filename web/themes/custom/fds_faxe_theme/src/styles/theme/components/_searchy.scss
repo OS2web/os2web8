@@ -141,27 +141,35 @@
                     }
                   }
                   .form-actions {
+                    color: $color-white;
                     margin: 0;
                     position: relative;
+                    width: 92px;
+
+                    input {
+                      width: 100%;
+                      background-color: $background_color__primary;
+                      border: 0;
+                      border-radius: 0;
+                      color: transparent;
+                      transition: background-color 0.5s;
+                    }
 
                     &:before {
                       position: absolute;
                       display: block;
                       top: 50%;
                       right: 50%;
-                      transform: translate(50%, -50%);
+                      transform: translateY(-50%);
                       font-size: 1.8rem;
                       z-index: 100;
                       pointer-events: none;
                       font-family: FontAwesome;
                       content: "\f002";
-                      color: #fff;
+                      color: $color-white;
                     }
                     &:after {
                       display: none !important;
-                    }
-                    input {
-                      height: 100%;
                     }
                   }
                 }
