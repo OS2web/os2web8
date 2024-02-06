@@ -34,6 +34,7 @@
     font-weight: 700;
     font-size: 20px;
     width: 100%;
+    border-bottom: 1px solid white;
 
     &:after {
       content: '\f019';
@@ -68,6 +69,17 @@
     @include grid-col(12, 12);
   }
 }
+
+.entity-paragraph-display--esdh-document, .entity-default--esdh-document {
+  h2 {
+    display: none;
+  }
+  .node__meta {
+    display: none;
+  }
+}
+
+
 
 // --------------------------------------------------
 // Variants

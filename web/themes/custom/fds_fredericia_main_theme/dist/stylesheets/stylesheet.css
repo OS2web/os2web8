@@ -15657,7 +15657,7 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  z-index: 100;
+  z-index: 9;
   top: 50%;
   margin-top: -15px;
   padding: 0;
@@ -19844,6 +19844,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-weight: 700;
   font-size: 20px;
   width: 100%;
+  border-bottom: 1px solid white;
 }
 .file a:after {
   content: "\f019";
@@ -19872,6 +19873,13 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%;
+}
+
+.entity-paragraph-display--esdh-document h2, .entity-default--esdh-document h2 {
+  display: none;
+}
+.entity-paragraph-display--esdh-document .node__meta, .entity-default--esdh-document .node__meta {
+  display: none;
 }
 
 @media print {

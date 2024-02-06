@@ -528,6 +528,48 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     }
   }
 
+  if ($paragraph->bundle() === 'os2web_files_paragraph') {
+      // Check and prepare ESDH Documents.
+      if ($paragraph->hasField('field_case_reference') && !$paragraph->field_case_reference->isEmpty()) {
+        $case_node = $paragraph->field_case_reference->entity;
+
+        if ($case_node && $case_node->hasField('field_case_documents') && !$case_node->field_case_documents->isEmpty()) {
+          $document_ids = $case_node->field_case_documents->getValue();
+          $documents = [];
+          foreach ($document_ids as $id) {
+            $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
+            if ($document_node) {
+              $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+              $documents[] = $view_builder->view($document_node, 'paragraph_display'); // 'default' or another view mode as necessary
+            }
+          }
+          $variables['esdh_documents'] = $documents;
+        }
+      }
+
+      // Prepare the file field for rendering.
+      if ($paragraph->hasField('field_os2web_files_files') && !$paragraph->field_os2web_files_files->isEmpty()) {
+        $file_entities = $paragraph->field_os2web_files_files->referencedEntities();
+        $variables['os2web_files'] = [];
+        foreach ($file_entities as $file) {
+          $variables['os2web_files'][] = [
+            '#theme' => 'file_link',
+            '#file' => $file,
+          ];
+        }
+      }
+
+      // Prepare the media field for rendering.
+      if ($paragraph->hasField('field_os2web_files_media') && !$paragraph->field_os2web_files_media->isEmpty()) {
+        $media_entities = $paragraph->field_os2web_files_media->referencedEntities();
+        $variables['os2web_media_files'] = [];
+        foreach ($media_entities as $media) {
+          $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+          $variables['os2web_media_files'][] = $view_builder->view($media, 'default'); // 'default' or another view mode as necessary
+        }
+      }
+    }
+
 }
 
 
