@@ -1,0 +1,32 @@
+{# Render ESDH Documents if any #}
+{% if esdh_documents %}
+  <div class="esdh-documents">
+    {% for document in esdh_documents %}
+      {{ document }}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if content.field_document_reference %}
+<div class="directly-referenced-esdh-documents">
+    {{ content.field_document_reference }}
+</div>
+{% endif %}
+
+{# Render file uploads if any #}
+{% if os2web_files %}
+  <div class="os2web-files">
+    {% for file in os2web_files %}
+      {{ file }}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{# Render media file uploads if any #}
+{% if os2web_media_files %}
+  <div class="os2web-media-files">
+    {% for media in os2web_media_files %}
+      {{ media }}
+    {% endfor %}
+  </div>
+{% endif %}
