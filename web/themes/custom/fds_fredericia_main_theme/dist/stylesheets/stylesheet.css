@@ -22225,6 +22225,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 
 .events-slider {
+  margin: 0 0 80px 0;
   position: relative;
 }
 .events-slider .views-element-container .view-os2web-events .view-content {
