@@ -15693,7 +15693,7 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   content: "\f105";
 }
 
-.paragraph--type--os2web-slideshow {
+.field--name-field-os2web-slideshow-image, .field--name-field-os2web-slideshow-media-img {
   margin-bottom: 80px;
 }
 

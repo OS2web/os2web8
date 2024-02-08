@@ -1,0 +1,39 @@
+{% set modalId = 'modal-' ~ random() %}
+{%
+  set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="modal micromodal-slide" id="{{ modalId }}" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <main class="modal__content"></main>
+        <footer class="modal__footer">
+          <button class="button button-secondary" data-micromodal-close aria-label="{{ 'Close this window'|trans }}">
+            {{ 'Close'|trans }}
+          </button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <div class="field__items">
+    {% for item in items %}
+      {% set media_entity = item.content['#media'] %} {# Adjust this line if necessary #}
+      {% if media_entity and media_entity.field_media_image %}
+        {% set image_file = media_entity.field_media_image.entity %}
+        {% if image_file %}
+          {% set image_url = file_url(image_file.fileuri) %}
+          {% set image_alt = image_file.alt %}
+          <div{{ item.attributes.addClass('field__item') }}>
+            <img src="{{ image_url }}" alt="{{ image_alt|default('') }}" />
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

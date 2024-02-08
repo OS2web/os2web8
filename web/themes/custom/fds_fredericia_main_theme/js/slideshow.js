@@ -90,6 +90,31 @@
   });
 
 
+  var slideshowMediaContainers = document.querySelectorAll('.field--name-field-os2web-slideshow-media-img .field__items');
+
+  slideshowMediaContainers.forEach(function(container) {
+    // Initialize tiny slider for this specific container
+    var sliderMedia = tns({
+      container: container,
+      items: 1,
+      autoplay: false,
+      autoplayHoverPause: true,
+      gutter: 32,
+      rewind: true,
+      responsive: {
+        576: {
+          items: 2,
+        },
+      },
+    });
+
+
+    // Bind transitionEndCallback to this slider instance
+    sliderMedia.events.on('transitionEnd', transitionEndCallback);
+    transitionEndCallback(sliderMedia.getInfo());
+  });
+
+
 })();
 
 
