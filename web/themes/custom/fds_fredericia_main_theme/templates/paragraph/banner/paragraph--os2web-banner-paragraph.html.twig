@@ -20,7 +20,7 @@
 {% endif %}
 
 {% block paragraph %}
-  <div class="banner__image-outer {% if paragraph.field_hide_image_mobile.value == true %} mobile-hide {% endif %}" {% if final_background_image %} style="background-image: url({{ background_image }}); min-height: {{ banner_height_type }};" {% endif %}>
+  <div class="banner__image-outer {% if paragraph.field_hide_image_mobile.value == true %} mobile-hide {% endif %}" {% if final_background_image %} style="background-image: url({{ final_background_image }}); min-height: {{ banner_height_type }};" {% endif %}>
     <div {{ attributes.addClass(classes) }}>
       <div class="container" {% if align_value == 'left' %}
         style="justify-content: flex-start;"
