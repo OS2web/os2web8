@@ -2,8 +2,11 @@
 {% block paragraph %}
 
 
-  {% set direct_image = content.field_os2web_bannertxt_image[0]['#item'].entity if content.field_os2web_bannertxt_image is not empty %}
-  {% set direct_image_url = direct_image ? file_url(direct_image.uri.value) : null %}
+  {% set direct_image_url = null %}
+  {% if content.field_os2web_bannertxt_image|render|striptags|trim is not empty %}
+    {% set direct_image = content.field_os2web_bannertxt_image[0]['#item'].entity %}
+    {% set direct_image_url = file_url(direct_image.uri.value) %}
+  {% endif %}
 
   {% set media_image_url = null %}
   {% if direct_image_url is null and paragraph.field_os2web_bannertxt_media.entity %}
