@@ -17029,6 +17029,9 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text p, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text p, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text p, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text p {
+  color: white;
+}
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item {
   min-height: 150px;
   -webkit-box-flex: 45%;
@@ -20160,6 +20163,30 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin: 0 0 40px 0;
 }
 .field--name-field-os2web-page-primaryimage img {
+  display: block;
+  width: 100%;
+}
+
+.field--name-field-os2web-page-media-img {
+  margin: 0 0 40px 0;
+}
+.field--name-field-os2web-page-media-img img {
+  display: block;
+  width: 100%;
+}
+
+.field--name-field-os2web-news-primaryimage {
+  margin: 0 0 40px 0;
+}
+.field--name-field-os2web-news-primaryimage img {
+  display: block;
+  width: 100%;
+}
+
+.field--name-field-os2web-news-media-img {
+  margin: 0 0 40px 0;
+}
+.field--name-field-os2web-news-media-img img {
   display: block;
   width: 100%;
 }

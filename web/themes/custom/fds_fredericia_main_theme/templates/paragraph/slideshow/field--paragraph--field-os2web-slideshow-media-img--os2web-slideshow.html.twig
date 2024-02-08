@@ -23,17 +23,7 @@
 
   <div class="field__items">
     {% for item in items %}
-      {% set media_entity = item.content['#media'] %} {# Adjust this line if necessary #}
-      {% if media_entity and media_entity.field_media_image %}
-        {% set image_file = media_entity.field_media_image.entity %}
-        {% if image_file %}
-          {% set image_url = file_url(image_file.fileuri) %}
-          {% set image_alt = image_file.alt %}
-          <div{{ item.attributes.addClass('field__item') }}>
-            <img src="{{ image_url }}" alt="{{ image_alt|default('') }}" />
-          </div>
-        {% endif %}
-      {% endif %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
   </div>
 </div>
