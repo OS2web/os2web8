@@ -15697,6 +15697,13 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   margin-bottom: 80px;
 }
 
+.tns-item img {
+  width: 100%;
+  aspect-ratio: 620/414;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (min-width: 576px) {
   .tns-controls button {
     margin-top: -20px;

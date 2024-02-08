@@ -106,6 +106,12 @@ $controls-size: 20px;
   margin-bottom: 80px;
 }
 
+.tns-item img {
+  width: 100%;
+  aspect-ratio: 620 / 414;
+  object-fit: cover;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
