@@ -3,12 +3,17 @@
 
 
   {% set direct_image_url = null %}
-  {% if content.field_os2web_bannertxt_image|render|striptags|trim is not empty %}
-    {% set direct_image = content.field_os2web_bannertxt_image[0]['#item'].entity %}
-    {% set direct_image_url = file_url(direct_image.uri.value) %}
+  {% set media_image_url = null %}
+
+  {# Check for direct image and extract URL if available #}
+  {% if content.field_os2web_bannertxt_image is not empty %}
+    {% set direct_image_file = content.field_os2web_bannertxt_image[0]['#item'].entity %}
+    {% if direct_image_file %}
+      {% set direct_image_url = file_url(direct_image_file.uri.value) %}
+    {% endif %}
   {% endif %}
 
-  {% set media_image_url = null %}
+  {# Check for media image and extract URL if direct image is not available #}
   {% if direct_image_url is null and paragraph.field_os2web_bannertxt_media.entity %}
     {% set media_entity = paragraph.field_os2web_bannertxt_media.entity %}
     {% if media_entity.field_media_image %}
@@ -16,6 +21,7 @@
     {% endif %}
   {% endif %}
 
+  {# Determine which image URL to use #}
   {% set image_url = direct_image_url ?: media_image_url %}
 
 
