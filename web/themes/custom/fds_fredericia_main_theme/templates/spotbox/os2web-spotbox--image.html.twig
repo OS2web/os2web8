@@ -1,32 +1,33 @@
-{#
-/**
- * @file os2web_spotbox.html.twig
- * Default theme implementation to present OS2Web Spotbox data.
- *
- * This template is used when viewing OS2Web Spotbox pages.
- *
- *
- * Available variables:
- * - content: A list of content items. Use 'content' to print all content, or
- * - attributes: HTML attributes for the container element.
- * - spotbox_type: spotbox type value.
- * - background_color: background color type primary, secondary etc.
- * - spotbox_url: link field URL value.
- * - spotbox_heading: link field title value
- *
- * @see template_preprocess_os2web_spotbox()
- *
- * @ingroup themeable
- */
-#}
 {% set classes = [
   'spotbox',
   'spotbox--' ~ spotbox_type,
   background_color ? ('spotbox--background-color-' ~ background_color),
 ] %}
+
+{# Determine the image to display: Direct image or Media library image #}
+{% set image_output = content.field_os2web_spotbox_bg_image %}
+{% set media_image_url = null %}
+
+{# Check if there's a direct image; if not, try to get the Media library image #}
+{% if image_output|render|striptags|trim is empty and content.field_os2web_spotbox_media_img %}
+  {% set media_entity = content.field_os2web_spotbox_media_img.0['#media'] %}
+  {% if media_entity and media_entity.field_media_image %}
+    {% set media_image_file = media_entity.field_media_image.entity %}
+    {% if media_image_file %}
+      {% set media_image_url = file_url(media_image_file.fileuri) %}
+      {# Create an image render array for the media image #}
+      {% set image_output = {
+        '#theme': 'image',
+        '#uri': media_image_url,
+        '#alt': media_entity.field_media_image.alt,
+      } %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
 <a href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}>
   <div class="spotbox__image">
-    {{ content.field_os2web_spotbox_bg_image }}
+    {{ image_output }}
   </div>
   <div class="spotbox__content">
     <div class="spotbox__arrow">
@@ -38,6 +39,5 @@
     <div class="spotbox__link_text">
       {{ content.field_os2web_spotbox_link_text }}
     </div>
-
   </div>
 </a>

@@ -16878,15 +16878,15 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   font-size: 20px;
 }
 
-.entity-default--os2web-spotbox-reference {
+.entity-default--os2web-spotbox-reference, .entity-default--os2web-spotbox {
   margin: 0 0 80px 0;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference-h h2 {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference-h h2, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference-h h2 {
   text-transform: uppercase;
   color: #ebebec;
   font-weight: 700;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16895,34 +16895,28 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
       flex-wrap: wrap;
 }
 @media only screen and (max-width: 992px) {
-  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference.tns-slider {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference.tns-slider, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox.tns-slider, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference.tns-slider, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox.tns-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
 @media only screen and (max-width: 992px) {
-  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference.tns-slider {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference.tns-slider, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox.tns-slider, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference.tns-slider, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox.tns-slider {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item {
-  min-height: 150px;
-  -webkit-box-flex: 45%;
-      -ms-flex: 45%;
-          flex: 45%;
-}
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16930,63 +16924,63 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   text-decoration: none;
   height: 100%;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent {
   background-color: transparent;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3 {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3 {
   color: black;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text {
   color: black;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg {
   fill: black;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-primary {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-primary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-primary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-primary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-primary {
   background-color: #feffff !important;
   color: white;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-secondary {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-secondary {
   background-color: #eae3c0 !important;
   color: white;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-tertiary {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-tertiary {
   background-color: #196620 !important;
   color: white;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image:hover .spotbox__arrow {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image:hover .spotbox__arrow, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image:hover .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image:hover .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image:hover .spotbox__arrow {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
 }
 @media only screen and (max-width: 540px) {
-  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image .spotbox__image {
   width: 30%;
   height: 100%;
 }
 @media only screen and (max-width: 540px) {
-  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image .spotbox__image {
     width: 100%;
   }
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content {
   line-height: 1;
   width: 70%;
   padding: 5px 20px;
@@ -17004,12 +16998,12 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   position: relative;
 }
 @media only screen and (max-width: 540px) {
-  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content {
     width: 100%;
     padding: 20px;
   }
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__arrow {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__arrow, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content .spotbox__arrow {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -17019,16 +17013,135 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__arrow svg {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__arrow svg, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content .spotbox__arrow svg {
   fill: white;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__heading h3 {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__heading h3, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content .spotbox__heading h3 {
   text-transform: uppercase;
   color: white;
   font-weight: 700;
   margin: 0;
 }
-.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text {
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text {
+  color: white;
+  height: auto;
+  min-height: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item {
+  min-height: 150px;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 0;
+  text-decoration: none;
+  height: 100%;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent {
+  background-color: transparent;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__heading h3 {
+  color: black;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__link_text .field--name-field-os2web-spotbox-link-text {
+  color: black;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-transparent .spotbox__arrow svg {
+  fill: black;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-primary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-primary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-primary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-primary {
+  background-color: #feffff !important;
+  color: white;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-secondary {
+  background-color: #eae3c0 !important;
+  color: white;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-tertiary {
+  background-color: #196620 !important;
+  color: white;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image:hover .spotbox__arrow, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image:hover .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image:hover .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image:hover .spotbox__arrow {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+@media only screen and (max-width: 540px) {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image {
+  width: 30%;
+  height: 100%;
+}
+@media only screen and (max-width: 540px) {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image {
+    width: 100%;
+  }
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image .spotbox__image .field--name-field-os2web-spotbox-bg-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox__content {
+  line-height: 1;
+  width: 70%;
+  padding: 5px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+@media only screen and (max-width: 540px) {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox__content, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox__content {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__arrow, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__arrow, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__arrow svg, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__arrow svg, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__arrow svg {
+  fill: white;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__heading h3, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__heading h3, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__heading h3 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+.entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox__content .spotbox__link_text .field--name-field-os2web-spotbox-link-text {
   color: white;
   height: auto;
   min-height: auto;
