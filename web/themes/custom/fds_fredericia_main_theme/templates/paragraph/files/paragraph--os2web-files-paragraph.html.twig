@@ -2,7 +2,7 @@
   (esdh_documents|default([])|length) +
   (os2web_files|default([])|length) +
   (os2web_media_files|default([])|length) +
-  (content.field_document_reference ? 1 : 0) %} {# Adjust this logic based on your actual structure #}
+  (field_document_reference_items|default([])|length) %} {# Adjust this logic based on your actual structure #}
 
 {% if content.field_os2web_files_heading|render|striptags|trim is not empty %}
   <h2>{{ content.field_os2web_files_heading }}</h2>
@@ -23,12 +23,16 @@
     </div>
   {% endif %}
 
-  {# Assuming content.field_document_reference renders a single item #}
-  {% if content.field_document_reference %}
-    <div class="directly-referenced-esdh-documents {{ file_index > 4 ? 'hidden' : '' }}">
-      {{ content.field_document_reference }}
+  {# Render items from field_document_reference if any #}
+  {% if field_document_reference_items %}
+    <div class="directly-referenced-documents">
+      {% for item in field_document_reference_items %}
+        <div class="document-item {{ file_index > 4 ? 'hidden' : '' }}">
+          {{ item }}
+        </div>
+        {% set file_index = file_index + 1 %}
+      {% endfor %}
     </div>
-    {% set file_index = file_index + 1 %}
   {% endif %}
 
   {# Render file uploads if any #}
@@ -63,7 +67,7 @@
 
     if (showMoreButton) {
       showMoreButton.addEventListener('click', function() {
-        const elements = document.querySelectorAll('.documents-wrapper .document-item, .documents-wrapper .file-item, .documents-wrapper .media-item, .documents-wrapper .directly-referenced-esdh-documents');
+        const elements = document.querySelectorAll('.documents-wrapper .document-item, .documents-wrapper .file-item, .documents-wrapper .media-item, .documents-wrapper .directly-referenced-documents .document-item  ');
         if (isExpanded) {
           // Hide elements by re-adding 'hidden' class
           elements.forEach(function(element, index) {

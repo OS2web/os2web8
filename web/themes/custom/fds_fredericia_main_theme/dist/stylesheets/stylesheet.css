@@ -19985,7 +19985,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           flex-direction: column;
   gap: 10px;
 }
-.documents-wrapper .esdh-documents, .documents-wrapper .directly-referenced-esdh-documents, .documents-wrapper .os2web-files, .documents-wrapper .os2web-media-files {
+.documents-wrapper .esdh-documents, .documents-wrapper .directly-referenced-documents, .documents-wrapper .os2web-files, .documents-wrapper .os2web-media-files {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19995,7 +19995,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           flex-direction: column;
   gap: 10px;
 }
-.documents-wrapper .esdh-documents .field--name-field-document-reference, .documents-wrapper .directly-referenced-esdh-documents .field--name-field-document-reference, .documents-wrapper .os2web-files .field--name-field-document-reference, .documents-wrapper .os2web-media-files .field--name-field-document-reference {
+.documents-wrapper .esdh-documents .field--name-field-document-reference, .documents-wrapper .directly-referenced-documents .field--name-field-document-reference, .documents-wrapper .os2web-files .field--name-field-document-reference, .documents-wrapper .os2web-media-files .field--name-field-document-reference {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

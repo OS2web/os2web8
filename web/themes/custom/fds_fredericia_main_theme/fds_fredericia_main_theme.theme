@@ -568,6 +568,16 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
           $variables['os2web_media_files'][] = $view_builder->view($media, 'default'); // 'default' or another view mode as necessary
         }
       }
+
+      if ($paragraph->hasField('field_document_reference') && !$paragraph->field_document_reference->isEmpty()) {
+          $referenced_entities = $paragraph->field_document_reference->referencedEntities();
+          $variables['field_document_reference_items'] = [];
+          foreach ($referenced_entities as $referenced_entity) {
+              $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
+              $variables['field_document_reference_items'][] = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+          }
+      }
+
     }
 
 }
