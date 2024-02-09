@@ -68,20 +68,30 @@
 .file {
   display: flex;
   background-image: none;
-  padding-left: 0;
+  padding: 12px;
+  border-radius: 3px;
+  position: relative;
+  background-color: white;
+  color: #00335b;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
   a {
-    padding: 25px;
-    border-radius: 3px;
-    position: relative;
-    background-color: white;
+
+    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     color: #00335b;
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 20px;
-    width: 100%;
-    border: 1px solid #ddd;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &:visited {
+      color: #00335b;
+    }
+
 
     &:after {
       content: '\f019';

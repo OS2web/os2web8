@@ -17,7 +17,7 @@
   {% if esdh_documents %}
     <div class="esdh-documents">
       {% for document in esdh_documents %}
-        <div class="document-item {{ file_index > 4 ? 'hidden' : '' }}">{{ document }}</div>
+        <div class="document-item {{ file_index > 2 ? 'hidden' : '' }}">{{ document }}</div>
         {% set file_index = file_index + 1 %}
       {% endfor %}
     </div>
@@ -27,7 +27,7 @@
   {% if field_document_reference_items %}
     <div class="directly-referenced-documents">
       {% for item in field_document_reference_items %}
-        <div class="document-item {{ file_index > 4 ? 'hidden' : '' }}">
+        <div class="document-item {{ file_index > 2 ? 'hidden' : '' }}">
           {{ item }}
         </div>
         {% set file_index = file_index + 1 %}
@@ -39,7 +39,7 @@
   {% if os2web_files %}
     <div class="os2web-files">
       {% for file in os2web_files %}
-        <div class="file-item {{ file_index > 4 ? 'hidden' : '' }}">{{ file }}</div>
+        <div class="file-item {{ file_index > 2 ? 'hidden' : '' }}">{{ file }}</div>
         {% set file_index = file_index + 1 %}
       {% endfor %}
     </div>
@@ -49,14 +49,14 @@
   {% if os2web_media_files %}
     <div class="os2web-media-files">
       {% for media in os2web_media_files %}
-        <div class="media-item {{ file_index > 4 ? 'hidden' : '' }}">{{ media }}</div>
+        <div class="media-item {{ file_index > 2 ? 'hidden' : '' }}">{{ media }}</div>
         {% set file_index = file_index + 1 %}
       {% endfor %}
     </div>
   {% endif %}
 </div>
 
-{% if total_files_count > 5 %}
+{% if total_files_count > 3 %}
   <button id="show-more-files">+ Vis flere</button>
 {% endif %}
 
@@ -71,7 +71,7 @@
         if (isExpanded) {
           // Hide elements by re-adding 'hidden' class
           elements.forEach(function(element, index) {
-            if (index > 4) { // Only hide elements that are beyond the first 5
+            if (index > 2) { // Only hide elements that are beyond the first 3
               element.classList.add('hidden');
             }
           });

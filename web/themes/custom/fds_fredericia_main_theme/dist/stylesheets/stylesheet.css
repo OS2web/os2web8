@@ -20011,21 +20011,28 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -ms-flexbox;
   display: flex;
   background-image: none;
-  padding-left: 0;
-}
-.file a {
-  padding: 25px;
+  padding: 12px;
   border-radius: 3px;
   position: relative;
   background-color: white;
   color: #00335b;
   text-transform: capitalize;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   width: 100%;
   border: 1px solid #ddd;
   -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.file a {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #00335b;
+  overflow: hidden;
+}
+.file a:visited {
+  color: #00335b;
 }
 .file a:after {
   content: "\f019";
