@@ -19951,6 +19951,61 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
     color: #000000 !important;
   }
 }
+.field--name-field-os2web-files-heading h2 {
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+
+.files-default-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+
+#show-more-files {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #00335b;
+  margin-top: 10px;
+}
+#show-more-files:hover {
+  text-decoration: underline;
+}
+
+.documents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.documents-wrapper .esdh-documents, .documents-wrapper .directly-referenced-esdh-documents, .documents-wrapper .os2web-files, .documents-wrapper .os2web-media-files {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.documents-wrapper .esdh-documents .field--name-field-document-reference, .documents-wrapper .directly-referenced-esdh-documents .field--name-field-document-reference, .documents-wrapper .os2web-files .field--name-field-document-reference, .documents-wrapper .os2web-media-files .field--name-field-document-reference {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
 .file {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19959,15 +20014,18 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   padding-left: 0;
 }
 .file a {
-  padding: 15px 25px;
+  padding: 25px;
+  border-radius: 3px;
   position: relative;
-  background-color: #00335b;
-  color: #fff;
+  background-color: white;
+  color: #00335b;
   text-transform: capitalize;
   font-weight: 700;
   font-size: 20px;
   width: 100%;
-  border-bottom: 1px solid white;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 .file a:after {
   content: "\f019";

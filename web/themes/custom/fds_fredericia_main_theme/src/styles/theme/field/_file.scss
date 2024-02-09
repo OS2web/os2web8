@@ -20,21 +20,68 @@
 // Styling
 // --------------------------------------------------
 
+.field--name-field-os2web-files-heading {
+  h2 {
+    color: #00335b;
+    margin: 0 0 20px 0;
+  }
+}
+
+.files-default-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+
+#show-more-files {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #00335b;
+  margin-top: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.documents-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .esdh-documents, .directly-referenced-esdh-documents, .os2web-files, .os2web-media-files {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .field--name-field-document-reference {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
 .file {
   display: flex;
   background-image: none;
   padding-left: 0;
 
   a {
-    padding: 15px 25px;
+    padding: 25px;
+    border-radius: 3px;
     position: relative;
-    background-color: #00335b;
-    color: #fff;
+    background-color: white;
+    color: #00335b;
     text-transform: capitalize;
     font-weight: 700;
     font-size: 20px;
     width: 100%;
-    border-bottom: 1px solid white;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
     &:after {
       content: '\f019';
