@@ -22080,6 +22080,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin: 0 0 80px 0;
   overflow: hidden;
 }
+.latest-news-display .container {
+  overflow: hidden;
+}
 .latest-news-display .container .news-title-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
