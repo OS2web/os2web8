@@ -22078,6 +22078,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-size: 1.5rem;
   position: relative;
   margin: 0 0 80px 0;
+  overflow: hidden;
 }
 .latest-news-display .container .news-title-wrapper {
   display: -webkit-box;
@@ -22150,11 +22151,18 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
+}
+.latest-news-display .container .latest-news-innerwrapper .news-card .news-image-wrapper:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-image-wrapper img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper {
   display: -webkit-box;
@@ -22173,9 +22181,13 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-heading-link {
   min-height: 55px;
+  text-decoration: none;
 }
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-heading-link:hover .news-heading {
   text-decoration: underline;
+}
+.latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-heading-link:visited {
+  color: white;
 }
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-heading-link .news-heading {
   margin: 0;
@@ -22200,9 +22212,40 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-readmore:hover {
   text-decoration: underline;
 }
+.latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-readmore .arrow-icon {
+  position: relative;
+  top: -1px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  vertical-align: middle;
+}
+.latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-readmore .arrow-icon--circle {
+  -webkit-transition: stroke-dashoffset 0.3s ease;
+  transition: stroke-dashoffset 0.3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-readmore:hover .arrow-icon {
+  -webkit-transform: translate3d(5px, 0, 0);
+          transform: translate3d(5px, 0, 0);
+}
+.latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-readmore:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
+}
+
+.hover-effect {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
 
 .swiper-button-next {
-  right: 0;
+  right: 0 !important;
 }
 .swiper-button-next::after {
   font-size: 20px !important;
@@ -22210,7 +22253,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 
 .swiper-button-prev {
-  left: 0;
+  left: 0 !important;
 }
 .swiper-button-prev::after {
   font-size: 20px !important;
