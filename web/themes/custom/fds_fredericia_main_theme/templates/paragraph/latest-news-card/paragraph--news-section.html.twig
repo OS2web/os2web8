@@ -30,7 +30,7 @@
             <div class="news-content-wrapper">
               <span class="news-date">{{ node.field_os2web_news_article_date.value | date('d/m/Y') }}</span>
               <a class="news-heading-link" href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
-                <h3 class="news-heading">{{ node.label }}</h3>
+                <h3 class="news-heading">{{ node.field_os2web_news_heading.value }}</h3>
               </a>
               <p class="news-intro">
                 {{ node.field_os2web_news_intro.value }}
@@ -67,7 +67,7 @@
             <div class="news-content-wrapper">
               <span class="news-date">{{ node.field_os2web_news_article_date.value | date('d/m/Y') }}</span>
               <a class="news-heading-link" href="{{ path('entity.node.canonical', {'node': node.id()}) }}">
-                <h3 class="news-heading">{{ node.label() }}</h3>
+                <h3 class="news-heading">{{ node.field_os2web_news_heading.value }}</h3>
               </a>
 
               <p class="news-intro">

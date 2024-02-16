@@ -63,7 +63,7 @@ $header-top-menu-size-sm: 50px;
       margin: 0;
       gap: 20px;
 
-      @media only screen and (max-width: 992px) {
+      @media only screen and (max-width: 991px) {
         flex-wrap: wrap;
         flex-direction: column;
       }
@@ -84,8 +84,9 @@ $header-top-menu-size-sm: 50px;
             font-size: 1.4rem;
           }
 
-          @media only screen and (max-width: 992px) {
+          @media only screen and (max-width: 991px) {
             color: #fff;
+            font-size: 2rem;
           }
           &.is-active {
             text-decoration: none;
@@ -239,23 +240,36 @@ $header-top-menu-size-sm: 50px;
   }
   .megamenu-inner-wrapper {
     padding: 25px;
+    margin-top: 40px;
     .region-header__megamenu-navigation {
       nav {
-        .menu-level-0 {
+        .menu-level-0:not(.menu-level-1) {
           display: flex;
-          gap: 10px;
           flex-wrap: wrap;
           margin-left: 0;
           margin-top: 20px;
-          li {
+          justify-content: space-evenly;
+
+          li:not(.menu-level-1 li) {
             list-style: none;
             padding-left: 0;
             flex: 1;
-            min-width: 350px;
+            flex-basis: 25%;
 
             @media only screen and (max-width: 480px) {
               min-width: 100%;
             }
+
+            @media only screen and (max-width: 760px) {
+              flex-basis: 100%;
+              border-bottom: 1px solid white;
+            }
+
+            @media only screen and (max-width: 550px) {
+              flex-basis: 100%;
+              border-bottom: 1px solid white;
+            }
+
 
             &:before {
               display: none;
@@ -266,6 +280,18 @@ $header-top-menu-size-sm: 50px;
               font-size: 2rem;
               font-weight: 600;
               text-decoration: none;
+              padding: 1.5rem 0;
+
+
+              &:after {
+                @media only screen and (max-width: 760px) {
+                  position: absolute;
+                  right: 0;
+                  font-size: 3rem;
+                  content: '\f078';
+                  font-family: FontAwesome;
+                }
+              }
 
 
               &:before {
@@ -281,7 +307,7 @@ $header-top-menu-size-sm: 50px;
                 content: '\f111';
                 color: white;
                 font-size: 8px;
-                margin-right: 5px;
+                margin-right: 10px;
                 font-family: FontAwesome;
                 display: inline-block;
 
@@ -293,7 +319,41 @@ $header-top-menu-size-sm: 50px;
               margin: 15px 0;
             }
 
+            .menu-level-1 {
 
+              margin-left: 0;
+              margin-top: 15px;
+              margin-bottom: 15px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              width: 90%;
+              @media only screen and (max-width: 760px) {
+                display: none;
+                width: 100%;
+              }
+
+              li {
+                list-style: none;
+                padding-left: 0;
+
+                &:before {
+                  display: none;
+                }
+              }
+            }
+            &.menu-item--collapsed {
+              .parent-link {
+                &:after {
+                  @media only screen and (max-width: 760px) {
+                    position: absolute;
+                    font-size: 3rem;
+                    right: 0;
+                    content: '\f077';
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -303,6 +363,19 @@ $header-top-menu-size-sm: 50px;
 
       @media only screen and (max-width: 992px) {
         display: block;
+      }
+
+      .region-header_top-navigation {
+        nav {
+          ul {
+            li {
+              a {
+                font-size: 2rem;
+                font-weight: 600;
+              }
+            }
+          }
+        }
       }
     }
     .megamenu-selvbetjening {
@@ -806,6 +879,7 @@ $header-bottom-menu-size: 70px;
         padding: 30px 15px;
         flex-direction: column;
         position: relative;
+        font-size: 16px;
 
         @media only screen and (max-width: 600px) {
           font-size: 14px;

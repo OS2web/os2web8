@@ -651,13 +651,13 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to toggle submenu visibility and prevent default only for top-level links
   function toggleSubmenu(event) {
     // Check if the clicked element is directly within a menu-level-0 item
-    if (this.closest('.menu-item--expanded, .menu-item--collapsed') && !this.closest('.menu-level-1')) {
+    if (this.closest('.region-header__megamenu-navigation .menu-item--expanded, .region-header__megamenu-navigation .menu-item--collapsed') && !this.closest('.region-header__megamenu-navigation .menu-level-1')) {
       event.preventDefault(); // Prevent default link behavior only for top-level links
 
       // Toggle the display of the direct child UL (the submenu)
       const submenu = this.nextElementSibling; // Assumes submenu UL is the next sibling
       if (submenu && submenu.classList.contains('menu-level-1')) {
-        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
 
         // Optional: Toggle classes for expanded/collapsed state
         this.parentElement.classList.toggle('menu-item--expanded');
@@ -668,7 +668,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Apply event listeners if in mobile view
   function applyEventListeners() {
-    const topLevelLinks = document.querySelectorAll('.menu-item--expanded > a, .menu-item--collapsed > a');
+    const topLevelLinks = document.querySelectorAll('.region-header__megamenu-navigation .menu-item--expanded > a, .region-header__megamenu-navigation .menu-item--collapsed > a');
     topLevelLinks.forEach(function(link) {
       link.removeEventListener('click', toggleSubmenu); // Remove existing event listeners to avoid duplicates
       link.addEventListener('click', toggleSubmenu);
@@ -685,7 +685,7 @@ document.addEventListener("DOMContentLoaded", function() {
       applyEventListeners();
     } else {
       // Optionally, revert any inline styles applied to submenus when resizing above 760px
-      document.querySelectorAll('.menu-level-1').forEach(function(submenu) {
+      document.querySelectorAll('.region-header__megamenu-navigation .menu-level-1').forEach(function(submenu) {
         submenu.style.display = ''; // Reset display style
       });
     }
