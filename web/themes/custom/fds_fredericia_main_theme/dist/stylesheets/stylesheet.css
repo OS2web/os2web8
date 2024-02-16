@@ -14937,7 +14937,7 @@ a.social-icon-teaser {
   padding: 25px;
   margin-top: 40px;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14949,7 +14949,7 @@ a.social-icon-teaser {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li {
   list-style: none;
   padding-left: 0;
   -webkit-box-flex: 1;
@@ -14959,28 +14959,28 @@ a.social-icon-teaser {
       flex-basis: 25%;
 }
 @media only screen and (max-width: 480px) {
-  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) {
+  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li {
     min-width: 100%;
   }
 }
 @media only screen and (max-width: 760px) {
-  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) {
+  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     border-bottom: 1px solid white;
   }
 }
 @media only screen and (max-width: 550px) {
-  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) {
+  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     border-bottom: 1px solid white;
   }
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li):before {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li:before {
   display: none;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .parent-link {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .parent-link {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
@@ -14988,7 +14988,7 @@ a.social-icon-teaser {
   padding: 1.5rem 0;
 }
 @media only screen and (max-width: 760px) {
-  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .parent-link:after {
+  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .parent-link:after {
     position: absolute;
     right: 0;
     font-size: 3rem;
@@ -14996,14 +14996,14 @@ a.social-icon-teaser {
     font-family: FontAwesome;
   }
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .parent-link:before {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .parent-link:before {
   display: none;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) a {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li a {
   color: white;
   display: inline-block;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) a:not(.parent-link):before {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li a:not(.parent-link):before {
   content: "\f111";
   color: white;
   font-size: 8px;
@@ -15011,10 +15011,10 @@ a.social-icon-teaser {
   font-family: FontAwesome;
   display: inline-block;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .menu-dropdown-0 {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .menu-dropdown-0 {
   margin: 15px 0;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .menu-level-1 {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .menu-level-1 {
   margin-left: 0;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -15029,20 +15029,20 @@ a.social-icon-teaser {
   width: 90%;
 }
 @media only screen and (max-width: 760px) {
-  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .menu-level-1 {
+  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .menu-level-1 {
     display: none;
     width: 100%;
   }
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .menu-level-1 li {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .menu-level-1 li {
   list-style: none;
   padding-left: 0;
 }
-.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li) .menu-level-1 li:before {
+.megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li .menu-level-1 li:before {
   display: none;
 }
 @media only screen and (max-width: 760px) {
-  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0:not(.menu-level-1) li:not(.menu-level-1 li).menu-item--collapsed .parent-link:after {
+  .megamenu-wrapper .megamenu-inner-wrapper .region-header__megamenu-navigation nav .menu-level-0 li.menu-item--collapsed .parent-link:after {
     position: absolute;
     font-size: 3rem;
     right: 0;
