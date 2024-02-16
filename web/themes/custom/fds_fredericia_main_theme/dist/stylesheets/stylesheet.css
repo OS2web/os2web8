@@ -15567,6 +15567,11 @@ a.social-icon-teaser {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+@media only screen and (max-width: 560px) {
+  .region-header__below .menu-level-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
 .region-header__below .menu-level-1 > li {
   min-height: 200px;
 }
