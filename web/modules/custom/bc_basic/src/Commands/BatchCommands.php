@@ -68,4 +68,62 @@ Class BatchCommands extends DrushCommands {
     if ($options['delete-if-missing']) echo "missing files total : " . $delete_if_missing_count . " files\n";
   }
 
+
+  /**
+   * bellcom media utility
+   *
+   * @command bc:medias
+   * @aliases bcmedias
+   *
+   * @option number if you want to count files
+   * @option delete-if-missing
+   * @option dry
+   */
+  public function medias($options = array('number' => false, 'delete-if-missing' => false, 'dry' => false)) {
+
+    $file_system = \Drupal::service('file_system');
+    $bundles = array();
+    $bundleMap = array(
+      'images' => 'field_media_image',
+      'document' => 'field_media_file',
+      'os2web_video' => 'field_media_video_file',
+      'os2web_file' => 'field_media_file_1'
+    );
+
+    $ids = \Drupal::entityQuery('media')->execute();
+    foreach ( $ids AS $mid ) {
+        $media = \Drupal::entityTypeManager()->getStorage('media')->load($mid);
+        $fid = 0;
+        foreach ($bundleMap AS $key => $bundle ) {
+          if (!$fid && $media->hasField($bundle)) {
+            $fid = $media->get($bundle)->target_id;
+
+            if (!isset($bundles[$key])) $bundles[$key] = 0;
+            $bundles[$key]++;
+          }
+        }
+
+        if ($fid) {
+          $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+          if ($file) {
+              if ($options['delete-if-missing']) {
+                  $path = $file_system->realpath($file->get('uri')->value);
+                  if (empty($path) || !file_exists($path)) {
+                      if (!$options['dry']) {
+                          $media->delete();
+                          $file->delete();
+                      }
+                  }
+              }
+          } else {
+              if ($options['delete-if-missing'] && !$options['dry']) $media->delete();
+          }
+        }
+    }
+
+    if ($options['number']) {
+      print_r( $bundles );
+    }
+  }
+  
 }
