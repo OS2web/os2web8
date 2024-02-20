@@ -111,11 +111,21 @@
 
 
         .event-image-link {
+          line-height: 0;
+
+          &:hover {
+            .event-image img {
+              transform: scale(1.1);
+              transition: .3s ease;
+            }
+          }
           .event-image {
+            overflow: hidden;
             img {
               height: 150px;
               object-fit: cover;
               width: 100%;
+              transition: .3s ease;
 
               @media only screen and (max-width: 992px) {
                 width: 100%;
@@ -166,9 +176,33 @@
             font-size: 20px;
             font-weight: 600;
             text-decoration: none;
+            padding-right: 10px;
+
+            .arrow-icon {
+              position: relative;
+              top: -1px;
+              -webkit-transition: -webkit-transform 0.3s ease;
+              transition: -webkit-transform 0.3s ease;
+              transition: transform 0.3s ease;
+              transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+              vertical-align: middle;
+            }
+
+            .arrow-icon--circle {
+              transition: stroke-dashoffset 0.3s ease;
+              stroke-dasharray: 95;
+              stroke-dashoffset: 95;
+            }
 
             &:hover {
               text-decoration: underline;
+              .arrow-icon {
+                transform: translate3d(5px, 0, 0);
+              }
+
+              .arrow-icon--circle {
+                stroke-dashoffset: 0;
+              }
             }
           }
         }
@@ -192,3 +226,7 @@
 }
 
 
+.hover-effect {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

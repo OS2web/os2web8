@@ -35,7 +35,12 @@
                     {% endif %}
                   </div>
                   <div class="event-link">
-                    <a href="{{ node.field_os2web_event_url.value }}" target="_blank">Læs mere</a>
+                    <a href="{{ node.field_os2web_event_url.value }}" target="_blank">Læs mere<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <g fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                          <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                          <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                        </g>
+                      </svg></a>
                   </div>
                 </div>
               </div>
@@ -74,7 +79,12 @@
               {% endif %}
             </div>
             <div class="event-link">
-              <a href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">Læs mere</a>
+              <a class="event-readmore" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">Læs mere<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="none" stroke="#00335b" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                  </g>
+                </svg></a>
             </div>
           </div>
         {% endfor %}
@@ -98,7 +108,7 @@
       breakpoints: {
         992: {
           slidesPerView: 4,
-          spaceBetween: 25
+          spaceBetween: 15
         }
       },
       // Navigation arrows
@@ -107,5 +117,38 @@
         prevEl: '.swiper-button-prev',
       },
     });
+  });
+
+
+  // Find all news heading links and read more links
+  const headingEventLinks = document.querySelectorAll('.event-heading-link');
+  const readMoreEventLinks = document.querySelectorAll('.event-readmore');
+
+  const handleHover = (event, entering) => {
+    // Find the closest news-card parent
+    const eventCard = event.target.closest('.event-item');
+    if (!eventCard) return;
+
+    // Find the image inside this news-card
+    const img = eventCard.querySelector('.event-image img');
+    if (!img) return;
+
+    // Add or remove the hover class based on entering or leaving
+    if (entering) {
+      img.classList.add('hover-effect');
+    } else {
+      img.classList.remove('hover-effect');
+    }
+  };
+
+  // Add event listeners for both mouseenter and mouseleave
+  headingEventLinks.forEach(link => {
+    link.addEventListener('mouseenter', (event) => handleHover(event, true));
+    link.addEventListener('mouseleave', (event) => handleHover(event, false));
+  });
+
+  readMoreEventLinks.forEach(link => {
+    link.addEventListener('mouseenter', (event) => handleHover(event, true));
+    link.addEventListener('mouseleave', (event) => handleHover(event, false));
   });
 </script>
