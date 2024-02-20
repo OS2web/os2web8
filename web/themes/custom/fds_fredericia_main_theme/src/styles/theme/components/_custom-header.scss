@@ -260,7 +260,7 @@ $header-top-menu-size-sm: 50px;
               min-width: 100%;
             }
 
-            @media only screen and (max-width: 760px) {
+            @media only screen and (max-width: 992px) {
               flex-basis: 100%;
               border-bottom: 1px solid white;
             }
@@ -380,8 +380,19 @@ $header-top-menu-size-sm: 50px;
     }
     .megamenu-selvbetjening {
       margin: 30px 0;
+      display: flex;
+      justify-content: flex-end;
+
+      @media only screen and (max-width: 992px) {
+        justify-content: flex-start;
+      }
 
       .region-header__selfservice {
+        width: 40%;
+
+        @media only screen and (max-width: 992px) {
+          width: 100%;
+        }
 
         .block {
           .field--name-field-selfservice-block-heading {
@@ -403,12 +414,13 @@ $header-top-menu-size-sm: 50px;
             a {
               font-weight: 700;
               text-decoration: none;
+              color: white !important;
 
               &:hover {
                 text-decoration: underline;
               }
               &:visited {
-                color: white;
+                color: white !important;
               }
             }
           }
