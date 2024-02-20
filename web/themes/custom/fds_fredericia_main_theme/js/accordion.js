@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Modified URL parameter handling to accommodate nested accordions
+  // Modified URL parameter handling to accommodate nested accordions with adjusted scroll
   var urlParams = new URLSearchParams(window.location.search);
   var accordionId = urlParams.get('accordion');
   if (accordionId) {
@@ -71,13 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if (targetAccordionButton) {
       // Open all parent accordions first
       openParentAccordions(targetAccordionButton);
-      // Then open the target accordion and scroll to it
+      // Then open the target accordion
       toggleAccordion(targetAccordionButton, true);
+      // Adjusted scrolling to not align accordion at the very top
       setTimeout(function() {
-        document.getElementById(accordionId).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        const accordionElement = document.getElementById(accordionId);
+        if (accordionElement) {
+          const yOffset = -200; // Adjust this offset as needed
+          const y = accordionElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          window.scrollTo({top: y, behavior: 'smooth'});
+        }
       }, 300); // Adjust the timeout as needed
     }
   }
