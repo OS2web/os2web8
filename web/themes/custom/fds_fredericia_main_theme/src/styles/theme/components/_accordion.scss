@@ -77,6 +77,11 @@
     .accordion-content {
       border: 1px solid #eceae8;
       border-top: 0;
+
+
+      &.opened {
+        display: block;
+      }
     }
   }
 

@@ -16345,6 +16345,9 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   border: 1px solid #eceae8;
   border-top: 0;
 }
+.accordion > li .accordion-content.opened, .tabnav > li .accordion-content.opened, .accordion > li .opened.tabnav-panel, .tabnav > li .opened.tabnav-panel {
+  display: block;
+}
 
 .paragraph--type--os2web-accordion-item .accordion-button, .paragraph--type--os2web-accordion-item .tabnav > button {
   position: relative;

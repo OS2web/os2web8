@@ -51,13 +51,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Check the URL on page load to open the appropriate accordion
+  function openParentAccordions(element) {
+    // This function recursively opens all parent accordions of a nested accordion
+    var parentAccordionContent = element.closest('.accordion-content');
+    if (parentAccordionContent) {
+      var parentButton = parentAccordionContent.previousElementSibling;
+      if (parentButton && !parentButton.classList.contains('opened')) {
+        toggleAccordion(parentButton, true);
+        openParentAccordions(parentButton);
+      }
+    }
+  }
+
+  // Modified URL parameter handling to accommodate nested accordions
   var urlParams = new URLSearchParams(window.location.search);
   var accordionId = urlParams.get('accordion');
   if (accordionId) {
     var targetAccordionButton = document.querySelector(`[aria-controls="${accordionId}"]`);
     if (targetAccordionButton) {
+      // Open all parent accordions first
+      openParentAccordions(targetAccordionButton);
+      // Then open the target accordion and scroll to it
       toggleAccordion(targetAccordionButton, true);
+      setTimeout(function() {
+        document.getElementById(accordionId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300); // Adjust the timeout as needed
     }
   }
 });
