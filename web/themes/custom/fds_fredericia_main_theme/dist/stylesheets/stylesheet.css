@@ -14771,7 +14771,7 @@ a.social-icon-teaser {
 @media only screen and (max-width: 991px) {
   .region-header__top-navigation nav ul li a {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .region-header__top-navigation nav ul li a.is-active {
