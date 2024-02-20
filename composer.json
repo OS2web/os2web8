@@ -70,6 +70,7 @@
         "drupal/core-recommended": "9.5.11",
         "drupal/csv_importer": "^1.12",
         "drupal/ctools": "^3.14",
+        "drupal/custom_add_content": "^2.0",
         "drupal/devel": "^5.1",
         "drupal/editor_file": "^1.6",
         "drupal/embed": "^1.7",
