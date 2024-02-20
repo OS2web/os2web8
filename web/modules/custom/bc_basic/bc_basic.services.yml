@@ -1,5 +1,5 @@
 services:
-  custom_utility.commands:
+  bc_basic.commands:
     class: \Drupal\bc_basic\Commands\BatchCommands
     tags:
       - { name: drush.command }
