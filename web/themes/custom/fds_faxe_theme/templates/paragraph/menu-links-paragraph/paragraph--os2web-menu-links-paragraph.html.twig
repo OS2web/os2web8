@@ -17,27 +17,42 @@
       </div>
       {% endif %}
 
-      <div class="menu-linker-wrapper">
-        {% for menu_link in _context['#menu_links'] %}
-          <div class="menu-linker-item">
-
-            <div class="menu-linker-box">
-              <div class="menu-linker-body">
-                <a class="menu-linker-title" href="{{ menu_link.url }}">{{ menu_link.title }}</a>
-
-
-                {% if menu_link['intro_text']|length %}
+      {% if section_nodes is defined and section_nodes|length %}
+        <div class="menu-linker-wrapper">
+          {% for node in section_nodes %}
+            <div class="menu-linker-item">
+              <div class="menu-linker-box">
+                <div class="menu-linker-body">
+                  <a class="menu-linker-title" href="{{ node.url }}">{{ node.title }}</a>
+                  {% if node.intro %}
                   <div class="menu-linker-intro-text">
-                    {{ menu_link['intro_text'] }}
+                    {{ node.intro }}
                   </div>
-                {% endif %}
-
-
+                  {% endif %}
+                </div>
               </div>
             </div>
-          </div>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="menu-linker-wrapper">
+          {% for menu_link in _context['#menu_links'] %}
+            <div class="menu-linker-item">
+              <div class="menu-linker-box">
+                <div class="menu-linker-body">
+                  <a class="menu-linker-title" href="{{ menu_link.url }}">{{ menu_link.title }}</a>
+                  {% if menu_link['intro_text']|length %}
+                    <div class="menu-linker-intro-text">
+                      {{ menu_link['intro_text'] }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
 
     {% endblock %}
   </div>
