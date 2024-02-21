@@ -168,7 +168,7 @@ function fds_faxe_theme_preprocess_anonymous_subscriptions_message(array &$varia
   }
   $subscription = $variables['subscription'];
   if (!empty($subscription->type->value) && $subscription->type->value == 'os2web_hearings_hearing_case') {
-    $variables['link'] = Link::fromTextAndUrl(t('Klik her for at gå til høringer og afgørelser'), Url::fromUserInput('/hoeringer-og-afgoerelser'));
+    $variables['link'] = Link::fromTextAndUrl(t('Klik her for at gå til høringer og afgørelser'), Url::fromUserInput('/hoeringer-afgoerelser'));
   }
 }
 
