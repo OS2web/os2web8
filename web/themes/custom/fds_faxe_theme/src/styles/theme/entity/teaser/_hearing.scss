@@ -20,7 +20,9 @@
 // Styling
 // --------------------------------------------------
 
-
+.view-os2web-hearings {
+  padding: 20px;
+}
 
 .entity-teaser--os2web-hearings-hearing-case {
   display: flex;
@@ -32,6 +34,8 @@
   align-items: stretch;
 
   box-shadow: $box-shadow;
+
+  justify-content: space-between;
 
   .icon {
     transform: rotate(180deg);
@@ -60,15 +64,15 @@ a.entity-teaser--os2web-hearings-hearing-case {
 .entity-teaser--os2web-hearings-hearing-case__date {
   display: flex;
 
-  padding: 1.5px 10px;
+  padding: 10px;
 
-  flex-basis: 80px;
+  width: 20%;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
 
   font-weight: $font-weight-bold;
-  font-size: $large-font-size;
+  font-size: 1.6rem;
   line-height: 1.8rem;
   text-align: center;
 
@@ -99,7 +103,7 @@ a.entity-teaser--os2web-hearings-hearing-case {
 
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
+  width: 60%;
 
   .field--name-field-os2web-m-type {
     font-weight: $font-weight-bold;
@@ -117,6 +121,7 @@ a.entity-teaser--os2web-hearings-hearing-case {
 
   align-items: center;
   text-align: center;
+  width: 20%;
 
   .icon {
     font-size: 2.5rem;
