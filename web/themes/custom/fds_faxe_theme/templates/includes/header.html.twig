@@ -70,7 +70,7 @@
 
 {{ page.featured_top }}
 
-{% set current_path = path('<current>') %}
+{% set current_path = request.pathInfo %}
 {% if not is_front and current_path not in ['/erhverv', '/politik'] %}
   <div class="section section--breadcrumb-bar d-print-none layout--hidden-on-sections">
     <div class="container breadcrumb-container">
