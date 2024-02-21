@@ -28,9 +28,9 @@
       </a>
       <div class="news-content-wrapper">
         <span class="news-date">{{ article.field_os2web_news_article_date.value | date('d/m/Y') }}</span>
-        <a class="news-heading-link" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}"><h3 class="news-heading">{{ article.field_os2web_news_heading.value }}</h3></a>
+        <a class="news-heading-link" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}"><h3 class="news-heading">{{ article.label() }}</h3></a>
         <p class="news-intro">
-          {{ article.field_os2web_news_intro.value|length > 200 ? article.field_os2web_news_intro.value|slice(0, 150) ~ '...' : article.field_os2web_news_intro.value }}
+          {{ article.field_os2web_news_intro.value|length > 150 ? article.field_os2web_news_intro.value|slice(0, 150) ~ '...' : article.field_os2web_news_intro.value }}
         </p>
         <a class="news-readmore" href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}">Læs mere<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <g fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">

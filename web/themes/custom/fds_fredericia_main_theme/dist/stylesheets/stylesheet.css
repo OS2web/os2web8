@@ -22688,11 +22688,25 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link {
+  line-height: 0;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link:hover .event-image img, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link:hover .event-image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link .event-image {
+  overflow: hidden;
+}
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link .event-image img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 @media only screen and (max-width: 992px) {
   .events-slider .handpicked-events .swiper-wrapper .event-item .event-image-link .event-image img, .events-slider .swiper-events .swiper-wrapper .event-item .event-image-link .event-image img {
@@ -22736,9 +22750,32 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+  padding-right: 10px;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a .arrow-icon, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a .arrow-icon {
+  position: relative;
+  top: -1px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  vertical-align: middle;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a .arrow-icon--circle, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a .arrow-icon--circle {
+  -webkit-transition: stroke-dashoffset 0.3s ease;
+  transition: stroke-dashoffset 0.3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-link a:hover, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a:hover {
   text-decoration: underline;
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a:hover .arrow-icon, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a:hover .arrow-icon {
+  -webkit-transform: translate3d(5px, 0, 0);
+          transform: translate3d(5px, 0, 0);
+}
+.events-slider .handpicked-events .swiper-wrapper .event-item .event-link a:hover .arrow-icon--circle, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
 }
 .events-slider .handpicked-events .swiper-button-next::after, .events-slider .handpicked-events .swiper-button-prev::after, .events-slider .swiper-events .swiper-button-next::after, .events-slider .swiper-events .swiper-button-prev::after {
   color: #00335b;
@@ -22748,6 +22785,15 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .handpicked-events .swiper-button-prev, .events-slider .swiper-events .swiper-button-prev {
   left: -30px !important;
+}
+
+.hover-effect {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .webform-button--submit {
