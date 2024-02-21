@@ -70,12 +70,12 @@
 
 {{ page.featured_top }}
 
-{% if not is_front %}
+{% set current_path = path('<current>') %}
+{% if not is_front and current_path not in ['/erhverv', '/politik'] %}
   <div class="section section--breadcrumb-bar d-print-none layout--hidden-on-sections">
-         <div class="container breadcrumb-container">
-           {{ page.breadcrumb }}
-           {% include '@fds_faxe_theme/includes/action-buttons.html.twig' %}
-         </div>
-
+    <div class="container breadcrumb-container">
+      {{ page.breadcrumb }}
+      {% include '@fds_faxe_theme/includes/action-buttons.html.twig' %}
+    </div>
   </div>
 {% endif %}
