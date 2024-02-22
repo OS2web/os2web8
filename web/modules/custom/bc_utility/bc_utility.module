@@ -43,7 +43,7 @@ function bc_utility_mail($key, &$message, $params)
  */
 function bc_utility_block_access($block, $operation, $account) {
   if ($operation == 'view') {
-    if ($block->get('id') == 'indholdfield_ext_links'){
+    if ($block->get('id') == 'fds_faxe_theme_indholdfield_ext_links'){
       $node = \Drupal::routeMatch()->getParameter('node');
       if($node && $node->hasField('field_link_til_andet_indhold')) {
         if (!empty($node->field_link_til_andet_indhold->getValue())) {
