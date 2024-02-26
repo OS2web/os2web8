@@ -2,7 +2,6 @@
   <div class="slider-inner-wrapper">
     <div class="slider-header">
       <div class="slider-prefix">
-        {% include "@bellcom_theme/assets/images/arrowcircleright.svg" with { custom_color: "#344E41" } %}
         <span>{{ content.field_cards_slider_prefix }}</span>
       </div>
       <h2>{{ content.field_cards_slider_heading }}</h2>
@@ -35,7 +34,7 @@
                 {{ item.entity.field_body.value }}
               </div>
             {% endif %}
-              <button class="card-slider-btn">Læs mere{% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}</button>
+              <button class="card-slider-btn">Læs mere</button>
             </div>
           </a>
         {% endfor %}
