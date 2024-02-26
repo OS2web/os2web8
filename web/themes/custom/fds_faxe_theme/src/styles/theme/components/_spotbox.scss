@@ -22,7 +22,7 @@
 
 .spotbox {
   position: relative;
-  height: 290px;
+  height: fit-content;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -367,9 +367,8 @@ a.spotbox {
       content: $fa-var-arrow-right;
 
       color: #fff;
-      background-color: #284d62;
 
-      transform: rotate(0);
+      transform: rotate(0) translateY(50%);
       border-radius: 25px;
     }
   }
