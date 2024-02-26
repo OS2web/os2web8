@@ -2916,26 +2916,65 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
             }
 .slider-wrapper {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-}
-.slider-header {
-  text-align: center;
-}
-.slider-controls {
-  text-align: right;
-  margin-bottom: 10px;
-}
-.slider {
+  width: 100%;
   display: flex;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
 }
-.slide {
-  min-width: 33.333%; /* For 3 slides */
-  box-sizing: border-box;
-  padding: 10px;
-}
+.slider-wrapper .slider-inner-wrapper {
+    position: relative;
+    max-width: 1440px;
+    height: auto;
+    width: 100%;
+    margin: 80px 10px;
+  }
+.slider-wrapper .slider-inner-wrapper .slider-header .slider-prefix {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+.slider-wrapper .slider-inner-wrapper .slider-header .slider-prefix span {
+          margin-left: 10px;
+          text-transform: uppercase;
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-size: 13px;
+          color: #344e41;
+        }
+.slider-wrapper .slider-inner-wrapper .slider-header h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+.slider-wrapper .slider-inner-wrapper .slider-controls {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+.slider-wrapper .slider-inner-wrapper .slider-controls .swiper-button-prev, .slider-wrapper .slider-inner-wrapper .slider-controls .swiper-button-next {
+        position: static;
+        color: #333;
+      }
+.slider-wrapper .slider-inner-wrapper .slider-controls .swiper-button-prev:after, .slider-wrapper .slider-inner-wrapper .slider-controls .swiper-button-next:after {
+          font-size: 20px;
+        }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide {
+          border-radius: 10px;
+
+        }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content {
+            padding: 20px;
+          }
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;

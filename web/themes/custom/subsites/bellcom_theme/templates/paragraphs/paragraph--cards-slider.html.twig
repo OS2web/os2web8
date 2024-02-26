@@ -1,38 +1,45 @@
 <div class="slider-wrapper">
-  <div class="slider-header">
-    <span>{{ content.field_cards_slider_prefix }}</span>
-    <h2>{{ content.field_cards_slider_heading }}</h2>
-  </div>
+  <div class="slider-inner-wrapper">
+    <div class="slider-header">
+      <div class="slider-prefix">
+        {% include "@bellcom_theme/assets/images/arrowcircleright.svg" with { custom_color: "#344E41" } %}
+        <span>{{ content.field_cards_slider_prefix }}</span>
+      </div>
+      <h2>{{ content.field_cards_slider_heading }}</h2>
+    </div>
 
-  <!-- Swiper Navigation Above -->
-  <div class="slider-controls">
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
+    <!-- Swiper Navigation Above -->
+    <div class="slider-controls">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
-  <!-- Swiper -->
-  <div class="swiper">
-    <!-- Wrapper for slides -->
-    <div class="swiper-wrapper">
-      {% for item in paragraph.field_cards_slider_content_ref %}
-        <div class="swiper-slide">
-          {% if item.entity.field_slide_image.entity %}
-            <img src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
-          {% endif %}
-          {% if item.entity.field_slide_prefix.value %}
-            <div class="slide-prefix">{{ item.entity.field_slide_prefix.value }}</div>
-          {% endif %}
-          <h3>{{ item.entity.label }}</h3>
-          {% if item.entity.field_body.value %}
-            <div class="card-slide-body">
-              {{ item.entity.field_body.value }}
+    <!-- Swiper -->
+    <div class="swiper">
+      <!-- Wrapper for slides -->
+      <div class="swiper-wrapper">
+        {% for item in paragraph.field_cards_slider_content_ref %}
+          <div class="swiper-slide">
+            {% if item.entity.field_slide_image.entity %}
+              <img src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
+            {% endif %}
+            <div class="swiper-content">
+            {% if item.entity.field_slide_prefix.value %}
+              <div class="slide-prefix">{{ item.entity.field_slide_prefix.value }}</div>
+            {% endif %}
+            <h3>{{ item.entity.label }}</h3>
+            {% if item.entity.field_body.value %}
+              <div class="card-slide-body">
+                {{ item.entity.field_body.value }}
+              </div>
+            {% endif %}
+            {% if item.entity.field_slide_link.uri %}
+              <a href="{{ item.entity.field_slide_link.uri }}">Learn More</a>
+            {% endif %}
             </div>
-          {% endif %}
-          {% if item.entity.field_slide_link.uri %}
-            <a href="{{ item.entity.field_slide_link.uri }}">Learn More</a>
-          {% endif %}
-        </div>
-      {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
