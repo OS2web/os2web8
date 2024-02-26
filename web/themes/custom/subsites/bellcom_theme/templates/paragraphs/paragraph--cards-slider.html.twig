@@ -20,14 +20,14 @@
       <div class="swiper-wrapper">
         {% for item in paragraph.field_cards_slider_content_ref %}
           {% set classIndex = (loop.index - 1) % 3 + 1 %}
-          <a href="{{ item.entity.field_slide_link.uri }}" target="_blank" rel="noopener noreferrer" class="swiper-slide class{{ classIndex }}">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="swiper-slide class{{ classIndex }}">
             {% if item.entity.field_slide_image.entity %}
               <img src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
             {% endif %}
             <div class="swiper-content">
-{#            {% if item.entity.field_slide_prefix.value %}#}
-{#              <div class="slide-prefix">{{ item.entity.field_slide_prefix.value }}</div>#}
-{#            {% endif %}#}
+            {% if item.entity.field_slide_prefix.value %}
+              <div class="slide-prefix">{{ item.entity.field_slide_prefix.value }}</div>
+            {% endif %}
             <div class="slide-heading">
               <h3>{{ item.entity.label }}</h3>
             </div>
