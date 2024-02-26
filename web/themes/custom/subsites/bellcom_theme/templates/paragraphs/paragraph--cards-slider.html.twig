@@ -19,7 +19,8 @@
       <!-- Wrapper for slides -->
       <div class="swiper-wrapper">
         {% for item in paragraph.field_cards_slider_content_ref %}
-          <div class="swiper-slide">
+          {% set classIndex = (loop.index - 1) % 3 + 1 %}
+          <a href="{{ item.entity.field_slide_link.uri }}" target="_blank" rel="noopener noreferrer" class="swiper-slide class{{ classIndex }}">
             {% if item.entity.field_slide_image.entity %}
               <img src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
             {% endif %}
@@ -27,17 +28,19 @@
             {% if item.entity.field_slide_prefix.value %}
               <div class="slide-prefix">{{ item.entity.field_slide_prefix.value }}</div>
             {% endif %}
-            <h3>{{ item.entity.label }}</h3>
+            <div class="slide-heading">
+              <h3>{{ item.entity.label }}</h3>
+            </div>
             {% if item.entity.field_body.value %}
               <div class="card-slide-body">
-                {{ item.entity.field_body.value }}
+                {{ item.entity.field_body }}
               </div>
             {% endif %}
             {% if item.entity.field_slide_link.uri %}
-              <a href="{{ item.entity.field_slide_link.uri }}">Learn More</a>
+              <button class="card-slider-btn">Læs mere{% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}</button>
             {% endif %}
             </div>
-          </div>
+          </a>
         {% endfor %}
       </div>
     </div>

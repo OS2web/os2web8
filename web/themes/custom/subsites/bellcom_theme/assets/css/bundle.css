@@ -2963,6 +2963,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
         }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide {
           border-radius: 10px;
+          color: white;
 
         }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide img {
@@ -2974,6 +2975,36 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content {
             padding: 20px;
+
+
+          }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .slide-prefix {
+              font-size: 20px;
+              font-family: "Playfair Display", serif;
+              font-weight: 600;
+            }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .slide-heading h3 {
+                font-size: 24px;
+                font-family: "Poppins", sans-serif;
+              }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .card-slide-body {
+              margin: 10px 0;
+            }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .card-slider-btn {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              font-weight: 600;
+              font-family: "Poppins", sans-serif;
+            }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide.class1 {
+            background-color: #344E41;
+          }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide.class2 {
+            background-color: #274C77;
+          }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide.class3 {
+            background-color: #2F2E41;
           }
 * {
   -webkit-font-smoothing: antialiased !important;

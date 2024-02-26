@@ -57,6 +57,7 @@
       .swiper-wrapper {
         .swiper-slide {
           border-radius: 10px;
+          color: white;
 
           img {
             height: 300px;
@@ -68,6 +69,42 @@
 
           .swiper-content {
             padding: 20px;
+
+            .slide-prefix {
+              font-size: 20px;
+              font-family: "Playfair Display", serif;
+              font-weight: 600;
+            }
+
+            .slide-heading {
+              h3 {
+                font-size: 24px;
+                font-family: "Poppins", sans-serif;
+              }
+            }
+            .card-slide-body {
+              margin: 10px 0;
+            }
+
+            .card-slider-btn {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              font-weight: 600;
+              font-family: "Poppins", sans-serif;
+            }
+
+
+          }
+
+          &.class1 {
+            background-color: #344E41;
+          }
+          &.class2 {
+            background-color: #274C77;
+          }
+          &.class3 {
+            background-color: #2F2E41;
           }
 
         }
