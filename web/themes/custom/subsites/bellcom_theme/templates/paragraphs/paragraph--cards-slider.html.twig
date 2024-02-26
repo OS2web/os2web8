@@ -33,7 +33,7 @@
             </div>
             {% if item.entity.field_body.value %}
               <div class="card-slide-body">
-                {{ item.entity.field_body.value }}
+                {{ item.entity.field_body.value|raw }}
               </div>
             {% endif %}
               <button class="card-slider-btn">Læs mere{% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}</button>
