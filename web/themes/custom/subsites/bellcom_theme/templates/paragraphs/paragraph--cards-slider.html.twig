@@ -17,7 +17,7 @@
     <div class="swiper">
       <!-- Wrapper for slides -->
       <div class="swiper-wrapper">
-        {% for item in paragraph.field_cards_slider_content_ref %}
+        {% for item in content.field_cards_slider_content_ref %}
           <a href="{{ item.entity.field_slide_link.uri }}" target="_blank" rel="noopener noreferrer" class="swiper-slide">
             {% if item.entity.field_slide_image.entity %}
               <img src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
