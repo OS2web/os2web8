@@ -1,0 +1,25 @@
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slider-header {
+  text-align: center;
+}
+
+.slider-controls {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  min-width: 33.333%; /* For 3 slides */
+  box-sizing: border-box;
+  padding: 10px;
+}

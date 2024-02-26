@@ -52,4 +52,35 @@ subscribeBtnTextImage.addEventListener('click', (e) => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  const visibleSlides = 3; // Number of slides to show
+
+  function showSlides() {
+    const startIndex = currentIndex;
+    const endIndex = startIndex + visibleSlides;
+
+    slides.forEach((slide, index) => {
+      slide.style.display = 'none';
+      if (index >= startIndex && index < endIndex) {
+        slide.style.display = 'block';
+      }
+    });
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlides();
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlides();
+  });
+
+  showSlides(); // Initialize the slider
+});
+
 

@@ -1,0 +1,21 @@
+<div class="slider-wrapper">
+  <div class="slider-header">
+    <span>{{ content.field_prefix }}</span>
+    <h2>{{ content.field_heading }}</h2>
+  </div>
+  <div class="slider-controls">
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+  </div>
+  <div class="slider">
+    {% for item in content.field_cards_slider_content_ref %}
+      <div class="slide">
+        <img src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.title.value }}">
+        <div class="slide-prefix">{{ item.entity.field_slide_prefix.value }}</div>
+        <h3>{{ item.entity.title.value }}</h3>
+        <p>{{ item.entity.field_body.value }}</p>
+        <a href="{{ item.entity.field_slide_link.uri }}">Learn More</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
