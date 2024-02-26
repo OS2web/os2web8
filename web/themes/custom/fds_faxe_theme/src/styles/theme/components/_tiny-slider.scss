@@ -57,7 +57,6 @@
 $controls-size: 20px;
 
 .tns-controls {
-  display: none;
   button {
     display: flex;
     position: absolute;
@@ -85,7 +84,7 @@ $controls-size: 20px;
       display: inline-block;
 
       font-family: FontAwesome;
-      font-size: calc(#{$controls-size} - 7px);
+      font-size: 16px;
     }
 
     &[data-controls="prev"] {
@@ -128,16 +127,6 @@ $controls-size: 20px;
     margin-left: -40px;
     margin-right: -40px;
   }
-  .tns-controls {
-    button {
-      &[data-controls="prev"] {
-        left: 50px;
-      }
-      &[data-controls="next"] {
-        right: 50px;
-      }
-    }
-  }
 }
 
 
@@ -161,7 +150,7 @@ $controls-size: 20px;
       width: calc(#{$controls-size} + 10px);;
 
       &:before {
-        font-size: $controls-size;
+        font-size: 16px;
       }
 
       // &[data-controls="prev"] {
