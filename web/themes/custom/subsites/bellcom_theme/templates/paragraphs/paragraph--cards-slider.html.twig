@@ -2,7 +2,7 @@
   <div class="slider-inner-wrapper">
     <div class="slider-header">
       <div class="slider-prefix">
-        {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "#344e41" } %}
+        {% include "@bellcom_theme/assets/images/arrowcircleright.svg" with { custom_color: "#344E41" } %}
         <span>{{ content.field_cards_slider_prefix }}</span>
       </div>
       <h2>{{ content.field_cards_slider_heading }}</h2>
@@ -22,7 +22,9 @@
           {% set classIndex = (loop.index - 1) % 3 + 1 %}
           <a href="{{ item.entity.field_slide_link.uri }}" target="_blank" rel="noopener noreferrer" class="swiper-slide class{{ classIndex }}">
             {% if item.entity.field_slide_image.entity %}
-              <img class="card-img" src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
+              <div class="card-img-wrapper">
+                <img class="card-img" src="{{ file_url(item.entity.field_slide_image.entity.fileuri) }}" alt="{{ item.entity.field_slide_image.alt }}" />
+              </div>
             {% endif %}
             <div class="swiper-content">
             {% if item.entity.field_slide_prefix.value %}
@@ -49,12 +51,22 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper', {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
     });
   });
 </script>
