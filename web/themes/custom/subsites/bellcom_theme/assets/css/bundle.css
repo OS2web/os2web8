@@ -2929,6 +2929,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     width: 100%;
     margin: 80px 10px;
   }
+@media only screen and (max-width: 1440px) {
+.slider-wrapper .slider-inner-wrapper {
+      padding: 0 10px
+  }
+    }
 .slider-wrapper .slider-inner-wrapper .slider-header .slider-prefix {
         display: flex;
         align-items: center;
@@ -2967,6 +2972,9 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           overflow: hidden;
 
         }
+.slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .card-img-wrapper {
+            overflow: hidden;
+          }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .card-img-wrapper .card-img {
               height: 300px;
               object-fit: cover;

@@ -11,6 +11,10 @@
     width: 100%;
     margin: 80px 10px;
 
+    @media only screen and (max-width: 1440px) {
+      padding: 0 10px;
+    }
+
     .slider-header {
 
       .slider-prefix {
@@ -61,6 +65,7 @@
           overflow: hidden;
 
           .card-img-wrapper {
+            overflow: hidden;
             .card-img {
               height: 300px;
               object-fit: cover;
