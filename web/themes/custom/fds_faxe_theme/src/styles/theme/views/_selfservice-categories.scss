@@ -44,6 +44,15 @@
   }
 }
 
+.sog-sitemap.views-row:not(.sog-sitemap.views-row:has(a)) {
+  display: none;
+}
+.sog-sitemap.views-row .views-field.views-field-name {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-top: 16px;
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
