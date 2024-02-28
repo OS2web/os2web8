@@ -45,21 +45,21 @@
         span {
           margin-left: 10px;
           text-transform: uppercase;
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
           font-weight: 500;
           font-size: 13px;
           color: #344e41;
         }
       }
       h2 {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 32px;
         font-weight: 600;
         line-height: 1.3;
       }
       .simple-accordion__intro-body {
         margin-top: 40px;
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 15px;
       }
     }
@@ -88,7 +88,7 @@
         font-size: 24px;
         font-weight: 500;
         transition: 0.4s;
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         border-radius: 10px;
         position: relative;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -137,7 +137,7 @@
         }
       }
       .accordion-body {
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 15px;
         overflow: hidden;
         transition: max-height 0.4s ease-out;

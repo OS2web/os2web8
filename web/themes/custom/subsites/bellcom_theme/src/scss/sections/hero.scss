@@ -37,7 +37,7 @@
       h1 {
         .hero-heading {
           .hero-heading__item {
-            font-family: 'Overpass', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 52px;
             line-height: 1.1;
             margin-bottom: 25px;
@@ -52,7 +52,7 @@
       .hero__body-text {
         .hero-body {
           .hero-body__item {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Overpass', sans-serif;
             font-size: 18px;
             font-weight: 300;
             margin-bottom: 20px;
@@ -81,7 +81,7 @@
           border-radius: 10px;
           color: white;
           font-weight: 600;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Overpass', sans-serif;
           display: flex;
           align-items: center;
           transition: 0.3s ease;
@@ -263,7 +263,7 @@
           .hero__element-text {
             display: flex;
             flex-direction: column;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Overpass', sans-serif;
 
             .hero__element-text-header {
               font-size: 20px;

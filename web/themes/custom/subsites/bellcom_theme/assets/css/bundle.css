@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap') @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 /*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
@@ -973,7 +974,7 @@ h6{
   background-color: white;
   min-height: 80px;
   display: flex;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Overpass', sans-serif;
   position: relative;
   z-index: 99;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -1257,7 +1258,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Poppins", sans-serif;
+  font-family: "Overpass", sans-serif;
 }
 footer .footer_inner-wrapper {
     max-width: 1440px;
@@ -1577,7 +1578,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     }
       }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper h1 .hero-heading .hero-heading__item {
-            font-family: 'Overpass', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 52px;
             line-height: 1.1;
             margin-bottom: 25px;
@@ -1589,7 +1590,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
             }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__body-text .hero-body .hero-body__item {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Overpass', sans-serif;
             font-size: 18px;
             font-weight: 300;
             margin-bottom: 20px;
@@ -1621,7 +1622,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           border-radius: 10px;
           color: white;
           font-weight: 600;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Overpass', sans-serif;
           display: flex;
           align-items: center;
           transition: 0.3s ease;
@@ -1788,7 +1789,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .hero-wrapper .hero__inner-wrapper .hero__element-wrapper .hero__element .hero__element-widget .hero__element-text {
             display: flex;
             flex-direction: column;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Overpass', sans-serif;
 
           }
 .hero-wrapper .hero__inner-wrapper .hero__element-wrapper .hero__element .hero__element-widget .hero__element-text .hero__element-text-header {
@@ -1837,7 +1838,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     }
       }
 .text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-heading {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 32px;
         font-weight: 500;
         line-height: 1.3;
@@ -1851,7 +1852,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       }
         }
 .text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-paragraph {
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 18px;
         font-weight: 400;
       }
@@ -1901,7 +1902,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product-icon svg {
         }
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product_heading {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size:32px;
         font-weight: 500;
         margin-bottom: 10px;
@@ -1912,7 +1913,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       }
         }
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product_description {
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 18px;
         font-weight: 300;
       }
@@ -1931,7 +1932,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           border-radius: 10px;
           color: white;
           font-weight: 600;
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
           display: flex;
           align-items: center;
           transition: 0.3s ease;
@@ -2078,12 +2079,12 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .heading-wrapper .prefix-container span {
             margin-left: 10px;
             text-transform: uppercase;
-            font-family: "Poppins", sans-serif;
+            font-family: "Overpass", sans-serif;
             font-weight: 500;
             font-size: 13px;
           }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .heading-wrapper h2 {
-          font-family: "Overpass", sans-serif;
+          font-family: "Playfair Display", serif;
           font-size: 32px;
           font-weight: 600;
           line-height: 1.3;
@@ -2094,7 +2095,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
         }
           }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .content-body {
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 15px;
         margin: 20px 0;
       }
@@ -2109,7 +2110,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
             border-radius: 10px;
             color: white;
             font-weight: 600;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Overpass', sans-serif;
             display: flex;
             align-items: center;
             transition: 0.3s ease;
@@ -2138,7 +2139,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
             }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .content-element form {
           display: flex;
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
         }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .content-element form input {
             padding: 10px 0 10px 10px;
@@ -2334,19 +2335,19 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__prefix span {
           margin-left: 10px;
           text-transform: uppercase;
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
           font-weight: 500;
           font-size: 13px;
           color: #344E41;
         }
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper h2 {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 600;
         font-size: 32px;
         margin-bottom: 10px;
       }
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__body {
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 15px;
       }
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__cta {
@@ -2362,7 +2363,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           border-radius: 10px;
           color: white;
           font-weight: 600;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Overpass', sans-serif;
           display: flex;
           align-items: center;
           transition: 0.3s ease;
@@ -2469,7 +2470,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body .contact-form__prefix {
           display: flex;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Overpass', sans-serif;
           text-transform: uppercase;
           align-items: center;
         }
@@ -2480,13 +2481,13 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
             margin-left: 10px;
           }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body h2 {
-          font-family: "Overpass", sans-serif;
+          font-family: "Playfair Display", serif;
           font-weight: 500;
           font-size: 32px;
           line-height: 1.2;
         }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body .contact-form__body {
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
           font-size: 15px;
         }
 @media only screen and (max-width: 1024px) {
@@ -2549,7 +2550,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
               }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .js-form-item label {
                   font-size: 15px;
-                  font-family: "Poppins", sans-serif;
+                  font-family: "Overpass", sans-serif;
                   font-weight: 500;
                   margin-bottom: 5px;
                 }
@@ -2575,7 +2576,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form .form-actions #edit-actions-submit {
                   border-radius: 10px;
                   padding: 12px 35px;
-                  font-family: "Poppins", sans-serif;
+                  font-family: "Overpass", sans-serif;
                   font-weight:600;
                   background-color: #344e41;
                   color: white;
@@ -2634,20 +2635,20 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .simple-accordion__intro-wrapper .simple-accordion__intro-prefix span {
           margin-left: 10px;
           text-transform: uppercase;
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
           font-weight: 500;
           font-size: 13px;
           color: #344e41;
         }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .simple-accordion__intro-wrapper h2 {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 32px;
         font-weight: 600;
         line-height: 1.3;
       }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .simple-accordion__intro-wrapper .simple-accordion__intro-body {
         margin-top: 40px;
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 15px;
       }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .accordion-wrapper {
@@ -2680,7 +2681,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
         font-size: 24px;
         font-weight: 500;
         transition: 0.4s;
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         border-radius: 10px;
         position: relative;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -2727,7 +2728,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           font-family: "FontAwesome";
         }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .accordion-wrapper .accordion-body {
-        font-family: "Poppins", sans-serif;
+        font-family: "Overpass", sans-serif;
         font-size: 15px;
         overflow: hidden;
         transition: max-height 0.4s ease-out;
@@ -2776,7 +2777,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           margin-left: 10px;
         }
 .sidebar-content .sidebar-box .box-content h3 {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 28px;
         font-weight: 500;
       }
@@ -2798,7 +2799,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           border-radius: 10px;
           color: white;
           font-weight: 600;
-          font-family: 'Poppins', sans-serif;
+          font-family: 'Overpass', sans-serif;
           display: flex;
           align-items: center;
           transition: 0.3s ease;
@@ -2827,7 +2828,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Overpass", sans-serif;
 }
 .sidebar-accordion-wrapper .sidebar-accordion__inner-wrapper {
     display: flex;
@@ -2966,13 +2967,13 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .slider-wrapper .slider-inner-wrapper .slider-header .slider-prefix span {
           margin-left: 10px;
           text-transform: uppercase;
-          font-family: "Poppins", sans-serif;
+          font-family: "Overpass", sans-serif;
           font-weight: 500;
           font-size: 13px;
           color: #344e41;
         }
 .slider-wrapper .slider-inner-wrapper .slider-header h2 {
-        font-family: "Overpass", sans-serif;
+        font-family: "Playfair Display", serif;
         font-size: 32px;
         font-weight: 600;
         line-height: 1.3;
@@ -3014,12 +3015,12 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .slide-prefix {
               font-size: 20px;
-              font-family: "Overpass", sans-serif;
+              font-family: "Playfair Display", serif;
               font-weight: 600;
             }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .slide-heading h3 {
                 font-size: 24px;
-                font-family: "Poppins", sans-serif;
+                font-family: "Overpass", sans-serif;
               }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .card-slide-body {
               margin: 10px 0;
@@ -3029,7 +3030,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
               align-items: center;
               gap: 5px;
               font-weight: 600;
-              font-family: "Poppins", sans-serif;
+              font-family: "Overpass", sans-serif;
 
             }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .card-slider-btn svg {
