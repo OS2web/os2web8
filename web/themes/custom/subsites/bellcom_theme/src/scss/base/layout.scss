@@ -47,15 +47,3 @@ h6{
   @apply px-gap relative;
 }
 
-.node--os2web-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .node__content {
-    max-width: 1440px;
-    width: 100%;
-    padding: 0 10px;
-    margin: 80px 0;
-  }
-}
