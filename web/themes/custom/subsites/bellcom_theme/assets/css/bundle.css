@@ -920,24 +920,6 @@ $font-size-h3: ceil(($font-size-base * 1.7));
 $font-size-h4: ceil(($font-size-base * 1.25));
 $font-size-h5: $font-size-base;
 $font-size-h6: ceil(($font-size-base * 0.85));
-h1{
-  font-size:$font-size-h1;
-}
-h2{
-  font-size:$font-size-h2;
-}
-h3{
-  font-size:$font-size-h3;
-}
-h4{
-  font-size:$font-size-h4;
-}
-h5{
-  font-size:$font-size-h5;
-}
-h6{
-  font-size:$font-size-h6;
-}
 .container{
 	margin-left: auto;
 	margin-right: auto;
@@ -989,6 +971,9 @@ h6{
     width: 100%;
     max-width: 1440px;
     padding: 0 10px;
+    font-weight: 800;
+    color: #000;
+    opacity: .8;
   }
 .os2web-page-description {
   display: flex;
@@ -1002,7 +987,29 @@ h6{
   }
 .page-default-content-wrapper {
   margin: 80px 0;
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+.page-default-content-wrapper h1{
+    font-size:$font-size-h1;
+  }
+.page-default-content-wrapper h2{
+    font-size:$font-size-h2;
+  }
+.page-default-content-wrapper h3{
+    font-size:$font-size-h3;
+  }
+.page-default-content-wrapper h4{
+    font-size:$font-size-h4;
+  }
+.page-default-content-wrapper h5{
+    font-size:$font-size-h5;
+  }
+.page-default-content-wrapper h6{
+    font-size:$font-size-h6;
+  }
 .header {
   background-color: white;
   min-height: 80px;
