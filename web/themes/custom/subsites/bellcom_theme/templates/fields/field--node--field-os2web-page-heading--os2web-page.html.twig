@@ -22,7 +22,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}><h1>{{ item.content }}</h1></div>
+      <div{{ attributes.addClass(classes, 'field__item') }}><div class="page-heading-default"><h1>{{ item.content }}</h1></div></div>
     {% endfor %}
   {% endif %}
 {% else %}
