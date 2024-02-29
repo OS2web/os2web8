@@ -47,3 +47,39 @@ h6{
   @apply px-gap relative;
 }
 
+.os2web-page-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .os2web-page-heading__item {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+  }
+}
+
+.os2web-page-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .os2web-page-intro__item {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+  }
+}
+
+
+.os2web-page-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .os2web-page-description__item {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+  }
+}

@@ -1651,6 +1651,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn {
             display: flex;
             align-items: center;
+            font-family: "Overpass", sans-serif;
           }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper .hero__cta-wrapper .secondary-cta-btn-wrapper .secondary-cta-btn:hover span:after {
               transform: scaleX(1);
