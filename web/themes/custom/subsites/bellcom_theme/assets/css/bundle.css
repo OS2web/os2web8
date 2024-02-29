@@ -970,6 +970,36 @@ h6{
 	padding-left: var(--grid-gap);
 	padding-right: var(--grid-gap);
 }
+.os2web-page-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.os2web-page-heading .os2web-page-heading__item {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+  }
+.os2web-page-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.os2web-page-intro .os2web-page-intro__item {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+  }
+.os2web-page-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.os2web-page-description .os2web-page-description__item {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+  }
 .header {
   background-color: white;
   min-height: 80px;
