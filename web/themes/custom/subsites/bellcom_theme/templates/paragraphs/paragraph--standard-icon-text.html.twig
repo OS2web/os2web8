@@ -1,0 +1,29 @@
+<div class="icon-grid-wrapper">
+  <div class="icon-grid-inner-wrapper">
+  {% if content %}
+    <div class="grid-container">
+      {% for i in 1..8 %}
+        {% set imageField = 'field_box_' ~ i ~ '_image' %}
+        {% set headingField = 'field_box_' ~ i ~ '_heading' %}
+        {% set bodyField = 'field_box_' ~ i ~ '_body' %}
+
+        {% if content[imageField] or content[headingField] or content[bodyField] %}
+          <div class="grid-item">
+            {% if content[imageField] %}
+              <div class="item-image">{{ content[imageField] }}</div>
+            {% endif %}
+
+            {% if content[headingField] %}
+              <h3 class="item-heading">{{ content[headingField] }}</h3>
+            {% endif %}
+
+            {% if content[bodyField] %}
+              <div class="item-body">{{ content[bodyField] }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  </div>
+</div>

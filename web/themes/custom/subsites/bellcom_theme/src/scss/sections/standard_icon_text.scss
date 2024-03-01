@@ -1,0 +1,44 @@
+.icon-grid-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon-grid-inner-wrapper {
+    max-width: 1440px;
+    margin: 80px 0;
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; // Adjust the gap as needed
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // 2 items per row on tablets
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // 1 item per row on mobile
+  }
+}
+
+.grid-item {
+  // Styling for each grid item
+  .item-image img {
+    width: 100%; // Make image responsive
+    height: auto;
+  }
+
+  .item-heading {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .item-body {
+    margin-bottom: 1rem;
+  }
+}
