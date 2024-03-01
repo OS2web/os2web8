@@ -3124,17 +3124,28 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     grid-template-columns: 1fr /* 1 item per row on mobile*/
 }
   }
-/* Styling for each grid item*/
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
 .grid-item .item-image img {
     width: 100%; /* Make image responsive*/
     height: auto;
+    max-width: 125px;
+    margin-bottom: 15px;
   }
 .grid-item .item-heading {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
   }
 .grid-item .item-body {
-    margin-bottom: 1rem;
+    color: #000;
+    opacity: .8;
   }
 * {
   -webkit-font-smoothing: antialiased !important;

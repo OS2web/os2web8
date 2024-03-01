@@ -27,18 +27,27 @@
 }
 
 .grid-item {
-  // Styling for each grid item
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
   .item-image img {
     width: 100%; // Make image responsive
     height: auto;
+    max-width: 125px;
+    margin-bottom: 15px;
   }
 
   .item-heading {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .item-body {
-    margin-bottom: 1rem;
+    color: #000;
+    opacity: .8;
   }
 }
