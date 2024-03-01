@@ -2,27 +2,23 @@
   <div class="icon-grid-inner-wrapper">
   {% if content %}
     <div class="grid-container">
-      {% for i in 1..8 %}
+      {% for i in 1..6 %}
         {% set imageField = 'field_box_' ~ i ~ '_image' %}
         {% set headingField = 'field_box_' ~ i ~ '_heading' %}
         {% set bodyField = 'field_box_' ~ i ~ '_body' %}
 
-        {% set hasImage = imageField|render|trim is not empty %}
-        {% set hasHeading = headingField|render|trim is not empty %}
-        {% set hasBody = bodyField|render|trim is not empty %}
-
-        {% if hasImage or hasHeading or hasBody %}
+        {% if content[imageField] or content[headingField] or content[bodyField] %}
           <div data-aos="fade-in" data-aos-duration="800" data-aos-easing="ease" data-aos-once="true" class="grid-item">
-            {% if hasImage %}
-              <div class="item-image">{{ imageField }}</div>
+            {% if content[imageField] %}
+              <div class="item-image">{{ content[imageField] }}</div>
             {% endif %}
 
-            {% if hasHeading %}
-              <h2 class="item-heading">{{ headingField }}</h2>
+            {% if content[headingField] %}
+              <h2 class="item-heading">{{ content[headingField] }}</h2>
             {% endif %}
 
-            {% if hasBody %}
-              <div class="item-body">{{ bodyField }}</div>
+            {% if content[bodyField] %}
+              <div class="item-body">{{ content[bodyField] }}</div>
             {% endif %}
           </div>
         {% endif %}
