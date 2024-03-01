@@ -15,7 +15,8 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; // Adjust the gap as needed
+  row-gap: 125px;
+  column-gap: 50px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr); // 2 items per row on tablets
@@ -23,6 +24,7 @@
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr; // 1 item per row on mobile
+    row-gap: 50px;
   }
 }
 
@@ -32,12 +34,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 25px;
-  .item-image img {
-    width: 100%; // Make image responsive
-    height: auto;
-    max-width: 125px;
-    margin-bottom: 15px;
+  gap: 15px;
+  .item-image{
+    min-height: 150px;
+    img {
+      width: 100%; // Make image responsive
+      height: auto;
+      max-width: 125px;
+      margin-bottom: 15px;
+    }
+
   }
 
   .item-heading {

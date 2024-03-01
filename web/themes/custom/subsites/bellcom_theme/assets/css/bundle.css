@@ -3111,9 +3111,9 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  row-gap: 125px;
+  column-gap: 50px;
 }
-/* Adjust the gap as needed*/
 @media (max-width: 768px) {
 .grid-container {
     grid-template-columns: repeat(2, 1fr) /* 2 items per row on tablets*/
@@ -3121,7 +3121,8 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   }
 @media (max-width: 480px) {
 .grid-container {
-    grid-template-columns: 1fr /* 1 item per row on mobile*/
+    grid-template-columns: 1fr; /* 1 item per row on mobile*/
+    row-gap: 50px
 }
   }
 .grid-item {
@@ -3130,14 +3131,18 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 25px;
+  gap: 15px;
 }
-.grid-item .item-image img {
-    width: 100%; /* Make image responsive*/
-    height: auto;
-    max-width: 125px;
-    margin-bottom: 15px;
+.grid-item .item-image{
+    min-height: 150px;
+
   }
+.grid-item .item-image img {
+      width: 100%; /* Make image responsive*/
+      height: auto;
+      max-width: 125px;
+      margin-bottom: 15px;
+    }
 .grid-item .item-heading {
     text-transform: uppercase;
     font-size: 20px;

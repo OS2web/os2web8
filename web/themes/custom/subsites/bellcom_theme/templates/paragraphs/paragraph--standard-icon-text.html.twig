@@ -7,18 +7,22 @@
         {% set headingField = 'field_box_' ~ i ~ '_heading' %}
         {% set bodyField = 'field_box_' ~ i ~ '_body' %}
 
-        {% if content[imageField] or content[headingField] or content[bodyField] %}
-          <div class="grid-item">
-            {% if content[imageField] %}
-              <div class="item-image">{{ content[imageField] }}</div>
+        {% set hasImage = imageField|render|trim is not empty %}
+        {% set hasHeading = headingField|render|trim is not empty %}
+        {% set hasBody = bodyField|render|trim is not empty %}
+
+        {% if hasImage or hasHeading or hasBody %}
+          <div data-aos="fade-in" data-aos-duration="800" data-aos-easing="ease" data-aos-once="true" class="grid-item">
+            {% if hasImage %}
+              <div class="item-image">{{ imageField }}</div>
             {% endif %}
 
-            {% if content[headingField] %}
-              <h3 class="item-heading">{{ content[headingField] }}</h3>
+            {% if hasHeading %}
+              <h2 class="item-heading">{{ headingField }}</h2>
             {% endif %}
 
-            {% if content[bodyField] %}
-              <div class="item-body">{{ content[bodyField] }}</div>
+            {% if hasBody %}
+              <div class="item-body">{{ bodyField }}</div>
             {% endif %}
           </div>
         {% endif %}
