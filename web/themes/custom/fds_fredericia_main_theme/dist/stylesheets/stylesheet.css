@@ -21642,9 +21642,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: #00325b;
   margin-bottom: 10px;
 }
-.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading p, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading h1, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading h2, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading h3, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading h4, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading h5, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading h6, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading span {
-  color: #00325b;
-}
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content {
     text-align: center;
@@ -21817,6 +21814,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-weight: 600;
   color: #00325b;
   margin-bottom: 10px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info p, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h1, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h2, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h3, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h4, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h5, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h6, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info span {
+  color: #00325b;
 }
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person {
   display: -webkit-box;
