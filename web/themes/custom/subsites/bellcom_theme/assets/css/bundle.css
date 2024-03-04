@@ -1620,10 +1620,10 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper h1 .hero-heading .hero-heading__item {
             font-family: 'Overpass', sans-serif;
-            font-size: 52px;
+            font-size: 55px;
             line-height: 1.1;
             margin-bottom: 25px;
-            font-weight: 500;
+            font-weight: 300;
             letter-spacing: -2px;
           }
 @media (max-width: 640px) {
@@ -1882,8 +1882,8 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       }
 .text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-heading {
         font-family: "Overpass", sans-serif;
-        font-size: 32px;
-        font-weight: 500;
+        font-size: 35px;
+        font-weight: 100;
         line-height: 1.3;
         letter-spacing: -2px;
         padding-right: 35px;
@@ -1948,7 +1948,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product_heading {
         font-family: "Overpass",  sans-serif;
         font-size:32px;
-        font-weight: 500;
+        font-weight: 300;
         margin-bottom: 10px;
         letter-spacing: -2px;
       }
@@ -2131,7 +2131,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .heading-wrapper h2 {
           font-family: "Overpass", sans-serif;
           font-size: 32px;
-          font-weight: 600;
+          font-weight: 300;
           line-height: 1.3;
           letter-spacing: -2px;
         }
@@ -2388,7 +2388,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
         }
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper h2 {
         font-family: "Overpass", sans-serif;
-        font-weight: 600;
+        font-weight: 300;
         font-size: 32px;
         margin-bottom: 10px;
         letter-spacing: -2px;
@@ -2529,7 +2529,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body h2 {
           font-family: "Overpass", sans-serif;
-          font-weight: 500;
+          font-weight: 300;
           font-size: 32px;
           line-height: 1.2;
           letter-spacing: -2px;
@@ -2691,7 +2691,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .simple-accordion__intro-wrapper h2 {
         font-family: "Overpass", sans-serif;
         font-size: 32px;
-        font-weight: 600;
+        font-weight: 300;
         line-height: 1.3;
         letter-spacing: -2px;
       }
@@ -3025,7 +3025,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .slider-wrapper .slider-inner-wrapper .slider-header h2 {
         font-family: "Overpass", sans-serif;
         font-size: 32px;
-        font-weight: 600;
+        font-weight: 300;
         line-height: 1.3;
         letter-spacing: -2px;
       }
