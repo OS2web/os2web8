@@ -1619,11 +1619,12 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     }
       }
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper h1 .hero-heading .hero-heading__item {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Overpass', sans-serif;
             font-size: 52px;
             line-height: 1.1;
             margin-bottom: 25px;
             font-weight: 500;
+            letter-spacing: -2px;
           }
 @media (max-width: 640px) {
 .hero-wrapper .hero__inner-wrapper .hero__text-wrapper h1 .hero-heading .hero-heading__item {
@@ -1880,10 +1881,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     }
       }
 .text-bg-wrapper .text-bg__inner-wrapper .text-bg__element-wrapper .text-bg__element-heading {
-        font-family: "Playfair Display", serif;
+        font-family: "Overpass", sans-serif;
         font-size: 32px;
         font-weight: 500;
         line-height: 1.3;
+        letter-spacing: -2px;
         padding-right: 35px;
       }
 @media (max-width: 1064px) {
@@ -1944,10 +1946,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product-icon svg {
         }
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product_heading {
-        font-family: "Playfair Display", serif;
+        font-family: "Overpass",  sans-serif;
         font-size:32px;
         font-weight: 500;
         margin-bottom: 10px;
+        letter-spacing: -2px;
       }
 @media only screen and (max-width: 768px) {
 .product_showcase_wrapper .product_showcase_inner-wrapper .product_showcase_element .product_heading {
@@ -2126,10 +2129,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
             font-size: 13px;
           }
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .heading-wrapper h2 {
-          font-family: "Playfair Display", serif;
+          font-family: "Overpass", sans-serif;
           font-size: 32px;
           font-weight: 600;
           line-height: 1.3;
+          letter-spacing: -2px;
         }
 @media only screen and (max-width: 640px) {
 .text-img-wrapper .text-img__inner-wrapper .content-wrapper .heading-wrapper h2 {
@@ -2383,10 +2387,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           color: #344E41;
         }
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper h2 {
-        font-family: "Playfair Display", serif;
+        font-family: "Overpass", sans-serif;
         font-weight: 600;
         font-size: 32px;
         margin-bottom: 10px;
+        letter-spacing: -2px;
       }
 .page-banner-wrapper .page-banner__inner-wrapper .page-banner__content-wrapper .page-banner__body {
         font-family: "Overpass", sans-serif;
@@ -2523,10 +2528,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
             margin-left: 10px;
           }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body h2 {
-          font-family: "Playfair Display", serif;
+          font-family: "Overpass", sans-serif;
           font-weight: 500;
           font-size: 32px;
           line-height: 1.2;
+          letter-spacing: -2px;
         }
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__body-content .contact-form__upper-body .contact-form__body {
           font-family: "Overpass", sans-serif;
@@ -2683,10 +2689,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           color: #344e41;
         }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .simple-accordion__intro-wrapper h2 {
-        font-family: "Playfair Display", serif;
+        font-family: "Overpass", sans-serif;
         font-size: 32px;
         font-weight: 600;
         line-height: 1.3;
+        letter-spacing: -2px;
       }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper .simple-accordion__intro-wrapper .simple-accordion__intro-body {
         margin-top: 40px;
@@ -2819,9 +2826,10 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           margin-left: 10px;
         }
 .sidebar-content .sidebar-box .box-content h3 {
-        font-family: "Playfair Display", serif;
+        font-family: "Overpass", sans-serif;
         font-size: 28px;
         font-weight: 500;
+        letter-spacing: -2px;
       }
 .sidebar-content .sidebar-box .box-content .sidebar-product-description {
         font-size: 15px;
@@ -3015,10 +3023,11 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           color: #344e41;
         }
 .slider-wrapper .slider-inner-wrapper .slider-header h2 {
-        font-family: "Playfair Display", serif;
+        font-family: "Overpass", sans-serif;
         font-size: 32px;
         font-weight: 600;
         line-height: 1.3;
+        letter-spacing: -2px;
       }
 .slider-wrapper .slider-inner-wrapper .slider-controls {
       margin-bottom: 10px;
@@ -3057,8 +3066,9 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
           }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .slide-prefix {
               font-size: 20px;
-              font-family: "Playfair Display", serif;
+              font-family: "Overpass", sans-serif;
               font-weight: 600;
+              letter-spacing: -2px;
             }
 .slider-wrapper .slider-inner-wrapper .swiper .swiper-wrapper .swiper-slide .swiper-content .slide-heading h3 {
                 font-size: 24px;
