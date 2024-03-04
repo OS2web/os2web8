@@ -21815,6 +21815,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: #00325b;
   margin-bottom: 10px;
 }
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info p, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h1, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h2, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h3, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h4, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h5, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info h6, .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-warning .warning-info span {
+  color: #00325b;
+}
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-person {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22794,6 +22797,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.field--name-field-os2web-accordion-heading h2 {
+  color: #00335b;
 }
 
 .webform-button--submit {
