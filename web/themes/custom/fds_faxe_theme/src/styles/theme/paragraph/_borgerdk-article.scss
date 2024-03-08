@@ -27,6 +27,36 @@
   }
 }
 
+.field--name-field-os2web-bdk-article {
+  .field__item {
+
+    .accordion {
+      li {
+        position: relative;
+
+        .accordion-button {
+          .field--name-title {
+            max-width: 85%;
+          }
+        }
+        .selfservice-links {
+          position: absolute;
+          right: 10px;
+          top: 7px;
+        }
+      }
+    }
+
+    .selfservice-links-bottom {
+      margin-top: 20px;
+
+      .spotbox {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
