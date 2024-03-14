@@ -21,7 +21,7 @@
 // --------------------------------------------------
 
 
-div.entity-list--os2web-news {
+div.entity-list--os2web-news, div.entity-list--os2web-hearings-hearing-case {
  // margin-left: -($side-shift-size);
  // margin-right: -($side-shift-size);
  // max-width: 100%;
@@ -41,7 +41,7 @@ div.entity-list--os2web-news {
     color: $color-black;
   }
 }
-.entity-list--os2web-news {
+.entity-list--os2web-news, .entity-list--os2web-hearings-hearing-case {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -50,7 +50,7 @@ div.entity-list--os2web-news {
     background-color: $background_color__default;
   }
 
-  .field--name-field-os2web-news-heading {
+  .field--name-field-os2web-news-heading, .field--name-field-os2web-hearings-heading  {
     margin-bottom: 1.1rem;
     h1, h2, h3, h4, h5, h6 {
       margin: 0;

@@ -182,7 +182,7 @@
 #block-indholdfield-ext-links {
   h2 {
     font-size: 2.4rem;
-    color: #00789e;
+    color: #196620;
     font-weight: normal;
     position: relative;
     padding: 40px;
@@ -234,7 +234,7 @@
         text-decoration: none;
         width: 100%;
         &:before {
-          background-color: $background_color__primary;
+          background-color: #196620;
           color: $color-white;
           display: flex;
           align-items: center;
@@ -254,7 +254,7 @@
         }
         &:hover {
           background-color: $gray-primary;
-          color: $background_color__primary;
+          color: #196620;
         }
         &:focus {
           outline: 0;
