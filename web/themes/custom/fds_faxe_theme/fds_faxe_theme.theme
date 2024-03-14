@@ -9,7 +9,13 @@ use Drupal\taxonomy\Entity\Term;
 
 
 
-
+function fds_faxe_theme_form_node_os2web_page_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $user = \Drupal::currentUser();
+  if (!$user->hasRole('administrator')) {
+    $form['field_faxe_sitemap_categori']['#access'] = FALSE;
+    $form['field_uniq_link']['#access'] = FALSE;
+  }
+}
 
 
 
