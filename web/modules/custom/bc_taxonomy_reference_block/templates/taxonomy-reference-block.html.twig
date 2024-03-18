@@ -1,0 +1,13 @@
+
+<div class="taxonomy-reference-block">
+    {% for taxitem in listdata %}
+        <h3>{{ taxitem.label }}</h3>
+        <div class="taxonomy-reference-block-list">
+            <ul>
+            {% for link in taxitem %}
+                <li><a href="{{ link.url }}" class="taxonomy-refenence-block-link">{{ link.name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
