@@ -13,7 +13,7 @@ use Drupal\media\Entity\Media;
 
 class MigrationHelper {
 
-  public static $siteUrl = 'https://faxekommune.dk';
+  public static $siteUrl = 'https://www.faxekommune.dk';
   public static $fileFolderPath = 'default';
 
   /**
@@ -484,6 +484,7 @@ class MigrationHelper {
    static function findLocalNode($sourceNodeId) {
     $node_migrate_tables = [
       'migrate_map_faxekommune_d7_node_indholdside',
+      'migrate_map_faxekommune_d7_node_borgerdk_indholdside',
       'migrate_map_faxekommune_d7_node_news'
     ];
 

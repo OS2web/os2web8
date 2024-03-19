@@ -152,4 +152,5 @@ migration_dependencies:
     - faxekommune_d7_taxonomy_keywords
     - faxekommune_d7_contact_box
     - faxekommune_d7_os2web_contentpage_paragraph_files
+    - faxekommune_d7_paragraph_accordion
   optional: {}
