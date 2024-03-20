@@ -27,6 +27,28 @@
   }
 }
 
+.block-bc-taxonomy-reference-block {
+  padding: 20px 0;
+
+
+  .taxonomy-reference-block {
+    h3 {
+      margin: 0;
+    }
+
+    ul {
+      li {
+        margin-top: 4px;
+        padding: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
