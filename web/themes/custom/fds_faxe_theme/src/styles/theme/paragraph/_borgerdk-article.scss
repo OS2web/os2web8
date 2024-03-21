@@ -42,7 +42,15 @@
         .selfservice-links {
           position: absolute;
           right: 10px;
-          top: 7px;
+          top: 5px;
+
+          a {
+            padding: 3px 10px;
+            min-height: 30px;
+            font-size: 14px;
+          }
+
+
         }
       }
       .accordion-content {
