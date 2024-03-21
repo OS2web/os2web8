@@ -9,16 +9,6 @@ use Drupal\taxonomy\Entity\Term;
 
 
 
-function fds_faxe_theme_form_node_os2web_page_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  $user = \Drupal::currentUser();
-  if (!$user->hasRole('administrator')) {
-    $form['field_faxe_sitemap_categori']['#access'] = FALSE;
-    $form['field_uniq_link']['#access'] = FALSE;
-  }
-}
-
-
-
 /**
  * Implements hook_theme_suggestions_page().
  */
@@ -55,6 +45,19 @@ function fds_faxe_theme_preprocess_block(&$variables) {
       $variables['lastupdated'] = date("d.m.Y", $node->getChangedTime());
     }
   }
+
+   if ($variables['elements']['#id'] == 'views_block__hoeringer_og_afgoerelser_dato_block_1') {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof \Drupal\node\NodeInterface && $node->getType() == 'os2web_news') {
+        $start_date = $node->get('field_start_tidspunkt')->value;
+        $end_date = $node->get('field_slut_tidspunkt')->value;
+
+        // Hide the block if either of the date fields are empty.
+        if (empty($start_date) || empty($end_date)) {
+          $variables['content'] = [];
+        }
+      }
+    }
 
 }
 
