@@ -18,6 +18,19 @@ function fds_faxe_theme_theme_suggestions_block_alter(array &$suggestions, array
       $suggestions = ["block__lastupdated"];
     }
   }
+
+  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'views_block__hoeringer_og_afgoerelser_dato_block_1') {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof NodeInterface && $node->getType() === 'os2web_news') {
+        $start_date_values = $node->get('field_start_tidspunkt')->getValue();
+        $end_date_values = $node->get('field_slut_tidspunkt')->getValue();
+
+        // Check if either of the date fields are empty.
+        if (empty($start_date_values[0]['value']) || empty($end_date_values[0]['value'])) {
+          $suggestions[] = 'block__hide';
+        }
+      }
+    }
 }
 
 /**
@@ -47,17 +60,22 @@ function fds_faxe_theme_preprocess_block(&$variables) {
   }
 
    if ($variables['elements']['#id'] == 'views_block__hoeringer_og_afgoerelser_dato_block_1') {
-      $node = \Drupal::routeMatch()->getParameter('node');
-      if ($node instanceof \Drupal\node\NodeInterface && $node->getType() == 'os2web_news') {
-        $start_date = $node->get('field_start_tidspunkt')->value;
-        $end_date = $node->get('field_slut_tidspunkt')->value;
+     $node = \Drupal::routeMatch()->getParameter('node');
+     if ($node instanceof \Drupal\node\NodeInterface && $node->getType() == 'os2web_news') {
+       // Retrieve the array of values for each date field.
+       $start_date_values = $node->get('field_start_tidspunkt')->getValue();
+       $end_date_values = $node->get('field_slut_tidspunkt')->getValue();
 
-        // Hide the block if either of the date fields are empty.
-        if (empty($start_date) || empty($end_date)) {
-          $variables['content'] = [];
-        }
-      }
-    }
+       // Initialize flags to check if start and end dates are set.
+       $start_date_set = !empty($start_date_values) && !empty($start_date_values[0]['value']);
+       $end_date_set = !empty($end_date_values) && !empty($end_date_values[0]['value']);
+
+       // Hide the block if either of the date fields are not set.
+       if (!$start_date_set || !$end_date_set) {
+         $variables['content'] = [];
+       }
+     }
+   }
 
 }
 
