@@ -45,6 +45,15 @@
           top: 7px;
         }
       }
+      .accordion-content {
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
 
     .selfservice-links-bottom {

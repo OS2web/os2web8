@@ -509,6 +509,13 @@ body .page-container {
 
         font-family: FontAwesome;
       }
+      a {
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .field--name-field-os2web-contact-main-phone {
