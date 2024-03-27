@@ -72,7 +72,7 @@
           </div><div class="banner-content-links" style="{% if loop.index > maxVisibleLinks %}display: none;{% endif %}">
             {% endif %}
             <div class="banner-link">
-              <a href="{{ link.uri }}">{{ link.title }}</a>
+              <a href="{{ link.url }}">{{ link.title }}</a>
             </div>
             {% set linkCounter = linkCounter + 1 %}
             {% endfor %}
@@ -82,7 +82,7 @@
             <div class="hidden-links" style="display: none;">
               {% for link in node.field_cta_links|slice(maxVisibleLinks) %}
                 <div class="banner-link">
-                  <a href="{{ link.uri }}">{{ link.title }}</a>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
                 </div>
               {% endfor %}
             </div>
@@ -120,12 +120,6 @@
       </div>
     </div>
     {% endif %}
-
-
-
-
-
-
 
 
     {% if node.field_show_print_section.value %}
