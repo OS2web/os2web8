@@ -5,3 +5,62 @@
     gap: 20px;
   }
 }
+
+.hoering-dates-wrapper {
+  margin-top: 20px;
+  background-color: #00789e;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.block-views-blockhoeringer-og-afgoerelser-dato-block-1 {
+  background-color: #fff;
+
+  h2 {
+    padding: 40px;
+    position: relative;
+    font-size: 2.4rem;
+    color: #00789e;
+    font-weight: 400;
+    margin-top: 0 !important;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 40%;
+      left: 0;
+      bottom: 19px;
+      background-color: #e2dddb;
+    }
+  }
+
+  .view-content {
+    padding: 0 40px 40px;
+    font-size: 1.4rem;
+
+    .views-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .views-field-field-start-tidspunkt, .views-field-field-slut-tidspunkt {
+        display: flex;
+
+        .views-label-field-start-tidspunkt, .views-label-field-slut-tidspunkt {
+          margin-right: 5px;
+        }
+
+        .field-content {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

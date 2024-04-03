@@ -42,7 +42,24 @@
         .selfservice-links {
           position: absolute;
           right: 10px;
-          top: 7px;
+          top: 5px;
+
+          a {
+            padding: 3px 10px;
+            min-height: 30px;
+            font-size: 14px;
+          }
+
+
+        }
+      }
+      .accordion-content {
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -53,6 +70,9 @@
       .spotbox {
         margin-bottom: 5px;
       }
+    }
+    .field--name-header {
+      margin-bottom: 15px;
     }
   }
 }

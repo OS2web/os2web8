@@ -20,6 +20,10 @@
 // Styling
 // --------------------------------------------------
 
+.sapi-did-you-mean {
+  margin-top: 20px;
+}
+
 .searchy {
   position: relative;
 
@@ -186,7 +190,7 @@
                     padding: 40px;
                     margin-bottom: 15px;
 
-                    div {
+                    div:not(.sapi-did-you-mean) {
                       display: flex;
                       justify-content: space-evenly;
                       align-items: center;

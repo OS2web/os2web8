@@ -128,6 +128,54 @@
   }
 }
 
+.field--name-field-os2web-bdk-article {
+  .accordion {
+    .accordion-button {
+      position: relative;
+      padding: 10px 20px;
+      font-weight: 700;
+      background-image: none;
+
+      &:after {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        font-size: 1rem;
+        font-family: FontAwesome;
+        content: "\f067";
+        color: #000;
+        background-color: #fff;
+        border-radius: 25px;
+      }
+    }
+    .accordion-button[aria-expanded=true] {
+      background-color: #007ca3;
+      color: #fff;
+
+      &:after {
+        content: '\f068';
+      }
+    }
+  }
+}
+
+.accordion-button[aria-expanded=false], .tabnav > button[aria-expanded=false] {
+  background-image: none;
+}
+
+.accordion-button, .tabnav > button {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  background-image: none;
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
