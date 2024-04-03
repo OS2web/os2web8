@@ -1,0 +1,44 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function fds_rebild_theme_preprocess_page(array &$variables) {
+  $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
+  $variables['theme_settings']['show_footer_logo'] = theme_get_setting('show_footer_logo');
+}
+
+/**
+ * Implements hook_form_search_block_form_alter().
+ */
+function fds_rebild_theme_form_search_block_form_alter(&$form, FormStateInterface $form_state) {
+  $form['keys']['#attributes']['placeholder'] = t('Indtast dine søgeord her...');
+}
+
+/**
+ * Implements hook_form_search_form_alter().
+ */
+function fds_rebild_theme_form_search_form_alter(&$form, FormStateInterface $form_state) {
+  $form['basic']['label'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['search-form-label'],
+    ],
+    'markup' => ['#markup' => $form['basic']['keys']['#title']->render()],
+  ];
+  $form['basic']['keys']['#title'] = '';
+  $form['basic']['#attributes'] = [];
+  $form['basic']['search-line'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['container-inline'],
+    ],
+    'keys' => $form['basic']['keys'],
+    'submit' => $form['basic']['submit'],
+  ];
+
+  unset($form['basic']['keys']);
+  unset($form['basic']['submit']);
+}

@@ -1,0 +1,121 @@
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 footer-col d-print-none">
+          <section>
+            <div class="align-text-left">
+              {% if theme_settings.show_footer_logo %}
+                {% if theme_settings.footer.footer_use_default_logo %}
+                   <img src="{{ base_path ~ directory }}/dist/images/footer-light.png">
+                {% else %}
+                   <img src="{{ theme_settings.footer.logo_settings.footer_logo_path | replace({'internal:':''})}}">
+                {% endif %}
+                <br>
+                <br>
+              {% endif %}
+              <p>
+
+               {{ theme_settings.footer.footer_text }}
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 footer-col">
+          <section>
+            <div class="align-text-left">
+
+              {% if theme_settings.contact_information.business_owner_name %}
+                <p>
+                  {{ theme_settings.contact_information.business_owner_name }}
+                </p>
+              {% endif %}
+
+              {% if theme_settings.contact_information.address %}
+                <p>
+                  {{ theme_settings.contact_information.address }}
+                </p>
+              {% endif %}
+
+              {% if theme_settings.contact_information.zipcode and theme_settings.contact_information.city %}
+                <p>
+                  {{ theme_settings.contact_information.zipcode }} {{ theme_settings.contact_information.city }}
+                </p>
+              {% endif %}
+
+              {% if theme_settings.contact_information.phone_readable %}
+                <p>
+                  {{ 'Tlf.:' | trans }} {{ theme_settings.contact_information.phone_readable }}
+                </p>
+              {% endif %}
+
+              {% if theme_settings.contact_information.email %}
+                <p>
+                  <a href="mailto: {{ theme_settings.contact_information.email }}">
+                    {{ theme_settings.contact_information.email }}
+                  </a>
+                </p>
+              {% endif %}
+
+              {% if theme_settings.contact_information.working_hours__row_1__day and working_hours__row_1__time %}
+                <div class="row">
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_1__day }}
+                  </div>
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_1__time }}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.contact_information.working_hours__row_2__day and working_hours__row_2__time %}
+                <div class="row">
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_2__day }}
+                  </div>
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_2__time }}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.contact_information.working_hours__row_3__day and working_hours__row_3__time %}
+                <div class="row">
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_3__day }}
+                  </div>
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_3__time }}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.contact_information.working_hours__row_4__day and working_hours__row_4__time %}
+                <div class="row">
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_4__day }}
+                  </div>
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_4__time }}
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if theme_settings.contact_information.working_hours__row_5__day and working_hours__row_5__time %}
+                <div class="row">
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_5__day }}
+                  </div>
+                  <div class="col-xs-6">
+                    {{ theme_settings.contact_information.working_hours__row_5__time }}
+                  </div>
+                </div>
+              {% endif %}
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

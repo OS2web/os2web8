@@ -1,0 +1,113 @@
+// |--------------------------------------------------------------------------
+// | Spotbox
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .paragraph--type--os2web-spotbox
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin box-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.paragraph--type--os2web-spotbox {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  .field--name-field-os2web-spotbox-image {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    + .field {
+      margin-top: 10px;
+    }
+  }
+
+  .field--name-user-id {
+    display: none;
+  }
+
+  .field--name-field-os2web-spotbox-link-butt {
+
+    a {
+      @extend .button;
+      @extend .button-primary;
+    }
+  }
+  .field--name-field-os2web-spotbox-link {}
+  .field--name-field-os2web-spotbox-link-text {}
+
+  .field--name-field-os2web-spotbox-link-butt,
+  .field--name-field-os2web-spotbox-link,
+  .field--name-field-os2web-spotbox-link-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 0;
+
+    background-color: $color-gray-pale;
+  }
+
+  .card-content {}
+  .content-text {}
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

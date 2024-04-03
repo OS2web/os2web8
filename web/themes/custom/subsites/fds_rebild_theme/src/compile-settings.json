@@ -1,0 +1,15 @@
+{
+  "javascripts": [
+    "node_modules/dkfds/dist/js/dkfds.js",
+    "src/javascripts/inline-search.js",
+    "src/javascripts/app.js"
+  ],
+  "styles": [
+    "src/styles/stylesheet.scss"
+  ],
+  "fonts": [
+    "node_modules/font-awesome/fonts/*",
+    "node_modules/dkfds/src/fonts/**/*",
+    "src/fonts/**/*"
+  ]
+}

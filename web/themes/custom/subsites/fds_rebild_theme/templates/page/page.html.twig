@@ -1,0 +1,140 @@
+<header class="header">
+
+  <div class="portal-header">
+    <div class="container portal-header-inner">
+      {{ page.header }}
+
+      <button
+        class="button button-tertiary button-menu-open js-menu-open ml-auto d-print-none"
+        aria-haspopup="menu" title="{{ 'Åben mobil menu' | trans }}">
+        Menu
+      </button>
+
+      <div class="portal-info">
+        {{ page.secondary_menu }}
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <nav class="nav">
+    <button
+      class="button button-secondary button-menu-close js-menu-close"
+      title="Luk mobil menu">
+      <svg class="icon-svg " focusable="false" aria-hidden="true">
+        <use xlink:href="#close"></use>
+      </svg>
+      {{ 'Luk' | trans }}
+    </button>
+    <div class="navbar navbar-primary">
+      <div class="navbar-inner container">
+        {{ page.primary_menu }}
+      </div>
+    </div>
+    <!-- 3: Main navigation end-->
+
+    <div class="portal-info-mobile">
+      {{ page.mobile_menu }}
+    </div>
+
+  </nav>
+</header>
+
+{% if not is_front %}
+  <div class="breadcrumbs-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          {{ page.breadcrumb }}
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="functional-icons-list">
+            <div class="social-icon-list">
+              <span>
+                {{ 'Del: ' | trans }} &nbsp;
+              </span>
+
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}"
+                target="_blank"
+                class="social-icon social-icon--facebook">
+                <span class="fa fa-facebook-f"></span>
+              </a>
+
+              <a
+                href="https://twitter.com/intent/tweet?text={{ node.label }}: {{ url('<current>') }}"
+                target="_blank"
+                class="social-icon social-icon--twitter">
+                <span class="fa fa-twitter"></span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/shareArticle?mini=true&url={{ url('<current>') }}&title={{ node.label }}"
+                target="_blank"
+                class="social-icon social-icon--linkedin">
+                <span class="fa fa-linkedin"></span>
+              </a>
+            </div>
+            <div class="print">
+              <a href="javascript:void(0);" onclick="Drupal.theme.fdsPrintPage();"
+                 >{{ 'Print' | trans }} <svg class="icon-svg"  focusable="false" aria-hidden="true" ><use xlink:href="{{ base_path ~ directory }}/dist/images/symbols.min.svg#printer"></use></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{{ page.featured_top }}
+
+<div class="container page-container" id="main-content">
+  <div class="row">
+
+    {#  Wayaround for determining visibility for regions with lazybuilder.
+    @See https://www.drupal.org/project/drupal/issues/953034 for more info. #}
+    {% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
+    {% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
+    {% if has_sidebar_first %}
+      {% set sidebar_first_classes = [
+        has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3 content--sidebar',
+        has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-md-4 content--sidebar',
+      ] %}
+      <aside {{ attributes.addClass(sidebar_first_classes) }}>
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% set content_classes = [
+      has_sidebar_first and has_sidebar_second ? 'col-12 col-md-6 content--content',
+      has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-md-8 content--content',
+      has_sidebar_second and has_sidebar_first is empty ? 'col-12 col-md-8 content--content',
+      has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12 col-md-12 content--content'
+    ] %}
+    <main {{ content_attributes.addClass(content_classes) }}>
+      {{ page.content }}
+    </main>
+
+    {% if has_sidebar_second %}
+      {% set sidebar_second_classes = [
+        has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3 content--sidebar',
+        has_sidebar_first is empty and has_sidebar_second ? 'col-12 col-md-4 content--sidebar',
+      ] %}
+      <aside {{ attributes.addClass(sidebar_second_classes) }}>
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </div>
+
+</div>
+
+{{ page.featured_bottom_first }}
+
+{% include '@fds_rebild_theme/includes/footer.html.twig' %}
+
+<div class="d-none">
+    {{ page.embedded_code }}
+</div>

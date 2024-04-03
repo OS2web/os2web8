@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'block',
+    'block-search',
+    'container-inline',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+    <div class="inline-search">
+      <button class="inline-search__toggle js-toggle-inline-search">
+        <span class="fa fa-search"></span>
+      </button>
+
+      <div class="inline-search__form">
+        {{ content }}
+      </div>
+    </div>
+  {% endblock %}
+
+</div>

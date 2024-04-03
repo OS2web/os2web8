@@ -1,0 +1,29 @@
+name: 'Designsystem.dk - Rebild subsite'
+type: theme
+description: 'A beautiful custom theme.'
+core: 8.x
+core_version_requirement: ^8 || ^9  
+screenshot: screenshot.png
+base theme: fds_base_theme
+package: OS2web
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  mobile_menu: 'Mobile menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom_first: 'Featured bottom first'
+  embedded_code: 'Embedded code'
+
+libraries:
+  - 'fds_rebild_theme/fonts'
+  - 'fds_rebild_theme/styles'
+  - 'fds_rebild_theme/javascripts'
