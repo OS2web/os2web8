@@ -395,6 +395,7 @@ class MigrationHelper {
 
     return ($return);
   }
+
   /**
    * Helper static function to populate links fields.
    *
@@ -418,6 +419,38 @@ class MigrationHelper {
     $fieldLink = [
       'title' => $link['title'],
       'url' => $link['url']
+    ];
+
+    return $fieldLink;
+  }
+
+  /**
+   * Helper static function to populate links fields.
+   *
+   * @param $value
+   *   Node entity fields.
+   */
+  static function convertNodeToFieldLink($value) {
+    $nodeTitle = '';
+    $url = '';
+
+    if ($localNid = MigrationHelper::findLocalNode($value['nid'])) {
+      // Getting connection to migrate database.
+      $connection = Database::getConnection('default', 'migrate');
+
+      // Getting node name.
+      $nodeTitle = $connection->select('node', 'n')
+        ->fields('n', array('title'))
+        ->condition('n.nid', $value['nid'])
+        ->execute()
+        ->fetchField();
+
+      $url = "internal:/node/$localNid";
+    }
+
+    $fieldLink = [
+      'title' => $nodeTitle,
+      'uri' => $url
     ];
 
     return $fieldLink;
