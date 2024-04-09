@@ -89,15 +89,6 @@ process:
         - createFileManaged
   field_os2web_page_primaryimage/target_id: '@migrate_file_fid'
   field_os2web_page_primaryimage/alt: title
-  field_cta_links:
-    - plugin: skip_on_empty
-      method: process
-      source: field_os2web_base_field_related
-    - plugin: callback
-      callable:
-        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
-        - convertNodeToFieldLink
-      source: field_os2web_base_field_related
   moderation_state:
     plugin: callback
     callable:
@@ -138,9 +129,23 @@ process:
     migration: fk_d7_contact_box
     source: field_os2web_base_field_contact
     no_stub: true
-  field_readmore_links:
+  migrate_readmore_links:
     plugin: field_link
     source: field_os2web_base_field_ext_link
+  migrate_related_links:
+    - plugin: skip_on_empty
+      method: process
+      source: field_os2web_base_field_related
+    - plugin: callback
+      callable:
+        - 'Drupal\fk_d7_migration\Utility\MigrationHelper'
+        - convertNodeToFieldLink
+      source: field_os2web_base_field_related
+  field_readmore_links:
+    plugin: merge
+    source:
+      - '@migrate_readmore_links'
+      - '@migrate_related_links'
   field_os2web_page_related_hide: field_os2web_base_field_hidlinks
   field_os2web_page_contact_hide: field_os2web_base_hide_contact
   field_os2web_page_section:
