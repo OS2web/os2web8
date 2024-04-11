@@ -349,16 +349,20 @@ Class Sync extends ControllerBase
       }
 
     }
-
-
+    
     private static function findInMenuLink($nodeId, $menu) {
       $found = false;
       foreach( $menu AS $key => $link ) {
         if ($link->link->isEnabled()) {
-          $linkNode = $link->link->getUrlObject()->getRouteParameters()['node'];
-          if ($nodeId == $linkNode) $found = $link->link->getPluginId();
-          if (!$found && $link->hasChildren) {
+          $linkNode = $link->link->getUrlObject();
+          if ($linkNode->isRouted()) {
+            $linkNodeId = $linkNode->getRouteParameters()['node'];
+            if ($nodeId == $linkNodeId) {
+              $found = $link->link->getPluginId();
+            }
+            if (!$found && $link->hasChildren) {
               $found = self::findInMenuLink($nodeId, $link->subtree);
+            }
           }
         }
       }
