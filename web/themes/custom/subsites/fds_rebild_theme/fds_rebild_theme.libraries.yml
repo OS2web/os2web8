@@ -12,6 +12,7 @@ javascripts:
   js:
     dist/javascripts/app.js: {}
     dist/javascripts/modernizr.js: {}
+    js/accordion.js: {}
   dependencies:
     - core/drupal
     - core/jquery
