@@ -45,7 +45,7 @@
 
     .box__body {
 
-      &, p, .body-text {
+      &, p, .body-text, h1, h2, h3, h4, h5, h6 {
         color: #fff;
       }
 
