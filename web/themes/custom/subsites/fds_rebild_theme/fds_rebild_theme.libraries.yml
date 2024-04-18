@@ -8,6 +8,16 @@ styles:
     theme:
       dist/stylesheets/stylesheet.css: {}
 
+fancybox:
+  version: 3.5.7
+  css:
+    theme:
+      //cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css: { type: external, minified: true }
+  js:
+    //cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
 javascripts:
   js:
     dist/javascripts/app.js: {}
