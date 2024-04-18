@@ -29,3 +29,9 @@ libraries:
   - 'fds_rebild_theme/javascripts'
   - 'fds_rebild_theme/fancybox'
 
+
+libraries-override:
+  fds_base_theme/javascripts:
+    js:
+      js/slideshow.js: js/slideshow.js
+
