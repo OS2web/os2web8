@@ -113,7 +113,6 @@
 				font-weight: 500;
 				font-style: normal;
 				vertical-align: middle;
-				height: 35px;
 				padding: 0;
 				width: 100%;
 				color: $background_color__button;
@@ -317,7 +316,6 @@ body.domain-pilotnaturpark-ringsted-dk .rk_cover_arrow_button_wrapper {
 			flex-direction: column;
             min-height: 60px;
 			.h3 {
-				margin: 21px 10px 20px;
 				font-size: 2rem;
 			}
 			.entry-graphic {
@@ -326,11 +324,13 @@ body.domain-pilotnaturpark-ringsted-dk .rk_cover_arrow_button_wrapper {
 				float: none;
 			}
 			.entry-text {
-				display: table;
+				display: flex;
 				width: 100%;
 				float: none;
                 height: 100%;
                 min-height: 60px;
+                align-items: center;
+                justify-content: center;
 			}
 			.taxonomy-pic {
 				.menu-icon-wrapper {
