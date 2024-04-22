@@ -98,12 +98,16 @@
 	.field--type-text-long a {
 		text-decoration: none;
 		font-weight: inherit;
-		//padding: 0;
+		padding: 0;
 	}
 }
 .field--type-text-with-summary {
 	padding: 0;
 	margin-top: 0;
+}
+
+a.ext {
+	padding: 5px 0px 5px 0px;
 }
 
 // --------------------------------------------------
