@@ -24,6 +24,5 @@ regions:
   footer_second: 'Footer second'
 
 libraries:
-  - 'fds_ballerup_theme/fonts'
   - 'fds_ballerup_theme/styles'
   - 'fds_ballerup_theme/javascripts'
