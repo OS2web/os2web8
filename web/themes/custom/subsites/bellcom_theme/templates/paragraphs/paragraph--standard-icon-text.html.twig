@@ -12,7 +12,7 @@
             {% if content[imageField] %}
               <div class="item-image">{{ content[imageField] }}</div>
             {% endif %}
-
+            <div class="heading-body-wrapper">
             {% if content[headingField] %}
               <h2 class="item-heading">{{ content[headingField] }}</h2>
             {% endif %}
@@ -20,6 +20,7 @@
             {% if content[bodyField] %}
               <div class="item-body">{{ content[bodyField] }}</div>
             {% endif %}
+            </div>
           </div>
         {% endif %}
       {% endfor %}
