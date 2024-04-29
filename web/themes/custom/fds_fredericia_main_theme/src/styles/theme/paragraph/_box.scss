@@ -22,6 +22,8 @@
 
 .paragraph--type--os2web-box-paragraph {
 
+  text-decoration: none;
+
   &.text-align--left-text {
     text-align: left;
   }
@@ -44,6 +46,9 @@
       .box__heading {
         color: #00335b;
         background-color: rgba(0,0,0,0.1);
+      }
+      .box__body {
+        color: #00335b;
       }
     }
   }

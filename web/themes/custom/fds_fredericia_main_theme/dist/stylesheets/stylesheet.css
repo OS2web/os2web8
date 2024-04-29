@@ -20949,6 +20949,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
             align-items: center;
   }
 }
+.paragraph--type--os2web-box-paragraph {
+  text-decoration: none;
+}
 .paragraph--type--os2web-box-paragraph.text-align--left-text {
   text-align: left;
 }
@@ -20967,6 +20970,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box .box__heading {
   color: #00335b;
   background-color: rgba(0, 0, 0, 0.1);
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent.box .box__body {
+  color: #00335b;
 }
 .paragraph--type--os2web-box-paragraph.background-color--primary.box {
   background-color: #feffff;

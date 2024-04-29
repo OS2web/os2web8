@@ -54,7 +54,7 @@
 {% block paragraph %}
   {% if paragraph.field_box_link.0 and paragraph.field_box_link.0.url is not empty %}
     {% set link_url = paragraph.field_box_link.0.url %}
-    {% set link_text = paragraph.field_box_link.0.url %}
+    {% set link_text = paragraph.field_box_link.0.title %}
     <a href="{{ link_url }}"{{ attributes.addClass(classes) }}>
       {{ content }}
       <div class="link-text-container">
