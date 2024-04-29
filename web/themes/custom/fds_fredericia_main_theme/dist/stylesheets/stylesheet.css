@@ -17541,7 +17541,15 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
 
 .box {
   background-color: #fff;
+}
+.box.text-align--left_text {
+  text-align: left;
+}
+.box.text-align--center_text {
   text-align: center;
+}
+.box.text-align--right_text {
+  text-align: right;
 }
 .box .box__heading {
   padding: 20px 20px;

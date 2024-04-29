@@ -224,7 +224,16 @@ main.col-lg-8 {
 
 .box {
   background-color: #fff;
-  text-align: center;
+
+  &.text-align--left_text {
+    text-align: left;
+  }
+  &.text-align--center_text {
+    text-align: center;
+  }
+  &.text-align--right_text {
+    text-align: right;
+  }
   .box__heading {
     padding: 20px 20px;
     color: $color-black;
