@@ -17542,13 +17542,13 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
 .box {
   background-color: #fff;
 }
-.box.text-align--left_text {
+.box.text-align--left-text {
   text-align: left;
 }
-.box.text-align--center_text {
+.box.text-align--center-text {
   text-align: center;
 }
-.box.text-align--right_text {
+.box.text-align--right-text {
   text-align: right;
 }
 .box .box__heading {
