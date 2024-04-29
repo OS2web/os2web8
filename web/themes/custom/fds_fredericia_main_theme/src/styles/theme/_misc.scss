@@ -92,6 +92,15 @@ body .container-fluid {
   p {
     color: #00335b !important;
   }
+  ul {
+    li {
+      color: #00335b;
+
+      &:before {
+        color: #00335b;
+      }
+    }
+  }
 }
 
 .path-taxonomy {
@@ -683,6 +692,8 @@ a:not([class]) {
     }
   }
 }
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

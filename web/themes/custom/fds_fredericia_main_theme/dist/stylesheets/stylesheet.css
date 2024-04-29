@@ -22880,6 +22880,12 @@ body .container-fluid .field--name-field-os2web-paragraphs .field__item .paragra
 .field--name-field-os2web-simple-text-body p {
   color: #00335b !important;
 }
+.field--name-field-os2web-simple-text-body ul li {
+  color: #00335b;
+}
+.field--name-field-os2web-simple-text-body ul li:before {
+  color: #00335b;
+}
 
 .path-taxonomy .sidebar-column {
   display: none !important;
