@@ -20950,6 +20950,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   }
 }
 .paragraph--type--os2web-box-paragraph {
+  display: block;
   text-decoration: none;
 }
 .paragraph--type--os2web-box-paragraph.text-align--left-text {
@@ -21003,6 +21004,56 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--tertiary.box .box__body {
   color: #00335b;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary.box .link-text-container span {
+  color: #00335b !important;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary.box .link-text-container svg g {
+  stroke: #00335b;
+}
+.paragraph--type--os2web-box-paragraph .link-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 20px 20px 20px;
+  gap: 10px;
+}
+.paragraph--type--os2web-box-paragraph .link-text-container span {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph .link-text-container .arrow-icon {
+  position: relative;
+  top: -1px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  vertical-align: middle;
+}
+.paragraph--type--os2web-box-paragraph .link-text-container .arrow-icon--circle {
+  -webkit-transition: stroke-dashoffset 0.3s ease;
+  transition: stroke-dashoffset 0.3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.paragraph--type--os2web-box-paragraph:hover .link-text-container span {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.paragraph--type--os2web-box-paragraph:hover .link-text-container .arrow-icon {
+  -webkit-transform: translate3d(5px, 0, 0);
+          transform: translate3d(5px, 0, 0);
+}
+.paragraph--type--os2web-box-paragraph:hover .link-text-container .arrow-icon--circle {
+  stroke-dashoffset: 0;
 }
 
 .background-color--primary .selfservice-links-hardcoded {

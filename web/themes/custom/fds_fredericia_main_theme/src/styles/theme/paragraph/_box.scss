@@ -21,7 +21,7 @@
 // --------------------------------------------------
 
 .paragraph--type--os2web-box-paragraph {
-
+  display: block;
   text-decoration: none;
 
   &.text-align--left-text {
@@ -93,6 +93,58 @@
 
       .box__body {
         color: #00335b;
+      }
+      .link-text-container {
+        span {
+          color: #00335b !important;
+        }
+        svg {
+          g {
+            stroke: #00335b;
+          }
+        }
+      }
+    }
+  }
+  .link-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px 20px 20px;
+    gap: 10px;
+
+    span {
+      color: white;
+    }
+
+    .arrow-icon {
+      position: relative;
+      top: -1px;
+      -webkit-transition: -webkit-transform 0.3s ease;
+      transition: -webkit-transform 0.3s ease;
+      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .arrow-icon--circle {
+      transition: stroke-dashoffset 0.3s ease;
+      stroke-dasharray: 95;
+      stroke-dashoffset: 95;
+    }
+  }
+  &:hover {
+    .link-text-container {
+      span {
+        transform: translateX(-5px);
+        transition: .3s ease;
+      }
+      .arrow-icon {
+        transform: translate3d(5px, 0, 0);
+      }
+
+      .arrow-icon--circle {
+        stroke-dashoffset: 0;
       }
     }
   }
