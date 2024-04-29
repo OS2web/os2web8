@@ -38,6 +38,7 @@
  * @ingroup themeable
  */
 #}
+{% set text_align_class = paragraph.field_text_alignment.0 ? 'text-align--' ~ paragraph.field_text_alignment.0.value|clean_class : '' %}
 {%
   set classes = [
   'paragraph',
@@ -46,17 +47,16 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   not paragraph.isPublished() ? 'paragraph--unpublished',
   'box',
-  content.field_text_alignment ? 'text-align--' ~ content.field_text_alignment.0.value|clean_class
+  text_align_class
 ]
 %}
 
 {% block paragraph %}
-  {# Check if the link URL field is set and not empty #}
-  {% if content.field_box_link.0 %}
+  {% if paragraph.field_box_link.0 and paragraph.field_box_link.0['#url'] %}
     {% set link_url = content.field_box_link.0.url %}
-    {% set link_text = content.field_box_link.0.title %}
+    {% set link_text = content.field_box_link.0.url %}
     <a href="{{ link_url }}"{{ attributes.addClass(classes) }}>
-      {{ content|without('field_box_link') }}
+      {{ content }}
       <div class="link-text-container">
         {{ link_text }}
         <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -73,4 +73,8 @@
     </div>
   {% endif %}
 {% endblock %}
+
+
+
+
 
