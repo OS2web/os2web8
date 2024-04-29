@@ -22,6 +22,16 @@
 
 .paragraph--type--os2web-box-paragraph {
 
+  &.text-align--left-text {
+    text-align: left;
+  }
+  &.text-align--center-text {
+    text-align: center;
+  }
+  &.text-align--right-text {
+    text-align: right;
+  }
+
   h1, h2, h3, h4, h5, h6, p {
     color: inherit;
   }
@@ -30,6 +40,55 @@
 
     &.box {
       background-color: transparent;
+
+      .box__heading {
+        color: #00335b;
+        background-color: rgba(0,0,0,0.1);
+      }
+    }
+  }
+  &.background-color--primary {
+    &.box {
+      background-color: $background_color__primary;
+
+      .box__heading {
+        background-color: rgba(0,0,0,0.1);
+        color: #fff;
+      }
+
+      .box__body {
+        color: #fff;
+      }
+
+
+    }
+  }
+  &.background-color--secondary {
+    &.box {
+      background-color: $background_color__secondary;
+
+      .box__heading {
+        background-color: rgba(0,0,0,0.1);
+        color: #fff;
+      }
+
+      .box__body {
+        color: #fff;
+      }
+    }
+  }
+  &.background-color--tertiary {
+    &.box {
+      background-color: $background_color__tertiary;
+
+      .box__heading {
+        background-color: rgba(0,0,0,0.1);
+        color: #00335b;
+      }
+
+      .box__body {
+        color: #00335b;
+      }
     }
   }
 }

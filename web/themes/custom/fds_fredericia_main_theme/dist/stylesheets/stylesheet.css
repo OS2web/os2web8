@@ -17540,7 +17540,7 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
 }
 
 .box {
-  background-color: #fff;
+  text-decoration: none;
 }
 .box.text-align--left-text {
   text-align: left;
@@ -17554,7 +17554,6 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
 .box .box__heading {
   padding: 20px 20px;
   color: #000000;
-  background-color: #fff;
 }
 .box .box__heading .field--name-field-os2web-icon img {
   width: 65px;
@@ -20950,11 +20949,54 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
             align-items: center;
   }
 }
+.paragraph--type--os2web-box-paragraph.text-align--left-text {
+  text-align: left;
+}
+.paragraph--type--os2web-box-paragraph.text-align--center-text {
+  text-align: center;
+}
+.paragraph--type--os2web-box-paragraph.text-align--right-text {
+  text-align: right;
+}
 .paragraph--type--os2web-box-paragraph h1, .paragraph--type--os2web-box-paragraph h2, .paragraph--type--os2web-box-paragraph h3, .paragraph--type--os2web-box-paragraph h4, .paragraph--type--os2web-box-paragraph h5, .paragraph--type--os2web-box-paragraph h6, .paragraph--type--os2web-box-paragraph p {
   color: inherit;
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box {
   background-color: transparent;
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent.box .box__heading {
+  color: #00335b;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.paragraph--type--os2web-box-paragraph.background-color--primary.box {
+  background-color: #feffff;
+}
+.paragraph--type--os2web-box-paragraph.background-color--primary.box .box__heading {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.paragraph--type--os2web-box-paragraph.background-color--primary.box .box__body {
+  color: #fff;
+}
+.paragraph--type--os2web-box-paragraph.background-color--secondary.box {
+  background-color: #eae3c0;
+}
+.paragraph--type--os2web-box-paragraph.background-color--secondary.box .box__heading {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.paragraph--type--os2web-box-paragraph.background-color--secondary.box .box__body {
+  color: #fff;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary.box {
+  background-color: #066cc5;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary.box .box__heading {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #00335b;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary.box .box__body {
+  color: #00335b;
 }
 
 .background-color--primary .selfservice-links-hardcoded {
