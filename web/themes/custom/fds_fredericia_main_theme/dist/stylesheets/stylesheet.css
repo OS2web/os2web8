@@ -22884,7 +22884,7 @@ body .container-fluid .field--name-field-os2web-paragraphs .field__item .paragra
   color: #00335b;
 }
 .field--name-field-os2web-simple-text-body ul li:before {
-  color: #00335b;
+  color: #00335b !important;
 }
 
 .path-taxonomy .sidebar-column {
