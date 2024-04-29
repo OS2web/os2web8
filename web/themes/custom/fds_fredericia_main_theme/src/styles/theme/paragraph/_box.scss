@@ -23,6 +23,7 @@
 .paragraph--type--os2web-box-paragraph {
   display: block;
   text-decoration: none;
+  border-radius: 5px;
 
   &.text-align--left-text {
     text-align: left;
@@ -42,6 +43,7 @@
 
     &.box {
       background-color: transparent;
+      border: 1px solid #ddd;
 
       .box__heading {
         color: #00335b;
@@ -49,6 +51,16 @@
       }
       .box__body {
         color: #00335b;
+      }
+      .link-text-container {
+        span {
+          color: #00335b !important;
+        }
+        svg {
+          g {
+            stroke: #00335b;
+          }
+        }
       }
     }
   }
@@ -115,6 +127,7 @@
 
     span {
       color: white;
+      transition: .3s ease;
     }
 
     .arrow-icon {
@@ -137,7 +150,7 @@
     .link-text-container {
       span {
         transform: translateX(-5px);
-        transition: .3s ease;
+        text-decoration: underline;
       }
       .arrow-icon {
         transform: translate3d(5px, 0, 0);

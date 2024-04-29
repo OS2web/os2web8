@@ -20952,6 +20952,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .paragraph--type--os2web-box-paragraph {
   display: block;
   text-decoration: none;
+  border-radius: 5px;
 }
 .paragraph--type--os2web-box-paragraph.text-align--left-text {
   text-align: left;
@@ -20967,6 +20968,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box {
   background-color: transparent;
+  border: 1px solid #ddd;
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box .box__heading {
   color: #00335b;
@@ -20974,6 +20976,12 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box .box__body {
   color: #00335b;
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent.box .link-text-container span {
+  color: #00335b !important;
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent.box .link-text-container svg g {
+  stroke: #00335b;
 }
 .paragraph--type--os2web-box-paragraph.background-color--primary.box {
   background-color: #feffff;
@@ -21026,6 +21034,8 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph .link-text-container span {
   color: white;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .paragraph--type--os2web-box-paragraph .link-text-container .arrow-icon {
   position: relative;
@@ -21045,8 +21055,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .paragraph--type--os2web-box-paragraph:hover .link-text-container span {
   -webkit-transform: translateX(-5px);
           transform: translateX(-5px);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  text-decoration: underline;
 }
 .paragraph--type--os2web-box-paragraph:hover .link-text-container .arrow-icon {
   -webkit-transform: translate3d(5px, 0, 0);
