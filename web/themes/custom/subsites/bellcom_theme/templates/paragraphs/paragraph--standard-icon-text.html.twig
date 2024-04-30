@@ -14,7 +14,7 @@
             {% endif %}
             <div class="heading-body-wrapper">
             {% if content[headingField] %}
-              <h2 class="item-heading">{{ content[headingField] }}</h2>
+              <h2 class="item-heading" style="color: {{ content.field_headings_color.0|default('#000000') }}">{{ content[headingField] }}</h2>
             {% endif %}
 
             {% if content[bodyField] %}
