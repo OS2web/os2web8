@@ -3121,7 +3121,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 125px;
+  row-gap: 50px;
   column-gap: 50px;
 }
 @media (max-width: 768px) {
@@ -3137,14 +3137,15 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   }
 .grid-item {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 15px;
+  background-color: #ecf1f3;
+  padding: 20px;
+  border-radius: 5px;
 }
 .grid-item .item-image{
-    min-height: 150px;
+   width: 40%;
 
   }
 .grid-item .item-image img {
