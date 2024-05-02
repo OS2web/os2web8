@@ -21071,16 +21071,22 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   stroke-dashoffset: 0;
 }
 
-field--name-field-os2web-column-1 .paragraph--type--os2web-box-paragraph {
-  margin-bottom: 52px;
+@media only screen and (max-width: 576px) {
+  .field--name-field-os2web-column-1 .paragraph--type--os2web-box-paragraph {
+    margin-bottom: 32px;
+  }
 }
 
-field--name-field-os2web-column-2 .paragraph--type--os2web-box-paragraph {
-  margin-bottom: 52px;
+@media only screen and (max-width: 576px) {
+  .field--name-field-os2web-column-2 .paragraph--type--os2web-box-paragraph {
+    margin-bottom: 32px;
+  }
 }
 
-field--name-field-os2web-column-3 .paragraph--type--os2web-box-paragraph {
-  margin-bottom: 52px;
+@media only screen and (max-width: 576px) {
+  .field--name-field-os2web-column-3 .paragraph--type--os2web-box-paragraph {
+    margin-bottom: 32px;
+  }
 }
 
 .background-color--primary .selfservice-links-hardcoded {
