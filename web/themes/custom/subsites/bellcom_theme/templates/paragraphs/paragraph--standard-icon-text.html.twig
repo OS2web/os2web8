@@ -1,4 +1,4 @@
-{% set activate_btm_banner = content.field_activate_btm_banner[0]['#markup'] == '1' %}
+{% set activate_btm_banner = paragraph.field_activate_btm_banner.value == 1 %}
 {% set banner_color = content.field_btm_banner_color[0] ? content.field_btm_banner_color[0]['#context']['value'] : '' %}
 {% set banner_image_url = content.field_btm_banner_image[0] ? file_url(content.field_btm_banner_image[0]['#item'].entity.uri.value) : '' %}
 
