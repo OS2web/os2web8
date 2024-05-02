@@ -1596,7 +1596,6 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     max-width: 1280px;
     margin: 50px 10px;
     display: flex;
-    min-height: 650px;
     gap: 100px;
     width: 100%;
   }
@@ -3197,10 +3196,12 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       font-size: 18px;
       font-weight: 600;
       color: #1f708a;
+      line-height: 1.2;
     }
 .grid-item .heading-body-wrapper .item-body {
       color: #000;
       opacity: .8;
+      font-size: 14px;
     }
 * {
   -webkit-font-smoothing: antialiased !important;
