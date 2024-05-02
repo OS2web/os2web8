@@ -3127,6 +3127,9 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     min-height: 270px;
     z-index: -1;
     background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
   }
 .icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper {
