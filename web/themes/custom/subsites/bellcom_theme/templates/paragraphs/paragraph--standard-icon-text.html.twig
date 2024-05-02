@@ -1,4 +1,8 @@
-<div class="icon-grid-wrapper">
+{% set activate_btm_banner = content.field_activate_btm_banner[0]['#markup'] == '1' %}
+{% set banner_color = content.field_btm_banner_color[0] ? content.field_btm_banner_color[0]['#context']['value'] : '' %}
+{% set banner_image_url = content.field_btm_banner_image[0] ? file_url(content.field_btm_banner_image[0]['#item'].entity.uri.value) : '' %}
+
+<div class="icon-grid-wrapper" style="{{ activate_btm_banner ? 'padding-bottom: 100px;' : '' }}">
   <div class="icon-grid-inner-wrapper">
   {% if content %}
     <div class="grid-container">
@@ -27,7 +31,7 @@
     </div>
   {% endif %}
   </div>
-  <div class="bottom-banner" style="background-color: #166a85;">
+  <div class="bottom-banner" style="{{ activate_btm_banner ? 'display: none;' : (banner_image_url ? 'background-image: url(' ~ banner_image_url ~ ');' : (banner_color ? 'background-color: ' ~ banner_color ~ ';' : '')) }}">
 
   </div>
 </div>
