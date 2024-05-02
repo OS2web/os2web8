@@ -1,6 +1,8 @@
 {% set activate_btm_banner = paragraph.field_activate_btm_banner.value == 1 %}
 {% set banner_color = content.field_btm_banner_color[0] ? content.field_btm_banner_color[0]['#context']['value'] : '' %}
 {% set banner_image_url = content.field_btm_banner_image[0] ? file_url(content.field_btm_banner_image[0]['#item'].entity.uri.value) : '' %}
+{% set banner_graphic_url = content.field_btm_banner_graphic[0] ? file_url(content.field_btm_banner_graphic[0]['#item'].entity.uri.value) : '' %}
+
 
 <div class="icon-grid-wrapper" style="{{ activate_btm_banner ? 'padding-bottom: 100px;' : '' }}">
   <div class="icon-grid-inner-wrapper">
@@ -32,6 +34,19 @@
   {% endif %}
   </div>
   <div class="bottom-banner" style="{{ not activate_btm_banner ? 'display: none;' : (banner_image_url ? 'background-image: url(' ~ banner_image_url ~ ');' : (banner_color ? 'background-color: ' ~ banner_color ~ ';' : '')) }}">
-
+    {% if banner_graphic_url is not empty or content.field_btm_banner_text is not empty %}
+    <div class="bottom-banner-content-wrapper">
+      {% if content.field_btm_banner_text is not empty %}
+      <div class="bottom-banner-text">
+        {{ content.field_btm_banner_text }}
+      </div>
+      {% endif %}
+      {% if banner_graphic_url is not empty %}
+      <div class="bottom-banner-graphic">
+        <img alt="" src="{{ banner_graphic_url }}">
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
   </div>
 </div>

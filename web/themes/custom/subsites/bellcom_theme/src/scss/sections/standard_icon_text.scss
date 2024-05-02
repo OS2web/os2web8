@@ -19,6 +19,31 @@
     left: 0;
     min-height: 270px;
     z-index: -1;
+    background-size: cover;
+
+    .bottom-banner-content-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      max-width: 1440px;
+      padding: 0 10px 20px 10px;
+
+      .bottom-banner-text {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 28px;
+        color: white;
+      }
+
+      .bottom-banner-graphic {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
 
   }
 }

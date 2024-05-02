@@ -3126,8 +3126,30 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     left: 0;
     min-height: 270px;
     z-index: -1;
+    background-size: cover;
 
   }
+.icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      max-width: 1440px;
+      padding: 0 10px 20px 10px;
+    }
+.icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper .bottom-banner-text {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 28px;
+        color: white;
+      }
+.icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper .bottom-banner-graphic {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
