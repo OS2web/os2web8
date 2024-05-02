@@ -54,8 +54,8 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 50px;
-  column-gap: 50px;
+  row-gap: 25px;
+  column-gap: 25px;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr); // 2 items per row on tablets
