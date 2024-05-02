@@ -20965,6 +20965,8 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph h1, .paragraph--type--os2web-box-paragraph h2, .paragraph--type--os2web-box-paragraph h3, .paragraph--type--os2web-box-paragraph h4, .paragraph--type--os2web-box-paragraph h5, .paragraph--type--os2web-box-paragraph h6, .paragraph--type--os2web-box-paragraph p {
   color: inherit;
+  padding: 0;
+  margin: 0;
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box {
   background-color: transparent;
@@ -20976,6 +20978,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box .box__body {
   color: #00335b;
+  padding-top: 20px;
 }
 .paragraph--type--os2web-box-paragraph.background-color--transparent.box .link-text-container span {
   color: #00335b !important;
@@ -20992,6 +20995,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--primary.box .box__body {
   color: #fff;
+  padding-top: 20px;
 }
 .paragraph--type--os2web-box-paragraph.background-color--secondary.box {
   background-color: #eae3c0;
@@ -21002,6 +21006,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--secondary.box .box__body {
   color: #fff;
+  padding-top: 20px;
 }
 .paragraph--type--os2web-box-paragraph.background-color--tertiary.box {
   background-color: #066cc5;
@@ -21012,6 +21017,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph.background-color--tertiary.box .box__body {
   color: #00335b;
+  padding-top: 20px;
 }
 .paragraph--type--os2web-box-paragraph.background-color--tertiary.box .link-text-container span {
   color: #00335b !important;
@@ -21063,6 +21069,18 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .paragraph--type--os2web-box-paragraph:hover .link-text-container .arrow-icon--circle {
   stroke-dashoffset: 0;
+}
+
+field--name-field-os2web-column-1 .paragraph--type--os2web-box-paragraph {
+  margin-bottom: 52px;
+}
+
+field--name-field-os2web-column-2 .paragraph--type--os2web-box-paragraph {
+  margin-bottom: 52px;
+}
+
+field--name-field-os2web-column-3 .paragraph--type--os2web-box-paragraph {
+  margin-bottom: 52px;
 }
 
 .background-color--primary .selfservice-links-hardcoded {
