@@ -5,7 +5,7 @@
   align-items: center;
 
   .product_showcase_inner-wrapper {
-    max-width: 1440px;
+    max-width: $layout-width;
     margin: 80px 10px;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
