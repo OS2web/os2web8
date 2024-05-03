@@ -3119,6 +3119,10 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     padding: 0 10px;
     width: 100%;
   }
+.icon-grid-wrapper .icon-grid-inner-wrapper h2 {
+      font-size: 28px;
+      font-weight: 500;
+    }
 .icon-grid-wrapper .bottom-banner {
     position: absolute;
     width: 100%;

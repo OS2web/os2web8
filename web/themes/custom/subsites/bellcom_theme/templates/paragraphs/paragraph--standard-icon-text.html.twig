@@ -6,6 +6,9 @@
 
 <div class="icon-grid-wrapper" style="{{ activate_btm_banner ? 'padding-bottom: 100px;' : '' }}">
   <div class="icon-grid-inner-wrapper">
+    {% if content.field_std_icon_heading is not empty %}
+      <h2 style="color: {{ content.field_headings_color.0|default('#000000') }}">{{ content.field_std_icon_heading }}</h2>
+    {% endif %}
   {% if content %}
     <div class="grid-container">
       {% for i in 1..6 %}
