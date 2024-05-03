@@ -1594,7 +1594,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   }
 .hero-wrapper .hero__inner-wrapper {
     max-width: 1280px;
-    margin: 50px 10px;
+    margin: 50px 10px 0 10px;
     display: flex;
     gap: 100px;
     width: 100%;
@@ -3182,7 +3182,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 
 }
 .grid-item .item-image{
-   width: 25%;
+   width: 20%;
 
   }
 .grid-item .item-image img {
@@ -3190,7 +3190,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       height: auto;
     }
 .grid-item .heading-body-wrapper {
-    width: 75%;
+    width: 80%;
   }
 .grid-item .heading-body-wrapper .item-heading {
       font-size: 18px;
