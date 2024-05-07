@@ -692,31 +692,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Function to toggle modal open class
-function toggleModal(isOpen) {
-  const modal = document.querySelector('.micromodal-slide');
-  if (modal) {
-    if (isOpen) {
-      modal.classList.add('is-open');
-    } else {
-      modal.classList.remove('is-open');
-    }
-  }
-}
-
-// Attach event listener to the open modal button
-const openBtn = document.querySelector('.contact-modal-btn');
-if (openBtn) {
-  openBtn.addEventListener('click', function () {
-    toggleModal(true);
-  });
-}
-
-// Attach event listeners to all close modal triggers
-const closeBtns = document.querySelectorAll('.modal__close, .close-modal-btn');
-closeBtns.forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    toggleModal(false);
-  });
-});
 
