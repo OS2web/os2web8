@@ -424,39 +424,6 @@
 
 <script>
 
-  document.addEventListener('DOMContentLoaded', function () {
-    function toggleModal(isOpen) {
-      const modal = document.querySelector('.micromodal-slide');
-      console.log('Modal element:', modal); // Check if the modal element is found
-      if (modal) {
-        if (isOpen) {
-          modal.classList.add('is-open');
-          console.log('Added is-open class'); // Confirm class add
-        } else {
-          modal.classList.remove('is-open');
-          console.log('Removed is-open class'); // Confirm class removal
-        }
-      }
-    }
-
-    const openBtn = document.querySelector('.contact-modal-btn');
-    console.log('Open button:', openBtn); // Check if the button is found
-    if (openBtn) {
-      openBtn.addEventListener('click', function () {
-        console.log('Open button clicked'); // Confirm button click
-        toggleModal(true);
-      });
-    }
-
-    const closeBtns = document.querySelectorAll('.modal__close, .close-modal-btn');
-    console.log('Close buttons found:', closeBtns.length); // Check how many buttons are found
-    closeBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        console.log('Close button clicked'); // Confirm button click
-        toggleModal(false);
-      });
-    });
-  });
-
+  console.log('testing if javascript is being loaded');
 
 </script>
