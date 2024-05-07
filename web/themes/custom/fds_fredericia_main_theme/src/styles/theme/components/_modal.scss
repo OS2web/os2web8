@@ -22,9 +22,15 @@
 
 .modal {
 
+  .modal__overlay {
+    animation: none !important;
+  }
+
   .modal__container {
     min-width: 330px;
     padding: 15px;
+    animation: none !important;
+    position: relative;
     .modal__header {
       .modal__title {
         font-size: 3.2rem;
@@ -34,6 +40,13 @@
     .modal__footer {
       border: 0;
       background-color: unset;
+    }
+    .modal-watermark {
+      position: absolute;
+      max-width: 200px;
+      right: 10px;
+      bottom: 10px;
+      opacity: .6;
     }
   }
 }

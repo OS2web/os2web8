@@ -17853,9 +17853,16 @@ ul.related-links a:hover {
   color: #000000;
 }
 
+.modal .modal__overlay {
+  -webkit-animation: none !important;
+          animation: none !important;
+}
 .modal .modal__container {
   min-width: 330px;
   padding: 15px;
+  -webkit-animation: none !important;
+          animation: none !important;
+  position: relative;
 }
 .modal .modal__container .modal__header .modal__title {
   font-size: 3.2rem;
@@ -17864,6 +17871,13 @@ ul.related-links a:hover {
 .modal .modal__container .modal__footer {
   border: 0;
   background-color: unset;
+}
+.modal .modal__container .modal-watermark {
+  position: absolute;
+  max-width: 200px;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.6;
 }
 
 .contact-modal-btn {
