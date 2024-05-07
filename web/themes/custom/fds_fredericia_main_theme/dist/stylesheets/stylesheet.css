@@ -17884,6 +17884,11 @@ ul.related-links a:hover {
   bottom: 10px;
   opacity: 0.6;
 }
+@media only screen and (max-width: 768px) {
+  .modal .modal__container .modal-watermark {
+    display: none;
+  }
+}
 
 .contact-modal-btn {
   width: -webkit-fit-content;
