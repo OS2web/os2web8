@@ -390,10 +390,10 @@
 
     {% if contact.field_os2web_contact_modal.value %}
       <div class="modal micromodal-slide" id="{{ modalId }}" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
           <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="{{ modalId }}-title">
 
-            <img class="modal-watermark" src="{{ base_path ~ directory }}/dist/images/logo-fredericia.png">
+            <img class="modal-watermark" alt="Fredericia Kommune Watermark" src="{{ base_path ~ directory }}/dist/images/logo-fredericia.png">
 
             {% if contact.field_os2web_contact_modal_head.value %}
               <header class="modal__header">
@@ -416,7 +416,6 @@
               </button>
             </footer>
           </div>
-        </div>
       </div>
     {% endif %}
 

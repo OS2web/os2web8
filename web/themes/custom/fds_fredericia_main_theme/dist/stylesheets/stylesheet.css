@@ -17862,7 +17862,12 @@ ul.related-links a:hover {
   padding: 15px;
   -webkit-animation: none !important;
           animation: none !important;
-  position: relative;
+  position: fixed;
+  right: 50%;
+  top: 50%;
+  z-index: 9999;
+  -webkit-transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
 }
 .modal .modal__container .modal__header .modal__title {
   font-size: 3.2rem;
