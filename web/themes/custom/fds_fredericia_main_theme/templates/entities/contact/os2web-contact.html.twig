@@ -60,6 +60,9 @@
   {% set bgColorClass = 'bg-white' %}
 {% endif %}
 
+{% set modalId = 'modal-' ~ random() %}
+
+
 
 <div class="contact-template-wrapper {{ bgColorClass }}">
 
@@ -257,7 +260,7 @@
         {% endif %}
 
         {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value %}
-          <button data-micromodal-trigger="{{ modalId }}" class="button button-primary">
+          <button data-micromodal-trigger="{{ modalId }}" class="contact-modal-btn button button-primary">
             {{ content.field_os2web_contact_modal_butt }}
           </button>
         {% endif %}
@@ -406,7 +409,7 @@
             </main>
 
             <footer class="modal__footer">
-              <button class="button button-secondary" data-micromodal-close aria-label="{{ 'Close this window' | trans }}">
+              <button class="button button-primary" data-micromodal-close aria-label="{{ 'Close this window' | trans }}">
                 {{ 'Close' | trans }}
               </button>
             </footer>

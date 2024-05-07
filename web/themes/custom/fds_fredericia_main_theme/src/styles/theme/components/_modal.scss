@@ -38,6 +38,16 @@
   }
 }
 
+.contact-modal-btn {
+  width: fit-content;
+  margin-left: 70px;
+
+  @media only screen and (max-width: 992px) {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
