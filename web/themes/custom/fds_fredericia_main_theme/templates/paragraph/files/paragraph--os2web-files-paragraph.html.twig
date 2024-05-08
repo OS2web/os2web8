@@ -10,7 +10,7 @@
   <h2 class="files-default-heading">Bilag</h2>
 {% endif %}
 
-<div class="documents-wrapper">
+<div class="documents-wrapper files-wrapper">
   {% set file_index = 0 %}
 
   {# Render ESDH Documents if any #}
@@ -67,7 +67,7 @@
 
     if (showMoreButton) {
       showMoreButton.addEventListener('click', function() {
-        const elements = document.querySelectorAll('.documents-wrapper .document-item, .documents-wrapper .file-item, .documents-wrapper .media-item, .documents-wrapper .directly-referenced-documents .document-item  ');
+        const elements = document.querySelectorAll('.files-wrapper .document-item, .files-wrapper .file-item, .files .media-item, .files-wrapper .directly-referenced-documents .document-item  ');
         if (isExpanded) {
           // Hide elements by re-adding 'hidden' class
           elements.forEach(function(element, index) {
