@@ -34,14 +34,14 @@
   {% endif %}
 
 {% if total_files_count > 3 %}
-  <button id="show-more-files">+ Vis flere</button>
+  <button id="show-more-files-edoc">+ Vis flere</button>
 {% endif %}
 
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const showMoreButton = document.getElementById('show-more-files');
+    const showMoreButton = document.getElementById('show-more-files-edoc');
     let isExpanded = false; // Keep track of the state
 
     if (showMoreButton) {

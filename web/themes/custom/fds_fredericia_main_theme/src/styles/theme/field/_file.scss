@@ -27,6 +27,7 @@
   }
 }
 
+
 .files-default-heading {
   font-size: 2.4rem;
   font-weight: 600;
@@ -41,6 +42,21 @@
   font-size: 1.6rem;
   color: #00335b;
   margin-top: 10px;
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#show-more-files-edoc {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #00335b;
+  margin-top: 10px;
+  width: fit-content;
 
   &:hover {
     text-decoration: underline;
