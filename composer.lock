@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45108b77aa7704e43db7a1728c2af384",
+    "content-hash": "3745a52e39011b2be93514657dc022c3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6762,30 +6762,30 @@
         },
         {
             "name": "drupal/forum_notifications_subscription",
-            "version": "1.0.0-alpha3",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/forum_notifications_subscription.git",
-                "reference": "1.0.0-alpha3"
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/forum_notifications_subscription-1.0.0-alpha3.zip",
-                "reference": "1.0.0-alpha3",
-                "shasum": "0bae0448d7aac439ab99b3a05e94b1d356dffdae"
+                "url": "https://ftp.drupal.org/files/projects/forum_notifications_subscription-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "88286e7e649c68e58210b4b4a05570a46b1d86bf"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
                 "drupal/forum": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha3",
-                    "datestamp": "1695840009",
+                    "version": "1.0.0",
+                    "datestamp": "1715107428",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -27428,7 +27428,6 @@
         "drupal/entity_update": 5,
         "drupal/feeds": 10,
         "drupal/file_management": 20,
-        "drupal/forum_notifications_subscription": 15,
         "drupal/gdpr": 15,
         "drupal/gin_login": 5,
         "drupal/quicktabs": 15,
@@ -27462,5 +27461,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
