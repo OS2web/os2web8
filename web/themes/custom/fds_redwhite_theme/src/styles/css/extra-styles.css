@@ -371,12 +371,6 @@ body.path-frontpage .region-featured-bottom-first {
 }
 
 /*FRONT-NYHEDER*/
-@media screen and (max-width: 400px) {
-  .entity-default--os2web-simple-text-paragraph {
-    margin: 20px 0 30px !important;
-}
-}
-
 @media screen and (max-width: 767px) {
   .news::after {
     content: "";
