@@ -59,7 +59,7 @@
   padding-top: 0;
 }
 .entity-default--os2web-simple-text-paragraph {
-  margin: 20px 0 20px !important;
+  margin: 0 0 30px;
 }
 
 
@@ -71,8 +71,6 @@
   background-color: var(--primary);
   border-color: var(--gray1);
 }
-
-
 
 .accordion-content:not(.field--widget-text-textarea) ul li,
 .tabnav-panel:not(.field--widget-text-textarea) ul li,
@@ -393,6 +391,7 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
   border-bottom: 20px solid var(--light-gray1);
 }
 .news-col-1 {
+  padding-top: 20px;
   padding-bottom: 30px;
   border-bottom: 20px solid var(--light-gray1);
 }
