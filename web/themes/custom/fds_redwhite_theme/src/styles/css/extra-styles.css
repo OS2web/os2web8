@@ -59,7 +59,7 @@
   padding-top: 0;
 }
 .entity-default--os2web-simple-text-paragraph {
-  margin: 20px 0 20px;
+  margin: 20px 0 20px !important;
 }
 
 
