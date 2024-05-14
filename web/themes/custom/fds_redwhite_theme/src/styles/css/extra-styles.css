@@ -391,10 +391,14 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
   border-bottom: 20px solid var(--light-gray1);
 }
 .news-col-1 {
-  padding-top: 20px;
   padding-bottom: 30px;
   border-bottom: 20px solid var(--light-gray1);
 }
+
+.news-col-1, body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
+  padding-top: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .news-col-1 {
     padding-bottom: 0;
