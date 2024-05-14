@@ -372,28 +372,9 @@ body.path-frontpage .region-featured-bottom-first {
 
 /*FRONT-NYHEDER*/
 @media screen and (max-width: 400px) {
-  .news::after {
-    content: "";
-    background: transparent url("../images/sprite.png") no-repeat -112px 0;
-    display: block;
-    position: absolute;
-    top: -10px;
-    right: 0;
-    width: 18px;
-    height: 45px;
-  }
-  .news.open::after {
-    display: none;
-  }
+  .entity-default--os2web-simple-text-paragraph {
+    margin: 20px 0 30px !important;
 }
-body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
-  padding-top: 20px !important;
-  padding-bottom: 30px;
-  border-bottom: 20px solid var(--light-gray1);
-}
-.news-col-1 {
-  padding-bottom: 30px;
-  border-bottom: 20px solid var(--light-gray1);
 }
 
 @media screen and (max-width: 767px) {
@@ -412,7 +393,6 @@ body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
   }
 }
 body.path-frontpage .entity-default--os2web-3-columns .col-sm-12 {
-  padding-top: 20px !important;
   padding-bottom: 30px;
   border-bottom: 20px solid var(--light-gray1);
 }
