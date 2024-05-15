@@ -72,8 +72,6 @@
   border-color: var(--gray1);
 }
 
-
-
 .accordion-content:not(.field--widget-text-textarea) ul li,
 .tabnav-panel:not(.field--widget-text-textarea) ul li,
 .field--type-text-long:not(.field--widget-text-textarea) ul li {

@@ -15,7 +15,7 @@ body {
 
   a {
     display: inline-block;
-    min-width: 44px !important;
+    /*min-width: 44px !important;*/ /* udkommentere denne for at løse luft mellem a links i brødkrumme stien på siden, må se om det påvirker andre på siden */
   }
 
   .entity-default--os2web-spotbox-reference {
