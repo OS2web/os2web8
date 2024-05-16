@@ -19215,6 +19215,16 @@ ul.related-links a:hover {
   font-weight: 700;
 }
 
+.anonymous-subscriptions-subscribe-form {
+  margin-bottom: 3rem;
+}
+.anonymous-subscriptions-subscribe-form p {
+  color: #00335b;
+}
+.anonymous-subscriptions-subscribe-form .form-item label {
+  color: #00335b;
+}
+
 a.entity-list--os2web-page {
   max-width: unset;
 }
