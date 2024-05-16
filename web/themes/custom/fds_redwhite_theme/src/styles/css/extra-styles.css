@@ -976,6 +976,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
   padding-bottom: 0;
   border-bottom: 1px solid var(--dark-gray1);
 }
+
 .paragraph--type--os2web-files-paragraph {
   display: flex;
   flex-direction: column;
