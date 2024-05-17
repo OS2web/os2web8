@@ -968,11 +968,11 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 .field--name-field-os2web-page-paragraph-righ > .field__item + .field__item,
 .field--name-field-os2web-page-paragraph-narr > .field__item + .field__item,
 .field--name-field-os2web-page-description + .field--name-field-os2web-page-paragraph-narr {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  /*margin-top: 32px;*/
+  /*margin-bottom: 32px;*/
 }
 .field--name-field-os2web-page-paragraph-narr {
-  padding-top: 30px;
+  /*padding-top: 30px;*/
   padding-bottom: 0;
   border-bottom: 1px solid var(--dark-gray1);
 }
