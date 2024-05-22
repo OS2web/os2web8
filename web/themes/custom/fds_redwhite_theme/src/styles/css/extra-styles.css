@@ -1435,7 +1435,7 @@ a .field--type-string h3.h4 {
     padding: 0;
   }
   .field--name-field-os2web-page-paragraph-narr .paragraph {
-    display: none;
+    /*display: none;*/
   }
   .paragraph--type--os2web-cnt-paragraph-reference {
     display: block !important;
