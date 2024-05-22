@@ -127,6 +127,12 @@ button.accordion-button {
   }
 }
 
+@media print {
+  .accordion-content {
+  display: block !important; /* Ensure the content is visible */
+  }
+}  
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
