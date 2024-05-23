@@ -1633,6 +1633,13 @@ a {
     }
   }
 }
+
+@media print {
+  .accordion-content {
+  display: block !important; /* Ensure the content is visible */
+  }
+}
+
 @media screen and (min-width: 992px) {
   .field--name-field-os2web-page-paragraph-wide {
     .paragraph--type--os2web-borgerdk-selfser-ref {
