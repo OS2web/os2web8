@@ -1,6 +1,6 @@
-{{ content }}
 
-{% set heading_color = paragraph.field_simple_text_heading_color[0]['#context']['value'] | default('#000000') %}
+
+{% set heading_color = content.field_simple_text_heading_color[0]['#context']['value'] | default('#000000') %}
 
 <style>
 
@@ -21,3 +21,5 @@
   }
 
 </style>
+
+{{ content }}
