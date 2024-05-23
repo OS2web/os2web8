@@ -1012,8 +1012,7 @@ video {
     font-size: var(--font-size-h6);
   }
 li {
-  list-style: disc;
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 .header {
   background-color: white;
@@ -3211,6 +3210,9 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
       opacity: .8;
       font-size: 14px;
     }
+.os2web-simple-text-body__item li {
+    list-style: disc;
+  }
 .paragraph--type--os2web-2-columns {
   display: flex;
   justify-content: center;
