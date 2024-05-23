@@ -2,7 +2,7 @@ name: Bellcom Theme
 type: theme
 description: A Clean and Stylistic theme
 core_version_requirement: ^8.8 || ^9
-base theme: stable
+base theme: fds_base_theme
 screenshot: theme.png
 logo: logo.png
 
