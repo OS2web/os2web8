@@ -8,7 +8,7 @@
   .field--name-field-os2web-simple-text-heading h4,
   .field--name-field-os2web-simple-text-heading h5,
   .field--name-field-os2web-simple-text-heading h6 {
-    color: {{ paragraph.field_simple_text_heading_color }}
+    color: {{ content.field_simple_text_heading_color[0]['#context']['value'] }};
   }
 
   .os2web-simple-text-body__item h2,
@@ -16,7 +16,7 @@
   .os2web-simple-text-body__item h4,
   .os2web-simple-text-body__item h5,
   .os2web-simple-text-body__item h6 {
-    color: {{ paragraph.field_simple_text_heading_color }}
+    color: {{ content.field_simple_text_heading_color[0]['#context']['value'] }};
   }
 
 </style>
