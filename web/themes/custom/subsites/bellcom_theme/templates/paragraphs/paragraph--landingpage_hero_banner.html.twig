@@ -1,15 +1,14 @@
-{% set selectedBackground = content.field_hero_bgcolor['#items'].getString() %}
-<div class="hero-wrapper" style="background-color:{% if selectedBackground == 'black' %} #212529;
-{% elseif selectedBackground == 'white' %} #fff; {% elseif selectedBackground == 'green' %} #344E41;
-{% elseif selectedBackground == 'blue' %} #22223B; {% elseif selectedBackground == 'grey' %} #343A40;
-{% elseif selectedBackground == 'sand' %} #DAD7CD; {% endif %} {% if paragraph.field_hero_bg_image.value %} background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{ file_url(paragraph.field_hero_bg_image.entity.fileuri) }}); background-size: cover; {% endif %}">
+{% set selectedBackground = content.field_hero_bgcolor[0]['#context']['value'] | default('#000000') %}
+{% set selectedTextColor = content.field_hero_txt_color['#items'].getString() %}
+{% set selectedBtnColor = content.field_primary_btn_color['#items'].getString() %}
+<div class="hero-wrapper" style="background-color: {{ selectedBackground }}; {% if paragraph.field_hero_bg_image.value %} background:linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{ file_url(paragraph.field_hero_bg_image.entity.fileuri) }}); background-size: cover; {% endif %}">
   <div class="hero__inner-wrapper">
     <div class="hero__text-wrapper">
       {% if paragraph.field_hero_heading.value  %}
-      <h1 data-aos="fade-in" data-aos-duration="800" data-aos-easing="ease" data-aos-once="true" style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
+      <h1 data-aos="fade-in" data-aos-duration="800" data-aos-easing="ease" data-aos-once="true" style="color: {% if selectedTextColor in ['white']  %} #fff; {% else %} #000; {% endif %}">{{ content.field_hero_heading }}</h1>
       {% endif %}
       {% if paragraph.field_hero_body.value %}
-      <div data-aos="fade-in" data-aos-duration="800" data-aos-delay="500" data-aos-easing="ease" data-aos-once="true" style="color: {% if selectedBackground in ['black', 'blue', 'green', 'grey'] %} #fff; {% else %} #000; {% endif %}" class="hero__body-text">
+      <div data-aos="fade-in" data-aos-duration="800" data-aos-delay="500" data-aos-easing="ease" data-aos-once="true" style="color: {% if selectedTextColor in ['white'] %} #fff; {% else %} #000; {% endif %}" class="hero__body-text">
         {{ content.field_hero_body }}
       </div>
       {% endif %}
@@ -17,11 +16,11 @@
       <div class="hero__cta-wrapper">
         {% if paragraph.field_main_cta_button.value %}
         <div data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" data-aos-once="true" class="main-cta-btn-wrapper">
-          <a style="{% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}background-color: #fff; color: black;
-          {% else %} background-color: #344e41; color: white; {% endif %}"
+          <a style="{% if selectedBtnColor in ['white'] %}background-color: #fff; color: black;
+          {% elseif selectedBtnColor in ['green'] %} background-color: #344e41; color: white; {% else %} background-color: #000; color: white; {% endif %}"
              class="main-cta-btn" href="{{ paragraph.field_main_cta_button.0.url }}">
             <span>{{ paragraph.field_main_cta_button.0.title }}</span>
-            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] or paragraph.field_hero_bg_image.value is not empty %}
+            {% if selectedBtnColor in ['white'] %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "black" } %}
             {% else %}
             {% include "@bellcom_theme/assets/images/arrow-right-small.svg" with { custom_color: "white" } %}
@@ -31,11 +30,11 @@
         {% endif %}
         {% if paragraph.field_secondary_cta_button.value %}
         <div data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" data-aos-once="true" class="secondary-cta-btn-wrapper">
-          <a style="{% if selectedBackground in ['black', 'grey', 'green', 'blue'] %} color: white;
+          <a style="{% if selectedTextColor in ['white'] %} color: white;
           {% else %} color: black; {% endif %}"
              class="secondary-cta-btn" href="{{ paragraph.field_secondary_cta_button.0.url }}">
             <span id="secondary-btn">{{ paragraph.field_secondary_cta_button.0.title }}</span>
-            {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %}
+            {% if selectedTextColor in ['white'] %}
               {% include "@bellcom_theme/assets/images/arrow-right.svg" with { custom_color: "white" } %}
             {% else %}
               {% include "@bellcom_theme/assets/images/arrow-right.svg" with { custom_color: "black" } %}
@@ -126,7 +125,7 @@
 
 <style>
  #secondary-btn:after {
-   background-color: {% if selectedBackground in ['black', 'grey', 'green', 'blue'] %} white; {% else %} black; {% endif %}
+   background-color: {% if selectedTextColor in ['white'] %} white; {% else %} black; {% endif %}
  }
 </style>
 

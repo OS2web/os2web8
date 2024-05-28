@@ -1,0 +1,33 @@
+
+
+{% set heading_color = content.field_simple_text_heading_color[0]['#context']['value'] | default('#000000') %}
+
+<style>
+
+  .field--name-field-os2web-simple-text-heading h2,
+  .field--name-field-os2web-simple-text-heading h3,
+  .field--name-field-os2web-simple-text-heading h4,
+  .field--name-field-os2web-simple-text-heading h5,
+  .field--name-field-os2web-simple-text-heading h6 {
+    color: {{ heading_color | e }};
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .os2web-simple-text-body__item h2,
+  .os2web-simple-text-body__item h3,
+  .os2web-simple-text-body__item h4,
+  .os2web-simple-text-body__item h5,
+  .os2web-simple-text-body__item h6 {
+    color: {{ heading_color | e }};
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .simple-text-heading-color {
+    display: none;
+  }
+
+</style>
+
+{{ content }}
