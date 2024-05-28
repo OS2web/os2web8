@@ -79,7 +79,7 @@ function bc_utility_search_api_query_alter(QueryInterface &$query)
   $keywords = trim($lowerOriginalKeys);
 
   if (!empty($keywords)) {
-    if (!preg_match('/^[a-zA-Z0-9\s-]+$/', $keywords) || strlen($keywords) < 3 || strlen($keywords) > 30) {
+    if (!preg_match('/^[a-zA-Z0-9æøåÆØÅ\s-]+$/', $keywords) || strlen($keywords) < 3 || strlen($keywords) > 30) {
         $query->keys("");
     }
   }
