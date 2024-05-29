@@ -23,7 +23,7 @@
       {{ text | striptags }}
     </div>
 
-    {% if os2web_field_paragraph_content is not empty %}
+    {% if os2web_field_paragraph_content %}
       <div class="field field--type-paragraph">
         {{ os2web_field_paragraph_content|raw }}
       </div>
