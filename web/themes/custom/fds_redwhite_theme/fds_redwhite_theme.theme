@@ -210,24 +210,21 @@ function fds_redwhite_theme_preprocess_node(&$variables) {
     if ($view_mode === 'teaser') {
       $paragraph_content = '';
 
-      // Check for paragraphs in a specific field (replace 'field_paragraph_reference' with the actual field name containing the paragraphs).
+
       if ($node->hasField('field_os2web_news_paragraph_narr')) {
         $paragraphs = $node->get('field_os2web_news_paragraph_narr')->referencedEntities();
 
         foreach ($paragraphs as $paragraph) {
           if ($paragraph->bundle() == 'os2web_field_paragraph' && $paragraph->hasField('field_os2web_news_description')) {
             // Render the field content.
-            $field_value = $paragraph->get('field_os2web_news_description')->view('teaser');
-            $paragraph_content .= \Drupal::service('renderer')->render($field_value);
+            $field_value = $paragraph->get('field_os2web_news_description')->view('default'); // Use 'default' or appropriate view mode for the paragraph field
+            $paragraph_content .= render($field_value);
           }
         }
       }
 
       // Pass the paragraph field content to the template.
-      $variables['os2web_field_paragraph_content'] = [
-        '#markup' => $paragraph_content,
-        '#allowed_tags' => ['div', 'span', 'p', 'br', 'strong', 'em'], // Add other tags if needed
-      ];
+      $variables['os2web_field_paragraph_content'] = $paragraph_content;
     }
 
 
