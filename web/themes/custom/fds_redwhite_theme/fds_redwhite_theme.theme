@@ -363,18 +363,22 @@ function fds_redwhite_theme_preprocess_media(&$variables) {
   }
 }
 
-/**
- * Implements hook_node_view_alter().
- */
+
 /**
  * Implements hook_node_view_alter().
  */
 function fds_redwhite_theme_node_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
   $view_mode = $display->getMode();
 
+  // Debugging output to verify the view mode.
+  \Drupal::logger('fds_redwhite_theme')->debug('View mode: @view_mode for node: @nid', [
+    '@view_mode' => $view_mode,
+    '@nid' => $entity->id(),
+  ]);
 
   // Check if the view mode is 'teaser', and skip unsetting the field in that case.
   if ($view_mode === 'teaser') {
+    \Drupal::logger('fds_redwhite_theme')->debug('Skipping unsetting fields for teaser view mode.');
     return;
   }
 
@@ -384,6 +388,7 @@ function fds_redwhite_theme_node_view_alter(array &$build, \Drupal\Core\Entity\E
   });
 
   foreach ($fields as $field) {
+    \Drupal::logger('fds_redwhite_theme')->debug('Processing field: @field', ['@field' => $field->getName()]);
     $referenced_entities = $entity->get($field->getName())->referencedEntities();
     foreach ($referenced_entities as $referenced_entity) {
       if ($referenced_entity->getEntityTypeId() == 'paragraph' && $referenced_entity->bundle() == 'os2web_field_paragraph') {
@@ -391,13 +396,18 @@ function fds_redwhite_theme_node_view_alter(array &$build, \Drupal\Core\Entity\E
         /** @var FieldConfigInterface $fieldDefinition */
         $fieldDefinition = $entity->get($field_name)->getFieldDefinition();
         if (isset($build[$field_name]) && $fieldDefinition->getThirdPartySetting('os2web_field_paragraph', 'enabled')) {
+          // Debugging output to verify the fields being unset.
+          \Drupal::logger('fds_redwhite_theme')->debug('Unsetting field: @field in view mode: @view_mode', [
+            '@field' => $field_name,
+            '@view_mode' => $view_mode
+          ]);
+
           unset($build[$field_name]);
         }
       }
     }
   }
 }
-
 
 
 
