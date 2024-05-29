@@ -204,6 +204,29 @@ function fds_redwhite_theme_preprocess_views_view_summary(&$variables) {
 function fds_redwhite_theme_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
+  $view_mode = $variables['view_mode'];
+    $entity_field_manager = \Drupal::service('entity_field.manager');
+
+    // Check if the view mode is not 'teaser'.
+    if ($view_mode != 'teaser') {
+      $fields = array_filter($entity_field_manager->getFieldDefinitions('node', $node->bundle()), function($field_config) {
+        return ($field_config instanceof FieldConfig) && $field_config->getType() == 'entity_reference_revisions';
+      });
+
+      foreach ($fields as $field) {
+        $referenced_entities = $node->get($field->getName())->referencedEntities();
+        foreach ($referenced_entities as $referenced_entity) {
+          if ($referenced_entity->getEntityTypeId() == 'paragraph' && $referenced_entity->bundle() == 'os2web_field_paragraph') {
+            $field_name = $referenced_entity->field_os2web_field_field_name->value;
+            /** @var FieldConfigInterface $fieldDefinition */
+            $fieldDefinition = $node->get($field_name)->getFieldDefinition();
+            if (isset($variables['content'][$field_name]) && $fieldDefinition->getThirdPartySetting('os2web_field_paragraph', 'enabled')) {
+              unset($variables['content'][$field_name]);
+            }
+          }
+        }
+      }
+    }
 
   if ($node->getType() == 'os2web_page' && $variables['view_mode'] == 'full') {
     $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
