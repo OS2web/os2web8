@@ -366,9 +366,15 @@ function fds_redwhite_theme_preprocess_media(&$variables) {
 /**
  * Implements hook_node_view_alter().
  */
+/**
+ * Implements hook_node_view_alter().
+ */
 function fds_redwhite_theme_node_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
-  // Check if the view mode is 'teaser', skip unsetting the field in that case.
-  if ($display->getMode() == 'teaser') {
+  $view_mode = $display->getMode();
+
+
+  // Check if the view mode is 'teaser', and skip unsetting the field in that case.
+  if ($view_mode === 'teaser') {
     return;
   }
 
@@ -385,13 +391,13 @@ function fds_redwhite_theme_node_view_alter(array &$build, \Drupal\Core\Entity\E
         /** @var FieldConfigInterface $fieldDefinition */
         $fieldDefinition = $entity->get($field_name)->getFieldDefinition();
         if (isset($build[$field_name]) && $fieldDefinition->getThirdPartySetting('os2web_field_paragraph', 'enabled')) {
-          
           unset($build[$field_name]);
         }
       }
     }
   }
 }
+
 
 
 
