@@ -20264,6 +20264,60 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   gap: 10px;
 }
 
+.hearings-documents h2 {
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+.hearings-documents .attached-documents a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: none;
+  padding: 12px;
+  border-radius: 3px;
+  position: relative;
+  background-color: white;
+  color: #00325b;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  font-weight: normal;
+}
+.hearings-documents .attached-documents a:after {
+  content: "\f019";
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: "FontAwesome";
+  font-size: 22px;
+  position: absolute;
+}
+.hearings-documents .referenced-documents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+#show-more-files-hearings {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: rgb(0, 50, 91);
+  margin-top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media print {
   .file {
     -webkit-box-shadow: none;
