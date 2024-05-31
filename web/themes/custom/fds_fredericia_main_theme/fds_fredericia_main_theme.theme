@@ -325,7 +325,7 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
         $attached_docs = $node->field_os2web_hearings_attac_doc->referencedEntities();
         $variables['attached_documents'] = [];
         foreach ($attached_docs as $doc) {
-          $variables['attached_documents'][] = $doc->url();
+          $variables['attached_documents'][] = file_create_url($doc->getFileUri());
         }
       }
 
