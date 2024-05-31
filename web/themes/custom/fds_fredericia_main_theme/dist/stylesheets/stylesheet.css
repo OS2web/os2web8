@@ -20249,6 +20249,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: none;
 }
 
+.hearings-edoc-wrapper h2 {
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+
 @media print {
   .file {
     -webkit-box-shadow: none;
