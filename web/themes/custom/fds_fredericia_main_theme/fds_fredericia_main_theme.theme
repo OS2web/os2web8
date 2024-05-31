@@ -318,6 +318,29 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
   $variables['#lastupdated'] = time();
 
 
+  // Check for the specific content type.
+    if ($node->bundle() === 'os2web_hearings_hearing_case') {
+      // Prepare attached documents.
+      if ($node->hasField('field_os2web_hearings_attac_doc') && !$node->field_os2web_hearings_attac_doc->isEmpty()) {
+        $attached_docs = $node->field_os2web_hearings_attac_doc->referencedEntities();
+        $variables['attached_documents'] = [];
+        foreach ($attached_docs as $doc) {
+          $variables['attached_documents'][] = $doc->url();
+        }
+      }
+
+      // Prepare referenced entities.
+      if ($node->hasField('field_hoering_doc_ref') && !$node->field_hoering_doc_ref->isEmpty()) {
+        $referenced_entities = $node->field_hoering_doc_ref->referencedEntities();
+        $variables['referenced_documents'] = [];
+        foreach ($referenced_entities as $referenced_entity) {
+          $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
+          $variables['referenced_documents'][] = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+        }
+      }
+    }
+
+
 }
 
 function fds_fredericia_main_theme_get_menu_hierarchy_for_node($node) {
