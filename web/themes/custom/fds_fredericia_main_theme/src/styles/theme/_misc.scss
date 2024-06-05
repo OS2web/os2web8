@@ -97,7 +97,7 @@ body .container-fluid {
       color: #00335b;
 
       &:before {
-        color: #00335b !important;
+        color: $color__bullets;
       }
     }
   }
