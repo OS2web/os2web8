@@ -65,8 +65,8 @@
 .field--type-text-long {
 
   a {
-    font-weight: $font-weight-bold;
-    text-decoration: underline;
+    font-weight: $font-weight-bold !important;
+    text-decoration: underline !important;
   }
 }
 
