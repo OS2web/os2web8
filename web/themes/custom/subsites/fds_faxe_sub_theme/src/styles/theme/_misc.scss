@@ -54,6 +54,8 @@ body .container-fluid {
 button,
 body a {
 
+  text-decoration: none;
+
   &:focus {
     outline-width: 2px;
   }
