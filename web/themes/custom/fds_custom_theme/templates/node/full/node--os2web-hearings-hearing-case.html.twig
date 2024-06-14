@@ -16,7 +16,7 @@
 
   {% if not content['#is_decision'] %}
     {%  if node.field_os2web_hearings_type.entity.tid.value == 4469 %}
-      
+
     {% else %}
         {{ content.field_os2web_hearings_reply }}
 
@@ -25,7 +25,9 @@
           <div class="box__body">
             <div class="row">
               <div class="col-12 col-md-auto">
-                {{ content.field_os2web_hearings_end_date }}
+                {% if content.field_os2web_hearings_end_date|render %}
+                  {{ content.field_os2web_hearings_end_date }}
+                {% endif %}
               </div>
               <div class="col-12 col-md-auto">
                 {{ content.field_os2web_hearings_published }}
