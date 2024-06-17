@@ -2590,7 +2590,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form {
               display: grid;
               grid-template-columns: repeat(2, 1fr);
-              gap: 20px;
+              column-gap: 1em;
             }
 @media only screen and (max-width: 540px) {
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form {

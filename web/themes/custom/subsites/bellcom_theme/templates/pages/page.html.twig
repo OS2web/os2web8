@@ -56,8 +56,8 @@
       <h2>Tilmeld dig vores nyhedsbrev</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <form action="https://bellcom.us11.list-manage.com/subscribe/post" method="POST">
-          <input type="email" name="MERGE0" id="MERGE0" placeholder="Skriv din e-mail her...">
+        <form id="subscribe-form" action="/themes/custom/subsites/bellcom_theme/mailchimp_subscribe.php" method="POST">
+          <input type="email" id="email" name="email" placeholder="Skriv din e-mail her...">
           <button id="subscribe-btn" type="submit">
             <span>Abonnér</span>
             <div class="icon">
@@ -96,3 +96,25 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  const form = document.getElementById('subscribe-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error. Please try again.');
+      });
+  });
+</script>
