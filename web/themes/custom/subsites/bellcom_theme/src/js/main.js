@@ -25,7 +25,7 @@ window.onresize = function () {
   }
 };
 
-const subscribeBtn = document.querySelector('#subscribe-btn');
+const subscribeBtn = document.querySelector('#mc-embedded-subscribe');
 
 function removeSuccess() {
   subscribeBtn.classList.remove('success');
