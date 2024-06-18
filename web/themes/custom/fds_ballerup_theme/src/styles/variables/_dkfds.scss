@@ -11,7 +11,7 @@ $global-font-size:  100% !default;
 // value from Bourbon.
 $em-base:           62.5%; //-> 10px for standard browsers, now 'Font size' from the browser setting works correctly if the uses specifies a bigger standard font-size.
 
-$base-font-size:    1.6rem !default;
+$base-font-size:    1.7rem !default;
 $base-line-height:  2.4rem !default;
 
 // Paths
@@ -46,13 +46,13 @@ $display-1-heading-line-height: 5.6rem !default;
 $display-2-heading-size:        3.2rem !default;
 $display-2-heading-line-height: 4.0rem !default;
 
-$body-text:                   1.6rem;
+$body-text:                   1.7rem;
 $body-text-line-height:       2.2rem;
 
 $form-label:                  $base-font-size;
 $form-label-line-height:      2.4rem !default;
 
-$small-text:                  1.4rem;
+$small-text:                  1.5rem;
 $small-text-line-height:      1.9rem;
 
 $lead-font-size:              2.0rem !default;
@@ -65,7 +65,7 @@ $font-weight-bold:            700 !default;
 $font-style-normal:           normal !default;
 $font-style-italic:           italic !default;
 
-$font-family:                 'Open Sans', sans-serif, 'system';
+$font-family:                 Arial, "Helvetica Neue", Helvetica, sans-serif;;
 
 ///////////////////////////////////////////////////////////////////
 // Spacing helpers

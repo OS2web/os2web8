@@ -82,7 +82,7 @@
         "drupal/file_management": "1.x-dev@dev",
         "drupal/flood_control": "^2.2",
         "drupal/form_options_attributes": "^1.2",
-        "drupal/forum_notifications_subscription": "^1.0@alpha",
+        "drupal/forum_notifications_subscription": "^1.0",
         "drupal/gdpr": "^3.0@alpha",
         "drupal/gin": "^3.0",
         "drupal/gin_login": "^1.0@RC",
@@ -156,6 +156,7 @@
         "os2web/os2web_spotbox": "dev-master",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
+        "wikimedia/composer-merge-plugin": "^2.1",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
@@ -176,7 +177,8 @@
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "zaporylie/composer-drupal-optimizations": true
+            "zaporylie/composer-drupal-optimizations": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "autoload": {
@@ -200,6 +202,11 @@
         ]
     },
     "extra": {
+	"merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
+        },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"

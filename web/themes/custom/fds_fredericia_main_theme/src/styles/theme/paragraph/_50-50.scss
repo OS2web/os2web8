@@ -89,12 +89,12 @@
 
     &.text-side-white {
       h2, h3, h4, h5, h6, p, li, span {
-        color: white;
+        color: white !important;
       }
     }
     &.text-side-black {
       h2, h3, h4, h5, h6, p, li, span {
-        color: black;
+        color: black !important;
       }
     }
 

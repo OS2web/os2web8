@@ -318,6 +318,29 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
   $variables['#lastupdated'] = time();
 
 
+  // Check for the specific content type.
+    if ($node->bundle() === 'os2web_hearings_hearing_case') {
+      // Prepare attached documents.
+      if ($node->hasField('field_os2web_hearings_attac_doc') && !$node->field_os2web_hearings_attac_doc->isEmpty()) {
+        $attached_docs = $node->field_os2web_hearings_attac_doc->referencedEntities();
+        $variables['attached_documents'] = [];
+        foreach ($attached_docs as $doc) {
+          $variables['attached_documents'][] = file_create_url($doc->getFileUri());
+        }
+      }
+
+      // Prepare referenced entities.
+      if ($node->hasField('field_hoering_doc_ref') && !$node->field_hoering_doc_ref->isEmpty()) {
+        $referenced_entities = $node->field_hoering_doc_ref->referencedEntities();
+        $variables['referenced_documents'] = [];
+        foreach ($referenced_entities as $referenced_entity) {
+          $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
+          $variables['referenced_documents'][] = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+        }
+      }
+    }
+
+
 }
 
 function fds_fredericia_main_theme_get_menu_hierarchy_for_node($node) {
@@ -579,6 +602,37 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
       }
 
     }
+
+    if ($paragraph->bundle() === 'edoc_filer') {
+          // Check and prepare ESDH Documents.
+          if ($paragraph->hasField('field_sagsreference') && !$paragraph->field_sagsreference->isEmpty()) {
+            $case_node = $paragraph->field_sagsreference->entity;
+
+            if ($case_node && $case_node->hasField('field_case_documents') && !$case_node->field_case_documents->isEmpty()) {
+              $document_ids = $case_node->field_case_documents->getValue();
+              $documents = [];
+              foreach ($document_ids as $id) {
+                $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
+                if ($document_node) {
+                  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+                  $documents[] = $view_builder->view($document_node, 'paragraph_display'); // 'default' or another view mode as necessary
+                }
+              }
+              $variables['esdh_documents'] = $documents;
+            }
+          }
+
+
+          if ($paragraph->hasField('field_doc_reference') && !$paragraph->field_doc_reference->isEmpty()) {
+              $referenced_entities = $paragraph->field_doc_reference->referencedEntities();
+              $variables['field_document_reference_items'] = [];
+              foreach ($referenced_entities as $referenced_entity) {
+                  $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
+                  $variables['field_document_reference_items'][] = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+              }
+          }
+
+        }
 
 }
 

@@ -223,12 +223,19 @@ main.col-lg-8 {
 
 
 .box {
-  background-color: #fff;
-  text-align: center;
+  text-decoration: none;
+  &.text-align--left-text {
+    text-align: left;
+  }
+  &.text-align--center-text {
+    text-align: center;
+  }
+  &.text-align--right-text {
+    text-align: right;
+  }
   .box__heading {
     padding: 20px 20px;
     color: $color-black;
-    background-color: #fff;
 
     .field--name-field-os2web-icon {
       img {
@@ -264,6 +271,8 @@ main.col-lg-8 {
   flex-direction: column;
   gap: 10px;
 }
+
+
 
 
 // Variants.

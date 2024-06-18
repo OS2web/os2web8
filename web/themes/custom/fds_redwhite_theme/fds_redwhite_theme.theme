@@ -204,6 +204,29 @@ function fds_redwhite_theme_preprocess_views_view_summary(&$variables) {
 function fds_redwhite_theme_preprocess_node(&$variables) {
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
+  $view_mode = $variables['view_mode'];
+
+    // Only process for teaser view mode.
+    if ($view_mode === 'teaser') {
+      $paragraph_content = '';
+
+
+      if ($node->hasField('field_os2web_news_paragraph_narr')) {
+        $paragraphs = $node->get('field_os2web_news_paragraph_narr')->referencedEntities();
+
+        foreach ($paragraphs as $paragraph) {
+          if ($paragraph->bundle() == 'os2web_field_paragraph' && $paragraph->hasField('field_os2web_news_description')) {
+            // Render the field content.
+            $field_value = $paragraph->get('field_os2web_news_description')->view('default'); // Use 'default' or appropriate view mode for the paragraph field
+            $paragraph_content .= render($field_value);
+          }
+        }
+      }
+
+      // Pass the paragraph field content to the template.
+      $variables['os2web_field_paragraph_content'] = $paragraph_content;
+    }
+
 
   if ($node->getType() == 'os2web_page' && $variables['view_mode'] == 'full') {
     $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
@@ -361,5 +384,8 @@ function fds_redwhite_theme_preprocess_media(&$variables) {
     }
   }
 }
+
+
+
 
 

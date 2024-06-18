@@ -55,3 +55,4 @@ libraries-override:
      js:
        js/slideshow.js: js/slideshow.js
        js/accordion.js: js/accordion.js
+       js/micro-modal.js: js/micro-modal.js

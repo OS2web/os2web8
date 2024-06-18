@@ -1,16 +1,14 @@
 {% set total_files_count =
   (esdh_documents|default([])|length) +
-  (os2web_files|default([])|length) +
-  (os2web_media_files|default([])|length) +
   (field_document_reference_items|default([])|length) %} {# Adjust this logic based on your actual structure #}
 
-{% if content.field_os2web_files_heading|render|striptags|trim is not empty %}
-  <h2>{{ content.field_os2web_files_heading }}</h2>
+{% if content.field_edoc_heading|render|striptags|trim is not empty %}
+  <h2>{{ content.field_edoc_heading }}</h2>
 {% else %}
   <h2 class="files-default-heading">Bilag</h2>
 {% endif %}
 
-<div class="documents-wrapper files-wrapper">
+<div class="documents-wrapper edoc-only">
   {% set file_index = 0 %}
 
   {# Render ESDH Documents if any #}
@@ -35,39 +33,20 @@
     </div>
   {% endif %}
 
-  {# Render file uploads if any #}
-  {% if os2web_files %}
-    <div class="os2web-files">
-      {% for file in os2web_files %}
-        <div class="file-item {{ file_index > 2 ? 'hidden' : '' }}">{{ file }}</div>
-        {% set file_index = file_index + 1 %}
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {# Render media file uploads if any #}
-  {% if os2web_media_files %}
-    <div class="os2web-media-files">
-      {% for media in os2web_media_files %}
-        <div class="media-item {{ file_index > 2 ? 'hidden' : '' }}">{{ media }}</div>
-        {% set file_index = file_index + 1 %}
-      {% endfor %}
-    </div>
-  {% endif %}
-</div>
-
 {% if total_files_count > 3 %}
-  <button id="show-more-files">+ Vis flere</button>
+  <button id="show-more-files-edoc">+ Vis flere</button>
 {% endif %}
+
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const showMoreButton = document.getElementById('show-more-files');
+    const showMoreButton = document.getElementById('show-more-files-edoc');
     let isExpanded = false; // Keep track of the state
 
     if (showMoreButton) {
       showMoreButton.addEventListener('click', function() {
-        const elements = document.querySelectorAll('.files-wrapper .document-item, .files-wrapper .file-item, .files .media-item, .files-wrapper .directly-referenced-documents .document-item  ');
+        const elements = document.querySelectorAll('.edoc-only .document-item, .edoc-only .directly-referenced-documents .document-item  ');
         if (isExpanded) {
           // Hide elements by re-adding 'hidden' class
           elements.forEach(function(element, index) {

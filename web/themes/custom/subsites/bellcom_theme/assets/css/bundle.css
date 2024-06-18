@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
-/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.1.4 | MIT License | https://tailwindcss.com */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -267,6 +267,14 @@ button {
   background-color: transparent;
   background-image: none;
 }
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
 fieldset {
   margin: 0;
   padding: 0;
@@ -329,7 +337,7 @@ body {
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: currentColor; /* 2 */
+  border-color: #e5e7eb; /* 2 */
 }
 /*
  * Ensure horizontal rules are visible by default
@@ -360,16 +368,6 @@ textarea::placeholder {
 button,
 [role="button"] {
   cursor: pointer;
-}
-/**
- * Override legacy focus reset from Normalize with modern Firefox focus styles.
- *
- * This is actually an improvement over the new defaults in Firefox in our testing,
- * as it triggers the better focus styles even for links, which still use a dotted
- * outline in Firefox by default.
- */
-:-moz-focusring {
-	outline: auto;
 }
 table {
   border-collapse: collapse;
@@ -420,20 +418,11 @@ samp {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 /**
- * 1. Make replaced elements `display: block` by default as that's
- *    the behavior you want almost all of the time. Inspired by
- *    CSS Remedy, with `svg` added as well.
+ * Make replaced elements `display: block` by default as that's
+ * the behavior you want almost all of the time. Inspired by
+ * CSS Remedy, with `svg` added as well.
  *
- *    https://github.com/mozdevs/cssremedy/issues/14
- * 
- * 2. Add `vertical-align: middle` to align replaced elements more
- *    sensibly by default when overriding `display` by adding a
- *    utility like `inline`.
- *
- *    This can trigger a poorly considered linting error in some
- *    tools but is included by design.
- * 
- *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ * https://github.com/mozdevs/cssremedy/issues/14
  */
 img,
 svg,
@@ -443,8 +432,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block; /* 1 */
-  vertical-align: middle; /* 2 */
+  display: block;
+  vertical-align: middle;
 }
 /**
  * Constrain images and videos to the parent width and preserve
@@ -457,15 +446,14 @@ video {
   max-width: 100%;
   height: auto;
 }
-/**
- * Ensure the default browser behavior of the `hidden` attribute.
- */
-[hidden] {
-  display: none;
-}
-*, ::before, ::after{
-	--tw-border-opacity: 1;
-	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+*{
+	--tw-shadow: 0 0 #0000;
+	--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+	--tw-ring-offset-width: 0px;
+	--tw-ring-offset-color: #fff;
+	--tw-ring-color: rgba(59, 130, 246, 0.5);
+	--tw-ring-offset-shadow: 0 0 #0000;
+	--tw-ring-shadow: 0 0 #0000;
 }
 .box-content{
 	box-sizing: content-box;
@@ -478,6 +466,9 @@ video {
 }
 .border{
 	border-width: 1px;
+}
+.ease{
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 :root {
   /**
@@ -960,7 +951,7 @@ video {
 }
 .field--name-field-os2web-page-heading .page-heading-default {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     padding: 0 10px;
   }
 .os2web-page-intro {
@@ -970,7 +961,7 @@ video {
 }
 .os2web-page-intro .os2web-page-intro__item {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     padding: 0 10px;
     font-weight: 800;
     color: #000;
@@ -983,7 +974,7 @@ video {
 }
 .os2web-page-description .os2web-page-description__item {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     padding: 0 10px;
   }
 .page-default-content-wrapper {
@@ -1011,17 +1002,24 @@ video {
 .page-default-content-wrapper h6 {
     font-size: var(--font-size-h6);
   }
+li {
+  padding-left: 0 !important;
+}
+ul.menu {
+  margin-left: 0 !important;
+}
 .header {
   background-color: white;
   min-height: 80px;
   display: flex;
   font-family: 'Overpass', sans-serif;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 99;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .header .header__inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -1302,7 +1300,7 @@ footer {
   font-family: "Overpass", sans-serif;
 }
 footer .footer_inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     width: 100%;
     margin: 60px 0;
     display: flex;
@@ -1501,7 +1499,7 @@ footer .bottom__footer {
     margin: 0 10px;
   }
 footer .bottom__footer .bottom__footer-inner {
-      max-width: 1440px;
+      max-width: 1280px;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -1579,8 +1577,37 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
               background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
               border-color: transparent;
             }
+.disclaimer {
+  margin-top: 20px;
+}
+.disclaimer-toggle {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.disclaimer-toggle i {
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+.disclaimer-content {
+  display: none;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+.disclaimer-content.show {
+  display: block;
+}
+.disclaimer-toggle.active i {
+  transform: rotate(180deg);
+}
 .hero-wrapper {
-  min-height: 70vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1592,10 +1619,9 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 }
   }
 .hero-wrapper .hero__inner-wrapper {
-    max-width: 1440px;
-    margin: 0 10px;
+    max-width: 1280px;
+    margin: 50px 10px 0 10px;
     display: flex;
-    min-height: 650px;
     gap: 100px;
     width: 100%;
   }
@@ -1861,7 +1887,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   align-items: center;
 }
 .text-bg-wrapper .text-bg__inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 80px 10px;
     width: 100%;
     border-radius: 10px;
@@ -1912,13 +1938,13 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   align-items: center;
 }
 .product_showcase_wrapper .product_showcase_inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 80px 10px;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     display: grid;
-    grid-gap: 100px;
+    grid-gap: 50px;
   }
 @media only screen and (max-width: 1024px) {
 .product_showcase_wrapper .product_showcase_inner-wrapper {
@@ -1928,7 +1954,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 @media only screen and (max-width: 768px) {
 .product_showcase_wrapper .product_showcase_inner-wrapper {
       margin: 40px 10px;
-      grid-gap: 50px
+      grid-gap: 25px
   }
     }
 @media only screen and (max-width: 590px) {
@@ -2011,7 +2037,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   align-items: center;
 }
 .text-img-wrapper .text-img__inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     width: 100%;
     margin: 80px 10px;
     border-radius: 10px;
@@ -2275,7 +2301,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   align-items: center;
 }
 .clients-wrapper .clients_inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     width: 100%;
     margin: 80px 10px;
     display: grid;
@@ -2335,7 +2361,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 }
 .page-banner-wrapper .page-banner__inner-wrapper {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -2467,7 +2493,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 }
 .contact-form-wrapper .contact-form__inner-wrapper {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 80px 10px;
     display: flex;
   }
@@ -2584,7 +2610,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form {
               display: grid;
               grid-template-columns: repeat(2, 1fr);
-              gap: 20px;
+              column-gap: 1em;
             }
 @media only screen and (max-width: 540px) {
 .contact-form-wrapper .contact-form__inner-wrapper .contact-form__webform .bellcom-contact-form .bellcom-contact-form__item .webform-ajax-form-wrapper form {
@@ -2637,7 +2663,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   align-items: center;
 }
 .simple-accordion-wrapper .simple-accordion__inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     width: 100%;
     margin: 80px 10px;
     display: flex;
@@ -2884,7 +2910,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
     display: flex;
     height: auto;
     gap: 20px;
-    max-width: 1440px;
+    max-width: 1280px;
     width: 100%;
     margin: 80px 10px;
   }
@@ -2999,7 +3025,7 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
 }
 .slider-wrapper .slider-inner-wrapper {
     position: relative;
-    max-width: 1440px;
+    max-width: 1280px;
     height: auto;
     width: 100%;
     margin: 80px 10px;
@@ -3111,25 +3137,64 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .icon-grid-wrapper .icon-grid-inner-wrapper {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 80px 0;
     padding: 0 10px;
     width: 100%;
   }
+.icon-grid-wrapper .icon-grid-inner-wrapper h2 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+.icon-grid-wrapper .bottom-banner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    min-height: 270px;
+    z-index: -1;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+  }
+.icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      max-width: 1280px;
+      padding: 0 10px 20px 10px;
+    }
+.icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper .bottom-banner-text {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 28px;
+        color: white;
+      }
+.icon-grid-wrapper .bottom-banner .bottom-banner-content-wrapper .bottom-banner-graphic {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 125px;
-  column-gap: 50px;
+  row-gap: 25px;
+  column-gap: 25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 .grid-container {
     grid-template-columns: repeat(2, 1fr) /* 2 items per row on tablets*/
 }
   }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 .grid-container {
     grid-template-columns: 1fr; /* 1 item per row on mobile*/
     row-gap: 50px
@@ -3137,34 +3202,62 @@ footer .bottom__footer .bottom__footer-inner .right-side .footer-socials .instag
   }
 .grid-item {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 15px;
+  background-color: #ecf1f3;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
 }
 .grid-item .item-image{
-    min-height: 150px;
+   width: 20%;
 
   }
 .grid-item .item-image img {
       width: 100%; /* Make image responsive*/
       height: auto;
-      max-width: 125px;
-      margin-bottom: 15px;
     }
-.grid-item .item-heading {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
+.grid-item .heading-body-wrapper {
+    width: 80%;
   }
-.grid-item .item-body {
-    color: #000;
-    opacity: .8;
+.grid-item .heading-body-wrapper .item-heading {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f708a;
+      line-height: 1.2;
+    }
+.grid-item .heading-body-wrapper .item-body {
+      color: #000;
+      opacity: .8;
+      font-size: 14px;
+    }
+.os2web-simple-text-body__item li {
+    list-style: disc;
   }
+.paragraph--type--os2web-2-columns {
+  display: flex;
+  justify-content: center;
+}
+.paragraph--type--os2web-2-columns .two-columns-wrapper {
+    display: flex;
+    max-width: 1280px;
+    margin: 80px 0;
+    padding: 0 10px;
+    justify-content: center;
+    width: 100%;
+  }
+.paragraph--type--os2web-2-columns .two-columns-wrapper .column-1 {
+      width: 50%;
+    }
+.paragraph--type--os2web-2-columns .two-columns-wrapper .column-2 {
+      width: 50%;
+    }
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
+  font-family: "Overpass", sans-serif;
 }
 :focus {
   outline: 2px solid #344e41;
