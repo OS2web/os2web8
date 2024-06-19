@@ -71,11 +71,15 @@
               <h2>{{ item.entity.label }}</h2>
             </a>
             <div class="event-resume">
-              {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
-              {% if resume_text|length > 100 %}
-                {{ resume_text|slice(0, 100) ~ '...' }}
+              {% if item.entity.field_os2web_event_resume is defined and item.entity.field_os2web_event_resume.value is not empty %}
+                {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
+                {% if resume_text|length > 100 %}
+                  {{ resume_text|slice(0, 100) ~ '...' }}
+                {% else %}
+                  {{ resume_text }}
+                {% endif %}
               {% else %}
-                {{ resume_text }}
+                <p>Resume kommer...</p>
               {% endif %}
             </div>
             <div class="event-link">
