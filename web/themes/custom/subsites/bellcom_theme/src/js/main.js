@@ -52,7 +52,7 @@ subscribeBtnTextImage.addEventListener('click', (e) => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+
   const toggleButton = document.querySelector('.disclaimer-toggle');
   const disclaimerContent = document.querySelector('.disclaimer-content');
 
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
     disclaimerContent.classList.toggle('show');
     toggleButton.classList.toggle('active');
   });
-});
 
 
 
