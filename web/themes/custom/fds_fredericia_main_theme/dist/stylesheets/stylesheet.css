@@ -20207,6 +20207,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
+.file.hovered {
+  background-color: #00335b;
+}
 .file a {
   width: 93%;
   text-overflow: ellipsis;
@@ -20219,9 +20222,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .file a:visited {
   color: #00335b;
-}
-.file a:hover .file {
-  background-color: #00335b;
 }
 .file a:hover {
   color: white;

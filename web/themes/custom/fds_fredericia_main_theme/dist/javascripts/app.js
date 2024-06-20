@@ -3836,3 +3836,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const fileLinks = document.querySelectorAll('.file a');
+
+  fileLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.parentElement.classList.add('hovered');
+    });
+
+    link.addEventListener('mouseleave', function() {
+      this.parentElement.classList.remove('hovered');
+    });
+  });
+});

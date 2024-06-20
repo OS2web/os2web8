@@ -105,6 +105,10 @@
   transition: .3s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
+  &.hovered {
+    background-color: #00335b;
+  }
+
   a {
 
     width: 93%;
@@ -117,10 +121,6 @@
 
     &:visited {
       color: #00335b;
-    }
-
-    &:hover .file {
-      background-color: #00335b;
     }
     &:hover {
       color: white;
