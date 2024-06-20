@@ -74,6 +74,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 80px;
 
   .esdh-documents, .directly-referenced-documents, .os2web-files, .os2web-media-files {
     display: flex;
@@ -91,7 +92,7 @@
 .file {
   display: flex;
   background-image: none;
-  padding: 12px;
+  padding: 0;
   border-radius: 3px;
   position: relative;
   background-color: white;
@@ -101,18 +102,28 @@
   font-size: 14px;
   width: 100%;
   border: 1px solid #ddd;
+  transition: .3s ease;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
   a {
 
-    width: 90%;
+    width: 93%;
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #00335b;
     overflow: hidden;
+    padding: 12px;
+    transition: .3s ease;
 
     &:visited {
       color: #00335b;
+    }
+
+    &:hover .file {
+      background-color: #00335b;
+    }
+    &:hover {
+      color: white;
     }
 
 
