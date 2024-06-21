@@ -7340,7 +7340,7 @@ figure {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .form-input {
     /* IE10+ CSS styles go here */
-    height: calc(2.2rem + 16px);
+    height: calc(2.2rem + (8px * 2));
   }
 }
 .form-input:focus, .form-input.focus {
@@ -7363,7 +7363,7 @@ textarea.form-input {
   display: block;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  height: calc(2.2rem + 16px);
+  height: calc(2.2rem + (8px * 2));
   max-width: 32rem;
   width: 100%;
   margin-top: 8px;
@@ -7711,10 +7711,10 @@ input[readonly][type=text], textarea[readonly] {
 }
 .date-group .form-group-day,
 .date-group .form-group-month {
-  width: calc(2px + 16px + 16px + 2ch);
+  width: calc(2px + 16px + 16px + 2ch );
 }
 .date-group .form-group-year {
-  width: calc(2px + 16px + 16px + 4ch);
+  width: calc(2px + 16px + 16px + 4ch );
 }
 .date-group .button-open-calendar {
   margin-bottom: 8px;
@@ -9844,9 +9844,9 @@ a.skipnav {
     top: 0;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    padding: 1rem calc(60px / 2 / 2);
+    padding: 1rem calc((60px / 2) / 2);
     margin-top: calc(16px - 1px);
-    margin-left: calc(60px / 2 / 2);
+    margin-left: calc((60px / 2) / 2);
   }
 }
 
@@ -10289,7 +10289,7 @@ a.skipnav {
 .overflow-menu .button-overflow-menu:before {
   border-bottom-color: #999999;
   border-width: 8px;
-  margin-left: calc(8px * -1);
+  margin-left: calc(8px *-1);
 }
 .overflow-menu .button-overflow-menu[aria-expanded=true]:after, .overflow-menu .button-overflow-menu[aria-expanded=true]:before {
   display: block;
@@ -15710,13 +15710,14 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   opacity: 0.6;
 }
 
-@supports (hyphens: auto) {
+@supports ((-webkit-hyphens: auto) or (hyphens: auto)) {
   :not(html[style*="font-size: 10px"])[lang=da] * {
-    -ms-hyphens: auto;
-        hyphens: auto;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
   }
 }
-@supports not (hyphens: auto) {
+@supports not ((-webkit-hyphens: auto) or (hyphens: auto)) {
   :not(html[style*="font-size: 10px"])[lang=da] * {
     word-break: break-all;
   }
@@ -20163,6 +20164,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  margin-bottom: 80px;
 }
 .documents-wrapper .esdh-documents, .documents-wrapper .directly-referenced-documents, .documents-wrapper .os2web-files, .documents-wrapper .os2web-media-files {
   display: -webkit-box;
@@ -20190,7 +20192,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -ms-flexbox;
   display: flex;
   background-image: none;
-  padding: 12px;
+  padding: 0;
   border-radius: 3px;
   position: relative;
   background-color: white;
@@ -20200,18 +20202,29 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-size: 14px;
   width: 100%;
   border: 1px solid #ddd;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
+.file.hovered {
+  background-color: #00335b;
+}
 .file a {
-  width: 90%;
+  width: 93%;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #00335b;
   overflow: hidden;
+  padding: 12px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .file a:visited {
   color: #00335b;
+}
+.file a:hover {
+  color: white;
 }
 .file a:after {
   content: "\f019";
@@ -23498,6 +23511,7 @@ body .page-container.page-container-not-front {
   word-break: break-word;
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
   -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 

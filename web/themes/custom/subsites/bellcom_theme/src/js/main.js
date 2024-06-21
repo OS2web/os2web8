@@ -25,7 +25,7 @@ window.onresize = function () {
   }
 };
 
-const subscribeBtn = document.querySelector('#subscribe-btn');
+const subscribeBtn = document.querySelector('#mc-embedded-subscribe');
 
 function removeSuccess() {
   subscribeBtn.classList.remove('success');
@@ -51,6 +51,16 @@ subscribeBtnTextImage.addEventListener('click', (e) => {
   }, 3000);
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.querySelector('.disclaimer-toggle');
+  const disclaimerContent = document.querySelector('.disclaimer-content');
+
+  toggleButton.addEventListener('click', function() {
+    disclaimerContent.classList.toggle('show');
+    toggleButton.classList.toggle('active');
+  });
+});
 
 
 

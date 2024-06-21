@@ -783,7 +783,7 @@ body.path-frontpage .field--name-field-os2web-column-1 .news.open::after {
 }
 @media screen and (min-width: 992px) {
   .field--name-field-os2web-page-paragraph-wide .paragraph--type--os2web-borgerdk-selfser-ref .field h2 {
-    margin: 0 0 30px !important;
+    margin: 30px 0 30px !important;
   }
 }
 
