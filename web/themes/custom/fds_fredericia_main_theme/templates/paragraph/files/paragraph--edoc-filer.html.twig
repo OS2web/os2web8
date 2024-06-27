@@ -46,7 +46,7 @@
 
     if (showMoreButton) {
       showMoreButton.addEventListener('click', function() {
-        const elements = document.querySelectorAll('.edoc-only .document-item, .edoc-only .directly-referenced-documents .document-item');
+        const elements = document.querySelectorAll('.edoc-only .document-item, .edoc-only .directly-referenced-documents .document-item ');
         if (isExpanded) {
           // Hide elements by re-adding 'hidden' class
           elements.forEach(function(element, index) {
