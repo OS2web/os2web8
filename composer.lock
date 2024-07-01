@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f796ac6266014d1396f9efc957332e25",
+    "content-hash": "55cac2fbba9917ba3c8e51c4578220cb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3115,6 +3115,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/date_popup",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/date_popup.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "6b707646e8920bbed1b3a6227efb9588d6b98718"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1668746954",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Provides a HTML 5 date popup for all views filters.",
+            "homepage": "https://www.drupal.org/project/date_popup",
+            "support": {
+                "source": "https://git.drupalcode.org/project/date_popup"
             }
         },
         {
@@ -10727,6 +10775,37 @@
             "time": "2024-05-08T13:28:37+00:00"
         },
         {
+            "name": "os2web/os2web_events",
+            "version": "dev-drupal10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OS2web/os2web_events.git",
+                "reference": "b3a79f299e7aaa9c871680999a9dbc64faec21c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OS2web/os2web_events/zipball/b3a79f299e7aaa9c871680999a9dbc64faec21c0",
+                "reference": "b3a79f299e7aaa9c871680999a9dbc64faec21c0",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/feeds": "*",
+                "drupal/feeds_tamper": "*"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.2"
+            ],
+            "description": "Provide functionality for events import from Kulturnaut",
+            "support": {
+                "issues": "https://github.com/OS2web/os2web_events/issues",
+                "source": "https://github.com/OS2web/os2web_events/tree/drupal10"
+            },
+            "time": "2024-04-26T09:59:08+00:00"
+        },
+        {
             "name": "os2web/os2web_hearings",
             "version": "dev-drupal10",
             "source": {
@@ -10826,6 +10905,37 @@
             "time": "2024-04-29T09:41:01+00:00"
         },
         {
+            "name": "os2web/os2web_logging",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OS2web/os2web_logging.git",
+                "reference": "15cf2dc6034055c04c63d933b45b98f1c829bd76"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OS2web/os2web_logging/zipball/15cf2dc6034055c04c63d933b45b98f1c829bd76",
+                "reference": "15cf2dc6034055c04c63d933b45b98f1c829bd76",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/date_popup": "^1.1",
+                "drupal/monolog": "2.x-dev"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.2"
+            ],
+            "description": "Logs access selected content type or webform elements",
+            "support": {
+                "issues": "https://github.com/OS2web/os2web_logging/issues",
+                "source": "https://github.com/OS2web/os2web_logging/tree/master"
+            },
+            "time": "2024-06-07T11:52:01+00:00"
+        },
+        {
             "name": "os2web/os2web_meetings",
             "version": "dev-drupal10",
             "source": {
@@ -10886,6 +10996,37 @@
                 "source": "https://github.com/OS2web/os2web_meetings_acadre/tree/master"
             },
             "time": "2024-06-20T07:34:32+00:00"
+        },
+        {
+            "name": "os2web/os2web_meetings_agman",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OS2web/os2web_meetings_agman.git",
+                "reference": "f1f692942dd149d3f8c52297b1bf8dfa7285004c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_agman/zipball/f1f692942dd149d3f8c52297b1bf8dfa7285004c",
+                "reference": "f1f692942dd149d3f8c52297b1bf8dfa7285004c",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/migrate_plus": "^6.0",
+                "drupal/migrate_tools": "^6.0"
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EUPL-1.2"
+            ],
+            "description": "Import meetings from SBSYS AGMAN ESDH system",
+            "support": {
+                "issues": "https://github.com/OS2web/os2web_meetings_agman/issues",
+                "source": "https://github.com/OS2web/os2web_meetings_agman/tree/master"
+            },
+            "time": "2024-06-20T06:54:27+00:00"
         },
         {
             "name": "os2web/os2web_meetings_edoc",
@@ -16893,9 +17034,11 @@
         "os2web/os2web_borgerdk": 20,
         "os2web/os2web_contact": 20,
         "os2web/os2web_embedded_code": 20,
+        "os2web/os2web_events": 20,
         "os2web/os2web_hearings": 20,
         "os2web/os2web_hjemmeside": 20,
         "os2web/os2web_kle": 20,
+        "os2web/os2web_logging": 20,
         "os2web/os2web_meetings": 20,
         "os2web/os2web_meetings_acadre": 20,
         "os2web/os2web_meetings_edoc": 20,
@@ -16913,5 +17056,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
