@@ -30,6 +30,7 @@
         "drupal/admin_toolbar": "^3.4",
         "drupal/anonymous_subscriptions": "dev-drupal10",
         "drupal/autologout": "^1.4",
+        "drupal/better_exposed_filters": "^6.0.6",
         "drupal/checklistapi": "^2.1",
         "drupal/chosen": "^4.0",
         "drupal/ckeditor_entity_link": "^1.0@dev",
@@ -55,6 +56,7 @@
         "drupal/media_directories": "^2.1@beta",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
+        "drupal/monolog": "dev-2.x",
         "drupal/node_export": "^1.1",
         "drupal/node_revision_delete": "2.0.x-dev@dev",
         "drupal/paragraphs": "^1.17",
@@ -68,6 +70,7 @@
         "drupal/search_api_solr": "^4.3",
         "drupal/search_api_spellcheck": "^4.0",
         "drupal/search_api_synonym": "^2.0",
+        "drupal/seven": "^1.0",
         "drupal/simplesamlphp_auth": "^4.0",
         "drupal/tamper": "^1.0@alpha",
         "drupal/typed_data": "^1.0@beta",
@@ -96,7 +99,7 @@
         "os2web/os2web_rest_api": "dev-master",
         "os2web/os2web_search": "dev-drupal10",
         "os2web/os2web_simplesaml": "dev-master",
-        "os2web/os2web_simplesaml_checklist": "dev-drupal10",
+        "os2web/os2web_simplesaml_checklist": "dev-master",
         "os2web/os2web_spotbox": "dev-drupal10"
     },
     "conflict": {
@@ -112,7 +115,10 @@
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
-            "simplesamlphp/composer-module-installer": true
+            "simplesamlphp/composer-module-installer": true,
+            "drupal/console-extend-plugin": true,
+            "cweagans/composer-patches": true,
+            "zaporylie/composer-drupal-optimizations": true
         },
         "sort-packages": true
     },
