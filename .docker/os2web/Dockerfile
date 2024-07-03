@@ -1,4 +1,4 @@
-FROM drupal:9-php8.1-apache-bullseye
+FROM drupal:10-php8.2-apache-bullseye
 
 # Installing additional dependencies.
 RUN set -eux; \
@@ -14,6 +14,7 @@ RUN set -eux; \
 	docker-php-ext-install soap; \
 	curl -fsSL "https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar" -o /usr/local/bin/drush && chmod +x /usr/local/bin/drush; \
 	# Addind mysql-client
+        apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C; \
 	wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb; \ 
 	echo 4 | dpkg -i mysql-apt-config_0.8.24-1_all.deb; \
 	apt update; \
