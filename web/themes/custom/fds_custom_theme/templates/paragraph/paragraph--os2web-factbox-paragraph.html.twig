@@ -1,0 +1,47 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      {# Begin - heading #}
+      {{ content.field_os2web_factbox_heading }}
+      {# End - heading #}
+
+      {# Begin - subheading #}
+      {{ content.field_os2web_factbox_subheading }}
+      {# End - subheading #}
+
+      {% if paragraph.field_os2web_factbox_fb_heading.value or paragraph.field_os2web_factbox_fb_body.value %}
+        <div class="box box--primary">
+
+          {% if paragraph.field_os2web_factbox_fb_heading.value %}
+            {# Begin - heading #}
+            <div class="box__heading">
+              {{ content.field_os2web_factbox_fb_heading }}
+            </div>
+            {# End - heading #}
+          {% endif %}
+
+          {% if paragraph.field_os2web_factbox_fb_body.value %}
+            {# Begin - body #}
+            <div class="box__body">
+              {{ content.field_os2web_factbox_fb_body }}
+            </div>
+            {# End - body #}
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+      {# Begin - body #}
+      {{ content.field_os2web_factbox_body }}
+      {# End - body #}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

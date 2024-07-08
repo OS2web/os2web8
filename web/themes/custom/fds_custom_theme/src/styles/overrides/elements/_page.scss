@@ -21,6 +21,12 @@
   }
 }
 
+@media print {
+  .eu-cookie-withdraw-wrapper {
+    display: none !important;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

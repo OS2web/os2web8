@@ -8,30 +8,10 @@ styles:
     theme:
       dist/stylesheets/stylesheet.css: {}
 
-fancybox:
-  version: 3.5.7
-  css:
-    theme:
-      //cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css: { type: external, minified: true }
-  js:
-    //cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js: { type: external, minified: true }
-  dependencies:
-    - core/jquery
-
-material.icons:
-  version: 1.x
-  css:
-    theme:
-      'https://fonts.googleapis.com/icon?family=Material+Icons': { type: external, minified: true }
-
-
 javascripts:
   js:
     dist/javascripts/app.js: {}
     dist/javascripts/modernizr.js: {}
-    js/slideshow.js: {}
-    js/accordion.js: {}
-
   dependencies:
     - core/drupal
     - core/jquery

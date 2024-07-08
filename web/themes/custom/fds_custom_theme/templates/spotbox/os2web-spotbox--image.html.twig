@@ -9,10 +9,6 @@
  * Available variables:
  * - content: A list of content items. Use 'content' to print all content, or
  * - attributes: HTML attributes for the container element.
- * - spotbox_type: spotbox type value.
- * - background_color: background color type primary, secondary etc.
- * - spotbox_url: link field URL value.
- * - spotbox_heading: link field title value
  *
  * @see template_preprocess_os2web_spotbox()
  *
@@ -20,33 +16,30 @@
  */
 #}
 {% set classes = [
-  'spotbox',
-  'spotbox--' ~ spotbox_type,
-  background_color ? ('spotbox--background-color-' ~ background_color),
+  'os2web-spotbox',
+  'os2web-spotbox--' ~ spotbox_type,
 ] %}
-{% set spotbox_url_string = spotbox_url.toString() %}
-{% set starts_with_http = spotbox_url_string starts with 'http' %}
-{% set contains_base_url = spotbox_url_string matches ('/' ~ base_url ~ '/') %}
-{% set is_external = starts_with_http and not contains_base_url %}
-{% set is_file = (spotbox_url_string ends with '.pdf' or spotbox_url_string ends with '.docx') %}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if spotbox_url %}
+    <a href="{{ spotbox_url }}" title="{{ spotbox_text }}">
+  {% endif %}
 
-<a href="{{ spotbox_url }}" {{ attributes.addClass(classes) }}
-  {% if is_external or is_file %}target="_blank" rel="noopener noreferrer"{% endif %}>
-  <div class="row">
-    <div class="col-12 col-sm-4 col-md-5">
-      <div class="spotbox__image">
-        {{ content.field_os2web_spotbox_bg_image }}
-      </div>
-    </div>
+    {% if spotbox_image %}
+      <span class="os2web-spotbox__image">{{ spotbox_image }}</span>
+    {% endif %}
 
-    <div class="col-12 col-sm-8 col-md-7">
-      <div class="spotbox__content">
-        <div class="field--name-field-os2web-spotbox-heading">
-          <h3 class="h4">{{ spotbox_heading }}</h3>
-        </div>
+    {% if spotbox_text %}
+      <span class="os2web-spotbox__text">
+        <strong>
+          {{ spotbox_text }}
+        </strong>
+      </span>
+    {% endif %}
 
-        {{ content.field_os2web_spotbox_link_text }}
-      </div>
-    </div>
-  </div>
-</a>
+  {% if spotbox_url %}
+    </a>
+  {% endif %}
+
+</div>

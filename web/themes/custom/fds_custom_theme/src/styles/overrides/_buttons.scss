@@ -14,31 +14,13 @@
 // Styling
 // --------------------------------------------------
 
-.button {
+.button{
+  border-radius: 0;
   border: 0;
 
   &[type=submit],
-  &.form-submit,
-  &.button--primary {
-    min-width: 90px;
-    min-height: auto;
-    padding: 13px 15px;
-
-    border: 0;
-    border-radius: 30px;
-
-    &, &:hover, &:focus {
-      font-weight: $font-weight-bold;
-
-      color: #fff;
-      background-color: $color-orange-004;
-    }
-  }
-}
-
-.has-selfservice-links {
-  .selfservice-links {
-    display: none;
+  &.form-submit{
+    background-color: $color-red-001;
   }
 }
 

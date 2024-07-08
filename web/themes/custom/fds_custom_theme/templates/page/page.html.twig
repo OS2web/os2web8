@@ -1,252 +1,139 @@
-<!-- Begin - ie -->
-<div class="ie-banner">
-  Du kan ikke bruge rebild.dk i Internet Explorer. Du skal bruge en anden web-browser. Internet Explorer udgår i slutningen af 2021.
-</div>
-<!-- End - ie -->
+##<header class="header">
+  <div class="portal-header">
+    <div class="container portal-header-inner">
+      {{ page.header }}
 
-<!-- Begin - megamenu -->
-<div class="custom-megamenu d-print-none">
-  <div class="container-fluid">
+      <button
+        class="button button-tertiary button-menu-open js-menu-open ml-auto d-print-none"
+        aria-haspopup="menu" title="{{ 'Åben mobil menu' | trans }}">
+        Menu
+      </button>
 
-    <!-- Begin - top row -->
-    <div class="custom-megamenu__row custom-megamenu__row--top">
-      <div class="row">
-
-        <!-- Begin - language selector -->
-        <div class="col-12 col-sm-3">
-          <button
-            class="custom-megamenu__button custom-megamenu__button--toggle-megamenu js-toggle-megamenu d-sm-none" aria-label="{{ 'Luk menu' | t }}">
-
-            <span class="material-icons icon">close</span>
-          </button>
-
-          {{ page.megamenu__language_selector }}
-        </div>
-        <!-- End - language selector -->
-
-        <!-- Begin - search -->
-        <div class="col-12 col-sm-6">
-          {{ page.megamenu__search }}
-        </div>
-        <!-- End - search -->
-
-        <!-- Begin - toggle megamenu -->
-        <div class="col-12 col-sm-3">
-          <div class="text-align-right">
-            <button
-              class="custom-megamenu__button custom-megamenu__button--toggle-megamenu js-toggle-megamenu d-none d-sm-inline-block" aria-label="{{ 'Luk menu' | t }}">
-
-              <span class="material-icons icon">close</span>
-            </button>
-          </div>
-        </div>
-        <!-- End - toggle megamenu -->
-
+      <div class="portal-info">
+        {{ page.secondary_menu }}
       </div>
     </div>
-    <!-- End - top row -->
-
-    <!-- Begin - navigation -->
-    <div class="custom-megamenu__row custom-megamenu__row--navigation">
-      {{ page.megamenu__navigation }}
-      {{ page.megamenu__selfservice }}
-    </div>
-    <!-- End - navigation -->
-
   </div>
-</div>
-<!-- End - megamenu -->
 
-<header class="d-print-none">
+  <div class="overlay"></div>
 
-  {% if is_front %}
-    <div class="custom-header custom-header--static">
-      <div class="custom-header__inner">
-        <div class="container">
-
-          <!-- Begin - top -->
-          <div class="flexy-row">
-
-            <!-- Begin - toggle -->
-            <button
-              class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-sm-none" aria-label="{{ 'Åbn menu' | t }}">
-              <span class="icon fa fa-bars"></span>
-            </button>
-            <!-- End - toggle -->
-
-            <div class="flexy-spacer d-sm-none"></div>
-
-            <!-- Begin - logo -->
-            <a href="{{ url('<front>') }}" class="custom-header__logo">
-              {% if custom_logo %}
-                <img src="{{ custom_logo }}" alt="Logo" />
-              {% else %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
-              {% endif %}
-            </a>
-            <!-- End - logo -->
-
-            {% include '@fds_custom_theme/includes/action-buttons.html.twig' %}
-
-            <div class="flexy-spacer"></div>
-
-            <!-- Begin - toggle search -->
-            <div class="searchy d-sm-none">
-              {{ page.header__search }}
-
-              <button
-                class="custom-header__button custom-header__button--toggle-search js-toggle-searchy" aria-label="{{ 'Åbn søgning' | t }}">
-                <span class="icon fa fa-search"></span>
-              </button>
-            </div>
-            <!-- End - toggle search -->
-
-            <!-- Begin - toggle -->
-            <button
-              class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-none d-sm-block" aria-label="{{ 'Åbn menu' | t }}">
-              <span class="icon fa fa-bars"></span>
-            </button>
-            <!-- End - toggle -->
-
-          </div>
-          <!-- End - top -->
-
-          {% if theme_settings.texts.frontpage_banner_heading or theme_settings.texts.frontpage_banner_subheading %}
-            <!-- Begin - meta -->
-            <div class="custom-header__meta">
-              <h1 class="h1">{{ theme_settings.texts.frontpage_banner_heading }}</h1>
-              <h2 class="h4">{{ theme_settings.texts.frontpage_banner_subheading }}</h2>
-            </div>
-            <!-- End - meta -->
-          {% endif %}
-
-          <!-- Begin - below -->
-          {{ page.header__below }}
-          <!-- End - below -->
-
-        </div>
+  <nav class="nav">
+    <button
+      class="button button-secondary button-menu-close js-menu-close"
+      title="Luk mobil menu">
+      <svg class="icon-svg " focusable="false" aria-hidden="true">
+        <use xlink:href="#close"></use>
+      </svg>
+      {{ 'Luk' | trans }}
+    </button>
+    <div class="navbar navbar-primary">
+      <div class="navbar-inner container">
+        {{ page.primary_menu }}
       </div>
     </div>
-  {% endif %}
+    <!-- 3: Main navigation end-->
 
-  {% if not is_front %}
-    <div class="custom-header custom-header--fixed">
-      <div class="custom-header__inner">
-        <div class="container">
-          <div class="flexy-row">
-
-            <!-- Begin - toggle -->
-            <button
-              class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-sm-none" aria-label="{{ 'Åbn menu' | t }}">
-              <span class="icon fa fa-bars"></span>
-            </button>
-            <!-- End - toggle -->
-
-            <div class="flexy-spacer d-sm-none"></div>
-
-            <!-- Begin - logo -->
-            <a href="{{ url('<front>') }}" class="custom-header__logo">
-              {% if custom_logo %}
-                <img src="{{ custom_logo }}" alt="Logo" />
-              {% else %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo.svg" alt="Logo" />
-              {% endif %}
-            </a>
-            <!-- End - logo -->
-
-            <div class="flexy-spacer"></div>
-
-            <!-- Begin - toggle search -->
-            <div class="searchy">
-              {{ page.header__search }}
-
-              <button
-                class="custom-header__button custom-header__button--toggle-search js-toggle-searchy" aria-label="{{ 'Åbn søgning' | t }}">
-                <span class="icon fa fa-search"></span>
-              </button>
-            </div>
-            <!-- End - toggle search -->
-
-            <!-- Begin - toggle -->
-            <button
-              class="custom-header__button custom-header__button--toggle-megamenu js-toggle-megamenu d-none d-sm-block" aria-label="{{ 'Åbn menu' | t }}">
-              <span class="icon fa fa-bars"></span>
-            </button>
-            <!-- End - toggle -->
-
-          </div>
-        </div>
-      </div>
+    <div class="portal-info-mobile">
+      {{ page.mobile_menu }}
     </div>
-  {% endif %}
+
+  </nav>
 </header>
+
+{% if not is_front %}
+  <div class="breadcrumbs-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          {{ page.breadcrumb }}
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="functional-icons-list">
+            <div class="social-icon-list">
+              <span>
+                {{ 'Del: ' | trans }} &nbsp;
+              </span>
+
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}"
+                target="_blank"
+                class="social-icon social-icon--facebook">
+                <span class="fa fa-facebook-f"></span>
+              </a>
+
+              <a
+                href="https://twitter.com/intent/tweet?text={{ node.label }}: {{ url('<current>') }}"
+                target="_blank"
+                class="social-icon social-icon--twitter">
+                <span class="fa fa-twitter"></span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/shareArticle?mini=true&url={{ url('<current>') }}&title={{ node.label }}"
+                target="_blank"
+                class="social-icon social-icon--linkedin">
+                <span class="fa fa-linkedin"></span>
+              </a>
+            </div>
+            <div class="print">
+              <a href="javascript:void(0);" onclick="Drupal.theme.fdsPrintPage();"
+                 >{{ 'Print' | trans }} <svg class="icon-svg"  focusable="false" aria-hidden="true" ><use xlink:href="{{ base_path ~ directory }}/dist/images/symbols.min.svg#printer"></use></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
 
 {{ page.featured_top }}
 
-<div class="page-container" id="font-resize-wrapper">
-  <div class="container" id="main-content">
-    {{ page.highlighted }}
+<div class="container page-container" id="main-content">
+  <div class="row">
 
-    {% if not is_front %}
-      <div class="row d-print-none">
-        <div class="col-12 col-md-3 d-none d-md-block">
-          <a href="{{ url('<front>') }}" class="return-to-home-link">
-            {{ 'Hjem' | trans }}
-          </a>
-        </div>
-        <div class="col-12 col-md-9 col--align-center">
-          <div class="flexy-row">
-            {{ page.breadcrumb }}
-
-            <div class="flexy-spacer"></div>
-
-            {% include '@fds_custom_theme/includes/action-buttons.html.twig' %}
-          </div>
-        </div>
-      </div>
+    {#  Wayaround for determining visibility for regions with lazybuilder.
+    @See https://www.drupal.org/project/drupal/issues/953034 for more info. #}
+    {% set has_sidebar_first = page.sidebar_first|render|striptags|trim is not empty %}
+    {% set has_sidebar_second = page.sidebar_second|render|striptags|trim is not empty %}
+    {% if has_sidebar_first %}
+      {% set sidebar_first_classes = [
+        has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3 content--sidebar',
+        has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-md-4 content--sidebar',
+      ] %}
+      <aside {{ attributes.addClass(sidebar_first_classes) }}>
+        {{ page.sidebar_first }}
+      </aside>
     {% endif %}
-    <div class="row">
 
-      <aside class="col-12 col-md-3">
-        <div class="layout-sidebar-left">
-          {{ page.sidebar_first }}
-        </div>
+    {% set content_classes = [
+      has_sidebar_first and has_sidebar_second ? 'col-12 col-md-6 content--content',
+      has_sidebar_first and has_sidebar_second is empty ? 'col-12 col-md-8 content--content',
+      has_sidebar_second and has_sidebar_first is empty ? 'col-12 col-md-8 content--content',
+      has_sidebar_first is empty and has_sidebar_second is empty ? 'col-12 col-md-12 content--content'
+    ] %}
+    <main {{ content_attributes.addClass(content_classes) }}>
+      {{ page.content }}
+    </main>
+
+    {% if has_sidebar_second %}
+      {% set sidebar_second_classes = [
+        has_sidebar_first and has_sidebar_second ? 'col-12 col-md-3 content--sidebar',
+        has_sidebar_first is empty and has_sidebar_second ? 'col-12 col-md-4 content--sidebar',
+      ] %}
+      <aside {{ attributes.addClass(sidebar_second_classes) }}>
+        {{ page.sidebar_second }}
       </aside>
+    {% endif %}
 
-      <main {{ content_attributes.addClass('col-12 col-md-6') }}>
-        {{ page.content }}
-      </main>
-
-      <aside class="col-12 col-md-3 d-print-none">
-        <div class="layout-sidebar-right">
-          <div class="box">
-            <div class="box__body">
-              {{ page.sidebar_second }}
-            </div>
-          </div>
-        </div>
-      </aside>
-    </div>
   </div>
 
-  {{ page.featured_bottom_first }}
 </div>
+
+{{ page.featured_bottom_first }}
 
 {% include '@fds_custom_theme/includes/footer.html.twig' %}
 
 <div class="d-none">
-  {{ page.embedded_code }}
+    {{ page.embedded_code }}
 </div>
-
-<script>
-
-  // Add internet explorer class to <body>
-  (function() {
-    var ua = window.navigator.userAgent;
-    var isIE = /MSIE|Trident/.test(ua);
-
-    if(isIE) {
-      document.documentElement.classList.add('ie');
-    }
-  })();
-</script>

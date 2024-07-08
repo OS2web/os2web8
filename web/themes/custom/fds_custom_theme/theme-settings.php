@@ -4,22 +4,12 @@ function fds_custom_theme_form_system_theme_settings_alter(
   &$form,
   Drupal\Core\Form\FormStateInterface $form_state
 ) {
+  $form['social']['#access'] = FALSE;
 
-  // Texts.
-  $form['texts'] = [
-    '#type' => 'details',
-    '#title' => t('Texts'),
-    '#group' => 'fds_base_theme',
-  ];
-  $form['texts']['frontpage_banner_heading'] = [
-    '#type' => 'textfield',
-    '#title' => t('Banner overskrift.'),
-    '#prefix' => '<h2>' . t('Frontpage') . '</h2>',
-    '#default_value' => theme_get_setting('frontpage_banner_heading'),
-  ];
-  $form['texts']['frontpage_banner_subheading'] = [
-    '#type' => 'textfield',
-    '#title' => t('Banner underoverskrift.'),
-    '#default_value' => theme_get_setting('frontpage_banner_subheading'),
+  // Show footer logo.
+  $form['logo']['show_footer_logo'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show default footer logo.'),
+    '#default_value' => theme_get_setting('show_footer_logo'),
   ];
 }

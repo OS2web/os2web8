@@ -21,41 +21,42 @@
 // --------------------------------------------------
 
 .box {
-  margin-bottom: $grid-gutter-width / 2;
+  background-color: $color-gray-pale;
+}
+.box__heading {}
+.box__body {}
 
-  background-color: $color-orange-005;
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
 
-  table {
-    width: 100%;
-  }
+.box {
 
-  a {
-    position: initial;
+  &.background-color--primary,
+  &.background-color--secondary,
+  &.background-color--tertiary {
 
-    padding-right: initial;
+    .box__heading {
 
-    &:after {
-      display: none;
+      h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+      }
+    }
+
+    .box__body {
+
+      &, p, .body-text {
+        color: #fff;
+      }
+
+      a {
+
+        &, &:hover, &:focus, &:visited {
+          color: #fff;
+        }
+      }
     }
   }
-
-  // Issue fix: on the right sidebar we have a box inside a box.
-  .box {
-    margin-left: -30px;
-    margin-right: -30px;
-  }
-}
-.box__heading {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.box__body {
-  padding: 30px;
-}
-
-// Variants.
-.box--primary {
-  background-color: $color-green-002;
 }
 
 // --------------------------------------------------

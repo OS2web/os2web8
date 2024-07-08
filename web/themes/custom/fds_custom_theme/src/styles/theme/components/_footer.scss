@@ -10,6 +10,11 @@
 // Variables
 // --------------------------------------------------
 
+// Color for specific regions should be unique
+// That will allow theme adjust this colors with color module.
+$color-footer-text: #999998;
+$color-footer-link: #fffffe;
+
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
@@ -23,60 +28,27 @@
 footer {
 
   .footer {
-    margin-top: 0;
-    padding-top: calc(#{map-get($spacers, 905)} - 1px);
-    padding-bottom: calc(#{map-get($spacers, 905)} - 1px);
+    padding-top: calc(#{map-get($spacers, 9)} - 1px);
+    padding-bottom: calc(#{map-get($spacers, 9)} - 1px);
 
     border-top: 0;
-    background-color: $color-footer-background;
 
-    h1, h2, h3, h4, h5, h6,
-    a, a:hover, a:visited, a:focus, a:active,
-    .is-active > a,
-    .is-active > a:hover,
-    .is-active > a:focus,
-    .is-active > a:visited,
-    .is-active > a:active,
     &, p {
-      color: #fff;
+      color: $color-footer-text;
     }
 
     a {
-      font-weight: bold;
       text-decoration: none;
 
-      &:focus {
-        outline-color: $color-orange-004;
-      }
-    }
-
-    .social-icon {
-      font-size: 2rem;
+      color: $color-footer-link;
     }
   }
 
-  section {
-    max-width: 450px;
-  }
+  p {
 
-  .menu {
-    margin: 0;
-
-    li {
-      padding-left: 0;
-
-      &:before {
-        display: none;
-      }
+    + p {
+      margin-top: 15px;
     }
-
-    .menu-item {
-      padding-top: .8em;
-    }
-  }
-
-  .social-icon-list {
-    margin-top: 35px;
   }
 }
 
@@ -92,20 +64,7 @@ footer {
 @include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {
-
-  footer {
-
-    .footer {
-
-      .menu {
-        padding-top: 10px;
-
-        border-top: 1px solid rgba(255, 255, 255, .5);
-      }
-    }
-  }
-}
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {}
@@ -114,32 +73,7 @@ footer {
 @include media-breakpoint-only(sm, $grid-breakpoints) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
-
-  .footer-col {
-    padding-top: 10px;
-    padding-bottom: 15px;
-
-    + .footer-col {
-      border-left: 1px solid #fff;
-    }
-
-    &:nth-child(1) {
-
-      section {
-        padding-left: 70px;
-      }
-    }
-
-    &:nth-child(2) {
-
-      section {
-        padding-top: 60px;
-        padding-left: 70px;
-      }
-    }
-  }
-}
+@include media-breakpoint-up(md) {}
 
 // Desktop - only
 @include media-breakpoint-only(md, $grid-breakpoints) {}
@@ -155,7 +89,6 @@ footer {
 
 // Print
 @media print {
-
   footer .footer {
     border: none;
   }

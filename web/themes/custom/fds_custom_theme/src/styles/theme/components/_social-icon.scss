@@ -1,5 +1,5 @@
 // |--------------------------------------------------------------------------
-// | Social icon
+// | Social icon.
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
@@ -14,7 +14,7 @@
 // Mixins
 // --------------------------------------------------
 
-@mixin footer-mixin() {}
+@mixin social-icon-mixin() {}
 
 // --------------------------------------------------
 // Styling
@@ -23,49 +23,71 @@
 .social-icon-list {
   display: flex;
 
-  > * {
-    margin-right: 12px;
-  }
+  align-items: center;
 }
-
 .social-icon {
   display: flex;
 
   justify-content: center;
   align-items: center;
 
-  height: 33px;
-  width: 33px;
+  height: 30px;
+  width: 30px;
 
-  font-size: 1.7rem;
+  font-size: 14px;
 
-  background-color: #fff;
   border-radius: 100%;
 
   &, &:hover {
     text-decoration: none;
   }
 
-  .icon {
+  .fa {
     display: inline-block;
 
-    height: auto;
-    width: auto;
-
-    color: $color-footer-background;
+    color: #fff;
   }
-}
-.social-icon--image {
-  background-color: initial;
 
-  img {
-    width: 100%;
+  + .social-icon {
+    margin-left: 5px;
   }
 }
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.social-icon--facebook {
+  background-color: #3b5998;
+}
+
+.social-icon--twitter {
+  background-color: #1da1f2;
+}
+
+.social-icon--google-plus {
+  background-color: #666;
+}
+
+.social-icon--linkedin {
+  background-color: #3077B0;
+}
+
+.social-icon--pinterest {
+  background-color: #666;
+}
+
+.social-icon--instagram {
+  background-color: #666;
+}
+
+.social-icon--youtube {
+  background-color: #666;
+}
+
+.social-icon--vimeo {
+  background-color: #666;
+}
 
 // --------------------------------------------------
 // Responsive

@@ -1,17 +1,14 @@
-// |--------------------------------------------------------------------------
-// | Misc
-// |--------------------------------------------------------------------------
-// |
-// | This file contains styles for the following:
-// |
-
-// --------------------------------------------------
-// Variables
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Styling
-// --------------------------------------------------
+body {
+  font-size: $body-text;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
 
 // Increased specificity to win over base theme.
 body .container-fluid {
@@ -19,12 +16,7 @@ body .container-fluid {
   padding-right: $grid-gutter-width;
 }
 
-.skip-link {
-  color: $color-text;
-}
-
 // Accessibility overrides.
-button,
 body a {
 
   &:focus {
@@ -32,193 +24,37 @@ body a {
   }
 }
 
-//.paragraph a,
-//.region-content a,
-//.breadcrumb a {
-//
-//  &:focus {
-//    outline-width: 2px;
-//  }
-//}
+a.element-wrapper-link {
+  max-width: unset;
+}
 
-body {
+.fake-link {
+  color: $color-primary;
+}
 
-  ol {
+.accordion-button {
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+}
 
-    > li {
-      list-style-type: decimal;
-      padding-left: 0;
+.paragraph a,
+.region-content a,
+.breadcrumb a {
 
-      &:before {
-        display: none;
-      }
-    }
+  &:focus {
+    outline-width: 2px;
+    outline-offset: 0;
+    color: $color-white;
+    background-color: $color-primary;
   }
-}
-
-.fields-inline {
-
-  > .field {
-    display: inline-block;
-  }
-}
-
-svg.ext {
-  display: none;
-}
-
-body .page-container {
-  padding-top: 1rem;
-}
-
-.path-frontpage {
-
-  .layout-sidebar-left,
-  .layout-sidebar-right {
-    display: none;
-  }
-}
-
-.layout-sidebar-right {
-  padding-top: $grid-gutter-width;
-
-  .os2web_contact {
-
-    .field {
-
-      + .field {
-        margin-top: 2.8rem; // Same distance as between <p> <p>
-      }
-    }
-  }
-
-  > .box {
-
-    > .box__body {
-      padding-top: 0;
-      padding-bottom: 0;
-
-      > .region {
-
-        > * {
-
-          &:first-child {
-            padding-top: 30px;
-          }
-          &:last-child {
-            padding-bottom: 30px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.button--primary {
-
-  &, &:hover, &:focus {
-    font-weight: $font-weight-bold;
-
-    color: #fff;
-    background-color: $color-orange-004;
-  }
-}
-
-.button--rounded {
-  padding-left: 30px;
-  padding-right: 30px;
-
-  border-radius: 30px;
 }
 
 .background-color--primary {
-  background-color: $color-green-002;
+  background-color: $color-primary !important;
 }
 .background-color--secondary {
-  background-color: $color-orange-005;
+  background-color: $color-green-002 !important;
 }
 .background-color--tertiary {
-
-
-  .box__heading {
-    background-color: rgb(122,159,189);
-    color: black;
-
-    h3 {
-      color: black;
-    }
-  }
-
-  .box__body {
-    background-color: rgb(181,207,228);
-  }
+  background-color: $color-gray-002 !important;
 }
-
-.background-color--transparent {
-  .box__heading {
-    background-color: rgb(217,217,217);
-    color: black;
-
-    h3 {
-      color: black;
-    }
-  }
-  .box__body {
-    background-color: rgb(244,244,244);
-  }
-}
-
-// --------------------------------------------------
-// Responsive
-// --------------------------------------------------
-
-// Mobile - and up
-@include media-breakpoint-up(xs) {}
-
-// Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
-
-// Tablet - and up
-@include media-breakpoint-up(sm) {}
-
-// Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
-
-// Desktop - and up
-@include media-breakpoint-up(md) {
-
-  .layout-sidebar-right {
-    padding-top: 0;
-
-    .box {
-      min-height: 238px; // Same height as primary image.
-    }
-  }
-}
-
-// Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {}
-
-// Large desktop - and up
-@include media-breakpoint-up(lg) {}
-
-// Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {}
-
-// Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
-
-// Print
-@media print {
-
-  body .page-container {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-// Touch
-.touchevents {}
-
-// No touch
-.no-touchevents {}

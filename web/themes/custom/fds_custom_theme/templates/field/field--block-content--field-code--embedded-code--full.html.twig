@@ -1,7 +1,5 @@
 {% for item in items %}
-
   {% autoescape false %}
-  {{ item.content['#context']['value'] }}
-{% endautoescape %}
-  
-    {% endfor %}
+    {{ item.content['#context']['value'] }}
+  {% endautoescape %}
+{% endfor %}

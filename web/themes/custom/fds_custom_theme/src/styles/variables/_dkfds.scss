@@ -11,28 +11,28 @@ $global-font-size:  100% !default;
 // value from Bourbon.
 $em-base:           62.5%; //-> 10px for standard browsers, now 'Font size' from the browser setting works correctly if the uses specifies a bigger standard font-size.
 
-$base-font-size:    1.6rem !default;
+$base-font-size:    1.7rem;
 $base-line-height:  2.4rem !default;
 
 // Paths
 // Relative font and image file paths
 $font-path:                     '../fonts/IBMPlexSans/' !default;
-$image-path:                    '../images' !default;
-$icons-folder-path:             "../images/svg-icons" !default;
+$image-path:                    '../images';
+$icons-folder-path:             "../images/svg-icons";
 // Typography
 // Typography font-size and line-height
 
-$h1-font-size:                3.6rem !default;
-$h1-line-height:              4.2rem !default;
+$h1-font-size:                4.0rem !default;
+$h1-line-height:              4.8rem !default;
 
-$h2-font-size:                2.4rem !default;
-$h2-line-height:              3.0rem !default;
+$h2-font-size:                3.0rem !default;
+$h2-line-height:              4.0rem !default;
 
-$h3-font-size:                1.8rem !default;
-$h3-line-height:              2.4rem !default;
+$h3-font-size:                2.4rem !default;
+$h3-line-height:              3.2rem !default;
 
 $h4-font-size:                2.0rem !default;
-$h4-line-height:              2.4rem;
+$h4-line-height:              3.2rem !default;
 
 $h5-font-size:                1.6rem !default;
 $h5-line-height:              2.4rem !default;
@@ -46,14 +46,14 @@ $display-1-heading-line-height: 5.6rem !default;
 $display-2-heading-size:        3.2rem !default;
 $display-2-heading-line-height: 4.0rem !default;
 
-$body-text:                   1.6rem;
-$body-text-line-height:       2.2rem;
+$body-text:                   1.6rem !default;
+$body-text-line-height:       2.4rem !default;
 
-$form-label:                  $base-font-size;
+$form-label:                  1.6rem !default;
 $form-label-line-height:      2.4rem !default;
 
-$small-text:                  1.4rem;
-$small-text-line-height:      2.0rem;
+$small-text:                  1.4rem !default;
+$small-text-line-height:      2.4rem !default;
 
 $lead-font-size:              2.0rem !default;
 $lead-line-height:            3.2rem !default;
@@ -115,7 +115,7 @@ $spacing-xxx-large:             5.6rem !default;
 ////////////////////////////////////////////////////////////////////////////
 //color contrasting
 $color-base-001:              #ffffff !default;
-$color-base-002:              #002412;
+$color-base-002:              #1a1a1a !default;
 
 //Gray
 $color-gray-001:              $color-base-002 !default;
@@ -127,8 +127,8 @@ $color-gray-055:              #DCDCDC !default;
 $color-gray-006:              #F5F5F5 !default;
 
 //Greeen
-$color-green-001:             #006632;
-$color-green-002:             #C0D6CB;
+$color-green-001:             #568331 !default;
+$color-green-002:             #3C5C22 !default;
 $color-green-021:             #233614 !default;
 $color-green-003:             #358000 !default;
 $color-green-004:             #eeffe2  !default;
@@ -138,15 +138,15 @@ $color-green-005:             #358000 !default;
 //$color-orange-001:          #b4630c !default;
 //$color-orange-002:          #d8770e !default;
 //$color-orange-003:          #f08b1e !default;
-$color-orange-004:            #D9620D;
-$color-orange-005:            #EAE3C0;
+$color-orange-004:            #febb30 !default;
+$color-orange-005:            #ffeecc !default;
 
 //red
 $color-red-001:               #b63433 !default;
 $color-red-002:               #ffe0e0 !default;
 
 //blue
-$color-blue-001:              #0A487E;
+$color-blue-001:              #004D99 !default;
 $color-blue-002:              #004080 !default;
 $color-blue-003:              #000040 !default;
 $color-blue-004:              #e2f2fb !default;
@@ -209,24 +209,24 @@ $color-gray-pale:             #e4e4e4;
 $color-focus:                 $color-gray-medium-dark !default;
 
 // Text color
-$color-text:                  #231F20;
+$color-text:                  $color-black !default;
 $color-text-secondary:        $color-gray-003 !default;
 $color-text-bright:           $color-gray-006 !default;
 
 //Links color
-$color-link:                  $color-orange-004;
-$color-link-hover:            $color-link;
-$color-link-focus:            $color-link;
-$color-link-visited:          $color-link;
+$color-link:                  $color-blue-001 !default;
+$color-link-hover:            $color-blue-003 !default;
+$color-link-focus:            $color-blue-001 !default;
+$color-link-visited:          $color-purple-001 !default;
 
 // Default neutral color-scheme (the neutral one that is neither virk.dk nor borger.dk)
-$color-neutral:               #EAE3C0;
+$color-neutral:               $color-gray-002 !default;
 $color-neutral-darker:        $color-base-002 !default;
 $color-neutral-darkest:       $color-base-002 !default;
 $color-neutral-lightest:      $color-gray-004 !default; //TODO, need base color for lightest
 
 // Functional theme colors
-$color-primary:               $color-green-001;
+$color-primary:               $color-gray-003 !default;
 $color-primary-medium:        $color-gray-002 !default;
 $color-primary-dark:          $color-gray-001 !default;
 
@@ -292,7 +292,7 @@ $color-data-violet-low-opacity:       $color-data-violet-004 !default;
 
 // Header, footer & navigation colors
 $color-header-background:     $color-gray-006 !default;
-$color-footer-background:     $color-primary;
+$color-footer-background:     #474748;
 $color-topmenu-background:    $color-gray-002!default;
 $color-subnav-background:     $color-gray-002!default;
 $color-page:                  $color-base-001 !default;
@@ -332,14 +332,14 @@ $color-shadow:                rgba(#000, 0.3) !default;
 $color-transparent:           rgba(#000, 0) !default;
 
 //input
-$input-border-radius: 20px;
-$input-border-width: 0;
+$input-border-radius: 4px;
+$input-border-width: 1px;
 $input-top-bottom-padding: calc(8px - #{$input-border-width}); //7px
-$input-left-right-padding: calc(24px - #{$input-border-width}); //15px
+$input-left-right-padding: calc(16px - #{$input-border-width}); //15px
 $input-font-size: $body-text;
 $input-line-height: $body-text-line-height;
 $input-standard-height: 4.0rem;
-$input-top-margin: 5px;
+$input-top-margin: map-get($spacers, 3);
 
 $input-border-width-feedback: 2px;
 $input-top-bottom-padding-feedback: calc(8px - #{$input-border-width-feedback});
@@ -382,8 +382,8 @@ $background-modal: rgba(0, 0, 0, 0.75);
 $grid-xs:                     0 !default;
 $grid-sm:                     576px !default;
 $grid-md:                     768px !default;
-$grid-lg:                     992px !default;
-$grid-xl:                     1300px;
+$grid-lg:                     960px;
+$grid-xl:                     960px;
 
 // Grid breakpoints..
 $grid-breakpoints: (
@@ -399,7 +399,7 @@ $container-max-widths: (
   sm: 100%,
   md: 100%,
   lg: 100%,
-  xl: 1320px
+  xl: 960px
 ) !default;
 
 $grid-columns:                  12 !default;

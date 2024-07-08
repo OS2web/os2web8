@@ -1,0 +1,180 @@
+// |--------------------------------------------------------------------------
+// | Header
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .header
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin header-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+header {}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  .header {
+
+    .logo {
+      height: auto;
+      width: auto;
+      max-width: none;
+    }
+
+    .navbar-inner {
+      justify-content: center;
+    }
+    .portal-header {
+      border-bottom: 0;
+
+      .container {
+        border-bottom: 1px solid $color-border;
+      }
+
+      .portal-header-inner {
+        padding: 40px 0;
+
+        align-items: flex-start;
+      }
+    }
+    .navbar-primary {
+      border-bottom: 0;
+    }
+    .nav-primary > li > a {
+      padding-top: calc(#{map-get($spacers, 7)} - 1px);
+      padding-bottom: calc(#{map-get($spacers, 7)} - 1px);
+
+      font-size: $large-font-size;
+
+      &:hover {
+        text-decoration: underline;
+
+        color: $color-link;
+      }
+    }
+    .nav-primary > li.current > a {
+      color: $color-link;
+    }
+
+    .nav-primary > li > a,
+    .nav-primary > li > button,
+    .nav-primary > li .button-overflow-menu {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .nav-primary .nav-link span {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .inline-list {
+
+      a {
+        text-decoration: none;
+        font-size: $small-font-size;
+
+        color: $color-text;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .block {
+      display: inline-block;
+
+      h1, h2, h3, h4, h5, h6 {
+        display: none;
+      }
+
+      + .block {
+        padding-left: 15px;
+        margin-left: 15px;
+
+        border-left: 1px solid $color-border;
+      }
+    }
+
+    .inline-search__form {
+
+      input[type="text"],
+      input[type="search"] {
+        padding: 5px 10px;
+
+        min-width: 250px;
+
+        font-size: $small-font-size;
+        border: 1px solid $color-border;
+      }
+
+      .form-actions {
+        display: none;
+      }
+    }
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {
+  .header {
+    .navbar {
+      display: none;
+    }
+
+    .portal-header .container {
+      border: 0;
+    }
+  }
+}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
