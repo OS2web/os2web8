@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c72e411b9fef526e077ac434c50b59b",
+    "content-hash": "7dcdb91714987fb27e91d89c5ad91ee9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4993,6 +4993,63 @@
             }
         },
         {
+            "name": "drupal/flood_control",
+            "version": "2.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flood_control.git",
+                "reference": "2.3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flood_control-2.3.4.zip",
+                "reference": "2.3.4",
+                "shasum": "dcb5d8dd52501489caff222b3d7f66e80bf6b044"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.3.4",
+                    "datestamp": "1713292696",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "batigolix",
+                    "homepage": "https://www.drupal.org/user/22175"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "fabianderijk",
+                    "homepage": "https://www.drupal.org/user/278745"
+                }
+            ],
+            "description": "Provides administration possibilities for hidden flood control variables",
+            "homepage": "https://www.drupal.org/project/flood_control",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flood_control"
+            }
+        },
+        {
             "name": "drupal/form_options_attributes",
             "version": "2.0.2",
             "source": {
@@ -5481,6 +5538,56 @@
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
                 "source": "https://git.drupalcode.org/project/inline_entity_form"
+            }
+        },
+        {
+            "name": "drupal/install_profile_generator",
+            "version": "4.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/install_profile_generator.git",
+                "reference": "4.0.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/install_profile_generator-4.0.0-alpha3.zip",
+                "reference": "4.0.0-alpha3",
+                "shasum": "31a491f8498ccc3b43ce134b73d1d32bb82910ca"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drush/drush": "^11 || ^12",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0-alpha3",
+                    "datestamp": "1690713439",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alexpott",
+                    "homepage": "https://www.drupal.org/user/157725"
+                },
+                {
+                    "name": "Eli-T",
+                    "homepage": "https://www.drupal.org/user/516878"
+                }
+            ],
+            "description": "Provides a drush command to create an install profile from a site's current configuration",
+            "homepage": "https://www.drupal.org/project/install_profile_generator",
+            "support": {
+                "source": "https://git.drupalcode.org/project/install_profile_generator"
             }
         },
         {
@@ -18482,6 +18589,7 @@
         "drupal/feeds_ex": 10,
         "drupal/feeds_tamper": 20,
         "drupal/inline_entity_form": 5,
+        "drupal/install_profile_generator": 15,
         "drupal/media_directories": 10,
         "drupal/menu_breadcrumb": 15,
         "drupal/monolog": 20,
