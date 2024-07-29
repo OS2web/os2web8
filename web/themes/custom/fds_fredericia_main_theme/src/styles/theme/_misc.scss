@@ -611,13 +611,7 @@ body {
     max-width: unset;
   }
 }
-a:not([class]) {
-  text-decoration: none;
-  font-weight: 400;
-  &:hover {
-    text-decoration: underline;
-  }
- }
+
 
 .block-system-menu-blockmain.block-system {
   background-color: white;
