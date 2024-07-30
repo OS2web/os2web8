@@ -23691,6 +23691,10 @@ body a:not(.button) {
       flex-wrap: wrap;
 }
 
+.field--name-field-slideshow-text p, .field--name-field-slideshow-text h1, .field--name-field-slideshow-text h2, .field--name-field-slideshow-text h3, .field--name-field-slideshow-text h4, .field--name-field-slideshow-text h5, .field--name-field-slideshow-text h6 {
+  color: #00335b;
+}
+
 @media (min-width: 992px) {
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-from-date,
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-to-date {
