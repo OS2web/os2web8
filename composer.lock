@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26e92cd4df85eac746689f7a9b85bb8a",
+    "content-hash": "42f427153f04f09ebbf4fb0edd555d5d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1470,6 +1470,32 @@
                 "source": "https://github.com/dompdf/php-svg-lib/tree/1.0.0"
             },
             "time": "2024-04-29T13:26:35+00:00"
+        },
+        {
+            "name": "drupal/access_latest",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bellcom/access_latest.git",
+                "reference": "dbf9b8d85a4e9aa7c2bd18ccd79623a1b72e2185"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bellcom/access_latest/zipball/dbf9b8d85a4e9aa7c2bd18ccd79623a1b72e2185",
+                "reference": "dbf9b8d85a4e9aa7c2bd18ccd79623a1b72e2185",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "This module provides the editor with a link they can share to give the reviewer access to the Latest revision page.",
+            "support": {
+                "source": "https://github.com/bellcom/access_latest/tree/main",
+                "issues": "https://github.com/bellcom/access_latest/issues"
+            },
+            "time": "2024-08-05T10:57:04+00:00"
         },
         {
             "name": "drupal/action",

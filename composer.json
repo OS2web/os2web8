@@ -21,11 +21,16 @@
 	{
             "type": "vcs",
             "url": "https://github.com/bellcom/fds_base_theme"
-        }
+        },
+	{	
+		"type": "vcs",
+		"url": "https://github.com/bellcom/access_latest"	
+	}
     ],
     "require": {
         "bellcom/fds_base_theme": "dev-drupal10",
         "composer/installers": "^2.0",
+        "drupal/access_latest": "dev-main",
         "drupal/admin_audit_trail": "^1.0",
         "drupal/admin_toolbar": "^3.5",
         "drupal/anonymous_subscriptions": "dev-drupal10",
