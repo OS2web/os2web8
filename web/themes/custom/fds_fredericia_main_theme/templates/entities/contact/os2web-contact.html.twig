@@ -260,9 +260,11 @@
         {% endif %}
 
         {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value %}
-          <button data-micromodal-trigger="{{ modalId }}" class="contact-modal-btn button button-primary">
-            {{ content.field_os2web_contact_modal_butt }}
-          </button>
+          <div class="contact-modal-btn-wrapper">
+            <button data-micromodal-trigger="{{ modalId }}" class="contact-modal-btn button button-primary">
+              {{ content.field_os2web_contact_modal_butt }}
+            </button>
+          </div>
         {% endif %}
 
       </div>

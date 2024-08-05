@@ -611,13 +611,7 @@ body {
     max-width: unset;
   }
 }
-a:not([class]) {
-  text-decoration: none;
-  font-weight: 400;
-  &:hover {
-    text-decoration: underline;
-  }
- }
+
 
 .block-system-menu-blockmain.block-system {
   background-color: white;
@@ -690,6 +684,12 @@ a:not([class]) {
       gap: 50px;
       flex-wrap: wrap;
     }
+  }
+}
+
+.field--name-field-slideshow-text {
+  p, h1, h2, h3, h4, h5, h6 {
+    color: #00335b;
   }
 }
 
