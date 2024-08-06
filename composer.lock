@@ -6936,20 +6936,20 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/metatag.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "81aac1f07b0c3119a951dfadea17d876855c4033"
+                "url": "https://ftp.drupal.org/files/projects/metatag-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "748013c50a0ed5e10359413bb3481392a0bf0d3f"
             },
             "require": {
-                "drupal/core": "^9.4 || ^10",
+                "drupal/core": "^9.4 || ^10 || ^11",
                 "drupal/token": "^1.0",
                 "php": ">=8.0"
             },
@@ -6965,8 +6965,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1722843615",
+                    "version": "2.0.2",
+                    "datestamp": "1722869772",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -19148,6 +19148,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "bellcom/fds_base_theme": 20,
+        "drupal/access_latest": 20,
         "drupal/anonymous_subscriptions": 20,
         "drupal/ckeditor_entity_link": 20,
         "drupal/ckeditor_iframe": 15,
@@ -19198,5 +19199,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
