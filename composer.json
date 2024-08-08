@@ -53,7 +53,7 @@
         "drupal/csv_importer": "^1.16",
         "drupal/drush_language": "^1.0@RC",
         "drupal/editor_advanced_link": "^2.2",
-        "drupal/embed": "^1.8",
+        "drupal/embed": "1.7",
         "drupal/entity_clone": "^2.1@beta",
         "drupal/entity_reference_revisions": "^1.12",
         "drupal/facets": "^2.0",
