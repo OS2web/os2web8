@@ -358,7 +358,7 @@ function fds_redwhite_theme_preprocess_field(&$variables) {
  */
 function fds_redwhite_theme_preprocess_file_link(array &$variables) {
   $file = $variables['file'];
-  $result = \Drupal::entityQuery('media')
+  $result = \Drupal::entityQuery('media')->accessCheck(false)
     ->condition('bundle', 'document')
     ->condition('field_media_file.target_id', $file->id())
     ->execute();
