@@ -30,6 +30,7 @@
     "require": {
         "bellcom/fds_base_theme": "dev-drupal10",
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/access_latest": "dev-main",
         "drupal/admin_audit_trail": "^1.0",
         "drupal/admin_toolbar": "^3.5",
@@ -163,6 +164,11 @@
         "sort-packages": true
     },
     "extra": {
+	"patches": {
+      		"drupal/core": {
+			"fix views pager offset": "https://www.drupal.org/files/issues/2024-03-06/mr-4707-vs-10.2.x.patch"
+		}
+    	},
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
