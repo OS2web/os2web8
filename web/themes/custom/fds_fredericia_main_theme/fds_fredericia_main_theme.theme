@@ -631,7 +631,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
             $variables['field_document_reference_items'] = [];
             foreach ($referenced_entities as $referenced_entity) {
                 $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
-                $rendered_item = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+                $rendered_item = $view_builder->view($referenced_entity, 'paragraph_display'); // Adjust view mode as necessary
                 if (!empty($rendered_item)) {
                     $variables['field_document_reference_items'][] = $rendered_item;
                 }
