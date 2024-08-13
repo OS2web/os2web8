@@ -13026,12 +13026,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "6abf6c07003be6f32c772c754593a84f8b20ed1e"
+                "reference": "25edc5a232beb8c8cfb3de2a4d85a6c5220315b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/6abf6c07003be6f32c772c754593a84f8b20ed1e",
-                "reference": "6abf6c07003be6f32c772c754593a84f8b20ed1e",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/25edc5a232beb8c8cfb3de2a4d85a6c5220315b3",
+                "reference": "25edc5a232beb8c8cfb3de2a4d85a6c5220315b3",
                 "shasum": ""
             },
             "require": {
@@ -13049,7 +13049,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/drupal10"
             },
-            "time": "2024-06-20T06:36:14+00:00"
+            "time": "2024-08-13T07:14:17+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
@@ -19252,5 +19252,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
