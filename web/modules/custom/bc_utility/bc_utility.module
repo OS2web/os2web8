@@ -4,10 +4,12 @@ use Drupal\bc_utility\Controller\OldContentNotity;
 use Drupal\bc_utility\Plugin\Widgets\LinkWidgetValidators;
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\search_api\Query\QueryInterface;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Session\AccountInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 
 
@@ -124,8 +126,30 @@ function bc_utility_preprocess_status_messages(&$variables) {
   }
 }
 
-// kontekstuelle filtre
-// We pass the user ID as the Entity ID.
+function bc_utility_entity_insert(EntityInterface $entity) {
+  $host = \Drupal::request()->getHost();
+  // if new question is created on ringsted portal
+  if (preg_match('/portal/', $host) && $entity->bundle() == 'forum') {
+    $forum = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->load($entity->get('taxonomy_forums')[0]->target_id);
 
-// Forbindelser
-// OG membership: Group Indholdselement from OG membership
+    if ($forum && $forum->bundle() === 'forums') {
+      $postOwner = $entity->getOwner();
+      if (!$postOwner->isAnonymous()) {
+        $subscribers = \Drupal::database()
+          ->query("SELECT * FROM anonymous_subscription WHERE entity_bundle='forum'");
+        if ($subscribers) {
+          // add all forum subscribers to the question
+          foreach ($subscribers as $subscriber) {
+            $account = user_load_by_mail($subscriber->email);
+            if ($account && !$account->isAnonymous()) {
+              \Drupal::service('forum_notifications_subscription.frequency')
+                ->createNotificationFrequencyForUser($entity, $account);
+            }
+          }
+        }
+      }
+    }
+  }
+}
