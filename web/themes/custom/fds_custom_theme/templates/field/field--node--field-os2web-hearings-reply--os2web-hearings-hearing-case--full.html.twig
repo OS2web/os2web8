@@ -1,1 +1,57 @@
-{% extends "@fds_custom_theme/custom/label-h2-accordion-list--comments.html.twig" %}
+{%
+  set classes = [
+  'accordion',
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+{% if label_hidden %}
+  {# Printing comments with role #}
+  {% for speaker_role in comments_speaker_role %}
+    <div{{ title_attributes.addClass(title_classes) }}><h3>{{ speaker_role.role }}</h3></div>
+    <ul{{ attributes.addClass(classes) }}>
+      {% for item in speaker_role.comments_section %}
+        {{ item.content }}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  {# Printing comments without role #}
+  <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</div>
+  <ul{{ attributes.addClass(classes) }}>
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  </ul>
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}><h2>{{ label }}</h2></div>
+    {# Printing comments with role #}
+    {% for speaker_role in _context['#comments_speaker_role'] %}
+      <div{{ title_attributes.addClass(title_classes) }}><h3>{{ speaker_role.role }}</h3></div>
+      <ul{{ attributes.addClass(classes) }}>
+        {% for item in speaker_role.comments_section %}
+          {{ item.content }}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+
+    {# Printing comments without role #}
+    <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</div>
+    <ul{{ attributes.addClass(classes) }}>
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
