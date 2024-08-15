@@ -1,0 +1,40 @@
+uuid: ef8cd1fa-cdb3-43bd-be05-5519deefce41
+langcode: da
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.esdh_case.body
+    - field.field.node.esdh_case.field_case_documents
+    - field.field.node.esdh_case.field_case_id
+    - field.field.node.esdh_case.field_case_name
+    - field.field.node.esdh_case.field_sagsnummer
+    - node.type.esdh_case
+  module:
+    - text
+    - user
+id: node.esdh_case.teaser
+targetEntityType: node
+bundle: esdh_case
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_case_documents: true
+  field_case_id: true
+  field_case_name: true
+  field_sagsnummer: true
+  langcode: true
+  search_api_excerpt: true

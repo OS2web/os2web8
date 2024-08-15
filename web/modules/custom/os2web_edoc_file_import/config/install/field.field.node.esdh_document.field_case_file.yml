@@ -1,0 +1,27 @@
+uuid: 266f6ee7-6344-49fb-8bb2-b480a0eac661
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_file
+    - node.type.esdh_document
+  module:
+    - file
+id: node.esdh_document.field_case_file
+field_name: field_case_file
+entity_type: node
+bundle: esdh_document
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx xml'
+  max_filesize: ''
+  description_field: false
+field_type: file

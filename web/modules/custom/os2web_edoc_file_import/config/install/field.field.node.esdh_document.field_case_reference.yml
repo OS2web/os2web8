@@ -1,0 +1,21 @@
+uuid: 7f6c4ee9-8c6a-4337-bcd6-f5ca59ad45c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_reference
+    - node.type.esdh_document
+id: node.esdh_document.field_case_reference
+field_name: field_case_reference
+entity_type: node
+bundle: esdh_document
+label: 'Case Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

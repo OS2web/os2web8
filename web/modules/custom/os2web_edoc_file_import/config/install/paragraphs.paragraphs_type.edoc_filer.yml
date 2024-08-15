@@ -1,0 +1,10 @@
+uuid: 77392c47-b63e-41b9-a8de-6ec8fd47aad7
+langcode: da
+status: true
+dependencies: {  }
+id: edoc_filer
+label: 'eDoc filer'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

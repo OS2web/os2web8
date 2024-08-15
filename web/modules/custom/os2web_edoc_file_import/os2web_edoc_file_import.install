@@ -1,0 +1,103 @@
+<?php
+
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+
+/**
+ * Implements hook_uninstall().
+ */
+function os2web_edoc_file_import_uninstall() {
+  // Delete views.
+  $view = \Drupal::entityTypeManager()->getStorage('view')->load('views.view.os2web_edoc_file_import_esdh_docs.yml');
+  if ($view) {
+    // Delete the view.
+    $view->delete();
+  }
+
+  // Delete any paragraph items that may have been created for this paragraph.
+  $paragraph_ids_query = \Drupal::database()->select('paragraphs_item', 'p')
+    ->fields('p', ['id'])
+    ->condition('p.type', ['edoc_filer'], 'IN')
+    ->execute();
+  if ($pids = $paragraph_ids_query->fetchCol()) {
+    $storage = \Drupal::entityTypeManager()->getStorage('paragraph');
+    $entities = $storage->loadMultiple($pids);
+    $storage->delete($entities);
+    \Drupal::messenger()->addMessage(t('@number %type node(s) have been deleted.', [
+      '@number' => count($pids),
+      '%type' => 'scheduler_api_test',
+    ]));
+  }
+
+  // Delete paragraph fields.
+  $edoc_filer_fields = ['field_doc_reference', 'field_edoc_heading', 'field_sagsreference'];
+  foreach ($edoc_filer_fields as $field_name) {
+    $field_config = FieldConfig::loadByName('paragraph', 'edoc_filer', $field_name);
+    if ($field_config) {
+      $field_config->delete();
+    }
+
+    $field_storage_config = FieldStorageConfig::loadByName('paragraph', $field_name);
+    if ($field_storage_config) {
+      $field_storage_config->delete();
+    }
+  }
+
+  // Delete paragraph type.
+  $paragraph_type = \Drupal::entityTypeManager()
+    ->getStorage('paragraphs_type')
+    ->load('edoc_filer');
+  $paragraph_type->delete();
+
+  // Delete any paragraph items that may have been created for these nodes.
+  $nids_query = \Drupal::database()->select('node', 'n')
+    ->fields('n', ['nid'])
+    ->condition('n.type', ['esdh_case', 'esdh_document'], 'IN')
+    ->execute();
+  if ($nids = $nids_query->fetchCol()) {
+    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $entities = $storage->loadMultiple($nids);
+    $storage->delete($entities);
+    \Drupal::messenger()->addMessage(t('@number %type node(s) have been deleted.', [
+      '@number' => count($nids),
+      '%type' => 'scheduler_api_test',
+    ]));
+  }
+
+  // Delete node esdh_case fields.
+  $esdh_case_fields = ['field_case_documents', 'field_case_name', 'field_case_id', 'field_sagsnummer'];
+  foreach ($esdh_case_fields as $field_name) {
+    $field_config = FieldConfig::loadByName('node', 'esdh_case', $field_name);
+    if ($field_config) {
+      $field_config->delete();
+    }
+
+    $field_storage_config = FieldStorageConfig::loadByName('node', $field_name);
+    if ($field_storage_config) {
+      $field_storage_config->delete();
+    }
+  }
+
+  // Delete node esdh_document fields.
+  $esdh_document_fields = ['field_case_reference', 'field_document_id', 'field_document_title', 'field_case_file'];
+  foreach ($esdh_document_fields as $field_name) {
+    $field_config = FieldConfig::loadByName('node', 'esdh_document', $field_name);
+    if ($field_config) {
+      $field_config->delete();
+    }
+
+    $field_storage_config = FieldStorageConfig::loadByName('node', $field_name);
+    if ($field_storage_config) {
+      $field_storage_config->delete();
+    }
+  }
+
+  // Delete node types.
+  foreach (['esdh_document', 'esdh_case'] as $nodeType) {
+    $content_type = \Drupal::entityTypeManager()
+      ->getStorage('node_type')
+      ->load($nodeType);
+    $content_type->delete();
+  }
+}

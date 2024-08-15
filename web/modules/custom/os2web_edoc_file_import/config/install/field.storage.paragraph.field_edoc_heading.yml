@@ -1,0 +1,21 @@
+uuid: 6afde914-12dc-4e11-9cda-eff2b555f923
+langcode: da
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_edoc_heading
+field_name: field_edoc_heading
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

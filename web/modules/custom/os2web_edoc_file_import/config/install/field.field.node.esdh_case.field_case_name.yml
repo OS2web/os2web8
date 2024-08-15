@@ -1,0 +1,19 @@
+uuid: 1ea352b4-924b-4aad-808b-fe5cac5cdb0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_name
+    - node.type.esdh_case
+id: node.esdh_case.field_case_name
+field_name: field_case_name
+entity_type: node
+bundle: esdh_case
+label: 'Case Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

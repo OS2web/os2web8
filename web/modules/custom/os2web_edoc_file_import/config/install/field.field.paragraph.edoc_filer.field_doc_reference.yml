@@ -1,0 +1,25 @@
+uuid: 44ac2e07-8a84-4bc4-9cd9-b394f027fe34
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_doc_reference
+    - paragraphs.paragraphs_type.edoc_filer
+id: paragraph.edoc_filer.field_doc_reference
+field_name: field_doc_reference
+entity_type: paragraph
+bundle: edoc_filer
+label: 'Dokument reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: os2web_edoc_autocomplete_displayer
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

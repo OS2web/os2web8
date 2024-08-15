@@ -1,0 +1,23 @@
+uuid: 40d4f0bd-4739-44e6-a1a1-bfbf41fba2d9
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.esdh_case
+  module:
+    - text
+id: node.esdh_case.body
+field_name: body
+entity_type: node
+bundle: esdh_case
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
