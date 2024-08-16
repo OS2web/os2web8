@@ -26,12 +26,14 @@
   {% endfor %}
 
   {# Printing comments without role #}
-  <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</div>
-  <ul{{ attributes.addClass(classes) }}>
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-  </ul>
+  {% if items[0].content.comments is not empty %}
+    <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</h3></div>
+    <ul{{ attributes.addClass(classes) }}>
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}><h2>{{ label }}</h2></div>
@@ -46,12 +48,14 @@
     {% endfor %}
 
     {# Printing comments without role #}
-    <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</div>
-    <ul{{ attributes.addClass(classes) }}>
-      {% for item in items %}
-        {{ item.content }}
-      {% endfor %}
-    </ul>
+    {% if items[0].content.comments is not empty %}
+      <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</h3></div>
+      <ul{{ attributes.addClass(classes) }}>
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
 {% endif %}
 
