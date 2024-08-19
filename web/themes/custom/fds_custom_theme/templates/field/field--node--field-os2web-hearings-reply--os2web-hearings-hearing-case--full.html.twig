@@ -26,8 +26,8 @@
   {% endfor %}
 
   {# Printing comments without role #}
-  {% if items[0].content.comments is not empty %}
-    <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</h3></div>
+  {% if items[0].content.comments|length > 3 %}
+    <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen rolle</h3></div>
     <ul{{ attributes.addClass(classes) }}>
       {% for item in items %}
         {{ item.content }}
@@ -48,8 +48,8 @@
     {% endfor %}
 
     {# Printing comments without role #}
-    {% if items[0].content.comments is not empty %}
-      <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen role</h3></div>
+    {% if items[0].content.comments|length > 3 %}
+      <div{{ title_attributes.addClass(title_classes) }}><h3>Ingen rolle</h3></div>
       <ul{{ attributes.addClass(classes) }}>
         {% for item in items %}
           {{ item.content }}
