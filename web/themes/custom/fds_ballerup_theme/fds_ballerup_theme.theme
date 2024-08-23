@@ -58,7 +58,7 @@ function fds_ballerup_theme_form_search_form_alter(&$form, FormStateInterface $f
 /**
  * Implements template_preprocess_symfony_mailer_lite_email().
  */
-function fds_ballerup_preprocess_symfony_mailer_lite_email(&$variables) {
+function fds_ballerup_theme_preprocess_symfony_mailer_lite_email(&$variables) {
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();
