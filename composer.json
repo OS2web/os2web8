@@ -107,6 +107,7 @@
         "drupal/simplesamlphp_auth": "^4.0",
         "drupal/smtp": "^1.4",
         "drupal/stage_file_proxy": "3.0.x-dev@dev",
+        "drupal/symfony_mailer_lite": "^2.0",
         "drupal/tamper": "^1.0@alpha",
         "drupal/token": "^1.15",
         "drupal/typed_data": "^2.0",
