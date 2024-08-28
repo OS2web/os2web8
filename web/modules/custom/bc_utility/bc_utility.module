@@ -10,6 +10,7 @@ use Drupal\search_api\Query\QueryInterface;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Session\AccountInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Drupal\Comment\CommentInterface;
 
 
 
@@ -38,6 +39,46 @@ function bc_utility_mail($key, &$message, $params)
   }
 }
 
+
+function bc_utility_mail_alter(&$message) {
+
+  if ($message['module'] == 'forum_notifications_subscription') {
+
+    $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
+    $message['headers']['Content-Transfer-Encoding'] = '8bit';
+    $message['headers']['MIME-Version'] = '1.0';
+
+    $theme_initialization = \Drupal::service('theme.initialization');
+    $active_theme = \Drupal::theme()->getActiveTheme();
+    $tmp_theme = $theme_initialization->getActiveThemeByName('fds_portal_ringsted_theme');
+    if ($tmp_theme->getName() !== 'core') {
+      \Drupal::theme()
+        ->setActiveTheme($theme_initialization->getActiveThemeByName($tmp_theme->getName()));
+
+      $body = implode("", $message['body']);
+
+      preg_match_all('/https?\:\/\/[^\",]+/i', $body, $match);
+      foreach( $match AS $key => $links ) {
+        foreach($links AS $link) {
+          $body = str_replace($link, '<a href="' . $link . '"> [link] </a>', $body);
+        }
+      }
+
+      $render = [
+        '#theme' => 'anonymous_subscriptions_notification_email',
+        '#body' => $body,
+        '#subscription_reason_text' => '',
+        '#unsubscribe_url' => '',
+        '#unsubscribe_all_url' => '',
+      ];
+
+      $message['body'][0] = $htmlBody = \Drupal::service('renderer')->renderPlain($render);
+
+      \Drupal::theme()->setActiveTheme($active_theme);
+    }
+  }
+
+}
 /**
  * Implements hook_ENTITY_TYPE_access().
  *
