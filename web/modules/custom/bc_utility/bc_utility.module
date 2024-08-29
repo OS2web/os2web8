@@ -42,8 +42,30 @@ function bc_utility_mail($key, &$message, $params)
 
 function bc_utility_mail_alter(&$message) {
 
+
+  if ($message['module'] == 'anonymous_subscriptions') {
+
+    // If node not yet have created the canonical url we try to create and replace it
+    $body = implode("", $message['body']);
+    preg_match_all('@(https?://([-\w\.]+[-\w])+(:\d+)?(/([\w/_\.#-]*(\?\S+)?[^\.\s])?)?)@', $body, $match);
+    if (!empty($match[0])) {
+      foreach ($match[0] as $link) {
+        if (preg_match('/\/node\/(?<nodeid>\d+)/', $link, $matches)) {
+          $node = \Drupal\node\Entity\Node::load($matches['nodeid']);
+          if ($node) {
+            $absolute = $node->toUrl()->setAbsolute()->toString();
+            if ($link != $absolute) {
+              $message['body'][0] = str_replace($link, $absolute, $body);
+            }
+          }
+        }
+      }
+    }
+  }
+
   if ($message['module'] == 'forum_notifications_subscription') {
 
+    // forum_notifications_subscription do not work with html mails , try to convert it
     $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
     $message['headers']['Content-Transfer-Encoding'] = '8bit';
     $message['headers']['MIME-Version'] = '1.0';
