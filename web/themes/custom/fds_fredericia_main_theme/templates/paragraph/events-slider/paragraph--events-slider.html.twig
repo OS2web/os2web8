@@ -54,43 +54,45 @@
       <div class="handpicked-events swiper-events">
         <div class="swiper-wrapper">
         {% for item in paragraph.field_event_ref %}
-          <div class="event-item swiper-slide">
-            {# Display fields from the event content type #}
-            <a class="event-image-link" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">
-              <div class="event-image">
-                <img src="{{ file_url(item.entity.field_os2web_evnet_image.entity.fileuri) }}" alt="{{ item.entity.field_os2web_evnet_image.alt }}" />
-              </div>
-            </a>
-            <div class="event-date">
-              {% if item.entity.field_os2web_event_start_date %}
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-                {{ item.entity.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
-              {% endif %}
-            </div>
-            <a class="event-heading-link" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">
-              <h2>{{ item.entity.label }}</h2>
-            </a>
-            <div class="event-resume">
-              {% if item.entity.field_os2web_event_resume is defined and item.entity.field_os2web_event_resume.value is not empty %}
-                {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
-                {% if resume_text|length > 100 %}
-                  {{ resume_text|slice(0, 100) ~ '...' }}
-                {% else %}
-                  {{ resume_text }}
+          {% if item.entity.isPublished() %}
+            <div class="event-item swiper-slide">
+              {# Display fields from the event content type #}
+              <a class="event-image-link" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">
+                <div class="event-image">
+                  <img src="{{ file_url(item.entity.field_os2web_evnet_image.entity.fileuri) }}" alt="{{ item.entity.field_os2web_evnet_image.alt }}" />
+                </div>
+              </a>
+              <div class="event-date">
+                {% if item.entity.field_os2web_event_start_date %}
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  {{ item.entity.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
                 {% endif %}
-              {% else %}
-                Resume kommer...
-              {% endif %}
+              </div>
+              <a class="event-heading-link" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">
+                <h2>{{ item.entity.label }}</h2>
+              </a>
+              <div class="event-resume">
+                {% if item.entity.field_os2web_event_resume is defined and item.entity.field_os2web_event_resume.value is not empty %}
+                  {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
+                  {% if resume_text|length > 100 %}
+                    {{ resume_text|slice(0, 100) ~ '...' }}
+                  {% else %}
+                    {{ resume_text }}
+                  {% endif %}
+                {% else %}
+                  Resume kommer...
+                {% endif %}
+              </div>
+              <div class="event-link">
+                <a class="event-readmore" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">Læs mere<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <g fill="none" stroke="#00335b" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                      <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                      <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                    </g>
+                  </svg></a>
+              </div>
             </div>
-            <div class="event-link">
-              <a class="event-readmore" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">Læs mere<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                  <g fill="none" stroke="#00335b" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
-                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
-                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
-                  </g>
-                </svg></a>
-            </div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
