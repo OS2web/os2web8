@@ -98,6 +98,56 @@ a.entity-teaser {
   }
 }
 
+.view-os2web-search {
+  .entity-teaser--os2web-hearings-hearing-case {
+    display: flex;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
+    text-decoration: none;
+    color: black;
+    min-height: 200px;
+    transition: 0.3s;
+    position: relative;
+
+    .entity-teaser--os2web-hearings-hearing-case__date {
+      flex-basis: 160px;
+    }
+
+    entity-teaser--os2web-hearings-hearing-case__content {
+      display: flex;
+      padding: 30px 25px;
+      justify-content: start;
+      gap: 20px;
+
+      h3 {
+        font-size: 2.4rem;
+        color: black;
+      }
+
+    }
+
+    .entity-teaser--os2web-hearings-hearing-case__actions {
+      margin: 0 60px 0 0;
+      align-self: center;
+      background-color: #00325b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      padding: 5px;
+
+      .icon {
+        color: white;
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 3px 20px rgba(0,0,0,.21569);
+    }
+  }
+}
+
 .page-teaser, .news-teaser {
   display: block;
   box-shadow: 0 2px 20px rgba(0,0,0,.16078);

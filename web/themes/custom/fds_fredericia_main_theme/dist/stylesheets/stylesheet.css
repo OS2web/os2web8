@@ -19497,6 +19497,65 @@ a.entity-teaser {
   margin-top: 0 !important;
 }
 
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
+  text-decoration: none;
+  color: black;
+  min-height: 200px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case .entity-teaser--os2web-hearings-hearing-case__date {
+  -ms-flex-preferred-size: 160px;
+      flex-basis: 160px;
+}
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case entity-teaser--os2web-hearings-hearing-case__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 25px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 20px;
+}
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case entity-teaser--os2web-hearings-hearing-case__content h3 {
+  font-size: 2.4rem;
+  color: black;
+}
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case .entity-teaser--os2web-hearings-hearing-case__actions {
+  margin: 0 60px 0 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #00325b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  padding: 5px;
+}
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case .entity-teaser--os2web-hearings-hearing-case__actions .icon {
+  color: white;
+  width: 100%;
+}
+.view-os2web-search .entity-teaser--os2web-hearings-hearing-case:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.21569);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.21569);
+}
+
 .page-teaser, .news-teaser {
   display: block;
   -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.16078);
