@@ -40,36 +40,37 @@
   }
 
   var links = document.querySelectorAll('.field--name-field-os2web-slideshow-image .field__item a');
-
   for (var i = 0; i < links.length; i++) {
     var link = links[i];
-
-    link.addEventListener('click', handleClick)
+    link.addEventListener('click', handleClick);
   }
 })();
 
 // Tiny Slider slideshow img.
 (function() {
-  var selector = '.field--name-field-os2web-slideshow-image .field__items';
-
   var transitionEndCallback = function (info, eventName) {
     // Add tab
     for (var i = 0; i < info.slideItems.length; i++) {
       var slide = info.slideItems[i];
-      if (slide.classList.contains('tns-slide-active')) {
-        slide.querySelector('a').removeAttribute('tabindex');
-      }
-      else {
-        slide.querySelector('a').setAttribute('tabindex', '-1');
+      var anchor = slide.querySelector('a');
+
+      if (anchor) { // Check if the anchor exists before accessing it
+        if (slide.classList.contains('tns-slide-active')) {
+          anchor.removeAttribute('tabindex');
+        } else {
+          anchor.setAttribute('tabindex', '-1');
+        }
       }
     }
-  }
+  };
 
-  if (document.querySelector(selector) !== null) {
+  // Modified to select and initialize all slide containers.
+  var slideshowContainers = document.querySelectorAll('.field--name-field-os2web-slideshow-image .field__items');
 
-    // Run tiny slider.
+  slideshowContainers.forEach(function(container) {
+    // Initialize tiny slider for this specific container
     var slider = tns({
-      container: selector,
+      container: container,
       items: 1,
       autoplay: false,
       autoplayHoverPause: true,
@@ -82,8 +83,38 @@
       },
     });
 
-    // bind function to event
+
+    // Bind transitionEndCallback to this slider instance
     slider.events.on('transitionEnd', transitionEndCallback);
     transitionEndCallback(slider.getInfo());
-  }
+  });
+
+
+  var slideshowMediaContainers = document.querySelectorAll('.field--name-field-os2web-slideshow-media-img .field__items');
+
+  slideshowMediaContainers.forEach(function(container) {
+    // Initialize tiny slider for this specific container
+    var sliderMedia = tns({
+      container: container,
+      items: 1,
+      autoplay: false,
+      autoplayHoverPause: true,
+      gutter: 32,
+      rewind: true,
+      responsive: {
+        576: {
+          items: 2,
+        },
+      },
+    });
+
+
+    // Bind transitionEndCallback to this slider instance
+    sliderMedia.events.on('transitionEnd', transitionEndCallback);
+    transitionEndCallback(sliderMedia.getInfo());
+  });
+
+
 })();
+
+
