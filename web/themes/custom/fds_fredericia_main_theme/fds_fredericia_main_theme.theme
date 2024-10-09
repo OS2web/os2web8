@@ -639,7 +639,10 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
         }
     }
 
-
+    // Reacting on events created/updated/published/unpublished.
+    if ($paragraph->bundle() === 'events_slider') {
+      $variables['#cache']['tags'] [] = 'node_list:os2web_event';
+    }
 }
 
 
