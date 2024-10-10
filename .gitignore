@@ -33,6 +33,7 @@
 !/web/libraries/fakeobjects
 !/web/libraries/iframe
 !/web/libraries/jquery-ui-touch-punch
+!/web/libraries/chosen
 
 # Subsites
 /scripts/os2subsites_provision
