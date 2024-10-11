@@ -22,9 +22,9 @@
             "type": "vcs",
             "url": "https://github.com/bellcom/fds_base_theme"
         },
-	{	
+	{
 		"type": "vcs",
-		"url": "https://github.com/bellcom/access_latest"	
+		"url": "https://github.com/bellcom/access_latest"
 	}
     ],
     "require": {
@@ -166,16 +166,20 @@
             "simplesamlphp/composer-module-installer": true,
             "drupal/console-extend-plugin": true,
             "cweagans/composer-patches": true,
-            "zaporylie/composer-drupal-optimizations": true
+            "zaporylie/composer-drupal-optimizations": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
     "extra": {
-	"patches": {
-      		"drupal/core": {
-			"fix views pager offset": "https://www.drupal.org/files/issues/2024-03-06/mr-4707-vs-10.2.x.patch"
-		}
-    	},
+        "patches": {
+            "drupal/core": {
+                "fix views pager offset": "https://www.drupal.org/files/issues/2024-03-06/mr-4707-vs-10.2.x.patch"
+            },
+            "drupal/scheduler_content_moderation_integration" : {
+                "3312463 - Scheduler fails if publish_state or unpublish_state are empty": "https://www.drupal.org/files/issues/2024-01-29/scheduler-fails-if-publish-state-or-unpublish-state-are-empty-3312463-22.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"

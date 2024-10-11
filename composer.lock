@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a77a2093d80ce207c61f0ad024dd8fa",
+    "content-hash": "e8ee6a701e402e6d6dbdaee97b823676",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1889,12 +1889,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "0468499891d3777fd69cd522b99c91be73ce1f51"
+                "reference": "56b819ed0cc013a8ff1c19991c2191ae914d1616"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/0468499891d3777fd69cd522b99c91be73ce1f51",
-                "reference": "0468499891d3777fd69cd522b99c91be73ce1f51",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/56b819ed0cc013a8ff1c19991c2191ae914d1616",
+                "reference": "56b819ed0cc013a8ff1c19991c2191ae914d1616",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1906,7 +1906,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/drupal10",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2024-06-20T06:45:07+00:00"
+            "time": "2024-10-11T12:55:17+00:00"
         },
         {
             "name": "drupal/autologout",
