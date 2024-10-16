@@ -1,0 +1,4 @@
+.field--type-text-long:not(.field--widget-text-textarea) ul li::before {
+  content: "\f061";
+  font-family: FontAwesome;
+}

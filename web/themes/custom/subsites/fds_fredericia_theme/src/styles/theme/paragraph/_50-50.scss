@@ -3,7 +3,6 @@
 .paragraph-50-50-wrapper {
   display: flex;
   min-height: 300px; // Adjust as needed for your design
-  margin-bottom: 80px;
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
