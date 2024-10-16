@@ -2,3 +2,7 @@
   content: "\f061";
   font-family: FontAwesome;
 }
+
+.background-color--secondary .field--type-text-long:not(.field--widget-text-textarea) ul li::before {
+  color: white;
+}
