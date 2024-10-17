@@ -35,7 +35,8 @@
                 {% endif %}
 
                 {# Video Handling #}
-                {% if paragraph.field_os2web_banner_video.value %}
+                {% if paragraph.field_os2web_banner_video.entity is not empty %}
+                    {% set video_url = paragraph.field_os2web_banner_video.entity.field_os2web_video.entity.uri.value|file_url %}
                     <div class="banner__video">
                         <video id="banner-video" autoplay muted loop>
                             <source src="{{ paragraph.field_os2web_banner_video.value }}" type="video/mp4">
