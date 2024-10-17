@@ -41,11 +41,12 @@
                     {% set video_url = file.uri.value|render %}
                     <div class="banner__video">
                         <video id="banner-video" autoplay muted loop>
-                            <source src="{{ paragraph.field_os2web_banner_video.value }}" type="video/mp4">
+                            <source src="{{ video_url }}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <button class="custom-pause-button" onclick="togglePause()">Pause<span class="visually-hidden">Tryk her for at pause eller fortsætte videoen.</span></button>
                     </div>
+                    {% endif %}
                 {% endif %}
 
             {% endblock %}
