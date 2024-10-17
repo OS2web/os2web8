@@ -39,7 +39,7 @@
                     {% for item in paragraph.get('field_os2web_banner_video') %}
                         <div class="banner__video">
                             <video id="banner-video" autoplay muted loop controls>
-                                {% set video_file = item.entity.field_os2web_video.entity %}
+                                {% set video_file = item.entity.field_media_video_file.entity %}
                                 <source src="{{ file_url(video_file.uri.value) }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
