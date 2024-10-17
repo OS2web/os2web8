@@ -34,50 +34,43 @@
                     </div>
                 {% endif %}
 
-                {# Video Handling #}
-                {% if paragraph.field_os2web_banner_video is not empty %}
-                    {% for item in paragraph.get('field_os2web_banner_video') %}
-                        <div class="banner__video">
-                            <video id="banner-video" autoplay muted loop controls>
-                                {% set video_file = item.entity.field_media_video_file.entity %}
-                                <source src="{{ file_url(video_file.uri.value) }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <button class="custom-pause-button" onclick="togglePause()">Pause
-                                <span class="visually-hidden">Tryk her for at pause eller fortsætte videoen.</span>
-                            </button>
-                        </div>
-                    {% endfor %}
-                {% endif %}
+
 
             {% endblock %}
         </div>
+
+        {# Video Handling #}
+        {% if paragraph.field_os2web_banner_video is not empty %}
+            {% for item in paragraph.get('field_os2web_banner_video') %}
+                <div class="banner__video">
+                    <video id="banner-video" autoplay muted loop>
+                        {% set video_file = item.entity.field_media_video_file.entity %}
+                        <source src="{{ file_url(video_file.uri.value) }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="custom-pause-button" onclick="togglePause()">
+                        <i class="fa fa-pause" aria-hidden="true"></i>
+                        <span class="visually-hidden">Tryk her for at pause eller fortsætte videoen.</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
 {% endblock paragraph %}
 
 <script>
     function togglePause() {
         const video = document.getElementById('banner-video');
+        const buttonIcon = document.querySelector('.custom-pause-button i');
+
         if (video.paused) {
             video.play();
+            buttonIcon.classList.remove('fa-play');
+            buttonIcon.classList.add('fa-pause');
         } else {
             video.pause();
+            buttonIcon.classList.remove('fa-pause');
+            buttonIcon.classList.add('fa-play');
         }
     }
 </script>
-
-<style>
-    .banner__video {
-        position: relative;
-    }
-    .custom-pause-button {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-</style>
