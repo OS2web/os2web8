@@ -35,18 +35,19 @@
                 {% endif %}
 
                 {# Video Handling #}
-                {% if paragraph.field_os2web_banner_video.entity is not empty %}
-                {% set file = paragraph.field_os2web_banner_video.entity.field_os2web_video.entity %}
-                {% if file.uri.value is not empty %}
-                    {% set video_url = file.uri.value|render %}
-                    <div class="banner__video">
-                        <video id="banner-video" autoplay muted loop>
-                            <source src="{{ video_url }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button class="custom-pause-button" onclick="togglePause()">Pause<span class="visually-hidden">Tryk her for at pause eller fortsætte videoen.</span></button>
-                    </div>
-                    {% endif %}
+                {% if paragraph.field_os2web_banner_video is not empty %}
+                    {% for item in paragraph.get('field_os2web_banner_video') %}
+                        <div class="banner__video">
+                            <video id="banner-video" autoplay muted loop controls>
+                                {% set video_file = item.entity.field_os2web_video.entity %}
+                                <source src="{{ file_url(video_file.uri.value) }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button class="custom-pause-button" onclick="togglePause()">Pause
+                                <span class="visually-hidden">Tryk her for at pause eller fortsætte videoen.</span>
+                            </button>
+                        </div>
+                    {% endfor %}
                 {% endif %}
 
             {% endblock %}
