@@ -20,6 +20,11 @@
 // Styling
 // --------------------------------------------------
 
+.banner .container {
+  position: absolute;
+  z-index: 2;
+}
+
 .banner .container .banner__actions {
   margin-bottom: 0;
 }
@@ -43,6 +48,7 @@
   color: #000;
   padding: 15px 20px;
   cursor: pointer;
+  border: none;
 
   &:hover {
     border: 1px solid #000;
