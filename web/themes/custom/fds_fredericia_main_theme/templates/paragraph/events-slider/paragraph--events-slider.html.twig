@@ -20,7 +20,7 @@
                   <div class="event-date">
                     {% if node.field_os2web_event_start_date %}
                       <i class="fa fa-calendar" aria-hidden="true"></i>
-                      {{ node.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
+                      {{ node.field_os2web_event_start_date.value|date("d/m/Y H:i", "Europe/Copenhagen") }}
                     {% endif %}
                   </div>
                   <a class="event-heading-link" href="{{ node.field_os2web_event_url.value }}" target="_blank">
@@ -65,7 +65,7 @@
               <div class="event-date">
                 {% if item.entity.field_os2web_event_start_date %}
                   <i class="fa fa-calendar" aria-hidden="true"></i>
-                  {{ item.entity.field_os2web_event_start_date.value|date("d/m/Y H:i") }}
+                  {{ item.entity.field_os2web_event_start_date.value|date("d/m/Y H:i", "Europe/Copenhagen") }}
                 {% endif %}
               </div>
               <a class="event-heading-link" href="{{ item.entity.field_os2web_event_url.value }}" target="_blank">
