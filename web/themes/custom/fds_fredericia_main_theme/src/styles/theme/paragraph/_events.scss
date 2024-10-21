@@ -108,6 +108,8 @@
       .event-item {
 
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
 
 
         .event-image-link {
@@ -165,6 +167,7 @@
           margin: 20px 0;
           color: #00335b;
           min-height: 70px;
+          flex-grow: 1;
         }
 
         .event-link {
