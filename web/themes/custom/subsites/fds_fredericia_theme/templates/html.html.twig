@@ -5,6 +5,8 @@
     node_type ? 'page-node-type-' ~ node_type|clean_class,
     db_offline ? 'db-offline',
     path_info.args ? 'path-' ~ path_info.args,
+    'font-combination-' ~ theme_settings.fds_fredericia_theme_font_combination|clean_class
+
 ]
 %}
 <!DOCTYPE html>
