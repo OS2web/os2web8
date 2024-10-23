@@ -38,3 +38,19 @@ function fds_fredericia_theme_form_system_theme_settings_alter(
 
     return $form;
 }
+
+/**
+ * Implements hook_preprocess_HOOK() for html templates.
+ */
+function YOUR_THEME_preprocess_html(&$variables) {
+    // Retrieve the font combination setting.
+    $font_combination = theme_get_setting('fds_fredericia_theme_font_combination');
+
+    // Set a default if the setting is not available.
+    if (empty($font_combination)) {
+        $font_combination = 'default';
+    }
+
+    // Add the font combination class to the body attributes.
+    $variables['attributes']['class'][] = 'font-combination-' . \Drupal\Component\Utility\Html::getClass($font_combination);
+}
