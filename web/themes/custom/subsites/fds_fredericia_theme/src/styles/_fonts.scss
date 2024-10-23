@@ -210,6 +210,12 @@
   font-family: "Open Sans", sans-serif;
 }
 
+
+
+.font-combination-playfair_barlow body {
+  font-family: 'Barlow', sans-serif !important;
+}
+
 /* Playfair Display for headings, Barlow for body text */
 .font-combination-playfair_barlow h1,
 .font-combination-playfair_barlow h2,
@@ -217,9 +223,5 @@
 .font-combination-playfair_barlow h4,
 .font-combination-playfair_barlow h5,
 .font-combination-playfair_barlow h6 {
-  font-family: 'Playfair Display', serif;
-}
-
-.font-combination-playfair_barlow body {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Playfair Display', serif !important;
 }
