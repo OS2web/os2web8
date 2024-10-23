@@ -34,3 +34,7 @@ libraries-override:
   fds_base_theme/javascripts:
     js:
       js/slideshow.js: js/slideshow.js
+
+settings:
+  fds_fredericia_theme_font_combination: 'default'
+
