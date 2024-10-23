@@ -42,7 +42,7 @@ function fds_fredericia_theme_form_system_theme_settings_alter(
 /**
  * Implements hook_preprocess_HOOK() for html templates.
  */
-function YOUR_THEME_preprocess_html(&$variables) {
+function fds_fredericia_theme_preprocess_html(&$variables) {
     // Retrieve the font combination setting.
     $font_combination = theme_get_setting('fds_fredericia_theme_font_combination');
 
