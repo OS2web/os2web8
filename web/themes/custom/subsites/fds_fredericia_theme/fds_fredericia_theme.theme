@@ -195,6 +195,9 @@ function fds_fredericia_theme_views_pre_render(Drupal\views\ViewExecutable &$vie
 
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for html templates.
+ */
 function fds_fredericia_theme_preprocess_html(array &$variables) {
   // Retrieve the font combination from the theme settings.
   $font_combination = theme_get_setting('fds_fredericia_theme_font_combination');
@@ -204,6 +207,12 @@ function fds_fredericia_theme_preprocess_html(array &$variables) {
     $font_combination = 'default';
   }
 
+  // Ensure that html_attributes exists and add the class to the <html> tag.
+  if (!isset($variables['html_attributes'])) {
+    $variables['html_attributes'] = new \Drupal\Core\Template\Attribute();
+  }
+
   // Add the font combination class to the html attributes.
-  $variables['html_attributes']['class'][] = 'font-combination-' . \Drupal\Component\Utility\Html::getClass($font_combination);
+  $variables['html_attributes']->addClass('font-combination-' . \Drupal\Component\Utility\Html::getClass($font_combination));
 }
+
