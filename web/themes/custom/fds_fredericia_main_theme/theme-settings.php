@@ -49,6 +49,12 @@ function fds_fredericia_main_theme_form_system_theme_settings_alter(&$form, Drup
         '#element_validate' => array('fds_base_theme_footer_image_validate'),
     ];
 
+    $form['footer']['footer_image_container']['footer_image_alt_text'] = [
+        '#type' => 'textfield',
+        '#title' => t('Footer image alt text'),
+        '#default_value' => theme_get_setting('footer_image_alt_text'),
+    ];
+
 
 
 

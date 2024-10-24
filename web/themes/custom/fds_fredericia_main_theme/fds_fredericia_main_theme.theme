@@ -75,6 +75,7 @@ function fds_fredericia_main_theme_preprocess_page(array &$variables) {
   $variables['theme_settings']['footer']['footer_show_latest_content'] = theme_get_setting('footer_show_latest_content');
   $variables['theme_settings']['footer']['footer_image'] = theme_get_setting('footer_image_choice');
   $variables['theme_settings']['footer']['footer_image_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('footer_image_path'));
+  $variables['theme_settings']['footer']['footer_image_alt_text'] = theme_get_setting('footer_image_alt_text');
   $variables['theme_settings']['branding']['branding_toggle'] = theme_get_setting('branding_toggle');
   $variables['theme_settings']['branding']['branding_text'] = theme_get_setting('branding_text');
 
