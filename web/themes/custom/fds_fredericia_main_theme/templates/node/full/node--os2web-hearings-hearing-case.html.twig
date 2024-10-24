@@ -52,9 +52,9 @@
 
     {% if attached_documents %}
       <div class="attached-documents">
-        {% for document_url in attached_documents %}
+        {% for attached_document in attached_documents %}
           <div class="document-item {{ file_index > 2 ? 'hidden' : '' }}">
-            <a href="{{ document_url }}" target="_blank">{{ document_url|split('/')|last }}</a>
+            <a href="{{ attached_document.uri }}" target="_blank">{{ attached_document.name }}</a>
           </div>
           {% set file_index = file_index + 1 %}
         {% endfor %}

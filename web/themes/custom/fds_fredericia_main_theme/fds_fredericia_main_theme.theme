@@ -318,15 +318,18 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
 
   $variables['#lastupdated'] = time();
 
-
   // Check for the specific content type.
     if ($node->bundle() === 'os2web_hearings_hearing_case') {
       // Prepare attached documents.
       if ($node->hasField('field_os2web_hearings_attac_doc') && !$node->field_os2web_hearings_attac_doc->isEmpty()) {
         $attached_docs = $node->field_os2web_hearings_attac_doc->referencedEntities();
         $variables['attached_documents'] = [];
+        /** @var \Drupal\file\FileInterface $doc */
         foreach ($attached_docs as $doc) {
-          $variables['attached_documents'][] = file_create_url($doc->getFileUri());
+          $variables['attached_documents'][] = [
+            'uri' => \Drupal::service('file_url_generator')->generateAbsoluteString($doc->getFileUri()),
+            'name' => $doc->getFilename()
+          ];
         }
       }
 
