@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17856cf7cc341d8c1751e15ebee84501",
+    "content-hash": "b83d8d6bf1887dfff7ca1fa9a6f71737",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9412,6 +9412,51 @@
             "homepage": "https://www.drupal.org/project/user_delete_reassign",
             "support": {
                 "source": "https://git.drupalcode.org/project/user_delete_reassign"
+            }
+        },
+        {
+            "name": "drupal/user_display_name",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/user_display_name.git",
+                "reference": "1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/user_display_name-1.1.2.zip",
+                "reference": "1.1.2",
+                "shasum": "31984d442aa9eb3d5b3bb82f67c91fbf87bdc0ca"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.2",
+                    "datestamp": "1675237528",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "orakili",
+                    "homepage": "https://www.drupal.org/u/orakili"
+                }
+            ],
+            "description": "Adds a display name field to user entities.",
+            "homepage": "https://www.drupal.org/project/user_display_name",
+            "support": {
+                "source": "https://git.drupal.org/project/user_display_name.git",
+                "issues": "https://www.drupal.org/project/issues/user_display_name"
             }
         },
         {

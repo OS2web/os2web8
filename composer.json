@@ -94,6 +94,7 @@
         "drupal/tamper": "^1.0@alpha",
         "drupal/typed_data": "^1.0@beta",
         "drupal/user_delete_reassign": "1.x-dev@dev",
+        "drupal/user_display_name": "^1.1",
         "drupal/video": "^3.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_local_tasks": "^1.0",
