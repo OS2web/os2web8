@@ -7,7 +7,7 @@ styles:
   css:
     theme:
       dist/stylesheets/stylesheet.css: {}
-      # css/extra-styles.css: {}
+      css/extra-styles.css: {}
 
 javascripts:
   js:

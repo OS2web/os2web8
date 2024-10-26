@@ -5,7 +5,24 @@
 <div class="row">
   {% for row in rows %}
     <div class="col-12 col-md-4">
-      {{- row.content -}}
+{#      {{ row.content }}#}
+
+      {% set news = row.content["#node"] %}
+      <div class="view-os2web-news entity-teaser">
+        <div class="entity-teaser__body">
+          <h3 class="h4">{{ news.title.value }}</h3>
+          <div class="field--name-field-os2web-news-article-date">
+            {{ news.created.value|format_date('os2core_date_medium') }}
+          </div>
+          <div class="field field--type-body">
+            {{- news.field_os2web_news_intro.value -}}
+          </div>
+            <div class="field--type-link">
+                <a href="{{ path('entity.node.canonical', {'node': news.id}) }}"></a>
+            </div>
+        </div>
+      </div>
+
     </div>
   {% endfor %}
 </div>

@@ -26,3 +26,4 @@ regions:
 libraries:
   - 'fds_ballerup_theme/styles'
   - 'fds_ballerup_theme/javascripts'
+  - chosen/drupal.chosen

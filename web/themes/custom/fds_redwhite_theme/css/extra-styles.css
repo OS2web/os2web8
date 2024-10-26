@@ -1,0 +1,31 @@
+.field--name-field-media-file .field__item .file {
+  box-shadow: none !important;
+  height: 50px;
+}
+
+.field--name-field-media-file .field__item .file a {
+  position: relative;
+  top: 50%;
+  height: 30px;
+  font-weight: inherit;
+}
+.field--name-field-media-file .field__item .file a:hover {
+    font-weight: 700;
+    text-decoration: underline dotted var(--dark-gray1) 1px;
+    text-underline-offset: 3px;
+    border-bottom: none;
+}
+
+.field--name-field-media-file .field__item .file a:hover:before {
+    content: '' !important;     
+    display: inline-block !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 50% !important;
+    -webkit-transform: translateY(-50%) !important;
+    transform: translateY(-50%) !important;
+    width: 19px !important;
+    height: 19px !important;
+    margin-right: 6px !important;  
+    background: url("../src/images/sprite.png") no-repeat -19px -48px !important;
+}

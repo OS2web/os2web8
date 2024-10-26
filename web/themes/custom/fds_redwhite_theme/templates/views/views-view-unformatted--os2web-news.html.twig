@@ -16,6 +16,7 @@
  */
 #}
 <h1>{{ 'Nyheder' | trans }}</h1>
+<div class="views-row">
 {% for row in rows %}
   {%
     set row_classes = [
@@ -23,6 +24,27 @@
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
-    {{- row.content -}}
+{#    {{- row.content -}}#}
+
+    {% set news = row.content["#node"] %}
+    <h2>
+      <a href="{{ path('entity.node.canonical', {'node': news.id}) }}" style="padding-top: 4px; padding-bottom: 4px;">
+        <span class="field field--name-title field--type-string field--label-hidden">
+              {{ news.title.value }}
+        </span>
+      </a>
+    </h2>
+    <div class="node__content">
+        <div class="field--name-field-os2web-news-article-date">
+          {{ news.created.value|format_date('os2core_date_medium') }}
+        </div>
+        <div class="field field--name-field-os2web-news-intro">
+          <p>
+            {{- news.field_os2web_news_intro.value -}}
+          </p>
+        </div>
+    </div>
+
   </div>
 {% endfor %}
+</div>
