@@ -25,6 +25,10 @@
   z-index: 2;
 }
 
+.banner {
+  min-height: 250px;
+}
+
 .banner .container .banner__actions {
   margin-bottom: 0;
 }
@@ -81,7 +85,7 @@
 // Desktop - and up
 @include media-breakpoint-up(md) {
   .banner {
-    min-height: 350px;
+    min-height: 600px;
   }
 }
 
