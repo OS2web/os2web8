@@ -18810,6 +18810,19 @@ ul.related-links a:hover {
   font-weight: 700;
 }
 
+.entity-default--os2web-news-page .views-element-container .view-os2web-news .view-content .views-row .element-wrapper-link .entity-list__body a:visited {
+  text-decoration: none;
+}
+.entity-default--os2web-news-page .views-element-container .view-os2web-news .view-content .views-row .element-wrapper-link .entity-list__body a .field--name-field-os2web-news-heading h3.h4 {
+  color: #00335b;
+}
+.entity-default--os2web-news-page .views-element-container .view-os2web-news .view-content .views-row .element-wrapper-link .entity-list__body .field--type-body .field--name-field-os2web-news-intro p {
+  color: #00335b;
+}
+.entity-default--os2web-news-page .views-element-container .view-os2web-news .view-content .views-row .element-wrapper-link .entity-list__body .field--type-body .field--name-field-os2web-news-intro p strong {
+  font-weight: normal;
+}
+
 .block-last-updated {
   background-color: #FFFFFF;
   color: #000;
