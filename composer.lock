@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8ee6a701e402e6d6dbdaee97b823676",
+    "content-hash": "c4dfd5f26dce198d2b6738d2e17cf1fa",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -12999,12 +12999,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_citizen_proposals.git",
-                "reference": "e0d9f41bb05ba91278a0d84c28922142cfd76ad6"
+                "reference": "ed5e935005f52e8c940b97f427b8aa3adaf953d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_citizen_proposals/zipball/e0d9f41bb05ba91278a0d84c28922142cfd76ad6",
-                "reference": "e0d9f41bb05ba91278a0d84c28922142cfd76ad6",
+                "url": "https://api.github.com/repos/OS2web/os2web_citizen_proposals/zipball/ed5e935005f52e8c940b97f427b8aa3adaf953d8",
+                "reference": "ed5e935005f52e8c940b97f427b8aa3adaf953d8",
                 "shasum": ""
             },
             "require": {
@@ -13021,7 +13021,7 @@
                 "issues": "https://github.com/OS2web/os2web_citizen_proposals/issues",
                 "source": "https://github.com/OS2web/os2web_citizen_proposals/tree/master"
             },
-            "time": "2024-06-06T11:58:47+00:00"
+            "time": "2024-11-04T13:37:59+00:00"
         },
         {
             "name": "os2web/os2web_contact",
