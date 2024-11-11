@@ -47,9 +47,9 @@
         "drupal/config_delete": "^2.0",
         "drupal/content_access": "^2.0",
         "drupal/content_moderation_notifications": "^3.6",
-        "drupal/core-composer-scaffold": "10.2.7",
-        "drupal/core-project-message": "10.2.7",
-        "drupal/core-recommended": "10.2.7",
+        "drupal/core-composer-scaffold": "~10.3.7",
+        "drupal/core-project-message": "~10.3.7",
+        "drupal/core-recommended": "~10.3.7",
         "drupal/crop": "^2.4",
         "drupal/csv_importer": "^1.16",
         "drupal/drush_language": "^1.0@RC",
@@ -112,7 +112,7 @@
         "drupal/symfony_mailer_lite": "^2.0",
         "drupal/tamper": "^1.0@alpha",
         "drupal/token": "^1.15",
-        "drupal/typed_data": "^2.0",
+        "drupal/typed_data": "^2.1",
         "drupal/user_delete_reassign": "1.x-dev@dev",
         "drupal/user_display_name": "^1.1",
         "drupal/video": "^3.0",
@@ -168,7 +168,8 @@
             "drupal/console-extend-plugin": true,
             "cweagans/composer-patches": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "simplesamlphp/composer-xmlprovider-installer": true
         },
         "sort-packages": true
     },
