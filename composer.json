@@ -62,7 +62,7 @@
         "drupal/facets": "^2.0",
         "drupal/fakeobjects": "^1.2",
         "drupal/fancy_file_delete": "^2.0",
-        "drupal/feeds": "^3.0@beta",
+        "drupal/feeds": "^3.0@RC",
         "drupal/feeds_ex": "^1.0@beta",
         "drupal/feeds_tamper": "dev-2.x",
         "drupal/field_group": "^3.6",
