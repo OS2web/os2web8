@@ -1,0 +1,21 @@
+{
+    "name": "drupal/popular_search_keywords",
+    "description": "This produle provides a block with a list of the popular search keywords in the site.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/popular_search_keywords",
+    "authors": [
+        {
+            "name": "poorva",
+            "homepage": "https://www.drupal.org/u/poorva",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/popular_search_keywords",
+        "source": "https://cgit.drupalcode.org/popular_search_keywords"
+    },
+    "require": {
+        "drupal/search_api": "^8 || ^9"
+    },
+    "license": "GPL-2.0-or-later"
+}

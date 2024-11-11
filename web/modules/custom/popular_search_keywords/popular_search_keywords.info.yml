@@ -1,0 +1,9 @@
+name: Popular Search Keywords
+description: "This module provides a block with a list of the popular search keywords in the site."
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: Search
+
+dependencies:
+  - search_api:search_api

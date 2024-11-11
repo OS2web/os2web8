@@ -1,0 +1,6 @@
+popular_search_keywords.flush_search:
+  title: 'Flush Popular Search Keywords'
+  description: 'Clear popular search keywords.'
+  route_name: popular_search_keywords.popular_search
+  parent: system.admin_config_search
+  weight: 0

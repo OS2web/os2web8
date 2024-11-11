@@ -1,0 +1,19 @@
+popular_search_keywords.popular_search:
+  path: '/admin/config/search/popular-search-keywords'
+  defaults:
+    _form: '\Drupal\popular_search_keywords\Form\FlushPopularSearchForm'
+    _title: 'Flush popular search keywords'
+  requirements:
+    _permission: 'access_all_views'
+  options:
+    _admin_route: TRUE
+
+popular_search_keywords.popular_search_delete:
+  path: '/admin/config/search/delete-popular-search-keywords'
+  defaults:
+    _form: '\Drupal\popular_search_keywords\Form\PopularSearchDeleteForm'
+    _title: 'Flush popular search'
+  requirements:
+    _permission: 'access_all_views'
+  options:
+    _admin_route: TRUE

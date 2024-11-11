@@ -1,0 +1,4 @@
+popular_search_keywords.search_task:
+  route_name: popular_search_keywords.popular_search
+  title: Flush search
+  base_route: popular_search_keywords.popular_search
