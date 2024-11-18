@@ -32,10 +32,10 @@
 }
 
 .banner {
-  min-height: 250px;
   position: relative;
-}
+  @media only screen and (max-width: 768px) {min-height: 250px !important;}
 
+}
 .banner .container .banner__actions {
   margin-bottom: 0;
 }

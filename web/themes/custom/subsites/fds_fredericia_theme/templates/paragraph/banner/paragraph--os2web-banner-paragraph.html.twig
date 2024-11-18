@@ -5,8 +5,11 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
+
+{% set banner_height_type = content.field_banner_type_height[0]['#markup'] == '600px' ? '600px' : '350px' %}
+
 {% block paragraph %}
-    <div{{ attributes.addClass(classes) }} {% if background_image and not paragraph.field_os2web_banner_video.value %} style="background-image: url({{ background_image }})" {% endif %}>
+    <div{{ attributes.addClass(classes) }} style="{% if background_image and not paragraph.field_os2web_banner_video.value %}background-image: url({{ background_image }}); {% endif %} min-height: {{ banner_height_type }}; ">
         <div class="container">
             {% block content %}
                 {% if paragraph.field_os2web_banner_heading.value or paragraph.field_os2web_banner_subheading.value or paragraph.field_os2web_banner_body.value or paragraph.field_os2web_banner_links.value %}
