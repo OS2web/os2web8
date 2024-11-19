@@ -788,7 +788,6 @@ function fds_fredericia_main_theme_fetch_latest_events($limit = 4) {
   $query = \Drupal::entityQuery('node')
     ->condition('status', 1)
     ->condition('type', 'os2web_event')
-    ->condition('field_os2web_event_start_date', $current_date_string, '>=')
     ->condition('field_os2web_event_end_date', $current_date_string, '>=')
     ->sort('field_os2web_event_start_date', 'ASC')
     ->range(0, $limit);
