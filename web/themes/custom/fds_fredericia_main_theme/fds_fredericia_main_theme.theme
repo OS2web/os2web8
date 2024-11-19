@@ -794,7 +794,7 @@ function fds_fredericia_main_theme_fetch_latest_events($limit = 4) {
     ->range(0, $limit); // Limit the number of results
   $nids = $query->execute();
 
-return \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
+  return Node::loadMultiple($nids);
 }
 
 function fds_fredericia_main_theme_preprocess_paragraph__events_slider(&$variables) {
