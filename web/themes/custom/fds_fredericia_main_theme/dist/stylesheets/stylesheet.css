@@ -16443,6 +16443,9 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 .paragraph--type--os2web-accordion-item .accordion-content .paragraph--type--os2web-slideshow, .paragraph--type--os2web-accordion-item .tabnav-panel .paragraph--type--os2web-slideshow {
   margin-bottom: 15px !important;
 }
+.paragraph--type--os2web-accordion-item .accordion-content .paragraph--type--os2web-box-paragraph, .paragraph--type--os2web-accordion-item .tabnav-panel .paragraph--type--os2web-box-paragraph {
+  margin-bottom: 15px;
+}
 
 .accordion-close-button {
   display: block;
