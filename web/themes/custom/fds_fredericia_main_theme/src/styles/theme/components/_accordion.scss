@@ -166,6 +166,14 @@
     .paragraph--type--os2web-slideshow {
       margin-bottom: 15px !important;
     }
+
+    .paragraph--type-os2web-box-paragraph.background-color--secondary, paragraph--type-os2web-box-paragraph.background-color--primary, paragraph--type-os2web-box-paragraph.background-color--tertiary {
+      h1, h2, h3, h4, h5, h6, span, p, li, a  {
+        color: white;
+      }
+    }
+
+
   }
 }
 
