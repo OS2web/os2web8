@@ -17330,6 +17330,45 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   text-decoration: underline;
 }
 
+.paragraph--type--os2web-box-paragraph.background-color--primary .box__heading .field--name-field-os2web-box-heading h2 {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--primary .box__body p, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body h1, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body h2, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body h3, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body h4, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body h5, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body h6, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body span, .paragraph--type--os2web-box-paragraph.background-color--primary .box__body a {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--primary .box__body li {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--primary .box__body li:before {
+  color: white;
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--secondary .box__heading .field--name-field-os2web-box-heading h2 {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--secondary .box__body p, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body h1, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body h2, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body h3, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body h4, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body h5, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body h6, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body span, .paragraph--type--os2web-box-paragraph.background-color--secondary .box__body a {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--secondary .box__body li {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--secondary .box__body li:before {
+  color: white;
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--tertiary .box__heading .field--name-field-os2web-box-heading h2 {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body p, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body h1, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body h2, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body h3, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body h4, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body h5, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body h6, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body span, .paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body a {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body li {
+  color: white;
+}
+.paragraph--type--os2web-box-paragraph.background-color--tertiary .box__body li:before {
+  color: white;
+}
+
 main.col-lg-8 .fredericia-menu-link-wrapper {
   display: grid;
   grid-gap: 20px;

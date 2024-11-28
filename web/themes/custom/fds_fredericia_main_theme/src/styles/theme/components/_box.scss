@@ -21,6 +21,77 @@
 // --------------------------------------------------
 
 
+
+.paragraph--type--os2web-box-paragraph.background-color--primary {
+  .box__heading {
+    .field--name-field-os2web-box-heading {
+      h2 {
+        color: white;
+      }
+    }
+  }
+  .box__body {
+    p, h1, h2, h3, h4, h5, h6, span, a {
+      color: white;
+    }
+
+    li {
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+  }
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--secondary {
+  .box__heading {
+    .field--name-field-os2web-box-heading {
+      h2 {
+        color: white;
+      }
+    }
+  }
+  .box__body {
+    p, h1, h2, h3, h4, h5, h6, span, a {
+      color: white;
+    }
+
+    li {
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+  }
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--tertiary {
+  .box__heading {
+    .field--name-field-os2web-box-heading {
+      h2 {
+        color: white;
+      }
+    }
+  }
+  .box__body {
+    p, h1, h2, h3, h4, h5, h6, span, a {
+      color: white;
+    }
+
+    li {
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+  }
+}
+
+
 main.col-lg-8 {
   .fredericia-menu-link-wrapper {
     display: grid;
