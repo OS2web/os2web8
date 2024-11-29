@@ -166,6 +166,16 @@
               }
             }
           }
+          a {
+            background-color: #00335b;
+            border-color: #00335b;
+            color: white;
+
+            &:hover {
+              background-color: rgba(0, 51, 91, 0.9);
+              border-color: rgba(0, 51, 91, 0.9);
+            }
+          }
         }
       }
       &.button-lightblue {
@@ -180,6 +190,16 @@
                 background-color: rgba(170, 191, 207, 0.9);
                 border-color: rgba(170, 191, 207, 0.9);
               }
+            }
+          }
+          a {
+            background-color: #aabfcf;
+            border-color: #aabfcf;
+            color: #00335b;
+
+            &:hover {
+              background-color: rgba(170, 191, 207, 0.9);
+              border-color: rgba(170, 191, 207, 0.9);
             }
           }
         }
@@ -198,11 +218,31 @@
               }
             }
           }
+          a {
+            background-color: #9D0425;
+            border-color: #9D0425;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(157, 4, 37, 0.9);
+              border-color: rgba(157, 4, 37, 0.9);
+            }
+          }
         }
       }
       &.button-lightred {
         .field--name-field-fifty-fifty-link {
           .field__item {
+            a {
+              background-color: #F3E7E7;
+              border-color: #F3E7E7;
+              color: #9d0425;
+
+              &:hover {
+                background-color: rgba(243, 231, 231, 0.9);
+                border-color: rgba(243, 231, 231, 0.9);
+              }
+            }
             a {
               background-color: #F3E7E7;
               border-color: #F3E7E7;
@@ -219,6 +259,16 @@
       &.button-black {
         .field--name-field-fifty-fifty-link {
           .field__item {
+            a {
+              background-color: #000;
+              border-color: #000;
+              color: #fff;
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.9);
+                border-color: rgba(0, 0, 0, 0.9);
+              }
+            }
             a {
               background-color: #000;
               border-color: #000;
