@@ -185,9 +185,16 @@ function fds_redwhite_theme_preprocess_views_view_summary(&$variables) {
     case 'field_os2web_news_section_target_id':
       /** @var \Drupal\views\ResultRow $row */
       foreach ($variables['rows'] as $rid => $row) {
-        /** @var Term $term */
-        if (is_string($row->link) && (int) $row->link && $term = Term::load($row->link)) {
-          $row->link = $term->label();
+        if (is_string($row->link)) {
+          if (intval($row->link)) {
+            /** @var Term $term */
+            if ($term = Term::load(intval($row->link))) {
+              $row->link = $term->label();
+            }
+            else {
+              unset($variables['rows'][$rid]);
+            }
+          }
         }
         else {
           unset($variables['rows'][$rid]);
