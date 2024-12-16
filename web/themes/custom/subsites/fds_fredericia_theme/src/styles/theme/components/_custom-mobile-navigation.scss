@@ -27,7 +27,7 @@ $distance-from-top: 78px;
 .custom-mobile-navigation-toggle {
   position: absolute;
 
-  top: $distance-from-top;
+  top: 70px;
   right: 10px;
 
   height: 50px;
@@ -41,6 +41,9 @@ $distance-from-top: 78px;
 
   color: $background-color__navigation;
   background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .toolbar-vertical & {
     top: 70px;
