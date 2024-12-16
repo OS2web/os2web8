@@ -372,6 +372,34 @@ body .page-container {
   }
 }
 
+.paragraph--type--os2web-box-paragraph.background-color--primary {
+  background-color: $background_color__primary !important;
+  color: #000 !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span {
+    color: #000;
+  }
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--secondary {
+  color: #fff !important;
+  background-color: $background_color__secondary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span {
+    color: #fff;
+  }
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--tertiary {
+  color: #fff !important;
+  background-color: $background_color__tertiary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span {
+    color: #fff;
+  }
+}
+
+
 // Remove max-width on all text elements.
 body {
 
