@@ -79,16 +79,16 @@
   &.background-color--secondary,
   &.background-color--tertiary {
 
-    &, p, h1, h2, h3, h4, h5, h6 {
-      color: #fff;
-    }
+    // &, p, h1, h2, h3, h4, h5, h6 {
+    //  color: #fff;
+   // }
 
     a {
       outline-color: $color-primary;
 
-      &, &:active, &:visited, &:focus {
-        color: #fff;
-      }
+    //  &, &:active, &:visited, &:focus {
+    //    color: #fff;
+    //  }
     }
 
     .paragraph--type--os2web-news-block {
