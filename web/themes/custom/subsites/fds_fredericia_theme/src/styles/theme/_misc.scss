@@ -350,14 +350,26 @@ body .page-container {
 .background-color--primary {
   background-color: $background_color__primary !important;
   color: #000 !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span {
+    color: #000;
+  }
 }
 .background-color--secondary {
   color: #fff !important;
   background-color: $background_color__secondary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span {
+    color: #fff;
+  }
 }
 .background-color--tertiary {
   color: #fff !important;
   background-color: $background_color__tertiary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span {
+    color: #fff;
+  }
 }
 
 // Remove max-width on all text elements.
