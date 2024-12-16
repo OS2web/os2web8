@@ -27,7 +27,7 @@ $distance-from-top: 78px;
 .custom-mobile-navigation-toggle {
   position: absolute;
 
-  top: 70px;
+  top: 30px;
   right: 10px;
 
   height: 50px;
@@ -46,7 +46,7 @@ $distance-from-top: 78px;
   justify-content: center;
 
   .toolbar-vertical & {
-    top: 70px;
+    top: 30px;
   }
 
   .fa-angle-down {
