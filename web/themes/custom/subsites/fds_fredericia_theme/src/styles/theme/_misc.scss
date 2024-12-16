@@ -349,14 +349,14 @@ body .page-container {
 
 .background-color--primary {
   background-color: $background_color__primary !important;
-  color: #000;
+  color: #000 !important;
 }
 .background-color--secondary {
-  color: #fff;
+  color: #fff !important;
   background-color: $background_color__secondary !important;
 }
 .background-color--tertiary {
-  color: #fff;
+  color: #fff !important;
   background-color: $background_color__tertiary !important;
 }
 
