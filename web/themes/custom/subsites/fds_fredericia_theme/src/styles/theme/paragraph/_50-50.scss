@@ -348,6 +348,8 @@
   .field--name-field-fifty-fifty-desc {
     ul {
       li::before {
+        content: '\f061';
+        font-family: FontAwesome;
         color: $bullet_color__primary !important;
       }
     }
@@ -357,6 +359,8 @@
   .field--name-field-fifty-fifty-desc {
     ul {
       li::before {
+        content: '\f061';
+        font-family: FontAwesome;
         color: $bullet_color__secondary !important;
       }
     }
@@ -366,6 +370,8 @@
   .field--name-field-fifty-fifty-desc {
     ul {
       li::before {
+        content: '\f061';
+        font-family: FontAwesome;
         color: $bullet_color__tertiary !important;
       }
     }
