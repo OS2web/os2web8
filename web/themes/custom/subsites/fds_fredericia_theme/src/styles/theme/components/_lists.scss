@@ -70,6 +70,26 @@
 //  }
 //}
 
+.bullet-primary .field--type-text-long ul li::before {
+  content: '\f061';
+  font-family: FontAwesome;
+  color: $bullet_color__primary;
+}
+
+.bullet-secondary .field--type-text-long ul li::before {
+  content: '\f061';
+  font-family: FontAwesome;
+  color: $bullet_color__secondary;
+}
+
+.bullet-tertiary .field--type-text-long ul li::before {
+  content: '\f061';
+  font-family: FontAwesome;
+  color: $bullet_color__tertiary;
+}
+
+
+
   // --------------------------------------------------
   // Responsive
   // --------------------------------------------------
