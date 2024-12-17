@@ -345,19 +345,31 @@
 }
 
 .bullet-primary {
-  li::before {
-      color: $bullet_color__primary;
+  .field--name-field-fifty-fifty-desc {
+    ul {
+      li::before {
+        color: $bullet_color__primary;
+      }
     }
+  }
 }
 .bullet-secondary {
-  li::before {
-      color: $bullet_color__secondary;
+  .field--name-field-fifty-fifty-desc {
+    ul {
+      li::before {
+        color: $bullet_color__secondary;
+      }
     }
+  }
 }
 .bullet-tertiary {
-  li::before {
-      color: #ad3;
+  .field--name-field-fifty-fifty-desc {
+    ul {
+      li::before {
+        color: $bullet_color__tertiary;
+      }
     }
+  }
 }
 
 .text-align-center {
