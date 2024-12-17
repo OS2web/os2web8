@@ -36,7 +36,7 @@
     </h2>
     <div class="node__content">
         <div class="field--name-field-os2web-news-article-date">
-          {{ content.field_os2web_news_article_date }}
+          {{ news.field_os2web_news_article_date.value|date('U')|format_date('custom', 'j. F Y') }}
         </div>
         <div class="field field--name-field-os2web-news-intro">
           <p>
