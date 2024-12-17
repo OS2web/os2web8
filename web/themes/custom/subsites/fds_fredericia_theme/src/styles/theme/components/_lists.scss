@@ -20,73 +20,56 @@
 // Styling
 // --------------------------------------------------
 
-//.accordion-content,
-//.field--name-field-os2web-page-keyword,
-//.field--type-text-long {
-//
-//  &:not(.field--widget-text-textarea) {
-//
-//    ul {
-//      padding-left: 0;
-//      list-style-type: none;
-//      color: inherit;
-//      line-height: $body-text-line-height;
-//
-//      li {
-//        margin-top: map-get($spacers, 3);
-//        list-style-type: none;
-//        position: relative;
-//        padding-left: 30px !important;
-//        line-height: $body-text-line-height;
-//
-//        &::before {
-//          content: "■";
-//          position: absolute;
-//          left: 5px;
-//          top: -1px;
-//          font-size: 20px;
-//          color: $color__bullets;
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//.field--type-text-long {
-//
-//  a {
-//    font-weight: $font-weight-bold;
-//    text-decoration: none;
-//  }
-//}
-//
-//
-//ul {
-//  li:before {
-//    top: -1px !important;
-//    left: 0px !important;
-//    color: $color__bullets;
-//    font-size: 22px !important;
-//  }
-//}
+.accordion-content,
+.field--name-field-os2web-page-keyword,
+.field--type-text-long {
 
-.bullet-primary .field--type-text-long ul li::before {
-  content: '\f061';
-  font-family: FontAwesome;
-  color: $bullet_color__primary;
+  &:not(.field--widget-text-textarea) {
+
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+      color: inherit;
+      line-height: $body-text-line-height;
+
+      li {
+        margin-top: map-get($spacers, 3);
+        list-style-type: none;
+        position: relative;
+        padding-left: 30px !important;
+        line-height: $body-text-line-height;
+
+        &::before {
+          content: "■";
+          position: absolute;
+          left: 5px;
+          top: -1px;
+          font-size: 20px;
+          color: $color__bullets;
+        }
+      }
+    }
+  }
 }
 
-.bullet-secondary .field--type-text-long ul li::before {
-  content: '\f061';
-  font-family: FontAwesome;
-  color: $bullet_color__secondary;
+.field--type-text-long {
+
+  a {
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+  }
 }
 
-.bullet-tertiary .field--type-text-long ul li::before {
-  content: '\f061';
-  font-family: FontAwesome;
-  color: $bullet_color__tertiary;
+
+ul {
+  li:before {
+    top: -1px !important;
+    left: 0px !important;
+    color: $color__bullets;
+    font-size: 22px !important;
+  }
 }
+
 
 
 
