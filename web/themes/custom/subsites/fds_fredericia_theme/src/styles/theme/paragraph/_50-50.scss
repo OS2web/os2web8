@@ -324,6 +324,27 @@
         }
       }
     }
+    &.bullet-primary {
+      li {
+        &::before {
+          color: $bullet_color__primary;
+        }
+      }
+    }
+    &.bullet-secondary {
+      li {
+        &::before {
+          color: $bullet_color__secondary;
+        }
+      }
+    }
+    &.bullet-tertiary {
+      li {
+        &::before {
+          color: $bullet_color__tertiary;
+        }
+      }
+    }
   }
 
   // Classes for positioning the image on the left or right

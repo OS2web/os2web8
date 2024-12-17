@@ -16,6 +16,9 @@ $info = [
     'color__link__hover' => t('Link:hover color'),
     'color__footer_link' => t('Footer link color'),
     'color__bullets' => t('Bullets color'),
+    'bullet_color__primary' => t('Bullets color primary (50/50 paragraph)'),
+    'bullet_color__secondary' => t('Bullets color secondary (50/50 paragraph)'),
+    'bullet_color__tertiary' => t('Bullets color tertiary (50/50 paragraph)')
   ],
 
   // Pre-defined color schemes.
@@ -36,6 +39,9 @@ $info = [
         'color__link__hover' => '#01233e',
         'color__footer_link' => '#6dcff6',
         'color__bullets' => '#a5122f',
+        'bullet_color__primary' => '#000000',
+        'bullet_color__secondary' => '#ffffff',
+        'bullet_color__tertiary' => '#ff0000'
       ],
     ],
   ],
