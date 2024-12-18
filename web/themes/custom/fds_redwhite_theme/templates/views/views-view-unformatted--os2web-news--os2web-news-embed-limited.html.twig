@@ -12,7 +12,7 @@
         <div class="entity-teaser__body">
           <h3 class="h4">{{ news.title.value }}</h3>
           <div class="field--name-field-os2web-news-article-date">
-            {{ news.created.value|format_date('os2core_date_medium') }}
+            {{ news.field_os2web_news_article_date.value|date('U')|format_date('custom', 'j. F Y') }}
           </div>
           <div class="field field--type-body">
             {{- news.field_os2web_news_intro.value -}}
