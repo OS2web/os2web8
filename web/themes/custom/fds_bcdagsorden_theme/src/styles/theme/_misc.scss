@@ -41,10 +41,13 @@ body a {
 
 .button {
   font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
 
   &.form-submit {
-    color: $button-primary-color;
-    background-color: $button-primary-bg;
+    color: white;
+    background-color: #353535;
     border-color: $button-primary-border-color;
 
     &:hover,
@@ -151,7 +154,23 @@ svg.ext {
 
   .form-item-from-date,
   .form-item-to-date {
-    max-width: 130px;
+    width: 45%;
+
+    @media only screen and (max-width: 598px) {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .form-item-ud {
+    width: 45%;
+
+    @media only screen and (max-width: 598px) {
+      width: 100%;
+    }
   }
 
   .form-actions {
@@ -449,7 +468,6 @@ body.page-node-type-os2web-page {
 
     .form-item-from-date,
     .form-item-to-date {
-      max-width: 200px;
     }
 
     .form-type-select {

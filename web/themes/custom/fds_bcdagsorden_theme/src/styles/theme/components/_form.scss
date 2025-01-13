@@ -39,7 +39,8 @@ $custom-input-left-right-padding: 20px;
   + label {
 
     &:before {
-      border-color: $color-orange-004;
+      border-color: #353535;
+      top: 0;
     }
   }
 
@@ -48,7 +49,7 @@ $custom-input-left-right-padding: 20px;
     + label {
 
       &:before {
-        background-color: $color-orange-004;
+        background-color: #353535;
       }
     }
   }
