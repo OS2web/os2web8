@@ -36,7 +36,15 @@ footer {
     .is-active > a:focus,
     .is-active > a:visited,
     .is-active > a:active {
-      color: #6dcff6 !important;
+      color: white !important;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .block {
@@ -56,7 +64,6 @@ footer {
     }
 
     a {
-      text-decoration: underline;
 
       &:focus {
         outline-color: $color-orange-004;
