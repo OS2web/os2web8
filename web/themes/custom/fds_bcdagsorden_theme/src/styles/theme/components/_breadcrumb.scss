@@ -21,8 +21,11 @@
 // --------------------------------------------------
 
 .breadcrumb {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
 
   li {
     display: inline-block;
@@ -44,7 +47,7 @@
     }
 
     &:first-child {
-      display: none;
+      width: 20px;
     }
 
     &:nth-child(2) {
