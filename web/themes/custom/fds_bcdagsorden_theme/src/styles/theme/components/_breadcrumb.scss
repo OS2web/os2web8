@@ -47,7 +47,7 @@
     }
 
     &:first-child {
-      width: 20px;
+
     }
 
     &:nth-child(2) {
@@ -60,8 +60,12 @@
 
   a {
     font-size: $small-font-size;
+    color: #353535;
 
-    &, &:hover, &:visited {
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
       text-decoration: none;
     }
   }
