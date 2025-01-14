@@ -152,21 +152,58 @@ svg.ext {
   box-shadow: 0 1px 2px 0 rgba(27, 27, 29, .2);
   background-color: #fff;
 
+  .form--inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media only screen and (max-width: 1087px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
   .form-item-from-date,
   .form-item-to-date {
-    width: 45%;
+    width: 35%;
+    display: flex;
+    margin: 0;
 
-    @media only screen and (max-width: 598px) {
+    @media only screen and (max-width: 1087px) {
       width: 100%;
+      display: block;
     }
 
     input {
       width: 100%;
+      height: 38px;
+      border-radius: 4px;
+      border: 1px solid #353535;
+    }
+
+    label {
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+      margin-right: 10px;
     }
   }
 
   .form-item-ud {
-    width: 45%;
+    width: 71%;
+    display: flex;
+
+    @media only screen and (max-width: 1087px) {
+      width: 100%;
+      display: block;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      margin-right: 10px;
+    }
 
     @media only screen and (max-width: 598px) {
       width: 100%;
@@ -176,7 +213,18 @@ svg.ext {
   .form-actions {
     margin-bottom: 0;
 
+    width: 28%;
     text-align: right;
+
+    @media only screen and (max-width: 1087px) {
+      width: 100%;
+    }
+
+    input {
+      @media only screen and (max-width: 1087px) {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -405,10 +453,6 @@ body {
 
   .section--social-icon-teasers {
     display: block;
-  }
-
-  .layout--hidden-on-sections {
-    display: none !important;
   }
 }
 
