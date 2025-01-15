@@ -150,3 +150,26 @@ function fds_bcdagsorden_theme_preprocess_menu(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements template_preprocess_symfony_mailer_lite_email().
+ */
+function fds_bcdagsorden_theme_preprocess_symfony_mailer_lite_email(&$variables) {
+  global $base_url;
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $theme = \Drupal::theme()->getActiveTheme();
+  $theme_path = $base_url . '/' . $theme->getPath();
+
+  // Theme settings.
+  $theme_settings = _fds_base_theme_collect_theme_settings();
+  $variables['current_language'] = $language;
+  $variables['base_url'] = $GLOBALS['base_url'] . '/';
+  $variables['logo_url'] = $theme_path . '/dist/images/logo.png';
+  $variables['theme_settings'] = $theme_settings;
+
+  // Header logo.
+  $logo = theme_get_setting('logo');
+  if (!empty( $logo ) && !empty($logo['url'])) {
+    $variables['logo_url'] = $GLOBALS['base_url'] . $logo['url'];
+  }
+}
