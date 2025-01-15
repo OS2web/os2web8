@@ -1,0 +1,300 @@
+// |--------------------------------------------------------------------------
+// | File
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .file
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin file-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.field--name-field-edoc-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+
+.field--name-field-os2web-files-heading {
+  h2 {
+    color: #00335b;
+    margin: 0 0 20px 0;
+  }
+}
+
+
+.files-default-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #00335b;
+  margin: 0 0 20px 0;
+}
+
+#show-more-files {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #00335b;
+  margin-top: 10px;
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#show-more-files-edoc {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #00335b;
+  margin-top: 10px;
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.documents-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 80px;
+
+  .esdh-documents, .directly-referenced-documents, .os2web-files, .os2web-media-files {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .field--name-field-document-reference {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+.file {
+  display: flex;
+  background-image: none;
+  padding: 0;
+  border-radius: 3px;
+  position: relative;
+  background-color: white;
+  color: #00335b;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ddd;
+  transition: .3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  &.hovered {
+    background-color: #00335b;
+  }
+
+  a {
+
+    width: 93%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #00335b;
+    overflow: hidden;
+    padding: 12px;
+    transition: .3s ease;
+
+    &:visited {
+      color: #00335b;
+    }
+    &:hover {
+      color: white;
+    }
+
+
+    &:after {
+      content: '\f019';
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "FontAwesome";
+      font-size: 22px;
+      position: absolute;
+    }
+  }
+
+}
+
+.field--type-file {
+
+  > .field__items,
+  &.field__items {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  > .field__items > .field__item,
+  > .field__item {
+
+    // Column.
+    position: relative;
+    width: 100%;
+    min-height: 1px; // Prevent columns from collapsing when empty
+
+    @include grid-col(12, 12);
+  }
+}
+
+.entity-paragraph-display--esdh-document, .entity-default--esdh-document {
+  h2 {
+    display: none;
+  }
+  .node__meta {
+    display: none;
+  }
+}
+
+.hearings-edoc-wrapper {
+  h2 {
+    color: #00335b;
+    margin: 0 0 20px 0;
+  }
+  .field--name-field-hoering-doc-ref {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+.hearings-documents {
+  h2 {
+    color: #00335b;
+    margin: 0 0 20px 0;
+  }
+  .attached-documents {
+    a {
+      display: flex;
+      background-image: none;
+      padding: 12px;
+      border-radius: 3px;
+      position: relative;
+      background-color: white;
+      color: #00325b;
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 14px;
+      width: 100%;
+      border: 1px solid #dddddd;
+      -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      font-weight: normal;
+
+      &:after {
+        content: "\f019";
+        right: 20px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-family: "FontAwesome";
+        font-size: 22px;
+        position: absolute;
+      }
+    }
+  }
+
+  .referenced-documents {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+#show-more-files-hearings {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: rgb(0, 50, 91);
+  margin-top: 10px;
+  width: fit-content;
+}
+
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {
+
+  .file {
+    box-shadow: none;
+
+    border: 1px solid #000;
+  }
+
+  .field--type-file {
+
+    > .field__items > .field__item,
+    > .field__item {
+      @include grid-col(6, 12);
+    }
+  }
+}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

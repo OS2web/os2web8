@@ -1,0 +1,35 @@
+<div class="cta-section-wrapper">
+
+  <div class="container">
+
+    <div class="cta-inner-wrapper">
+
+      <div class="cta-heading">
+        <h2>{{ paragraph.field_cta_heading.value }}</h2>
+      </div>
+
+      <div class="cta-btn-content">
+
+        {% for cta_link in paragraph.field_cta_links %}
+          {% set is_hidden = loop.index > 4 ? 'hidden' : '' %}
+
+          <a title="{{ cta_link.url }}" href="{{ cta_link.url }}" class="cta-link {{ is_hidden }}">
+            <div class="cta-link-content">
+              <div class="cta-link-upper-text">
+                {{ cta_link.title }}
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+
+        {% if paragraph.field_cta_links|length > 4 %}
+          <button class="toggle-btn">+ Vis flere</button>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
