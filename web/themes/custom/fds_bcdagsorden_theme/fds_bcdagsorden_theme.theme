@@ -197,7 +197,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
     if (isset($form['email'])) {
       $form['email']['#attributes']['placeholder'] = t('Indtast din e-mail...');
     }
-     if (isset($form['actions']['submit'])) {
+     if (isset($form['op']['submit'])) {
 
           $form['op']['#weight'] = 49;
         }
