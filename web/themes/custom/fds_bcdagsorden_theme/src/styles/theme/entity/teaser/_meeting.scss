@@ -162,8 +162,18 @@ a.entity-teaser--os2web-meetings-meeting {
   }
 }
 
+.meeting-row {
+  @media only screen and (max-width: 768px) {
+    gap: 20px;
+  }
+}
+
 .meeting-type-wrapper {
   flex-basis: 33%;
+
+  @media only screen and (max-width: 768px) {
+    flex-basis: 100%;
+  }
   .meeting-type {
 
     .field--name-field-os2web-m-type {
@@ -184,6 +194,11 @@ a.entity-teaser--os2web-meetings-meeting {
 
 .meeting-time-wrapper {
   flex-basis: 33%;
+
+  @media only screen and (max-width: 768px) {
+    flex-basis: 100%;
+    padding-left: 14px;
+  }
   .meeting-time-header {
     color: gray;
     font-size: 14px;
@@ -198,6 +213,11 @@ a.entity-teaser--os2web-meetings-meeting {
 
 .meeting-teaser-lokation-wrapper {
   flex-basis: 33%;
+
+  @media only screen and (max-width: 768px) {
+    flex-basis: 100%;
+    padding-left: 14px;
+  }
   .meeting-lokation-header {
     color: gray;
     font-size: 14px;
