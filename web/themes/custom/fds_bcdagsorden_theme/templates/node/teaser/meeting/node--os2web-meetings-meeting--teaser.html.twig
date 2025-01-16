@@ -15,7 +15,7 @@
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date">
     <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__month">
       {% if timestamp %}
-        {{ timestamp | date('d') }}
+        {{ timestamp | date('d.') }}
       {% endif %}
     </span>
     <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__date">
@@ -28,20 +28,29 @@
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__content">
     <div class="row">
 
-      <div class="col col--align-center">
+      <div class="col col--align-center meeting-type-wrapper">
         <div class="meeting-type">
           {{ content.field_os2web_m_type }}
         </div>
         {{ content.field_os2web_m_committee }}
       </div>
 
+      <div class="meeting-teaser-lokation-wrapper">
+        <div class="meeting-lokation-header">
+          Mødested
+        </div>
+        <div class="meeting-teaser-lokation">
+          {{ content.field_os2web_m_location }}
+        </div>
+      </div>
+
       <div class="meeting-time-wrapper">
         <div class="meeting-time-header">
-          Dato:
+          Dato
         </div>
         <div class="meeting-teaser-time">
           {% if timestamp %}
-            {{ timestamp|format_date('custom', 'd. F, Y - H:i') }}
+            {{ timestamp|format_date('custom', 'd. F Y - H:i') }}
           {% endif %}
         </div>
       </div>

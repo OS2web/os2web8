@@ -162,16 +162,44 @@ a.entity-teaser--os2web-meetings-meeting {
   }
 }
 
-.meeting-type {
-  color: gray;
-  font-size: 14px;
-  font-weight: 300;
+.meeting-type-wrapper {
+  flex-basis: 33%;
+  .meeting-type {
+
+    .field--name-field-os2web-m-type {
+      h3 {
+        font-size: 14px;
+        font-weight: 300;
+        color: gray;
+      }
+    }
+
+  }
+
+  .field--name-field-os2web-m-committee {
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
+
 
 .meeting-time-header {
   color: gray;
   font-size: 14px;
   font-weight: 300;
+}
+
+.meeting-teaser-lokation-wrapper {
+  .meeting-lokation-header {
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .meeting-teaser-lokation {
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
 
 // --------------------------------------------------
