@@ -114,6 +114,54 @@ a.entity-teaser--os2web-meetings-meeting {
   }
 }
 
+.meetings-udvalg {
+  margin-bottom: 20px;
+
+  .udvalg-heading {
+    font-weight: 400;
+    font-size: 14px;
+    margin:0;
+  }
+
+  .udvalg-term {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.meetings-date {
+  margin-bottom: 20px;
+
+  .date-heading {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .date-time {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.meetings-lokation {
+  margin-bottom: 20px;
+
+  .lokation-heading {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .field--name-field-os2web-m-location {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

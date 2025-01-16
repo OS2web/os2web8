@@ -12,22 +12,22 @@
   <h1>{{ label }}</h1>
 
   <div class="meetings-udvalg">
-    <p>Udvalg</p>
+    <p class="udvalg-heading">Udvalg</p>
     {% for item in node.field_os2web_m_committee %}
     {% set term = item.entity %}
-    <p>{{ term.label() }}</p>
+    <p class="udvalg-term">{{ term.label() }}</p>
     {% endfor %}
   </div>
 
   <div class="meetings-date">
-    <p>Mødedato</p>
+    <p class="date-heading">Mødedato</p>
     {% if timestamp %}
-      {{ timestamp | format_date('long') }}
+      <p class="date-time">{{ timestamp | format_date('long') }}</p>
     {% endif %}
   </div>
 
   <div class="meetings-lokation">
-    <p>Mødested</p>
+    <p class="lokation-heading">Mødested</p>
     {{ content.field_os2web_m_location }}
   </div>
 

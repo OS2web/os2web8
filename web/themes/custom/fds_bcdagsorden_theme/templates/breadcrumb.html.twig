@@ -15,17 +15,22 @@
         <li>
           {% if item.url %}
             <a href="{{ item.url }}">
-              {% if loop.index == 1 %}
+              {% if loop.first %}
                 Forside
               {% else %}
                 {{ item.text }}
               {% endif %}
             </a>
           {% else %}
-            {{ item.text }}
+            {% if loop.first %}
+              Forside
+            {% else %}
+              {{ item.text }}
+            {% endif %}
           {% endif %}
         </li>
       {% endfor %}
     </ol>
   </nav>
 {% endif %}
+
