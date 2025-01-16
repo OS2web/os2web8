@@ -10,15 +10,30 @@
 {% set timestamp = node.field_os2web_m_start_date.date|date('U') %}
 <div {{ attributes.addClass(classes) }}>
   <h1>{{ label }}</h1>
-  <div class="fields-inline">
-    <div class="field">
-      {% if timestamp %}
-        {{ timestamp | format_date('long') }}
-      {% endif %}
-    </div>
+
+  <div class="meetings-udvalg">
+    <p>Udvalg</p>
+    {% for item in content.field_os2web_m_comittee %}
+    {% set term = item.entity %}
+    <p>{{ term.label() }}</p>
+    {% endfor %}
   </div>
 
-  {{ content.field_os2web_m_location }}
+  <div class="meetings-date">
+    <p>Mødedato</p>
+    {% if timestamp %}
+      {{ timestamp | format_date('long') }}
+    {% endif %}
+  </div>
+
+  <div class="meetings-lokation">
+    <p>Mødested</p>
+    {{ content.field_os2web_m_location }}
+  </div>
+
+
+
+
 
   <br>
 
