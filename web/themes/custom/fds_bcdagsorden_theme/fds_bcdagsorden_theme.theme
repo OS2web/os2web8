@@ -177,7 +177,7 @@ function fds_bcdagsorden_theme_preprocess_symfony_mailer_lite_email(&$variables)
 
 function fds_bcdagsorden_theme_form_system_theme_settings_alter(&$form, &$form_state) {
   // Create a section for your link settings.
-  $form['bcdagsorsen_privacy'] = [
+  $form['bcdagsorden_privacy'] = [
     '#type' => 'details',
     '#title' => t('Privatpolitik indstillinger'),
     '#open' => TRUE,
@@ -214,7 +214,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               // Markup::create() ensures the string with <a> is interpreted as HTML.
               '#title' => Markup::create($title_text),
               '#required' => TRUE,
-              // '#weight' => 50, // If you want to move it lower or higher in the form.
+              // '#weight' => -1, // If you want to move it lower or higher in the form.
             ];
 
   }
