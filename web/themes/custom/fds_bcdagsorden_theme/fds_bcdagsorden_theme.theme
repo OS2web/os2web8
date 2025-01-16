@@ -200,25 +200,6 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
     $owner_name = theme_get_setting('business_owner_name');
     $privacy_link = theme_get_setting('privacy_policy_link');
 
-
-    $title_text = t(
-          // Notice we use @owner_name and @policy_link to be escaped automatically,
-          // plus 'html' => TRUE to allow the <a> tag to be rendered.
-          'Jeg accepterer, at @owner_name indsamler og behandler persondata som beskrevet i <a href="@policy_link" target="_blank">vores politik om databeskyttelse.</a>',
-          [
-            '@owner_name' => $owner_name,
-            '@policy_link' => $privacy_link,
-          ],
-          ['context' => 'default', 'html' => TRUE]
-        );
-
-        $form['terms_checkbox'] = [
-          '#type' => 'checkbox',
-          // Markup::create() ensures the string with <a> is interpreted as HTML.
-          '#title' => Markup::create($title_text),
-          '#required' => TRUE,
-          // '#weight' => 50, // If you want to move it lower or higher in the form.
-        ];
   }
 }
 
