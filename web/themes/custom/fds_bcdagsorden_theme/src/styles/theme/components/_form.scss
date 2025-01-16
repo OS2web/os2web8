@@ -249,6 +249,19 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 }
 .form-type-search-api-autocomplete {}
 
+.anonymous-subscription-taxonomy-terms-form {
+  label {
+    font-weight: 400;
+  }
+  input {
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

@@ -14,25 +14,39 @@
 <a tabindex="0" onclick="window.location='{{ url }}'" {{ attributes.addClass(classes) }}>
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date">
     <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__month">
-    {% if timestamp %}
-      {{ timestamp | date('M') | trans }}
-    {% endif %}
+      {% if timestamp %}
+        {{ timestamp | date('d') }}
+      {% endif %}
     </span>
     <span class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__date__date">
-    {% if timestamp %}
-      {{ timestamp | date('d') }}
-    {% endif %}
+      {% if timestamp %}
+        {{ timestamp | date('M') | trans }}
+      {% endif %}
     </span>
   </div>
 
   <div class="entity-{{ view_mode|clean_class }}--{{ node.bundle|clean_class }}__content">
     <div class="row">
+
       <div class="col col--align-center">
-        {% if timestamp %}
-          {{ timestamp | format_date('long') }}
-        {% endif %}
+        <div class="meeting-type">
+          {{ content.field_os2web_m_type }}
+        </div>
         {{ content.field_os2web_m_committee }}
       </div>
+
+      <div class="meeting-time-wrapper">
+        <div class="meeting-time-header">
+          Dato:
+        </div>
+        <div class="meeting-teaser-time">
+          {% if timestamp %}
+            {{ timestamp|format_date('custom', 'd. F, Y - H:i') }}
+          {% endif %}
+        </div>
+      </div>
+
+
     </div>
   </div>
 

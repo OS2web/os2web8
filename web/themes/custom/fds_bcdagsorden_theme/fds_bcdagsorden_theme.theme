@@ -214,7 +214,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               // Markup::create() ensures the string with <a> is interpreted as HTML.
               '#title' => Markup::create($title_text),
               '#required' => TRUE,
-              // '#weight' => -1, // If you want to move it lower or higher in the form.
+              '#weight' => -1,
             ];
 
   }
