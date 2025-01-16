@@ -5,6 +5,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_preprocess_page().
@@ -199,6 +200,22 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
 
     $owner_name = theme_get_setting('business_owner_name');
     $privacy_link = theme_get_setting('privacy_policy_link');
+
+    $title_text = t('Jeg accepterer, at @owner_name indsamler og behandler persondata som beskrevet i <a href="@policy_link" target="_blank">vores politik om databeskyttelse.</a>',
+              [
+                '@owner_name' => $owner_name,
+                '@policy_link' => $privacy_link,
+              ],
+              ['context' => 'default', 'html' => TRUE]
+            );
+
+            $form['terms_checkbox'] = [
+              '#type' => 'checkbox',
+              // Markup::create() ensures the string with <a> is interpreted as HTML.
+              '#title' => Markup::create($title_text),
+              '#required' => TRUE,
+              // '#weight' => 50, // If you want to move it lower or higher in the form.
+            ];
 
   }
 }
