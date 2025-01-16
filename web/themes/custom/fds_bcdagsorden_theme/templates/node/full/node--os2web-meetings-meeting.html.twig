@@ -13,7 +13,7 @@
 
   <div class="meetings-udvalg">
     <p>Udvalg</p>
-    {% for item in content.field_os2web_m_comittee %}
+    {% for item in node.field_os2web_m_comittee %}
     {% set term = item.entity %}
     <p>{{ term.label() }}</p>
     {% endfor %}
