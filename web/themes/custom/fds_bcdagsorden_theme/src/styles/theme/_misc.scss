@@ -149,15 +149,10 @@ svg.ext {
 
 #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates {
   margin-bottom: $grid-gutter-width / 2;
-  padding: 30px;
-
-  border-radius: 12px;
-  box-shadow: 0 1px 2px 0 rgba(27, 27, 29, .2);
-  background-color: #fff;
+  padding: 30px 0;
 
   .form--inline {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
 
     @media only screen and (max-width: 1087px) {
@@ -168,10 +163,8 @@ svg.ext {
 
   .form-item-from-date,
   .form-item-to-date {
-    width: 35%;
-    display: flex;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 0;
 
     @media only screen and (max-width: 1087px) {
       width: 100%;
@@ -182,9 +175,11 @@ svg.ext {
       width: 100%;
       height: 40px;
       border-radius: 6px;
-      border: 1px solid #353535;
+      border: none;
       padding-left: 10px;
       padding-right: 10px;
+      font-weight: 500;
+      color: #155E95;
     }
 
     label {
@@ -192,12 +187,11 @@ svg.ext {
       white-space: nowrap;
       align-items: center;
       min-width: 75px;
+      font-weight: normal;
     }
   }
 
   .form-item-ud {
-    width: 72.7%;
-    display: flex;
     margin: 0;
 
     @media only screen and (max-width: 1087px) {
@@ -210,6 +204,7 @@ svg.ext {
       align-items: center;
       white-space: nowrap;
       min-width: 75px;
+      font-weight: normal;
     }
 
     @media only screen and (max-width: 598px) {
@@ -217,6 +212,10 @@ svg.ext {
     }
     select {
       height: 40px;
+      margin: 0;
+      border: none;
+      color: #155e95;
+      font-weight: 500;
     }
   }
 
@@ -227,7 +226,7 @@ svg.ext {
     text-align: right;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     @media only screen and (max-width: 1087px) {
       width: 100%;
