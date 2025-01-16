@@ -182,14 +182,22 @@ a.entity-teaser--os2web-meetings-meeting {
   }
 }
 
-
-.meeting-time-header {
-  color: gray;
-  font-size: 14px;
-  font-weight: 300;
+.meeting-time-wrapper {
+  flex-basis: 33%;
+  .meeting-time-header {
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .meeting-teaser-time {
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
 
+
 .meeting-teaser-lokation-wrapper {
+  flex-basis: 33%;
   .meeting-lokation-header {
     color: gray;
     font-size: 14px;

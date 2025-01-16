@@ -198,10 +198,8 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
       $form['email']['#attributes']['placeholder'] = t('Indtast din e-mail...');
     }
      if (isset($form['actions']['submit'])) {
-          // Assign the desired weight.
-          // A higher (or lower) weight number will affect its vertical position
-          // relative to other elements.
-          $form['actions']['submit']['#weight'] = 49;
+
+          $form['op']['#weight'] = 49;
         }
 
     $owner_name = theme_get_setting('business_owner_name');
