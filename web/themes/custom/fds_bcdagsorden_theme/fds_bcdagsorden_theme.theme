@@ -175,9 +175,7 @@ function fds_bcdagsorden_theme_preprocess_symfony_mailer_lite_email(&$variables)
 }
 
 function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Check if this is the form we want to alter.
-  if ($form_id === 'anonymous-subscription-taxonomy-terms-form') {
-    // Suppose the textfield array key is 'name' (this is just an example).
+  if ($form_id === 'anonymous_subscription_taxonomy_terms_form') {
     if (isset($form['email'])) {
       $form['email']['#attributes']['placeholder'] = t('Indtast din e-mail...');
     }
