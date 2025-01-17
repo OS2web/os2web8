@@ -174,34 +174,6 @@ function fds_bcdagsorden_theme_preprocess_symfony_mailer_lite_email(&$variables)
   if (!empty( $logo ) && !empty($logo['url'])) {
     $variables['logo_url'] = $GLOBALS['base_url'] . $logo['url'];
   }
-
-  // Check if 'body' exists and is a string.
-    if (isset($variables['body']) && is_string($variables['body'])) {
-      // Original body content.
-      $original_body = $variables['body'];
-
-      // Split the body into lines based on line breaks.
-      $lines = preg_split('/\r\n|\r|\n/', $original_body);
-
-      // Initialize an empty string for the modified body.
-      $modified_body = '<div class="anonymous-subscription-messages clearfix">';
-
-      // Iterate over each line and wrap it in a div.
-      foreach ($lines as $line) {
-        // Trim whitespace.
-        $trimmed_line = trim($line);
-
-        if (!empty($trimmed_line)) {
-          // Wrap each non-empty line in a div.
-          $modified_body .= '<div class="anonymous-subscription-message">' . $trimmed_line . '</div>';
-        }
-      }
-
-      $modified_body .= '</div>';
-
-      // Assign the modified body back to the variables array.
-      $variables['body'] = Markup::create($modified_body);
-    }
 }
 
 function fds_bcdagsorden_theme_form_system_theme_settings_alter(&$form, &$form_state) {
