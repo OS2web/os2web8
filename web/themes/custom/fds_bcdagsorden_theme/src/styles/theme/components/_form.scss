@@ -265,13 +265,14 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 
   #edit-submit {
     order: 4;
+    width: fit-content;
   }
 
   .form-type-checkbox {
      label:after {
       background-image: none;
     }
-    &:checked + label:after {
+    .form-checkbox:checked + label:after {
       left: -2px;
       top: 1px;
     }
