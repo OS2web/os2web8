@@ -144,3 +144,19 @@ document.addEventListener('DOMContentLoaded', function() {
     interactive: true,
   });
 }());
+
+(function ($, Drupal) {
+  Drupal.behaviors.reorderAnonymousSubscriptionForm = {
+    attach: function (context, settings) {
+      var $form = $(context).find('form#anonymous-subscription-taxonomy-terms-form');
+      if ($form.length) {
+        // Move the checkbox div before the input[name="op"]
+        var $checkboxDiv = $form.find('input[name="terms_checkbox"]').closest('.form-group');
+        var $submitInput = $form.find('input[name="op"]');
+        if ($checkboxDiv.length && $submitInput.length) {
+          $checkboxDiv.insertBefore($submitInput);
+        }
+      }
+    }
+  };
+})(jQuery, Drupal);
