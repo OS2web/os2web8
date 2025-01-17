@@ -14,13 +14,15 @@
       {% for item in breadcrumb %}
         <li>
           {% if item.url %}
-            <a href="{{ item.url }}">
-              {% if loop.first %}
-                Forside
-              {% else %}
-                {{ item.text }}
-              {% endif %}
-            </a>
+            {% if item.text %}
+              <a href="{{ item.url }}">
+                {% if loop.first %}
+                  Forside
+                {% else %}
+                  {{ item.text }}
+                {% endif %}
+              </a>
+            {% endif %}
           {% else %}
             {% if loop.first %}
               Forside
