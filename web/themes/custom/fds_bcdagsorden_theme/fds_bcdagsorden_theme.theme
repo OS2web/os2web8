@@ -205,7 +205,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
     $owner_name = theme_get_setting('business_owner_name');
     $privacy_link = theme_get_setting('privacy_policy_link');
 
-    $title_text = t('Jeg accepterer, at @owner_name indsamler og behandler persondata som beskrevet i <a href="@policy_link" target="_blank">vores politik om databeskyttelse.</a>',
+    $title_text = t('Jeg accepterer, at @owner_name indsamler og behandler persondata som beskrevet i <a href="@policy_link" target="_blank">vores politik om databeskyttelse.</a><span class="custom-required">*</span>',
               [
                 '@owner_name' => $owner_name,
                 '@policy_link' => $privacy_link,
@@ -218,31 +218,8 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               // Markup::create() ensures the string with <a> is interpreted as HTML.
               '#title' => Markup::create($title_text),
               '#required' => TRUE,
-              '#weight' => 5,
             ];
 
-                $form['#after_build'][] = 'fds_bcdagsorden_theme_after_build';
-
 
   }
-}
-
-function fds_bcdagsorden_theme_after_build($form, FormStateInterface $form_state) {
-  // Only do this if both elements exist
-  if (isset($form['terms_checkbox']) && isset($form['op'])) {
-
-    // Save them in variables
-    $checkbox = $form['terms_checkbox'];
-    $submit = $form['op'];
-
-    // Remove them from the form array
-    unset($form['terms_checkbox']);
-    unset($form['op']);
-
-    // Re-insert them so checkbox is first
-    $form['terms_checkbox'] = $checkbox;
-    $form['op'] = $submit;
-  }
-
-  return $form;
 }

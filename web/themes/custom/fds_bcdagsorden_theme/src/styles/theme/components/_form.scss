@@ -250,6 +250,8 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 .form-type-search-api-autocomplete {}
 
 .anonymous-subscription-taxonomy-terms-form {
+  display: flex;
+  flex-direction: column;
   label {
     font-weight: 400;
   }
@@ -259,6 +261,25 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
     padding-right: 10px;
     height: 40px;
     font-size: 14px;
+  }
+
+  #edit-submit {
+    order: 4;
+  }
+
+  .form-type-checkbox {
+     label:after {
+      background-image: none;
+    }
+    &:checked + label:after {
+      left: -2px;
+      top: 1px;
+    }
+    label {
+      .custom-required {
+        color: red;
+      }
+    }
   }
 }
 
