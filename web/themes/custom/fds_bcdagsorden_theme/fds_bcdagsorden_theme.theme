@@ -221,6 +221,28 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               '#weight' => 35,
             ];
 
+                $form['#after_build'][] = 'fds_bcdagsorden_theme_after_build';
+
+
   }
 }
 
+function fds_bcdagsorden_theme_after_build($form, FormStateInterface $form_state) {
+  // Only do this if both elements exist
+  if (isset($form['terms_checkbox']) && isset($form['op'])) {
+
+    // Save them in variables
+    $checkbox = $form['terms_checkbox'];
+    $submit = $form['op'];
+
+    // Remove them from the form array
+    unset($form['terms_checkbox']);
+    unset($form['op']);
+
+    // Re-insert them so checkbox is first
+    $form['terms_checkbox'] = $checkbox;
+    $form['op'] = $submit;
+  }
+
+  return $form;
+}
