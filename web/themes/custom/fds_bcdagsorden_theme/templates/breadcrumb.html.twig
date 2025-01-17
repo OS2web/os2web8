@@ -12,9 +12,9 @@
     <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
     <ol class="breadcrumb">
       {% for item in breadcrumb %}
-        <li>
-          {% if item.url %}
-            {% if item.text %}
+        {% if item.text %}
+          <li>
+            {% if item.url %}
               <a href="{{ item.url }}">
                 {% if loop.first %}
                   Forside
@@ -22,17 +22,18 @@
                   {{ item.text }}
                 {% endif %}
               </a>
-            {% endif %}
-          {% else %}
-            {% if loop.first %}
-              Forside
             {% else %}
-              {{ item.text }}
+              {% if loop.first %}
+                Forside
+              {% else %}
+                {{ item.text }}
+              {% endif %}
             {% endif %}
-          {% endif %}
-        </li>
+          </li>
+        {% endif %}
       {% endfor %}
     </ol>
   </nav>
 {% endif %}
+
 
