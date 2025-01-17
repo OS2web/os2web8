@@ -81,12 +81,16 @@
     {{ page.highlighted }}
 
     <div class="row layout--hidden-on-sections">
-        {%
-          set content_classes = [
-            page.sidebar_first ? 'col-12 col-md-6',
-            page.sidebar_first is empty ? 'col-12 col-md-9',
-          ]
-        %}
+      {%
+        set content_classes = [
+        page.sidebar_first ? 'col-12 col-md-6',
+        page.sidebar_first is empty ? 'col-12',
+      ]
+      %}
+      {% if path('<current>') == '/soeg-dagsorden' %}
+        {% set content_classes = ['col-12 col-md-9'] %}
+      {% endif %}
+
       {% if page.sidebar_first %}
         {% block sidebar_first %}
           <aside class="col-12 col-md-3">
@@ -103,21 +107,21 @@
         </div>
       </main>
 
-        <aside class="col-12 col-md-3 d-print-none">
-          <div class="layout-sidebar-right">
-            {% if page.sidebar_second %}
-              {% block sidebar_second %}
-                {% if ( not is_front ) %}
-                  <a href="/selvbetjening" class="button button-primary button--selvbetjening">
-                    {{ 'Genvej til al Selvbetjening' | trans }} <span class="icon fa fa-angle-right"></span>
-                  </a>
-                {% endif %}
+      <aside class="col-12 col-md-3 d-print-none">
+        <div class="layout-sidebar-right">
+          {% if page.sidebar_second %}
+            {% block sidebar_second %}
+              {% if ( not is_front ) %}
+                <a href="/selvbetjening" class="button button-primary button--selvbetjening">
+                  {{ 'Genvej til al Selvbetjening' | trans }} <span class="icon fa fa-angle-right"></span>
+                </a>
+              {% endif %}
 
-                {{ page.sidebar_second }}
-              {% endblock %}
-            {% endif %}
-          </div>
-        </aside>
+              {{ page.sidebar_second }}
+            {% endblock %}
+          {% endif %}
+        </div>
+      </aside>
     </div>
   </div>
 
