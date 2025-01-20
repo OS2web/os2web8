@@ -112,8 +112,9 @@
   align-items: center;
 
   margin: 0 auto;
-  max-width: 60%;
-  display: inline-block;
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
   text-align: left;
   width: 100%;
   position: relative;

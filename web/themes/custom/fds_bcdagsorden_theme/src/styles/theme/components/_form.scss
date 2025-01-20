@@ -237,6 +237,10 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 
     max-width: 350px;
 
+    @media only screen and (max-width: 768px) {
+      max-width: none;
+    }
+
     .form-item {
       float: initial;
 
@@ -255,6 +259,8 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   flex-direction: column;
   label {
     font-weight: 400;
+    padding-left: 3px;
+    font-size: 14px;
   }
   input {
     border: none;
@@ -264,6 +270,14 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
     font-size: 14px;
     max-width: 450px;
     padding-bottom: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  #edit-terms--wrapper {
+    legend {
+      margin-bottom: 10px;
+    }
   }
 
 
@@ -290,11 +304,13 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
       top: 1px;
     }
     label {
+      max-width: 500px;
       .custom-required {
         color: red;
       }
     }
   }
+
 }
 
 
