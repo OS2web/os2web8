@@ -105,12 +105,13 @@
 }
 .custom-header-row--mobile-navigation {
   height: 50px;
-
-  background-color: $color-data-orange-001;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background-color: #fff;
+  position: relative;
 }
 
 .custom-header__logo {
-  width: 250px;
 
   img {
     height: 42px;

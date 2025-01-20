@@ -20,10 +20,23 @@
 // Styling
 // --------------------------------------------------
 
+.paragraph--type--os2web-meetings {
+  margin-bottom: 70px;
+}
+
+.field--name-field-os2web-page-paragraph-narr {
+  .field__item {
+    margin-top: 0;
+  }
+}
+
 .view-os2web-meetings-search-page {
   .view-header {
     h2 {
       margin-top: 0;
+      font-size: 4.2rem;
+      font-weight: 400;
+      margin-bottom: 25px;
     }
   }
 
@@ -81,7 +94,7 @@
               color: white;
               background-color: #353535;
               width: fit-content;
-              padding: 5px 15px;
+              padding: 5px 15px 3px 15px;
               border-radius: 6px;
               font-size: 14px;
               font-weight: 300;
