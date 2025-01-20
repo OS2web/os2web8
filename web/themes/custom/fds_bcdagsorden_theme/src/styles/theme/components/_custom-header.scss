@@ -113,6 +113,11 @@
 
 .custom-header__logo {
   max-width: 250px;
+
+  img {
+    height: auto;
+    width: 250px;
+  }
 }
 
 // --------------------------------------------------

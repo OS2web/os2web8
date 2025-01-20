@@ -225,7 +225,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 
   .form-input {
     margin: 0;
-    padding: 8px 40px 8px 10px;
+    padding: 8px 40px 6px 10px;
     border: none;
     border-radius: 6px;
     font-size: 14px;
@@ -262,6 +262,8 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
     padding-right: 10px;
     height: 40px;
     font-size: 14px;
+    max-width: 450px;
+    padding-bottom: 5px;
   }
 
 
