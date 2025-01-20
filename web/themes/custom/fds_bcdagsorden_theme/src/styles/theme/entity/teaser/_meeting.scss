@@ -20,6 +20,27 @@
 // Styling
 // --------------------------------------------------
 
+.view-os2web-meetings-search-page {
+  .view-header {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .view-content {
+    .views-row {
+      a {
+        border-radius: 12px;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
 .entity-teaser--os2web-meetings-meeting {
   display: flex;
 
