@@ -411,15 +411,6 @@ body .page-container {
   }
 }
 
-.button--primary {
-
-  &, &:hover, &:focus {
-    font-weight: $font-weight-bold;
-
-    color: #fff;
-    background-color: $color-orange-004;
-  }
-}
 
 .button--rounded {
   padding-left: 30px;
