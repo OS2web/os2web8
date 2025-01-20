@@ -94,7 +94,7 @@ $distance-from-top: 78px;
   z-index: 1050;
 
   .toolbar-vertical & {
-    top: $distance-from-top + 39px;
+    top: 0;
   }
 }
 
