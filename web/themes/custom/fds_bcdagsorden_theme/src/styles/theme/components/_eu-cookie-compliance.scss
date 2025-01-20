@@ -86,6 +86,10 @@
 
     li + li {
       margin-left: 10px;
+
+      @media only screen and (max-width: 768px) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -127,9 +131,6 @@
       justify-content: center;
     }
 
-    .field--type-link {
-      margin-left: -1.5rem;
-    }
   }
 }
 

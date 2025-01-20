@@ -424,7 +424,7 @@ $button-border-radius:          4px !default;
 $static-border-radius:          0;
 $interactive-border-radius:     4px;
 $button-box-shadow:             rgba(0,0,0,.4) !default;
-$box-shadow:                    0 0 2px $color-shadow !default;
+$box-shadow:                    0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !default;
 $focus-outline:                 4px solid $color-focus;
 $focus-spacing:                 1px;
 $nav-responsive-breakpoint:     lg !default; // 992px

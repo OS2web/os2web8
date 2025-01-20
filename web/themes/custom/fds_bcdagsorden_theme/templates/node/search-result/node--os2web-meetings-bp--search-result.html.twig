@@ -9,26 +9,15 @@
 ]
 %}
 <a href="{{ url }}" {{ attributes.addClass(classes) }}>
-  <h3>{{ label }}</h3>
-
-  <div>
-    {{ content }}
+  <div class="search-meeting-heading">
+    <span>Punkt</span>
+    <h3>{{ label }}</h3>
   </div>
 
-  <br>
-  <br>
-
-  <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <strong>
-        Punkt
-      </strong>
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <div class="field--type-link text-align-right">
-        <strong>
-          {{ 'Read more' | trans }}
-        </strong>
+  <div class="row meetings-row">
+    <div class="col-12 search-meeting__type-link-wrapper">
+      <div class="field--type-link">
+        {{ 'Read more' | trans }}
       </div>
     </div>
   </div>
