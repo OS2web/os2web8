@@ -17,6 +17,15 @@
 .header {
   .portal-info-mobile {
     text-align: left;
+
+    li {
+      list-style: none;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
   }
 }
 
