@@ -31,12 +31,7 @@
 
 }
 
-.eu-cookie-compliance-popup-open {
-  .eu-cookie-withdraw-tab {
-    top: 0;
-    border-radius: 50px 50px 0 0;
-  }
-}
+
 
 .eu-cookie-withdraw-tab {
   content: '';
@@ -48,10 +43,17 @@
   display: flex;
   border: none;
   box-shadow: none;
-  border-radius: 50px;
+  border-radius: 50px !important;
   top: -10px;
   left: 40px;
   transition: .4s ease;
+}
+
+.eu-cookie-compliance-popup-open {
+  .eu-cookie-withdraw-tab {
+    top: 0;
+    border-radius: 50px 50px 0 0 !important;
+  }
 }
 
 .eu-cookie-compliance-banner {
