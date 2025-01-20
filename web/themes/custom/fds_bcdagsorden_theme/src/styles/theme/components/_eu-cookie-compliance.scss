@@ -34,8 +34,7 @@
 .eu-cookie-compliance-popup-open {
   .eu-cookie-withdraw-tab {
     top: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 50px 50px 0 0;
   }
 }
 
@@ -49,11 +48,9 @@
   display: flex;
   border: none;
   box-shadow: none;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-radius: 50px;
   top: -10px;
+  left: 40px;
   transition: .4s ease;
 }
 
