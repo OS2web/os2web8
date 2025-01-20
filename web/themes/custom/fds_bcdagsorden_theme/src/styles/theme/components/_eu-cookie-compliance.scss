@@ -20,6 +20,17 @@
 // Styling
 // --------------------------------------------------
 
+.eu-cookie-compliance-message {
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+}
+
 .eu-cookie-compliance-banner {
   left: 0;
   right: 0;
@@ -94,6 +105,28 @@
   .field--type-link {
     margin-top: 2rem;
   }
+}
+
+.eu-cookie-withdraw-banner {
+  display: flex;
+  align-items: center;
+
+  margin: 0 auto;
+  max-width: 60%;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  position: relative;
+
+  .eu-cookie-withdraw-button {
+    color: #353535;
+    background-color: white;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+
 }
 
 // --------------------------------------------------

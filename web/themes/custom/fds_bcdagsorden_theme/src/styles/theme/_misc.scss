@@ -330,7 +330,20 @@ body .page-container {
   padding-top: $grid-gutter-width;
 }
 
+.block-facets {
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
 .layout-sidebar-right {
+
+  margin-top: 132px;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 
   .os2web_contact {
 
