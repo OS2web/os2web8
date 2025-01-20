@@ -257,9 +257,12 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 .anonymous-subscription-taxonomy-terms-form {
   display: flex;
   flex-direction: column;
+
+  .form-type-email {
+    padding-left: 3px;
+  }
   label {
     font-weight: 400;
-    padding-left: 3px;
     font-size: 14px;
   }
   input {
