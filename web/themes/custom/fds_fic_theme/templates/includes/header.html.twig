@@ -74,26 +74,49 @@
           </div>
 
           <div class="search-megamenu-btns-wrapper">
-            <div class="font-size-changer">
-              <button class="visible-sm js-decrease-font-size">A-</button>
-              <button class="visible-sm js-increase-font-size">A+</button>
+{#            <div class="font-size-changer">#}
+{#              <button class="visible-sm js-decrease-font-size">A-</button>#}
+{#              <button class="visible-sm js-increase-font-size">A+</button>#}
+{#            </div>#}
+            <div class="language-dropdown">
+              <!-- The button displays the current language -->
+              <button
+                type="button"
+                class="language-dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
+                onclick="toggleLanguageDropdown(this, 'language-dropdown-menu')"
+              >
+                {{ language_dropdown_label }}
+              </button>
+
+              <!-- The hidden dropdown menu -->
+              <ul class="language-dropdown-menu" id="language-dropdown-menu" hidden>
+                <li>
+                  <a href="/da">DK</a>
+                </li>
+                <li>
+                  <a href="/en">EN</a>
+                </li>
+              </ul>
             </div>
             <div class="search-btn-wrapper">
               <button id="nav-search" class="search-btn">
-                <span>Søg</span>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
 
             <div class="megamenu-burger-button-wrapper">
-              <button class="burger-btn">
-                <span class="burger-btn-text">Menu</span>
+              <button aria-label="Menu" class="burger-btn">
                 <div class="bar-wrapper">
                   <span class="bar bar-1"></span>
                   <span class="bar bar-2"></span>
                   <span class="bar bar-3"></span>
                 </div>
               </button>
+            </div>
+            <div class="book-btn">
+              <a href="{{ book_link_url }}" target="_blank" rel="noopener noreferrer" onclick="return confirm('Du er ved at forlade denne hjemmeside. Vil du fortsætte?')">Book</a>
             </div>
 {#            <button class="custom-external-links-toggle"><span>Øvrige hjemmesider</span><i class="fa-solid fa-globe"></i></button>#}
           </div>

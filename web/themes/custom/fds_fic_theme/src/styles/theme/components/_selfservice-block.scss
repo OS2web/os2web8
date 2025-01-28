@@ -48,7 +48,7 @@
   }
 }
 
-#block-fds-fredericia-main-theme-indholdfield-ext-links {
+#block-fds-fic-theme-indholdfield-ext-links {
   background-color: #ffffff;
   padding: 20px;
   display: flex;
@@ -60,7 +60,7 @@
     padding: 0;
     margin: 0;
     font-size: 24px;
-    color: #00335b;
+    color: #222;
   }
   .field--name-field-selfbetjening-ref {
     display: flex;
@@ -80,7 +80,7 @@
           transform: translateX(-3px);
         }
         &:visited {
-          color: #00335b;
+          color: #222;
         }
 
         &:hover:after {
@@ -94,11 +94,11 @@
     }
   }
   .go-to-all-selfservice {
-    background-color: #00335b;
+    background-color: #222;
     color: white;
     border-radius: 4px;
     font-weight: 600;
-    border-color: #00335b;
+    border-color: #222;
     transition: .3s ease;
     position: relative;
     padding: 5px 50px 5px 10px;

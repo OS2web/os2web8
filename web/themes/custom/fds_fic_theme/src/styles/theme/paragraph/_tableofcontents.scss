@@ -30,7 +30,7 @@
     height: fit-content;
     overflow-y: auto;
     margin-right: 25px;
-    background-color: #00335b;
+    background-color: #222;
 
     @media only screen and (max-width: 1200px) {
       width: 100%;
@@ -88,11 +88,7 @@
       .content-heading {
         font-weight: 600;
         font-size: 3rem;
-        color:  #00335B;
         margin: 0 0 10px 0;
-      }
-      p, h3, h4, h5, h6, ul, li {
-        color:  #00335B;
       }
       h2, h3, h4, h5, h6 {
         margin: 0 0 10px 0;

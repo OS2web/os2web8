@@ -61,14 +61,16 @@ footer {
 
     .footer-col {
       h2 {
-        margin-bottom: 8px;
-        font-weight: $font-weight-bold;
-        font-size: $h4-font-size;
-        line-height: 2.2rem;
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 38px;
         color: white !important;
       }
       h3 {
         color: white !important;
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 38px;
 
         a {
           font-size: 2rem;
@@ -415,6 +417,15 @@ body:has(footer.footer-alternativ-wrapper) {
 
   }
 }
+
+.region-embedded-code {
+  .contextual-region {
+    .contextual {
+      display: none;
+    }
+  }
+}
+
 
 // --------------------------------------------------
 // Variants

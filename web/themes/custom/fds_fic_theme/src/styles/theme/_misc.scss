@@ -13,14 +13,8 @@
 // Styling
 // --------------------------------------------------
 
-.field--name-field-os2web-accordion-heading {
-  h2 {
-    color: #00335b;
-  }
-}
-
-.webform-button--submit {
-  background-color: #00335b !important;
+a {
+  color: black;
 }
 
 .entity-default--os2web-wrapper.background-color--primary {
@@ -70,12 +64,8 @@ body .container-fluid {
 
         .field--name-field-os2web-simple-text-body {
           h1,h2,h3,h4,h5,h6 {
-            color: #00335b;
             margin-bottom: 15px !important;
             margin-top: 0 !important;
-          }
-          p {
-            color: #00335b !important;
           }
         }
       }
@@ -85,16 +75,11 @@ body .container-fluid {
 
 .field--name-field-os2web-simple-text-body {
   h1,h2,h3,h4,h5,h6 {
-    color: #00335b;
     margin-bottom: 15px !important;
     margin-top: 0 !important;
   }
-  p {
-    color: #00335b !important;
-  }
   ul {
     li {
-      color: #00335b;
 
       &:before {
         color: $color__bullets;
@@ -567,8 +552,8 @@ body .page-container {
 
 
 .button.button-primary {
-  background-color: $background_color__default;
-  border-color: $background_color__default;
+  background-color: $background_color__button;
+  border-color: $background_color__button;
   color: $color-white;
   transition: all 0.3s ease;
 }
@@ -658,7 +643,7 @@ body {
 }
 
 .hearings-back {
-  background-color: #00335b;
+  background-color: #222;
   color: white;
   text-decoration: none;
   padding: 5px 10px;
@@ -676,7 +661,6 @@ body {
 }
 
 .box-hearings {
-  color: #00335b;
   margin-bottom: 2.8rem;
   .box__body-hearings {
     .row-hearings {
@@ -687,11 +671,6 @@ body {
   }
 }
 
-.field--name-field-slideshow-text {
-  p, h1, h2, h3, h4, h5, h6 {
-    color: #00335b;
-  }
-}
 
 
 // --------------------------------------------------

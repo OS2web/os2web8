@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Paragraph template for the "Hero" paragraph type.
+ *
+ * Available variables:
+ * - paragraph: The paragraph entity.
+ * - content: A list of all fields attached to this paragraph.
+ *   e.g. content.field_background_image, content.field_links, content.field_heading, content.field_subheading
+ *
+ * Note: If you want a raw value (e.g., from a text field), you could use:
+ *   paragraph.field_heading.value
+ * However, using {{ content.field_heading }} generally respects text format settings, etc.
+ * Adjust as appropriate for your use case.
+ */
+#}
+
+{# Retrieve image URL (assuming "field_background_image" is the field name). #}
+{% set background_image_url = '' %}
+{% if content.field_background_image.0['#item'] is defined %}
+  {% set background_image_url = file_url(content.field_background_image.0['#item'].entity.uri.value) %}
+{% endif %}
+
+<div
+  class="paragraph paragraph--type--hero"
+  {% if background_image_url %}
+    style="background-image: url('{{ background_image_url }}');"
+  {% endif %}
+>
+  <div class="hero-overlay"><!-- optional overlay if needed --></div>
+
+  <div class="hero-content-wrapper">
+    {# Heading Field #}
+    {% if content.field_hero_heading is not empty %}
+      <h2 class="hero-heading">{{ content.field_hero_heading }}</h2>
+    {% endif %}
+
+    {# Subheading Field #}
+    {% if content.field_hero_subheading is not empty %}
+      <div class="hero-subheading">{{ content.field_hero_subheading }}</div>
+    {% endif %}
+
+    {# Links Field (up to a maximum of 8) #}
+    {% if content.field_hero_links is not empty %}
+      <div class="hero-links-wrapper">
+        {% set link_items = paragraph.field_hero_links %}
+
+        <ul class="hero-links-list">
+          {% for link_item in link_items|slice(0, 8) %}
+            {% set url = link_item.uri %}
+            {% set title = link_item.title %}
+            <li>
+              <a href="{{ url }}">{{ title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</div>

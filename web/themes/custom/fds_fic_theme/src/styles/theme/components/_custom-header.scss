@@ -22,11 +22,80 @@
 $header-top-menu-size-lg: 90px;
 $header-top-menu-size-md: 70px;
 $header-top-menu-size-sm: 50px;
+
+header {
+  padding-bottom: 100px;
+}
+
+.language-dropdown {
+  .language-dropdown-toggle {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 12px;
+    margin-right: 10px;
+
+    &:after {
+      content: '\f107';
+      position: absolute;
+      right: -10px;
+      font-size: 14px;
+      font-family: FontAwesome;
+      top: 60%;
+      transform: translateY(-50%);
+      color: $background_color__primary;
+    }
+  }
+  .language-dropdown-menu {
+    position: absolute;
+    background-color: white;
+    margin: 0;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      padding: 5px;
+
+      &:before {
+        display: none;
+      }
+
+      a {
+        color: black;
+        transition: .25s ease;
+        text-decoration: none;
+
+        &:hover {
+          color: $background_color__primary;
+        }
+      }
+    }
+  }
+}
+
+body:has(.paragraph--type--hero) {
+  header {
+    padding-bottom: 0;
+  }
+}
+
+body:has(.region-featured-top) {
+  header {
+    padding-bottom: 0;
+  }
+}
+
 .custom-header-row.custom-header-row--meta {
-  background-color: $color-white;
+  background-color: transparent;
   height: $header-top-menu-size-sm;
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
 
   @include media-breakpoint-up(md) {
     height: $header-top-menu-size-md;
@@ -74,11 +143,11 @@ $header-top-menu-size-sm: 50px;
           content: none;
         }
         a {
-          font-size: 1.6rem;
+          font-size: 1.7rem;
           font-weight: 600;
-          text-transform: uppercase;
           text-decoration: none;
-          color: #002f5c;
+          color: white;
+          transition: .25s ease;
 
           @media only screen and (max-width: 1200px) {
             font-size: 1.4rem;
@@ -92,7 +161,7 @@ $header-top-menu-size-sm: 50px;
             text-decoration: none;
           }
           &:hover {
-            text-decoration: underline;
+            color: $background-color__primary;
           }
         }
       }
@@ -176,9 +245,6 @@ $header-top-menu-size-sm: 50px;
           font-size: 1.125rem;
         }
 
-        &:hover {
-          background-color: #bf263e;
-        }
       }
     }
   }
@@ -203,7 +269,7 @@ $header-top-menu-size-sm: 50px;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: #00335b;
+  background-color: $background-color__primary;
   z-index: 9999;
   overflow-y: auto;
 
@@ -443,16 +509,26 @@ $header-top-menu-size-sm: 50px;
     gap: 25px;
   }
 
+  .font-size-changer {
+    color: white;
+
+    button {
+      transition: .25s ease;
+
+      &:hover {
+        color: $background_color__primary;
+      }
+    }
+  }
+
   .search-btn-wrapper {
     .search-btn {
       background-color: transparent;
-      border: 1px solid #d9d9d9;
-      border-radius: 50px;
-      padding: 5px 10px;
+      border: none;
+      padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
       @media only screen and (max-width: 495px) {
         border: none;
@@ -473,11 +549,18 @@ $header-top-menu-size-sm: 50px;
 
       .fa-magnifying-glass {
         font-size: 20px;
-        color: $background_color__primary;
+        color: white;
+        transition: .25s ease;
 
         @media only screen and (max-width: 1200px) {
           font-size: 22px;
         }
+      }
+    }
+
+    &:hover {
+      .fa-magnifying-glass {
+        color: $background_color__primary;
       }
     }
   }
@@ -487,10 +570,8 @@ $header-top-menu-size-sm: 50px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      border: 1px solid #d9d9d9;
-      border-radius: 50px;
-      padding: 5px 10px;
-      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      border: none;
+      padding: 10px;
 
       @media only screen and (max-width: 495px) {
         border: none;
@@ -517,20 +598,27 @@ $header-top-menu-size-sm: 50px;
         .bar-1 {
           width: 25px;
           height: 4px;
-          background-color: $background_color__primary;
+          background-color: white;
           display: block;
-          transition: .3s ease;
+          transition: .25s ease;
 
         }
 
         .bar-2, .bar-3 {
           width: 25px;
           height: 4px;
-          background-color: $background_color__primary;
+          background-color: white;
           display: block;
+          transition: .25s ease;
 
         }
 
+      }
+
+      &:hover {
+        .bar-1, .bar-2, .bar-3 {
+          background-color: $background_color__primary;
+        }
       }
 
     }
@@ -570,6 +658,22 @@ $header-top-menu-size-sm: 50px;
 
       @media only screen and (max-width: 1200px) {
         font-size: 22px;
+      }
+    }
+  }
+
+  .book-btn {
+    a{
+      background-color: $background_color__primary;
+      padding: 10px 30px 15px 30px;
+      color: black;
+      font-size: 20px;
+      text-decoration: none;
+      font-family: "RBNo2.1a";
+      transition: .25s ease;
+
+      &:hover {
+        background-color: darken($background_color__primary, 5%);
       }
     }
   }
@@ -798,7 +902,7 @@ $header-bottom-menu-size: 70px;
         position: relative;
         font-size: 24px;
         border: 1px solid #ebebeb;
-        color: #00335b;
+        color: #222;
         background-color: #fff;
 
         @media only screen and (max-width: 600px) {
@@ -889,7 +993,7 @@ $header-bottom-menu-size: 70px;
       min-height: 200px;
 
       > a {
-        color: #00335b;
+        color: #222;
         background-color: white;
         border: 1px solid #ebebeb;
         padding: 30px 15px;
@@ -941,7 +1045,7 @@ $header-bottom-menu-size: 70px;
 
           &,
           path {
-            fill: #00335b;
+            fill: #222;
           }
         }
       }

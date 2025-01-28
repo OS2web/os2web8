@@ -35,7 +35,6 @@
               time {
                 font-style: italic;
                 font-size: 13px;
-                color: #00335b;
               }
             }
           }
@@ -43,14 +42,13 @@
             .field-content {
               a {
                 margin: 10px 0 0 0;
-                color: #00335b;
                 font-size: 22px;
                 font-weight: 600;
                 text-decoration: none;
 
                 &:hover {
                   text-decoration: underline;
-                  text-decoration-color: #00335b;
+                  text-decoration-color: black;
                 }
               }
             }
@@ -58,7 +56,6 @@
           .views-field-field-os2web-event-resume {
             .field-content {
               margin: 20px 0;
-              color: #00335b;
             }
           }
           .views-field-view-node {
@@ -66,7 +63,6 @@
 
             .field-content {
               a {
-                color: #00335b;
                 font-size: 20px;
                 font-weight: 600;
                 text-decoration: none;
@@ -87,7 +83,6 @@
     margin-bottom: 20px;
 
     a {
-      color: #00335b;
       font-weight: 600;
       text-decoration: none;
 
@@ -139,7 +134,6 @@
         .event-date {
           font-style: italic;
           font-size: 13px;
-          color: #00335b;
         }
 
         .event-heading-link {
@@ -147,16 +141,15 @@
 
           &:hover {
             text-decoration: underline;
-            text-decoration-color: #00335b;
+            text-decoration-color: black;
           }
 
           &:visited, &:focus, &:focus-within {
-            color: #00335b;
+            color: black;
           }
 
           h2 {
             margin: 10px 0 0 0;
-            color: #00335b;
             font-size: 22px;
             font-weight: 600;
             min-height: 50px;
@@ -165,7 +158,7 @@
 
         .event-resume {
           margin: 20px 0;
-          color: #00335b;
+          color: #222;
           min-height: 70px;
           flex-grow: 1;
         }
@@ -175,7 +168,7 @@
           text-align: right;
 
           a {
-            color: #00335b;
+            color: #222;
             font-size: 20px;
             font-weight: 600;
             text-decoration: none;
@@ -215,7 +208,7 @@
     .swiper-button-next, .swiper-button-prev {
 
       &::after {
-        color: #00335b;
+        color: #222;
       }
     }
     .swiper-button-next {

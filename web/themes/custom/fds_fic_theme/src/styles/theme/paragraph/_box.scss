@@ -48,20 +48,15 @@
       border: 1px solid #ddd;
 
       .box__heading {
-        color: #00335b;
         background-color: rgba(0,0,0,0.1);
       }
       .box__body {
-        color: #00335b;
         padding-top: 20px;
       }
       .link-text-container {
-        span {
-          color: #00335b !important;
-        }
         svg {
           g {
-            stroke: #00335b;
+            stroke: #222;
           }
         }
       }

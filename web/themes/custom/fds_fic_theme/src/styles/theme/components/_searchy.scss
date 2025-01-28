@@ -31,7 +31,7 @@
         .views-exposed-form {
           .upper-search-wrapper {
             padding: 60px 0 50px 0;
-            background-color: #00335b;
+            background-color: #222;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -60,7 +60,7 @@
                   justify-content: center;
                   font-size: 24px;
                   border-radius: 50%;
-                  color: #00335b;
+                  color: #222;
                 }
 
                 span {
@@ -111,7 +111,7 @@
                       content: '\f002';
                       font-family: "FontAwesome";
                       position: absolute;
-                      color: #00335b;
+                      color: #222;
                       display: block;
                       top: 50%;
                       transform: translateY(-50%) translateX(-50%);
@@ -219,7 +219,7 @@
 .view-os2web-search, .view-os2web-meetings-search-page, .view-os2web-search-selfservice {
   padding-bottom: 50px;
   .view-header {
-    background-color: #00335b;
+    background-color: #222;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -247,7 +247,7 @@
         text-align: center;
         text-decoration: none;
         font-weight: 500;
-        color: #00335b;
+        color: #222;
         transition: .3s ease;
 
         &:hover {
@@ -272,7 +272,7 @@
   }
 }
 
-#block-fds-fredericia-main-theme-sitemap-link {
+#block-fds-fic-theme-sitemap-link {
   .field__item {
     p {
       display: flex;

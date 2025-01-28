@@ -37,7 +37,7 @@
       font-weight: 700;
       background-color:  white;
       border: none;
-      color: #00335b;
+      color: #222222;
       border: 1px solid #ddd;
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
       background-position: right 1.6rem center;
@@ -58,12 +58,12 @@
         font-size: 1.8rem;
         font-family: FontAwesome;
         content: "\f067";
-        color: #00325b;
+        color: #222;
       }
 
 
       &[aria-expanded="true"] {
-        background-color: #00325b;
+        background-color: #222;
         color: white;
 
         &:after {
@@ -99,7 +99,7 @@
     background-image: none !important;
     background-color:  white;
     border: none;
-    color: #00335b;
+    color: #222222;
     border: 1px solid #ddd;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     &:after {
@@ -123,13 +123,13 @@
 
       content: $fa-var-plus;
 
-      color: #00335b;
+      color: #222222;
     }
     &:focus {
       outline: 0;
     }
     &[aria-expanded="true"] { //accordion button is open
-      background-color: #00335b;;
+      background-color: #222222;
       color: white;
 
       &:after {
@@ -145,12 +145,8 @@
     border-top: 0;
     padding: 15px 20px;
     background-color: white;
-    color: #00335b;
     overflow: hidden;
     display: none;
-    p, li, span, h1, h2, h3, h4, h5, h6 {
-      color: #00335b;
-    }
     &.opened {
       display: block;
     }

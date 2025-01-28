@@ -77,7 +77,6 @@
             .field--name-field-os2web-banner-heading {
               h2 {
                 font-weight: bold;
-                color: #00335b;
                 margin: 0;
                 padding: 0;
               }
@@ -86,9 +85,6 @@
         }
         .banner-body {
           .field--name-field-os2web-banner-body {
-            p {
-              color: #00335b;
-            }
           }
         }
         .banner-actions {
@@ -158,38 +154,23 @@
 
               a {
                 background-color: $background_color__button;
-                color: white;
-                border-radius: 4px;
+                color: black;
                 font-weight: normal;
                 border-color: $background_color__button;
                 transition: .3s ease;
-                font-weight: 600;
+                font-weight: normal;
                 position: relative;
-                padding-right: 50px;
+                font-family: "RBNo2.1a";
+                font-size: 20px;
+                padding: 10px 30px 15px 30px;
+                border-radius: 0;
+                font-size: 20px;
 
-                &:not(.ext):after {
-                  content: '\f0a9';
-                  position: absolute;
-                  display: inline-block;
-                  top: 50%;
-                  right: 15px;
-                  transform: translateY(-50%);
-                  font-family: "FontAwesome";
-                }
 
-                &.ext:after {
-                  content: '\f35d';
-                  position: absolute;
-                  display: inline-block;
-                  top: 50%;
-                  right: 15px;
-                  transform: translateY(-50%);
-                  font-family: "FontAwesome";
-                }
 
                 &:hover {
-                  background-color: $background_color__button_hover;
-                  border-color: $background_color__button_hover;
+                  background-color: darken($background_color__button, 5%);
+                  border-color: darken($background_color__button, 5%);
                 }
 
               }
@@ -226,7 +207,6 @@
       .field--name-field-os2web-banner-heading {
         h2 {
           font-weight: bold;
-          color: #00335b;
           margin: 0;
           padding: 0;
           font-size: 18px;
@@ -237,7 +217,6 @@
   .banner-body {
     .field--name-field-os2web-banner-body {
       p {
-        color: #00335b;
         font-size: 14px;
       }
     }

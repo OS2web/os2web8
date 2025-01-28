@@ -12,7 +12,7 @@
   'bg_green': '#3e8346',
   'bg_lightgreen': '#dce6d9',
   'bg_black': '#000',
-  'bg_lightblack': '#333'
+  'bg_lightblack': '#222222'
 } %}
 
 {% set text_color_map = {
@@ -23,7 +23,7 @@
   'bg_green': 'text-side-white',
   'bg_lightgreen': 'text-side-black',
   'bg_black': 'text-side-white',
-  'bg_lightblack': 'text-side-white'
+  'bg_lightblack': 'text-side-gray'
 } %}
 
 {% set button_color_classes = {
@@ -57,7 +57,7 @@
   </div>
   {% endif %}
   <div style="background-color: {{ background_color }};" class="text-side {{ text_position_class }} {{ text_color_class }}">
-    <h2>{{ content.field_fifty_fifty_heading }}</h2>
+    <h2 class="fifty-fifty-heading">{{ content.field_fifty_fifty_heading }}</h2>
     <div class="paragraph-50-50-description">
       {{ content.field_fifty_fifty_desc }}
     </div>

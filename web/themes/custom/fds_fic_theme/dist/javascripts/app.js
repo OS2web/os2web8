@@ -3763,8 +3763,8 @@ document.addEventListener('DOMContentLoaded', function() {
   Drupal.behaviors.showDefaultBannerBehavior = {
     attach: function (context, settings) {
       $('body', context).once('bannerToggle').each(function () {
-        if (!$(this).has('#block-fds-fredericia-main-theme-paragraph-banner').length &&
-          !$(this).has('#block-fds-fredericia-main-theme-os2web-search-os2web-search-page-banner-search').length) {
+        if (!$(this).has('#block-fds-fic-theme-paragraph-banner').length &&
+          !$(this).has('#block-fds-fic-theme-os2web-search-os2web-search-page-banner-search').length) {
           $('.default-banner-wrapper').css('display', 'block');
         }
       });
@@ -3849,3 +3849,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+function toggleLanguageDropdown(button, menuId) {
+  var menu = document.getElementById(menuId);
+
+  // Check if the menu is currently expanded
+  var expanded = button.getAttribute('aria-expanded') === 'true';
+
+  if (!expanded) {
+    // Show the menu
+    menu.removeAttribute('hidden');
+    button.setAttribute('aria-expanded', 'true');
+  } else {
+    // Hide the menu
+    menu.setAttribute('hidden', '');
+    button.setAttribute('aria-expanded', 'false');
+  }
+}

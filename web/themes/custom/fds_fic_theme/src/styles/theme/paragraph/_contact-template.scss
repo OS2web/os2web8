@@ -21,7 +21,6 @@
       margin-bottom: 50px;
       h2 {
         margin: 0;
-        color: #00325b;
         font-weight: 600;
       }
     }
@@ -78,7 +77,7 @@
 
           .contact-template-icon {
             font-size: 32px;
-            color: #00325b;
+            color: #222;
             i {
               width: 50px;
 
@@ -89,13 +88,15 @@
 
           }
           .address-info {
-            color: #00325b;
             .info-heading {
               margin-top: 0;
               font-size: 20px;
-              font-weight: 600;
-              color: #00325b;
               margin-bottom: 10px;
+
+              .field--name-field-contact-location {
+                font-family: "RBNo2.1a";
+                font-weight: normal;
+              }
 
             }
             .info-content {
@@ -105,7 +106,6 @@
               }
               .field--name-field-contact-address {
                 p, h1, h2, h3, h4, h5, h6, span {
-                  color: #00335b;
                 }
               }
             }
@@ -131,7 +131,7 @@
 
           .contact-template-icon {
             font-size: 32px;
-            color: #00325b;
+            color: #222;
 
             i {
               width: 50px;
@@ -143,7 +143,6 @@
 
           }
           .phone-info {
-            color: #00325b;
 
             @media only screen and (max-width: 992px) {
               text-align: center;
@@ -151,8 +150,8 @@
             .info-heading {
               margin-top: 0;
               font-size: 20px;
-              font-weight: 600;
-              color: #00325b;
+              font-weight: normal;
+              color: #222;
               margin-bottom: 10px;
             }
           }
@@ -177,7 +176,7 @@
 
           .contact-template-icon {
             font-size: 32px;
-            color: #00325b;
+            color: #222;
 
             i {
               width: 50px;
@@ -189,15 +188,13 @@
 
           }
           .mail-info {
-            color: #00325b;
             @media only screen and (max-width: 992px) {
               text-align: center;
             }
             .info-heading {
               margin-top: 0;
               font-size: 20px;
-              font-weight: 600;
-              color: #00325b;
+              font-weight: normal;
               margin-bottom: 10px;
             }
           }
@@ -221,7 +218,6 @@
 
           .contact-template-icon {
             font-size: 32px;
-            color: #00325b;
 
             i {
               width: 50px;
@@ -233,20 +229,17 @@
 
           }
           .warning-info {
-            color: #00325b;
             @media only screen and (max-width: 992px) {
               text-align: center;
             }
             .info-heading {
               margin-top: 0;
               font-size: 20px;
-              font-weight: 600;
-              color: #00325b;
+              font-weight: normal;
               margin-bottom: 10px;
             }
 
             p, h1, h2, h3, h4, h5, h6, span {
-              color: #00325b;
             }
           }
         }
@@ -269,7 +262,7 @@
 
           .contact-template-icon {
             font-size: 32px;
-            color: #00325b;
+            color: #222;
 
             i {
               width: 50px;
@@ -292,8 +285,7 @@
                 h2 {
                   margin-top: 0;
                   font-size: 20px;
-                  font-weight: 600;
-                  color: #00325b;
+                  font-weight: normal;
                   margin-bottom: 10px;
                 }
               }
@@ -301,8 +293,7 @@
             .contact-person-name {
               display: flex;
               gap: 5px;
-              font-weight: 600;
-              color: #00335b;
+              font-weight: normal;
 
               @media only screen and (max-width: 992px) {
                 justify-content: center;
@@ -311,23 +302,20 @@
             }
             .contact-person-job {
               .job-title {
-                font-weight: 600;
-                color: #00335b;
+                font-weight: normal;
 
 
               }
               .job-task {
                 font-style: italic;
-                color: #00335b;
               }
             }
             .contact-person-email {
               display: flex;
               gap: 10px;
-              color: #00335b;
 
               span {
-                font-weight: 600;
+                font-weight: normal;
               }
               @media only screen and (max-width: 992px) {
                 flex-direction: column;
@@ -338,10 +326,8 @@
             .contact-person-phone {
               display: flex;
               gap: 10px;
-              color: #00335b;
-
               span {
-                font-weight: 600;
+                font-weight: normal;
               }
             }
           }
@@ -363,8 +349,7 @@
           .info-heading {
             margin-top: 0;
             font-size: 20px;
-            font-weight: 600;
-            color: #00325b;
+            font-weight: normal;
             margin-bottom: 10px;
           }
           .opening-hours-days {
@@ -374,7 +359,6 @@
 
             .monday, .tuesday, .wednesday, .thursday, .friday {
               display: flex;
-              color: #00325b;
 
               .day {
                 width: 120px;
@@ -386,8 +370,7 @@
           .info-heading {
             margin-top: 0;
             font-size: 20px;
-            font-weight: 600;
-            color: #00325b;
+            font-weight: normal;
             margin-bottom: 10px;
           }
           .phone-opening-hours-days {
@@ -397,7 +380,7 @@
 
             .monday, .tuesday, .wednesday, .thursday, .friday {
               display: flex;
-              color: #00325b;
+
 
               .day {
                 width: 120px;

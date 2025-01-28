@@ -46,7 +46,6 @@
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
       font-size: 2rem;
-      color: #00335b;
     }
   }
 }
@@ -79,7 +78,7 @@ a.entity-teaser--os2web-hearings-hearing-case {
   text-align: center;
 
   color: #fff;
-  background-color: $color-blue-001;
+  background-color: #222;
 }
 .entity-teaser--os2web-hearings-hearing-case__date__title {
   display: block;
@@ -131,7 +130,6 @@ a.entity-teaser--os2web-hearings-hearing-case {
   .icon {
     font-size: 2.5rem;
 
-    color: #00335b;
   }
 
   a {
@@ -165,7 +163,6 @@ a.entity-teaser--os2web-hearings-hearing-case {
   .field--name-field-os2web-hearings-heading {
     h1, h2, h3, h4, h5, h6 {
       font-size: 3.2rem;
-      color: #00335b;
       margin: 0;
       padding: 0 0 26px 0;
     }
@@ -173,7 +170,7 @@ a.entity-teaser--os2web-hearings-hearing-case {
   .field--name-field-os2web-hearings-intro {
     margin-bottom: 2.8rem;
     p {
-      color: #00335b;
+
       font-size: 2rem;
 
       strong {
@@ -186,7 +183,6 @@ a.entity-teaser--os2web-hearings-hearing-case {
     margin-bottom: 80px;
 
     p, span, h1, h2, h3, h4, h5, h6, span {
-      color: #00335b;
     }
   }
 }
@@ -204,7 +200,6 @@ a.entity-teaser--os2web-hearings-hearing-case {
           .form-label {
             margin-bottom: 10px;
             font-size: 2rem;
-            color: #00335b;
           }
         }
 
@@ -215,7 +210,6 @@ a.entity-teaser--os2web-hearings-hearing-case {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #00335b;
             font-size: 2rem;
             margin-bottom: 10px;
             font-weight: 600;
@@ -233,11 +227,11 @@ a.entity-teaser--os2web-hearings-hearing-case {
 
                 .form-item {
                   width: 100%;
-                  border: 1px solid #00335b;
+                  border: 1px solid #222;
                   border-radius: 4px;
 
                   .form-radio:checked + label {
-                    background-color: #00335b;
+                    background-color: #222;
                     color: white;
                   }
 
@@ -248,7 +242,6 @@ a.entity-teaser--os2web-hearings-hearing-case {
                     align-items: center;
                     justify-content: center;
                     font-weight: 500;
-                    color: #00335b;
 
                     &:after {
                       display: none;

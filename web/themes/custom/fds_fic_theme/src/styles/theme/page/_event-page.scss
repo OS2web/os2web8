@@ -30,7 +30,7 @@
 
   .banner-event-info {
     width: 35%;
-    background-color: #00335b;
+    background-color: #222;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,6 @@
       align-items: center;
       padding: 8px 10px;
       text-decoration: none;
-      color: #00335b;
       border-radius: 50px;
       font-size: 13px;
       gap: 5px;
@@ -140,12 +139,12 @@
   h2 {
     font-size: 3.2rem;
     font-weight: 700;
-    color: #00325b;
+    color: #222;
     margin: 0;
   }
 
   .event-resume {
-    color: #00325b;
+    color: #222;
     font-size: 1.6rem;
     font-weight: 700;
   }
@@ -153,7 +152,7 @@
   .event-body {
     .field--name-body {
       h1, h2, h3, h4, h5, h6, p, strong, span {
-        color: #00325b;
+        color: #222;
         margin: 0;
         padding: 0;
       }

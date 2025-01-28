@@ -23,13 +23,11 @@
 .field--name-field-edoc-heading {
   font-size: 2.4rem;
   font-weight: 600;
-  color: #00335b;
   margin: 0 0 20px 0;
 }
 
 .field--name-field-os2web-files-heading {
   h2 {
-    color: #00335b;
     margin: 0 0 20px 0;
   }
 }
@@ -38,7 +36,6 @@
 .files-default-heading {
   font-size: 2.4rem;
   font-weight: 600;
-  color: #00335b;
   margin: 0 0 20px 0;
 }
 
@@ -47,7 +44,6 @@
   border: none;
   font-weight: 600;
   font-size: 1.6rem;
-  color: #00335b;
   margin-top: 10px;
   width: fit-content;
 
@@ -61,7 +57,6 @@
   border: none;
   font-weight: 600;
   font-size: 1.6rem;
-  color: #00335b;
   margin-top: 10px;
   width: fit-content;
 
@@ -96,7 +91,6 @@
   border-radius: 3px;
   position: relative;
   background-color: white;
-  color: #00335b;
   text-transform: capitalize;
   font-weight: 700;
   font-size: 14px;
@@ -106,7 +100,7 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
   &.hovered {
-    background-color: #00335b;
+    background-color: #222;
   }
 
   a {
@@ -114,13 +108,12 @@
     width: 93%;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #00335b;
     overflow: hidden;
     padding: 12px;
     transition: .3s ease;
 
     &:visited {
-      color: #00335b;
+      color: #222;
     }
     &:hover {
       color: white;
@@ -172,7 +165,6 @@
 
 .hearings-edoc-wrapper {
   h2 {
-    color: #00335b;
     margin: 0 0 20px 0;
   }
   .field--name-field-hoering-doc-ref {
@@ -186,7 +178,6 @@
 
 .hearings-documents {
   h2 {
-    color: #00335b;
     margin: 0 0 20px 0;
   }
   .attached-documents {
@@ -197,7 +188,7 @@
       border-radius: 3px;
       position: relative;
       background-color: white;
-      color: #00325b;
+      color: #222;
       text-transform: capitalize;
       font-weight: 700;
       font-size: 14px;

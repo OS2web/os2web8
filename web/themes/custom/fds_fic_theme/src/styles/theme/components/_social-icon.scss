@@ -94,11 +94,13 @@ a.social-icon-teaser {
   flex-direction: row;
   height: 100%;
   gap: 10px;
+  justify-content: flex-end;
 }
 
 .social-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .social-icon-frame {
@@ -122,9 +124,13 @@ a.social-icon-teaser {
   }
 
   .icon {
-    color: $background_color__default;
+    color: #222;
     font-size: 24px;
     font-family: FontAwesome;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
