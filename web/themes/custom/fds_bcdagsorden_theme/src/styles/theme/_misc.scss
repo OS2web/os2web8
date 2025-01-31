@@ -513,6 +513,33 @@ body.page-node-type-os2web-page {
   margin-top: -22px;
 }
 
+@keyframes bell-keyframes {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .abonner-banner {
   width: 100%;
   background-color: #155E95;
@@ -523,8 +550,11 @@ body.page-node-type-os2web-page {
   font-weight: 600;
   transition: .25s ease;
 
-  &:hover {
-    background-color: darken(#155e95, 5%);
+  &:hover svg {
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-name: bell-keyframes;
+    transform-origin: top center;
   }
   .abonner-banner-item {
     display: flex;
