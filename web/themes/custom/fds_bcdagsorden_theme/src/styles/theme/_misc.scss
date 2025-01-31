@@ -550,6 +550,14 @@ body.page-node-type-os2web-page {
   font-weight: 600;
   transition: .25s ease;
 
+  &:hover {
+    background-color: darken(#155e95, 3%);
+  }
+
+  &:hover {
+    color: white;
+  }
+
   &:hover svg {
     animation-duration: 1s;
     animation-iteration-count: 2;
