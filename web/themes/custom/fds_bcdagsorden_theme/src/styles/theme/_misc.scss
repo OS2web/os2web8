@@ -513,6 +513,27 @@ body.page-node-type-os2web-page {
   margin-top: -22px;
 }
 
+.abonner-banner {
+  width: 100%;
+  background-color: #155E95;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  .abonner-banner-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 15px;
+    font-size: 20px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
