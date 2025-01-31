@@ -23,9 +23,22 @@ $custom-input-left-right-padding: 20px;
 // Styling
 // --------------------------------------------------
 
+.form-number {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #1a1a1a;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  width: 100%;
+  margin-top: 8px;
+  text-align: left;
+}
+
 .form-input,
 .form-email,
-.form-select {
+.form-select, .form-number {
   padding: $custom-input-top-bottom-padding $custom-input-left-right-padding;
 
   border-radius: 20px;
@@ -63,7 +76,7 @@ body {
   .form-input,
   .form-email,
   .form-select,
-  .form-hint {
+  .form-hint, .form-number {
     max-width: none;
   }
 }
