@@ -519,7 +519,13 @@ body.page-node-type-os2web-page {
   color: white;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .25s ease;
 
+  &:hover {
+    background-color: darken(#155e95, 5%);
+  }
   .abonner-banner-item {
     display: flex;
     align-items: center;
@@ -529,6 +535,10 @@ body.page-node-type-os2web-page {
 
     @media only screen and (max-width: 768px) {
       font-size: 16px;
+    }
+
+    svg {
+      width: 35px;
     }
   }
 }
