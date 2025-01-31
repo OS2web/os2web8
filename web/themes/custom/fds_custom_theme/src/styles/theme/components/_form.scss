@@ -23,7 +23,7 @@ $custom-input-left-right-padding: 20px;
 // Styling
 // --------------------------------------------------
 
-.form-number {
+.form-number, .form-date, .form-time {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -38,7 +38,7 @@ $custom-input-left-right-padding: 20px;
 
 .form-input,
 .form-email,
-.form-select, .form-number {
+.form-select, .form-number, .form-date, .form-time {
   padding: $custom-input-top-bottom-padding $custom-input-left-right-padding;
 
   border-radius: 20px;
