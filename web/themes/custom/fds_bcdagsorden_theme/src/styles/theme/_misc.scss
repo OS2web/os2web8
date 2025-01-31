@@ -558,6 +558,10 @@ body.page-node-type-os2web-page {
     color: white;
   }
 
+  &:visited {
+    color: white;
+  }
+
   &:hover svg {
     animation-duration: 1s;
     animation-iteration-count: 2;
