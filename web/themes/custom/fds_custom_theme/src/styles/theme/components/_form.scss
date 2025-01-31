@@ -25,7 +25,7 @@ $custom-input-left-right-padding: 20px;
 
 .form-input,
 .form-email,
-.form-select {
+.form-select, .form-number {
   padding: $custom-input-top-bottom-padding $custom-input-left-right-padding;
 
   border-radius: 20px;
@@ -63,7 +63,7 @@ body {
   .form-input,
   .form-email,
   .form-select,
-  .form-hint {
+  .form-hint, .form-number {
     max-width: none;
   }
 }
