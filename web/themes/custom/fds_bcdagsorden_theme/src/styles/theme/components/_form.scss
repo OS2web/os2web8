@@ -292,7 +292,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 
   .form-checkboxes {
     .form-checkbox:checked + label:after {
-      left: 3px !important;
+      left: -1px !important;
       top: 1px;
     }
   }
@@ -302,18 +302,40 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
      label:after {
       background-image: none;
     }
-    .form-checkbox:checked + label:after {
-      left: -2px;
-      top: 1px;
-    }
+
     label {
-      max-width: 500px;
+      max-width: 430px;
       .custom-required {
-        color: red;
+        background-color: #D35F5F;
+        width: 6px;
+        height: 6px;
+        border-radius: 5px;
+        position: absolute;
+        right: 12px;
       }
+
+      &:after {
+        display: none;
+      }
+
     }
   }
 
+}
+
+.custom-required-2 {
+  background-color: #d35f5f;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+}
+
+.form-required:after {
+  width: 6px;
+  height: 6px;
+  background-color: #d35f5f;
+  background-image: none;
+  border-radius:5px;
 }
 
 

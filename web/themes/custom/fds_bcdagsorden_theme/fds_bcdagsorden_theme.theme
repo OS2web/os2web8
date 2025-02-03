@@ -206,7 +206,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
     $owner_name = theme_get_setting('business_owner_name');
     $privacy_link = theme_get_setting('privacy_policy_link');
 
-    $title_text = t('Jeg accepterer, at @owner_name indsamler og behandler persondata som beskrevet i <a href="@policy_link" target="_blank">vores politik om databeskyttelse.</a><span class="custom-required">*</span>',
+    $title_text = t('Jeg accepterer, at @owner_name indsamler og behandler persondata som beskrevet i <a href="@policy_link" target="_blank">vores politik om databeskyttelse.</a><span role="img" aria-label="Påkrævet symbol" class="custom-required"></span>',
               [
                 '@owner_name' => $owner_name,
                 '@policy_link' => $privacy_link,
@@ -220,6 +220,16 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               '#title' => Markup::create($title_text),
               '#required' => TRUE,
             ];
+
+            $additional_info_text = t('Felter markeret med <span role="img" aria-label="Påkrævet symbol" class="custom-required-2"></span> er påkrævet.',
+                  ['context' => 'default', 'html' => TRUE]
+                );
+
+                $form['additional_info'] = [
+                  '#type' => 'markup',
+                  '#markup' => Markup::create($additional_info_text),
+                  '#weight' => 50,
+                ];
 
 
   }
