@@ -334,13 +334,14 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   }
 }
 
-.form-group:not(.custom-terms-wrapper) label:after {
+.form-type-email .form-required:after {
   width: 6px;
   height: 6px;
   background-color: #d35f5f;
   background-image: none;
   border-radius:5px;
 }
+
 
 .required-text {
   margin: 0 0 20px 0;
