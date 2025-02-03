@@ -219,6 +219,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               // Markup::create() ensures the string with <a> is interpreted as HTML.
               '#title' => Markup::create($title_text),
               '#required' => TRUE,
+              '#title_attributes' => ['class' => ['custom-terms-label']],
             ];
 
             $additional_info_text = t('<div class="required-text">Felter markeret med <span role="img" aria-label="Påkrævet symbol" class="custom-required-2"></span> er påkrævet.</div>',

@@ -292,6 +292,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 
   .form-checkboxes {
     .form-checkbox:checked + label:after {
+      top: 1px;
     }
   }
 
@@ -326,7 +327,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   display: inline-block;
 }
 
-.form-required:after {
+.form-required:not(.custom-terms-label):after {
   width: 6px;
   height: 6px;
   background-color: #d35f5f;
