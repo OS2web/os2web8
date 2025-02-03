@@ -328,6 +328,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   width: 6px;
   height: 6px;
   border-radius: 5px;
+  margin: 0 4px 5px 4px;
 }
 
 .form-required:after {
@@ -336,6 +337,12 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   background-color: #d35f5f;
   background-image: none;
   border-radius:5px;
+}
+
+.required-text {
+  margin: 0 0 20px 0;
+  font-size: 12px;
+  font-style: italic;
 }
 
 

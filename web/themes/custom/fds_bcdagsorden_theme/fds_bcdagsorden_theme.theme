@@ -221,7 +221,7 @@ function fds_bcdagsorden_theme_form_alter(&$form, FormStateInterface $form_state
               '#required' => TRUE,
             ];
 
-            $additional_info_text = t('Felter markeret med <span role="img" aria-label="Påkrævet symbol" class="custom-required-2"></span> er påkrævet.',
+            $additional_info_text = t('<div class="required-text">Felter markeret med <span role="img" aria-label="Påkrævet symbol" class="custom-required-2"></span> er påkrævet.</div>',
                   ['context' => 'default', 'html' => TRUE]
                 );
 
