@@ -426,6 +426,60 @@ body:has(footer.footer-alternativ-wrapper) {
   }
 }
 
+.nyhedsbrev-form {
+  margin-top: 50px;
+
+  @media only screen and (max-width: 576px) {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .nyhedsbrev-element-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    .nyhedsbrev-mail {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      label {
+        font-size: 14px;
+        color: #b2b2b3;
+      }
+      input {
+        min-height: 35px;
+        font-size: 12px;
+      }
+    }
+    .nyhedsbrev-submit {
+      min-height: 35px;
+      display: flex;
+
+      input {
+        height: 100%;
+        display: flex;
+        padding: 5px 10px 10px 10px;
+        color: black;
+        font-size: 18px;
+        font-family: "RBNo2.1a", Arial, Helvetica, sans-serif;
+        background-color: $background_color__primary;
+        border: none;
+
+        &:hover {
+          background-color: darken($background_color__primary, 5%);
+        }
+      }
+    }
+  }
+}
+
 
 // --------------------------------------------------
 // Variants

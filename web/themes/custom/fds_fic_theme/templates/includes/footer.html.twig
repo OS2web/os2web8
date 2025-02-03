@@ -160,6 +160,57 @@
                     <div class="row">
                       <div class="col-12 col-sm-4">
                         {{ page.footer_first }}
+                        <form class="nyhedsbrev-form" action="https://fredericia.uxmail.io/handlers/post/" method="post" style="
+    margin-top: 50px;
+">
+
+                          <input type="hidden" name="action" value="subscribe">
+                          <input type="hidden" name="lists" value="85204">
+
+                          <h2 style="
+    font-size: 20px;
+    /* font-weight: normal; */
+    margin-bottom: 10px;
+">Tilmeld dig vores nyhedsbrev</h2>
+                          <div class="nyhedsbrev-element-wrapper" style="
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+">
+
+                            <div class="nyhedsbrev-mail" style="
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+">
+                              <label for="email_address_id" style="
+    font-size: 14px;
+    color: #b2b2b3;
+">E-mail adresse</label>
+                              <input type="text" name="email_address" id="email_address_id" style="
+    min-height: 35px;
+    font-size: 12px;
+" placeholder="Indtast din e-mail adresse">
+                            </div>
+
+                            <div class="nyhedsbrev-submit" style="
+    height: 35px;
+    display: flex;
+">
+                              <input type="submit" value="Tilmeld" style="
+    height: 100%;
+    display: flex;
+    padding: 5px 10px 10px 10px;
+    color: black;
+    font-size: 18px;
+    font-family: 'RBNO2.1A';
+    background-color: #01b4d4;
+    /* box-shadow: none; */
+    border: none;
+">
+                              <p></p>
+                            </div>
+                          </div></form>
                       </div>
                       <div class="col-12 col-sm-4">
                         {{ page.footer_second }}
