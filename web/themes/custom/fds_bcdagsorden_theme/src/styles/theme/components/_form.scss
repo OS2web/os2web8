@@ -327,7 +327,14 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   display: inline-block;
 }
 
-.form-required:not(.custom-terms-label):after {
+.custom-terms-wrapper {
+  .form-checkbox:checked + label:after {
+    left: -1px !important;
+    top: 1px !important;
+  }
+}
+
+.form-group:not(.custom-terms-wrapper) label:after {
   width: 6px;
   height: 6px;
   background-color: #d35f5f;
