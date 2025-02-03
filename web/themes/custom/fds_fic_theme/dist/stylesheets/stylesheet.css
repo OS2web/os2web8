@@ -14667,6 +14667,7 @@ body:has(footer.footer-alternativ-wrapper) footer.d-print-none {
 .nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-mail input {
   min-height: 35px;
   font-size: 12px;
+  color: black;
 }
 .nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-submit {
   min-height: 35px;
