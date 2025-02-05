@@ -137,7 +137,7 @@
           </div>
           <div class="status-banner-body {% if node.field_status_banner_reference.entity.field_status_banner_color.value in ['alert', 'alright'] %} white-text {% endif  %}">
             {{ node.field_status_banner_reference.entity.field_status_body.value|raw }}
-            <button class="status-banner-close-btn">{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %}{% include '@fds_fredericia_main_theme/src/images/svg-icons/close.svg' with { close_icon_color: "black" } %} {% else %}{% include '@fds_fredericia_main_theme/src/images/svg-icons/close.svg' with { close_icon_color: "white" } %} {% endif%} </button>
+            <button class="status-banner-close-btn">{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %}{% include '@fds_fic_theme/src/images/svg-icons/close.svg' with { close_icon_color: "black" } %} {% else %}{% include '@fds_fic_theme/src/images/svg-icons/close.svg' with { close_icon_color: "white" } %} {% endif%} </button>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@
 
         <div class="flexy-spacer"></div>
 
-        {% include '@fds_fredericia_main_theme/includes/action-buttons.html.twig' %}
+        {% include '@fds_fic_theme/includes/action-buttons.html.twig' %}
       </div>
     </div>
   </div>
