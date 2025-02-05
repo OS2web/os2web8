@@ -118,6 +118,29 @@
         gap: 10px;
         flex-wrap: wrap;
 
+        a {
+          background-color: $background_color__primary;
+          border-color: $background_color__primary;
+          transition: .25s ease;
+          font-weight: normal;
+          position: relative;
+          padding: 10px 30px 15px 30px;
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          text-decoration: none;
+          color: black;
+          font-family: "RBNo2.1a";
+          font-size: 20px;
+
+          &:hover {
+            background-color: darken($background_color__primary, 5%);
+            border-color: darken($background_color__primary, 5%);
+            text-decoration: none;
+          }
+
+        }
+
         .field__item {
           a {
             background-color: $background_color__primary;

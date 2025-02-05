@@ -23176,6 +23176,33 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.paragraph-50-50-wrapper .text-side .cta-buttons .field--name-field-fifty-fifty-link a {
+  background-color: #01b5d5;
+  border-color: #01b5d5;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  font-weight: normal;
+  position: relative;
+  padding: 10px 30px 15px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  color: black;
+  font-family: "RBNo2.1a";
+  font-size: 20px;
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons .field--name-field-fifty-fifty-link a:hover {
+  background-color: #019fbc;
+  border-color: #019fbc;
+  text-decoration: none;
+}
 .paragraph-50-50-wrapper .text-side .cta-buttons .field--name-field-fifty-fifty-link .field__item a {
   background-color: #01b5d5;
   border-color: #01b5d5;
