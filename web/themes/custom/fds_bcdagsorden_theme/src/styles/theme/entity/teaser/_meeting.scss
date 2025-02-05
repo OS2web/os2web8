@@ -326,9 +326,185 @@ a.entity-teaser--os2web-meetings-meeting {
   }
 }
 
-.month--01, .month--02, .month--03, .month--04, .month--05, .month--06, .month--06, .month--07 .month--08, .month--09, .month--10, .month--11, .month--12 {
-  margin: 0;
+.month--01 + .month--02,
+.month--01 + .month--03,
+.month--01 + .month--04,
+.month--01 + .month--05,
+.month--01 + .month--06,
+.month--01 + .month--07,
+.month--01 + .month--08,
+.month--01 + .month--09,
+.month--01 + .month--10,
+.month--01 + .month--11,
+.month--01 + .month--12 {
+  margin-top: 0;
 }
+
+/* February. */
+.month--02 + .month--01,
+.month--02 + .month--03,
+.month--02 + .month--04,
+.month--02 + .month--05,
+.month--02 + .month--06,
+.month--02 + .month--07,
+.month--02 + .month--08,
+.month--02 + .month--09,
+.month--02 + .month--10,
+.month--02 + .month--11,
+.month--02 + .month--12 {
+  margin-top: 0;
+}
+
+/* March. */
+.month--03 + .month--01,
+.month--03 + .month--02,
+.month--03 + .month--04,
+.month--03 + .month--05,
+.month--03 + .month--06,
+.month--03 + .month--07,
+.month--03 + .month--08,
+.month--03 + .month--09,
+.month--03 + .month--10,
+.month--03 + .month--11,
+.month--03 + .month--12 {
+  margin-top: 0;
+}
+
+/* April. */
+.month--04 + .month--01,
+.month--04 + .month--02,
+.month--04 + .month--03,
+.month--04 + .month--05,
+.month--04 + .month--06,
+.month--04 + .month--07,
+.month--04 + .month--08,
+.month--04 + .month--09,
+.month--04 + .month--10,
+.month--04 + .month--11,
+.month--04 + .month--12 {
+  margin-top: 0;
+}
+
+/* May. */
+.month--05 + .month--01,
+.month--05 + .month--02,
+.month--05 + .month--03,
+.month--05 + .month--04,
+.month--05 + .month--06,
+.month--05 + .month--07,
+.month--05 + .month--08,
+.month--05 + .month--09,
+.month--05 + .month--10,
+.month--05 + .month--11,
+.month--05 + .month--12 {
+  margin-top: 0;
+}
+
+/* June. */
+.month--06 + .month--01,
+.month--06 + .month--02,
+.month--06 + .month--03,
+.month--06 + .month--04,
+.month--06 + .month--05,
+.month--06 + .month--07,
+.month--06 + .month--08,
+.month--06 + .month--09,
+.month--06 + .month--10,
+.month--06 + .month--11,
+.month--06 + .month--12 {
+  margin-top: 0;
+}
+
+/* July. */
+.month--07 + .month--01,
+.month--07 + .month--02,
+.month--07 + .month--03,
+.month--07 + .month--04,
+.month--07 + .month--05,
+.month--07 + .month--06,
+.month--07 + .month--08,
+.month--07 + .month--09,
+.month--07 + .month--10,
+.month--07 + .month--11,
+.month--07 + .month--12 {
+  margin-top: 0;
+}
+
+/* August. */
+.month--08 + .month--01,
+.month--08 + .month--02,
+.month--08 + .month--03,
+.month--08 + .month--04,
+.month--08 + .month--05,
+.month--08 + .month--06,
+.month--08 + .month--07,
+.month--08 + .month--09,
+.month--08 + .month--10,
+.month--08 + .month--11,
+.month--08 + .month--12 {
+  margin-top: 0;
+}
+
+/* September. */
+.month--09 + .month--01,
+.month--09 + .month--02,
+.month--09 + .month--03,
+.month--09 + .month--04,
+.month--09 + .month--05,
+.month--09 + .month--06,
+.month--09 + .month--07,
+.month--09 + .month--08,
+.month--09 + .month--10,
+.month--09 + .month--11,
+.month--09 + .month--12 {
+  margin-top: 0;
+}
+
+/* October. */
+.month--10 + .month--01,
+.month--10 + .month--02,
+.month--10 + .month--03,
+.month--10 + .month--04,
+.month--10 + .month--05,
+.month--10 + .month--06,
+.month--10 + .month--07,
+.month--10 + .month--08,
+.month--10 + .month--09,
+.month--10 + .month--11,
+.month--10 + .month--12 {
+  margin-top: 0;
+}
+
+/* November. */
+.month--11 + .month--01,
+.month--11 + .month--02,
+.month--11 + .month--03,
+.month--11 + .month--04,
+.month--11 + .month--05,
+.month--11 + .month--06,
+.month--11 + .month--07,
+.month--11 + .month--08,
+.month--11 + .month--09,
+.month--11 + .month--10,
+.month--11 + .month--12 {
+  margin-top: 0;
+}
+
+/* December. */
+.month--12 + .month--01,
+.month--12 + .month--02,
+.month--12 + .month--03,
+.month--12 + .month--04,
+.month--12 + .month--05,
+.month--12 + .month--06,
+.month--12 + .month--07,
+.month--12 + .month--08,
+.month--12 + .month--09,
+.month--12 + .month--10,
+.month--12 + .month--11 {
+  margin-top: 0;
+}
+
 
 // --------------------------------------------------
 // Variants
