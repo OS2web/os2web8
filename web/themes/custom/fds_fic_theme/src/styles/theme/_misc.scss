@@ -99,6 +99,13 @@ body .container-fluid {
   }
 }
 
+.path-frontpage {
+  .sidebar-column {
+    display: none;
+  }
+}
+
+
 
 .layout-content {
   background-color: $color-white;

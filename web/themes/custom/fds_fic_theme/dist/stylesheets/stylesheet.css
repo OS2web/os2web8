@@ -23565,6 +23565,10 @@ body .container-fluid .field--name-field-os2web-paragraphs .field__item .paragra
   max-width: 100%;
 }
 
+.path-frontpage .sidebar-column {
+  display: none;
+}
+
 .layout-content {
   background-color: #ffffff;
   padding-top: 0;
