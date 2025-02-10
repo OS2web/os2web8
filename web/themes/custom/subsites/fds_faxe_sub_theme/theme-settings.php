@@ -35,4 +35,10 @@ function fds_faxe_sub_theme_form_system_theme_settings_alter(
     '#title' => t('Tekst'),
     '#default_value' => theme_get_setting('branding_text'),
   ];
+  $form['adgangforalle'] = [
+    '#type' => 'textfield',
+    '#title' => t('Link URL'),
+    '#default_value' => theme_get_setting('adgangforalle'),
+    '#description' => t('Indsæt URL til genoplæsning.'),
+  ];
 }
