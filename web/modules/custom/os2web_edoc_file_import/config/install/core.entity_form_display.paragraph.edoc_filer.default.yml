@@ -1,0 +1,45 @@
+uuid: 0f44e9b6-2ff9-466e-a7f6-d58cb9ed6f83
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.edoc_filer.field_doc_reference
+    - field.field.paragraph.edoc_filer.field_edoc_heading
+    - field.field.paragraph.edoc_filer.field_sagsreference
+    - paragraphs.paragraphs_type.edoc_filer
+id: paragraph.edoc_filer.default
+targetEntityType: paragraph
+bundle: edoc_filer
+mode: default
+content:
+  field_doc_reference:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_edoc_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sagsreference:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

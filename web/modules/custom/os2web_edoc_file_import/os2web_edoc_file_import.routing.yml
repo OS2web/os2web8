@@ -1,0 +1,7 @@
+os2web_edoc_file_import.settings:
+  path: '/admin/config/system/os2web-edoc-file-import'
+  defaults:
+    _form: '\Drupal\os2web_edoc_file_import\Form\SettingsForm'
+    _title: 'OS2Web eDoc File Import indstillinger'
+  requirements:
+    _permission: 'administer site configuration'

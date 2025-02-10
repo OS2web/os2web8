@@ -1,0 +1,19 @@
+uuid: 71cfd5a2-7d30-492a-93fc-97daacc01b90
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_edoc_heading
+    - paragraphs.paragraphs_type.edoc_filer
+id: paragraph.edoc_filer.field_edoc_heading
+field_name: field_edoc_heading
+entity_type: paragraph
+bundle: edoc_filer
+label: Overskrift
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

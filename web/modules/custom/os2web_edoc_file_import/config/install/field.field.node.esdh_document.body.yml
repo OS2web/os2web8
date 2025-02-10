@@ -1,0 +1,23 @@
+uuid: 020b058f-7846-476e-b78a-309378436336
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.esdh_document
+  module:
+    - text
+id: node.esdh_document.body
+field_name: body
+entity_type: node
+bundle: esdh_document
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
