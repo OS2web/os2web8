@@ -445,6 +445,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
       ->condition('type', 'os2web_news')
       ->sort('field_os2web_news_article_date', 'DESC')
       ->range(0, 9);
+      ->accessCheck(TRUE);
     $nids = $query->execute();
 
     // Load the article entities.

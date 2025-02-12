@@ -16,12 +16,11 @@
         {% set placeholder_image_url = placeholder_images_urls[loop.index0 % placeholder_images_urls|length] %}
 
         {# Check for primary image #}
-        {% if primaryImage.fileuri %}
+        {% if primaryImage and primaryImage.fileuri %}
           <img src="{{ file_url(primaryImage.fileuri) }}" alt="{{ primaryImage.alt }}">
         {% elseif mediaImage and mediaImage.field_media_image.entity %}
           <img src="{{ file_url(mediaImage.field_media_image.entity.fileuri) }}" alt="{{ mediaImage.field_media_image.entity.alt }}">
         {% else %}
-          {# If no media image, use placeholder #}
           <img src="{{ placeholder_image_url }}" alt="Default placeholder image">
         {% endif %}
 
