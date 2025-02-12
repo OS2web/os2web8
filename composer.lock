@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff3bec30ba8deb26412a66ae39ee2a47",
+    "content-hash": "5f8d8e45f3d53aca92b88847bb746982",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -11298,6 +11298,57 @@
             "time": "2024-01-02T13:46:09+00:00"
         },
         {
+            "name": "ffwagency/borgerdk-php",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bellcom/borgerdk-php.git",
+                "reference": "b9accab05e499202408dc362e67f4b1a4d487bf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bellcom/borgerdk-php/zipball/b9accab05e499202408dc362e67f4b1a4d487bf5",
+                "reference": "b9accab05e499202408dc362e67f4b1a4d487bf5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/css-selector": "2.8.*|~3.2|^6.4",
+                "symfony/dom-crawler": "2.8.*|~3.2|^6.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BorgerDk\\ArticleService\\": "src/BorgerDk/ArticleService"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Beltofte",
+                    "email": "jens.beltofte@ffwagency.com"
+                }
+            ],
+            "description": "Borger.dk Article Export Service PHP SDK (unofficially)",
+            "homepage": "https://github.com/ffwagency/borgerdk-php",
+            "keywords": [
+                "borger.dk",
+                "borgerdk",
+                "ffwagency",
+                "php"
+            ],
+            "support": {
+                "source": "https://github.com/bellcom/borgerdk-php/tree/develop"
+            },
+            "time": "2025-02-11T13:54:26+00:00"
+        },
+        {
             "name": "fileeye/pel",
             "version": "0.9.20",
             "source": {
@@ -13448,18 +13499,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_borgerdk.git",
-                "reference": "a229d4c69873d73add819c2a8cf85e31407c760d"
+                "reference": "119bb19e4537a624a060184be59e5f1c6432a8ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/a229d4c69873d73add819c2a8cf85e31407c760d",
-                "reference": "a229d4c69873d73add819c2a8cf85e31407c760d",
+                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/119bb19e4537a624a060184be59e5f1c6432a8ec",
+                "reference": "119bb19e4537a624a060184be59e5f1c6432a8ec",
                 "shasum": ""
             },
             "require": {
-                "drupal/migrate_plus": "^6",
-                "drupal/migrate_tools": "^6.0.4",
-                "drupal/paragraphs": "^1.11"
+                "drupal/migrate_plus": "^5.1 || ^6",
+                "drupal/migrate_tools": "^5.0 || ^6.0.4",
+                "drupal/paragraphs": "^1.11",
+                "ffwagency/borgerdk-php": "dev-develop"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -13471,7 +13523,7 @@
                 "issues": "https://github.com/OS2web/os2web_borgerdk/issues",
                 "source": "https://github.com/OS2web/os2web_borgerdk/tree/drupal10"
             },
-            "time": "2024-04-29T13:27:02+00:00"
+            "time": "2025-02-12T09:56:16+00:00"
         },
         {
             "name": "os2web/os2web_citizen_proposals",

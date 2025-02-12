@@ -18,9 +18,13 @@
             "type": "vcs",
             "url": "https://github.com/bellcom/anonymous_subscriptions"
         },
-	{
+	    {
             "type": "vcs",
             "url": "https://github.com/bellcom/fds_base_theme"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/bellcom/borgerdk-php"
         },
 	{
 		"type": "vcs",
