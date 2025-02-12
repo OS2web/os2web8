@@ -191,7 +191,7 @@ function fds_fredericia_main_theme_preprocess_anonymous_subscriptions_notificati
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
     $file = File::load($theme_settings['language_logo']['header_logo__' . $language]);
     if (!empty($file)) {
-      $variables['logo_url'] = file_create_url($file->getFileUri());
+      $variables['logo_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
     }
   }
 }
@@ -216,7 +216,7 @@ function fds_fredericia_main_theme_preprocess_anonymous_subscriptions_message(ar
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
     $file = File::load($theme_settings['language_logo']['header_logo__' . $language]);
     if (!empty($file)) {
-      $variables['logo_url'] = file_create_url($file->getFileUri());
+      $variables['logo_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
     }
   }
   $subscription = $variables['subscription'];
@@ -325,7 +325,7 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
         $attached_docs = $node->field_os2web_hearings_attac_doc->referencedEntities();
         $variables['attached_documents'] = [];
         foreach ($attached_docs as $doc) {
-          $variables['attached_documents'][] = file_create_url($doc->getFileUri());
+          $variables['attached_documents'][] = \Drupal::service('file_url_generator')->generateAbsoluteString($doc->getFileUri());
         }
       }
 
@@ -546,7 +546,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     foreach ($placeholder_image_fids as $fid) {
       $file = \Drupal\file\Entity\File::load($fid);
       if ($file) {
-        $variables['placeholder_images_urls'][] = file_create_url($file->getFileUri());
+        $variables['placeholder_images_urls'][] = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
       }
     }
   }
