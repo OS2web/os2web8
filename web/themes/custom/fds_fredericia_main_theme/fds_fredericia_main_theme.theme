@@ -444,7 +444,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     $query = \Drupal::entityQuery('node')
       ->condition('type', 'os2web_news')
       ->sort('field_os2web_news_article_date', 'DESC')
-      ->range(0, 9);
+      ->range(0, 9)
       ->accessCheck(TRUE);
     $nids = $query->execute();
 
