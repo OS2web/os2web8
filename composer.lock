@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87cc023fe99caa041b4e7ee56458633f",
+    "content-hash": "65a3704f05dd71b28d244ff0682cdb15",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -15909,17 +15909,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_borgerdk.git",
-                "reference": "7c6244064d499b4f38a7eeb8fd0f55d0332d4d35"
+                "reference": "f890079ddc7a7a087a56aa7b72f582afeaf7dac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/7c6244064d499b4f38a7eeb8fd0f55d0332d4d35",
-                "reference": "7c6244064d499b4f38a7eeb8fd0f55d0332d4d35",
+                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/f890079ddc7a7a087a56aa7b72f582afeaf7dac2",
+                "reference": "f890079ddc7a7a087a56aa7b72f582afeaf7dac2",
                 "shasum": ""
             },
             "require": {
-                "drupal/migrate_plus": "^5.1",
-                "drupal/migrate_tools": "^5.0",
+                "drupal/migrate_plus": "^5.1 || ^6",
+                "drupal/migrate_tools": "^5.0 || ^6.0.4",
                 "drupal/paragraphs": "^1.11",
                 "ffwagency/borgerdk-php": "dev-develop"
             },
@@ -15933,7 +15933,7 @@
                 "issues": "https://github.com/OS2web/os2web_borgerdk/issues",
                 "source": "https://github.com/OS2web/os2web_borgerdk/tree/master"
             },
-            "time": "2024-03-22T12:11:22+00:00"
+            "time": "2025-02-12T09:58:38+00:00"
         },
         {
             "name": "os2web/os2web_citizen_proposals",
