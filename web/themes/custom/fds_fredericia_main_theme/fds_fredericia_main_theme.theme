@@ -546,11 +546,8 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     foreach ($placeholder_image_fids as $fid) {
       $file = \Drupal\file\Entity\File::load($fid);
       if ($file) {
-            $url = \Drupal::service('file_url_generator')
-              ->generateAbsoluteString($file->getFileUri());
-
-            $variables['placeholder_images_urls'][] = $url;
-          }
+        $variables['placeholder_images_urls'][] = file_create_url($file->getFileUri());
+      }
     }
   }
 
