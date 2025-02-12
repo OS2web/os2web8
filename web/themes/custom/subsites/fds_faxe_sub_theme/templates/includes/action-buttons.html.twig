@@ -9,7 +9,7 @@
     {% set link = theme_settings.adgangforalle %}
 
     <div>
-      <a href="{{ link }}" class="action-button" {% if link starts with 'http' and (link not contains current_host) %} target="_blank" rel="noopener noreferrer" {% endif %}>
+      <a href="{{ link }}" class="action-button" {% if link starts with 'http' and not (link contains current_host) %} target="_blank" rel="noopener noreferrer" {% endif %}>
         <span class="icon fa fa-volume-up"></span>
       </a>
     </div>
