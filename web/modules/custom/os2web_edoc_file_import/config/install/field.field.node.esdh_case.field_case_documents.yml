@@ -1,0 +1,29 @@
+uuid: 85612210-df0f-4b41-b3a2-245427064237
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_documents
+    - node.type.esdh_case
+    - node.type.esdh_document
+id: node.esdh_case.field_case_documents
+field_name: field_case_documents
+entity_type: node
+bundle: esdh_case
+label: Dokumenter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      esdh_document: esdh_document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

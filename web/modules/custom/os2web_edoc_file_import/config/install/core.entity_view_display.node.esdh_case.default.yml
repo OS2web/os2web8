@@ -1,0 +1,42 @@
+uuid: 9d7527f1-d915-4eff-8a1d-9dca72d8cef2
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.field.node.esdh_case.body
+    - field.field.node.esdh_case.field_case_documents
+    - field.field.node.esdh_case.field_case_id
+    - field.field.node.esdh_case.field_case_name
+    - field.field.node.esdh_case.field_sagsnummer
+    - node.type.esdh_case
+  module:
+    - user
+id: node.esdh_case.default
+targetEntityType: node
+bundle: esdh_case
+mode: default
+content:
+  field_case_documents:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_case_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_case_name: true
+  field_sagsnummer: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

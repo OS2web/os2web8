@@ -1,0 +1,11 @@
+uuid: 40feeb97-0086-4a3a-a3d8-960dcf05c706
+langcode: da
+status: true
+dependencies:
+  config:
+    - node.type.esdh_case
+id: node.esdh_case
+target_entity_type_id: node
+target_bundle: esdh_case
+default_langcode: site_default
+language_alterable: false

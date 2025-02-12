@@ -150,9 +150,9 @@ function fds_fredericia_main_theme_form_search_form_alter(&$form, FormStateInter
 }
 
 /**
- * Implements template_preprocess_swiftmailer().
+ * Implements template_preprocess_symfony_mailer_lite_email().
  */
-function fds_fredericia_main_theme_preprocess_swiftmailer(&$variables) {
+function fds_fredericia_main_theme_preprocess_symfony_mailer_lite_email(&$variables) {
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();
@@ -779,6 +779,7 @@ function fds_fredericia_main_theme_fetch_latest_events($limit = 4) {
   $current_date_string = $current_date->format('Y-m-d\TH:i:s');
 
   $query = \Drupal::entityQuery('node')
+    ->accessCheck()
     ->condition('status', 1) // Only published nodes
     ->condition('type', 'os2web_event') // Your specific content type machine name
     // Ensure we only get events that haven't started yet
@@ -804,6 +805,7 @@ function fds_fredericia_main_theme_preprocess_paragraph__news_section(&$variable
 
   // Query for news nodes tagged with this term.
   $query = \Drupal::entityQuery('node')
+    ->accessCheck()
     ->condition('status', 1)
     ->condition('type', 'os2web_news')
     ->condition('field_os2web_news_section', $term_id)

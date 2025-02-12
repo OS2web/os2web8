@@ -1,0 +1,19 @@
+uuid: 2d0c304f-e33f-45b8-a8c0-67bfc479b9ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_id
+    - node.type.esdh_document
+id: node.esdh_document.field_document_id
+field_name: field_document_id
+entity_type: node
+bundle: esdh_document
+label: 'Document ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

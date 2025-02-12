@@ -1,0 +1,25 @@
+uuid: 8e15dbf9-a1a0-473f-8b5a-95b54e922eaa
+langcode: da
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sagsreference
+    - paragraphs.paragraphs_type.edoc_filer
+id: paragraph.edoc_filer.field_sagsreference
+field_name: field_sagsreference
+entity_type: paragraph
+bundle: edoc_filer
+label: Sagsreference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: os2web_edoc_autocomplete_displayer
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
