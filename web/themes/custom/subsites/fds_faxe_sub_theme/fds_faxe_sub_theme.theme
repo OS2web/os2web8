@@ -64,6 +64,11 @@ function fds_faxe_sub_theme_preprocess_page(array &$variables) {
   $variables['theme_settings']['branding']['branding_toggle'] = theme_get_setting('branding_toggle');
   $variables['theme_settings']['branding']['branding_text'] = theme_get_setting('branding_text');
   $variables['theme_settings']['adgangforalle'] = theme_get_setting('adgangforalle');
+   // Get the current host from Drupal’s Request object.
+    $current_host = \Drupal::request()->getHost();
+
+    // Make it available in Twig:
+    $variables['current_host'] = $current_host;
 }
 
 /**

@@ -6,8 +6,10 @@
       </a>
     </div>
 
+    {% set link = theme_settings.adgangforalle %}
+
     <div>
-      <a href="{{ theme_settings.adgangforalle }}" class="action-button" target="_blank">
+      <a href="{{ link }}" class="action-button" {% if link starts with 'http' and (link not contains current_host) %} target="_blank" rel="noopener noreferrer" {% endif %}>
         <span class="icon fa fa-volume-up"></span>
       </a>
     </div>
