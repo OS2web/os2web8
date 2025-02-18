@@ -13812,12 +13812,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "5d8f27ad674559672841f7941793cc76079ad5c2"
+                "reference": "bcb3b0765437dbf6d3eab5473d709cc0915245c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/5d8f27ad674559672841f7941793cc76079ad5c2",
-                "reference": "5d8f27ad674559672841f7941793cc76079ad5c2",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/bcb3b0765437dbf6d3eab5473d709cc0915245c0",
+                "reference": "bcb3b0765437dbf6d3eab5473d709cc0915245c0",
                 "shasum": ""
             },
             "require": {
@@ -13835,7 +13835,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/drupal10"
             },
-            "time": "2025-02-04T16:00:24+00:00"
+            "time": "2025-02-18T13:15:42+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
@@ -13935,12 +13935,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu.git",
-                "reference": "39934c6cf5a4dd98b5a62703fec526c97409fb40"
+                "reference": "a44fcd20cd33f7cbad0679c2b531932b638ed953"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/39934c6cf5a4dd98b5a62703fec526c97409fb40",
-                "reference": "39934c6cf5a4dd98b5a62703fec526c97409fb40",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/a44fcd20cd33f7cbad0679c2b531932b638ed953",
+                "reference": "a44fcd20cd33f7cbad0679c2b531932b638ed953",
                 "shasum": ""
             },
             "require": {
@@ -13957,7 +13957,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/issues",
                 "source": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/tree/drupal10"
             },
-            "time": "2024-06-20T07:33:26+00:00"
+            "time": "2025-02-18T13:17:28+00:00"
         },
         {
             "name": "os2web/os2web_news",
