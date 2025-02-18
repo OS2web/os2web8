@@ -258,6 +258,38 @@ a.entity-teaser--os2web-meetings-meeting {
   }
 }
 
+.meeting-participants {
+  margin-bottom: 20px;
+
+  .participants-heading {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .field--name-field-os2web-m-partic {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.meeting-participants-cancel {
+  margin-bottom: 20px;
+
+  .participants-heading {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .field--name-field-os2web-m-partic-cancel {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
 .meeting-row {
   @media only screen and (max-width: 768px) {
     gap: 20px;

@@ -10,7 +10,7 @@
 {% set timestamp = node.field_os2web_m_start_date.date|date('U') %}
 <div {{ attributes.addClass(classes) }}>
 
-  <h1>gfor {{ label }}</h1>
+  <h1>{{ content.field_os2web_m_type }} for {{ label }}</h1>
 
   <div class="meetings-udvalg">
     <p class="udvalg-heading">Udvalg</p>
@@ -32,6 +32,18 @@
     {{ content.field_os2web_m_location }}
   </div>
 
+  <div class="meetings-participants">
+    <p class="participants-heading">Tilstede</p>
+    {{ content.field_os2web_m_partic }}
+  </div>
+
+  <div class="meetings-participants-cancel">
+    <p class="participants-heading">Fraværende</p>
+    {{ content.field_os2web_m_partic_cancel }}
+  </div>
+
+
+
 
 
 
@@ -44,7 +56,6 @@
   {{ content.body }}
 
   {% if (content.field_os2web_m_bps['open']) or (content.field_os2web_m_bps['closed']) %}
-    <h2>Bilag</h2>
     {% if (content.field_os2web_m_bps['open']) %}
       <br>
       <h2> Åben dagsorden </h2>
