@@ -22,7 +22,7 @@
   <div class="meetings-date">
     <p class="date-heading">Mødedato</p>
     {% if timestamp %}
-      <p class="date-time">{{ timestamp | format_date('long') }}</p>
+      <p class="date-time">{{ timestamp | format_date('os2core_datetime_medium') }}</p>
     {% endif %}
   </div>
 
