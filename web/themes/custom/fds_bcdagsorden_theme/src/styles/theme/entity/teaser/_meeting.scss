@@ -541,6 +541,34 @@ a.entity-teaser--os2web-meetings-meeting {
   margin-top: 20px;
 }
 
+.field--name-field-os2web-m-partic ul li:before {
+  display: none;
+}
+
+.field--name-field-os2web-m-partic ul li {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.field--name-field-os2web-m-partic ul {
+  margin: 0;
+  padding: 0;
+}
+
+.field--name-field-os2web-m-partic-cancel ul li:before {
+  display: none;
+}
+
+.field--name-field-os2web-m-partic-cancel ul li {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.field--name-field-os2web-m-partic-cancel ul {
+  margin: 0;
+  padding: 0;
+}
+
 
 // --------------------------------------------------
 // Variants
