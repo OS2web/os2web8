@@ -9,8 +9,6 @@
 %}
 
 <div{{ attributes.addClass(classes, 'field__items') }}>
-  <div class="box__body">
-    <h2 class="h4" style="margin-top: 0;">{{ label }}</h2>
 
     {% for item in items %}
       {% set participantRendered = item.content | render %}
@@ -30,5 +28,4 @@
         {% endif %}
       </div>
     {% endfor %}
-  </div>
 </div>
