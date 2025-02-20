@@ -223,7 +223,11 @@
 @include media-breakpoint-up(xl) {}
 
 // Print
-@media print {}
+@media print {
+  .eu-cookie-compliance-banner {
+    display: none;
+  }
+}
 
 // Touch
 .touchevents {}
