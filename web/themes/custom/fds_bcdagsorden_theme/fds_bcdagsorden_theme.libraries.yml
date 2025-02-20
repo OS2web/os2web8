@@ -13,3 +13,4 @@ javascripts:
     - core/drupal
     - core/jquery
     - core/modernizr
+    - core/drupalSettings

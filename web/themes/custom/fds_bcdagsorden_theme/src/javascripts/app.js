@@ -144,3 +144,45 @@ document.addEventListener('DOMContentLoaded', function() {
     interactive: true,
   });
 }());
+
+(function (Drupal) {
+  'use strict';
+
+  Drupal.behaviors.myTooltips = {
+    attach: function (context, settings) {
+      // Find all tooltip triggers in "context"
+      const triggers = context.querySelectorAll('.action-button');
+      triggers.forEach(trigger => {
+        const tooltip = trigger.querySelector('.tooltip');
+        if (!tooltip) return;
+
+        // Show on hover
+        trigger.addEventListener('mouseover', () => {
+          tooltip.setAttribute('aria-hidden', 'false');
+          tooltip.style.opacity = '1';
+        });
+        // Hide
+        trigger.addEventListener('mouseout', () => {
+          tooltip.setAttribute('aria-hidden', 'true');
+          tooltip.style.opacity = '0';
+        });
+
+        // Focus/blur for keyboard users
+        trigger.addEventListener('focus', () => {
+          tooltip.setAttribute('aria-hidden', 'false');
+          tooltip.style.opacity = '1';
+        });
+        trigger.addEventListener('blur', () => {
+          tooltip.setAttribute('aria-hidden', 'true');
+          tooltip.style.opacity = '0';
+        });
+      });
+    }
+  };
+
+})(Drupal);
+
+
+
+
+

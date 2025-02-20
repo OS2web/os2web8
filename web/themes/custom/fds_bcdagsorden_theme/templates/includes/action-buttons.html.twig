@@ -1,22 +1,22 @@
 <div class="action-buttons block">
   <div class="flexy-list">
     <div>
-      <a href="/soeg-dagsorden" aria-label="Fritekstsøgning på dagsordner og referater" class="action-button">
-        <span class="tooltip">Fritekstsøgning</span>
-        <img src="{{ base_path ~ directory }}/src/icons/search-outline.svg" alt="Søg" />
+      <a href="/soeg-dagsorden" aria-label="Fritekstsøgning på dagsordner og referater" class="action-button tooltip-trigger">
+        <span class="tooltip" id="tooltip-search" role="tooltip" aria-hidden="true">Fritekstsøgning</span>
+        <img src="{{ base_path ~ directory }}/src/icons/search-outline.svg" alt="Fritekstsøgning på dagsordner og referater" />
       </a>
     </div>
     <div>
-      <a href="https://www.borger.dk/hjaelp-og-vejledning/hvad-har-du-brug-for-hjaelp-til/borger-dk/teknisk-hjaelp/oplaesning-af-indhold" aria-label="Guide til oplæsning af indhold" class="action-button" target="_blank">
-        <span class="tooltip">Oplæsning</span>
-        <img src="{{ base_path ~ directory }}/src/icons/volume-high-outline.svg" alt="Oplæsning" />
+      <a href="https://www.borger.dk/hjaelp-og-vejledning/hvad-har-du-brug-for-hjaelp-til/borger-dk/teknisk-hjaelp/oplaesning-af-indhold" aria-label="Guide til oplæsning af indhold" class="action-button tooltip-trigger" target="_blank">
+        <span class="tooltip" id="tooltip-volume" role="tooltip" aria-hidden="true">Oplæsning</span>
+        <img src="{{ base_path ~ directory }}/src/icons/volume-high-outline.svg" alt="Guide til oplæsning" />
       </a>
     </div>
 
     <div>
-      <a href="#" class="action-button" onclick="window.print();" aria-label="Print indhold">
-        <span class="tooltip">Print</span>
-        <img src="{{ base_path ~ directory }}/src/icons/print-outline.svg" alt="Print" />
+      <a href="#" class="action-button tooltip-trigger" onclick="window.print();" aria-label="Print indhold">
+        <span class="tooltip" id="tooltip-print" role="tooltip" aria-hidden="true">Print</span>
+        <img src="{{ base_path ~ directory }}/src/icons/print-outline.svg" alt="Print indhold" />
       </a>
     </div>
   </div>
