@@ -164,6 +164,8 @@
   }
 }
 
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
@@ -196,7 +198,11 @@
 @include media-breakpoint-up(xl) {}
 
 // Print
-@media print {}
+@media print {
+  .accordion-content {
+    display: flex !important;
+  }
+}
 
 // Touch
 .touchevents {}
