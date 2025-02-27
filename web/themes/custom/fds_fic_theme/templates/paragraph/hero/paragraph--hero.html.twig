@@ -41,8 +41,10 @@
     {% endif %}
 
     {# Links Field (up to a maximum of 8) #}
-    <pre>
-      {{ dump(content.field_referenced_hero_links) }}
-    </pre>
+    {% if content.field_hero_links is not empty %}
+      <div class="hero-links-wrapper">
+        {{ content.field_hero_links }}
+      </div>
+    {% endif %}
   </div>
 </div>
