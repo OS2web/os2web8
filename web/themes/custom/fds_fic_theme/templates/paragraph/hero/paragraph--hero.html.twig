@@ -43,7 +43,38 @@
     {# Links Field (up to a maximum of 8) #}
     {% if content.field_hero_links is not empty %}
       <div class="hero-links-wrapper">
-        {{ content.field_hero_links }}
+        <ul class="hero-links-list">
+
+          {# Loop through each referenced "Hero Link" paragraph #}
+          {% for hero_link_paragraph in content.field_referenced_hero_links %}
+            {# The child paragraph’s fields are accessible as well #}
+
+            {# Extract link data. Typically:
+               hero_link_paragraph.field_link.0['#url'] => \Drupal\Core\Url
+               hero_link_paragraph.field_link.0['#title'] => link text
+            #}
+            {% set link_url_obj = hero_link_paragraph.field_hero_link.0['#url'] ?? null %}
+            {% set link_text = hero_link_paragraph.field_hero_link.0['#title'] ?? '' %}
+
+            {# Extract boolean for highlight:
+               Depending on how the boolean field is rendered, you might find:
+               hero_link_paragraph.field_highlight.0['#markup'] = '1' (or 0)
+               or hero_link_paragraph.field_highlight['#items'].value
+            #}
+            {% set highlight_value = hero_link_paragraph.field_highlight.0['#markup'] ?? '' %}
+            {% set is_highlighted = (highlight_value == '1') ? true : false %}
+
+            {% if link_url_obj %}
+              {% set link_url = link_url_obj.toString %}
+
+              {# Conditionally add a class if highlighted #}
+              <li class="{{ is_highlighted ? 'is-highlighted' : '' }}">
+                <a href="{{ link_url }}">{{ link_text }}</a>
+              </li>
+            {% endif %}
+
+          {% endfor %}
+        </ul>
       </div>
     {% endif %}
   </div>
