@@ -47,12 +47,12 @@
     .hero-links-wrapper {
       width: 100%;
       margin-top: 50px;
-      ul {
+      .field--name-field-hero-links {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
 
-        li {
+        .field__item {
           flex: 1 1 calc(25% - 1rem);
           box-sizing: border-box;
           list-style: none;
