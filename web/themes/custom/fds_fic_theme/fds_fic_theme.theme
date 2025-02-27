@@ -80,8 +80,11 @@ function fds_fic_theme_preprocess_page(array &$variables) {
   $variables['theme_settings']['branding']['branding_text'] = theme_get_setting('branding_text');
 
   $book_link_url = theme_get_setting('book_link_url');
+  $book_button_label = theme_get_setting('book_button_label');
+
 
   $variables['book_link_url'] = $book_link_url;
+  $variables['book_button_label'] = $book_button_label;
 
   // Get the current language code, e.g. 'da', 'en'
     $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
