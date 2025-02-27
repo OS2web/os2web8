@@ -47,7 +47,8 @@
 
         <ul class="hero-links-list">
           {% for link_item in link_items|slice(0, 8) %}
-            {% set url = link_item.uri %}
+            {% set url_object = link_item['#url'] %}
+            {% set url = url_object.toString %}  {# Convert Url object to string #}
             {% set title = link_item.title %}
             <li>
               <a href="{{ url }}">{{ title }}</a>
