@@ -49,9 +49,17 @@
 
     {% for item in paragraph.field_referenced_link %}
       {% set sub_entity = item.entity %}
-      {# Now you have the raw entity. You can't just print sub_entity. #}
-      {# Print specific fields: #}
-      {{ sub_entity.field_single_link }}
+
+      {# Access the 0th item of the link field #}
+      {% set link_item = sub_entity.field_single_link.0 %}
+
+      {# link_item.uri => The URL; link_item.title => The link text. #}
+      {# Conditionally wrap them in HTML as you please: #}
+      {% if link_item is defined %}
+        <a href="{{ link_item.uri }}">
+          {{ link_item.title|default(link_item.uri) }}
+        </a>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
