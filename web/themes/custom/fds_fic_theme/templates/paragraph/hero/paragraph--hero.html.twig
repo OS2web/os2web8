@@ -46,5 +46,9 @@
         {{ content.field_hero_links }}
       </div>
     {% endif %}
+
+    {% for item in content.field_hero_links %}
+      {{ item }}
+    {% endfor %}
   </div>
 </div>
