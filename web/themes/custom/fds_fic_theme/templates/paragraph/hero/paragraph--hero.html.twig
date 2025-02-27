@@ -45,37 +45,27 @@
       <div class="hero-links-wrapper">
         <ul class="hero-links-list">
 
-          {# Loop through each referenced "Hero Link" paragraph #}
           {% for hero_link_paragraph in content.field_referenced_hero_links %}
-            {# The child paragraph’s fields are accessible as well #}
+            {# Dump to confirm #}
+             {{ dump(hero_link_paragraph) }}
 
-            {# Extract link data. Typically:
-               hero_link_paragraph.field_link.0['#url'] => \Drupal\Core\Url
-               hero_link_paragraph.field_link.0['#title'] => link text
-            #}
-            {% set link_url_obj = hero_link_paragraph.field_hero_link.0['#url'] ?? null %}
-            {% set link_text = hero_link_paragraph.field_hero_link.0['#title'] ?? '' %}
-
-            {# Extract boolean for highlight:
-               Depending on how the boolean field is rendered, you might find:
-               hero_link_paragraph.field_highlight.0['#markup'] = '1' (or 0)
-               or hero_link_paragraph.field_highlight['#items'].value
-            #}
-            {% set highlight_value = hero_link_paragraph.field_highlight.0['#markup'] ?? '' %}
-            {% set is_highlighted = (highlight_value == '1') ? true : false %}
+            {% set link_url_obj   = hero_link_paragraph.field_hero_link.0['#url']   ?? null %}
+            {% set link_title    = hero_link_paragraph.field_hero_link.0['#title'] ?? '' %}
+            {% set highlight_raw = hero_link_paragraph.field_highlight.0['#markup'] ?? '0' %}
+            {% set is_highlighted = (highlight_raw == '1') %}
 
             {% if link_url_obj %}
-              {% set link_url = link_url_obj.toString %}
-
-              {# Conditionally add a class if highlighted #}
               <li class="{{ is_highlighted ? 'is-highlighted' : '' }}">
-                <a href="{{ link_url }}">{{ link_text }}</a>
+                <a href="{{ link_url_obj.toString }}">
+                  {{ link_title }}
+                </a>
               </li>
             {% endif %}
-
           {% endfor %}
+
         </ul>
       </div>
     {% endif %}
+
   </div>
 </div>
