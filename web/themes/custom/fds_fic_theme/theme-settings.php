@@ -125,6 +125,15 @@ function fds_fic_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form
     '#description' => t('Indsøt link URL for book knappen i top navigationen.')
   ];
 
+  $form['book_button_label'] = [
+    '#type' => 'textfield',
+    '#title' => t('Book knap label'),
+    '#default_value' => theme_get_setting('book_button_label'),
+    '#description' => t('Teksten i knappen'),
+  ];
+
+
+
 }
 
 
