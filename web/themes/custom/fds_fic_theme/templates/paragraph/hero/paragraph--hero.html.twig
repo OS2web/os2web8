@@ -41,9 +41,39 @@
     {% endif %}
 
     {# Links Field (up to a maximum of 8) #}
-    {% if content.field_hero_links is not empty %}
+    {% if content.field_referenced_hero_links is not empty %}
       <div class="hero-links-wrapper">
-        {{ content.field_hero_links }}
+        <ul class="hero-links-list">
+
+          {# Loop through each “Hero Links” sub-paragraph in the render array #}
+          {% for sub_paragraph in content.field_referenced_hero_links %}
+
+            {# Debug to see how it's structured (remove in production) #}
+            {{ dump(sub_paragraph) }}
+
+            {# The sub-paragraph’s link field #}
+            {% set link_item = sub_paragraph.field_hero_link.0 ?? null %}
+            {% if link_item is not null %}
+              {% set link_url_obj = link_item['#url'] ?? null %}
+              {% set link_title   = link_item['#title'] ?? '' %}
+            {% endif %}
+
+            {# The sub-paragraph’s boolean field #}
+            {% set highlight_item = sub_paragraph.field_highlight.0 ?? null %}
+            {% set highlight_raw = highlight_item['#markup'] ?? '0' %}
+            {% set is_highlighted = (highlight_raw == '1') %}
+
+            {# Render if we have a valid Url object #}
+            {% if link_url_obj %}
+              <li class="{{ is_highlighted ? 'is-highlighted' : '' }}">
+                <a href="{{ link_url_obj.toString }}">
+                  {{ link_title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+
+        </ul>
       </div>
     {% endif %}
   </div>
