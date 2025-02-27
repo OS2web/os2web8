@@ -46,5 +46,12 @@
         {{ content.field_hero_links }}
       </div>
     {% endif %}
+
+    {% for item in paragraph.field_referenced_link %}
+      {% set sub_entity = item.entity %}
+      {# Now you have the raw entity. You can't just print sub_entity. #}
+      {# Print specific fields: #}
+      {{ sub_entity.field_single_link }}
+    {% endfor %}
   </div>
 </div>
