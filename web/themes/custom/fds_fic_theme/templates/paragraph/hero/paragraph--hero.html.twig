@@ -41,25 +41,33 @@
     {% endif %}
 
     {# Links Field (up to a maximum of 8) #}
-    {% if content.field_hero_links is not empty %}
+
       <div class="hero-links-wrapper">
-        {{ content.field_hero_links }}
+        <ul class="hero-list-links">
+          {% for item in paragraph.field_referenced_link %}
+            {% set sub_entity = item.entity %}
+
+            {# Grab the first (and only) link item from the 'field_single_link' #}
+            {% set link_item = sub_entity.field_single_link.0 %}
+            {% if link_item %}
+              {# Convert the 'entity:node/6' or similar to a usable URL string #}
+              {% set url = link_item.getUrl().toString() %}
+
+              {# Check the boolean field #}
+              {% set is_highlighted = (sub_entity.field_highlight.value == '1') %}
+
+              <li>
+                <a href="{{ url }}" class="{% if is_highlighted %}is-highlighted{% endif %}">
+                  {{ link_item.title|default(url) }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
       </div>
-    {% endif %}
 
-    {% for item in paragraph.field_referenced_link %}
-      {% set sub_entity = item.entity %}
 
-      {# Access the 0th item of the link field #}
-      {% set link_item = sub_entity.field_single_link.0 %}
 
-      {# link_item.uri => The URL; link_item.title => The link text. #}
-      {# Conditionally wrap them in HTML as you please: #}
-      {% if link_item is defined %}
-        <a href="{{ link_item.uri }}">
-          {{ link_item.title|default(link_item.uri) }}
-        </a>
-      {% endif %}
-    {% endfor %}
   </div>
 </div>
