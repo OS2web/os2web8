@@ -43,23 +43,7 @@
     {# Links Field (up to a maximum of 8) #}
     {% if content.field_hero_links is not empty %}
       <div class="hero-links-wrapper">
-        <ul class="hero-links-list">
-          {# Limit to 8 if desired: |slice(0, 8) #}
-          {% for link_item in content.field_hero_links|slice(0, 8) %}
-            {# "link_item['#url']" is a \Drupal\Core\Url object #}
-            {% if link_item['#url'] is defined %}
-              {% set url_object = link_item['#url'] %}
-              {% set url = url_object.toString() %}
-
-              {# "link_item['#title']" is the link text #}
-              {% set title = link_item['#title'] ?? '' %}
-
-              <li>
-                <a href="{{ url }}">{{ title }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+        {{ content.field_hero_links }}
       </div>
     {% endif %}
   </div>
