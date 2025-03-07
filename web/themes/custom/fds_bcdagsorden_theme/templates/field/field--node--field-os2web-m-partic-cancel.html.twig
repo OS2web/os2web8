@@ -18,7 +18,7 @@
         {% if participantsList | length == 0 %}
           {{ 'Der er ingen deltagere.' | trans }}
         {% else %}
-          <ul class="two-col-list">
+          <ul>
             {% for participant in participantsList %}
               <li>
                 {{ participant }}

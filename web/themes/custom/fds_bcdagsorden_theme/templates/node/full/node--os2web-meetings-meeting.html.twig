@@ -32,15 +32,18 @@
     {{ content.field_os2web_m_location }}
   </div>
 
-  <div class="meetings-participants">
-    <p class="participants-heading">Tilstede</p>
-    {{ content.field_os2web_m_partic }}
-  </div>
+  {# ✅ Only show participants sections if type is "Referat" #}
+  {% if node.field_os2web_m_type.value == "Referat" %}
+    <div class="meetings-participants">
+      <p class="participants-heading">Tilstede</p>
+      {{ content.field_os2web_m_partic }}
+    </div>
 
-  <div class="meetings-participants-cancel">
-    <p class="participants-heading">Fraværende</p>
-    {{ content.field_os2web_m_partic_cancel }}
-  </div>
+    <div class="meetings-participants-cancel">
+      <p class="participants-heading">Fraværende</p>
+      {{ content.field_os2web_m_partic_cancel }}
+    </div>
+  {% endif %}
 
 
   {{ content.body }}
