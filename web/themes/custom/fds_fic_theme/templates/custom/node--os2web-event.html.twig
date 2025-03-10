@@ -54,14 +54,20 @@
           </div>
         {% endif %}
 
-        {% if content.field_os2web_event_date is not empty and content.field_os2web_event_date|render|trim is not empty %}
-          {% set start_date = content.field_os2web_event_date[0]['#context']['value']|format_date('custom', 'd. F Y - H:i', 'da') %}
-          {% set end_date = content.field_os2web_event_date[0]['#context']['end_value']|format_date('custom', 'd. F Y - H:i', 'da') %}
 
-          <div class="event-date">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            {{ start_date }} til {{ end_date }}
-          </div>
+        {% if content.field_os2web_event_date is not empty content.field_os2web_event_date|render|trim is not empty %}
+          {% set start_date_value = content.field_os2web_event_date[0]['#context']['value'] ?? null %}
+          {% set end_date_value = content.field_os2web_event_date[0]['#context']['end_value'] ?? null %}
+
+          {% if start_date_value is not empty and end_date_value is not empty %}
+            {% set start_date = start_date_value|date('U')|format_date('custom', 'd. F Y - H:i', 'da') %}
+            {% set end_date = end_date_value|date('U')|format_date('custom', 'd. F Y - H:i', 'da') %}
+
+            <div class="event-date">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              {{ start_date }} til {{ end_date }}
+            </div>
+          {% endif %}
         {% endif %}
 
         {% if content.field_os2web_event_kategori is not empty and content.field_os2web_event_kategori|render|trim is not empty %}
