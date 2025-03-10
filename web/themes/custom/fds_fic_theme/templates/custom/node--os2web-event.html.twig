@@ -58,12 +58,15 @@
 
 
         {% if content.field_os2web_event_date is not empty and content.field_os2web_event_date|render|trim is not empty %}
-          {% set start_date_value = content.field_os2web_event_date[0]['#context']['value'] ?? null %}
-          {% set end_date_value = content.field_os2web_event_date[0]['#context']['end_value'] ?? null %}
+          {% set start_date_value = content.field_os2web_event_date[0]['#markup'] ?? null %}
+          {% set end_date_value = content.field_os2web_event_date[1]['#markup'] ?? null %}
 
           {% if start_date_value is not empty and end_date_value is not empty %}
-            {% set start_date = start_date_value|date('U')|format_date('custom', 'd. F Y - H:i', 'da') %}
-            {% set end_date = end_date_value|date('U')|format_date('custom', 'd. F Y - H:i', 'da') %}
+            {% set start_timestamp = start_date_value|strtotime %}
+            {% set end_timestamp = end_date_value|strtotime %}
+
+            {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', 'da') %}
+            {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', 'da') %}
 
             <div class="event-date">
               <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -71,6 +74,7 @@
             </div>
           {% endif %}
         {% endif %}
+
 
         {% if content.field_os2web_event_kategori is not empty and content.field_os2web_event_kategori|render|trim is not empty %}
           <div class="event-category">
