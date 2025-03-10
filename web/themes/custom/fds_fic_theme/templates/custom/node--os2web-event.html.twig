@@ -117,10 +117,15 @@
           {{ content.field_event_location }}
         </div>
         {% endif %}
-        <div class="event-date">
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-          {{ content.field_os2web_event_start_date }}
-        </div>
+        {% if content.field_os2web_event_date is not empty %}
+          {% set start_date = content.field_os2web_event_date[0]['#context']['value']|date("d. F Y - H:i") %}
+          {% set end_date = content.field_os2web_event_date[0]['#context']['end_value']|date("d. F Y - H:i") %}
+
+          <div class="event-date">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{ start_date }} til {{ end_date }}
+          </div>
+        {% endif %}
         {% if content.field_os2web_event_kategori is not empty %}
         <div class="event-category">
           <i class="fa fa-tags" aria-hidden="true"></i>
