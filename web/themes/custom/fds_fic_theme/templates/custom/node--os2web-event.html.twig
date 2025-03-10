@@ -57,9 +57,9 @@
 
 
 
-        {% if content.field_os2web_event_date is not empty and content.field_os2web_event_date|render|trim is not empty %}
-          {% set start_date_value = content.field_os2web_event_date[0]['#markup'] ?? null %}
-          {% set end_date_value = content.field_os2web_event_date[1]['#markup'] ?? null %}
+        {% if content.field_os2web_event_date is not empty %}
+          {% set start_date_value = content.field_os2web_event_date['#items'].0.value ?? null %}
+          {% set end_date_value = content.field_os2web_event_date['#items'].0.end_value ?? null %}
 
           {% if start_date_value is not empty and end_date_value is not empty %}
             {% set start_timestamp = start_date_value|date('U') %}
@@ -74,6 +74,7 @@
             </div>
           {% endif %}
         {% endif %}
+
 
 
 
