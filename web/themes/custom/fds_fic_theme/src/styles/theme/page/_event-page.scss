@@ -89,6 +89,7 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      color: white;
       i {
         color: white;
       }
@@ -136,6 +137,7 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      color: white;
 
       i {
         color: white;
@@ -147,6 +149,25 @@
         }
       }
     }
+
+    .event-organizer {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: white;
+
+      i {
+        color: white;
+      }
+
+      .field--name-field-os2web-event-organizer {
+        p, h1, h2, h3, h4, h5, h6, span, strong {
+          color: white;
+        }
+      }
+    }
+
+
 
 
   }

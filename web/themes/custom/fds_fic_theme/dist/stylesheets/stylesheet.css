@@ -21145,6 +21145,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
 }
 .banner-event-fk .banner-event-info .event-date i {
   color: white;
@@ -21192,11 +21193,28 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
 }
 .banner-event-fk .banner-event-info .event-price i {
   color: white;
 }
 .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price p, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h1, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h2, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h3, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h4, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h5, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h6, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price span, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price strong {
+  color: white;
+}
+.banner-event-fk .banner-event-info .event-organizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+.banner-event-fk .banner-event-info .event-organizer i {
+  color: white;
+}
+.banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer p, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer h1, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer h2, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer h3, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer h4, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer h5, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer h6, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer span, .banner-event-fk .banner-event-info .event-organizer .field--name-field-os2web-event-organizer strong {
   color: white;
 }
 
