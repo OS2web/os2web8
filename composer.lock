@@ -13926,12 +13926,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu.git",
-                "reference": "65b7fe37ebca4b83fec766b9961f9e169833aec1"
+                "reference": "92c09833889fb432a6bc85227c1bc3f36bd9efee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/65b7fe37ebca4b83fec766b9961f9e169833aec1",
-                "reference": "65b7fe37ebca4b83fec766b9961f9e169833aec1",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings_edoc_fujitsu/zipball/92c09833889fb432a6bc85227c1bc3f36bd9efee",
+                "reference": "92c09833889fb432a6bc85227c1bc3f36bd9efee",
                 "shasum": ""
             },
             "require": {
@@ -13948,7 +13948,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/issues",
                 "source": "https://github.com/OS2web/os2web_meetings_edoc_fujitsu/tree/drupal10"
             },
-            "time": "2025-02-19T09:10:45+00:00"
+            "time": "2025-03-10T13:49:11+00:00"
         },
         {
             "name": "os2web/os2web_news",
