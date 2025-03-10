@@ -34,7 +34,7 @@
 
     <div class="banner-event-fk">
       <div class="banner-event-image">
-        {{ content.field_os2web_event_image }}
+        {{ content.field_os2web_evnet_image }}
       </div>
 
       <div class="banner-event-info">
@@ -55,8 +55,9 @@
         {% endif %}
 
         {% if content.field_os2web_event_date is not empty and content.field_os2web_event_date|render|trim is not empty %}
-          {% set start_date = content.field_os2web_event_date[0]['#context']['value']|date("d. F Y - H:i") %}
-          {% set end_date = content.field_os2web_event_date[0]['#context']['end_value']|date("d. F Y - H:i") %}
+          {% set start_date = content.field_os2web_event_date[0]['#context']['value']|format_date('custom', 'd. F Y - H:i', 'da') %}
+          {% set end_date = content.field_os2web_event_date[0]['#context']['end_value']|format_date('custom', 'd. F Y - H:i', 'da') %}
+
           <div class="event-date">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             {{ start_date }} til {{ end_date }}
