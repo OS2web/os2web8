@@ -105,8 +105,12 @@
       </div>
       <div class="banner-event-info">
         <h1>{{ label }}</h1>
-        <a class="event-link" href="{{ content.field_os2web_event_url[0]['#context'].value }}"><i class="fa fa-external-link" aria-hidden="true"></i>
-          Vis begivenhedsside</a>
+        {% if content.field_os2web_event_organizer is not empty %}
+          <div class="event-organizer">
+            <i class="fa fa-user" aria-hidden="true"></i> <!-- Change icon if needed -->
+            {{ content.field_os2web_event_organizer }}
+          </div>
+        {% endif %}
         {% if content.field_event_location is not empty %}
         <div class="event-location">
           <i class="fa fa-map-pin" aria-hidden="true"></i>
@@ -133,6 +137,17 @@
           {% endfor %}
           </div>
         </div>
+        {% endif %}
+        {% if content.field_os2web_event_price is not empty %}
+          <div class="event-price">
+            <i class="fa fa-money" aria-hidden="true"></i> <!-- You can change the icon -->
+            {{ content.field_os2web_event_price }}
+          </div>
+        {% endif %}
+        {% if content.field_os2web_event_url is not empty and content.field_os2web_event_url[0]['#context'].value is not empty %}
+          <a class="event-link" href="{{ content.field_os2web_event_url[0]['#context'].value }}">
+            <i class="fa fa-external-link" aria-hidden="true"></i> Booking
+          </a>
         {% endif %}
       </div>
     </div>

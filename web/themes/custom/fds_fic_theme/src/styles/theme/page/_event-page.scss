@@ -44,6 +44,7 @@
       color: white;
       margin: 0;
       padding: 0;
+      font-size: 3.2rem;
     }
 
     .event-link {
@@ -51,15 +52,19 @@
       background-color: white;
       width: fit-content;
       align-items: center;
-      padding: 8px 10px;
+      padding: 10px 30px 15px 30px;
       text-decoration: none;
-      border-radius: 50px;
-      font-size: 13px;
-      gap: 5px;
+      font-size: 20px;
+      gap: 15px;
       transition: .3s;
+      background-color: #01b4d4;
+      font-family: "RBNo2.1a", Arial, Helvetica, sans-serif;
 
       &:hover {
-        background-color: #f7f7f7;
+        background-color: #009ebc;
+      }
+      &:visited {
+        color: black;
       }
 
     }
@@ -67,7 +72,7 @@
     .event-location {
       display: flex;
       gap: 10px;
-      align-items: flex-start;
+      align-items: center;
 
       i {
         color: white;
@@ -83,7 +88,7 @@
     .event-date {
       display: flex;
       gap: 10px;
-      align-items: flex-start;
+      align-items: center;
       i {
         color: white;
       }
@@ -122,6 +127,22 @@
           }
         }
         .event-category-seperator {
+          color: white;
+        }
+      }
+    }
+
+    .event-price {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      i {
+        color: white;
+      }
+
+      .field--name-field-os2web-event-price {
+        p, h1, h2, h3, h4, h5, h6, span, strong {
           color: white;
         }
       }

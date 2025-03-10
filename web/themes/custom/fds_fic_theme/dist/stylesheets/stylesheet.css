@@ -21094,6 +21094,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: white;
   margin: 0;
   padding: 0;
+  font-size: 3.2rem;
 }
 .banner-event-fk .banner-event-info .event-link {
   display: -webkit-box;
@@ -21106,25 +21107,29 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px 10px;
+  padding: 10px 30px 15px 30px;
   text-decoration: none;
-  border-radius: 50px;
-  font-size: 13px;
-  gap: 5px;
+  font-size: 20px;
+  gap: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: #01b4d4;
+  font-family: "RBNo2.1a", Arial, Helvetica, sans-serif;
 }
 .banner-event-fk .banner-event-info .event-link:hover {
-  background-color: #f7f7f7;
+  background-color: #009ebc;
+}
+.banner-event-fk .banner-event-info .event-link:visited {
+  color: black;
 }
 .banner-event-fk .banner-event-info .event-location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .banner-event-fk .banner-event-info .event-location i {
   color: white;
@@ -21137,9 +21142,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .banner-event-fk .banner-event-info .event-date i {
   color: white;
@@ -21177,6 +21182,21 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   color: white;
 }
 .banner-event-fk .banner-event-info .event-category .event-category-items .event-category-seperator {
+  color: white;
+}
+.banner-event-fk .banner-event-info .event-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.banner-event-fk .banner-event-info .event-price i {
+  color: white;
+}
+.banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price p, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h1, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h2, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h3, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h4, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h5, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price h6, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price span, .banner-event-fk .banner-event-info .event-price .field--name-field-os2web-event-price strong {
   color: white;
 }
 
