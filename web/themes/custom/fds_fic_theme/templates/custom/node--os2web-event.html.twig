@@ -55,7 +55,9 @@
         {% endif %}
 
 
-        {% if content.field_os2web_event_date is not empty content.field_os2web_event_date|render|trim is not empty %}
+
+
+        {% if content.field_os2web_event_date is not empty and content.field_os2web_event_date|render|trim is not empty %}
           {% set start_date_value = content.field_os2web_event_date[0]['#context']['value'] ?? null %}
           {% set end_date_value = content.field_os2web_event_date[0]['#context']['end_value'] ?? null %}
 
