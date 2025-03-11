@@ -13803,12 +13803,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_meetings.git",
-                "reference": "a2bbec3130ecdfc3181541d1017e82040ecd9db7"
+                "reference": "0a266eb04b46dc0b288fd3820b671721ed2fef78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/a2bbec3130ecdfc3181541d1017e82040ecd9db7",
-                "reference": "a2bbec3130ecdfc3181541d1017e82040ecd9db7",
+                "url": "https://api.github.com/repos/OS2web/os2web_meetings/zipball/0a266eb04b46dc0b288fd3820b671721ed2fef78",
+                "reference": "0a266eb04b46dc0b288fd3820b671721ed2fef78",
                 "shasum": ""
             },
             "require": {
@@ -13826,7 +13826,7 @@
                 "issues": "https://github.com/OS2web/os2web_meetings/issues",
                 "source": "https://github.com/OS2web/os2web_meetings/tree/drupal10"
             },
-            "time": "2025-02-19T09:13:40+00:00"
+            "time": "2025-03-11T12:26:01+00:00"
         },
         {
             "name": "os2web/os2web_meetings_acadre",
