@@ -17737,7 +17737,7 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box-overlay {
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box-overlay {
   /* Position it so it covers the entire link */
   position: absolute;
   top: 0;
@@ -17749,13 +17749,14 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   /* Sit behind the text (text is in .fredericia-box__body) */
   z-index: 1;
 }
-main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body {
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body {
   padding: 0 15px;
   text-align: center;
   position: relative;
   z-index: 2;
+  max-width: 80%;
 }
-main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body span {
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body span {
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -17763,21 +17764,21 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   word-break: break-word;
 }
 @media only screen and (max-width: 640px) {
-  main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body span {
+  main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body span {
     font-size: 14px;
   }
 }
-main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text {
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body .intro-text {
   color: white;
   font-size: 13px;
   line-height: 1.4;
   margin-top: 5px;
 }
-main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text .field--name-field-os2web-page-intro {
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body .intro-text .field--name-field-os2web-page-intro {
   margin-bottom: 0;
   margin-top: 5px;
 }
-main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text .field--name-field-os2web-page-intro p {
+main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body .intro-text .field--name-field-os2web-page-intro p {
   color: white;
   font-size: 13px;
   line-height: 1.4;
