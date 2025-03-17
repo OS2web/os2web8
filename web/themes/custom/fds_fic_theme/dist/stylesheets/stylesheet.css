@@ -17858,11 +17858,12 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body {
+.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body {
   padding: 0 15px;
   text-align: center;
+  max-width: 80%;
 }
-.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body span {
+.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body span {
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -17870,24 +17871,36 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   word-break: break-word;
 }
 @media only screen and (max-width: 640px) {
-  .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body span {
+  .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body span {
     font-size: 14px;
   }
 }
-.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text {
+.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body .intro-text {
   color: white;
   font-size: 13px !important;
   line-height: 1.4 !important;
   margin-top: 5px;
 }
-.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text .field--name-field-os2web-page-intro {
+.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body .intro-text .field--name-field-os2web-page-intro {
   margin-bottom: 0;
   margin-top: 5px;
 }
-.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box .fredericia-box__body .intro-text .field--name-field-os2web-page-intro p {
+.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body .intro-text .field--name-field-os2web-page-intro p {
   color: white;
   font-size: 13px;
   line-height: 1.4;
+}
+.fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box-overlay {
+  /* Position it so it covers the entire link */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* A semi-transparent dark overlay */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Sit behind the text (text is in .fredericia-box__body) */
+  z-index: 1;
 }
 
 .box {

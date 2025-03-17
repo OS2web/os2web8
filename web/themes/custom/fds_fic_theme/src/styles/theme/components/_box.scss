@@ -270,11 +270,10 @@ main.col-lg-8 {
       }
     }
 
-    .fredericia-box {
       .fredericia-box__body {
         padding: 0 15px;
         text-align: center;
-
+        max-width: 80%;
         span {
           color: white;
           font-size: 16px;
@@ -304,7 +303,22 @@ main.col-lg-8 {
           }
         }
       }
+
+    .fredericia-box-overlay {
+      /* Position it so it covers the entire link */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      /* A semi-transparent dark overlay */
+      background-color: rgba(0, 0, 0, 0.4);
+
+      /* Sit behind the text (text is in .fredericia-box__body) */
+      z-index: 1;
     }
+
 
 
   }
