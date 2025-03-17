@@ -815,3 +815,39 @@ function fds_fic_theme_preprocess_paragraph__news_section(&$variables) {
   // Pass the node objects to the template.
   $variables['latest_news_articles'] = $nodes;
 }
+
+/**
+ * Implements hook_preprocess_paragraph__os2web_menu_links_paragraph().
+ */
+/**
+ * Implements hook_preprocess_paragraph__os2web_menu_links_paragraph().
+ */
+function fds_fic_theme_preprocess_paragraph__os2web_menu_links_paragraph(array &$variables) {
+  // Make sure the module has already populated #menu_links
+  if (empty($variables['#menu_links']) || !is_array($variables['#menu_links'])) {
+    return;
+  }
+
+  // Loop each link item
+  foreach ($variables['#menu_links'] as &$link_info) {
+    // Check if there's a rendered array for 'field_menu_image'
+    if (
+      isset($link_info['content']['field_menu_image']) &&
+      is_array($link_info['content']['field_menu_image']) &&
+      !empty($link_info['content']['field_menu_image']['#items'])
+    ) {
+      // The #items object references the file entity.
+      $items = $link_info['content']['field_menu_image']['#items'];
+      $files = $items->referencedEntities();
+      if (!empty($files)) {
+        $file_entity = reset($files);
+        // If it's a valid File entity, create a file URL
+        if ($file_entity instanceof \Drupal\file\FileInterface) {
+          $link_info['image_url'] = $file_entity->createFileUrl();
+        }
+      }
+    }
+  }
+}
+
+
