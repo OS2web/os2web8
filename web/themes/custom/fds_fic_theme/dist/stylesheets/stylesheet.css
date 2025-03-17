@@ -21100,10 +21100,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -21113,11 +21113,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   gap: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #01b4d4;
+  background-color: #c30a32;
   font-family: "RBNo2.1a", Arial, Helvetica, sans-serif;
 }
 .banner-event-fk .banner-event-info .event-link:hover {
-  background-color: #009ebc;
+  background-color: #e6032f;
 }
 .banner-event-fk .banner-event-info .event-link:visited {
   color: black;
