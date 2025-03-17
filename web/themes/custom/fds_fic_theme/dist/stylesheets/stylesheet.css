@@ -17847,6 +17847,7 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 2;
 }
 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box-arrow svg {
   fill: white;
@@ -17862,6 +17863,7 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   padding: 0 15px;
   text-align: center;
   max-width: 80%;
+  z-index: 2;
 }
 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper .fredericia-box__body span {
   color: white;
@@ -17898,7 +17900,7 @@ main.col-lg-8 .fredericia-menu-link-wrapper .fredericia-menu-link__inner-wrapper
   bottom: 0;
   left: 0;
   /* A semi-transparent dark overlay */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   /* Sit behind the text (text is in .fredericia-box__body) */
   z-index: 1;
 }
