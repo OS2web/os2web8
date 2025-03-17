@@ -150,9 +150,28 @@ main.col-lg-8 {
       }
 
       .fredericia-box {
+
+        .fredericia-box-overlay {
+          /* Position it so it covers the entire link */
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          /* A semi-transparent dark overlay */
+          background-color: rgba(0, 0, 0, 0.4);
+
+          /* Sit behind the text (text is in .fredericia-box__body) */
+          z-index: 1;
+        }
+
+
         .fredericia-box__body {
           padding: 0 15px;
           text-align: center;
+          position: relative;
+          z-index: 2;
 
           span {
             color: white;
