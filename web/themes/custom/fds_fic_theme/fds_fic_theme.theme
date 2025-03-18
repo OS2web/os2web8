@@ -772,17 +772,20 @@ function fds_fic_theme_preprocess_text_formatted(array &$variables) {
  *   An array of node entities.
  */
 function fds_fic_theme_fetch_latest_events($limit = 4) {
-  // Get the current date in a format that Drupal can compare against stored dates
+  // Get the current date/time in Drupal-friendly format.
   $current_date = new DrupalDateTime('now');
-  // Format to match the storage format of your date field
   $current_date_string = $current_date->format('Y-m-d\TH:i:s');
 
+  // Build query against the new date range field 'field_os2web_event_date'.
   $query = \Drupal::entityQuery('node')
     ->condition('status', 1)
     ->condition('type', 'os2web_event')
-    ->condition('field_os2web_event_end_date', $current_date_string, '>=')
-    ->sort('field_os2web_event_start_date', 'ASC')
+    // Only fetch events whose end_value is still in the future.
+    ->condition('field_os2web_event_date.end_value', $current_date_string, '>=')
+    // Sort by the start (value) so earliest upcoming events appear first.
+    ->sort('field_os2web_event_date.value', 'ASC')
     ->range(0, $limit);
+
   $nids = $query->execute();
 
   return Node::loadMultiple($nids);
