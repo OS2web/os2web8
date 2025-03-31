@@ -40,10 +40,10 @@
     height: 14px;
 
     border-width: 1px;
-    border-color: $color-red-001;
+    border-color: $color__bullets;
 
     &.tns-nav-active {
-      background-color: $color-red-001;
+      background-color: $color__bullets;
     }
 
     + button {
@@ -75,7 +75,7 @@
     border-radius: 100%;
 
     color: #fff;
-    background-color: $color-red-001;
+    background-color: $color__bullets;
 
     &:before {
       display: inline-block;
