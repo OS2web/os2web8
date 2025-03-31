@@ -27,26 +27,11 @@
                     <h2>{{ node.label }}</h2>
                   </a>
                   <div class="event-resume">
-                    {% if node.field_os2web_event_resume is defined and node.field_os2web_event_resume.value is not empty %}
-                      {% set resume_text = node.field_os2web_event_resume.value %}
-
-                      {# If resume_text is not a string, but an array or iterable, join the array into a string #}
-                      {% if resume_text is not string %}
-                        {% if resume_text is iterable %}
-                          {% set resume_text = resume_text|join(' ') %}
-                        {% else %}
-                          {% set resume_text = '' %}
-                        {% endif %}
-                      {% endif %}
-
-                      {# Display resume text, ensuring we only show a short part if it's longer than 100 characters #}
-                      {% if resume_text|length > 100 %}
-                        {{ resume_text|slice(0, 100) ~ '...' }}
-                      {% else %}
-                        {{ resume_text }}
-                      {% endif %}
+                    {% set resume_text = node.field_os2web_event_resume.value|striptags %}
+                    {% if resume_text|length > 100 %}
+                      {{ resume_text|slice(0, 100) ~ '...' }}
                     {% else %}
-                      Resume kommer...
+                      {{ resume_text }}
                     {% endif %}
                   </div>
                   <div class="event-link">
