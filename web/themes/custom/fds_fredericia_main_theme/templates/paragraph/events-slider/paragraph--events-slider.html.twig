@@ -35,12 +35,9 @@
                         {% if resume_text is iterable %}
                           {% set resume_text = resume_text|join(' ') %}
                         {% else %}
-                          {% set resume_text = '' %} {# Fallback if the value is not a string or iterable #}
+                          {% set resume_text = '' %}
                         {% endif %}
                       {% endif %}
-
-                      {# Now apply strip_tags to ensure the text is cleaned up #}
-                      {% set resume_text = resume_text|striptags %}
 
                       {# Display resume text, ensuring we only show a short part if it's longer than 100 characters #}
                       {% if resume_text|length > 100 %}
