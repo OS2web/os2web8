@@ -172,6 +172,21 @@
 
 
   }
+
+  table {
+    width: 100%;
+
+    tr, td {
+      padding: 15px;
+    }
+
+    tr td:last-child {
+      text-align: right;
+    }
+    tr {
+      border-bottom: 1px solid;
+    }
+  }
 }
 
 .accordion-close-button {
