@@ -1,9 +1,11 @@
 .status-banner-open-btn-wrapper {
-  position: relative;
+  position: absolute;
+  top: 90px;
+  right: 0;
   .status-banner-open-btn {
     position: absolute;
     z-index: 1;
-    right: 30px;
+    right: 50px;
     transition: .4s ease;
     top: 5px;
     background-color: $background_color__default;
@@ -22,11 +24,12 @@
 }
 
 .status-banner {
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 1;
   padding: 10px 0;
   transition: .4s ease;
+  top: 90px;
 
   .container {
     position: relative;

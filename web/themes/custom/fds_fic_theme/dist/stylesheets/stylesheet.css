@@ -15641,6 +15641,9 @@ body:has(.region-featured-top) header {
   color: #ffffff;
 }
 
+.custom-header {
+  position: relative;
+}
 .custom-header .logo img {
   display: block;
   max-height: 15px;
@@ -19174,12 +19177,14 @@ ul.related-links a:hover {
 }
 
 .status-banner-open-btn-wrapper {
-  position: relative;
+  position: absolute;
+  top: 90px;
+  right: 0;
 }
 .status-banner-open-btn-wrapper .status-banner-open-btn {
   position: absolute;
   z-index: 1;
-  right: 30px;
+  right: 50px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   top: 5px;
@@ -19197,12 +19202,13 @@ ul.related-links a:hover {
 }
 
 .status-banner {
-  position: relative;
+  position: absolute;
   width: 100%;
   z-index: 1;
   padding: 10px 0;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  top: 90px;
 }
 .status-banner .container {
   position: relative;
