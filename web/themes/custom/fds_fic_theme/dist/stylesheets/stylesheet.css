@@ -16692,13 +16692,13 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   width: 100%;
 }
 .paragraph--type--os2web-accordion-item table tr, .paragraph--type--os2web-accordion-item table td {
-  padding: 15px;
+  padding: 20px 0 20px 0;
 }
 .paragraph--type--os2web-accordion-item table tr td:last-child {
   text-align: right;
 }
 .paragraph--type--os2web-accordion-item table tr {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #dadada;
 }
 
 .accordion-close-button {
