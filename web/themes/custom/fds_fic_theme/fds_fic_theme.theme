@@ -853,4 +853,13 @@ function fds_fic_theme_preprocess_paragraph__os2web_menu_links_paragraph(array &
   }
 }
 
-
+function fds_fic_theme_preprocess_paragraph__events_slider(&$variables) {
+  // Check if the field exists before passing to template
+  if ($variables['paragraph']->getType() == 'events_slider') {
+    $node = $variables['node'];
+    // Ensure the field is available
+    if ($node->hasField('field_os2web_event_resume')) {
+      $variables['field_os2web_event_resume'] = $node->field_os2web_event_resume->value;
+    }
+  }
+}
