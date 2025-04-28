@@ -27,6 +27,7 @@
                     <h2>{{ node.label }}</h2>
                   </a>
                   <div class="event-resume">
+                    <pre>{{ dump(node) }}</pre>
                     {% if node.field_os2web_event_resume is defined and node.field_os2web_event_resume.value is not empty %}
                       {% set resume_text = node.field_os2web_event_resume.value %}
 
