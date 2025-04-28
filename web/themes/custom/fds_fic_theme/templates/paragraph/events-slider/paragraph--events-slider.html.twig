@@ -31,12 +31,8 @@
                       {% set resume_text = node.field_os2web_event_resume.value %}
 
                       {# If resume_text is not a string, but an array or iterable, join the array into a string #}
-                      {% if resume_text is not string %}
-                        {% if resume_text is iterable %}
-                          {% set resume_text = resume_text|join(' ') %}
-                        {% else %}
-                          {% set resume_text = '' %} {# Fallback if the value is not a string or iterable #}
-                        {% endif %}
+                      {% if resume_text is iterable %}
+                        {% set resume_text = resume_text|join(' ') %}
                       {% endif %}
 
                       {# Now apply strip_tags to ensure the text is cleaned up #}
