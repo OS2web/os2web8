@@ -27,6 +27,8 @@
                     <h2>{{ node.label }}</h2>
                   </a>
                   <div class="event-resume">
+                    <pre>{{ dump(node) }}</pre>
+                    <pre>{{ dump(node.field_os2web_event_resume) }}</pre>
                     {% if node.field_os2web_event_resume is not empty %}
                       {% set resume_text = node.field_os2web_event_resume.value|striptags %}
                       {% if resume_text|length > 100 %}
