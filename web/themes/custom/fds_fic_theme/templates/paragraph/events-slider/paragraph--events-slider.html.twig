@@ -27,9 +27,8 @@
                     <h2>{{ node.label }}</h2>
                   </a>
                   <div class="event-resume">
-                    test test test
-                    {% if node.field_os2web_event_resume is defined and node.field_os2web_event_resume.value is not empty %}
-                      {% set resume_text = node.field_os2web_event_resume.value %}
+                    {% if node.field_event_resume is defined and node.field_event_resume.value is not empty %}
+                      {% set resume_text = node.field_event_resume.value %}
 
                       {# If resume_text is an array or iterable, join the array into a string #}
                       {% if resume_text is iterable %}
@@ -88,8 +87,8 @@
                 <h2>{{ item.entity.label }}</h2>
               </a>
               <div class="event-resume">
-                {% if item.entity.field_os2web_event_resume is defined and item.entity.field_os2web_event_resume.value is not empty %}
-                  {% set resume_text = item.entity.field_os2web_event_resume.value|striptags %}
+                {% if item.entity.field_event_resume is defined and item.entity.field_event_resume.value is not empty %}
+                  {% set resume_text = item.entity.field_event_resume.value|striptags %}
                   {% if resume_text|length > 100 %}
                     {{ resume_text|slice(0, 100) ~ '...' }}
                   {% else %}
