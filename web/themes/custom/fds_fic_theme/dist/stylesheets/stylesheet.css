@@ -14626,71 +14626,6 @@ body:has(footer.footer-alternativ-wrapper) footer.d-print-none {
   display: none;
 }
 
-.nyhedsbrev-form {
-  margin-top: 50px;
-}
-@media only screen and (max-width: 576px) {
-  .nyhedsbrev-form {
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-}
-.nyhedsbrev-form h2 {
-  font-size: 20px !important;
-  margin-bottom: 10px;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  gap: 10px;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-mail label {
-  font-size: 14px;
-  color: #b2b2b3;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-mail input {
-  min-height: 35px;
-  font-size: 12px;
-  color: black;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-submit {
-  min-height: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-submit input {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px 10px 10px 10px;
-  color: black;
-  font-size: 18px;
-  font-family: "RBNo2.1a", Arial, Helvetica, sans-serif;
-  background-color: #01b5d5;
-  border: none;
-}
-.nyhedsbrev-form .nyhedsbrev-element-wrapper .nyhedsbrev-submit input:hover {
-  background-color: #019fbc;
-}
-
 @media (min-width: 768px) {
   .footer-col {
     padding-top: 10px;
@@ -19732,11 +19667,13 @@ ul.related-links a:hover {
   font-size: 2.5rem;
   font-weight: 600;
 }
+.newsletter-subscription__title .field--name-field-newsletter-title {
+  font-family: "RBNo2.1a", sans-serif;
+}
 .newsletter-subscription__description {
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 .newsletter-subscription__form-wrapper {
   display: -webkit-box;
@@ -19746,6 +19683,10 @@ ul.related-links a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
 }
 .newsletter-subscription .newsletter-content-wrapper {
   display: -webkit-box;
@@ -19756,10 +19697,27 @@ ul.related-links a:hover {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.newsletter-subscription__input {
+@media only screen and (max-width: 992px) {
+  .newsletter-subscription .newsletter-content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.newsletter-subscription .newsletter-content-wrapper .nyhedsbrev-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+}
+.newsletter-subscription__input {
+  width: 100%;
 }
 .newsletter-subscription__input label {
   display: block;
@@ -19771,22 +19729,25 @@ ul.related-links a:hover {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  height: 45px;
 }
 .newsletter-subscription__input input:focus {
   outline: none;
   border-color: #666;
 }
 .newsletter-subscription__submit input {
-  padding: 0.75rem 1.5rem;
+  height: 45px;
   background-color: #c30a32;
-  color: white;
+  color: black;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 20px;
+  font-family: "RBNo2.1a", sans-serif;
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  padding: 0 30px 5px 30px;
 }
 .newsletter-subscription__submit input:hover {
   background-color: #e6032f;

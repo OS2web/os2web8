@@ -14,17 +14,23 @@
     margin-bottom: 1rem;
     font-size: 2.5rem;
     font-weight: 600;
+
+    .field--name-field-newsletter-title {
+      font-family: "RBNo2.1a", sans-serif;
+    }
   }
 
   &__description {
     margin-bottom: 0;
-    flex: 1;
+    flex-basis: 50%;
   }
 
   &__form-wrapper {
     display: flex;
     gap: 1rem;
     align-items: flex-end;
+    flex: 1;
+    width: 100%;
   }
 
   // Create a wrapper for description and form to be side by side
@@ -32,10 +38,22 @@
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+
+    .nyhedsbrev-form {
+      display: flex;
+      flex: 1;
+      align-self: center;
+      width: 100%;
+
+    }
   }
 
   &__input {
-    flex: 1;
+    width: 100%;
 
     label {
       display: block;
@@ -48,7 +66,8 @@
       padding: 0.75rem;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      height: 45px;
 
       &:focus {
         outline: none;
@@ -59,14 +78,16 @@
 
   &__submit {
     input {
-      padding: 0.75rem 1.5rem;
+      height: 45px;
       background-color: $background_color__button;
-      color: white;
+      color: black;
       border: none;
       border-radius: 4px;
-      font-size: 1rem;
+      font-size: 20px;
+      font-family: "RBNo2.1a", sans-serif;
       cursor: pointer;
       transition: background-color 0.2s;
+      padding: 0 30px 5px 30px;
 
       &:hover {
         background-color: $background_color__button_hover;
