@@ -131,7 +131,7 @@
 
       <div data-node-id="{{ node.id }}" data-banner-id="{{ node.id }}" class="status-banner" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value == 'alert' %} background-color: #A51D38;
         {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'warning' %} background-color: #f2ef96;
-        {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'alright' %}background-color: #3e8346; {% endif  %}">
+        {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'alright' %}background-color: #3e8346; {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'orange' %} background-color: #ff4200; {% elseif node.field_status_banner_reference.entity.field_status_banner_color.value == 'blue' %} background-color: #01b4d4; {% endif  %}">
         <div class="container">
           <div class="status-banner-heading" style="{% if node.field_status_banner_reference.entity.field_status_banner_color.value in ['alert', 'alright'] %} color: white; {% else %} color:black; {% endif %}">
             {{ node.field_status_banner_reference.entity.field_status_heading.value }}
