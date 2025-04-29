@@ -19688,6 +19688,15 @@ ul.related-links a:hover {
           flex: 1;
   width: 100%;
 }
+@media only screen and (max-width: 576px) {
+  .newsletter-subscription__form-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10px;
+  }
+}
 .newsletter-subscription .newsletter-content-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19736,6 +19745,11 @@ ul.related-links a:hover {
   outline: none;
   border-color: #666;
 }
+@media only screen and (max-width: 576px) {
+  .newsletter-subscription__submit {
+    width: 100%;
+  }
+}
 .newsletter-subscription__submit input {
   height: 45px;
   background-color: #c30a32;
@@ -19748,6 +19762,11 @@ ul.related-links a:hover {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   padding: 0 30px 5px 30px;
+}
+@media only screen and (max-width: 576px) {
+  .newsletter-subscription__submit input {
+    width: 100%;
+  }
 }
 .newsletter-subscription__submit input:hover {
   background-color: #e6032f;
