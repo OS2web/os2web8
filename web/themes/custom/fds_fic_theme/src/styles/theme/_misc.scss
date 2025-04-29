@@ -680,7 +680,7 @@ body {
 
 nav {
   li {
-    padding-left: 0;
+    padding-left: 0 !important;
 
     &:before {
       display: none;
