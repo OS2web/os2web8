@@ -5,7 +5,9 @@
   .field--name-field-os2web-evnet-image {
     img {
       display: block;
-      object-fit: cover;
+      max-width: 100%;
+      border: 5px solid black;
+      height: auto;
       width: 100%;
     }
   }

@@ -3,6 +3,7 @@
   max-height: 500px;
   min-height: 400px;
   overflow: hidden;
+  gap: 20px;
 
   @media only screen and (max-width: 992px) {
     max-height: none;
@@ -22,7 +23,7 @@
       height: 100%;
 
       img {
-        height: 100%;
+        height: auto;
       }
     }
 

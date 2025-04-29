@@ -21072,8 +21072,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 
 .node--type-os2web-event .field--name-field-os2web-evnet-image img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 100%;
+  border: 5px solid black;
+  height: auto;
   width: 100%;
 }
 .node--type-os2web-event .field--type-datetime {
@@ -21095,6 +21096,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   max-height: 500px;
   min-height: 400px;
   overflow: hidden;
+  gap: 20px;
 }
 @media only screen and (max-width: 992px) {
   .banner-event-fk {
@@ -21119,7 +21121,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   height: 100%;
 }
 .banner-event-fk .banner-event-image .field--name-field-os2web-evnet-image img {
-  height: 100%;
+  height: auto;
 }
 .banner-event-fk .banner-event-info {
   width: 35%;
