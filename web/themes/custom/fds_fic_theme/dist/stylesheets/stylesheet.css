@@ -24173,6 +24173,13 @@ body a:not(.button) {
       flex-wrap: wrap;
 }
 
+nav li {
+  padding-left: 0;
+}
+nav li:before {
+  display: none;
+}
+
 @media (min-width: 992px) {
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-from-date,
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-to-date {
