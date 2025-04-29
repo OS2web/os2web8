@@ -19716,6 +19716,67 @@ ul.related-links a:hover {
   height: 10px;
 }
 
+.newsletter-subscription__container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+.newsletter-subscription__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.newsletter-subscription__description {
+  margin-bottom: 1.5rem;
+}
+.newsletter-subscription__form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.newsletter-subscription__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.newsletter-subscription__input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.newsletter-subscription__input input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.newsletter-subscription__input input:focus {
+  outline: none;
+  border-color: #666;
+}
+.newsletter-subscription__submit input {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.newsletter-subscription__submit input:hover {
+  background-color: #0056b3;
+}
+
 a.entity-list--os2web-page {
   max-width: unset;
 }
