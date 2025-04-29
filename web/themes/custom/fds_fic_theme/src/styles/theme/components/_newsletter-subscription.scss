@@ -1,27 +1,37 @@
 .newsletter-subscription {
   &__container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
 
   &__title {
+    margin-top: 0;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
   }
 
   &__description {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    flex: 1;
   }
 
   &__form-wrapper {
     display: flex;
     gap: 1rem;
     align-items: flex-end;
+  }
+
+  // Create a wrapper for description and form to be side by side
+  .newsletter-content-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
   }
 
   &__input {
