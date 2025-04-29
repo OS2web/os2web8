@@ -27,13 +27,13 @@
 <div{{ attributes.addClass(classes) }}>
   <div class="newsletter-subscription__container">
     {% if content.field_title %}
-      <h2 class="newsletter-subscription__title">{{ content.field_title }}</h2>
+      <h2 class="newsletter-subscription__title">{{ content.field_newsletter_title }}</h2>
     {% endif %}
 
     <div class="newsletter-content-wrapper">
-      {% if content.field_description %}
+      {% if content.field_newsletter_description %}
         <div class="newsletter-subscription__description">
-          {{ content.field_description }}
+          {{ content.field_newsletter_description }}
         </div>
       {% endif %}
 
@@ -43,7 +43,7 @@
         <input type="hidden" name="success_url" value="/succes-nyhedsbrev">
         <input type="hidden" name="failure_url" value="/fejl-nyhedsbrev">
         <input type="hidden" name="optin_scheme" value="double">
-        
+
         <div class="newsletter-subscription__form-wrapper">
           <div class="newsletter-subscription__input">
             <label for="email_address_id">E-mail adresse</label>
@@ -57,4 +57,4 @@
       </form>
     </div>
   </div>
-</div> 
+</div>
