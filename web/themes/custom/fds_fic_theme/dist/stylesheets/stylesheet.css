@@ -15906,13 +15906,13 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
 
 @supports (hyphens: auto) {
   :not(html[style*="font-size: 10px"])[lang=da] * {
-    -ms-hyphens: auto;
-        hyphens: auto;
+    -ms-hyphens: none;
+        hyphens: none;
   }
 }
 @supports not (hyphens: auto) {
   :not(html[style*="font-size: 10px"])[lang=da] * {
-    word-break: break-all;
+    word-break: normal;
   }
 }
 
@@ -24105,16 +24105,9 @@ body .page-container.page-container-not-front {
 .layout-sidebar-right h5,
 .layout-sidebar-right h6 {
   /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
   /* This is the dangerous one in WebKit, as it breaks things wherever */
-  word-break: break-all;
+  word-break: normal;
   /* Instead use this non-standard one: */
-  word-break: break-word;
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -ms-hyphens: auto;
-  hyphens: auto;
 }
 
 .layout-sidebar-left,
