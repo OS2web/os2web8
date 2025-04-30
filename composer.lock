@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f8d8e45f3d53aca92b88847bb746982",
+    "content-hash": "ec9f8a727d51434e12ae02fc4c3d4b3f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2986,6 +2986,73 @@
             }
         },
         {
+            "name": "drupal/cookieinformation",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cookieinformation.git",
+                "reference": "2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookieinformation-2.2.1.zip",
+                "reference": "2.2.1",
+                "shasum": "b49066343d1924ee0700a2253771b637c873408c"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.1",
+                    "datestamp": "1741331292",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Heikki Ylipaavalniemi",
+                    "homepage": "https://www.drupal.org/user/151799",
+                    "email": "heikki.ylipaavalniemi@exove.com"
+                },
+                {
+                    "name": "Kalle Kipinä",
+                    "homepage": "https://www.drupal.org/user/3578201",
+                    "email": "kalle.kipina@exove.com"
+                },
+                {
+                    "name": "hartsak",
+                    "homepage": "https://www.drupal.org/user/1676058"
+                },
+                {
+                    "name": "heikkiy",
+                    "homepage": "https://www.drupal.org/user/3442607"
+                },
+                {
+                    "name": "kekkis",
+                    "homepage": "https://www.drupal.org/user/813328"
+                }
+            ],
+            "description": "Cookie information integration for Drupal to allow end-users to control their cookie tracking.",
+            "homepage": "https://www.drupal.org/project/cookieinformation",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cookieinformation",
+                "issues": "https://www.drupal.org/project/issues/cookieinformation"
+            }
+        },
+        {
             "name": "drupal/core",
             "version": "10.3.14",
             "source": {
@@ -3926,6 +3993,51 @@
             "homepage": "https://www.drupal.org/project/editor_advanced_link",
             "support": {
                 "source": "https://git.drupalcode.org/project/editor_advanced_link"
+            }
+        },
+        {
+            "name": "drupal/editor_file",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/editor_file.git",
+                "reference": "8.x-1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/editor_file-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "13e893db9089c09355fab6f373e79893552f0178"
+            },
+            "require": {
+                "drupal/ckeditor": "*",
+                "drupal/core": "^9.4 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1705484081",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "duaelfr",
+                    "homepage": "https://www.drupal.org/user/931394"
+                }
+            ],
+            "description": "Allow users to link uploaded files in the text Editor.",
+            "homepage": "https://www.drupal.org/project/editor_file",
+            "support": {
+                "source": "https://git.drupalcode.org/project/editor_file"
             }
         },
         {
@@ -20366,5 +20478,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

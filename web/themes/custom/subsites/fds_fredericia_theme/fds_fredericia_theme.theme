@@ -3,8 +3,8 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
-use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_preprocess_page().
@@ -48,9 +48,9 @@ function fds_fredericia_theme_form_search_form_alter(&$form, FormStateInterface 
 }
 
 /**
- * Implements template_preprocess_swiftmailer().
+ * Implements template_preprocess_symfony_mailer_lite_email().
  */
-function fds_fredericia_theme_preprocess_swiftmailer(&$variables) {
+function fds_fredericia_theme_preprocess_symfony_mailer_lite_email(&$variables) {
   global $base_url;
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $theme = \Drupal::theme()->getActiveTheme();
@@ -67,7 +67,7 @@ function fds_fredericia_theme_preprocess_swiftmailer(&$variables) {
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
     $file = File::load($theme_settings['language_logo']['header_logo__' . $language]);
     if (!empty($file)) {
-      $variables['logo_url'] = file_create_url($file->getFileUri());
+      $variables['logo_url'] = 	\Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
     }
   }
 }
