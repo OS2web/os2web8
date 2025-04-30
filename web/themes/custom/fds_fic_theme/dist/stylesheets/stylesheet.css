@@ -14872,7 +14872,7 @@ body:has(.region-featured-top) header {
 
 .region-header__logo .logo img {
   max-width: 331px;
-  min-height: 24px;
+  min-height: 80px;
 }
 
 .region-header__top-navigation {
@@ -15456,6 +15456,11 @@ body:has(.region-featured-top) header {
 }
 .search-megamenu-btns-wrapper .book-btn a:hover {
   background-color: #019fbc;
+}
+@media only screen and (max-width: 576px) {
+  .search-megamenu-btns-wrapper .book-btn {
+    display: none;
+  }
 }
 
 .custom-header-row--desktop-navigation {

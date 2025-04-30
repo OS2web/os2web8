@@ -119,7 +119,7 @@ body:has(.region-featured-top) {
   .logo {
     img {
       max-width: 331px;
-      min-height: 24px;
+      min-height: 80px;
     }
   }
 }
@@ -675,6 +675,10 @@ body:has(.region-featured-top) {
       &:hover {
         background-color: darken($background_color__primary, 5%);
       }
+    }
+
+    @media only screen and (max-width: 576px) {
+      display: none;
     }
   }
 }
