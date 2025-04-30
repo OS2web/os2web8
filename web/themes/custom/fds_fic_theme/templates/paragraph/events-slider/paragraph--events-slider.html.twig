@@ -1,5 +1,11 @@
 {% if content %}
   <div class="events-slider">
+    {% if content.field_events_heading|render|trim is not empty %}
+      <h2 class="events-slider__heading">{{ content.field_events_heading }}</h2>
+    {% endif %}
+    {% if content.field_events_subheading|render|trim is not empty %}
+      <div class="events-slider__subheading">{{ content.field_events_subheading }}</div>
+    {% endif %}
     <div class="eventkalender-link">
       <a href="/begivenheder" target="_blank">Se alle begivenheder<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
       </a>
