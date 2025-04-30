@@ -23482,6 +23482,14 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin: 0 0 80px 0;
   position: relative;
 }
+.events-slider .events-slider__heading {
+  margin-top: 0;
+}
+.events-slider .events-slider__heading .field--name-field-events-heading {
+  font-family: "RBNo2.1a", sans-serif;
+  margin-bottom: 20px;
+  font-size: 42px;
+}
 .events-slider .views-element-container .view-os2web-events .view-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23689,13 +23697,25 @@ a {
 .entity-default--os2web-wrapper.background-color--primary {
   background-color: #01b5d5;
 }
+.entity-default--os2web-wrapper.background-color--primary .events-slider {
+  margin: 0;
+  padding: 80px 0;
+}
 
 .entity-default--os2web-wrapper.background-color--secondary {
   background-color: #eae3c0;
 }
+.entity-default--os2web-wrapper.background-color--secondary .events-slider {
+  margin: 0;
+  padding: 80px 0;
+}
 
 .entity-default--os2web-wrapper.background-color--tertiary {
   background-color: #066cc5;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .events-slider {
+  margin: 0;
+  padding: 80px 0;
 }
 
 body {
