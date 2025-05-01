@@ -17591,6 +17591,10 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   text-decoration: underline;
 }
 
+.paragraph--type--os2web-box-paragraph {
+  margin-bottom: 80px;
+}
+
 .paragraph--type--os2web-box-paragraph.background-color--primary .box__heading .field--name-field-os2web-box-heading h2 {
   color: white;
 }
@@ -19676,6 +19680,9 @@ ul.related-links a:hover {
   font-size: 18px;
 }
 
+.newsletter-subscription {
+  margin-bottom: 80px;
+}
 .newsletter-subscription__container {
   max-width: 1200px;
   margin: 2rem auto;
@@ -23739,6 +23746,9 @@ a {
   padding: 80px 0;
 }
 
+.paragraph--type--os2web-factbox-paragraph {
+  margin-bottom: 80px;
+}
 .paragraph--type--os2web-factbox-paragraph .field--name-field-os2web-factbox-heading h2 {
   margin-top: 0;
 }
@@ -24287,6 +24297,10 @@ nav li {
 }
 nav li:before {
   display: none;
+}
+
+.paragraph--type--os2web-simple-text-paragraph {
+  margin-bottom: 80px;
 }
 
 @media (min-width: 992px) {
