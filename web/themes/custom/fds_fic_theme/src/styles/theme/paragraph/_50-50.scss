@@ -119,8 +119,8 @@
         flex-wrap: wrap;
 
         a {
-          background-color: $background_color__primary;
-          border-color: $background_color__primary;
+          background-color: $background_color__button;
+          border-color: $background_color__button;
           transition: .25s ease;
           font-weight: normal;
           position: relative;
@@ -134,8 +134,8 @@
           font-size: 20px;
 
           &:hover {
-            background-color: darken($background_color__primary, 5%);
-            border-color: darken($background_color__primary, 5%);
+            background-color: $background_color__button_hover;
+            border-color: $background_color__button_hover;
             text-decoration: none;
           }
 
@@ -143,8 +143,8 @@
 
         .field__item {
           a {
-            background-color: $background_color__primary;
-            border-color: $background_color__primary;
+            background-color: $background_color__button;
+            border-color: $background_color__button;
             transition: .25s ease;
             font-weight: normal;
             position: relative;
@@ -178,8 +178,8 @@
             //}
 
             &:hover {
-              background-color: darken($background_color__primary, 5%);
-              border-color: darken($background_color__primary, 5%);
+              background-color: $background_color__button_hover;
+              border-color: $background_color__button_hover;
               text-decoration: none;
             }
 
