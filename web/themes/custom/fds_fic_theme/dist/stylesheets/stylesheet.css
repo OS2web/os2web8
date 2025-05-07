@@ -14059,12 +14059,26 @@ h2, .h2 {
 }
 @media screen and (min-width: 768px) {
   h2, .h2 {
-    font-size: 23px;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 992px) {
   h2, .h2 {
+    font-size: 42px;
+  }
+}
+h2 *, .h2 * {
+  font-weight: 400;
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  h2 *, .h2 * {
     font-size: 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  h2 *, .h2 * {
+    font-size: 42px;
   }
 }
 
