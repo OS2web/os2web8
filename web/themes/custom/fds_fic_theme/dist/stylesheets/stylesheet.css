@@ -19596,6 +19596,12 @@ ul.related-links a:hover {
 }
 .paragraph--type--hero .hero-content-wrapper .hero-heading .field--name-field-hero-heading {
   font-family: "RBNo2.1a";
+  font-size: 58px;
+}
+@media only screen and (max-width: 768px) {
+  .paragraph--type--hero .hero-content-wrapper .hero-heading .field--name-field-hero-heading {
+    font-size: 42px;
+  }
 }
 .paragraph--type--hero .hero-content-wrapper .hero-subheading {
   color: white;
@@ -21196,7 +21202,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -ms-flexbox;
   display: flex;
   max-height: 500px;
-  min-height: 400px;
   overflow: hidden;
   gap: 20px;
 }

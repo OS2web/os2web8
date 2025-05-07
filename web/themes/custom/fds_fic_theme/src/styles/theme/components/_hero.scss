@@ -36,6 +36,11 @@
 
       .field--name-field-hero-heading {
         font-family: "RBNo2.1a";
+        font-size: 58px;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 42px;
+        }
       }
     }
 
