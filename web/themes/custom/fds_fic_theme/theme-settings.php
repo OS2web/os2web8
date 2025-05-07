@@ -191,8 +191,9 @@ function fds_fic_theme_custom_theme_settings_submit(&$form, \Drupal\Core\Form\Fo
     }
   }
 
-  if (!empty($form_state['values']['email_logo'])) {
-    $fid = $form_state['values']['email_logo'][0];
+  $email_logo = $form_state->getValue('email_logo');
+  if (!empty($email_logo)) {
+    $fid = $email_logo[0];
     $file = \Drupal\file\Entity\File::load($fid);
     if ($file) {
       $file->setPermanent();
