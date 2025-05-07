@@ -664,7 +664,7 @@ body:has(.region-featured-top) {
 
   .book-btn {
     a{
-      background-color: $background_color__primary;
+      background-color: $background_color__button;
       padding: 10px 30px 15px 30px;
       color: black;
       font-size: 20px;
@@ -673,7 +673,7 @@ body:has(.region-featured-top) {
       transition: .25s ease;
 
       &:hover {
-        background-color: darken($background_color__primary, 5%);
+        background-color: $background_color__button_hover;
       }
     }
 
