@@ -21,6 +21,18 @@ function fds_fic_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form
     '#default_value' => theme_get_setting('footer_show_latest_content'),
   ];
 
+  $form['email_logo'] = [
+    '#type' => 'managed_file',
+    '#title' => t('Email Logo'),
+    '#default_value' => theme_get_setting('email_logo'),
+    '#description' => t('Upload a logo to be used in emails.'),
+    '#upload_location' => 'public://email-logo/',
+    '#upload_validators' => [
+      'file_validate_extensions' => ['png jpg jpeg gif'],
+    ],
+  ];
+
+
 
 
     $form['footer']['footer_image_choice'] = [
@@ -176,6 +188,16 @@ function fds_fic_theme_custom_theme_settings_submit(&$form, \Drupal\Core\Form\Fo
         $file->setPermanent();
         $file->save();
       }
+    }
+  }
+
+  if (!empty($form_state['values']['email_logo'])) {
+    $fid = $form_state['values']['email_logo'][0];
+    $file = \Drupal\file\Entity\File::load($fid);
+    if ($file) {
+      $file->setPermanent();
+      $file->save();
+      \Drupal::service('file.usage')->add($file, 'fds_fic_theme', 'theme', \Drupal::currentUser()->id());
     }
   }
 }

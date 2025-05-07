@@ -155,8 +155,17 @@ function fds_fic_theme_preprocess_swiftmailer(&$variables) {
   $theme_settings = _fds_base_theme_collect_theme_settings();
   $variables['current_language'] = $language;
   $variables['base_url'] = $GLOBALS['base_url'] . '/';
-  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
   $variables['theme_settings'] = $theme_settings;
+
+  $email_logo_fid = theme_get_setting('email_logo');
+  if (!empty($email_logo_fid)) {
+    $file = \Drupal\file\Entity\File::load($email_logo_fid[0]);
+    if ($file) {
+      $variables['logo_url'] = file_create_url($file->getFileUri());
+    }
+  } else {
+    $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
+  }
 
   // Header logo.
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
@@ -177,8 +186,17 @@ function fds_fic_theme_preprocess_anonymous_subscriptions_notification_email(&$v
   $theme_settings = _fds_base_theme_collect_theme_settings();
   $variables['current_language'] = $language;
   $variables['base_url'] = $GLOBALS['base_url'] . '/';
-  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
   $variables['theme_settings'] = $theme_settings;
+
+  $email_logo_fid = theme_get_setting('email_logo');
+  if (!empty($email_logo_fid)) {
+    $file = \Drupal\file\Entity\File::load($email_logo_fid[0]);
+    if ($file) {
+      $variables['logo_url'] = file_create_url($file->getFileUri());
+    }
+  } else {
+    $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
+  }
 
   // Header logo.
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
@@ -202,8 +220,17 @@ function fds_fic_theme_preprocess_anonymous_subscriptions_message(array &$variab
   $theme_settings = _fds_base_theme_collect_theme_settings();
   $variables['current_language'] = $language;
   $variables['base_url'] = $GLOBALS['base_url'] . '/';
-  $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
   $variables['theme_settings'] = $theme_settings;
+
+  $email_logo_fid = theme_get_setting('email_logo');
+  if (!empty($email_logo_fid)) {
+    $file = \Drupal\file\Entity\File::load($email_logo_fid[0]);
+    if ($file) {
+      $variables['logo_url'] = file_create_url($file->getFileUri());
+    }
+  } else {
+    $variables['logo_url'] = $theme_path . '/dist/images/logo--mail.png';
+  }
 
   // Header logo.
   if (!empty($theme_settings['language_logo']['header_logo__' . $language])) {
@@ -794,6 +821,7 @@ function fds_fic_theme_fetch_latest_events($limit = 4) {
 function fds_fic_theme_preprocess_paragraph__events_slider(&$variables) {
   // Fetch the latest events and add them to the variables.
   $variables['latest_events'] = fds_fic_theme_fetch_latest_events();
+
 }
 
 /**
