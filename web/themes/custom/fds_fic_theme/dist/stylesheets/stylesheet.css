@@ -22109,8 +22109,8 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: none;
 }
 .sidebar-content .sidebar-box .box-content a {
-  background-color: #feffff;
-  color: black;
+  background-color: #c30a32;
+  color: #000001;
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22151,6 +22151,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   -webkit-transform: scale(1.01, 1.01);
           transform: scale(1.01, 1.01);
+  background-color: #e6032f;
 }
 .sidebar-content .sidebar-box .box-content a:hover + .sidebar-product-image img {
   -webkit-transform: scale(1.05);
@@ -23774,6 +23775,9 @@ a {
 .entity-default--os2web-wrapper.background-color--primary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
 }
+.entity-default--os2web-wrapper.background-color--primary * {
+  color: white;
+}
 
 .entity-default--os2web-wrapper.background-color--secondary {
   background-color: #eae3c0;
@@ -23785,6 +23789,9 @@ a {
 .entity-default--os2web-wrapper.background-color--secondary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
 }
+.entity-default--os2web-wrapper.background-color--secondary * {
+  color: white;
+}
 
 .entity-default--os2web-wrapper.background-color--tertiary {
   background-color: #066cc5;
@@ -23795,6 +23802,9 @@ a {
 }
 .entity-default--os2web-wrapper.background-color--tertiary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
+}
+.entity-default--os2web-wrapper.background-color--tertiary * {
+  color: white;
 }
 
 .paragraph--type--os2web-factbox-paragraph {
