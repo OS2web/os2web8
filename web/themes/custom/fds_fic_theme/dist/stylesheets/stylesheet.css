@@ -14180,7 +14180,7 @@ p, .body-text {
 .section--alert {
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #000;
+  color: black;
   background-color: #ff9e18;
 }
 
@@ -15469,7 +15469,7 @@ body:has(.region-featured-top) header {
 .search-megamenu-btns-wrapper .book-btn a {
   background-color: #c30a32;
   padding: 10px 30px 15px 30px;
-  color: #000000;
+  color: #000001;
   font-size: 20px;
   text-decoration: none;
   font-family: "RBNo2.1a";
@@ -16201,7 +16201,7 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   font-size: 1.2rem;
   font-family: FontAwesome;
   content: "\f105";
-  color: #000;
+  color: black;
 }
 .breadcrumb li:last-child a {
   color: #222 !important;
@@ -17155,7 +17155,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   }
 }
 .view-os2web-search .view-header div a.active, .view-os2web-meetings-search-page .view-header div a.active, .view-os2web-search-selfservice .view-header div a.active {
-  background-color: #333;
+  background-color: black;
   border: 1px solid #ddd;
   color: #fff;
   font-weight: bold;
@@ -17528,7 +17528,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 
 .spotbox--text {
   text-decoration: none;
-  color: #000 !important;
+  color: black !important;
 }
 .spotbox--text .field--name-field-os2web-spotbox-bg-image {
   -webkit-box-shadow: none !important;
@@ -18456,10 +18456,10 @@ ul.related-links a:hover {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  color: #000 !important;
+  color: black !important;
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-body .field--name-field-os2web-banner-body * {
-  color: #000 !important;
+  color: black !important;
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-actions ul {
   padding: 0;
@@ -18513,7 +18513,7 @@ ul.related-links a:hover {
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-actions ul li a {
   background-color: #c30a32;
-  color: #000000;
+  color: #000001;
   font-weight: normal;
   border-color: #c30a32;
   -webkit-transition: 0.3s ease;
@@ -18558,11 +18558,11 @@ ul.related-links a:hover {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  color: #000;
+  color: black;
 }
 .banner-box-mobile .banner-body .field--name-field-os2web-banner-body p {
   font-size: 14px;
-  color: #000;
+  color: black;
 }
 .banner-box-mobile .banner-actions ul {
   padding: 0;
@@ -18616,7 +18616,7 @@ ul.related-links a:hover {
 }
 .banner-box-mobile .banner-actions ul li a {
   background-color: #c30a32;
-  color: #000000;
+  color: #000001;
   border-radius: 4px;
   font-weight: normal;
   border-color: #c30a32;
@@ -18873,7 +18873,7 @@ ul.related-links a:hover {
 }
 .banner-links-wrapper .banner-links .field--name-field-os2web-bannertxt-links .field__item a {
   text-decoration: none;
-  color: #000;
+  color: black;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
   width: 100%;
@@ -19157,7 +19157,7 @@ ul.related-links a:hover {
 
 .block-last-updated {
   background-color: #FFFFFF;
-  color: #000;
+  color: black;
   padding: 12px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -19827,7 +19827,7 @@ ul.related-links a:hover {
 .newsletter-subscription__submit input {
   height: 45px;
   background-color: #c30a32;
-  color: #000000;
+  color: #000001;
   border: none;
   border-radius: 4px;
   font-size: 20px;
@@ -19895,7 +19895,7 @@ a.entity-list--os2web-page, a.entity-list--os2web-page:hover, a.entity-list--os2
     padding-right: 0;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-    border-top: 1px solid #333;
+    border-top: 1px solid black;
   }
 }
 div.entity-list--os2web-news {
@@ -20764,7 +20764,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 
 @media print {
   .entity-preview--os2web-registration {
-    border: 1px solid #333;
+    border: 1px solid black;
     color: #000000 !important;
   }
 }
@@ -21297,7 +21297,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #c30a32;
-  color: #000000;
+  color: #000001;
   font-family: "RBNo2.1a", Arial, Helvetica, sans-serif;
 }
 .banner-event-fk .banner-event-info .event-link:hover {
@@ -21627,7 +21627,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .paragraph--type--os2web-contact-form .form-submit {
   height: 45px;
   background-color: #c30a32;
-  color: #000000;
+  color: #000001;
   border: none;
   border-radius: 4px;
   font-size: 20px;
@@ -23425,7 +23425,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
-  color: #000000;
+  color: #000001;
   font-family: "RBNo2.1a";
   font-size: 20px;
 }
@@ -23452,7 +23452,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
-  color: #000000;
+  color: #000001;
   font-family: "RBNo2.1a";
   font-size: 20px;
 }
@@ -23498,8 +23498,8 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   border-color: rgba(243, 231, 231, 0.9);
 }
 .paragraph-50-50-wrapper .text-side .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a {
-  background-color: #000;
-  border-color: #000;
+  background-color: black;
+  border-color: black;
   color: #fff;
 }
 .paragraph-50-50-wrapper .text-side .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a:hover {
@@ -24240,7 +24240,7 @@ body .page-container.page-container-not-front {
 .button.button-primary {
   background-color: #c30a32;
   border-color: #c30a32;
-  color: #000000;
+  color: #000001;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
