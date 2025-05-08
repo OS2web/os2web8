@@ -35,7 +35,7 @@ $info = [
         'color__link__hover' => '#333333',
         'color__footer_link' => '#333334',
         'color__bullets' => '#333433',
-        'color__text' => '#333335',
+        'color__text' => '#000001',
       ],
     ],
   ],
