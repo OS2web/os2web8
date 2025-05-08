@@ -154,7 +154,7 @@
 
               a {
                 background-color: $background_color__button;
-                color: black;
+                color: $color__text;
                 font-weight: normal;
                 border-color: $background_color__button;
                 transition: .3s ease;
@@ -288,7 +288,7 @@
 
         a {
           background-color: $background_color__button;
-          color: white;
+          color: $color__text;
           border-radius: 4px;
           font-weight: normal;
           border-color: $background_color__button;

@@ -15,6 +15,7 @@ $info = [
     'color__link__hover' => t('Link:hover color'),
     'color__footer_link' => t('Footer link color'),
     'color__bullets' => t('Bullets color'),
+    'color__text' => t('Button text color'),
   ],
 
   // Pre-defined color schemes.
@@ -34,6 +35,7 @@ $info = [
         'color__link__hover' => '#333333',
         'color__footer_link' => '#333334',
         'color__bullets' => '#333433',
+        'color__text' => '#000000',
       ],
     ],
   ],
