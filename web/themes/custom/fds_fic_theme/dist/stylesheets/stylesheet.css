@@ -16182,7 +16182,7 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   color: #222;
 }
 .breadcrumb li a {
-  color: #000000;
+  color: black !important;
   text-decoration: none;
 }
 .breadcrumb li a:hover {
@@ -18440,6 +18440,7 @@ ul.related-links a:hover {
   font-weight: bold;
   margin: 0;
   padding: 0;
+  color: #000;
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-actions ul {
   padding: 0;
@@ -18541,6 +18542,7 @@ ul.related-links a:hover {
 }
 .banner-box-mobile .banner-body .field--name-field-os2web-banner-body p {
   font-size: 14px;
+  color: #000;
 }
 .banner-box-mobile .banner-actions ul {
   padding: 0;
