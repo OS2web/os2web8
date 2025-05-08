@@ -17648,6 +17648,19 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   color: white;
 }
 
+.paragraph--type--os2web-box-paragraph.background-color--transparent .box__heading .field--name-field-os2web-box-heading h2 {
+  color: black;
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent .box__body p, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body h1, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body h2, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body h3, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body h4, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body h5, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body h6, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body span, .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body a {
+  color: black;
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent .box__body li {
+  color: black;
+}
+.paragraph--type--os2web-box-paragraph.background-color--transparent .box__body li:before {
+  color: black;
+}
+
 main.col-lg-8 .fredericia-menu-link-wrapper {
   display: grid;
   grid-gap: 20px;

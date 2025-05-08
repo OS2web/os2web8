@@ -94,6 +94,29 @@
   }
 }
 
+.paragraph--type--os2web-box-paragraph.background-color--transparent {
+  .box__heading {
+    .field--name-field-os2web-box-heading {
+      h2 {
+        color: black;
+      }
+    }
+  }
+  .box__body {
+    p, h1, h2, h3, h4, h5, h6, span, a {
+      color: black;
+    }
+
+    li {
+      color: black;
+
+      &:before {
+        color: black;
+      }
+    }
+  }
+}
+
 
 main.col-lg-8 {
   .fredericia-menu-link-wrapper {
