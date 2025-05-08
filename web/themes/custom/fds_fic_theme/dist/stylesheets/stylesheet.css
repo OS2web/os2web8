@@ -23711,7 +23711,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   text-align: right;
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-link a, .events-slider .swiper-events .swiper-wrapper .event-item .event-link a {
-  color: #222;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
@@ -23775,9 +23774,6 @@ a {
 .entity-default--os2web-wrapper.background-color--primary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
 }
-.entity-default--os2web-wrapper.background-color--primary * {
-  color: white;
-}
 
 .entity-default--os2web-wrapper.background-color--secondary {
   background-color: #eae3c0;
@@ -23788,9 +23784,6 @@ a {
 }
 .entity-default--os2web-wrapper.background-color--secondary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
-}
-.entity-default--os2web-wrapper.background-color--secondary * {
-  color: white;
 }
 
 .entity-default--os2web-wrapper.background-color--tertiary {
