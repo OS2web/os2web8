@@ -14267,7 +14267,7 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
   outline: none;
 }
 body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item .form-input:focus, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-item .form-input:focus {
-  border: 2px solid #000000;
+  border: 2px solid #feffff;
 }
 body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-actions {
   margin-top: 0;
@@ -14279,7 +14279,7 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
   background-size: 20px 20px;
   width: 70px;
   height: 70px;
-  background-color: #000000;
+  background-color: #feffff;
   background-repeat: no-repeat;
   right: 0;
   text-indent: -9999px;
@@ -14808,7 +14808,7 @@ header {
   top: 60%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #000000;
+  color: #feffff;
 }
 .language-dropdown .language-dropdown-menu {
   position: absolute;
@@ -14842,7 +14842,7 @@ header {
   text-decoration: none;
 }
 .language-dropdown .language-dropdown-menu li a:hover {
-  color: #000000;
+  color: #feffff;
 }
 
 body:has(.paragraph--type--hero) header {
@@ -14954,7 +14954,7 @@ body:has(.region-featured-top) header {
   text-decoration: none;
 }
 .region-header__top-navigation nav ul li a:hover {
-  color: #000000;
+  color: #feffff;
 }
 
 .no-scroll {
@@ -15025,7 +15025,7 @@ body:has(.region-featured-top) header {
   width: 100%;
   border-radius: 50px;
   border: none;
-  background-color: #000000;
+  background-color: #feffff;
   color: white;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -15067,7 +15067,7 @@ body:has(.region-featured-top) header {
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: #feffff;
   z-index: 9999;
   overflow-y: auto;
 }
@@ -15309,7 +15309,7 @@ body:has(.region-featured-top) header {
   transition: 0.25s ease;
 }
 .search-megamenu-btns-wrapper .font-size-changer button:hover {
-  color: #000000;
+  color: #feffff;
 }
 .search-megamenu-btns-wrapper .search-btn-wrapper .search-btn {
   background-color: transparent;
@@ -15356,7 +15356,7 @@ body:has(.region-featured-top) header {
   }
 }
 .search-megamenu-btns-wrapper .search-btn-wrapper:hover .fa-magnifying-glass {
-  color: #000000;
+  color: #feffff;
 }
 .search-megamenu-btns-wrapper .megamenu-burger-button-wrapper .burger-btn {
   background-color: transparent;
@@ -15419,7 +15419,7 @@ body:has(.region-featured-top) header {
   transition: 0.25s ease;
 }
 .search-megamenu-btns-wrapper .megamenu-burger-button-wrapper .burger-btn:hover .bar-1, .search-megamenu-btns-wrapper .megamenu-burger-button-wrapper .burger-btn:hover .bar-2, .search-megamenu-btns-wrapper .megamenu-burger-button-wrapper .burger-btn:hover .bar-3 {
-  background-color: #000000;
+  background-color: #feffff;
 }
 .search-megamenu-btns-wrapper .custom-external-links-toggle {
   border: 1px solid #d9d9d9;
@@ -15459,7 +15459,7 @@ body:has(.region-featured-top) header {
 }
 .search-megamenu-btns-wrapper .custom-external-links-toggle i {
   font-size: 20px;
-  color: #000000;
+  color: #feffff;
 }
 @media only screen and (max-width: 1200px) {
   .search-megamenu-btns-wrapper .custom-external-links-toggle i {
@@ -15549,7 +15549,7 @@ body:has(.region-featured-top) header {
           align-items: center;
   padding-left: 0;
   padding-top: 0;
-  background-color: #000000;
+  background-color: #feffff;
 }
 .custom-header-row--desktop-navigation .region-header__main-navigation nav ul li:before {
   display: none;
@@ -15582,7 +15582,7 @@ body:has(.region-featured-top) header {
 }
 .custom-header-row--desktop-navigation .region-header__main-navigation nav ul li a:hover {
   text-decoration: none;
-  background-color: #000000;
+  background-color: #feffff;
   border-radius: 5px;
 }
 .custom-header-row--desktop-navigation .region-header__main-navigation nav ul li a + ul {
@@ -15644,7 +15644,7 @@ body:has(.region-featured-top) header {
   padding: 5px 25px;
   border-radius: 50px;
   border: 0;
-  background-color: #000000;
+  background-color: #feffff;
   color: white;
   font-weight: 600;
 }
@@ -15946,10 +15946,10 @@ html[style*="font-size: 20px"] .js-increase-font-size:hover {
   width: 12px;
   height: 12px;
   border-width: 1px;
-  border-color: #000000;
+  border-color: #feffff;
 }
 .tns-nav button.tns-nav-active {
-  background-color: #000000;
+  background-color: #feffff;
   opacity: 0.8;
 }
 .tns-nav button + button {
@@ -16758,7 +16758,7 @@ form#search-block-form .form-actions .form-submit,
   height: 50px;
   border: none;
   border-radius: 50px;
-  background-color: #000000;
+  background-color: #feffff;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -17170,7 +17170,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   display: flex;
 }
 #block-fds-fic-theme-sitemap-link .field__item p .sidebar-selvbetjening-button {
-  background-color: #000000;
+  background-color: #feffff;
   padding: 10px 20px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -17268,7 +17268,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   left: 0;
   height: 10px;
   width: 100%;
-  background-color: #000000;
+  background-color: #feffff;
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-secondary {
   color: black;
@@ -17280,7 +17280,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   left: 0;
   height: 10px;
   width: 100%;
-  background-color: #eae3c0;
+  background-color: #feffff;
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .spotbox--image.spotbox--background-color-tertiary {
   color: black;
@@ -17418,7 +17418,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   left: 0;
   height: 10px;
   width: 100%;
-  background-color: #000000;
+  background-color: #feffff;
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-secondary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-secondary {
   color: black;
@@ -17430,7 +17430,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   left: 0;
   height: 10px;
   width: 100%;
-  background-color: #eae3c0;
+  background-color: #feffff;
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference .field__item .spotbox--image.spotbox--background-color-tertiary, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox .field__item .spotbox--image.spotbox--background-color-tertiary {
   color: black;
@@ -17561,7 +17561,7 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 }
 .spotbox--text .read-more-spotbox span i {
   margin-left: 15px;
-  color: #000000;
+  color: #feffff;
   font-size: 24px;
 }
 
@@ -18783,7 +18783,7 @@ ul.related-links a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000000;
+  background-color: #feffff;
   border: none;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
@@ -18870,7 +18870,7 @@ ul.related-links a:hover {
   }
 }
 .banner-links-wrapper .banner-links .field--name-field-os2web-bannertxt-links .field__item a:hover {
-  background-color: #000000;
+  background-color: #feffff;
   color: white;
 }
 .banner-links-wrapper .banner-links .field--name-field-os2web-bannertxt-links .field__item a:after {
@@ -18925,7 +18925,7 @@ ul.related-links a:hover {
   right: -280px;
   width: 280px;
   bottom: 0;
-  background-color: #000000;
+  background-color: #feffff;
 }
 .custom-mobile-navigation.custom-mobile-navigation--open .custom-mobile-navigation-popup .slinky-menu {
   display: block;
@@ -19640,10 +19640,10 @@ ul.related-links a:hover {
   display: none;
 }
 .paragraph--type--hero .hero-content-wrapper .hero-links-wrapper .hero-list-links li:nth-child(odd) a:before {
-  background-color: #000000;
+  background-color: #feffff;
 }
 .paragraph--type--hero .hero-content-wrapper .hero-links-wrapper .hero-list-links li:nth-child(even) a:before {
-  background-color: #eae3c0;
+  background-color: #feffff;
 }
 .paragraph--type--hero .hero-content-wrapper .hero-links-wrapper .hero-list-links li a {
   background-color: white;
@@ -21790,7 +21790,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   stroke: #222;
 }
 .paragraph--type--os2web-box-paragraph.background-color--primary.box {
-  background-color: #000000;
+  background-color: #feffff;
 }
 .paragraph--type--os2web-box-paragraph.background-color--primary.box .box__heading {
   background-color: rgba(0, 0, 0, 0.1);
@@ -21801,7 +21801,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   padding-top: 20px;
 }
 .paragraph--type--os2web-box-paragraph.background-color--secondary.box {
-  background-color: #eae3c0;
+  background-color: #feffff;
 }
 .paragraph--type--os2web-box-paragraph.background-color--secondary.box .box__heading {
   background-color: rgba(0, 0, 0, 0.1);
@@ -22086,7 +22086,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: none;
 }
 .sidebar-content .sidebar-box .box-content a {
-  background-color: #000000;
+  background-color: #feffff;
   color: black;
   padding: 30px;
   display: -webkit-box;
@@ -22283,7 +22283,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   width: 100%;
 }
 .sidebar-accordion-wrapper .sidebar-accordion__inner-wrapper .sidebar .sidebar-list .sidebar-item.active {
-  background-color: #000000;
+  background-color: #feffff;
   color: black;
   border: 1px solid;
 }
@@ -23122,7 +23122,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-family: "RBNo2.1a";
 }
 .latest-news-display .container .news-title-wrapper .see-all-news-btn a {
-  color: #000000;
+  color: #feffff;
   font-size: 32px;
   text-decoration: none;
   font-family: "RBNo2.1a";
@@ -23189,7 +23189,7 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   gap: 5px;
 }
 .latest-news-display .container .latest-news-innerwrapper .news-card .news-content-wrapper .news-date {
-  color: #000000;
+  color: #feffff;
   padding: 0;
   font-size: 18px;
   font-family: "RBNo2.1a";
@@ -23742,7 +23742,7 @@ a {
 }
 
 .entity-default--os2web-wrapper.background-color--primary {
-  background-color: #000000;
+  background-color: #feffff;
 }
 .entity-default--os2web-wrapper.background-color--primary .events-slider {
   margin: 0;
@@ -23753,7 +23753,7 @@ a {
 }
 
 .entity-default--os2web-wrapper.background-color--secondary {
-  background-color: #eae3c0;
+  background-color: #feffff;
 }
 .entity-default--os2web-wrapper.background-color--secondary .events-slider {
   margin: 0;
@@ -23985,7 +23985,7 @@ body .page-container.page-container-not-front {
 }
 .region-sidebar-second .block-fieldblock .field--name-field-link-til-andet-indhold a:before,
 .region-sidebar-second .block-fieldblock .field--name-field-ext-links a:before {
-  background-color: #000000;
+  background-color: #feffff;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24013,7 +24013,7 @@ body .page-container.page-container-not-front {
 .region-sidebar-second .block-fieldblock .field--name-field-link-til-andet-indhold a:hover,
 .region-sidebar-second .block-fieldblock .field--name-field-ext-links a:hover {
   background-color: #E6E3E1;
-  color: #000000;
+  color: #feffff;
 }
 .region-sidebar-second .block-fieldblock .field--name-field-link-til-andet-indhold a:focus,
 .region-sidebar-second .block-fieldblock .field--name-field-ext-links a:focus {
@@ -24090,7 +24090,7 @@ body .page-container.page-container-not-front {
   transition: all 0.3s ease;
 }
 .block-os2web-pagebuilder-related-links.box .box__body .related-links li a:before {
-  background-color: #000000;
+  background-color: #feffff;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24117,7 +24117,7 @@ body .page-container.page-container-not-front {
 }
 .block-os2web-pagebuilder-related-links.box .box__body .related-links li a:hover {
   background-color: #E6E3E1;
-  color: #000000;
+  color: #feffff;
 }
 .block-os2web-pagebuilder-related-links.box .box__body .related-links li a:focus {
   outline: 0;
