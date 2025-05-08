@@ -1,0 +1,28 @@
+{%
+  set classes = [
+  'element-wrapper-link',
+  node.bundle|clean_class,
+  node.isPromoted() ? 'is-promoted',
+  node.isSticky() ? 'is-sticky',
+  not node.isPublished() ? 'is-unpublished',
+  view_mode ? view_mode|clean_class,
+]
+%}
+{% set pageTeaserText = content.field_os2web_news_intro is empty
+  ? content.field_os2web_news_description|render
+  : content.field_os2web_news_intro|render %}
+
+<a href="{{ url }}" class="news-teaser" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_news_heading.value }}">
+  <i class="fa-solid fa-arrow-right"></i>
+  <div class="news-teaser-body">
+    {{ content.field_os2web_news_heading }}
+    <div class="news-teaser-text">
+      {{ pageTeaserText | striptags }}
+    </div>
+      <div class="my-breadcrumbs">
+          <div class="breadcrumb-item">
+            Nyheder
+          </div>
+      </div>
+  </div>
+</a>

@@ -1,0 +1,134 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+{{ attach_library('classy/node') }}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+
+    <div class="banner-event-fk">
+      <div class="banner-event-image">
+        {{ content.field_os2web_evnet_image }}
+      </div>
+
+      <div class="banner-event-info">
+        <h1>{{ label }}</h1>
+
+        {% if content.field_os2web_event_organizer is not empty and content.field_os2web_event_organizer|render|trim is not empty %}
+          <div class="event-organizer">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            {{ content.field_os2web_event_organizer }}
+          </div>
+        {% endif %}
+
+        {% if content.field_event_location is not empty and content.field_event_location|render|trim is not empty %}
+          <div class="event-location">
+            <i class="fa fa-map-pin" aria-hidden="true"></i>
+            {{ content.field_event_location }}
+          </div>
+        {% endif %}
+
+
+
+
+        {% if content.field_os2web_event_date is not empty %}
+          {% set start_date_value = content.field_os2web_event_date['#items'].0.value ?? null %}
+          {% set end_date_value = content.field_os2web_event_date['#items'].0.end_value ?? null %}
+
+          {% if start_date_value is not empty and end_date_value is not empty %}
+            {% set start_timestamp = start_date_value|date('U') %}
+            {% set end_timestamp = end_date_value|date('U') %}
+
+            {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', 'da') %}
+            {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', 'da') %}
+
+            <div class="event-date">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              {{ start_date }} til {{ end_date }}
+            </div>
+          {% endif %}
+        {% endif %}
+
+
+
+
+        {% if content.field_os2web_event_kategori is not empty and content.field_os2web_event_kategori|render|trim is not empty %}
+          <div class="event-category">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            {% set categories = [] %}
+            {% for key, item in content.field_os2web_event_kategori %}
+              {% if key|first != '#' %}
+                {% set categories = categories|merge([item]) %}
+              {% endif %}
+            {% endfor %}
+            <div class="event-category-items">
+              {% for item in categories %}
+                <a href="{{ path(item['#url'].routeName, item['#url'].routeParameters) }}">{{ item['#title'] }}</a>
+                {% if not loop.last %}<span class="event-category-seperator">, &nbsp;</span> {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if content.field_os2web_event_price is not empty and content.field_os2web_event_price|render|trim is not empty %}
+          <div class="event-price">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            {{ content.field_os2web_event_price }}
+          </div>
+        {% endif %}
+
+        {% if node.field_os2web_event_url.value %}
+          <a class="event-link" href="{{ node.field_os2web_event_url.value }}">
+            Booking
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="event-content-section">
+      <h2>{{ label }}</h2>
+
+      {% if content.field_os2web_event_resume is not empty and content.field_os2web_event_resume|render|striptags|trim is not empty %}
+        <div class="event-resume">
+          {{ content.field_os2web_event_resume }}
+        </div>
+      {% endif %}
+
+      {% if content.body is not empty and content.body|render|trim is not empty %}
+        <div class="event-body">
+          {{ content.body }}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  {{ content.field_os2web_page_paragraph_narr }}
+
+</article>

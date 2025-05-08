@@ -1,0 +1,92 @@
+{#
+paragraph--os2web-menu-links-paragraph.html.twig
+#}
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  paragraph.isPublished() ? null : 'paragraph--unpublished'
+] %}
+
+{# True if we want to use images as backgrounds #}
+{% set show_background_image = (paragraph.field_os2web_menu_links_vm.value == 'image') %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      <div class="fredericia-menu-link-wrapper">
+        {% for menu_link in _context['#menu_links'] %}
+          {% if show_background_image and menu_link.image_url %}
+            {#
+            If the user selected "image" mode AND this link has an image,
+            put the background-image directly on the <a> tag.
+            #}
+            <a href="{{ menu_link.url }}"
+               class="fredericia-menu-link__inner-wrapper
+                      fredericia-box
+                      fredericia-box--section-link"
+               style="background-image: url('{{ menu_link.image_url }}'); background-size: cover; background-position: center;">
+              {# The overlay is just an extra div. We'll style it via CSS so it covers the entire link. #}
+              <div class="fredericia-box-overlay"></div>
+
+              <div class="fredericia-box-arrow">
+                {% include '@fds_fic_theme/src/images/svg-icons/arrow-right.svg' %}
+              </div>
+
+              <div class="fredericia-box__body">
+                <span>{{ menu_link.title }}</span>
+
+                {% if paragraph.field_os2web_menu_links_show_int.value %}
+                  <div class="intro-text">
+                    {{ menu_link.intro_text }}
+                  </div>
+                {% endif %}
+              </div>
+            </a>
+
+          {% else %}
+            {#
+            Otherwise (no image or not in "image" mode),
+            just render everything without a background image.
+            #}
+            <a href="{{ menu_link.url }}"
+               class="fredericia-menu-link__inner-wrapper
+                      fredericia-box
+                      fredericia-box--section-link">
+              <div class="fredericia-box-arrow">
+                {% include '@fds_fic_theme/src/images/svg-icons/arrow-right.svg' %}
+              </div>
+
+              <div class="fredericia-box__body">
+                <span>{{ menu_link.title }}</span>
+
+                {% if paragraph.field_os2web_menu_links_show_int.value %}
+                  <div class="intro-text">
+                    {{ menu_link.intro_text }}
+                  </div>
+                {% endif %}
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    {% endblock %}
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var characterLimit = 110;
+      var introTextElements = document.querySelectorAll('.intro-text');
+
+      introTextElements.forEach(function(el) {
+        var text = el.textContent || el.innerText;
+        if (text.length > characterLimit) {
+          var truncated = text.substring(0, characterLimit) + '…';
+          el.textContent = truncated;
+        }
+      });
+    });
+  </script>
+{% endblock paragraph %}

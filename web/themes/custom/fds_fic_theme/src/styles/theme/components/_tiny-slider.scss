@@ -1,0 +1,187 @@
+// |--------------------------------------------------------------------------
+// | Tiny slider
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .tiny-slider
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin tiny-slider-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.tns-outer {
+  position: relative;
+  margin: 0 !important;
+}
+
+.tns-nav {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin-bottom: -20px;
+
+  button {
+    width: 12px;
+    height: 12px;
+
+    border-width: 1px;
+    border-color: $background_color__primary;
+
+    &.tns-nav-active {
+      background-color: $background_color__primary;
+      opacity: 0.8;
+    }
+
+    + button {
+      margin-left: 8px;
+    }
+  }
+}
+$controls-size: 20px;
+
+.tns-controls {
+  button {
+    display: flex;
+    position: absolute;
+
+    z-index: 9;
+
+    top: 50%;
+    margin-top: -15px;
+    padding: 0;
+
+    height: $controls-size;
+    width: $controls-size;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0;
+    border-radius: 100%;
+    border: none;
+
+    color: #fff;
+    background-color: transparent;
+
+    &:before {
+      display: inline-block;
+
+      font-family: FontAwesome;
+      font-size: calc(#{$controls-size} - 7px);
+    }
+
+    &[data-controls="prev"] {
+      left: 5px;
+
+      &:before {
+        content: "\f104";
+      }
+    }
+
+    &[data-controls="next"] {
+      right: 5px;
+
+      &:before {
+        content: "\f105";
+      }
+    }
+  }
+}
+
+.field--name-field-os2web-slideshow-image, .field--name-field-os2web-slideshow-media-img {
+  margin-bottom: 80px;
+}
+
+.tns-item img {
+  width: 100%;
+  aspect-ratio: 620 / 414;
+  object-fit: cover;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+
+
+
+
+
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+  .tns-controls {
+
+    button {
+      margin-top: -20px;
+
+      height: calc(#{$controls-size} + 20px);
+      width: calc(#{$controls-size} + 20px);;
+
+      &:before {
+        font-size: 30px;
+      }
+
+       &[data-controls="prev"] {
+         left: 15px;
+       }
+
+       &[data-controls="next"] {
+         right: 15px;
+       }
+    }
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
