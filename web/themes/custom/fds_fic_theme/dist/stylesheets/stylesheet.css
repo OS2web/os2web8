@@ -18458,6 +18458,9 @@ ul.related-links a:hover {
   padding: 0;
   color: black !important;
 }
+.banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-headings-wrapper .banner-subheading .field--name-field-os2web-banner-subheading * {
+  color: black !important;
+}
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-body .field--name-field-os2web-banner-body * {
   color: black !important;
 }
@@ -23700,7 +23703,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item .event-resume, .events-slider .swiper-events .swiper-wrapper .event-item .event-resume {
   margin: 20px 0;
-  color: #222;
   min-height: 70px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -23798,6 +23800,9 @@ a {
 }
 .entity-default--os2web-wrapper.background-color--tertiary * {
   color: white;
+}
+.entity-default--os2web-wrapper.background-color--tertiary g {
+  stroke: #fff;
 }
 
 .paragraph--type--os2web-factbox-paragraph {
