@@ -16764,7 +16764,7 @@ form#search-block-form .form-actions .form-submit,
 }
 form#search-block-form .form-actions .form-submit:hover,
 .region-small-search form .form-actions .form-submit:hover {
-  background-color: #bf263e;
+  background-color: #c30a32;
 }
 form#search-block-form .form-actions:after,
 .region-small-search form .form-actions:after {
@@ -17660,6 +17660,9 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 .paragraph--type--os2web-box-paragraph.background-color--transparent .box__body li:before {
   color: black;
 }
+.paragraph--type--os2web-box-paragraph.background-color--transparent .box__body * {
+  color: black;
+}
 
 main.col-lg-8 .fredericia-menu-link-wrapper {
   display: grid;
@@ -18453,7 +18456,10 @@ ul.related-links a:hover {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #000 !important;
+}
+.banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-body .field--name-field-os2web-banner-body * {
+  color: #000 !important;
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-actions ul {
   padding: 0;
@@ -18521,8 +18527,8 @@ ul.related-links a:hover {
   font-size: 20px;
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-actions ul li a:hover {
-  background-color: #ab092c;
-  border-color: #ab092c;
+  background-color: #e6032f !important;
+  border-color: #e6032f !important;
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-actions ul li:before {
   display: none;
@@ -18552,6 +18558,7 @@ ul.related-links a:hover {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  color: #000;
 }
 .banner-box-mobile .banner-body .field--name-field-os2web-banner-body p {
   font-size: 14px;
