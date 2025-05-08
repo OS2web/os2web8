@@ -20416,6 +20416,9 @@ a.entity-teaser--os2web-page, a.entity-teaser--os2web-page:hover, a.entity-tease
   font-weight: normal;
   color: #00335b;
 }
+.entity-teaser--os2web-event .field--name-field-os2web-event-heading h1 *, .entity-teaser--os2web-event .field--name-field-os2web-event-heading h2 *, .entity-teaser--os2web-event .field--name-field-os2web-event-heading h3 *, .entity-teaser--os2web-event .field--name-field-os2web-event-heading h4 *, .entity-teaser--os2web-event .field--name-field-os2web-event-heading h5 *, .entity-teaser--os2web-event .field--name-field-os2web-event-heading h6 * {
+  font-family: "RBNo2.1a";
+}
 .entity-teaser--os2web-event .field + .field {
   margin-top: 10px;
 }
