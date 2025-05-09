@@ -2,7 +2,7 @@
 <div class="single-cta-button-outer-wrapper">
   <div class="single-cta-button-wrapper">
     <a title="{{ paragraph.field_link_upper_text.value }}" href="{{ paragraph.field_single_cta_link.0.url }}" class="single-cta-link">
-      <div class="single-cta-link-content 
+      <div class="single-cta-link-content
         {% if paragraph.field_cta_color.value == 'primary' %}
           cta-primary
         {% elseif paragraph.field_cta_color.value == 'secondary' %}
@@ -13,13 +13,13 @@
           cta-black
         {% endif %}">
         <div class="single-cta-link-upper-text">
-          {{ paragraph.field_link_upper_text.value }}
+          {{ paragraph.field_link_upper_textt.value }}
           {% if paragraph.field_link_bottom_text.value is empty %}
             <i class="fa-solid fa-arrow-right-long"></i>
           {% endif %}
         </div>
         {% if paragraph.field_link_bottom_text.value %}
-          <div class="single-cta-link-bottom-text">
+          <div class="single-cta-link-bottom-text">½
             {{ paragraph.field_link_bottom_text.value }}
               <i class="fa-solid fa-arrow-right-long"></i>
           </div>

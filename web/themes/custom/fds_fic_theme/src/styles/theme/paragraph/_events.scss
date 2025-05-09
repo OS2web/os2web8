@@ -8,7 +8,13 @@
     .field--name-field-events-heading {
       font-family: "RBNo2.1a", sans-serif;
       margin-bottom: 20px;
-      font-size: 42px;
+      font-size: 22px;
+      @include media($sm) {
+        font-size: 28px;
+      };
+      @include media($md) {
+        font-size: 42px;
+      };
     }
   }
 
