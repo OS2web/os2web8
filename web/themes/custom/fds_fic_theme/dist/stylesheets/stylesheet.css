@@ -21536,7 +21536,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 
 .paragraph--type--os2web-cnt-paragraph-reference {
-  background-color: #d6ecf1;
   width: 100%;
 }
 .paragraph--type--os2web-cnt-paragraph-reference .field--name-field-os2web-cnt-par-ref {
@@ -22488,7 +22487,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .contact-template-wrapper .container .contact-template-heading h2 {
   margin: 0;
-  font-weight: 600;
 }
 .contact-template-wrapper .container .inner-contact-wrapper {
   width: 100%;
@@ -22590,6 +22588,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading .field--name-field-contact-location {
   font-family: "RBNo2.1a";
   font-weight: normal;
+  font-size: 20px;
+}
+.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading .field--name-field-info-heading {
+  font-family: "RBNo2.1a", Helvetia, Arial, sans-serif;
 }
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content {
