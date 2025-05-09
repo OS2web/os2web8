@@ -72,7 +72,8 @@
   }
 
   &:hover {
-    background-color: $background_color__button_hover;
+    background-color: $background_color__button_hover !important;
+    border-color: $background_color__button_hover !important;
   }
 }
 
