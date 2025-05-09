@@ -37,7 +37,7 @@
     display: inline-block;
 
     font-size: 1.6rem;
-    color: #222;
+    color: $background_color__primary;
     a {
       color: black !important;
       text-decoration: none;
@@ -59,12 +59,14 @@
       font-size: 1.2rem;
       font-family: FontAwesome;
       content: $fa-var-angle-right;
+      display: inline !important;
 
       color: black;
     }
   }
 
   li:last-child {
+    font-weight: 700;
     a {
       color: #222 !important;
       font-weight: 700;
