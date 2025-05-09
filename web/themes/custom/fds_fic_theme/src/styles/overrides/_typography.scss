@@ -39,7 +39,6 @@ h6, .h6 {
   margin-top: 30px;
 
   font-family: "RBNo2.1a", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
   color: $color-text;
   line-height: 1.1;
   + p,
@@ -55,7 +54,7 @@ h6, .h6 {
 h1, .h1 {
   font-weight: $font-weight-semibold;
 }
-h2, .h2 {
+h2, .h2, h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 400;
   font-size: 22px;
   @include media($sm) {
