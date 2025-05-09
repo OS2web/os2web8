@@ -70,6 +70,10 @@
     margin-left: 0;
     align-self: center;
   }
+
+  &:hover {
+    background-color: $background_color__button_hover;
+  }
 }
 
 // --------------------------------------------------
