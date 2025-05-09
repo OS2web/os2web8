@@ -18237,6 +18237,9 @@ ul.related-links a:hover {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 70px;
+  font-family: "RBNo2.1a", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  padding-bottom: 7px;
 }
 @media only screen and (max-width: 992px) {
   .contact-modal-btn {
@@ -22939,6 +22942,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .contact-modal-btn-wrapper {
   max-width: 100%;
   width: 100%;
+}
+
+.field--name-field-info-heading {
+  font-family: "RBNo2.1a", Helvetia, Arial, sans-serif;
+  font-size: 20px;
 }
 
 .cta-section-wrapper {
