@@ -17186,8 +17186,18 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference-h h2, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference-h h2 {
   color: black;
-  font-size: 42px;
   margin-bottom: 20px;
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference-h h2, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference-h h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference-h h2, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference-h h2 {
+    font-size: 42px;
+  }
 }
 .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox-reference, .entity-default--os2web-spotbox-reference .field--name-field-os2web-spotbox, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox-reference, .entity-default--os2web-spotbox .field--name-field-os2web-spotbox {
   display: -webkit-box;
@@ -18440,7 +18450,6 @@ ul.related-links a:hover {
   }
 }
 .banner__image-outer .entity-default--os2web-banner-paragraph .container .banner-box .banner-headings-wrapper .banner-heading .field--name-field-os2web-banner-heading h2 {
-  font-weight: bold;
   margin: 0;
   padding: 0;
   color: black !important;
@@ -23580,7 +23589,17 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .events-slider .events-slider__heading .field--name-field-events-heading {
   font-family: "RBNo2.1a", sans-serif;
   margin-bottom: 20px;
-  font-size: 42px;
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  .events-slider .events-slider__heading .field--name-field-events-heading {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .events-slider .events-slider__heading .field--name-field-events-heading {
+    font-size: 42px;
+  }
 }
 .events-slider .views-element-container .view-os2web-events .view-content {
   display: -webkit-box;

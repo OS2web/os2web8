@@ -26,8 +26,14 @@
   .field--name-field-os2web-spotbox-reference-h {
     h2 {
       color: black;
-      font-size: 42px;
       margin-bottom: 20px;
+      font-size: 22px;
+      @include media($sm) {
+        font-size: 28px;
+      };
+      @include media($md) {
+        font-size: 42px;
+      };
     }
   }
 
