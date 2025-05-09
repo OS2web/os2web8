@@ -133,6 +133,22 @@
           transition: .3s ease;
         }
       }
+      &.cta-primary {
+        background-color: $background_color__primary;
+        color: white;
+      } 
+      &.cta-secondary {
+        background-color: $background_color__secondary;
+        color: white;
+      }   
+      &.cta-white {
+        background-color: white;
+        color: black;
+      }
+      &.cta-black {
+        background-color: black;
+        color: white;
+      }
     }
 
   }
