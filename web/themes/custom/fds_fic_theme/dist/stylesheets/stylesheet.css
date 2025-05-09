@@ -18249,7 +18249,8 @@ ul.related-links a:hover {
   }
 }
 .contact-modal-btn:hover {
-  background-color: #e6032f;
+  background-color: #e6032f !important;
+  border-color: #e6032f !important;
 }
 
 @media (min-width: 576px) {
@@ -21205,10 +21206,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 
 .path-frontpage .field--name-field-os2web-page-paragraph-wide > .field__item > .paragraph {
   padding: 0 !important;
-}
-.path-frontpage h3, .path-frontpage .h3 {
-  font-size: 2rem;
-  line-height: 2.4rem;
 }
 
 .banner-event-fk {
