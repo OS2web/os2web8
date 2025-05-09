@@ -21,7 +21,6 @@
       margin-bottom: 50px;
       h2 {
         margin: 0;
-        font-weight: 600;
       }
     }
 
@@ -96,6 +95,11 @@
               .field--name-field-contact-location {
                 font-family: "RBNo2.1a";
                 font-weight: normal;
+                font-size: 20px;
+              }
+
+              .field--name-field-info-heading {
+                font-family: "RBNo2.1a", Helvetia, Arial, sans-serif;
               }
 
             }
