@@ -18237,6 +18237,8 @@ ul.related-links a:hover {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 70px;
+  font-family: "RBNo2.1a", Helvetia, Arial, sans-serif;
+  padding-bottom: 7px;
 }
 @media only screen and (max-width: 992px) {
   .contact-modal-btn {
@@ -22590,9 +22592,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-weight: normal;
   font-size: 20px;
 }
-.contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-heading .field--name-field-info-heading {
-  font-family: "RBNo2.1a", Helvetia, Arial, sans-serif;
-}
 @media only screen and (max-width: 992px) {
   .contact-template-wrapper .container .inner-contact-wrapper .contact-col-1 .contact-template-address .address-info .info-content {
     text-align: center;
@@ -22939,6 +22938,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 .contact-modal-btn-wrapper {
   max-width: 100%;
   width: 100%;
+}
+
+.field--name-field-info-heading {
+  font-family: "RBNo2.1a", Helvetia, Arial, sans-serif;
+  font-size: 20px;
 }
 
 .cta-section-wrapper {
