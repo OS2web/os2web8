@@ -23102,6 +23102,22 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+.single-cta-button-wrapper .single-cta-link .single-cta-link-content.cta-primary {
+  background-color: #feffff;
+  color: white;
+}
+.single-cta-button-wrapper .single-cta-link .single-cta-link-content.cta-secondary {
+  background-color: #eae3c0;
+  color: white;
+}
+.single-cta-button-wrapper .single-cta-link .single-cta-link-content.cta-white {
+  background-color: white;
+  color: black;
+}
+.single-cta-button-wrapper .single-cta-link .single-cta-link-content.cta-black {
+  background-color: black;
+  color: white;
+}
 
 .latest-news-display {
   width: 100%;
