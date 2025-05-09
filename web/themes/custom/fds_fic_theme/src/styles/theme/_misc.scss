@@ -402,10 +402,13 @@ body .page-container {
         padding: 40px;
       }
       .h4 {
-        font-size: 1.9rem;
-        @include media-breakpoint-up(md) {
-          font-size: 2.4rem;
-        }
+        font-size: 22px;
+        @include media($sm) {
+          font-size: 28px;
+        };
+        @include media($md) {
+          font-size: 42px;
+        };
         color: $color-black;
       }
     }
