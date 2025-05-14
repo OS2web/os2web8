@@ -20475,6 +20475,13 @@ a.entity-teaser--os2web-event, a.entity-teaser--os2web-event:hover, a.entity-tea
   color: #000000;
 }
 
+.event-title {
+  margin: 0;
+}
+.event-title span {
+  font-family: "RBNo2.1a", Helvetica, Arial, sans-serif;
+}
+
 @media (min-width: 576px) {
   .entity-teaser--os2web-event .row {
     -webkit-box-align: center;
