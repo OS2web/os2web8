@@ -12,12 +12,12 @@
   ? content.body|render
   : content.field_event_resume|render %}
 
-<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="news-teaser" aria-label="{{ 'Read more about'|trans }} {{ label|striptags|trim }}">
+<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="news-teaser" aria-label="{{ 'Read more about'|trans }} {{ label }}">
   <i class="fa-solid fa-arrow-right"></i>
   <div class="news-teaser-body">
-    <h3 class="event-title">{{ label|striptags|trim }}</h3>
+    <h3 class="event-title">{{ label }}</h3>
     <div class="news-teaser-text">
-      {{ pageTeaserText|striptags|trim }}
+      {{ pageTeaserText|raw|striptags|trim }}
     </div>
     <div class="my-breadcrumbs">
       <div class="breadcrumb-item">
