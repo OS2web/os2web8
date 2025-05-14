@@ -14204,7 +14204,7 @@ body .section--banner-search .status-banner .status-banner__inner {
   margin: 0 auto;
   padding: 0 30px;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page, body .section--banner-search form#views-exposed-form-os2web-search-page-1 {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 {
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14213,7 +14213,7 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
       -ms-flex-pack: center;
           justify-content: center;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline {
   position: relative;
   height: 60px;
   display: -webkit-box;
@@ -14227,11 +14227,11 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
   width: 60%;
 }
 @media only screen and (max-width: 992px) {
-  body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline {
+  body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline {
     width: 100%;
   }
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-item {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-item {
   margin-right: 0;
   margin-bottom: 0;
   display: -webkit-box;
@@ -14239,7 +14239,7 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
   display: flex;
   width: 100%;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item .form-input, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-item .form-input {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item .form-input, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-item .form-input {
   height: 70px;
   margin-top: 0;
   width: 100%;
@@ -14251,14 +14251,14 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
   max-width: none !important;
   outline: none;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item .form-input:focus, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-item .form-input:focus {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-item .form-input:focus, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-item .form-input:focus {
   border: 2px solid #feffff;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-actions {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-actions {
   margin-top: 0;
   margin-bottom: 0;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions input, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-actions input {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions input, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-actions input {
   background-image: url("../images/svg-icons/magnifying-glass-solid.svg");
   background-position: center;
   background-size: 20px 20px;
@@ -14275,10 +14275,10 @@ body .section--banner-search form#views-exposed-form-os2web-search-os2web-search
   outline: none;
   position: absolute;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions input:hover, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-actions input:hover {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions input:hover, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-actions input:hover {
   background-color: #bf263e;
 }
-body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions:after, body .section--banner-search form#views-exposed-form-os2web-search-page-1 .form--inline .form-actions:after {
+body .section--banner-search form#views-exposed-form-os2web-search-os2web-search-page .form--inline .form-actions:after, body .section--banner-search form#views-exposed-form-os2web-search-page-new-1 .form--inline .form-actions:after {
   top: 13px;
   right: 20px;
   font-size: 2.2rem;
@@ -16903,6 +16903,9 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 .page-search-container #main-content main .region-content {
   padding-top: 0;
   padding-bottom: 0;
+}
+.page-search-container #main-content main .region-content .views-exposed-form h2 {
+  display: none;
 }
 .page-search-container #main-content main .region-content .views-exposed-form .upper-search-wrapper {
   padding: 60px 0 50px 0;
