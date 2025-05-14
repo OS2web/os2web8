@@ -16750,6 +16750,7 @@ form#search-block-form .form-actions .form-submit,
   background-color: #feffff;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  text-indent: -9999px;
 }
 form#search-block-form .form-actions .form-submit:hover,
 .region-small-search form .form-actions .form-submit:hover {
@@ -17080,6 +17081,15 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
 }
 .page-search-container #main-content main .region-content .block-system-main-block .views-element-container .view .view-content .views-row a {
   margin: 0;
+}
+
+#edit-search-api-fulltext {
+  background-color: white;
+  border: 1px solid #7b7b7b;
+  border-radius: 50px;
+  max-width: 400px;
+  height: 50px;
+  color: #7b7b7b;
 }
 
 .view-os2web-search, .view-os2web-meetings-search-page, .view-os2web-search-selfservice {
