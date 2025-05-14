@@ -14,16 +14,17 @@
       // Handle the close button click
       $('.search-close-btn', context).once('navigate-back').click(function (e) {
         e.preventDefault();
+        e.stopPropagation();
 
         // Retrieve the last non-search page URL from localStorage
         const lastNonSearchPage = localStorage.getItem('lastNonSearchPage');
 
-        // Determine if there's a valid non-search page to redirect to
-        if (lastNonSearchPage) {
+        // Navigate back to the last non-search page or front page
+        if (lastNonSearchPage && lastNonSearchPage !== window.location.href) {
           window.location.href = lastNonSearchPage;
         } else {
-          // Redirect to the front page if no valid non-search page is found
-          window.location.href = drupalSettings.path.baseUrl;
+          // If no valid previous page is found, go to the front page
+          window.location.href = drupalSettings.path.baseUrl || '/';
         }
       });
     }
