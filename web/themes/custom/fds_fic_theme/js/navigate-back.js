@@ -3,7 +3,7 @@
     attach: function (context, settings) {
       // Function to check if the current page is one of the search pages
       function isSearchPage(url) {
-        return url.includes('/s?sq=') || url.includes('/sog-selvbetjening?sq=') || url.includes('/sog-dagsorden?sq=');
+        return url.includes('/soeg?');
       }
 
       // Store the current page URL if it's not a search page

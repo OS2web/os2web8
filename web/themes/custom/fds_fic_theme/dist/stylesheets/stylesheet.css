@@ -17085,6 +17085,15 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   margin: 0;
 }
 
+#edit-search-api-fulltext {
+  background-color: white;
+  border: 1px solid #7b7b7b;
+  border-radius: 50px;
+  max-width: 400px;
+  height: 50px;
+  color: #7b7b7b;
+}
+
 .view-os2web-search, .view-os2web-meetings-search-page, .view-os2web-search-selfservice {
   padding-bottom: 50px;
 }
