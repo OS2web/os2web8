@@ -16750,6 +16750,7 @@ form#search-block-form .form-actions .form-submit,
   background-color: #feffff;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  text-indent: -9999px;
 }
 form#search-block-form .form-actions .form-submit:hover,
 .region-small-search form .form-actions .form-submit:hover {

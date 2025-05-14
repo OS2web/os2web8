@@ -117,6 +117,7 @@ form#search-block-form,
       border-radius: 50px;
       background-color: $background_color__primary;
       transition: .3s ease;
+      text-indent: -9999px;
 
       &:hover {
         background-color: $background_color__button;
