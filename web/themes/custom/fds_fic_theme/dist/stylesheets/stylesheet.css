@@ -23819,6 +23819,10 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
+.view-os2web-search-new .views-row {
+  margin-bottom: 15px;
+}
+
 a {
   color: black;
 }
