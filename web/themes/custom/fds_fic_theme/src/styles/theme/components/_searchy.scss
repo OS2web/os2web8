@@ -29,6 +29,9 @@
         padding-bottom: 0;
 
         .views-exposed-form {
+          h2 {
+            display: none;
+          }
           .upper-search-wrapper {
             padding: 60px 0 50px 0;
             background-color: #222;

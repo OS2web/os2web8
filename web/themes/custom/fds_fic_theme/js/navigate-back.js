@@ -1,29 +1,39 @@
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.navigateBack = {
     attach: function (context, settings) {
-      // Function to check if the current page is one of the search pages
+      // Function to check if the current page is a search page
       function isSearchPage(url) {
         return url.includes('/soeg');
       }
 
-      // Store the current page URL if it's not a search page
-      if (!isSearchPage(window.location.href)) {
-        localStorage.setItem('lastNonSearchPage', window.location.href);
+      // Function to go to homepage
+      function goToHomepage() {
+        window.location.href = drupalSettings.path.baseUrl || '/';
       }
 
       // Handle the close button click
       $('.search-close-btn', context).once('navigate-back').click(function (e) {
         e.preventDefault();
 
-        // Retrieve the last non-search page URL from localStorage
-        const lastNonSearchPage = localStorage.getItem('lastNonSearchPage');
+        // Check if history API is available
+        if (window.history && window.history.length > 1) {
+          // Go back one step at a time until we find a non-search page
+          window.history.back();
 
-        // Determine if there's a valid non-search page to redirect to
-        if (lastNonSearchPage) {
-          window.location.href = lastNonSearchPage;
+          // After going back, check if we landed on another search page
+          setTimeout(function checkCurrentPage() {
+            if (isSearchPage(window.location.href)) {
+              // If we're still on a search page and have history left, go back again
+              if (window.history.length > 1) {
+                window.history.back();
+                setTimeout(checkCurrentPage, 100); // Check again after the next back
+              } else {
+                goToHomepage();
+              }
+            }
+          }, 100);
         } else {
-          // Redirect to the front page if no valid non-search page is found
-          window.location.href = drupalSettings.path.baseUrl;
+          goToHomepage();
         }
       });
     }

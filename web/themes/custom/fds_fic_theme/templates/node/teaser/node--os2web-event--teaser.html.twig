@@ -8,27 +8,21 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
-<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" {{ attributes.addClass(classes) }} aria-label="{{ 'Læs mere om' | trans }} {{ node.field_o2web_event_resume.value | raw }}" title="{{ 'Læs mere om' | trans }} {{ node.field_o2web_event_resume.value | raw }}">
-  <div class="entity-{{ view_mode|clean_class }}__image">
-    {{ content.field_os2web_evnet_image }}
-  </div>
+{% set pageTeaserText = content.field_event_resume is empty
+  ? content.body|render
+  : content.field_event_resume|render %}
 
-  <div class="entity-{{ view_mode|clean_class }}__body">
-    <div class="field field--name-field-os2web-event-heading">
-      <h2>{{ label }}</h2>
+<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="news-teaser" aria-label="{{ node.label() }}">
+  <i class="fa-solid fa-arrow-right"></i>
+  <div class="news-teaser-body">
+    <h3 class="event-title">{{ label }}</h3>
+    <div class="news-teaser-text">
+      {{ pageTeaserText|raw|striptags|trim }}
     </div>
-    {{ content.field_os2web_event_start_date }}
-
-
-    {% set text = content.body | render %}
-    <div class="field field--type-body">
-      {{ text | striptags }}
-    </div>
-
-    <div class="field--type-link">
-      <span class="fake-link">
-        Læs mere
-      </span>
+    <div class="my-breadcrumbs">
+      <div class="breadcrumb-item">
+        {{ 'Begivenheder'|trans }}
+      </div>
     </div>
   </div>
 </a>
