@@ -92,6 +92,10 @@ a.social-icon-teaser {
   }
 }
 
+.icon {
+  font-family: FontAwesome !important;
+}
+
 .social-icon {
   display: flex;
 
@@ -116,6 +120,7 @@ a.social-icon-teaser {
 
     height: auto;
     width: auto;
+    font-family: FontAwesome;
 
     color: $color-footer-background;
   }

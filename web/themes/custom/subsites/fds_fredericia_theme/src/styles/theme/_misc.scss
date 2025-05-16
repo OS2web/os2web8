@@ -349,15 +349,56 @@ body .page-container {
 
 .background-color--primary {
   background-color: $background_color__primary !important;
+  color: #000 !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span, p {
+    color: #000;
+  }
 }
 .background-color--secondary {
-  color: #fff;
+  color: #fff !important;
   background-color: $background_color__secondary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span, p {
+    color: #fff;
+  }
 }
 .background-color--tertiary {
-  color: #fff;
+  color: #fff !important;
   background-color: $background_color__tertiary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span, p {
+    color: #fff;
+  }
 }
+
+.paragraph--type--os2web-box-paragraph.background-color--primary {
+  background-color: $background_color__primary !important;
+  color: #000 !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span, p {
+    color: #000;
+  }
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--secondary {
+  color: #fff !important;
+  background-color: $background_color__secondary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span, p {
+    color: #fff;
+  }
+}
+
+.paragraph--type--os2web-box-paragraph.background-color--tertiary {
+  color: #fff !important;
+  background-color: $background_color__tertiary !important;
+
+  h1, h2, h3, h4, h5, h6, a, li, span, p {
+    color: #fff;
+  }
+}
+
 
 // Remove max-width on all text elements.
 body {
@@ -387,6 +428,20 @@ body {
   }
   a:not(.button){
     max-width: unset;
+  }
+}
+
+.field--name-field-os2web-iframe-code {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
   }
 }
 

@@ -56,7 +56,7 @@
 
   a {
     font-weight: $font-weight-bold;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -70,43 +70,45 @@ ul {
   }
 }
 
-  // --------------------------------------------------
-  // Responsive
-  // --------------------------------------------------
 
-  // Mobile - and up
-  @include media-breakpoint-up(xs) {}
 
-  // Mobile - only
-  @include media-breakpoint-only(xs, $grid-breakpoints) {}
 
-  // Tablet - and up
-  @include media-breakpoint-up(sm) {}
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
 
-  // Tablet - only
-  @include media-breakpoint-only(sm, $grid-breakpoints) {}
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
 
-  // Desktop - and up
-  @include media-breakpoint-up(md) {}
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
 
-  // Desktop - only
-  @include media-breakpoint-only(md, $grid-breakpoints) {}
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
 
-  // Large desktop - and up
-  @include media-breakpoint-up(lg) {}
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
 
-  // Large desktop - only
-  @include media-breakpoint-only(lg, $grid-breakpoints) {}
+// Desktop - and up
+@include media-breakpoint-up(md) {}
 
-  // Extra large desktop - and up
-  @include media-breakpoint-up(xl) {}
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
 
-  // Print
-  @media print {}
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
 
-  // Touch
-  .touchevents {}
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
 
-  // No touch
-  .no-touchevents {}
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
 
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
