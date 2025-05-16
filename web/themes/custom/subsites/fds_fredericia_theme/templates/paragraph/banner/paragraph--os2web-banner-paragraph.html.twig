@@ -5,8 +5,11 @@
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
+
+{% set banner_height_type = content.field_banner_type_height[0]['#markup'] == '600px' ? '600px' : '350px' %}
+
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} {% if background_image %} style="background-image: url({{ background_image }})" {% endif %}>
+  <div{{ attributes.addClass(classes) }} style="{% if background_image and not paragraph.field_os2web_banner_video.value %}background-image: url({{ background_image }}); {% endif %} min-height: {{ banner_height_type }}; ">
     <div class="container">
       {% block content %}
         {% if paragraph.field_os2web_banner_heading.value or paragraph.field_os2web_banner_subheading.value or paragraph.field_os2web_banner_body.value or paragraph.field_os2web_banner_links.value %}
@@ -30,9 +33,47 @@
                 {{ content.field_os2web_banner_links }}
               </div>
             {% endif %}
-          {% endif %}
-        </div>
+
+          </div>
+        {% endif %}
+
+
+
       {% endblock %}
     </div>
+
+    {# Video Handling #}
+    {% if paragraph.field_os2web_banner_video is not empty %}
+      {% for item in paragraph.get('field_os2web_banner_video') %}
+        <div class="banner__video">
+          <video id="banner-video" playsinline autoplay muted loop >
+            {% set video_file = item.entity.field_media_video_file.entity %}
+            <source src="{{ file_url(video_file.uri.value) }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button class="custom-pause-button" onclick="togglePause()">
+            <i class="fa fa-pause" aria-hidden="true"></i>
+            <span class="visually-hidden">Tryk her for at pause eller fortsætte videoen.</span>
+          </button>
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
 {% endblock paragraph %}
+
+<script>
+  function togglePause() {
+    const video = document.getElementById('banner-video');
+    const buttonIcon = document.querySelector('.custom-pause-button i');
+
+    if (video.paused) {
+      video.play();
+      buttonIcon.classList.remove('fa-play');
+      buttonIcon.classList.add('fa-pause');
+    } else {
+      video.pause();
+      buttonIcon.classList.remove('fa-pause');
+      buttonIcon.classList.add('fa-play');
+    }
+  }
+</script>
