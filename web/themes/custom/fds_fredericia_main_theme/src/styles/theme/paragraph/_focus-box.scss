@@ -96,7 +96,7 @@
             transform: translateX(10px) translateY(-50%);
           }
 
-          + .sidebar-product-image img {
+          + .field--type-image img {
             transform: scale(1.05);
           }
         }
@@ -128,7 +128,7 @@
         }
       }
 
-      .sidebar-product-image {
+      .field--type-image {
         position: absolute;
         top: 0;
         right: 0;
