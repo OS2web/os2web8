@@ -36,9 +36,11 @@
                 </a>
               {% endif %}
               {% if paragraph.field_focusbox_image_1 is not empty %}
-                <div class="sidebar-product-image">
-                  <img src="{{ file_url(paragraph.field_focusbox_image_1.entity.uri.value) }}" alt="Sidebar Image">
-                </div>
+{#                <div class="sidebar-product-image">#}
+{#                  <img src="{{ file_url(paragraph.field_focusbox_image_1.entity.uri.value) }}" alt="Sidebar Image">#}
+{#                </div>#}
+
+                {{ content.field_focusbox_image_1 }}
 
 
               {% endif %}
