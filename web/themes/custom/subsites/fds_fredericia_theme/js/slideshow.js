@@ -3,7 +3,7 @@
  */
 
 // Slideshow popup.
-(function() {
+(function () {
   function handleClick(event) {
     event.preventDefault();
 
@@ -26,13 +26,11 @@
     var image = document.createElement('img');
     image.src = imagePath;
     image.alt = text;
-
     modalBody.appendChild(image);
 
     // Set text.
     var caption = document.createElement('h4');
     caption.innerText = text;
-
     modalBody.appendChild(caption);
 
     // Open modal.
@@ -43,33 +41,17 @@
 
   for (var i = 0; i < links.length; i++) {
     var link = links[i];
-
-    link.addEventListener('click', handleClick)
+    link.addEventListener('click', handleClick);
   }
 })();
 
 // Tiny Slider slideshow img.
-(function() {
-  var selector = '.field--name-field-os2web-slideshow-image .field__items';
+(function () {
+  var containers = document.querySelectorAll('.field--name-field-os2web-slideshow-image .field__items');
 
-  var transitionEndCallback = function (info, eventName) {
-    // Add tab
-    for (var i = 0; i < info.slideItems.length; i++) {
-      var slide = info.slideItems[i];
-      if (slide.classList.contains('tns-slide-active')) {
-        slide.querySelector('a').removeAttribute('tabindex');
-      }
-      else {
-        slide.querySelector('a').setAttribute('tabindex', '-1');
-      }
-    }
-  }
-
-  if (document.querySelector(selector) !== null) {
-
-    // Run tiny slider.
+  containers.forEach(function (container) {
     var slider = tns({
-      container: selector,
+      container: container,
       items: 1,
       autoplay: false,
       autoplayHoverPause: true,
@@ -82,8 +64,22 @@
       },
     });
 
-    // bind function to event
-    slider.events.on('transitionEnd', transitionEndCallback);
-    transitionEndCallback(slider.getInfo());
-  }
+    // Tabindex accessibility handling
+    var updateTabIndex = function (info) {
+      for (var i = 0; i < info.slideItems.length; i++) {
+        var slide = info.slideItems[i];
+        var anchor = slide.querySelector('a');
+        if (!anchor) continue;
+
+        if (slide.classList.contains('tns-slide-active')) {
+          anchor.removeAttribute('tabindex');
+        } else {
+          anchor.setAttribute('tabindex', '-1');
+        }
+      }
+    };
+
+    slider.events.on('transitionEnd', updateTabIndex);
+    updateTabIndex(slider.getInfo());
+  });
 })();
