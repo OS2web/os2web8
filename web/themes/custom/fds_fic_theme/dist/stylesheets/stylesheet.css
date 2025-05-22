@@ -21298,6 +21298,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   padding: 0;
   font-size: 3.2rem;
 }
+.banner-event-fk .banner-event-info h1 span {
+  font-family: "RBNo2.1a", Helvetica, Arial, sans-serif;
+}
 .banner-event-fk .banner-event-info .event-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21437,6 +21440,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-weight: 700;
   color: #222;
   margin: 0;
+}
+.event-content-section h2 span {
+  font-family: "RBNo2.1a", Helvetica, Arial, sans-serif;
 }
 .event-content-section .event-resume {
   color: #222;
