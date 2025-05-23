@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a Vidi map paragraph.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if content.field_map_embed_heading %}
+    <h2>{{ content.field_map_embed_heading }}</h2>
+  {% endif %}
+  {{ content.field_script_embed|raw }}
+</div> 
