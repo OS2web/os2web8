@@ -6,9 +6,23 @@
 #}
 {% for item in items %}
   {% if element['#object'] is defined %}
-    <!-- Debug: Has node object -->
+    {% set node = element['#object'] %}
+    {% if node.field_document_title is defined and node.field_document_title.value is not empty %}
+      <!-- Debug: Document title exists -->
+      <div{{ attributes.addClass('field__item test-class') }}>
+        <span class="file file--mime-application-pdf file--application-pdf">
+          <a href="{{ item.content['#file'].createFileUrl() }}" type="application/pdf">{{ node.field_document_title.value }}</a>
+        </span>
+      </div>
+    {% else %}
+      <!-- Debug: No document title -->
+      <div{{ attributes.addClass('field__item test-class') }}>
+        {{ item.content }}
+      </div>
+    {% endif %}
+  {% else %}
+    <div{{ attributes.addClass('field__item test-class') }}>
+      {{ item.content }}
+    </div>
   {% endif %}
-  <div{{ attributes.addClass('field__item test-class') }}>
-    {{ item.content }}
-  </div>
 {% endfor %} 
