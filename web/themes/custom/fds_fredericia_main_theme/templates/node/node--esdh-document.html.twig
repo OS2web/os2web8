@@ -1,54 +1,11 @@
 {#
 /**
  * @file
- * Default theme implementation to display a node of type esdh-document.
- *
- * Available variables:
- * - node: The node entity with limited access to object properties and methods.
- * - label: The title of the node.
- * - content: All node items. Use {{ content }} to print them all,
- *   or print a subset such as {{ content.field_example }}. Use
- *   {{ content|without('field_example') }} to temporarily suppress the printing
- *   of a given child element.
- * - url: Direct URL of the current node.
- * - title_prefix (array): An array containing additional output populated by
- *   modules, intended to be displayed in front of the main title tag that
- *   appears in the template.
- * - title_suffix (array): An array containing additional output populated by
- *   modules, intended to be displayed after the main title tag that appears in
- *   the template.
- *
- * @see template_preprocess_node()
+ * Template for displaying an ESDH document.
  */
 #}
-{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
-
-<article{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
-
-  <div{{ content_attributes.addClass('node__content') }}>
-    {% if content.field_document_title|render|striptags|trim is not empty %}
-      <h2>{{ content.field_document_title }}</h2>
-    {% endif %}
-
-    {% if content.field_case_file|render|striptags|trim is not empty %}
-      {% set document_title = content.field_document_title|render|striptags|trim %}
-      {% if document_title %}
-        {{ content.field_case_file|merge({'#title': document_title}) }}
-      {% else %}
-        {{ content.field_case_file }}
-      {% endif %}
-    {% endif %}
-
+<article{{ attributes.addClass('node', 'node--type-esdh-document') }}>
+  <div class="node__content">
+    {{ content.field_case_file }}
   </div>
 </article>

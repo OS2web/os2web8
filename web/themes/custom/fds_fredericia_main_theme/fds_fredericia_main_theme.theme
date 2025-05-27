@@ -671,6 +671,20 @@ function fds_fredericia_main_theme_preprocess_field(&$variables) {
       }
     }
   }
+
+  if ($variables['element']['#bundle'] == 'esdh_document' && $variables['element']['#field_name'] == 'field_case_file') {
+    $node = $variables['element']['#object'];
+    if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
+      $document_title = $node->field_document_title->value;
+      if (!empty($document_title)) {
+        foreach ($variables['items'] as &$item) {
+          if (isset($item['content']['#title'])) {
+            $item['content']['#title'] = $document_title;
+          }
+        }
+      }
+    }
+  }
 }
 
 function fds_fredericia_main_theme_preprocess_paragraph__os2web_focus_box(array &$variables) {
