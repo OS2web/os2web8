@@ -678,8 +678,9 @@ function fds_fredericia_main_theme_preprocess_field(&$variables) {
       $document_title = $node->field_document_title->value;
       if (!empty($document_title)) {
         foreach ($variables['items'] as &$item) {
-          if (isset($item['content']['#title'])) {
+          if (isset($item['content']['#type']) && $item['content']['#type'] === 'file_link') {
             $item['content']['#title'] = $document_title;
+            $item['content']['#attributes']['title'] = $document_title;
           }
         }
       }
