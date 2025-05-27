@@ -4,8 +4,13 @@
  * Default theme implementation to display a file field for esdh-document.
  */
 #}
+{# Debug output #}
+<!-- Debug: Template is being used -->
+<!-- Available variables: {{ dump(items) }} -->
+
 {% for item in items %}
   {% set document_title = item.content['#object'].field_document_title.value %}
+  <!-- Debug: Document title: {{ document_title }} -->
   {% if document_title %}
     <div{{ attributes.addClass('field__item') }}>
       <span class="file file--mime-application-pdf file--application-pdf">

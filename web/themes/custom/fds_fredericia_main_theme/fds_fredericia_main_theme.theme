@@ -836,3 +836,12 @@ function fds_fredericia_main_theme_preprocess_paragraph__news_section(&$variable
   // Pass the node objects to the template.
   $variables['latest_news_articles'] = $nodes;
 }
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function fds_fredericia_main_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#field_name'] == 'field_case_file' && $variables['element']['#bundle'] == 'esdh_document') {
+    $suggestions[] = 'field__field_case_file__esdh_document';
+  }
+}
