@@ -9,6 +9,11 @@
 <!-- Debug: Entity type: {{ element['#entity_type'] }} -->
 
 {% for item in items %}
+  {% if element['#object'].field_document_title.value %}
+    {% set item = item|merge({'content': item.content|merge({'#title': element['#object'].field_document_title.value})}) %}
+  {% endif %}
+  {% set node = element['#object'] %}
+  {% set document_title = node.field_document_title.value %}
   <!-- Debug: Item content type: {{ item.content['#type'] }} -->
   <div{{ attributes.addClass('field__item test-class') }}>
     <span class="file file--mime-application-pdf file--application-pdf">
