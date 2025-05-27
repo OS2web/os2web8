@@ -6,21 +6,12 @@
 #}
 {# Debug output #}
 <!-- Debug: Template is being used -->
-<!-- Field data: {{ dump(element) }} -->
+<!-- Element keys: {{ element|keys|join(', ') }} -->
 
 {% for item in items %}
-  {% set node = element['#object'] %}
-  {% set document_title = node.field_document_title.value %}
-  <!-- Debug: Node: {{ dump(node) }} -->
-  <!-- Debug: Document title: {{ document_title }} -->
-  
   <div{{ attributes.addClass('field__item') }}>
     <span class="file file--mime-application-pdf file--application-pdf">
-      {% if document_title %}
-        <a href="{{ item.content['#file'].createFileUrl() }}" type="application/pdf" target="_blank">{{ document_title }}</a>
-      {% else %}
-        {{ item.content }}
-      {% endif %}
+      {{ item.content }}
     </span>
   </div>
 {% endfor %} 
