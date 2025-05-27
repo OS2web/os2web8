@@ -358,7 +358,7 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
                $variables['content'][$field_name] = [
                  '#type' => 'link',
                  '#title' => $document_title,
-                 '#url' => \Drupal\Core\Url::fromUri(file_create_url($file->getFileUri())),
+                 '#url' => \Drupal\Core\Url::fromUri('internal:' . $file->getFileUri()),
                  '#attributes' => ['class' => ['document-title-link']],
                ];
              }
