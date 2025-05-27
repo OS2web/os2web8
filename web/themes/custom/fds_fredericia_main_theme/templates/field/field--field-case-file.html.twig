@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a file field.
+ */
+#}
+{# Debug output #}
+<!-- Debug: Template is being used -->
+<!-- Available variables: {{ dump(items) }} -->
+
+{% for item in items %}
+  {% set document_title = item.content['#object'].field_document_title.value %}
+  <!-- Debug: Document title: {{ document_title }} -->
+  {% if document_title %}
+    <div{{ attributes.addClass('field__item') }}>
+      <span class="file file--mime-application-pdf file--application-pdf">
+        <a href="{{ item.content['#file'].createFileUrl() }}" type="application/pdf" target="_blank">{{ document_title }}</a>
+      </span>
+    </div>
+  {% else %}
+    <div{{ attributes.addClass('field__item') }}>
+      {{ item.content }}
+    </div>
+  {% endif %}
+{% endfor %} 
