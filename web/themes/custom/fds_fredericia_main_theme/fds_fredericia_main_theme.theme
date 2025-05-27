@@ -340,6 +340,32 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
       }
     }
 
+     // Only apply to document content types when displayed in paragraph context
+      if ($variables['view_mode'] == 'paragraph_display') {
+        // Replace file field display with node title
+        $file_fields = ['field_case_file']; // Update with your actual field names
+
+        foreach ($file_fields as $field_name) {
+          if ($node->hasField($field_name) && !$node->get($field_name)->isEmpty()) {
+            $file = $node->get($field_name)->entity;
+            if ($file) {
+              // Get the custom document title or fallback to node title
+              $document_title = $node->hasField('field_document_title') && !$node->get('field_document_title')->isEmpty()
+                ? $node->get('field_document_title')->value
+                : $node->getTitle();
+
+              // Replace the file field output with a custom link
+              $variables['content'][$field_name] = [
+                '#type' => 'link',
+                '#title' => $document_title,
+                '#url' => \Drupal\Core\Url::fromUri(file_create_url($file->getFileUri())),
+                '#attributes' => ['class' => ['document-title-link']],
+              ];
+            }
+          }
+        }
+      }
+
 
 }
 
