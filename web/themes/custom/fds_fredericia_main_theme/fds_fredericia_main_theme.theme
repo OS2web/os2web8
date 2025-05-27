@@ -340,28 +340,44 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
       }
     }
 
-     if ($variables['view_mode'] === 'paragraph_display') {
-         $node = $variables['node'];
-         $file_fields = ['field_case_file']; // your file field names
+     // Only apply for nodes rendered in paragraph_display mode.
+       if ($variables['view_mode'] === 'paragraph_display') {
+         // Adjust field name as needed.
+         $file_field_name = 'field_case_file';
 
-         foreach ($file_fields as $field_name) {
-           if ($node->hasField($field_name) && !$node->get($field_name)->isEmpty()) {
-             $file = $node->get($field_name)->entity;
-             if ($file) {
-               $document_title = $node->hasField('field_document_title') && !$node->get('field_document_title')->isEmpty()
-                 ? $node->get('field_document_title')->value
-                 : $node->label();
+         if ($node->hasField($file_field_name) && !$node->get($file_field_name)->isEmpty()) {
+           $file_entity = NULL;
 
-               // Replace the rendered field with a link.
-               // IMPORTANT: override $variables['content'][$field_name] with a render array.
+           // Check if it's a file field or media reference.
+           $field_definition = $node->getFieldDefinition($file_field_name);
+           $target_type = $field_definition->getSetting('target_type');
 
-               $variables['content'][$field_name] = [
-                 '#type' => 'link',
-                 '#title' => $document_title,
-                 '#url' => \Drupal\Core\Url::fromUri('internal:' . $file->getFileUri()),
-                 '#attributes' => ['class' => ['document-title-link']],
-               ];
+           if ($target_type === 'file') {
+             $file_entity = $node->get($file_field_name)->entity;
+           }
+           elseif ($target_type === 'media') {
+             $media_entity = $node->get($file_field_name)->entity;
+             if ($media_entity && $media_entity->hasField('field_media_file')) {
+               $file_entity = $media_entity->get('field_media_file')->entity;
              }
+           }
+
+           if ($file_entity) {
+             $file_uri = $file_entity->getFileUri();
+             $url = \Drupal\Core\Url::fromUri(file_create_url($file_uri));
+
+             // Use custom title field or fallback to node label.
+             $document_title = $node->hasField('field_document_title') && !$node->get('field_document_title')->isEmpty()
+               ? $node->get('field_document_title')->value
+               : $node->label();
+
+             // Replace the rendered field output.
+             $variables['content'][$file_field_name] = [
+               '#type' => 'link',
+               '#title' => $document_title,
+               '#url' => $url,
+               '#attributes' => ['class' => ['document-title-link']],
+             ];
            }
          }
        }
