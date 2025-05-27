@@ -9,9 +9,17 @@
 <!-- Element keys: {{ element|keys|join(', ') }} -->
 
 {% for item in items %}
+  {% set node = element['#object'] %}
+  {% set document_title = node.field_document_title.value|default('') %}
+  <!-- Debug: Document title: {{ document_title }} -->
+  
   <div{{ attributes.addClass('field__item') }}>
     <span class="file file--mime-application-pdf file--application-pdf">
-      {{ item.content }}
+      {% if document_title %}
+        <a href="{{ item.content['#file'].createFileUrl() }}" type="application/pdf" target="_blank">{{ document_title }}</a>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
     </span>
   </div>
 {% endfor %} 
