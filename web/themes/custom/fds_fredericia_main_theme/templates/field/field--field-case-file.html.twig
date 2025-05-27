@@ -7,8 +7,11 @@
 {# Debug output #}
 <!-- Debug: Template is being used -->
 <!-- Element keys: {{ element|keys|join(', ') }} -->
+<!-- Has object: {{ element['#object'] is defined ? 'yes' : 'no' }} -->
 
 {% for item in items %}
+  <!-- Debug: Item keys: {{ item|keys|join(', ') }} -->
+  <!-- Debug: Content keys: {{ item.content|keys|join(', ') }} -->
   {% set node = element['#object'] %}
   {% set document_title = node.field_document_title.value|default('') %}
   <!-- Debug: Document title: {{ document_title }} -->
