@@ -17,7 +17,14 @@
   {% if esdh_documents %}
     <div class="esdh-documents">
       {% for document in esdh_documents %}
-        <div class="document-item {{ file_index >= 5 ? 'hidden' : '' }}">{{ document }}</div>
+        {% set document_title = document['#node'].field_document_title.value %}
+        <div class="document-item {{ file_index >= 5 ? 'hidden' : '' }}">
+          {% if document_title %}
+            {{ document|merge({'#title': document_title}) }}
+          {% else %}
+            {{ document }}
+          {% endif %}
+        </div>
         {% set file_index = file_index + 1 %}
       {% endfor %}
     </div>

@@ -617,7 +617,20 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                     $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
                     if ($document_node) {
                         $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
-                        $rendered_document = $view_builder->view($document_node, 'paragraph_display'); // 'default' or another view mode as necessary
+                        $rendered_document = $view_builder->view($document_node, 'paragraph_display');
+                        
+                        // Override the file link title with the document title
+                        if ($document_node->hasField('field_document_title') && !$document_node->field_document_title->isEmpty()) {
+                            $document_title = $document_node->field_document_title->value;
+                            if (!empty($document_title) && isset($rendered_document['field_case_file'])) {
+                                foreach ($rendered_document['field_case_file'] as $key => $item) {
+                                    if (is_numeric($key) && isset($item['#title'])) {
+                                        $rendered_document['field_case_file'][$key]['#title'] = $document_title;
+                                    }
+                                }
+                            }
+                        }
+                        
                         if (!empty($rendered_document)) {
                             $documents[] = $rendered_document;
                         }
@@ -668,6 +681,21 @@ function fds_fredericia_main_theme_preprocess_field(&$variables) {
         case 'lightblue_link':
           $variables['link_color_class'] = 'lightblue-link-class';
           break;
+      }
+    }
+  }
+
+  if ($variables['element']['#bundle'] == 'esdh_document' && $variables['element']['#field_name'] == 'field_case_file') {
+    $node = $variables['element']['#object'];
+    if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
+      $document_title = $node->field_document_title->value;
+      if (!empty($document_title)) {
+        foreach ($variables['items'] as &$item) {
+          if (isset($item['content']['#type']) && $item['content']['#type'] === 'file_link') {
+            $item['content']['#title'] = $document_title;
+            $item['content']['#attributes']['title'] = $document_title;
+          }
+        }
       }
     }
   }
@@ -820,4 +848,13 @@ function fds_fredericia_main_theme_preprocess_paragraph__news_section(&$variable
 
   // Pass the node objects to the template.
   $variables['latest_news_articles'] = $nodes;
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function fds_fredericia_main_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#field_name'] == 'field_case_file') {
+    $suggestions[] = 'field__field_case_file';
+  }
 }
