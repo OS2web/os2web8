@@ -54,6 +54,9 @@
         padding-top: 20px;
       }
       .link-text-container {
+        span {
+          color: black;
+        }
         svg {
           g {
             stroke: #222;
