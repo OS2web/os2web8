@@ -625,11 +625,18 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                         if ($document_node->hasField('field_case_file') && !$document_node->field_case_file->isEmpty()) {
                             $file = $document_node->field_case_file->entity;
                             if ($file) {
-                                // Create a custom render array with our title
+                                // Create a completely custom render array with direct link
+                                $file_url = $file->createFileUrl();
+                                $display_title = !empty($document_title) ? $document_title : $file->getFilename();
+                                
                                 $documents[] = [
-                                    '#theme' => 'file_link',
-                                    '#file' => $file,
-                                    '#title' => !empty($document_title) ? $document_title : $file->getFilename(),
+                                    '#type' => 'link',
+                                    '#title' => $display_title,
+                                    '#url' => \Drupal\Core\Url::fromUri($file_url),
+                                    '#attributes' => [
+                                        'target' => '_blank',
+                                        'class' => ['file-link'],
+                                    ],
                                     '#cache' => [
                                         'tags' => $document_node->getCacheTags(),
                                     ],
