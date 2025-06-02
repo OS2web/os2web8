@@ -6,12 +6,21 @@
 #}
 {% for item in items %}
   <div{{ attributes.addClass('field__item') }}>
-    <span class="file file--mime-{{ item.content['#file'].getMimeType()|split('/')|last }} file--{{ item.content['#file'].getMimeType()|split('/')|last }}">
-      {% if item.content['#file'].getEntity() and item.content['#file'].getEntity().hasField('field_document_title') and not item.content['#file'].getEntity().field_document_title.isEmpty() %}
-        {{ item.content|without('title')|merge({'#title': item.content['#file'].getEntity().field_document_title.value}) }}
-      {% else %}
-        {{ item.content }}
-      {% endif %}
+    {% set file = item.content['#file'] %}
+    {% set document = file.getEntity() %}
+    {% set mime_type = file.getMimeType()|split('/')|last %}
+    {% set file_url = file.createFileUrl() %}
+    
+    <span class="file file--mime-{{ mime_type }} file--{{ mime_type }}">
+      <span class="file file--mime-application-{{ mime_type }} file--application-{{ mime_type }}">
+        <a href="{{ file_url }}" type="{{ file.getMimeType() }}">
+          {% if document and document.hasField('field_document_title') and not document.field_document_title.isEmpty() %}
+            {{ document.field_document_title.value }}
+          {% else %}
+            {{ file.getFilename() }}
+          {% endif %}
+        </a>
+      </span>
     </span>
   </div>
 {% endfor %} 
