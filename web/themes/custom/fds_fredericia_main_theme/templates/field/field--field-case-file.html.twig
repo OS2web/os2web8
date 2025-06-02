@@ -8,11 +8,22 @@
 <!-- Debug: Bundle: {{ element['#bundle'] }} -->
 <!-- Debug: Entity type: {{ element['#entity_type'] }} -->
 
+{# Custom template for ESDH Documents file field #}
+{% if node and node.field_document_title %}
+  {% set custom_title = node.field_document_title.value %}
+{% endif %}
+
 {% for item in items %}
-  <!-- Debug: Item content type: {{ item.content['#type'] }} -->
   <div{{ attributes.addClass('field__item') }}>
-    <span class="file file--mime-application-pdf file--application-pdf">
+    {% if custom_title and custom_title is not empty %}
+      {% set file_entity = item.content['#file'] %}
+      {% if file_entity %}
+        <a href="{{ file_url(file_entity.uri.value) }}" target="_blank">{{ custom_title }}</a>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
+    {% else %}
       {{ item.content }}
-    </span>
+    {% endif %}
   </div>
-{% endfor %} 
+{% endfor %}
