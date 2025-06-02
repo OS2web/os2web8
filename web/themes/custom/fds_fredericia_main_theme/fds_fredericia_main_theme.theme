@@ -902,3 +902,28 @@ function fds_fredericia_main_theme_file_link_alter(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_field_formatter_view_alter().
+ */
+function fds_fredericia_main_theme_field_formatter_view_alter(&$element, &$context) {
+  if ($context['field_definition']->getName() === 'field_case_file' && 
+      $context['entity_type'] === 'node' && 
+      $context['bundle'] === 'esdh_document') {
+    
+    $node = $context['entity'];
+    if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
+      $document_title = $node->field_document_title->value;
+      if (!empty($document_title)) {
+        foreach ($element as $delta => $item) {
+          if (isset($item['#theme']) && $item['#theme'] === 'file_link') {
+            $element[$delta]['#title'] = $document_title;
+            if (isset($element[$delta]['#attributes'])) {
+              $element[$delta]['#attributes']['title'] = $document_title;
+            }
+          }
+        }
+      }
+    }
+  }
+}
