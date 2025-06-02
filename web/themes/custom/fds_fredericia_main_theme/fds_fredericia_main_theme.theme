@@ -684,35 +684,6 @@ function fds_fredericia_main_theme_preprocess_field(&$variables) {
       }
     }
   }
-
-  if ($variables['element']['#bundle'] == 'esdh_document' && $variables['element']['#field_name'] == 'field_case_file') {
-    $node = $variables['element']['#object'];
-    if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
-      $document_title = $node->field_document_title->value;
-      if (!empty($document_title)) {
-        foreach ($variables['items'] as &$item) {
-          if (isset($item['content']['#type']) && $item['content']['#type'] === 'file_link') {
-            // Set the title in the file link
-            $item['content']['#title'] = $document_title;
-            
-            // Set the title attribute
-            if (!isset($item['content']['#attributes'])) {
-              $item['content']['#attributes'] = [];
-            }
-            $item['content']['#attributes']['title'] = $document_title;
-            
-            // If there's a file entity, modify its filename
-            if (isset($item['content']['#file'])) {
-              $file = $item['content']['#file'];
-              if ($file instanceof \Drupal\file\FileInterface) {
-                $file->setFilename($document_title);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 function fds_fredericia_main_theme_preprocess_paragraph__os2web_focus_box(array &$variables) {
@@ -874,36 +845,6 @@ function fds_fredericia_main_theme_theme_suggestions_field_alter(array &$suggest
 }
 
 /**
- * Implements hook_file_link_alter().
- */
-function fds_fredericia_main_theme_file_link_alter(&$variables) {
-  // Get the file entity
-  $file = $variables['file'];
-  
-  // Get the node that this file is attached to
-  $file_usage = \Drupal::service('file.usage')->listUsage($file);
-  
-  foreach ($file_usage as $module => $usage) {
-    foreach ($usage as $type => $ids) {
-      foreach ($ids as $id => $count) {
-        if ($type === 'node') {
-          $node = Node::load($id);
-          if ($node && $node->bundle() === 'esdh_document') {
-            if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
-              $document_title = $node->field_document_title->value;
-              if (!empty($document_title)) {
-                $variables['text'] = $document_title;
-                return;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/**
  * Implements hook_field_formatter_view_alter().
  */
 function fds_fredericia_main_theme_field_formatter_view_alter(&$element, &$context) {
@@ -941,33 +882,4 @@ function fds_fredericia_main_theme_theme() {
       ],
     ],
   ];
-}
-
-/**
- * Implements hook_preprocess_file_link().
- */
-function fds_fredericia_main_theme_preprocess_file_link(&$variables) {
-  $file = $variables['file'];
-  
-  // Get the file usage to find the node
-  $file_usage = \Drupal::service('file.usage')->listUsage($file);
-  
-  foreach ($file_usage as $module => $usage) {
-    foreach ($usage as $type => $ids) {
-      foreach ($ids as $id => $count) {
-        if ($type === 'node') {
-          $node = Node::load($id);
-          if ($node && $node->bundle() === 'esdh_document') {
-            if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
-              $document_title = $node->field_document_title->value;
-              if (!empty($document_title)) {
-                $variables['text'] = $document_title;
-                return;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
