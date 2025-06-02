@@ -927,3 +927,47 @@ function fds_fredericia_main_theme_field_formatter_view_alter(&$element, &$conte
     }
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function fds_fredericia_main_theme_theme() {
+  return [
+    'file_link' => [
+      'variables' => [
+        'file' => NULL,
+        'description' => NULL,
+        'attributes' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_file_link().
+ */
+function fds_fredericia_main_theme_preprocess_file_link(&$variables) {
+  $file = $variables['file'];
+  
+  // Get the file usage to find the node
+  $file_usage = \Drupal::service('file.usage')->listUsage($file);
+  
+  foreach ($file_usage as $module => $usage) {
+    foreach ($usage as $type => $ids) {
+      foreach ($ids as $id => $count) {
+        if ($type === 'node') {
+          $node = Node::load($id);
+          if ($node && $node->bundle() === 'esdh_document') {
+            if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
+              $document_title = $node->field_document_title->value;
+              if (!empty($document_title)) {
+                $variables['text'] = $document_title;
+                return;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
