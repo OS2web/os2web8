@@ -565,7 +565,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
             $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
             if ($document_node) {
               $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
-              $documents[] = $view_builder->view($document_node, 'paragraph_display'); // 'default' or another view mode as necessary
+              $documents[] = $view_builder->view($document_node, 'paragraph_display');
             }
           }
           $variables['esdh_documents'] = $documents;
@@ -590,7 +590,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
         $variables['os2web_media_files'] = [];
         foreach ($media_entities as $media) {
           $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
-          $variables['os2web_media_files'][] = $view_builder->view($media, 'default'); // 'default' or another view mode as necessary
+          $variables['os2web_media_files'][] = $view_builder->view($media, 'default');
         }
       }
 
@@ -599,10 +599,9 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
           $variables['field_document_reference_items'] = [];
           foreach ($referenced_entities as $referenced_entity) {
               $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
-              $variables['field_document_reference_items'][] = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+              $variables['field_document_reference_items'][] = $view_builder->view($referenced_entity, 'default');
           }
       }
-
     }
 
     if ($paragraph->bundle() === 'edoc_filer') {
@@ -616,20 +615,32 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                 foreach ($document_ids as $id) {
                     $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
                     if ($document_node) {
-                        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
-                        $rendered_document = $view_builder->view($document_node, 'paragraph_display');
-                        
-                        // Override the file link title with the document title
+                        // Get the document title
+                        $document_title = '';
                         if ($document_node->hasField('field_document_title') && !$document_node->field_document_title->isEmpty()) {
                             $document_title = $document_node->field_document_title->value;
-                            if (!empty($document_title) && isset($rendered_document['field_case_file'])) {
-                                foreach ($rendered_document['field_case_file'] as $key => $item) {
-                                    if (is_numeric($key) && isset($item['#title'])) {
-                                        $rendered_document['field_case_file'][$key]['#title'] = $document_title;
-                                    }
-                                }
+                        }
+                        
+                        // Get the file from the document and create custom render array
+                        if ($document_node->hasField('field_case_file') && !$document_node->field_case_file->isEmpty()) {
+                            $file = $document_node->field_case_file->entity;
+                            if ($file) {
+                                // Create a custom render array with our title
+                                $documents[] = [
+                                    '#theme' => 'file_link',
+                                    '#file' => $file,
+                                    '#title' => !empty($document_title) ? $document_title : $file->getFilename(),
+                                    '#cache' => [
+                                        'tags' => $document_node->getCacheTags(),
+                                    ],
+                                ];
+                                continue; // Skip the normal rendering since we handled it
                             }
                         }
+                        
+                        // Fallback to normal rendering if no file found
+                        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+                        $rendered_document = $view_builder->view($document_node, 'paragraph_display');
                         
                         if (!empty($rendered_document)) {
                             $documents[] = $rendered_document;
@@ -646,7 +657,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
             $variables['field_document_reference_items'] = [];
             foreach ($referenced_entities as $referenced_entity) {
                 $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
-                $rendered_item = $view_builder->view($referenced_entity, 'default'); // Adjust view mode as necessary
+                $rendered_item = $view_builder->view($referenced_entity, 'default');
                 if (!empty($rendered_item)) {
                     $variables['field_document_reference_items'][] = $rendered_item;
                 }
