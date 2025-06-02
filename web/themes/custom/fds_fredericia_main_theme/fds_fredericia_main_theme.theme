@@ -692,8 +692,22 @@ function fds_fredericia_main_theme_preprocess_field(&$variables) {
       if (!empty($document_title)) {
         foreach ($variables['items'] as &$item) {
           if (isset($item['content']['#type']) && $item['content']['#type'] === 'file_link') {
+            // Set the title in the file link
             $item['content']['#title'] = $document_title;
+            
+            // Set the title attribute
+            if (!isset($item['content']['#attributes'])) {
+              $item['content']['#attributes'] = [];
+            }
             $item['content']['#attributes']['title'] = $document_title;
+            
+            // If there's a file entity, modify its filename
+            if (isset($item['content']['#file'])) {
+              $file = $item['content']['#file'];
+              if ($file instanceof \Drupal\file\FileInterface) {
+                $file->setFilename($document_title);
+              }
+            }
           }
         }
       }
