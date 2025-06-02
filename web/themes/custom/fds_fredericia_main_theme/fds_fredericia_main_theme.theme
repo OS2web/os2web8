@@ -872,3 +872,33 @@ function fds_fredericia_main_theme_theme_suggestions_field_alter(array &$suggest
     $suggestions[] = 'field__field_case_file';
   }
 }
+
+/**
+ * Implements hook_file_link_alter().
+ */
+function fds_fredericia_main_theme_file_link_alter(&$variables) {
+  // Get the file entity
+  $file = $variables['file'];
+  
+  // Get the node that this file is attached to
+  $file_usage = \Drupal::service('file.usage')->listUsage($file);
+  
+  foreach ($file_usage as $module => $usage) {
+    foreach ($usage as $type => $ids) {
+      foreach ($ids as $id => $count) {
+        if ($type === 'node') {
+          $node = Node::load($id);
+          if ($node && $node->bundle() === 'esdh_document') {
+            if ($node->hasField('field_document_title') && !$node->field_document_title->isEmpty()) {
+              $document_title = $node->field_document_title->value;
+              if (!empty($document_title)) {
+                $variables['text'] = $document_title;
+                return;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
