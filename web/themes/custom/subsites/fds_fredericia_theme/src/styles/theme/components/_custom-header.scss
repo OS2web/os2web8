@@ -147,8 +147,7 @@
 
       &:hover, &:focus, &.is-active {
         outline: none;
-        color: $background_color__navigation;
-        background-color: #fff;
+        background-color: white;
       }
     }
   }
