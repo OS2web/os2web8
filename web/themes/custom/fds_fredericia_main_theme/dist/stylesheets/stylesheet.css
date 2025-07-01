@@ -23694,6 +23694,10 @@ a:not([class]):hover {
       flex-wrap: wrap;
 }
 
+.boost-trigger-button {
+  right: 60px !important;
+}
+
 @media (min-width: 992px) {
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-from-date,
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-to-date {
