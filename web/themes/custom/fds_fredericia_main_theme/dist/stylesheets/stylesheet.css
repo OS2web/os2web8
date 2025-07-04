@@ -22684,6 +22684,11 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: flex;
   min-height: 300px;
   margin-bottom: 80px;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+.paragraph-50-50-wrapper.no-bottom-margin {
+  margin-bottom: 0;
 }
 @media only screen and (max-width: 768px) {
   .paragraph-50-50-wrapper {
