@@ -19,7 +19,7 @@ javascripts:
     'https://cdhsign.dk/cdh_player.js': { type: external }
 
 navigate_back:
-  version: 1.x
+  version: 1.1
   js:
     js/navigate-back.js: {}
   dependencies:
