@@ -26,6 +26,7 @@ navigate_back:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+    - core/once
 swiper:
   version: 1.x
   css:
