@@ -58,3 +58,4 @@ sessions/*
 
 # Ignore FederationMetadata.xml files
 [Ff]ederation[Mm]etadata.xml
+web/private/
