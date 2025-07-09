@@ -13,14 +13,17 @@ function os2web_edoc_file_import_cron() {
   $import_path = $config->get('import_path');
   if (!file_exists($import_path)) {
     \Drupal::logger('os2web_edoc_file_import')->error('The import path does not exist. (PATH: /var/www/edoc_filer)');
+    error_log("eDoc path does not exis. " . $import_path . "\n");
     return;
   }
-
   $xml_files = \Drupal::service('file_system')->scanDirectory($import_path, "/\.xml$/i", ['recurse' => FALSE]);
   foreach ($xml_files as $file) {
     os2web_edoc_file_import_process_file($file);
+    error_log("Importing file: " . print_r($file) . "\n");
   }
 }
+error_log("File: " . $file . "\n", 3, "/var/www/fredericia.dk/logs/php.log");
+error_log("Error message\n", 3, "/var/www/fredericia.dk/logs/php.log");
 
 /**
  * Checks if a case with the given CaseNumber exists.
@@ -79,6 +82,7 @@ function os2web_edoc_file_import_create_or_update_document($xml, $case = NULL, $
     $documents = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['type' => 'esdh_document', 'field_document_id' => (string) $xml->FileID]);
     $document = reset($documents);
     \Drupal::logger('os2web_edoc_file_import')->info('Loaded existing document for update: ' . (string) $xml->FileID);
+    error_log("Update document: " . print_r($xml->FileID) . "\n");
   }
 
   if (!$document) {
@@ -138,7 +142,7 @@ function os2web_edoc_file_import_create_or_update_document($xml, $case = NULL, $
     $file = File::create([
       'filename' => $destinationFilename,
       'uri' => $destinationUri,
-      'status' => 1,
+      'status' => 0,
       'uid' => 1,
     ]);
     $file->save();
@@ -184,9 +188,11 @@ function os2web_edoc_file_import_delete_document($xml) {
   if ($document) {
     $document->delete();
     \Drupal::logger('os2web_edoc_file_import')->info('Deleted document: ' . (string) $xml->FileID);
-  } else {
+    error_log("Deleting : " . print_r($xml->FileID) . "\n");
+     } else {
     \Drupal::logger('os2web_edoc_file_import')->warning('No document found to delete with FileID: ' . (string) $xml->FileID);
-  }
+   error_log("Nothing to delete: " . print_r($xml->FileID) . "\n");
+     }
 }
 
 /**
@@ -198,8 +204,10 @@ function os2web_edoc_file_import_process_file($file) {
 
   // Debugging: Log the XML content
   \Drupal::logger('os2web_edoc_file_import')->debug('XML content: ' . print_r($xml, TRUE));
+    error_log("Importing file 1: " . print_r($xml) . "\n");
 
   $fileName = (string) $xml->FileName;
+    error_log("Importing file 2: " . $fileName . "\n");
 
   // Handle create, update, delete based on XML content.
   if (!empty($xml->Created)) {
@@ -207,27 +215,32 @@ function os2web_edoc_file_import_process_file($file) {
     if (!empty($xml->CaseNumber)) {
       \Drupal::logger('os2web_edoc_file_import')->info('Creating or updating case with CaseNumber: ' . (string) $xml->CaseNumber);
       $case = os2web_edoc_file_import_create_or_update_case($xml);
+    error_log("Creating new case: " . $xml->CaseNumber . "\n");
     }
     // Create a new document.
     if (!empty($xml->FileID)) {
       \Drupal::logger('os2web_edoc_file_import')->info('Creating or updating document with FileID: ' . (string) $xml->FileID);
       os2web_edoc_file_import_create_or_update_document($xml, isset($case) ? $case : NULL);
+    error_log("Creating new doxcument: " . $xml->FileID . "\n");
     }
   } elseif (!empty($xml->Updated)) {
     // Update existing case or document.
     if (!empty($xml->CaseNumber)) {
       \Drupal::logger('os2web_edoc_file_import')->info('Updating case with CaseNumber: ' . (string) $xml->CaseNumber . ' and FileID: ' . (string) $xml->FileID);
       $case = os2web_edoc_file_import_create_or_update_case($xml, TRUE);
+    error_log("Updating case: " . $xml->CaseNumber . "\n");
     }
     if (!empty($xml->FileID)) {
       \Drupal::logger('os2web_edoc_file_import')->info('Updating document with FileID: ' . (string) $xml->FileID);
       os2web_edoc_file_import_create_or_update_document($xml, isset($case) ? $case : NULL, TRUE);
+    error_log("Updating file: " . $xml->FileID . "\n");
     }
   } elseif (!empty($xml->Deleted)) {
     // Delete existing document.
     if (!empty($xml->FileID)) {
       \Drupal::logger('os2web_edoc_file_import')->info('Deleting document with FileID: ' . (string) $xml->FileID);
       os2web_edoc_file_import_delete_document($xml);
+    error_log("Delete file: " . $xml->FileID . "\n");
     }
   }
 
