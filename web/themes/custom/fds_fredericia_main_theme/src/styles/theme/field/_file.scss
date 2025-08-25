@@ -89,6 +89,12 @@
   }
 }
 
+.document-item .file {
+  background-image: none !important;
+  padding-left: 0;
+  width: 100%;
+}
+
 .document-item a {
   display: inline-block;
   background-image: none;
