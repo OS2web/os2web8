@@ -615,24 +615,26 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                 foreach ($document_ids as $id) {
                     $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
                     if ($document_node) {
+                        $document_rendered = false;
+
                         // Get the document title
                         $document_title = '';
                         if ($document_node->hasField('field_document_title') && !$document_node->field_document_title->isEmpty()) {
                             $document_title = $document_node->field_document_title->value;
                         }
-                        
+
                         // Get the file from the document and create custom render array
                         if ($document_node->hasField('field_case_file') && !$document_node->field_case_file->isEmpty()) {
                             $file = $document_node->field_case_file->entity;
-                            if ($file) {
+                            if ($file && $file->getFileUri()) {
                                 // Create a completely custom render array with direct link
-                                $file_url = $file->createFileUrl();
+                                $uri = $file->getFileUri();
                                 $display_title = !empty($document_title) ? $document_title : $file->getFilename();
-                                
+
                                 $documents[] = [
                                     '#type' => 'link',
                                     '#title' => $display_title,
-                                    '#url' => \Drupal\Core\Url::fromUri($file_url),
+                                    '#url' => \Drupal\Core\Url::fromUri($uri),
                                     '#attributes' => [
                                         'target' => '_blank',
                                         'class' => ['file-link'],
@@ -641,17 +643,19 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                                         'tags' => $document_node->getCacheTags(),
                                     ],
                                 ];
-                                continue; // Skip the normal rendering since we handled it
+                                $document_rendered = true;
                             }
                         }
-                        
-                        // Fallback to normal rendering if no file found
-                        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
-                        $rendered_document = $view_builder->view($document_node, 'paragraph_display');
-                        
-                        if (!empty($rendered_document)) {
-                            $documents[] = $rendered_document;
-                        }
+
+                        // Fallback to normal rendering ONLY IF the document was not already rendered as a link.
+                                    if (!$document_rendered) {
+                                        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+                                        $rendered_document = $view_builder->view($document_node, 'paragraph_display');
+
+                                        if (!empty($rendered_document)) {
+                                            $documents[] = $rendered_document;
+                                        }
+                                    }
                     }
                 }
                 $variables['esdh_documents'] = $documents;
