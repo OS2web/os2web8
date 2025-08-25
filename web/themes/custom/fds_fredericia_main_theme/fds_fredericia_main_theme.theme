@@ -634,7 +634,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                                 $documents[] = [
                                     '#type' => 'link',
                                     '#title' => $display_title,
-                                    '#url' => \Drupal\Core\Url::fromUri($uri),
+                                    'url' => \Drupal\Core\Url::fromUri(\Drupal::service('file_url_generator')->generateAbsoluteString($uri)),
                                     '#attributes' => [
                                         'target' => '_blank',
                                         'class' => ['file-link'],
