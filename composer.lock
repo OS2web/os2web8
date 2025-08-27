@@ -13598,12 +13598,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_borgerdk.git",
-                "reference": "119bb19e4537a624a060184be59e5f1c6432a8ec"
+                "reference": "f4a62bd4f894b237b6b6566fac39cbb6c0797bf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/119bb19e4537a624a060184be59e5f1c6432a8ec",
-                "reference": "119bb19e4537a624a060184be59e5f1c6432a8ec",
+                "url": "https://api.github.com/repos/OS2web/os2web_borgerdk/zipball/f4a62bd4f894b237b6b6566fac39cbb6c0797bf5",
+                "reference": "f4a62bd4f894b237b6b6566fac39cbb6c0797bf5",
                 "shasum": ""
             },
             "require": {
@@ -13622,7 +13622,7 @@
                 "issues": "https://github.com/OS2web/os2web_borgerdk/issues",
                 "source": "https://github.com/OS2web/os2web_borgerdk/tree/drupal10"
             },
-            "time": "2025-02-12T09:56:16+00:00"
+            "time": "2025-08-27T11:31:19+00:00"
         },
         {
             "name": "os2web/os2web_citizen_proposals",
