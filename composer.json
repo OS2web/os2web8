@@ -119,7 +119,6 @@
         "drupal/search_api": "^1.30",
         "drupal/search_api_autocomplete": "^1.8",
         "drupal/search_api_solr": "^4.2.12",
-        "drupal/silktide": "9.0.3",
         "drupal/siteimprove": "^1.10",
         "drupal/stage_file_proxy": "^1.0",
         "drupal/textfield_counter": "^2.3",
@@ -181,8 +180,7 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "wikimedia/composer-merge-plugin": true,
-            "simplesamlphp/composer-xmlprovider-installer": true
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "autoload": {
