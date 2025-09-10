@@ -7,6 +7,7 @@ use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\node\NodeInterface;
+use Drupal\file\Entity\File;
 
 
 
@@ -484,5 +485,97 @@ function fds_faxe_theme_preprocess_paragraph(&$variables) {
   }
 
 
+}
+
+function fds_faxe_theme_preprocess_html(&$variables) {
+  // Debug: Log that the function is being called
+  \Drupal::logger('fds_faxe_theme')->info('preprocess_html function called');
+  
+  if (theme_get_setting('silktide_enabled')) {
+    // Debug: Log that silktide is enabled
+    \Drupal::logger('fds_faxe_theme')->info('Silktide is enabled');
+    // Get the file IDs from theme settings.
+    $css_fid = theme_get_setting('silktide_css_fid');
+    
+  
+    
+    // Attach the CSS file if it exists.
+    if (!empty($css_fid) && is_array($css_fid) && !empty($css_fid[0]) && $file = File::load($css_fid[0])) {
+      // Debug: Log successful file load
+      \Drupal::logger('fds_faxe_theme')->info('CSS file loaded successfully: @uri', ['@uri' => $file->getFileUri()]);
+      // Alternative method: Use Drupal's standard CSS attachment
+      $css_url = file_url_transform_relative(\Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri()));
+      $variables['#attached']['library'][] = 'fds_faxe_theme/silktide-css';
+      
+      // Also add to html_head as backup
+      $variables['#attached']['html_head'][] = [
+        [
+          '#tag' => 'link',
+          '#attributes' => [
+            'rel' => 'stylesheet',
+            'href' => $css_url,
+          ],
+        ],
+        'silktide_consent_manager_css',
+      ];
+    }
+
+    // Attach the JS file directly from the theme's assets.
+    $js_url = Url::fromUri('base:themes/custom/fds_faxe_theme/js/silktide-consent-manager.js', ['absolute' => FALSE])->toString();
+    $variables['#attached']['html_head'][] = [
+      [
+        '#tag' => 'script',
+        '#attributes' => [
+          'src' => $js_url,
+        ],
+      ],
+      'silktide_consent_manager_js',
+    ];
+
+    // Get the configuration script from theme settings.
+    $config_script = theme_get_setting('silktide_config_script');
+    
+    // Attach the inline configuration script.
+    if (!empty($config_script)) {
+      $variables['#attached']['html_head'][] = [
+        [
+          '#tag' => 'script',
+          '#value' => $config_script,
+        ],
+        'silktide_config_script',
+      ];
+    }
+  }
+}
+
+function fds_faxe_theme_custom_theme_settings_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // Debug: Log that the submit function is being called
+  \Drupal::logger('fds_faxe_theme')->info('Theme settings submit function called');
+  
+  $config = \Drupal::configFactory()->getEditable('fds_faxe_theme.settings');
+  $config->set('silktide_enabled', $form_state->getValue('silktide_enabled'));
+  $config->set('silktide_config_script', $form_state->getValue('silktide_config_script'));
+  
+  // Handle the uploaded CSS file
+  $css_fid = $form_state->getValue('silktide_css_fid');
+  if (!empty($css_fid)) {
+    $file = File::load($css_fid[0]);
+    if ($file) {
+      // Make the file permanent
+      $file->setPermanent();
+      $file->save();
+      // Add file usage tracking
+      \Drupal::service('file.usage')->add($file, 'fds_faxe_theme', 'theme', \Drupal::currentUser()->id());
+    }
+    $config->set('silktide_css_fid', $css_fid);
+  } else {
+    // If no new file uploaded, keep the existing one
+    $existing_css_fid = $config->get('silktide_css_fid');
+    if (empty($existing_css_fid)) {
+      $config->set('silktide_css_fid', NULL);
+    }
+  }
+  
+  $config->save();
 }
 
