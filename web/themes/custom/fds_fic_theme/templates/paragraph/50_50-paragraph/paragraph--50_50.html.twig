@@ -4,6 +4,9 @@
 {% set selectedColor = content.field_fifty_fifty_bg_color['#items'].getString() %}
 {% set selectedButtonColor = content.field_fifty_fifty_btn_color['#items'].getString() %}
 
+{% set remove_bottom_margin = paragraph.field_remove_bottom_margin.value %}
+{% set margin_class = remove_bottom_margin ? 'no-bottom-margin' : '' %}
+
 {% set color_map = {
   'bg_blue': '#00335b',
   'bg_lightblue': '#aabfcf',
@@ -40,7 +43,7 @@
 
 
 
-<div class="paragraph-50-50-wrapper {{ image_position_class }}">
+<div class="paragraph-50-50-wrapper {{ image_position_class }} {{ margin_class }}">
   {% if paragraph.field_fifty_fifty_image is not empty %}
   <div class="image-side">
       {{ content.field_fifty_fifty_image }}
