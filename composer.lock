@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec9f8a727d51434e12ae02fc4c3d4b3f",
+    "content-hash": "74184d9b0a0d2e47f1dfc6707f781179",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8783,17 +8783,11 @@
         },
         {
             "name": "drupal/rules",
-            "version": "4.0.0",
+            "version": "dev-4.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rules.git",
-                "reference": "4.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rules-4.0.0.zip",
-                "reference": "4.0.0",
-                "shasum": "685c8cbcf7950e07459957f4536df77d9bf53531"
+                "reference": "532d420e5890a27638ec285136265f268752bf4c"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -8801,17 +8795,15 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "4.0.0",
-                    "datestamp": "1721935272",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                "branch-alias": {
+                    "dev-4.0.x": "4.0.x-dev"
                 },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": ">=9"
+                "drupal": {
+                    "version": "4.0.0+32-dev",
+                    "datestamp": "1737757476",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -20539,6 +20531,7 @@
         "drupal/monolog": 20,
         "drupal/node_revision_delete": 20,
         "drupal/pathologic": 15,
+        "drupal/rules": 20,
         "drupal/scheduler_content_moderation_integration": 20,
         "drupal/stage_file_proxy": 20,
         "drupal/tamper": 15,
@@ -20574,5 +20567,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

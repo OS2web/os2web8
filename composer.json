@@ -109,6 +109,7 @@
         "drupal/quick_node_clone": "^1.18",
         "drupal/quickedit": "^1.0",
         "drupal/redirect": "^1.10",
+        "drupal/rules": "4.0.x-dev@dev",
         "drupal/save_edit": "^1.8",
         "drupal/scheduler": "^2.1",
         "drupal/scheduler_content_moderation_integration": "dev-2.x",
