@@ -8,6 +8,7 @@ use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\node\NodeInterface;
 use Drupal\file\Entity\File;
+use Drupal\Core\Render\Markup;
 
 
 
@@ -546,6 +547,27 @@ function fds_faxe_theme_preprocess_html(&$variables) {
       ];
     }
   }
+
+// Get the configuration script from theme settings.
+    $config_script = theme_get_setting('silktide_config_script');
+    
+    // Attach the inline configuration script.
+    if (!empty($config_script)) {
+      
+      // 1. Mark the content as safe markup. 
+      // This is crucial to prevent the 'href' attribute from being stripped by sanitization.
+      $safe_config_script = Markup::create($config_script);
+      
+      $variables['#attached']['html_head'][] = [
+        [
+          '#type' => 'markup', 
+          '#markup' => $safe_config_script,
+        ],
+        // 3. Keep the key to avoid duplication.
+        'silktide_config_script',
+      ];
+    }
+
 }
 
 function fds_faxe_theme_custom_theme_settings_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
