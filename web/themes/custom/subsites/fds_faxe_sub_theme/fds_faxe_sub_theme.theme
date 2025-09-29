@@ -6,6 +6,7 @@ use Drupal\Core\Url;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\file\Entity\File;
+use Drupal\Core\Render\Markup;
 
 
 
@@ -236,6 +237,8 @@ function fds_faxe_sub_theme_preprocess_field(&$variables) {
 function fds_faxe_sub_theme_preprocess_html(&$variables) {
   // Debug: Log that the function is being called
   \Drupal::logger('fds_faxe_sub_theme')->info('preprocess_html function called');
+
+
   
   if (theme_get_setting('silktide_enabled')) {
     // Debug: Log that silktide is enabled
@@ -285,13 +288,35 @@ function fds_faxe_sub_theme_preprocess_html(&$variables) {
     if (!empty($config_script)) {
       $variables['#attached']['html_head'][] = [
         [
-          '#type' => 'markup',
-          '#markup' => $config_script,
+          '#tag' => 'script',
+          '#value' => $config_script,
         ],
         'silktide_config_script',
       ];
     }
   }
+  // Get the configuration script from theme settings.
+    $config_script = theme_get_setting('silktide_config_script');
+    
+    // Attach the inline configuration script.
+    if (!empty($config_script)) {
+      
+      // 1. Mark the content as safe markup. 
+      // This is crucial to prevent the 'href' attribute from being stripped by sanitization.
+      $safe_config_script = Markup::create($config_script);
+      
+      $variables['#attached']['html_head'][] = [
+        [
+          '#type' => 'markup', 
+          '#markup' => $safe_config_script,
+        ],
+        // 3. Keep the key to avoid duplication.
+        'silktide_config_script',
+      ];
+    }
+  }
+
+
 }
 
 function fds_faxe_sub_theme_custom_theme_settings_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
