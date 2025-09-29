@@ -1892,3 +1892,7 @@ a[data-entity-type="media"] {
     font-family: "FontAwesome";
   }
 }
+
+li:before {
+  top: 12px !important;
+}
