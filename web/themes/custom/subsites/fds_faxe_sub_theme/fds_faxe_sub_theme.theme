@@ -317,8 +317,6 @@ function fds_faxe_sub_theme_preprocess_html(&$variables) {
   }
 
 
-}
-
 function fds_faxe_sub_theme_custom_theme_settings_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   // Debug: Log that the submit function is being called
   \Drupal::logger('fds_faxe_sub_theme')->info('Theme settings submit function called');
