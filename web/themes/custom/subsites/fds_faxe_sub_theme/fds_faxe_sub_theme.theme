@@ -285,8 +285,8 @@ function fds_faxe_sub_theme_preprocess_html(&$variables) {
     if (!empty($config_script)) {
       $variables['#attached']['html_head'][] = [
         [
-          '#tag' => 'script',
-          '#value' => $config_script,
+          '#type' => 'markup',
+          '#markup' => $config_script,
         ],
         'silktide_config_script',
       ];
