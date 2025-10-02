@@ -3,7 +3,7 @@
   {% set has_events = false %}
   {% if paragraph.field_show_recent_events.value %}
     {# Recent events mode: check if we have future events #}
-    {% if latest_events %}
+    {% if latest_events and latest_events|length > 0 %}
       {% set has_events = true %}
     {% endif %}
   {% else %}
