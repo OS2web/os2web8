@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a os2web video paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if
+ *     the paragraph is an "Image" it would result in "paragraphs--type--image".
+ *     Note that the machine name will often be in a short form of the human
+ *     readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for
+ *     example, a preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="os2web-video-wrapper">
+  {# Video Embed Field - YouTube, Vimeo, etc. #}
+  {% if paragraph.field_os2web_video_video is not empty %}
+    <div class="video-embed">
+      {{ content.field_os2web_video_video }}
+    </div>
+  {% endif %}
+
+  {# Media Video Field with Poster Support #}
+  {% if paragraph.field_os2web_video_media is not empty and paragraph.field_os2web_video_video is empty %}
+    <div class="video-media">
+      {% if paragraph.field_os2web_video_poster is not empty %}
+        {# Video with custom poster and play button #}
+        {% set poster_file = paragraph.field_os2web_video_poster.entity %}
+        {% if poster_file %}
+          {% set poster_url = file_url(poster_file.uri.value) %}
+          <div class="video-with-poster">
+            {{ content.field_os2web_video_media }}
+            <div class="video-poster" style="background-image: url('{{ poster_url }}');">
+              <div class="play-button">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.7)"/>
+                  <path d="M25 20L25 40L40 30L25 20Z" fill="white"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          {{ content.field_os2web_video_media }}
+        {% endif %}
+      {% else %}
+        {# Video without custom poster #}
+        {{ content.field_os2web_video_media }}
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

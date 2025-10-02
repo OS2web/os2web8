@@ -14920,7 +14920,7 @@ body:has(.region-featured-top) header {
   font-size: 1.7rem;
   font-weight: 600;
   text-decoration: none;
-  color: white;
+  color: white !important;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
 }
@@ -14940,6 +14940,9 @@ body:has(.region-featured-top) header {
 }
 .region-header__top-navigation nav ul li a:hover {
   color: #feffff;
+}
+.region-header__top-navigation nav ul li a::marker {
+  display: none;
 }
 
 .no-scroll {
@@ -23758,9 +23761,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   overflow: hidden;
 }
 .events-slider .handpicked-events .swiper-wrapper .event-item, .events-slider .swiper-events .swiper-wrapper .event-item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23865,6 +23865,12 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
 }
 .events-slider .handpicked-events .swiper-button-prev, .events-slider .swiper-events .swiper-button-prev {
   left: -30px !important;
+}
+.events-slider .swiper-button-next {
+  right: -31px !important;
+}
+.events-slider .swiper-button-prev {
+  left: -31px !important;
 }
 
 .hover-effect {

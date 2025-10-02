@@ -146,7 +146,7 @@ body:has(.region-featured-top) {
           font-size: 1.7rem;
           font-weight: 600;
           text-decoration: none;
-          color: white;
+          color: white !important;
           transition: .25s ease;
 
           @media only screen and (max-width: 1200px) {
@@ -162,6 +162,9 @@ body:has(.region-featured-top) {
           }
           &:hover {
             color: $background-color__primary;
+          }
+          &::marker {
+            display: none;
           }
         }
       }
