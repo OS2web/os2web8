@@ -723,3 +723,18 @@ function toggleLanguageDropdown(button, menuId) {
     button.setAttribute('aria-expanded', 'false');
   }
 }
+
+// Video poster functionality for 50-50 paragraphs
+document.addEventListener('DOMContentLoaded', function() {
+  const videoPosters = document.querySelectorAll('.video-poster');
+  
+  videoPosters.forEach(poster => {
+    poster.addEventListener('click', function() {
+      const video = this.parentElement.querySelector('video');
+      if (video) {
+        video.play();
+        this.classList.add('hidden');
+      }
+    });
+  });
+});

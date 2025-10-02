@@ -73,6 +73,54 @@
       }
   }
 
+  // Video with custom poster styles
+  .video-with-poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Maintains aspect ratio, shows full video
+    }
+    
+    .video-poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      
+      &:hover {
+        .play-button {
+          transform: scale(1.1);
+        }
+      }
+      
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    
+    .play-button {
+      transition: transform 0.3s ease;
+      
+      svg {
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+      }
+    }
+  }
+
   // Styling for the text side
   .text-side {
     padding: 20px 60px; // Adjust padding as needed
@@ -110,7 +158,7 @@
       .fifty-fifty-heading {
         color: white !important;
       }
-      h3, h4, h5, h6, p, li, span, {
+      h3, h4, h5, h6, p, li, span {
         color: #B2B2B3 !important;
       }
     }
