@@ -1,17 +1,19 @@
 {% if content %}
-  <div class="events-slider">
-    {% if content.field_events_heading|render|trim is not empty %}
-      <h2 class="events-slider__heading">{{ content.field_events_heading }}</h2>
-    {% endif %}
-    {% if content.field_events_subheading|render|trim is not empty %}
-      <div class="events-slider__subheading">{{ content.field_events_subheading }}</div>
-    {% endif %}
-    <div class="eventkalender-link">
-      <a href="/begivenheder" target="_blank">Se alle begivenheder<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-    {% if paragraph.field_show_recent_events.value %}
-      {% if latest_events %}
+  {# Only render if we have handpicked events OR if we're showing recent events and have future events #}
+  {% if not paragraph.field_show_recent_events.value or (paragraph.field_show_recent_events.value and latest_events) %}
+    <div class="events-slider">
+      {% if content.field_events_heading|render|trim is not empty %}
+        <h2 class="events-slider__heading">{{ content.field_events_heading }}</h2>
+      {% endif %}
+      {% if content.field_events_subheading|render|trim is not empty %}
+        <div class="events-slider__subheading">{{ content.field_events_subheading }}</div>
+      {% endif %}
+      <div class="eventkalender-link">
+        <a href="/begivenheder" target="_blank">Se alle begivenheder<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      {% if paragraph.field_show_recent_events.value %}
+        {% if latest_events %}
         <div class="swiper-events">
           <div class="swiper-wrapper">
             {% for node in latest_events %}
@@ -120,7 +122,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-  </div>
+    </div>
+  {% endif %}
 {% endif %}
 
 <script>
