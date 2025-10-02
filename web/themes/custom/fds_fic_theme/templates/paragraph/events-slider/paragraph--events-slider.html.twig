@@ -1,5 +1,23 @@
 {% if content %}
-  <div class="events-slider">
+  {# Check if we have events to display #}
+  {% set has_events = false %}
+  {% if paragraph.field_show_recent_events.value %}
+    {# Recent events mode: check if we have future events #}
+    {% if latest_events|length > 0 %}
+      {% set has_events = true %}
+    {% endif %}
+  {% else %}
+    {# Handpicked events mode: check if we have selected events #}
+    {% for item in paragraph.field_event_ref %}
+      {% if item.entity.isPublished() %}
+        {% set has_events = true %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  
+  {# Only render if we have events to display #}
+  {% if has_events %}
+    <div class="events-slider">
     {% if content.field_events_heading|render|trim is not empty %}
       <h2 class="events-slider__heading">{{ content.field_events_heading }}</h2>
     {% endif %}
@@ -120,7 +138,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-  </div>
+    </div>
+  {% endif %}
 {% endif %}
 
 <script>
