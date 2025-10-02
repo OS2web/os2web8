@@ -51,19 +51,25 @@
   {% endif %}
   {% if paragraph.field_fifty_fifty_video is not empty and paragraph.field_fifty_fifty_image is empty %}
   <div class="image-side">
-    {% if video_poster_url is defined %}
+    {% if paragraph.field_fifty_fifty_video_poster is not empty %}
       {# Video with custom poster and play button #}
-      <div class="video-with-poster">
-        {{ content.field_fifty_fifty_video }}
-        <div class="video-poster" style="background-image: url('{{ video_poster_url }}');">
-          <div class="play-button">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.7)"/>
-              <path d="M25 20L25 40L40 30L25 20Z" fill="white"/>
-            </svg>
+      {% set poster_file = paragraph.field_fifty_fifty_video_poster.entity %}
+      {% if poster_file %}
+        {% set poster_url = file_url(poster_file.uri.value) %}
+        <div class="video-with-poster">
+          {{ content.field_fifty_fifty_video }}
+          <div class="video-poster" style="background-image: url('{{ poster_url }}');">
+            <div class="play-button">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.7)"/>
+                <path d="M25 20L25 40L40 30L25 20Z" fill="white"/>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
+      {% else %}
+        {{ content.field_fifty_fifty_video }}
+      {% endif %}
     {% else %}
       {# Video without custom poster #}
       {{ content.field_fifty_fifty_video }}
