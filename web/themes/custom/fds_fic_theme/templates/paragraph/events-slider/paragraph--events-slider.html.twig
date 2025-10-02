@@ -1,6 +1,22 @@
 {% if content %}
-  {# Only render if we have handpicked events OR if we're showing recent events and have future events #}
-  {% if not paragraph.field_show_recent_events.value or (paragraph.field_show_recent_events.value and latest_events) %}
+  {# Check if we have events to display #}
+  {% set has_events = false %}
+  {% if paragraph.field_show_recent_events.value %}
+    {# Recent events mode: check if we have future events #}
+    {% if latest_events %}
+      {% set has_events = true %}
+    {% endif %}
+  {% else %}
+    {# Handpicked events mode: check if we have selected events #}
+    {% for item in paragraph.field_event_ref %}
+      {% if item.entity.isPublished() %}
+        {% set has_events = true %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  
+  {# Only render if we have events to display #}
+  {% if has_events %}
     <div class="events-slider">
       {% if content.field_events_heading|render|trim is not empty %}
         <h2 class="events-slider__heading">{{ content.field_events_heading }}</h2>
