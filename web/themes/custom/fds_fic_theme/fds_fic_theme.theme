@@ -819,9 +819,14 @@ function fds_fic_theme_fetch_latest_events($limit = 4) {
 }
 
 function fds_fic_theme_preprocess_paragraph__events_slider(&$variables) {
-  // Fetch the latest events and add them to the variables.
-  $variables['latest_events'] = fds_fic_theme_fetch_latest_events();
-
+  $paragraph = $variables['paragraph'];
+  
+  // Only fetch latest events if the paragraph is configured to show recent events
+  if ($paragraph->hasField('field_show_recent_events') && $paragraph->field_show_recent_events->value) {
+    $variables['latest_events'] = fds_fic_theme_fetch_latest_events();
+  } else {
+    $variables['latest_events'] = [];
+  }
 }
 
 /**
