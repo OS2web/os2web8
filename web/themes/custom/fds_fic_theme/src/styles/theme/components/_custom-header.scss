@@ -161,9 +161,10 @@ body:has(.region-featured-top) {
             text-decoration: none;
           }
           &:hover {
-            color: $background-color__primary;
+            color: $background-color__primary !important;
           }
           &::marker {
+            content: '';
             display: none;
           }
         }

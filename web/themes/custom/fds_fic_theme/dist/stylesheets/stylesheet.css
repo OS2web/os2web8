@@ -14939,9 +14939,10 @@ body:has(.region-featured-top) header {
   text-decoration: none;
 }
 .region-header__top-navigation nav ul li a:hover {
-  color: #feffff;
+  color: #feffff !important;
 }
 .region-header__top-navigation nav ul li a::marker {
+  content: "";
   display: none;
 }
 
