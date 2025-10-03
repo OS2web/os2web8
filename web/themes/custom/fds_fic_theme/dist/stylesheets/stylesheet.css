@@ -14945,6 +14945,10 @@ body:has(.region-featured-top) header {
   content: "";
   display: none;
 }
+.region-header__top-navigation nav ul li::marker {
+  content: "";
+  display: none;
+}
 
 .no-scroll {
   overflow: hidden;
