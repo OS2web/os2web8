@@ -14912,6 +14912,7 @@ body:has(.region-featured-top) header {
 .region-header__top-navigation nav ul li {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .region-header__top-navigation nav ul li::before {
   content: none;
@@ -14946,9 +14947,9 @@ body:has(.region-featured-top) header {
   display: none;
 }
 .region-header__top-navigation nav ul li::marker {
-  content: "";
-  display: none;
-  opacity: 0;
+  content: "" !important;
+  display: none !important;
+  opacity: 0 !important;
 }
 
 .no-scroll {
