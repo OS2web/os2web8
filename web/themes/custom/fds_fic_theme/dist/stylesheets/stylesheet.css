@@ -14948,6 +14948,7 @@ body:has(.region-featured-top) header {
 .region-header__top-navigation nav ul li::marker {
   content: "";
   display: none;
+  opacity: 0;
 }
 
 .no-scroll {
