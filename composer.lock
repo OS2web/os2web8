@@ -1886,12 +1886,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "56b819ed0cc013a8ff1c19991c2191ae914d1616"
+                "reference": "b8d9ebd84ba2265154bd5a622c67b1c876692811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/56b819ed0cc013a8ff1c19991c2191ae914d1616",
-                "reference": "56b819ed0cc013a8ff1c19991c2191ae914d1616",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/b8d9ebd84ba2265154bd5a622c67b1c876692811",
+                "reference": "b8d9ebd84ba2265154bd5a622c67b1c876692811",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1903,7 +1903,7 @@
                 "source": "https://github.com/bellcom/anonymous_subscriptions/tree/drupal10",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2024-10-11T12:55:17+00:00"
+            "time": "2025-10-07T07:35:11+00:00"
         },
         {
             "name": "drupal/autologout",
