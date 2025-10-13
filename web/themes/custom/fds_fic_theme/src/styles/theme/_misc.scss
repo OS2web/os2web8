@@ -61,9 +61,20 @@ a {
     stroke: #fff;
   }
 
+  .paragraph--type--newsletter-subscription {
+    .newsletter-subscription__container {
+      .newsletter-subscription__title {
+        color: black;
+  }
 
+  .newsletter-content-wrapper {
+    .newsletter-subscription__description {
+      color: black;
+    }
+  }
+    }
+  }
 }
-
 .entity-default--os2web-wrapper.background-color--quaternary {
   background-color: $background_color__quaternary;
 

@@ -21517,6 +21517,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   font-style: italic;
 }
 
+.field--name-field-os2web-image-image {
+  margin-bottom: 10px;
+}
 .field--name-field-os2web-image-image img {
   display: block;
 }
@@ -24026,6 +24029,12 @@ a {
 }
 .entity-default--os2web-wrapper.background-color--tertiary g {
   stroke: #fff;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-subscription__title {
+  color: black;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__description {
+  color: black;
 }
 
 .entity-default--os2web-wrapper.background-color--quaternary {
