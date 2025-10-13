@@ -28,6 +28,9 @@ a {
   .entity-default--os2web-factbox-paragraph {
     padding: 80px 0;
   }
+  .paragraph--type--newsletter-subscription {
+    padding: 40px 0;
+  }
 }
 
 .entity-default--os2web-wrapper.background-color--secondary {
@@ -39,6 +42,9 @@ a {
   }
   .entity-default--os2web-factbox-paragraph {
     padding: 80px 0;
+  }
+  .paragraph--type--newsletter-subscription {
+    padding: 40px 0;
   }
 }
 
@@ -62,14 +68,19 @@ a {
   }
 
   .paragraph--type--newsletter-subscription {
+    padding: 40px 0;
     .newsletter-subscription__container {
       .newsletter-subscription__title {
-        color: black;
+        * {
+          color: black;
+        }
   }
 
   .newsletter-content-wrapper {
     .newsletter-subscription__description {
-      color: black;
+      * {
+        color: black;
+      }
     }
   }
     }
@@ -84,6 +95,10 @@ a {
   }
   .entity-default--os2web-factbox-paragraph {
     padding: 80px 0;
+  }
+
+  .paragraph--type--newsletter-subscription {
+    padding: 40px 0;
   }
 
 }
