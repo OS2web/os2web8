@@ -23627,6 +23627,17 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   background-color: rgba(0, 0, 0, 0.9);
   border-color: rgba(0, 0, 0, 0.9);
 }
+.paragraph-50-50-wrapper .text-side .paragraph-50-50-description table {
+  width: 100%;
+}
+.paragraph-50-50-wrapper .text-side .paragraph-50-50-description table tr {
+  border-bottom: 1px solid #fff;
+}
+.paragraph-50-50-wrapper .text-side .paragraph-50-50-description table tr td {
+  padding: 10px 0;
+  width: 100%;
+  white-space: nowrap;
+}
 .paragraph-50-50-wrapper.image-left {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -24105,6 +24116,9 @@ body .container-fluid .field--name-field-os2web-paragraphs .field__item .paragra
   margin-top: 0 !important;
 }
 
+.field--name-field-os2web-simple-text-body {
+  overflow: auto;
+}
 .field--name-field-os2web-simple-text-body h1, .field--name-field-os2web-simple-text-body h2, .field--name-field-os2web-simple-text-body h3, .field--name-field-os2web-simple-text-body h4, .field--name-field-os2web-simple-text-body h5, .field--name-field-os2web-simple-text-body h6 {
   margin-bottom: 15px !important;
   margin-top: 0 !important;

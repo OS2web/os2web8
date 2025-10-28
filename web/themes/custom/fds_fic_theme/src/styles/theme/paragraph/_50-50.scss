@@ -319,6 +319,21 @@
         }
       }
     }
+    .paragraph-50-50-description {
+      table {
+        width: 100%;
+
+        tr {
+          border-bottom: 1px solid #fff;
+
+          td {
+            padding: 10px 0;
+            width: 100%;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
   }
 
   // Classes for positioning the image on the left or right
