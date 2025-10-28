@@ -42,9 +42,9 @@
                     </div>
                   </a>
                   <div class="event-date">
-                    {% if node.field_os2web_event_start_date %}
+                    {% if node.field_os2web_event_date %}
                       <i class="fa fa-calendar" aria-hidden="true"></i>
-                      {{ node.field_os2web_event_start_date.date|date("d/m/Y H:i") }}
+                      {{ node.field_os2web_event_date.value|date("d/m/Y H:i") }}
                     {% endif %}
                   </div>
                   <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': node.id()}) }}" target="_blank">
@@ -101,7 +101,6 @@
                 </div>
               </a>
               <div class="event-date">
-                {{ item.field_os2web_event_start_date }}
                 {% if item.entity.field_os2web_event_start_date %}
                   <i class="fa fa-calendar" aria-hidden="true"></i>
                   {{ item.entity.field_os2web_event_start_date.date|date("d/m/Y H:i") }}
