@@ -121,6 +121,7 @@
         "drupal/search_api_spellcheck": "^4.0",
         "drupal/search_api_synonym": "^2.0",
         "drupal/seven": "^1.0",
+        "drupal/silktide": "^10",
         "drupal/simplesamlphp_auth": "^4.0",
         "drupal/smtp": "^1.4",
         "drupal/stage_file_proxy": "3.0.x-dev@dev",
