@@ -1,11 +1,15 @@
-{% if title_prefix %}
+{% set gtm_block_content = content %}
+{% if gtm_block_content['#contextual_links'] is defined %}
+  {% set gtm_block_content = gtm_block_content|without('#contextual_links') %}
+{% endif %}
+{% if title_prefix is defined %}
   {{ title_prefix }}
 {% endif %}
-{% if label %}
+{% if label is defined and label %}
   {{ label }}
 {% endif %}
-{% if title_suffix %}
+{% if title_suffix is defined %}
   {{ title_suffix }}
 {% endif %}
-{{ content }}
+{{ gtm_block_content }}
 

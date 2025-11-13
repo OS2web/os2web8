@@ -1,4 +1,8 @@
 {% if content %}
-  {{ content }}
+  {% set gtm_content = content %}
+  {% if gtm_content['#contextual_links'] is defined %}
+    {% set gtm_content = gtm_content|without('#contextual_links') %}
+  {% endif %}
+  {{ gtm_content }}
 {% endif %}
 
