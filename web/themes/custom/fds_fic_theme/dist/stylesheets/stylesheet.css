@@ -19209,7 +19209,7 @@ ul.related-links a:hover {
 }
 .status-banner-open-btn-wrapper .status-banner-open-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   right: 50px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -19230,7 +19230,7 @@ ul.related-links a:hover {
 .status-banner {
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   padding: 10px 0;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
