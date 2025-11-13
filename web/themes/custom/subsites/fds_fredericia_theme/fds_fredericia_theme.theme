@@ -206,4 +206,11 @@ function fds_fredericia_theme_preprocess_html(&$variables) {
 
     // Add the font combination class to the body attributes.
     $variables['attributes']['class'][] = 'font-combination-' . \Drupal\Component\Utility\Html::getClass($font_combination);
+
+    if (!empty($variables['page']['gtm_head']['#contextual_links'])) {
+    $variables['page']['gtm_head']['#contextual_links'] = [];
+  }
+  if (!empty($variables['page']['gtm_body']['#contextual_links'])) {
+    $variables['page']['gtm_body']['#contextual_links'] = [];
+  }
 }
