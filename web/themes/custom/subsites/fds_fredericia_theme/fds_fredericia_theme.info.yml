@@ -24,6 +24,8 @@ regions:
   footer__latest_content: 'Footer - latest content'
   footer_first: 'Footer first'
   embedded_code: 'Embedded code'
+  gtm_head: 'GTM (head)'
+  gtm_body: 'GTM (body start)'
 
 libraries:
   - 'fds_fredericia_theme/fonts'
