@@ -214,3 +214,29 @@ function fds_fredericia_theme_preprocess_html(&$variables) {
     $variables['page']['gtm_body']['#contextual_links'] = [];
   }
 }
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function fds_fredericia_theme_preprocess_block(array &$variables) {
+  if (empty($variables['configuration']['id'])) {
+    return;
+  }
+
+  $ids_without_contextual = [
+    'fds_fredericia_theme_gtmheadscript',
+    'fds_fredericia_theme_gtmbodyscript',
+  ];
+
+  if (in_array($variables['configuration']['id'], $ids_without_contextual, TRUE)) {
+    if (!empty($variables['elements']['#contextual_links'])) {
+      $variables['elements']['#contextual_links'] = [];
+    }
+    if (!empty($variables['content']['#contextual_links'])) {
+      $variables['content']['#contextual_links'] = [];
+    }
+    if ($variables['attributes']->hasClass('contextual-region')) {
+      $variables['attributes']->removeClass('contextual-region');
+    }
+  }
+}
