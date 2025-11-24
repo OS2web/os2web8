@@ -7,9 +7,9 @@
   {% if items %}
 
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('sidenav-list') }}>
+      <ul{{ attributes.addClass('sidenav-list') }} data-level="{{ menu_level }}">
     {% else %}
-      <ul class="sidenav-sub_list">
+      <ul class="sidenav-sub_list" data-level="{{ menu_level }}">
     {% endif %}
 
     {% for item in items %}
@@ -21,14 +21,13 @@
         ]
       %}
 
-      <li{{ item.attributes.addClass(classes) }}>
-        {% if menu_level != 0 %}
-          <a href="{{ item.url }}" class="sub-link-a">
-            <div class="sub-link-sub"></div>
-            <div class="sub-link-div">{{ item.title }}</div>
-          </a>
+      <li{{ item.attributes.addClass(classes) }} data-level="{{ menu_level }}" data-has-children="{{ item.below ? 'true' : 'false' }}">
+        {% if menu_level == 0 %}
+          {{ link(item.title, item.url, {'class': 'main-link', 'data-level': menu_level}) }}
         {% else %}
-          {{ link(item.title, item.url) }}
+          <a href="{{ item.url }}" class="sub-link-a sub-link-level-{{ menu_level }}" data-level="{{ menu_level }}">
+            {{ item.title }}
+          </a>
         {% endif %}
 
 

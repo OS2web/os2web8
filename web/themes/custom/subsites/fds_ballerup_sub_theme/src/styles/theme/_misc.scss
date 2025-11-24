@@ -215,17 +215,6 @@ body .page-container {
     }
   }
 
-  .block {
-
-    &:first-child {
-      padding-top: $grid-gutter-width;
-    }
-
-    &:last-child {
-      padding-bottom: $grid-gutter-width;
-    }
-  }
-
   .block + .block {
     margin-top: $grid-gutter-width;
   }

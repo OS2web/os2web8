@@ -1,187 +1,416 @@
 // |--------------------------------------------------------------------------
-// | Sidenav list
+// | Sidenav list - Clean & Simple
 // |--------------------------------------------------------------------------
-// |
-// | This file contains styles for the following:
-// | - .sidenav-list
-// |
-
-// --------------------------------------------------
-// Variables
-// --------------------------------------------------
-
-$sidenav-list-spacing-left: 25px;
-$sidenav-list-dot-spacing: 22px;
-
-// --------------------------------------------------
-// Mixins
-// --------------------------------------------------
-
-@mixin footer-mixin() {}
-
-// --------------------------------------------------
-// Styling
-// --------------------------------------------------
 
 .region-sidebar-first,
 .region-sidebar-second {
+  .box__body {
+    padding: 0;
+  }
+  
   .box {
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    .box__body {
-      padding: unset;
-      background-color: transparent;
-      > div {
-        padding: 16px;
-        background-color: white;
-        margin-bottom: 16px;
-        border-radius: 6px;
-      }
-    }
+    border-radius: 8px;
+    overflow: hidden;
   }
-
+  
+  // Main navigation level
   .sidenav-list {
-    border: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa !important;
+    border: none !important;
+    
     > li {
-      background-color: $color-white;
-      border: none;
-      a:before {
-        background-color: #007ca3;
-        color: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        content: '\276f';
-        font-size: 1.4rem;
-        height: 30px;
-        width: 30px;
-        position: absolute;
-      }
-      a {
-        outline: none;
-        color: $color-black;
-      }
-    }
-  }
-
-  .sidenav-sub_list {
-    background-color: $background_color__secondary;
-    > li {
-      border-top: 0;
       > a {
-        padding-left: $sidenav-list-spacing-left + $sidenav-list-dot-spacing;
-      }
-      &.active {
-        > a {
-          font-weight: $font-weight-bold;
+        display: block;
+        padding: 1rem 1.5rem;
+        color: $color-gray-dark;
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px solid rgba($color-gray-light, 0.3);
+        transition: all 0.2s ease;
+        
+        
+        &:focus {
+          outline: 2px solid $color-primary;
+          outline-offset: -2px;
         }
       }
-      &:before {
-        top: 4px;
-        left: $sidenav-list-spacing-left;
-        content: "\2022" !important;
-        font-size: 22px;
-        color: $background_color__default;
+      
+      &:last-child > a {
+        border-bottom: none;
       }
-      &:hover {
-        background-color: transparent;
-      }
-      &:last-child {
-        > a {
-          padding-bottom: 2px;
-        }
-      }
-      a {
-        padding-top: 2px;
-        padding-bottom: 2px;
-        font-size: $base-font-size;
-        //color: $color-text;
-      }
+      
+  // Active parent items (bold)
+  &.current {
+    background-color: transparent !important;
+    
+    > a {
+      color: $color-primary !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
     }
-    .sidenav-sub_list {
-      li {
-        &:before {
-          content: "\FE63" !important;
-        }
-      }
+  }
+  
+  // Current page (bold only, no underline for main menu)
+  &.active {
+    background-color: transparent !important;
+    
+    > a {
+      color: $color-primary !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+    }
+  }
+  
+  // Override parent theme styles for main menu active links
+  &.active:hover > a {
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  // Ensure active links are bold using data attributes
+  [data-level] li.current > a,
+  [data-level] li.active > a {
+    font-weight: 700 !important;
+  }
+  
+  // Make nested parent links (level 1+) black when active
+  [data-level="1"] li.current > a,
+  [data-level="1"] li.active > a,
+  [data-level="2"] li.current > a,
+  [data-level="2"] li.active > a,
+  [data-level="3"] li.current > a,
+  [data-level="3"] li.active > a,
+  [data-level="4"] li.current > a,
+  [data-level="4"] li.active > a {
+    color: #000000 !important;
+    font-weight: 700 !important;
+  }
+  
+  // Ensure active links have transparent background
+  [data-level] li.active {
+    background-color: transparent !important;
+  }
+  
+  // Specific targeting for main menu active links
+  .sidenav-list > li.active {
+    background-color: transparent !important;
+  }
+  
+  // Specific targeting for sub-menu active links
+  .sidenav-sub_list li.active {
+    background-color: transparent !important;
+  }
+      
     }
   }
 
-  .sidenav-list {
-    > li > .sidenav-sub_list {
-      padding-left: 0;
-    }
-    > li > .sidenav-sub_list > li > .sidenav-sub_list {
-      padding-left: 13px;
-    }
-    > li > .sidenav-sub_list > li > .sidenav-sub_list > li > .sidenav-sub_list {
-      padding-left: 26px;
-    }
-    > li > .sidenav-sub_list > li > .sidenav-sub_list > li > .sidenav-sub_list > li > .sidenav-sub_list {
-      padding-left: 39px;
+  // First level nested links (no background)
+  .sidenav-sub_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    > li {
+      &:last-child > a {
+        border-bottom: none;
+      }
     }
   }
+  
+  // Second level nested links (with off-white background)
+  .sidenav-sub_list .sidenav-sub_list {
+    background-color: #fafafa;
+    margin: 0;
+    
+    > li {
+      &:last-child > a {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  // Third level nested links (slightly darker off-white background)
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list {
+    background-color: #f5f5f5;
+    
+    > li {
+      &:last-child > a {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  // Fourth level and deeper nested links (even darker off-white background)
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list {
+    background-color: #f0f0f0;
+    
+    > li {
+      &:last-child > a {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  // Sub-link styling based on level
+  .sub-link-a {
+    display: block;
+    color: $color-gray-medium-dark;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba($color-gray-light, 0.2);
+    
+    
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: -2px;
+    }
+  }
+  
+  // Level 1 sub-links
+  .sub-link-level-1 {
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgba($color-gray-light, 0.2);
+  }
+  
+  // Level 2 sub-links
+  .sub-link-level-2 {
+    padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+    font-size: 0.85em;
+    border-bottom: 1px solid rgba($color-gray-light, 0.15);
+  }
+  
+  // Level 3+ sub-links
+  .sub-link-level-3 {
+    padding: 0.75rem 1.5rem 0.75rem 4.5rem;
+    font-size: 0.8em;
+    border-bottom: 1px solid rgba($color-gray-light, 0.1);
+  }
+  
+  // Level 4+ sub-links (for deeper nesting)
+  .sub-link-level-4,
+  .sub-link-level-5,
+  .sub-link-level-6 {
+    padding: 0.75rem 1.5rem 0.75rem 5.5rem;
+    font-size: 0.75em;
+    border-bottom: 1px solid rgba($color-gray-light, 0.05);
+  }
+  
+  // Active parent sub-links (bold and black)
+  > li.current > .sub-link-a {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  // Current page sub-links (bold, black with background)
+  > li.active > .sub-link-a {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  // Active sub-menu items (bold only)
+  > li.active {
+    background-color: transparent !important;
+  }
+  
+  // Prevent parent hover effects when hovering child links
+  > li.current:hover > .sub-link-a {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  > li.active:hover > .sub-link-a {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  // Completely disable hover effects on parent li elements
+  > li.current:hover {
+    background-color: transparent !important;
+    border-left: 4px solid #02536e !important;
+  }
+  
+  > li.active:hover {
+    background-color: transparent !important;
+    border-left: 4px solid #02536e !important;
+  }
+  
+  // Prevent any hover effects on parent elements when hovering children
+  > li:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 1 sub-menu - prevent parent hover effects
+  .sidenav-sub_list > li:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 2 sub-menu - prevent parent hover effects
+  .sidenav-sub_list .sidenav-sub_list > li:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 3 sub-menu - prevent parent hover effects
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list > li:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 4+ sub-menu - prevent parent hover effects
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list > li:hover {
+    background-color: transparent !important;
+  }
+  
+  // Only allow hover effects on direct links, not on li elements
+  > li > .main-link:hover,
+  > li > .sub-link-a:hover {
+    // No hover effects - keep it clean
+  }
+  
+  
+  // Active states for main menu links
+  .sidenav-list > li.current > a {
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  .sidenav-list > li.active > a {
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+  
+  // Prevent parent hover effects when hovering child links
+  .sidenav-list > li.current:hover > a {
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  .sidenav-list > li.active:hover > a {
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+  
+  // Completely disable hover effects on main menu li elements
+  .sidenav-list > li.current:hover {
+    background-color: transparent !important;
+    border-left: 4px solid #02536e !important;
+  }
+  
+  .sidenav-list > li.active:hover {
+    background-color: transparent !important;
+    border-left: 4px solid #02536e !important;
+  }
+  
+  // Prevent any hover effects on main menu parent elements when hovering children
+  .sidenav-list > li:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 1 sub-menu current/active hover prevention
+  .sidenav-sub_list > li.current:hover,
+  .sidenav-sub_list > li.active:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 2 sub-menu current/active hover prevention
+  .sidenav-sub_list .sidenav-sub_list > li.current:hover,
+  .sidenav-sub_list .sidenav-sub_list > li.active:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 3 sub-menu current/active hover prevention
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list > li.current:hover,
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list > li.active:hover {
+    background-color: transparent !important;
+  }
+  
+  // Level 4+ sub-menu current/active hover prevention
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list > li.current:hover,
+  .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list .sidenav-sub_list > li.active:hover {
+    background-color: transparent !important;
+  }
+  
+  // Only allow hover effects on direct main links, not on li elements
+  .sidenav-list > li > .main-link:hover {
+    // No hover effects - keep it clean
+  }
+  
+  // Nuclear option: Completely disable all hover effects using data attributes
+  [data-level] li:hover {
+    background-color: transparent !important;
+  }
+  
+  [data-level] li.current:hover {
+    background-color: transparent !important;
+  }
+  
+  [data-level] li.active:hover {
+    background-color: transparent !important;
+  }
+  
+  // Allow hover effects on links themselves (but not on li elements)
+  [data-level] a:hover {
+    background-color: rgba($color-primary, 0.05) !important;
+    color: $color-primary !important;
+  }
+  
+  // Ensure hover effects work on main links and sub-links
+  .main-link:hover,
+  .sub-link-a:hover {
+    background-color: rgba($color-primary, 0.05) !important;
+    color: $color-primary !important;
+  }
+  
+  // Target active links by parent class with background
+  li.active .main-link,
+  li.active .sub-link-a {
+    text-decoration: none !important;
+  }
+  
+  // Ensure active links have proper background
+  li.active > a {
+    text-decoration: none !important;
+  }
+  
+  // Override parent theme styles with maximum specificity
+  .region-sidebar-first .sidenav-list > li.active > a,
+  .region-sidebar-first .sidenav-list > li.active:hover > a,
+  .region-sidebar-second .sidenav-list > li.active > a,
+  .region-sidebar-second .sidenav-list > li.active:hover > a {
+    color: $color-primary !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  // Specific targeting for each level using data attributes
+  [data-level="0"] li:hover,
+  [data-level="1"] li:hover,
+  [data-level="2"] li:hover,
+  [data-level="3"] li:hover,
+  [data-level="4"] li:hover {
+    background-color: transparent !important;
+  }
+  
 }
 
-// --------------------------------------------------
-// Variants
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Responsive
-// --------------------------------------------------
-
-// Mobile - and up
-@include media-breakpoint-up(xs) {}
-
-// Mobile - only
-@include media-breakpoint-only(xs, $grid-breakpoints) {}
-
-// Tablet - and up
-@include media-breakpoint-up(sm) {}
-
-// Tablet - only
-@include media-breakpoint-only(sm, $grid-breakpoints) {}
-
-// Desktop - and up
-@include media-breakpoint-up(md) {}
-
-// Desktop - only
-@include media-breakpoint-only(md, $grid-breakpoints) {}
-
-// Large desktop - and up
-@include media-breakpoint-up(lg) {}
-
-// Large desktop - only
-@include media-breakpoint-only(lg, $grid-breakpoints) {}
-
-// Extra large desktop - and up
-@include media-breakpoint-up(xl) {}
-
-// Print
-@media print {
-  .region-sidebar-first,
-  .region-sidebar-second {
-    .sidenav-list {
-      display: none !important;
-    }
-  }
+// Maximum specificity override for parent theme styles
+.region-sidebar-first .sidenav-list > li.active > a,
+.region-sidebar-first .sidenav-list > li.active:hover > a,
+.region-sidebar-second .sidenav-list > li.active > a,
+.region-sidebar-second .sidenav-list > li.active:hover > a {
+  color: $color-primary !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
 }
-
-// Touch
-.touchevents {}
-
-// No touch
-.no-touchevents {}
