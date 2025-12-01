@@ -1,0 +1,7 @@
+rk_head_tags.settings:
+  path: '/admin/config/rk-head-tags'
+  defaults:
+    _form: '\Drupal\rk_head_tags\Form\RkHeadTagsSettingsForm'
+    _title: 'RK Head tags settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,4 @@
+rk_head_tags_scripts:
+  js:
+    js/acquia.js: {}
+  #header: true

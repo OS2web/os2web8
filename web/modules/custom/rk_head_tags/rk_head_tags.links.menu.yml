@@ -1,0 +1,6 @@
+rk_head_tags.settings:
+  title: 'RK Head tags'
+  description: 'Settings for RK Head tags'
+  parent: system.admin_config_system
+  route_name: rk_head_tags.settings
+  weight: 100

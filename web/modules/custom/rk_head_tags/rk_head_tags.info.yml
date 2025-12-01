@@ -1,0 +1,7 @@
+name: 'RK HEAD tags'
+type: module
+description: 'Adding different tags to the head of html pages, jS scripts, stylesheets, metadata for social media etc.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+version: "1.0"
+project: "rk_head_tags"

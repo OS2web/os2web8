@@ -1,0 +1,30 @@
+<?php
+
+
+/**
+ * Implements hook_form_alter().
+ */
+
+function rk_head_tags_page_attachments(array &$attachments) {
+
+  # Getting config code for this specific site
+  $config = \Drupal::config('rk_head_tags.settings');
+
+  # Defining the settings that we want to pass to JS script
+  $acquia_settings = new \stdClass();
+  $acquia_settings->token = $config->get('rk_head_tags_acquia_script_settings_form_token') ?: "";
+  $acquia_settings->enabled = (bool) $config->get('rk_head_tags_acquia_script_settings_form_enabled') ?: false;
+  $acquia_settings->cookie_less_tracking = (bool) $config->get('rk_head_tags_acquia_script_settings_form_cookie_less_tracking') ?: false;
+  $acquia_settings->document_tracking_enabled = (bool) $config->get('rk_head_tags_acquia_script_settings_form_document_tracking_enabled') ?: false;
+  $acquia_settings->form_document_extensions = $config->get('rk_head_tags_acquia_script_settings_form_document_extensions') ?: [];
+  $acquia_settings->form_script_path = $config->get('rk_head_tags_acquia_script_settings_form_script_path') ?: "";
+
+  # Parsing settings values to JS
+  $attachments['#attached']['drupalSettings']['rk_head_tags'] = [
+    'acquia_settings' => $acquia_settings,
+  ];
+
+  # attaching the JS script to HTML
+  $attachments['#attached']['library'][] = 'rk_head_tags/rk_head_tags_scripts';
+
+}
