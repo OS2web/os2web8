@@ -9,7 +9,6 @@
   }
   
   .box {
-    border-radius: 8px;
     overflow: hidden;
   }
   
@@ -20,6 +19,7 @@
     padding: 0;
     background-color: #fafafa !important;
     border: none !important;
+    margin-bottom: 30px;
     
     > li {
       > a {
