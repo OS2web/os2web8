@@ -42,10 +42,14 @@
                     </div>
                   </a>
                   <div class="event-date">
-                    {% if node.field_os2web_event_date %}
+                    {% if node.event_start_date_converted is defined %}
+                      <i class="fa fa-calendar" aria-hidden="true"></i>
+                      {% set event_timestamp = node.event_start_date_converted|date('U') %}
+                      {{ event_timestamp|format_date('custom', 'd/m/Y H:i', null, 'da') }}
+                    {% elseif node.field_os2web_event_date %}
                       <i class="fa fa-calendar" aria-hidden="true"></i>
                       {% set event_timestamp = node.field_os2web_event_date.value|date('U') %}
-                      {{ event_timestamp|format_date('custom', 'd/m/Y H:i', 'Europe/Copenhagen', 'da') }}
+                      {{ event_timestamp|format_date('custom', 'd/m/Y H:i', null, 'da') }}
                     {% endif %}
                   </div>
                   <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': node.id()}) }}" target="_blank">
@@ -102,10 +106,14 @@
                 </div>
               </a>
               <div class="event-date">
-                {% if item.entity.field_os2web_event_start_date %}
+                {% if item.entity.event_start_date_converted is defined %}
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  {% set event_timestamp = item.entity.event_start_date_converted|date('U') %}
+                  {{ event_timestamp|format_date('custom', 'd/m/Y H:i', null, 'da') }}
+                {% elseif item.entity.field_os2web_event_start_date %}
                   <i class="fa fa-calendar" aria-hidden="true"></i>
                   {% set event_timestamp = item.entity.field_os2web_event_start_date.date|date('U') %}
-                  {{ event_timestamp|format_date('custom', 'd/m/Y H:i', 'Europe/Copenhagen', 'da') }}
+                  {{ event_timestamp|format_date('custom', 'd/m/Y H:i', null, 'da') }}
                 {% endif %}
               </div>
               <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': item.entity.id()}) }}" target="_blank">

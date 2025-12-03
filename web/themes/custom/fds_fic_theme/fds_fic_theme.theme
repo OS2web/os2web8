@@ -326,12 +326,36 @@ function fds_fic_theme_preprocess_node(array &$variables) {
 
 
   if ($variables['view_mode'] == 'full' && $node->getType() == 'os2web_event') {
-    $startDateAttr = $variables['content']['field_os2web_event_start_date'][0]['#attributes']['datetime'];
-    $endDateAttr = $variables['content']['field_os2web_event_end_date'][0]['#attributes']['datetime'];
-    $endDateText = $variables['content']['field_os2web_event_end_date'][0]['#text'];
-    if(substr($startDateAttr, 0 , 11) == substr($endDateAttr, 0 , 11)) {
-      $newEndDate = substr($endDateText, -5);
-      $variables['content']['field_os2web_event_end_date'][0]['#text'] = 'til ' . $newEndDate;
+    // Handle date range field with proper timezone conversion
+    if ($node->hasField('field_os2web_event_date') && !$node->field_os2web_event_date->isEmpty()) {
+      $tz = \Drupal::config('system.date')->get('timezone')['default'];
+      if (empty($tz)) {
+        $tz = 'Europe/Copenhagen';
+      }
+      
+      $date_item = $node->field_os2web_event_date->first();
+      if ($date_item && $date_item->start_date && $date_item->end_date) {
+        $start_date = clone $date_item->start_date;
+        $end_date = clone $date_item->end_date;
+        
+        // Convert to site timezone
+        $start_date->setTimezone(new \DateTimeZone($tz));
+        $end_date->setTimezone(new \DateTimeZone($tz));
+        
+        $variables['event_start_date'] = $start_date;
+        $variables['event_end_date'] = $end_date;
+      }
+    }
+    
+    // Legacy handling for separate start/end date fields
+    if (isset($variables['content']['field_os2web_event_start_date'][0]['#attributes']['datetime'])) {
+      $startDateAttr = $variables['content']['field_os2web_event_start_date'][0]['#attributes']['datetime'];
+      $endDateAttr = $variables['content']['field_os2web_event_end_date'][0]['#attributes']['datetime'];
+      $endDateText = $variables['content']['field_os2web_event_end_date'][0]['#text'];
+      if(substr($startDateAttr, 0 , 11) == substr($endDateAttr, 0 , 11)) {
+        $newEndDate = substr($endDateText, -5);
+        $variables['content']['field_os2web_event_end_date'][0]['#text'] = 'til ' . $newEndDate;
+      }
     }
   }
 
@@ -824,6 +848,40 @@ function fds_fic_theme_preprocess_paragraph__events_slider(&$variables) {
   // Fetch the latest events and add them to the variables.
   $variables['latest_events'] = fds_fic_theme_fetch_latest_events();
 
+  // Process dates for latest events with proper timezone conversion
+  $tz = \Drupal::config('system.date')->get('timezone')['default'];
+  if (empty($tz)) {
+    $tz = 'Europe/Copenhagen';
+  }
+
+  if (!empty($variables['latest_events'])) {
+    foreach ($variables['latest_events'] as $event) {
+      if ($event->hasField('field_os2web_event_date') && !$event->field_os2web_event_date->isEmpty()) {
+        $date_item = $event->field_os2web_event_date->first();
+        if ($date_item && $date_item->start_date) {
+          $start_date = clone $date_item->start_date;
+          $start_date->setTimezone(new \DateTimeZone($tz));
+          // Store converted date for template use
+          $event->event_start_date_converted = $start_date;
+        }
+      }
+    }
+  }
+
+  // Process dates for handpicked events
+  if (!empty($variables['paragraph']->field_event_ref)) {
+    foreach ($variables['paragraph']->field_event_ref->referencedEntities() as $event) {
+      if ($event->hasField('field_os2web_event_start_date') && !$event->field_os2web_event_start_date->isEmpty()) {
+        $date_item = $event->field_os2web_event_start_date->first();
+        if ($date_item && $date_item->date) {
+          $start_date = clone $date_item->date;
+          $start_date->setTimezone(new \DateTimeZone($tz));
+          // Store converted date for template use
+          $event->event_start_date_converted = $start_date;
+        }
+      }
+    }
+  }
 }
 
 /**

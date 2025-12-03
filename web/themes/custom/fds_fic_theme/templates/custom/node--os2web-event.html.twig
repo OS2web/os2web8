@@ -57,16 +57,27 @@
 
 
 
-        {% if content.field_os2web_event_date is not empty %}
-          {% set start_date_value = content.field_os2web_event_date['#items'].0.value ?? null %}
-          {% set end_date_value = content.field_os2web_event_date['#items'].0.end_value ?? null %}
+        {% if event_start_date is defined and event_end_date is defined %}
+          {% set start_timestamp = event_start_date|date('U') %}
+          {% set end_timestamp = event_end_date|date('U') %}
 
-          {% if start_date_value is not empty and end_date_value is not empty %}
-            {% set start_timestamp = start_date_value|date('U') %}
-            {% set end_timestamp = end_date_value|date('U') %}
+          {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', null, 'da') %}
+          {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', null, 'da') %}
 
-            {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', 'Europe/Copenhagen', 'da') %}
-            {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', 'Europe/Copenhagen', 'da') %}
+          <div class="event-date">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            {{ start_date }} til {{ end_date }}
+          </div>
+        {% elseif node.field_os2web_event_date is not empty and node.field_os2web_event_date.value is not empty %}
+          {% set start_date_obj = node.field_os2web_event_date.0.date %}
+          {% set end_date_obj = node.field_os2web_event_date.0.end_value %}
+
+          {% if start_date_obj is not empty and end_date_obj is not empty %}
+            {% set start_timestamp = start_date_obj|date('U') %}
+            {% set end_timestamp = end_date_obj|date('U') %}
+
+            {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', null, 'da') %}
+            {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', null, 'da') %}
 
             <div class="event-date">
               <i class="fa fa-calendar" aria-hidden="true"></i>
