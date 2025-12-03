@@ -44,7 +44,8 @@
                   <div class="event-date">
                     {% if node.field_os2web_event_date %}
                       <i class="fa fa-calendar" aria-hidden="true"></i>
-                      {{ node.field_os2web_event_date.value|date("d/m/Y H:i") }}
+                      {% set event_timestamp = node.field_os2web_event_date.value|date('U') %}
+                      {{ event_timestamp|format_date('custom', 'd/m/Y H:i', 'Europe/Copenhagen', 'da') }}
                     {% endif %}
                   </div>
                   <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': node.id()}) }}" target="_blank">
@@ -103,7 +104,8 @@
               <div class="event-date">
                 {% if item.entity.field_os2web_event_start_date %}
                   <i class="fa fa-calendar" aria-hidden="true"></i>
-                  {{ item.entity.field_os2web_event_start_date.date|date("d/m/Y H:i") }}
+                  {% set event_timestamp = item.entity.field_os2web_event_start_date.date|date('U') %}
+                  {{ event_timestamp|format_date('custom', 'd/m/Y H:i', 'Europe/Copenhagen', 'da') }}
                 {% endif %}
               </div>
               <a class="event-heading-link" href="{{ path('entity.node.canonical', {'node': item.entity.id()}) }}" target="_blank">

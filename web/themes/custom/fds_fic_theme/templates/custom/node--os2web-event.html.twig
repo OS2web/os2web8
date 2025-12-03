@@ -65,8 +65,8 @@
             {% set start_timestamp = start_date_value|date('U') %}
             {% set end_timestamp = end_date_value|date('U') %}
 
-            {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', 'da') %}
-            {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', 'da') %}
+            {% set start_date = start_timestamp|format_date('custom', 'd. F Y - H:i', 'Europe/Copenhagen', 'da') %}
+            {% set end_date = end_timestamp|format_date('custom', 'd. F Y - H:i', 'Europe/Copenhagen', 'da') %}
 
             <div class="event-date">
               <i class="fa fa-calendar" aria-hidden="true"></i>
