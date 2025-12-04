@@ -274,6 +274,8 @@
   > li > .sub-link-a:hover {
     // No hover effects - keep it clean
   }
+
+
   
   
   // Active states for main menu links
@@ -413,4 +415,8 @@
   color: $color-primary !important;
   font-weight: 700 !important;
   text-decoration: none !important;
+}
+
+.sidenav-list > li li {
+  border-top: none;
 }
