@@ -161,6 +161,7 @@ svg.ext {
   }
 }
 
+
 body .page-container {
   padding-top: 0;
   padding-bottom: 0;
@@ -232,6 +233,34 @@ body .page-container {
 .layout-sidebar-right,
 .layout-content {
   padding-top: $grid-gutter-width;
+}
+
+.os2web_contact {
+  .os2web-contact-field {
+    display: block;
+    margin-bottom: 1.6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__icon {
+      display: inline-block;
+      margin-right: 0.5rem;
+      width: 1.2rem;
+      text-align: center;
+    }
+
+    &__prefix {
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    &__value {
+      display: inline-block;
+    }
+  }
 }
 
 .layout-sidebar-right {

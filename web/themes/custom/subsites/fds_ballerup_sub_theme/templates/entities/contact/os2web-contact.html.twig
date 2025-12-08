@@ -4,8 +4,23 @@
 
   {{ content.field_os2web_contact_heading }}
   {{ content.field_os2web_contact_body.0 }}
-  {{ content.field_os2web_contact_phone.0 }}
-  {{ content.field_os2web_contact_email.0 }}
+  
+  {% if content.field_os2web_contact_phone.0 %}
+    <div class="os2web-contact-field os2web-contact-field--phone">
+      <span class="os2web-contact-field__icon fa fa-phone"></span>
+      <span class="os2web-contact-field__prefix">{{ 'Telefon' | trans }}:</span>
+      <span class="os2web-contact-field__value">{{ content.field_os2web_contact_phone.0 }}</span>
+    </div>
+  {% endif %}
+  
+  {% if content.field_os2web_contact_email.0 %}
+    <div class="os2web-contact-field os2web-contact-field--email">
+      <span class="os2web-contact-field__icon fa fa-envelope"></span>
+      <span class="os2web-contact-field__prefix">{{ 'E-mail' | trans }}:</span>
+      <span class="os2web-contact-field__value">{{ content.field_os2web_contact_email.0 }}</span>
+    </div>
+  {% endif %}
+  
   {{ content.field_os2web_contact_more.0 }}
 
   {% if contact.field_os2web_contact_modal.value and  contact.field_os2web_contact_modal_butt.value%}
