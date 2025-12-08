@@ -19,7 +19,7 @@ process:
     - plugin: field_link
   type:
     plugin: default_value
-    default_value: 'default'
+    default_value: 'image'
   migrate_file_url_source:
     - plugin: extract
       source: field_os2web_spotbox_big_image
