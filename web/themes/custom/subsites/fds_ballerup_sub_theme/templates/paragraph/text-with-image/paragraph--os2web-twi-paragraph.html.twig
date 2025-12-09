@@ -1,0 +1,56 @@
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {% set has_image = paragraph.field_os2web_twi_image is not empty %}
+      {% set text_column_class = has_image ? 'col-12 col-sm-6' : 'col-12' %}
+      
+      <div class="row">
+        {% if has_image and image_position == 'left' %}
+          <div class="col-12 col-sm-6">
+
+            {# Begin - image #}
+            {{ content.field_os2web_twi_image }}
+            {# End - image #}
+
+          </div>
+        {% endif %}
+
+        <div class="{{ text_column_class }}">
+
+          {# Begin - heading #}
+          {{ content.field_os2web_twi_heading }}
+          {# End - heading #}
+
+          {# Begin - subheading #}
+          {{ content.field_os2web_twi_subheading }}
+          {# End - subheading #}
+
+          {# Begin - body #}
+          {{ content.field_os2web_twi_body }}
+          {# End - body #}
+
+          {# Begin - link #}
+          {{ content.field_os2web_twi_link }}
+          {# End - link #}
+
+        </div>
+
+        {% if has_image and image_position != 'left' %}
+          <div class="col-12 col-sm-6">
+
+            {# Begin - image #}
+            {{ content.field_os2web_twi_image }}
+            {# End - image #}
+
+          </div>
+        {% endif %}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
