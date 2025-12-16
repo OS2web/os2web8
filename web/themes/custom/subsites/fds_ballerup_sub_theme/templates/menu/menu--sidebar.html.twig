@@ -23,9 +23,13 @@
 
       <li{{ item.attributes.addClass(classes) }} data-level="{{ menu_level }}" data-has-children="{{ item.below ? 'true' : 'false' }}">
         {% if menu_level == 0 %}
-          {{ link(item.title, item.url, {'class': 'main-link', 'data-level': menu_level}) }}
+          {% set link_attributes = {'class': 'main-link', 'data-level': menu_level} %}
+          {% if item.is_active %}
+            {% set link_attributes = link_attributes|merge({'aria-current': 'page'}) %}
+          {% endif %}
+          {{ link(item.title, item.url, link_attributes) }}
         {% else %}
-          <a href="{{ item.url }}" class="sub-link-a sub-link-level-{{ menu_level }}" data-level="{{ menu_level }}">
+          <a href="{{ item.url }}" class="sub-link-a sub-link-level-{{ menu_level }}" data-level="{{ menu_level }}"{% if item.is_active %} aria-current="page"{% endif %}>
             {{ item.title }}
           </a>
         {% endif %}

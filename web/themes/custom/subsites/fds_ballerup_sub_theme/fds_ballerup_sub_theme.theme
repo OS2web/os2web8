@@ -9,17 +9,36 @@ use Drupal\taxonomy\Entity\Term;
 /**
  * Implements hook_preprocess_page().
  */
-function fds_ballerup_sub_theme_preprocess_page(array &$variables)
-{
-
+function fds_ballerup_sub_theme_preprocess_page(array &$variables) {
   $variables['theme_settings'] = _fds_base_theme_collect_theme_settings();
 
+  // Custom logo URL from theme settings.
   $logo = theme_get_setting('logo');
-  if (!empty( $logo ) && !empty($logo['url']))
-  {
+  if (!empty($logo) && !empty($logo['url'])) {
     $variables['custom_logo'] = $logo['url'];
   }
 
+  // Custom logo alt text from theme settings, with fallback to site name.
+  $logo_alt = theme_get_setting('logo_alt');
+  if (empty($logo_alt) && !empty($variables['site_name'])) {
+    $logo_alt = $variables['site_name'];
+  }
+  $variables['custom_logo_alt'] = $logo_alt;
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function fds_ballerup_sub_theme_form_system_theme_settings_alter(array &$form, FormStateInterface $form_state) {
+  // Add an alt text field under the existing logo settings.
+  if (isset($form['logo'])) {
+    $form['logo']['logo_alt'] = [
+      '#type' => 'textfield',
+      '#title' => t('Logo alt text'),
+      '#default_value' => theme_get_setting('logo_alt'),
+      '#description' => t('Optional alt text for the header logo. If left empty, the site name will be used.'),
+    ];
+  }
 }
 
 /**

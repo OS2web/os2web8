@@ -119,10 +119,136 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Custom mobile navigation.
 (function() {
+  var menu = document.querySelector('.custom-mobile-navigation');
+  var menuPopup = document.querySelector('.custom-mobile-navigation-popup');
+  var previousActiveElement = null;
+  var focusableElements = null;
+
+  // Get all focusable elements within the menu
+  function getFocusableElements() {
+    if (!menuPopup) return [];
+    
+    var selector = 'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    return Array.from(menuPopup.querySelectorAll(selector)).filter(function(el) {
+      return el.offsetWidth > 0 && el.offsetHeight > 0;
+    });
+  }
+
+  // Trap focus within the menu
+  function trapFocus(e) {
+    if (!menu.classList.contains('custom-mobile-navigation--open')) {
+      return;
+    }
+
+    if (!focusableElements || focusableElements.length === 0) {
+      focusableElements = getFocusableElements();
+    }
+
+    if (focusableElements.length === 0) {
+      return;
+    }
+
+    var firstElement = focusableElements[0];
+    var lastElement = focusableElements[focusableElements.length - 1];
+
+    // If Tab is pressed
+    if (e.key === 'Tab') {
+      // If Shift+Tab on first element, go to last
+      if (e.shiftKey && document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+      // If Tab on last element, go to first
+      else if (!e.shiftKey && document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    }
+  }
+
+  // Handle Escape key to close menu
+  function handleEscape(e) {
+    if (e.key === 'Escape' && menu.classList.contains('custom-mobile-navigation--open')) {
+      var toggleButton = document.querySelector('.js-custom-mobile-navigation-toggle');
+      if (toggleButton) {
+        toggleButton.click();
+      }
+    }
+  }
+
   function handleToggle(event) {
-    var menu = document.querySelector('.custom-mobile-navigation');
+    var button = this;
+    var isOpen = menu.classList.contains('custom-mobile-navigation--open');
 
     menu.classList.toggle('custom-mobile-navigation--open');
+    
+    // Update aria-expanded attribute on all toggle buttons
+    var allToggleButtons = document.querySelectorAll('.js-custom-mobile-navigation-toggle');
+    for (var i = 0; i < allToggleButtons.length; i++) {
+      allToggleButtons[i].setAttribute('aria-expanded', !isOpen);
+    }
+    
+    // Update button label for screen readers
+    var labelSpan = button.querySelector('.visually-hidden');
+    if (labelSpan) {
+      labelSpan.textContent = !isOpen ? 'Luk menu' : 'Åbn menu';
+    }
+    
+    // Update menu popup aria-hidden
+    if (menuPopup) {
+      menuPopup.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    }
+
+    if (!isOpen) {
+      // Menu is opening
+      previousActiveElement = document.activeElement;
+      focusableElements = getFocusableElements();
+      
+      // Update aria-hidden
+      if (menuPopup) {
+        menuPopup.setAttribute('aria-hidden', 'false');
+      }
+      
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden';
+      
+      // Focus first element in menu (or close button if available)
+      var closeButton = menuPopup.querySelector('.custom-mobile-navigation-popup__close');
+      var firstFocusable = closeButton || (focusableElements.length > 0 ? focusableElements[0] : null);
+      
+      if (firstFocusable) {
+        setTimeout(function() {
+          firstFocusable.focus();
+        }, 100);
+      }
+
+      // Add event listeners for focus trapping
+      document.addEventListener('keydown', trapFocus);
+      document.addEventListener('keydown', handleEscape);
+    } else {
+      // Menu is closing
+      // Update aria-hidden
+      if (menuPopup) {
+        menuPopup.setAttribute('aria-hidden', 'true');
+      }
+      
+      // Restore body scroll
+      document.body.style.overflow = '';
+      
+      // Remove event listeners
+      document.removeEventListener('keydown', trapFocus);
+      document.removeEventListener('keydown', handleEscape);
+      
+      // Restore focus to previous element
+      if (previousActiveElement && typeof previousActiveElement.focus === 'function') {
+        setTimeout(function() {
+          previousActiveElement.focus();
+        }, 100);
+      }
+      
+      focusableElements = null;
+      previousActiveElement = null;
+    }
   }
 
   var buttons = document.querySelectorAll('.js-custom-mobile-navigation-toggle');
@@ -131,6 +257,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var button = buttons[i];
 
     button.addEventListener('click', handleToggle);
+  }
+
+  // Also close menu when clicking overlay
+  var overlay = document.querySelector('.custom-mobile-navigation__overlay');
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      var toggleButton = document.querySelector('.js-custom-mobile-navigation-toggle');
+      if (toggleButton && menu.classList.contains('custom-mobile-navigation--open')) {
+        toggleButton.click();
+      }
+    });
   }
 })();
 
@@ -161,9 +298,37 @@ window.addEventListener("resize", () => {
   var links = document.querySelectorAll('a[href^="mailto:"]');
 
   tippy(links, {
-    content: '<div style="text-align: center;">Du er nu ved at sende en almindelig e-mail. <br />Hvis din besked indeholder personoplysninger, bør du i stedet sende den som en <br /><a href="/sikkerbesked" style="color: #fff;">sikker besked</a></div>',
+    content: '<div style="position: relative; padding-right: 30px; text-align: center;">' +
+      '<button class="tippy-close-button" aria-label="Luk tooltip" style="position: absolute; top: 5px; right: 5px; background: transparent; border: none; color: #fff; font-size: 18px; cursor: pointer; padding: 0; width: 24px; height: 24px; line-height: 24px; text-align: center; z-index: 1000;" title="Luk">×</button>' +
+      'Du er nu ved at sende en almindelig e-mail. <br />Hvis din besked indeholder personoplysninger, bør du i stedet sende den som en <br /><a href="/sikkerbesked" style="color: #fff;">sikker besked</a>' +
+      '</div>',
     allowHTML: true,
     interactive: true,
+    trigger: 'mouseenter focus',
+    onShow: function(instance) {
+      // Attach close button event listener when tooltip is shown
+      var closeBtn = instance.popper.querySelector('.tippy-close-button');
+      if (closeBtn) {
+        // Remove any existing listeners to avoid duplicates
+        var newCloseBtn = closeBtn.cloneNode(true);
+        closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
+        
+        newCloseBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          instance.hide();
+        });
+        
+        // Make it keyboard accessible
+        newCloseBtn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            e.stopPropagation();
+            instance.hide();
+          }
+        });
+      }
+    },
   });
 }());
 

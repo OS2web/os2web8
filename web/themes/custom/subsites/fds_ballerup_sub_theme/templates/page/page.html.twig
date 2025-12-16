@@ -6,12 +6,11 @@
         <div class="flexy-row">
 
           <a href="{{ url('<front>') }}" class="custom-header__logo">
-              {% if custom_logo %}
-                <img src="{{ custom_logo }}" alt="Logo" />
-              {% else %}
-                <img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo" />
-              {% endif %}
-
+            {% if custom_logo %}
+              <img src="{{ custom_logo }}" alt="{{ custom_logo_alt|default(site_name) }}" />
+            {% else %}
+              <img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="{{ custom_logo_alt|default(site_name) }}" />
+            {% endif %}
           </a>
 
           <div class="flexy-spacer"></div>
@@ -34,21 +33,45 @@
       <div class="container">
         <div class="flexy-row">
           <div class="flexy-spacer"></div>
-
           <div class="custom-mobile-navigation">
             <div class="custom-mobile-navigation__overlay"></div>
 
-            <button class="custom-mobile-navigation-toggle js-custom-mobile-navigation-toggle">
-              <span class="icon fa fa-angle-down"></span>
-              <span class="icon fa fa-angle-up"></span>
+            <button 
+              class="custom-mobile-navigation-toggle js-custom-mobile-navigation-toggle"
+              aria-label="Menu"
+              aria-expanded="false"
+              aria-controls="custom-mobile-navigation-popup">
+              <span class="icon fa fa-bars" aria-hidden="true"></span>
+              <span class="icon fa fa-times" aria-hidden="true"></span>
+              <span class="visually-hidden">Åbn menu</span>
             </button>
 
-            <div class="custom-mobile-navigation-popup">
-              <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--vertical">
-                {{ page.header__main_navigation }}
+            <div class="custom-mobile-navigation-popup" id="custom-mobile-navigation-popup" aria-label="Navigation" role="dialog" aria-modal="true" aria-hidden="true">
+              <div class="custom-mobile-navigation-popup__header">
+                <h2 class="custom-mobile-navigation-popup__title">Menu</h2>
+                <button 
+                  class="custom-mobile-navigation-popup__close js-custom-mobile-navigation-toggle"
+                  aria-label="Luk menu">
+                  <span class="fa fa-times" aria-hidden="true"></span>
+                  <span class="visually-hidden">Luk menu</span>
+                </button>
               </div>
-              <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
-                {{ page.header__top_navigation }}
+              
+              <div class="custom-mobile-navigation-popup__content">
+                <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--vertical">
+                  {% for key, item in page.header__main_navigation %}
+                    {% if key|first != '#' and key != 'system_branding_block' and key != 'site_branding_block' %}
+                      {{ item }}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="custom-mobile-navigation-popup__navigation custom-mobile-navigation-popup__navigation--horizontal">
+                  {% for key, item in page.header__top_navigation %}
+                    {% if key|first != '#' and key != 'system_branding_block' and key != 'site_branding_block' %}
+                      {{ item }}
+                    {% endif %}
+                  {% endfor %}
+                </div>
               </div>
             </div>
           </div>
