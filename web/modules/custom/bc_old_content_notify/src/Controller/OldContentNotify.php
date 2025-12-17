@@ -3,7 +3,7 @@ namespace Drupal\bc_old_content_notify\Controller;
 
 use Drupal\user\Entity\User;
 
-Class OldContentNotity {
+class OldContentNotify {
 
   public static function handler() {
 
@@ -77,7 +77,7 @@ Class OldContentNotity {
     if (count($outdated) > 0) {
       $mailManager = \Drupal::service('plugin.manager.mail');
       $langcode = 'da';
-      $body = null;
+
       $params = array(
         'subject' => 'En eller flere sider er foraeldet',
         'body' => null,

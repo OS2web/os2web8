@@ -3,4 +3,3 @@ services:
     class: \Drupal\bc_old_content_notify\Commands\BatchCommands
     tags:
       - { name: drush.command }
-    arguments: ['@entity_type.manager', '@logger.factory']

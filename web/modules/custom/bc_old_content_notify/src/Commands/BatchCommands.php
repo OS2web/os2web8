@@ -2,24 +2,10 @@
 
 namespace Drupal\bc_old_content_notify\Commands;
 
-
 use Drush\Commands\DrushCommands;
-use Drupal\bc_old_content_notify\Controller\OldContentNotity;
+use Drupal\bc_old_content_notify\Controller\OldContentNotify;
 
-class BatchCommands extends DrushCommands
-{
-
-  /**
-   * old content notify test run
-   *
-   * @command ocf:test
-   * @aliases ocf
-   * @options $options arr AN option that takes multiple values.
-   */
-  public function testRun($options = array())
-  {
-    echo "test run\n";
-  }
+class BatchCommands extends DrushCommands {
 
   /**
    * old content notify cron run
@@ -30,9 +16,6 @@ class BatchCommands extends DrushCommands
    */
   public function run($options = array())
   {
-    OldContentNotity::handler();
+    OldContentNotify::handler();
   }
-
-
-
 }
