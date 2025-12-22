@@ -25,8 +25,11 @@ class OldContentController {
 
     $nids = \Drupal::entityQuery('node')
       ->accessCheck(FALSE)
+      ->latestRevision()
+      ->condition('status', 1)
       ->condition('type', 'os2web_page')
       ->condition('changed', $outdatePeriod, '<')
+      ->addTag('bc_old_content_not_outdated_state')
       ->execute();
 
     $stateOutdated = 'foraeldet';
@@ -99,7 +102,7 @@ class OldContentController {
           continue;
         }
 
-        $contentGroup = $node->get('field_indholdsgruppe')->getValue()[0]['target_id'];
+        $contentGroup = $node->get('field_indholdsgruppe')->isEmpty() ? null : $node->get('field_indholdsgruppe')->target_id;
 
         if (!empty((int)$contentGroup)) {
           $entites = $user_storage->getEditors($scheme, $contentGroup);

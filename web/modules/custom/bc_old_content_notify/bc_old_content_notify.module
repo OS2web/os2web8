@@ -16,6 +16,14 @@ function bc_old_content_notify_query_bc_old_content_outdated_state_alter(Drupal\
 }
 
 /**
+ * Implements hook_query_TAG_alter().
+ */
+function bc_old_content_notify_query_bc_old_content_not_outdated_state_alter(Drupal\Core\Database\Query\AlterableInterface $query) {
+  $query->addJoin('LEFT', 'content_moderation_state_field_revision', 'md', 'md.content_entity_revision_id = base_table.vid AND md.langcode = base_table.langcode');
+  $query->condition('md.moderation_state', 'foraeldet', '<>');
+}
+
+/**
  * Implements hook_mail().
  */
 function bc_old_content_notify_mail($key, &$message, $params) {
