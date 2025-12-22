@@ -44,6 +44,13 @@ class SettingsForm extends ConfigFormBase
       '#default_value' => ($config->get('run') ?? 3)
     );
 
+    $form['form']['days_since_last_edit'] = array(
+      '#type' => 'textfield',
+      '#title' => $this->t('Node outdate period in days'),
+      '#default_value' => ($config->get('days_since_last_edit') ?? 120),
+      '#description' => $this->t('The number of days since the last edit date before the content is considered out of date.'),
+    );
+
     return parent::buildForm($form, $form_state);
 
   }

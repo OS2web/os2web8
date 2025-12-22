@@ -1,7 +1,54 @@
 <?php
 
-use Drupal\bc_old_content_notify\Controller\OldContentNotify;
+use Drupal\bc_old_content_notify\Controller\OldContentController;
 
 function bc_old_content_notify_cron() {
-  OldContentNotify::handler();
+  OldContentController::contentModerationStateCheck();
+  OldContentController::notify();
+}
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function bc_old_content_notify_query_bc_old_content_outdated_state_alter(Drupal\Core\Database\Query\AlterableInterface $query) {
+  $query->addJoin('LEFT', 'content_moderation_state_field_revision', 'md', 'md.content_entity_revision_id = base_table.vid AND md.langcode = base_table.langcode');
+  $query->condition('md.moderation_state', 'foraeldet', '=');
+}
+
+/**
+ * Implements hook_mail().
+ */
+function bc_old_content_notify_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'old_article':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+
+      if (!isset($params['from'])) {
+        $params['from'] = \Drupal::config('system.site')->get('mail');
+      }
+
+      if (!isset($params['sender'])) {
+        $params['sender'] = \Drupal::config('system.site')->get('name');
+      }
+      $params['sender'] = '=?UTF-8?B?' . base64_encode($params['sender']) . '?=';
+
+      $message['headers'] = array_merge($message['headers'], [
+        'Content-Type' => 'text/html; charset=UTF-8;',
+        'Content-Transfer-Encoding' => '8Bit',
+        'MIME-Version' => '1.0',
+        'From' => $params['from'],
+        'Sender' => $params['from'],
+      ]);
+
+      if (isset($params['Cc'])) {
+        $message['headers']['Cc'] = $params['Cc'];
+      }
+
+      if (isset($params['Bcc'])) {
+        $message['headers']['Bcc'] = $params['Bcc'];
+      }
+
+      break;
+  }
 }
