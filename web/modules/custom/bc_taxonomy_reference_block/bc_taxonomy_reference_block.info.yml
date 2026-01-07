@@ -2,7 +2,7 @@ name: 'Bellcom taxonomy reference block'
 type: module
 description: 'Bellcom taxonomy reference list module'
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 package: 'Bellcom'
 dependencies:
   - drupal:block
