@@ -161,10 +161,7 @@
         "os2web/os2web_pagebuilder": "dev-drupal10",
         "os2web/os2web_person_information": "dev-drupal10",
         "os2web/os2web_postlister": "dev-master",
-        "os2web/os2web_rest_api": "dev-master",
         "os2web/os2web_search": "dev-drupal10",
-        "os2web/os2web_simplesaml": "dev-master",
-        "os2web/os2web_simplesaml_checklist": "dev-master",
         "os2web/os2web_spotbox": "dev-drupal10"
     },
     "conflict": {

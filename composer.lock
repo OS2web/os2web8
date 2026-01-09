@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5715f0ad8c600eb863bc79274edd7e9e",
+    "content-hash": "2dbadcfaa13a6a2d73cb0ffc31dd536b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -13556,16 +13556,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/os2core.git",
-                "reference": "27c1d7f3b9e58eaf3dabf3fd23389c06e6c0e579"
+                "reference": "744fa65a1dc6de29d75fd7d7c0ae6311b9c761d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/os2core/zipball/27c1d7f3b9e58eaf3dabf3fd23389c06e6c0e579",
-                "reference": "27c1d7f3b9e58eaf3dabf3fd23389c06e6c0e579",
+                "url": "https://api.github.com/repos/bellcom/os2core/zipball/744fa65a1dc6de29d75fd7d7c0ae6311b9c761d4",
+                "reference": "744fa65a1dc6de29d75fd7d7c0ae6311b9c761d4",
                 "shasum": ""
             },
             "require": {
-                "drupal/address": "^1.7",
+                "drupal/address": "^1.7 || ^2.0",
                 "drupal/admin_toolbar": "^3.0",
                 "drupal/better_exposed_filters": "^6.0",
                 "drupal/chosen": "^3.0 || ^4.0",
@@ -13599,10 +13599,7 @@
                 "drupal/redirect": "^1.4",
                 "drupal/scheduler": "^2.0",
                 "drupal/smtp": "^1.0@beta",
-                "drupal/token": "^1.5",
-                "os2web/os2web_datalookup": "^1.0",
-                "os2web/os2web_simplesaml": "master",
-                "os2web/os2web_simplesaml_checklist": "dev-master"
+                "drupal/token": "^1.5"
             },
             "type": "drupal-profile",
             "notification-url": "https://packagist.org/downloads/",
@@ -13614,7 +13611,7 @@
                 "issues": "https://github.com/bellcom/os2core/issues",
                 "source": "https://github.com/bellcom/os2core/tree/drupal10"
             },
-            "time": "2024-11-11T09:40:25+00:00"
+            "time": "2026-01-09T10:06:32+00:00"
         },
         {
             "name": "os2web/os2web",
@@ -13747,35 +13744,6 @@
                 "source": "https://github.com/OS2web/os2web_contact/tree/drupal10"
             },
             "time": "2024-04-26T12:30:15+00:00"
-        },
-        {
-            "name": "os2web/os2web_datalookup",
-            "version": "1.11.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/OS2web/os2web_datalookup.git",
-                "reference": "17f86a6e9e3a98ce3949576b5b894b851f0bbbc9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_datalookup/zipball/17f86a6e9e3a98ce3949576b5b894b851f0bbbc9",
-                "reference": "17f86a6e9e3a98ce3949576b5b894b851f0bbbc9",
-                "shasum": ""
-            },
-            "require": {
-                "ext-soap": "*"
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "EUPL-1.2"
-            ],
-            "description": "Provides integration with Danish data lookup services such as Service platformen or Datafordeler.",
-            "support": {
-                "issues": "https://github.com/OS2web/os2web_datalookup/issues",
-                "source": "https://github.com/OS2web/os2web_datalookup/tree/1.11.5"
-            },
-            "time": "2024-08-02T07:28:39+00:00"
         },
         {
             "name": "os2web/os2web_embedded_code",
@@ -14283,36 +14251,6 @@
             "time": "2024-06-06T12:45:45+00:00"
         },
         {
-            "name": "os2web/os2web_rest_api",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/OS2web/os2web_rest_api.git",
-                "reference": "e17ddb114cb16c146c0eb7978c49a4fb226bcb3c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_rest_api/zipball/e17ddb114cb16c146c0eb7978c49a4fb226bcb3c",
-                "reference": "e17ddb114cb16c146c0eb7978c49a4fb226bcb3c",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "default-branch": true,
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "EUPL-1.2"
-            ],
-            "description": "OS2Web Rest API",
-            "support": {
-                "issues": "https://github.com/OS2web/os2web_rest_api/issues",
-                "source": "https://github.com/OS2web/os2web_rest_api/tree/master"
-            },
-            "time": "2024-06-04T12:49:52+00:00"
-        },
-        {
             "name": "os2web/os2web_search",
             "version": "dev-drupal10",
             "source": {
@@ -14346,65 +14284,6 @@
                 "source": "https://github.com/OS2web/os2web_search/tree/drupal10"
             },
             "time": "2024-06-06T13:15:29+00:00"
-        },
-        {
-            "name": "os2web/os2web_simplesaml",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/OS2web/os2web_simplesaml.git",
-                "reference": "546cf2fa81428f79a3b873623adcf587b22e9f13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_simplesaml/zipball/546cf2fa81428f79a3b873623adcf587b22e9f13",
-                "reference": "546cf2fa81428f79a3b873623adcf587b22e9f13",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/simplesamlphp_auth": "^4.0"
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "EUPL-1.2"
-            ],
-            "description": "Enhances integration with simplesamlphp_auth module, by force triggering SimpleSAML auth page redirect when certain criteria are met",
-            "support": {
-                "issues": "https://github.com/OS2web/os2web_simplesaml/issues",
-                "source": "https://github.com/OS2web/os2web_simplesaml/tree/master"
-            },
-            "time": "2024-05-17T10:42:06+00:00"
-        },
-        {
-            "name": "os2web/os2web_simplesaml_checklist",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/OS2web/os2web_simplesaml_checklist.git",
-                "reference": "32d41f9d22c082dcaed023600e72855382a0f257"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_simplesaml_checklist/zipball/32d41f9d22c082dcaed023600e72855382a0f257",
-                "reference": "32d41f9d22c082dcaed023600e72855382a0f257",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/checklistapi": "^2.0"
-            },
-            "default-branch": true,
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "EUPL-1.2"
-            ],
-            "description": "SimpleSAML configuration checklist for Drupal",
-            "support": {
-                "issues": "https://github.com/OS2web/os2web_simplesaml_checklist/issues",
-                "source": "https://github.com/OS2web/os2web_simplesaml_checklist/tree/develop"
-            },
-            "time": "2023-11-24T14:10:29+00:00"
         },
         {
             "name": "os2web/os2web_spotbox",
@@ -20510,10 +20389,7 @@
         "os2web/os2web_pagebuilder": 20,
         "os2web/os2web_person_information": 20,
         "os2web/os2web_postlister": 20,
-        "os2web/os2web_rest_api": 20,
         "os2web/os2web_search": 20,
-        "os2web/os2web_simplesaml": 20,
-        "os2web/os2web_simplesaml_checklist": 20,
         "os2web/os2web_spotbox": 20
     },
     "prefer-stable": true,
