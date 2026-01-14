@@ -505,7 +505,7 @@ function fds_faxe_theme_preprocess_html(&$variables) {
       // Debug: Log successful file load
       \Drupal::logger('fds_faxe_theme')->info('CSS file loaded successfully: @uri', ['@uri' => $file->getFileUri()]);
       // Alternative method: Use Drupal's standard CSS attachment
-      $css_url = file_url_transform_relative(\Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri()));
+      $css_url = \Drupal::service('file_url_generator')->generateString($file->getFileUri());
       $variables['#attached']['library'][] = 'fds_faxe_theme/silktide-css';
       
       // Also add to html_head as backup
