@@ -3381,3 +3381,42 @@ window.addEventListener('load', () => {
   const firstTabElement = document.querySelector('#skip-to-main');
   firstTabElement.focus();
 });
+
+// Add aria-labels to search form elements
+(function() {
+  function addAriaLabels() {
+    // Search input with id "edit-sq"
+    const searchInput1 = document.getElementById('edit-sq');
+    if (searchInput1 && !searchInput1.getAttribute('aria-label')) {
+      searchInput1.setAttribute('aria-label', 'Indtast søgeord');
+    }
+
+    // Search input with id "edit-sq--3"
+    const searchInput2 = document.getElementById('edit-sq--3');
+    if (searchInput2 && !searchInput2.getAttribute('aria-label')) {
+      searchInput2.setAttribute('aria-label', 'Indtast søgeord');
+    }
+
+    // Submit button with id "edit-submit-os2web-search"
+    const submitBtn1 = document.getElementById('edit-submit-os2web-search');
+    if (submitBtn1 && !submitBtn1.getAttribute('aria-label')) {
+      submitBtn1.setAttribute('aria-label', 'Søg');
+    }
+
+    // Submit button with id "edit-submit-os2web-search-selfservice--2"
+    const submitBtn2 = document.getElementById('edit-submit-os2web-search-selfservice--2');
+    if (submitBtn2 && !submitBtn2.getAttribute('aria-label')) {
+      submitBtn2.setAttribute('aria-label', 'Søg');
+    }
+
+    // Submit button with id "edit-submit-os2web-search--3"
+    const submitBtn3 = document.getElementById('edit-submit-os2web-search--3');
+    if (submitBtn3 && !submitBtn3.getAttribute('aria-label')) {
+      submitBtn3.setAttribute('aria-label', 'Søg');
+    }
+  }
+
+  // Run on DOMContentLoaded and also on load (for dynamically loaded content)
+  document.addEventListener('DOMContentLoaded', addAriaLabels);
+  window.addEventListener('load', addAriaLabels);
+})();

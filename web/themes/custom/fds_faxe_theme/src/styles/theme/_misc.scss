@@ -17,6 +17,11 @@ body {
   background-color: $gray-secondary;
 }
 
+body, html {
+  word-break: break-word;
+  hyphens: auto;
+}
+
 // Increased specificity to win over base theme.
 body .container-fluid {
   padding-left: $grid-gutter-width;
