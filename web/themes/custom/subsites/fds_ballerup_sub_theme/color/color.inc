@@ -1,22 +1,22 @@
 <?php
 
 $info = [
-  // Available colors and color labels used in theme.
   'fields' => [
-    // Add 'base' here to satisfy the module's internal logic
-    'base' => t('Base theme color'), 
+    'base' => t('Base color'),
+    'text' => t('Text color'),
+    'link' => t('Link color'),
     'background_color__default' => t('Background color - default'),
     'background_color__primary' => t('Background color - primary'),
     'background_color__secondary' => t('Background color - secondary (has white text)'),
   ],
 
-  // Pre-defined color schemes.
   'schemes' => [
     'default' => [
       'title' => t('Standard (default)'),
       'colors' => [
-        // Ensure 'base' has a value here as well
-        'base' => '#007ca3', 
+        'base' => '#007ca3',
+        'text' => '#222222', // Added to prevent the "text" error
+        'link' => '#007ca3', // Added to prevent the "link" error
         'background_color__default' => '#007ca3',
         'background_color__primary' => '#007ca3',
         'background_color__secondary' => '#4195b2',
@@ -24,7 +24,6 @@ $info = [
     ],
   ],
 
-  // CSS files to rewrite
   'css' => [
     'dist/stylesheets/stylesheet.css',
   ],
