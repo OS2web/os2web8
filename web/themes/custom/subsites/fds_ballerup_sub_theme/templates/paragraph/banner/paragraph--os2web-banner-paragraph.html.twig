@@ -7,33 +7,39 @@
 ] %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }} {% if background_image %} style="background-image: url({{ background_image }})" {% endif %}>
-    <div class="container">
-      {% block content %}
+    
+    {# Status Banner - Full width at top #}
+    {% if paragraph.field_os2web_banner_status_text.value and paragraph.field_os2web_banner_status_color.value %}
+      {% set status_color = paragraph.field_os2web_banner_status_color.value %}
+      {% set status_border_color = '' %}
+      {% set status_bg_color = '' %}
+      {% set status_text_color = '' %}
       
-      {# Status Banner - Display at top if enabled #}
-      {% if paragraph.field_os2web_banner_status_text.value and paragraph.field_os2web_banner_status_color.value %}
-        {% set status_color = paragraph.field_os2web_banner_status_color.value %}
-        {% set status_bg_color = '' %}
-        {% set status_text_color = '' %}
-        
-        {% if status_color == 'red' or status_color == 'Rød' or status_color == 'alert' %}
-          {% set status_bg_color = '#A51D38' %}
-          {% set status_text_color = '#ffffff' %}
-        {% elseif status_color == 'yellow' or status_color == 'Gul' or status_color == 'warning' %}
-          {% set status_bg_color = '#f2ef96' %}
-          {% set status_text_color = '#000000' %}
-        {% elseif status_color == 'green' or status_color == 'Grøn' or status_color == 'alright' %}
-          {% set status_bg_color = '#3e8346' %}
-          {% set status_text_color = '#ffffff' %}
-        {% endif %}
-        
-        <div class="banner__status" style="background-color: {{ status_bg_color }}; color: {{ status_text_color }};">
+      {% if status_color == 'red' or status_color == 'Rød' or status_color == 'alert' %}
+        {% set status_border_color = '#DC3545' %}
+        {% set status_bg_color = '#FFF5F5' %}
+        {% set status_text_color = '#721C24' %}
+      {% elseif status_color == 'yellow' or status_color == 'Gul' or status_color == 'warning' %}
+        {% set status_border_color = '#FFC107' %}
+        {% set status_bg_color = '#FFFBF0' %}
+        {% set status_text_color = '#856404' %}
+      {% elseif status_color == 'green' or status_color == 'Grøn' or status_color == 'alright' %}
+        {% set status_border_color = '#28A745' %}
+        {% set status_bg_color = '#F0F9F4' %}
+        {% set status_text_color = '#155724' %}
+      {% endif %}
+      
+      <div class="banner__status" style="border-top: 3px solid {{ status_border_color }}; border-bottom: 3px solid {{ status_border_color }}; background-color: {{ status_bg_color }}; color: {{ status_text_color }};">
+        <div class="container">
           <div class="banner__status-content">
             {{ content.field_os2web_banner_status_text }}
           </div>
         </div>
-      {% endif %}
-      
+      </div>
+    {% endif %}
+    
+    <div class="container">
+      {% block content %}
       {% if paragraph.field_os2web_banner_heading.value or 
       paragraph.field_os2web_banner_subheading.value or 
       paragraph.field_os2web_banner_body.value or 

@@ -11,17 +11,29 @@
     // }
     height: 350px;
     background-position: center;
+    position: relative;
     
     .banner__status {
-        padding: 10px 15px;
-        margin-bottom: 15px;
-        border-radius: 4px;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 0.9rem;
         font-weight: 500;
+        line-height: 1.5;
+        
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
         
         .banner__status-content {
-            p, h1, h2, h3, h4, h5, h6, span, strong, em {
+            p, h1, h2, h3, h4, h5, h6, span, strong, em, a {
                 margin-bottom: 0;
                 color: inherit;
+                font-size: inherit;
+            }
+            
+            p:last-child {
+                margin-bottom: 0;
             }
         }
     }
