@@ -20,6 +20,12 @@
 // Styling
 // --------------------------------------------------
 
+@media only screen and (max-width: 630px) {
+  .section--breadcrumb-bar {
+    display: none;
+  }
+}
+
 .breadcrumb-container {
   display: flex;
   justify-content: space-between;
