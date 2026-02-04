@@ -1,7 +1,7 @@
 name: 'OS2Web eDoc File Import'
 type: module
 description: 'Modul til importering af eDoc filer.'
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 package: OS2WEB
 dependencies:
   - drupal:node

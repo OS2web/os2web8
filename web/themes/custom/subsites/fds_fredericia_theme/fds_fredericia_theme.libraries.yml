@@ -11,7 +11,6 @@ styles:
 javascripts:
   js:
     dist/javascripts/app.js: {}
-    dist/javascripts/modernizr.js: {}
     'https://cdhsign.dk/cdh_player.js': { type: external }
   dependencies:
     - core/drupal

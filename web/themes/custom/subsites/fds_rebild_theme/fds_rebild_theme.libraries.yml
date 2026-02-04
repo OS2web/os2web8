@@ -21,10 +21,8 @@ fancybox:
 javascripts:
   js:
     dist/javascripts/app.js: {}
-    dist/javascripts/modernizr.js: {}
     js/accordion.js: {}
     js/slideshow.js: {}
   dependencies:
     - core/drupal
     - core/jquery
-    - core/modernizr

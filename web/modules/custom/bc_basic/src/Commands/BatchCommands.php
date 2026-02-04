@@ -4,7 +4,6 @@ namespace Drupal\bc_basic\Commands;
 use Drush\Commands\DrushCommands;
 use Drupal\bc_basic\Debug;
 
-
 Class BatchCommands extends DrushCommands {
 
   /**

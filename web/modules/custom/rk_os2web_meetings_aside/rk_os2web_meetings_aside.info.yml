@@ -1,4 +1,4 @@
 name: RK OS2Web meetings aside
 package: rk
 type: module
-core_version_requirement: ^9
+core_version_requirement: ^9 || ^10 || ^11
