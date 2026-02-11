@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eccc80fa8002cb46401ec8e98f0ea96b",
+    "content-hash": "85f4d6539224f932758f7ef9254656e3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6600,6 +6600,54 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/file_delete",
                 "issues": "https://www.drupal.org/project/issues/file_delete"
+            }
+        },
+        {
+            "name": "drupal/file_delete_ui",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/file_delete_ui.git",
+                "reference": "1.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/file_delete_ui-1.0.0-beta3.zip",
+                "reference": "1.0.0-beta3",
+                "shasum": "0d347b6b35dd54678523976ebd9df18283488e3c"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta3",
+                    "datestamp": "1689253704",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "AstonVictor",
+                    "homepage": "https://www.drupal.org/user/3466615"
+                },
+                {
+                    "name": "douggreen",
+                    "homepage": "https://www.drupal.org/user/29191"
+                }
+            ],
+            "description": "Add capability for admins to delete files",
+            "homepage": "https://www.drupal.org/project/file_delete_ui",
+            "support": {
+                "source": "https://git.drupalcode.org/project/file_delete_ui"
             }
         },
         {
@@ -28035,6 +28083,7 @@
         "drupal/entity_clone": 10,
         "drupal/entity_update": 5,
         "drupal/feeds": 10,
+        "drupal/file_delete_ui": 10,
         "drupal/file_management": 20,
         "drupal/gdpr": 15,
         "drupal/gin_login": 5,
