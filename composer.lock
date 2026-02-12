@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab8b7f2f49eabaf911671a9994b8169e",
+    "content-hash": "3a63d018977e04b7001099889d533fb8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1287,29 +1287,29 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38"
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "phpunit/phpunit": "<=7.5 || >=13"
+                "phpunit/phpunit": "<=7.5 || >=14"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9 || ^12 || ^13",
-                "phpstan/phpstan": "1.4.10 || 2.1.11",
+                "doctrine/coding-standard": "^9 || ^12 || ^14",
+                "phpstan/phpstan": "1.4.10 || 2.1.30",
                 "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12.4 || ^13.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
@@ -1329,9 +1329,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.5"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.6"
             },
-            "time": "2025-04-07T20:06:18+00:00"
+            "time": "2026-02-07T07:09:04+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -2422,56 +2422,6 @@
             "homepage": "https://www.drupal.org/project/ckeditor",
             "support": {
                 "source": "https://git.drupalcode.org/project/ckeditor"
-            }
-        },
-        {
-            "name": "drupal/ckeditor_entity_link",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/ckeditor_entity_link.git",
-                "reference": "6ea274834362b02ccaa216d9368390c6fc28dffd"
-            },
-            "require": {
-                "drupal/ckeditor": "*",
-                "drupal/core": "^9.3 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.3+1-dev",
-                    "datestamp": "1703080983",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "baskaran",
-                    "homepage": "https://www.drupal.org/user/2423304"
-                },
-                {
-                    "name": "dealancer",
-                    "homepage": "https://www.drupal.org/user/243418"
-                },
-                {
-                    "name": "kuhikar",
-                    "homepage": "https://www.drupal.org/user/3241981"
-                }
-            ],
-            "description": "This module allows to insert links to Drupal entities (content, files, tags, etc...) when using CKEditor.",
-            "homepage": "http://drupal.org/project/ckeditor_entity_link",
-            "support": {
-                "source": "https://git.drupalcode.org/project/ckeditor_entity_link"
             }
         },
         {
@@ -6267,56 +6217,6 @@
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
                 "source": "https://git.drupalcode.org/project/inline_entity_form"
-            }
-        },
-        {
-            "name": "drupal/install_profile_generator",
-            "version": "4.0.0-alpha3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/install_profile_generator.git",
-                "reference": "4.0.0-alpha3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/install_profile_generator-4.0.0-alpha3.zip",
-                "reference": "4.0.0-alpha3",
-                "shasum": "31a491f8498ccc3b43ce134b73d1d32bb82910ca"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "drush/drush": "^11 || ^12",
-                "php": ">=8.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.0.0-alpha3",
-                    "datestamp": "1690713439",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "alexpott",
-                    "homepage": "https://www.drupal.org/user/157725"
-                },
-                {
-                    "name": "Eli-T",
-                    "homepage": "https://www.drupal.org/user/516878"
-                }
-            ],
-            "description": "Provides a drush command to create an install profile from a site's current configuration",
-            "homepage": "https://www.drupal.org/project/install_profile_generator",
-            "support": {
-                "source": "https://git.drupalcode.org/project/install_profile_generator"
             }
         },
         {
@@ -14109,12 +14009,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/os2core.git",
-                "reference": "ca9d0257a633ca2662c085bf52745b42aea8b4ee"
+                "reference": "f66533ba2f22bd682455d0c76941f5cf796d8cf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/os2core/zipball/ca9d0257a633ca2662c085bf52745b42aea8b4ee",
-                "reference": "ca9d0257a633ca2662c085bf52745b42aea8b4ee",
+                "url": "https://api.github.com/repos/bellcom/os2core/zipball/f66533ba2f22bd682455d0c76941f5cf796d8cf5",
+                "reference": "f66533ba2f22bd682455d0c76941f5cf796d8cf5",
                 "shasum": ""
             },
             "require": {
@@ -14122,7 +14022,6 @@
                 "drupal/admin_toolbar": "^3.0",
                 "drupal/better_exposed_filters": "^7.0",
                 "drupal/chosen": "^3.0 || ^4.0",
-                "drupal/ckeditor_entity_link": "dev-1.x",
                 "drupal/config_ignore": "^2.1",
                 "drupal/config_split": "^2.0@beta",
                 "drupal/core": "^8.7 || ^9 || ^10",
@@ -14164,7 +14063,7 @@
                 "issues": "https://github.com/bellcom/os2core/issues",
                 "source": "https://github.com/bellcom/os2core/tree/drupal11"
             },
-            "time": "2026-01-16T14:52:51+00:00"
+            "time": "2026-02-12T11:06:05+00:00"
         },
         {
             "name": "os2web/os2web",
@@ -21273,7 +21172,6 @@
         "bellcom/fds_base_theme": 20,
         "drupal/access_latest": 20,
         "drupal/anonymous_subscriptions": 20,
-        "drupal/ckeditor_entity_link": 20,
         "drupal/ckeditor_iframe": 15,
         "drupal/content_access": 5,
         "drupal/drush_language": 5,
@@ -21282,7 +21180,6 @@
         "drupal/feeds_ex": 10,
         "drupal/feeds_tamper": 20,
         "drupal/inline_entity_form": 5,
-        "drupal/install_profile_generator": 15,
         "drupal/media_directories": 10,
         "drupal/menu_breadcrumb": 15,
         "drupal/node_revision_delete": 20,
