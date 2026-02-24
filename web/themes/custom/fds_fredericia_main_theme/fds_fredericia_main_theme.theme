@@ -605,13 +605,17 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
     }
 
     if ($paragraph->bundle() === 'edoc_filer') {
+        $all_documents = [];
+        
         // Check and prepare ESDH Documents.
         if ($paragraph->hasField('field_sagsreference') && !$paragraph->field_sagsreference->isEmpty()) {
             $case_node = $paragraph->field_sagsreference->entity;
 
             if ($case_node && $case_node->hasField('field_case_documents') && !$case_node->field_case_documents->isEmpty()) {
                 $document_ids = $case_node->field_case_documents->getValue();
-                $documents = [];
+                // Reverse array so newest additions (at the end) appear first
+                $document_ids = array_reverse($document_ids);
+                
                 foreach ($document_ids as $id) {
                     $document_node = \Drupal\node\Entity\Node::load($id['target_id']);
                     if ($document_node) {
@@ -631,7 +635,7 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                                 $uri = $file->getFileUri();
                                 $display_title = !empty($document_title) ? $document_title : $file->getFilename();
 
-                                $documents[] = [
+                                $all_documents[] = [
                                     '#type' => 'link',
                                     '#title' => $display_title,
                                     '#url' => \Drupal\Core\Url::fromUri(\Drupal::service('file_url_generator')->generateAbsoluteString($uri)),
@@ -648,32 +652,40 @@ function fds_fredericia_main_theme_preprocess_paragraph(&$variables) {
                         }
 
                         // Fallback to normal rendering ONLY IF the document was not already rendered as a link.
-                                    if (!$document_rendered) {
-                                        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
-                                        $rendered_document = $view_builder->view($document_node, 'paragraph_display');
+                        if (!$document_rendered) {
+                            $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+                            $rendered_document = $view_builder->view($document_node, 'paragraph_display');
 
-                                        if (!empty($rendered_document)) {
-                                            $documents[] = $rendered_document;
-                                        }
-                                    }
+                            if (!empty($rendered_document)) {
+                                $all_documents[] = $rendered_document;
+                            }
+                        }
                     }
                 }
-                $variables['esdh_documents'] = $documents;
             }
         }
 
         // Check and prepare field_doc_reference items.
         if ($paragraph->hasField('field_doc_reference') && !$paragraph->field_doc_reference->isEmpty()) {
             $referenced_entities = $paragraph->field_doc_reference->referencedEntities();
-            $variables['field_document_reference_items'] = [];
+            // Reverse array so newest additions (at the end) appear first
+            $referenced_entities = array_reverse($referenced_entities);
+            
             foreach ($referenced_entities as $referenced_entity) {
                 $view_builder = \Drupal::entityTypeManager()->getViewBuilder($referenced_entity->getEntityTypeId());
                 $rendered_item = $view_builder->view($referenced_entity, 'default');
                 if (!empty($rendered_item)) {
-                    $variables['field_document_reference_items'][] = $rendered_item;
+                    $all_documents[] = $rendered_item;
                 }
             }
         }
+        
+        // Pass documents sorted by addition order (newest first)
+        $variables['all_documents_sorted'] = $all_documents;
+        
+        // Keep backward compatibility with existing template structure
+        $variables['esdh_documents'] = [];
+        $variables['field_document_reference_items'] = [];
     }
 
 

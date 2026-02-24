@@ -1,8 +1,7 @@
 {% set unique_id = 'paragraph-' ~ random() %}
 
-{% set total_files_count =
-  (esdh_documents|default([])|length) +
-  (field_document_reference_items|default([])|length) %} {# Adjust this logic based on your actual structure #}
+{% set all_documents_sorted = all_documents_sorted|default([]) %}
+{% set total_files_count = all_documents_sorted|length %}
 
 {% if content.field_edoc_heading|render|striptags|trim is not empty %}
   <h2>{{ content.field_edoc_heading }}</h2>
@@ -13,24 +12,12 @@
 <div id="{{ unique_id }}" class="documents-wrapper edoc-only">
   {% set file_index = 0 %}
 
-  {# Render ESDH Documents if any #}
-  {% if esdh_documents %}
-    <div class="esdh-documents">
-      {% for document in esdh_documents %}
+  {# Render all documents sorted by newest first #}
+  {% if all_documents_sorted %}
+    <div class="all-documents">
+      {% for document in all_documents_sorted %}
         <div class="document-item {{ file_index >= 5 ? 'hidden' : '' }}">
-            {{ document }}
-        </div>
-        {% set file_index = file_index + 1 %}
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {# Render items from field_document_reference if any #}
-  {% if field_document_reference_items %}
-    <div class="directly-referenced-documents">
-      {% for item in field_document_reference_items %}
-        <div class="document-item {{ file_index >= 5 ? 'hidden' : '' }}">
-          {{ item }}
+          {{ document }}
         </div>
         {% set file_index = file_index + 1 %}
       {% endfor %}
