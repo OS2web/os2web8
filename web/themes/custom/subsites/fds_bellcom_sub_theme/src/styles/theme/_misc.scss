@@ -603,6 +603,24 @@ body .page-container {
       color: $color__link__hover !important;
     }
   }
+  
+  // Bullets must be dark on light backgrounds
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before,
+  .box--section-link a:after,
+  ul.related-links li:before {
+    color: $color__bullet__primary !important; // Dark bullets on light background
+  }
 }
 
 .background-color--secondary {
@@ -615,6 +633,24 @@ body .page-container {
   p, li, span,
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
   .section-heading__title,
+  
+  // Bullets must be white on dark backgrounds
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before,
+  .box--section-link a:after,
+  ul.related-links li:before {
+    color: $color__bullet__secondary !important; // White bullets on dark background
+  }
   .field--name-field-os2web-news-heading h1,
   .field--name-field-os2web-news-heading h2,
   .field--name-field-os2web-news-heading h3,
@@ -688,6 +724,24 @@ body .page-container {
   p, li, span,
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
   .section-heading__title,
+  
+  // Bullets must be white on dark backgrounds
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before,
+  .box--section-link a:after,
+  ul.related-links li:before {
+    color: $color__bullet__secondary !important; // White bullets on dark background
+  }
   .field--name-field-os2web-news-heading h1,
   .field--name-field-os2web-news-heading h2,
   .field--name-field-os2web-news-heading h3,
