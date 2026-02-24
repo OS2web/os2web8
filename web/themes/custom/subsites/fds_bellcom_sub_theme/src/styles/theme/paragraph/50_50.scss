@@ -132,7 +132,14 @@
         color: $color__text__light !important;
       }
       
-      a:not(.button):not(.btn):not(.cta-buttons a) {
+      // All links (including in headings) must be light on dark backgrounds
+      a:not(.button):not(.btn):not(.cta-buttons a),
+      h1 a:not(.button):not(.btn):not(.cta-buttons a),
+      h2 a:not(.button):not(.btn):not(.cta-buttons a),
+      h3 a:not(.button):not(.btn):not(.cta-buttons a),
+      h4 a:not(.button):not(.btn):not(.cta-buttons a),
+      h5 a:not(.button):not(.btn):not(.cta-buttons a),
+      h6 a:not(.button):not(.btn):not(.cta-buttons a) {
         color: $color__text__light !important;
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -161,7 +168,14 @@
         color: $color__text__dark !important;
       }
       
-      a:not(.button):not(.btn):not(.cta-buttons a) {
+      // All links (including in headings) must be dark on light backgrounds
+      a:not(.button):not(.btn):not(.cta-buttons a),
+      h1 a:not(.button):not(.btn):not(.cta-buttons a),
+      h2 a:not(.button):not(.btn):not(.cta-buttons a),
+      h3 a:not(.button):not(.btn):not(.cta-buttons a),
+      h4 a:not(.button):not(.btn):not(.cta-buttons a),
+      h5 a:not(.button):not(.btn):not(.cta-buttons a),
+      h6 a:not(.button):not(.btn):not(.cta-buttons a) {
         color: $color__link !important;
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -196,7 +210,14 @@
     color: $color__text__light !important;
   }
   
-  a:not(.button):not(.btn):not(.cta-buttons a) {
+  // All links (including in headings) must be light on dark backgrounds
+  a:not(.button):not(.btn):not(.cta-buttons a),
+  h1 a:not(.button):not(.btn):not(.cta-buttons a),
+  h2 a:not(.button):not(.btn):not(.cta-buttons a),
+  h3 a:not(.button):not(.btn):not(.cta-buttons a),
+  h4 a:not(.button):not(.btn):not(.cta-buttons a),
+  h5 a:not(.button):not(.btn):not(.cta-buttons a),
+  h6 a:not(.button):not(.btn):not(.cta-buttons a) {
     color: $color__text__light !important;
     
     &:hover,
@@ -213,7 +234,14 @@
     color: $color__text__dark !important;
   }
   
-  a:not(.button):not(.btn):not(.cta-buttons a) {
+  // All links (including in headings) must be dark on light backgrounds
+  a:not(.button):not(.btn):not(.cta-buttons a),
+  h1 a:not(.button):not(.btn):not(.cta-buttons a),
+  h2 a:not(.button):not(.btn):not(.cta-buttons a),
+  h3 a:not(.button):not(.btn):not(.cta-buttons a),
+  h4 a:not(.button):not(.btn):not(.cta-buttons a),
+  h5 a:not(.button):not(.btn):not(.cta-buttons a),
+  h6 a:not(.button):not(.btn):not(.cta-buttons a) {
     color: $color__link !important;
     
     &:hover,
