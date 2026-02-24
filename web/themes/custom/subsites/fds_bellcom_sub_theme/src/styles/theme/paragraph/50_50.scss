@@ -478,65 +478,46 @@
 
         }
       }
-      &.button-blue {
+      // ============================================================================
+      // BUTTON COLORS: WHITE, GREY, BLACK ONLY
+      // ============================================================================
+      
+      &.button-white {
+        // White button with black text
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: $color__button__background;
-              border-color: $color__button__background;
-              color: $color__button__text;
+              background-color: $color__background; // #ffffff - white
+              border-color: $color__background;
+              color: $color__text__dark; // Black text on white background
 
               &:hover {
-                background-color: rgba($color__button__background__hover, 0.9);
-                border-color: rgba($color__button__background__hover, 0.9);
+                background-color: rgba($color__background, 0.9);
+                border-color: rgba($color__background, 0.9);
               }
             }
           }
           a {
-            background-color: $color__button__background;
-            border-color: $color__button__background;
-            color: $color__button__text;
+            background-color: $color__background; // #ffffff - white
+            border-color: $color__background;
+            color: $color__text__dark; // Black text on white background
 
             &:hover {
-              background-color: rgba($color__button__background__hover, 0.9);
-              border-color: rgba($color__button__background__hover, 0.9);
+              background-color: rgba($color__background, 0.9);
+              border-color: rgba($color__background, 0.9);
             }
           }
         }
       }
-      &.button-lightblue {
+      
+      &.button-grey {
+        // Grey button with white text
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: $color__background__primary;
-              border-color: $color__border;
-              color: $color__text;
-
-              &:hover {
-                background-color: rgba($color__background__primary, 0.9);
-                border-color: rgba($color__border, 0.9);
-              }
-            }
-          }
-          a {
-            background-color: $color__background__primary;
-            border-color: $color__border;
-            color: $color__text;
-
-            &:hover {
-              background-color: rgba($color__background__primary, 0.9);
-              border-color: rgba($color__border, 0.9);
-            }
-          }
-        }
-      }
-      &.button-red {
-        .field--name-field-fifty-fifty-link {
-          .field__item {
-            a {
-              background-color: $color__background__secondary;
+              background-color: $color__background__secondary; // #454545 - dark grey
               border-color: $color__background__secondary;
-              color: $color__text__light;
+              color: $color__text__light; // White text on grey background
 
               &:hover {
                 background-color: rgba($color__background__secondary, 0.9);
@@ -545,9 +526,9 @@
             }
           }
           a {
-            background-color: $color__background__secondary;
+            background-color: $color__background__secondary; // #454545 - dark grey
             border-color: $color__background__secondary;
-            color: $color__text__light;
+            color: $color__text__light; // White text on grey background
 
             &:hover {
               background-color: rgba($color__background__secondary, 0.9);
@@ -556,54 +537,30 @@
           }
         }
       }
-      &.button-lightred {
+      
+      &.button-black {
+        // Black button with white text
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: $color__background__primary;
-              border-color: $color__border;
-              color: $color__background__secondary;
+              background-color: $color__background__footer; // #231f20 - almost black
+              border-color: $color__background__footer;
+              color: $color__text__light; // White text on black background
 
               &:hover {
-                background-color: rgba($color__background__primary, 0.9);
-                border-color: rgba($color__border, 0.9);
-              }
-            }
-            a {
-              background-color: $color__background__primary;
-              border-color: $color__border;
-              color: $color__text;
-
-              &:hover {
-                background-color: rgba($color__background__primary, 0.9);
-                border-color: rgba($color__border, 0.9);
+                background-color: rgba($color__background__footer, 0.9);
+                border-color: rgba($color__background__footer, 0.9);
               }
             }
           }
-        }
-      }
-      &.button-black {
-        .field--name-field-fifty-fifty-link {
-          .field__item {
-            a {
-              background-color: $color__text__dark;
-              border-color: $color__text__dark;
-              color: $color__text__light;
+          a {
+            background-color: $color__background__footer; // #231f20 - almost black
+            border-color: $color__background__footer;
+            color: $color__text__light; // White text on black background
 
-              &:hover {
-                background-color: rgba($color__text__dark, 0.9);
-                border-color: rgba($color__text__dark, 0.9);
-              }
-            }
-            a {
-              background-color: $color__text__dark;
-              border-color: $color__text__dark;
-              color: $color__text__light;
-
-              &:hover {
-                background-color: rgba($color__text__dark, 0.9);
-                border-color: rgba($color__text__dark, 0.9);
-              }
+            &:hover {
+              background-color: rgba($color__background__footer, 0.9);
+              border-color: rgba($color__background__footer, 0.9);
             }
           }
         }
