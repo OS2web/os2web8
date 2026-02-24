@@ -89,20 +89,57 @@
     h2 {
       font-weight: 600;
     }
+    
+    // Default: if neither text-side-white nor text-side-black is specified,
+    // use dark text (assumes light background by default)
+    // This ensures text is visible even if classes are missing
+    h1, h2, h3, h4, h5, h6, p, li, span {
+      color: $color__text__dark;
+    }
+    
+    a:not(.button):not(.btn):not(.cta-buttons a) {
+      color: $color__link;
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+      
+      &:hover,
+      &:focus {
+        color: $color__link__hover;
+        text-decoration: underline;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+      }
+      
+      &:focus {
+        outline: 2px solid $color__link__hover;
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+    }
 
+    // ============================================================================
+    // 50/50 PARAGRAPH TEXT COLOR RULES
+    // ============================================================================
+    // These rules take precedence over general background color rules
+    // because the 50/50 template has its own logic for text colors
+    // based on the image/text side setup
+    // ============================================================================
+    
     &.text-side-white {
-      h2, h3, h4, h5, h6, p, li, span {
-        color: $color__text__light;
+      // White text for dark backgrounds (image side is dark)
+      // Must override general background color rules
+      h1, h2, h3, h4, h5, h6, p, li, span {
+        color: $color__text__light !important;
       }
       
       a:not(.button):not(.btn):not(.cta-buttons a) {
-        color: $color__text__light;
+        color: $color__text__light !important;
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
         
         &:hover,
         &:focus {
-          color: $color__text__light;
+          color: $color__text__light !important;
           text-decoration: underline;
           text-decoration-color: rgba($color__text__light, 0.7);
           text-decoration-thickness: 1.5px;
@@ -116,19 +153,22 @@
         }
       }
     }
+    
     &.text-side-black {
-      h2, h3, h4, h5, h6, p, li, span {
-        color: $color__text__dark;
+      // Dark text for light backgrounds (image side is light)
+      // Must override general background color rules
+      h1, h2, h3, h4, h5, h6, p, li, span {
+        color: $color__text__dark !important;
       }
       
       a:not(.button):not(.btn):not(.cta-buttons a) {
-        color: $color__link;
+        color: $color__link !important;
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
         
         &:hover,
         &:focus {
-          color: $color__link__hover;
+          color: $color__link__hover !important;
           text-decoration: underline;
           text-decoration-thickness: 1.5px;
           text-underline-offset: 2px;
@@ -141,6 +181,46 @@
         }
       }
     }
+}
+
+// ============================================================================
+// 50/50 PARAGRAPH OVERRIDE FOR BACKGROUND COLOR WRAPPERS
+// ============================================================================
+// Ensure 50/50 paragraph text-side rules take precedence even when inside
+// background-color--primary, background-color--secondary, or background-color--tertiary
+// ============================================================================
+.background-color--primary .paragraph-50-50-wrapper .text-side.text-side-white,
+.background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-white,
+.background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-white {
+  h1, h2, h3, h4, h5, h6, p, li, span {
+    color: $color__text__light !important;
+  }
+  
+  a:not(.button):not(.btn):not(.cta-buttons a) {
+    color: $color__text__light !important;
+    
+    &:hover,
+    &:focus {
+      color: $color__text__light !important;
+    }
+  }
+}
+
+.background-color--primary .paragraph-50-50-wrapper .text-side.text-side-black,
+.background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-black,
+.background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-black {
+  h1, h2, h3, h4, h5, h6, p, li, span {
+    color: $color__text__dark !important;
+  }
+  
+  a:not(.button):not(.btn):not(.cta-buttons a) {
+    color: $color__link !important;
+    
+    &:hover,
+    &:focus {
+      color: $color__link__hover !important;
+    }
+  }
 
 
     .cta-buttons {

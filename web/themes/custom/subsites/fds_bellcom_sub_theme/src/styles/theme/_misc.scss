@@ -530,9 +530,17 @@ body .page-container {
   color: $color__text__dark !important;
 
   // ALL text elements must be dark
-  h1, h2, h3, h4, h5, h6, 
-  p, li, span, 
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]),
+  // EXCEPT: 50/50 paragraph text-side (handled by text-side-white/black classes)
+  h1:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
+  h2:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
+  h3:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
+  h4:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
+  h5:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
+  h6:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
+  p:not(.paragraph-50-50-wrapper .text-side p),
+  li:not(.paragraph-50-50-wrapper .text-side li),
+  span:not(.paragraph-50-50-wrapper .text-side span),
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
   .section-heading__title,
   .field--name-field-os2web-news-heading h1,
   .field--name-field-os2web-news-heading h2,
@@ -602,9 +610,10 @@ body .page-container {
   background-color: $background_color__secondary !important;
 
   // ALL text elements must be light
+  // EXCEPT: 50/50 paragraph text-side rules take precedence
   h1, h2, h3, h4, h5, h6, 
   p, li, span,
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]),
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
   .section-heading__title,
   .field--name-field-os2web-news-heading h1,
   .field--name-field-os2web-news-heading h2,
@@ -674,9 +683,10 @@ body .page-container {
   background-color: $background_color__tertiary !important;
 
   // ALL text elements must be light
+  // EXCEPT: 50/50 paragraph text-side rules take precedence
   h1, h2, h3, h4, h5, h6, 
   p, li, span,
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]),
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
   .section-heading__title,
   .field--name-field-os2web-news-heading h1,
   .field--name-field-os2web-news-heading h2,
@@ -766,6 +776,21 @@ body .page-container {
   h1, h2, h3, h4, h5, h6, a, li, span, p {
     color: $color__text__light;
   }
+}
+
+// ============================================================================
+// 50/50 PARAGRAPH EXCEPTION
+// ============================================================================
+// The 50/50 paragraph has its own text color logic (text-side-white/black)
+// These rules must take precedence over general background color rules
+// ============================================================================
+// The text-side-white and text-side-black classes in 50_50.scss already have !important
+// This rule ensures they override any general background color rules
+.background-color--primary .paragraph-50-50-wrapper .text-side,
+.background-color--secondary .paragraph-50-50-wrapper .text-side,
+.background-color--tertiary .paragraph-50-50-wrapper .text-side {
+  // Let text-side-white and text-side-black classes handle colors
+  // They have !important and are more specific, so they will win
 }
 
 
