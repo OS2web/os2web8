@@ -1,0 +1,411 @@
+
+
+.paragraph-50-50-wrapper {
+  display: flex;
+  min-height: 300px; // Adjust as needed for your design
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  // Flex child selector for the image and text sides
+  .image-side, .text-side {
+    width: 50%;
+    display: flex;
+    justify-content: center; // Center-aligns the content horizontally
+    overflow: hidden; // Prevents image overflow
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  // Ensure the image fits in its container
+  .image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Adjusts the size of the image to fill the container
+  }
+
+  .image-side .media--type-os2web-video {
+    height: 100%;
+  }
+
+  .image-side .field--name-field-media-video-file {
+    height: 100%;
+  }
+
+  .image-side video {
+    height: 100%;
+  }
+
+  .image-side .field--name-field-fifty-fifty-video {
+    width: 100%;
+    height: 100%;
+
+    .media {
+      width: 100%;
+      height: 100%;
+
+      .field--name-field-media-image {
+        height: 100%;
+
+        .field__item {
+          height: 100%;
+        }
+      }
+
+    }
+  }
+
+
+  .image-side .field--name-field-media-video-file .field__item {
+    height: 100%;
+  }
+
+  .image-side .field--name-field-fifty-fifty-iframe {
+    height: 100%;
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Styling for the text side
+  .text-side {
+    padding: 20px 60px; // Adjust padding as needed
+    flex-direction: column;
+    gap: 20px;
+
+    @media only screen and (max-width: 992px) {
+      padding: 20px;
+    }
+
+    h2, p {
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: 600;
+    }
+
+    &.text-side-white {
+      h2, h3, h4, h5, h6, p, li, span {
+        color: $color__text__light;
+      }
+      
+      a:not(.button):not(.btn):not(.cta-buttons a) {
+        color: $color__text__light;
+        text-decoration: none;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+        
+        &:hover,
+        &:focus {
+          color: $color__text__light;
+          text-decoration: underline;
+          text-decoration-color: rgba($color__text__light, 0.7);
+          text-decoration-thickness: 1.5px;
+          text-underline-offset: 2px;
+        }
+        
+        &:focus {
+          outline: 2px solid $color__text__light;
+          outline-offset: 2px;
+          border-radius: 2px;
+        }
+      }
+    }
+    &.text-side-black {
+      h2, h3, h4, h5, h6, p, li, span {
+        color: $color__text__dark;
+      }
+      
+      a:not(.button):not(.btn):not(.cta-buttons a) {
+        color: $color__link;
+        text-decoration: none;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+        
+        &:hover,
+        &:focus {
+          color: $color__link__hover;
+          text-decoration: underline;
+          text-decoration-thickness: 1.5px;
+          text-underline-offset: 2px;
+        }
+        
+        &:focus {
+          outline: 2px solid $color__link__hover;
+          outline-offset: 2px;
+          border-radius: 2px;
+        }
+      }
+    }
+
+
+    .cta-buttons {
+      .field--name-field-fifty-fifty-link {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .field__item {
+          a {
+            background-color: $color__background;
+            border-radius: 4px;
+            border-color: $color__background;
+            transition: .3s ease;
+            font-weight: 600;
+            position: relative;
+            padding: 10px 50px 10px 10px;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            text-decoration: none;
+            color: $color__text__dark;
+
+            &:not(.ext):after {
+              content: '\f0a9';
+              position: absolute;
+              display: inline-block;
+              top: 50%;
+              right: 15px;
+              transform: translateY(-50%);
+              font-family: "FontAwesome";
+            }
+
+            &.ext:after {
+              content: '\f14c';
+              position: absolute;
+              display: inline-block;
+              top: 50%;
+              right: 15px;
+              transform: translateY(-50%);
+              font-family: "FontAwesome";
+            }
+
+            &:hover {
+              background-color: $color__background__primary;
+              border-color: $color__background__primary;
+              text-decoration: none;
+            }
+
+          }
+        }
+        a {
+          background-color: $color__background;
+          border-radius: 4px;
+          border-color: $color__background;
+          transition: .3s ease;
+          font-weight: 600;
+          position: relative;
+          padding: 10px 50px 10px 10px;
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          text-decoration: none;
+          color: $color__text__dark;
+
+          &:not(.ext):after {
+            content: '\f0a9';
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-family: "FontAwesome";
+          }
+
+          &.ext:after {
+            content: '\f35d';
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-family: "FontAwesome";
+          }
+
+          &:hover {
+            background-color: $color__background__primary;
+            border-color: $color__background__primary;
+            text-decoration: none;
+          }
+
+        }
+      }
+      &.button-blue {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: $color__button__background;
+              border-color: $color__button__background;
+              color: $color__button__text;
+
+              &:hover {
+                background-color: rgba($color__button__background__hover, 0.9);
+                border-color: rgba($color__button__background__hover, 0.9);
+              }
+            }
+          }
+          a {
+            background-color: $color__button__background;
+            border-color: $color__button__background;
+            color: $color__button__text;
+
+            &:hover {
+              background-color: rgba($color__button__background__hover, 0.9);
+              border-color: rgba($color__button__background__hover, 0.9);
+            }
+          }
+        }
+      }
+      &.button-lightblue {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: $color__background__primary;
+              border-color: $color__border;
+              color: $color__text;
+
+              &:hover {
+                background-color: rgba($color__background__primary, 0.9);
+                border-color: rgba($color__border, 0.9);
+              }
+            }
+          }
+          a {
+            background-color: $color__background__primary;
+            border-color: $color__border;
+            color: $color__text;
+
+            &:hover {
+              background-color: rgba($color__background__primary, 0.9);
+              border-color: rgba($color__border, 0.9);
+            }
+          }
+        }
+      }
+      &.button-red {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: $color__background__secondary;
+              border-color: $color__background__secondary;
+              color: $color__text__light;
+
+              &:hover {
+                background-color: rgba($color__background__secondary, 0.9);
+                border-color: rgba($color__background__secondary, 0.9);
+              }
+            }
+          }
+          a {
+            background-color: $color__background__secondary;
+            border-color: $color__background__secondary;
+            color: $color__text__light;
+
+            &:hover {
+              background-color: rgba($color__background__secondary, 0.9);
+              border-color: rgba($color__background__secondary, 0.9);
+            }
+          }
+        }
+      }
+      &.button-lightred {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: $color__background__primary;
+              border-color: $color__border;
+              color: $color__background__secondary;
+
+              &:hover {
+                background-color: rgba($color__background__primary, 0.9);
+                border-color: rgba($color__border, 0.9);
+              }
+            }
+            a {
+              background-color: $color__background__primary;
+              border-color: $color__border;
+              color: $color__text;
+
+              &:hover {
+                background-color: rgba($color__background__primary, 0.9);
+                border-color: rgba($color__border, 0.9);
+              }
+            }
+          }
+        }
+      }
+      &.button-black {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: $color__text__dark;
+              border-color: $color__text__dark;
+              color: $color__text__light;
+
+              &:hover {
+                background-color: rgba($color__text__dark, 0.9);
+                border-color: rgba($color__text__dark, 0.9);
+              }
+            }
+            a {
+              background-color: $color__text__dark;
+              border-color: $color__text__dark;
+              color: $color__text__light;
+
+              &:hover {
+                background-color: rgba($color__text__dark, 0.9);
+                border-color: rgba($color__text__dark, 0.9);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Classes for positioning the image on the left or right
+  &.image-left {
+    flex-direction: row;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &.image-right {
+    flex-direction: row-reverse;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.primary-bullet .field--type-text-long ul li::before {
+  content: '\f061';
+  font-family: FontAwesome;
+  color: $bullet_color__primary;
+}
+
+.secondary-bullet .field--type-text-long ul li::before {
+  content: '\f061';
+  font-family: FontAwesome;
+  color: $bullet_color__secondary;
+}
+
+.tertiary-bullet .field--type-text-long ul li::before {
+  content: '\f061';
+  font-family: FontAwesome;
+  color: $bullet_color__tertiary;
+}
+
+.text-align-center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

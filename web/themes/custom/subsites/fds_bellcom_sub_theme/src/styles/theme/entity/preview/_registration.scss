@@ -1,0 +1,121 @@
+// |--------------------------------------------------------------------------
+// | Registration
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .entity-preview--os2web-registration
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin entity-preview--os2web-registration-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+a.entity-preview--os2web-registration {
+  max-width: unset;
+}
+.entity-preview--os2web-registration {
+  margin-bottom: 8px;
+  padding: 8px ($grid-gutter-width / 2);
+  max-width: 450px;
+  color: $color__text__light;
+}
+
+a.entity-preview--os2web-registration {
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+
+  &, &:visited, &:active {
+    color: $color__text__light; // Light text on dark background
+  }
+  
+  &:hover,
+  &:focus {
+    color: $color__text__light;
+    text-decoration: underline;
+    text-decoration-color: rgba($color__text__light, 0.7);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+  }
+  
+  &:focus {
+    outline: 2px solid $color__text__light;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+.entity-preview--os2web-registration {
+
+  &,
+  &.taxonomy-term-background-color--primary {
+    background-color: $color__background__secondary;
+  }
+
+  &.taxonomy-term-background-color--secondary {
+    background-color: $color__background__tertiary;
+  }
+
+  &.taxonomy-term-background-color--tertiary {
+    background-color: $color__spotbox__secondary;
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {
+
+  .entity-preview--os2web-registration {
+    border: 1px solid $color__border__dark;
+    color: $color__text !important;
+  }
+}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

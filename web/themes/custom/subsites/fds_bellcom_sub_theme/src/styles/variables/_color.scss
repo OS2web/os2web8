@@ -1,0 +1,144 @@
+// ============================================================================
+// COMPREHENSIVE BLACK, WHITE & GREY COLOR SCHEME
+// ============================================================================
+// All colors are flexible and editable through Drupal Color Module
+// Baseline: Black, White, and Grey only
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// BASE COLORS (Required by Drupal Color Module)
+// ----------------------------------------------------------------------------
+$color__base: #454545; // Dark grey - base theme color
+$color__text: #231f20; // Almost black - main text color
+$color__link: #231f20; // Almost black - link color
+
+// ----------------------------------------------------------------------------
+// BACKGROUND COLORS
+// ----------------------------------------------------------------------------
+$color__background: #ffffff; // White - main page background
+$color__background__primary: #f5f5f5; // Very light grey - boxes, cards, content areas
+$color__background__secondary: #454545; // Dark grey - sections with white text
+$color__background__tertiary: #747474; // Medium-dark grey - alternative sections
+$color__background__navigation: #ffffff; // White - navigation bar
+$color__background__footer: #231f20; // Almost black - footer main
+$color__background__footer__secondary: #454545; // Dark grey - footer secondary areas
+$color__background__dropdown: #ffffff; // White - dropdown menu background
+$color__background__overlay: #ffffff; // White - overlay backgrounds (base for rgba)
+
+// ----------------------------------------------------------------------------
+// TEXT COLORS
+// ----------------------------------------------------------------------------
+$color__text: #231f20; // Almost black - main text on light backgrounds
+$color__text__light: #ffffff; // White - text on dark backgrounds
+$color__text__dark: #000000; // Black - text on very light backgrounds
+$color__text__secondary: #747474; // Medium-dark grey - secondary text
+
+// ----------------------------------------------------------------------------
+// LINK COLORS
+// ----------------------------------------------------------------------------
+$color__link: #231f20; // Almost black - standard links
+$color__link__hover: #000000; // Black - link hover state
+$color__link__footer: #bfbfbf; // Light grey - footer links (on dark background)
+
+// ----------------------------------------------------------------------------
+// BORDER COLORS
+// ----------------------------------------------------------------------------
+$color__border: #e6e6e6; // Light grey - standard borders
+$color__border__light: #eeeeee; // Very light grey - subtle borders
+$color__border__dark: #454545; // Dark grey - prominent borders
+
+// ----------------------------------------------------------------------------
+// NAVIGATION COLORS
+// ----------------------------------------------------------------------------
+$color__navigation__text: #454545; // Dark grey - navigation link text
+$color__navigation__text__hover: #231f20; // Almost black - navigation hover text
+$color__navigation__background__hover: #454545; // Dark grey - navigation hover background
+$color__navigation__active__text: #ffffff; // White - active navigation text
+$color__navigation__active__background: #454545; // Dark grey - active navigation background
+
+// ----------------------------------------------------------------------------
+// BUTTON COLORS
+// ----------------------------------------------------------------------------
+$color__button__background: #454545; // Dark grey - primary button background
+$color__button__background__hover: #231f20; // Almost black - button hover background
+$color__button__text: #ffffff; // White - button text
+
+// ----------------------------------------------------------------------------
+// SPOTBOX COLORS (for spotbox variants)
+// ----------------------------------------------------------------------------
+$color__spotbox__primary: #454545; // Dark grey - spotbox primary variant
+$color__spotbox__secondary: #747474; // Medium-dark grey - spotbox secondary variant
+$color__spotbox__tertiary: #999999; // Medium grey - spotbox tertiary variant
+$color__spotbox__text: #ffffff; // White - spotbox text on colored backgrounds
+
+// ----------------------------------------------------------------------------
+// FORM INPUT COLORS
+// ----------------------------------------------------------------------------
+$color__input__background: #ffffff; // White - input background
+$color__input__text: #000000; // Black - input text
+$color__input__border: #999999; // Medium grey - input border
+$color__input__placeholder: #999999; // Medium grey - placeholder text
+$color__input__icon: #454545; // Dark grey - input icon color
+
+// Note: Alert/Success/Warning/Error colors removed - use generic background/text variables instead
+// For example: $color__background__secondary, $color__background__tertiary, $color__text__light, etc.
+
+// ----------------------------------------------------------------------------
+// BREADCRUMB COLORS
+// ----------------------------------------------------------------------------
+$color__breadcrumb__separator: #555555; // Medium-dark grey - breadcrumb separator
+
+// ----------------------------------------------------------------------------
+// BULLET COLORS
+// ----------------------------------------------------------------------------
+$color__bullet: #454545; // Dark grey - standard bullet points
+$color__bullet__primary: #231f20; // Almost black
+$color__bullet__secondary: #ffffff; // White
+$color__bullet__tertiary: #747474; // Medium-dark grey
+
+// ----------------------------------------------------------------------------
+// SHADOW & OVERLAY COLORS
+// ----------------------------------------------------------------------------
+$color__shadow__base: #1b1b1d; // Dark grey - base color for shadows (used with rgba)
+$color__overlay__base: #ffffff; // White - base color for overlays (used with rgba)
+
+// ----------------------------------------------------------------------------
+// LEGACY COMPATIBILITY (for backward compatibility)
+// ----------------------------------------------------------------------------
+// These map to the old naming convention for existing code
+$background_color__default: $color__background;
+$background_color__primary: $color__background__primary;
+$background_color__secondary: $color__background__secondary;
+$background_color__tertiary: $color__background__tertiary;
+$background_color__navigation: $color__background__navigation;
+$background_color__footer_primary: $color__background__footer;
+$background_color__footer_secondary: $color__background__footer__secondary;
+$background_color__button: $color__button__background;
+$background_color__button_hover: $color__button__background__hover;
+$color__link__hover: $color__link__hover;
+$color__link_footer: $color__link__footer;
+$color__bullets: $color__bullet;
+$bullet_color__primary: $color__bullet__primary;
+$bullet_color__secondary: $color__bullet__secondary;
+$bullet_color__tertiary: $color__bullet__tertiary;
+$color__text__light: $color__text__light;
+$color__text__dark: $color__text__dark;
+$color__border: $color__border;
+$color__border__light: $color__border__light;
+$color__border__dark: $color__border__dark;
+$color__navigation__text: $color__navigation__text;
+$color__navigation__text__hover: $color__navigation__text__hover;
+$color__navigation__background__hover: $color__navigation__background__hover;
+$color__navigation__active__text: $color__navigation__active__text;
+$color__navigation__active__background: $color__navigation__active__background;
+$color__dropdown__background: $color__background__dropdown;
+$color__dropdown__shadow__base: $color__shadow__base;
+$color__overlay__background__base: $color__overlay__base;
+$color__section__alert__background: $color__background__tertiary;
+$color__section__alert__text: $color__text__dark;
+$color__input__background: $color__input__background;
+$color__input__text: $color__input__text;
+$color__input__border: $color__input__border;
+$color__input__placeholder: $color__input__placeholder;
+$color__input__icon: $color__input__icon;
+$color__breadcrumb__separator: $color__breadcrumb__separator;

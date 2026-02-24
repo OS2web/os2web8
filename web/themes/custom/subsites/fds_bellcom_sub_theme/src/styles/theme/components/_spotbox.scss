@@ -1,0 +1,719 @@
+// |--------------------------------------------------------------------------
+// | Spotbox
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .spotbox
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin spotbox-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.spotbox {
+  display: block;
+  position: relative;
+
+  max-width: 100%;
+
+  overflow: hidden;
+
+  box-shadow: $box-shadow;
+
+  &, &:hover, &:focus, &:visited {
+    color: $color__text;
+    background-color: $color__background;
+    outline-color: $color__background__secondary;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none !important; // Ensure spotboxes never get underlines
+  }
+
+  .field--name-title,
+  .field--name-field-os2web-spotbox-heading {
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+
+      color: $color__text;
+
+      &, p {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  .field--name-field-os2web-bdk-ss-cat-icon {
+    text-align: center;
+  }
+
+  .field--type-link {
+
+    a:after {
+      display: none;
+    }
+  }
+
+  + .spotbox {
+    margin-top: 10px;
+  }
+}
+
+a.spotbox {
+  max-width: none;
+
+  text-decoration: none;
+}
+
+.spotbox__image {}
+.spotbox__content {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.spotbox--background-color-primary,
+.spotbox--background-color-secondary,
+.spotbox--background-color-tertiary {
+  box-shadow: none;
+}
+
+// Design system: Spotbox variants must follow background color rules
+.spotbox--background-color-primary {
+  // Primary = light background, dark text
+  &, &:hover, &:focus, &:visited {
+    color: $color__text__dark !important;
+  }
+
+  .field--name-field-os2web-spotbox-heading {
+    h1, h2, h3, h4, h5, h6 {
+      color: $color__text__dark !important;
+    }
+  }
+  
+  p, .body-text, .body-copy-text {
+    color: $color__text__dark !important;
+  }
+}
+
+.spotbox--background-color-secondary,
+.spotbox--background-color-tertiary {
+  // Secondary/Tertiary = dark background, light text
+  &, &:hover, &:focus, &:visited {
+    color: $color__text__light !important;
+  }
+
+  .field--name-field-os2web-spotbox-heading {
+    h1, h2, h3, h4, h5, h6 {
+      color: $color__text__light !important;
+    }
+  }
+
+  a,
+  .field--type-link a {
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+
+    &, &:visited {
+      color: $color__text__light !important;
+    }
+    
+    &:hover,
+    &:focus {
+      color: $color__text__light !important;
+      text-decoration: underline;
+      text-decoration-color: rgba($color__text__light, 0.7);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+    }
+    
+    &:focus {
+      outline: 2px solid $color__text__light;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+  
+  p, .body-text, .body-copy-text {
+    color: $color__text__light !important;
+  }
+
+  &:after {
+    color: $color__text__light !important;
+  }
+}
+
+// Design system: Spotbox links must respect background color rules
+.spotbox--background-color-primary {
+  a,
+  .field--type-link a {
+    &, &:visited {
+      color: $color__link !important;
+    }
+    
+    &:hover,
+    &:focus {
+      color: $color__link__hover !important;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.spotbox--background-color-secondary,
+.spotbox--background-color-tertiary {
+  a,
+  .field--type-link a {
+    &, &:visited {
+      color: $color__text__light !important;
+    }
+    
+    &:hover,
+    &:focus {
+      color: $color__text__light !important;
+      text-decoration: underline;
+      text-decoration-color: rgba($color__text__light, 0.7);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+    }
+  }
+
+  p, .body-text, .body-copy-text {
+    color: $color__text__light;
+  }
+
+  &:after {
+    color: $color__text__light;
+  }
+}
+
+.spotbox {
+
+  &.spotbox--background-color-primary {
+
+    &, &:hover, &:focus, &:visited {
+      background-color: $color__spotbox__primary;
+    }
+
+    &:after {
+      color: $color__spotbox__text;
+    }
+  }
+
+  &.spotbox--background-color-secondary {
+
+    &, &:hover, &:focus, &:visited {
+      background-color: $color__spotbox__secondary;
+    }
+  }
+
+  &.spotbox--background-color-tertiary {
+
+    &, &:hover, &:focus, &:visited {
+      background-color: $color__spotbox__tertiary;
+    }
+
+    &:after {
+      color: $color__spotbox__text;
+    }
+  }
+}
+
+.spotbox--selfservice {
+
+  .spotbox__image {
+    display: flex;
+
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    margin-right: 0 - $grid-gutter-width;
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    img,
+    svg {
+      height: 52px;
+    }
+  }
+
+  .spotbox__content {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 80px;
+    padding-left: 0;
+  }
+
+  [class*="col-"] {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.spotbox--centered-icon {
+
+    &:after {
+      top: 50%;
+      right: 10px;
+      bottom: auto;
+
+      height: 3rem;
+
+      margin-top: -1.5rem;
+    }
+  }
+
+  &:after {
+    display: flex;
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    align-items: center;
+
+    font-size: 3rem;
+    font-family: "Material Icons";
+    content: "keyboard_backspace";
+    transform: rotate(180deg);
+
+    color: $color__background__secondary;
+  }
+}
+
+.spotbox--icon {
+
+  .spotbox__image {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+    img,
+    svg {
+      height: 30px;
+    }
+  }
+  .spotbox__content {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+
+  &.spotbox--centered-icon {
+
+    &:after {
+      top: 50%;
+      right: 10px;
+      bottom: auto;
+
+      height: 3rem;
+
+      margin-top: -1.5rem;
+    }
+  }
+
+  &:after {
+    display: flex;
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    align-items: center;
+
+    font-size: 3rem;
+    font-family: "Material Icons";
+    content: "keyboard_backspace";
+    transform: rotate(180deg);
+
+    color: $color__background__secondary;
+  }
+}
+
+.spotbox--image {
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 4px;
+
+  img {
+    display: block;
+
+    width: 100%;
+  }
+
+  .spotbox__content {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 25px 15px !important;
+
+    color: $color__text__light;
+    background-color: rgba($color__background__primary, .9);
+  }
+
+  .field--name-field-os2web-spotbox-heading {
+
+    h1, h2, h3, h4, h5, h6 {
+      text-transform: uppercase;
+
+      color: $color__spotbox__text;
+    }
+  }
+}
+
+.spotbox--button {
+  border: 0;
+
+  &.spotbox {
+    box-shadow: none;
+
+    color: $color__spotbox__text;
+    background-color: $color__spotbox__primary !important;
+
+    h1, h2, h3, h4, h5, h6 {
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      color: inherit;
+    }
+
+    &:after {
+      display: flex;
+      position: absolute;
+
+      align-items: center;
+      justify-content: center;
+
+      margin-top: -1.75rem;
+
+      top: 50%;
+      right: 2.4rem;
+
+      width: 3.5rem;
+      height: 3.5rem;
+
+      font-size: 2rem;
+      font-family: FontAwesome;
+      content: $fa-var-arrow-right;
+
+      color: $color__spotbox__text;
+      background-color: $color__spotbox__primary;
+
+      transform: rotate(0);
+      border-radius: 25px;
+    }
+  }
+
+  &.spotbox--background-color-primary {
+
+    &, &:hover, &:focus, &:visited {
+      background-color: $color-green-001 !important;
+    }
+  }
+
+  &.spotbox--background-color-secondary {
+
+    &, &:hover, &:focus, &:visited {
+      background-color: $color-orange-005 !important;
+    }
+  }
+
+  &.spotbox--background-color-tertiary {
+
+    &, &:hover, &:focus, &:visited {
+      background-color: $color-blue-001 !important;
+    }
+  }
+
+  .spotbox__content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    padding-left: 20px;
+  }
+
+  &:after {
+    display: flex;
+    position: absolute;
+
+    top: 50%;
+    right: 10px;
+
+    height: 3rem;
+    margin-top: -1.5rem;
+
+    align-items: center;
+
+    font-size: 3rem;
+    font-family: "Material Icons";
+    content: "keyboard_backspace";
+    transform: rotate(180deg);
+
+    color: $color__background__secondary;
+  }
+}
+
+// --- Grid.
+.field--name-field-os2web-spotbox-reference {
+
+  > .field__item {
+    margin-bottom: $grid-gutter-width / 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.paragraph--grid_1,
+.paragraph--grid_2,
+.paragraph--grid_3 {
+
+  .field--name-field-os2web-spotbox-reference {
+
+    > .field__item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.paragraph--grid_1 {
+
+  .spotbox {
+    height: 200px;
+
+    [class*="col-"] {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    .spotbox__image,
+    .spotbox__content {
+      padding-left: $grid-gutter-width;
+    }
+    .spotbox__image {
+      padding-top: 2rem;
+      padding-right: $grid-gutter-width;
+      justify-content: left;
+    }
+    .spotbox__content {
+      height: 90px;
+
+      padding-top: 1rem;
+      padding-bottom: 4rem;
+      padding-right: 4.5rem;
+    }
+
+    .field--name-field-os2web-spotbox-icon {
+      text-align: left;
+    }
+  }
+}
+
+.paragraph--grid_2 {
+
+  .spotbox {
+    height: 200px;
+
+    .spotbox__image {
+      height: 200px;
+    }
+  }
+}
+
+.paragraph--grid_3 {
+
+  .spotbox {
+
+    [class*="col-"] {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    .spotbox__image {
+      padding: 0;
+    }
+    .spotbox__content {
+      padding: 1.5rem 5rem 1.5rem 1.5rem;
+    }
+  }
+
+  .field--name-field-os2web-spotbox-reference {
+
+    > .field__item {
+
+      &:nth-child(1) {
+
+        .spotbox {
+
+          > .row {
+            box-sizing: content-box;
+            max-width: 100%;
+          }
+
+          .spotbox__content {
+            height: 180px;
+
+            padding: 1.5rem 3rem 5rem 3rem;
+          }
+
+          &:after {
+            top: auto;
+            right: auto;
+            left: 3rem;
+            bottom: 1.5rem;
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+
+        .spotbox {
+
+          .field--name-field-os2web-spotbox-heading {
+
+            h1, h2, h3, h4, h5, h6 {
+
+              &, p {
+                font-size: $h5-font-size;
+              }
+            }
+          }
+
+          .spotbox__content {
+            height: 75px;
+          }
+
+          .field--name-field-os2web-spotbox-link-text {
+            display: none;
+          }
+
+          &:after {
+            right: 1.5rem;
+            bottom: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {}
+
+// Mobile - only
+@include media-breakpoint-only(xs, $grid-breakpoints) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  .spotbox--icon {
+
+    .spotbox__image {
+      display: flex;
+
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+      margin-right: 0 - $grid-gutter-width;
+
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+
+      img,
+      svg {
+        height: 52px;
+      }
+    }
+
+    .spotbox__content {
+      padding-top: 35px;
+      padding-bottom: 35px;
+      padding-right: 80px;
+      padding-left: 0;
+    }
+
+    [class*="col-"] {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &.spotbox--centered-icon {
+
+      &:after {
+        right: 30px;
+      }
+    }
+  }
+
+  .spotbox--button {
+
+    .spotbox__content {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 80px;
+      padding-left: 30px;
+    }
+
+    &:after {
+      right: 30px;
+    }
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm, $grid-breakpoints) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md, $grid-breakpoints) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Large desktop - only
+@include media-breakpoint-only(lg, $grid-breakpoints) {}
+
+// Extra large desktop - and up
+@include media-breakpoint-up(xl) {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

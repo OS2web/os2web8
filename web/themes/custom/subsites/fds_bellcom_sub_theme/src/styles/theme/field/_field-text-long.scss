@@ -1,0 +1,16 @@
+.field--type-text-long:not(.field--widget-text-textarea) ul li::before {
+  content: "\f061";
+  font-family: FontAwesome;
+}
+
+.field--type-text-with-summary ul li::before {
+  content: "\f061";
+  font-family: FontAwesome;
+}
+
+
+.field--type-text-long {
+  a {
+    color: inherit;
+  }
+}

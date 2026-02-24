@@ -1,0 +1,183 @@
+// ============================================================================
+// DKFDS COLOR OVERRIDES
+// ============================================================================
+// This file overrides DKFDS color variables to use our flexible color scheme
+// All DKFDS colors are mapped to our black/white/grey color scheme
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// BASE COLORS
+// ----------------------------------------------------------------------------
+$color-base-001: $color__background !default; // White
+$color-base-002: $color__text !default; // Almost black
+
+// ----------------------------------------------------------------------------
+// GRAY SCALE
+// ----------------------------------------------------------------------------
+$color-gray-001: $color__text !default; // Almost black
+$color-gray-002: $color__background__secondary !default; // Dark grey
+$color-gray-003: $color__text__secondary !default; // Medium-dark grey
+$color-gray-004: $color__spotbox__tertiary !default; // Medium grey
+$color-gray-005: $color__input__border !default; // Medium grey (lighter)
+$color-gray-055: #DCDCDC !default; // Very light grey
+$color-gray-006: $color__background__primary !default; // Very light grey
+$color-gray-pale: #e4e4e4 !default; // Light grey
+
+$color-white: $color__background !default; // White
+$color-black: $color__text__dark !default; // Black
+
+// ----------------------------------------------------------------------------
+// FUNCTIONAL COLORS (mapped to grey scale)
+// ----------------------------------------------------------------------------
+$color-primary: $color__background__primary !default; // Very light grey
+$color-primary-medium: $color__text__secondary !default; // Medium-dark grey
+$color-primary-dark: $color__background__secondary !default; // Dark grey
+$color-primary-light: $color__background !default; // White
+$color-primary-darker: $color__text !default; // Almost black
+$color-primary-darkest: $color__text !default; // Almost black
+$color-primary-lightest: $color__spotbox__tertiary !default; // Medium grey
+
+$color-background: $color__background !default; // White
+
+// ----------------------------------------------------------------------------
+// TEXT COLORS
+// ----------------------------------------------------------------------------
+$color-text: $color__text !default; // Almost black
+$color-text-secondary: $color__text__secondary !default; // Medium-dark grey
+$color-text-bright: $color__background__primary !default; // Very light grey
+
+// ----------------------------------------------------------------------------
+// LINK COLORS
+// ----------------------------------------------------------------------------
+$color-link: $color__link !default; // Almost black
+$color-link-hover: $color__link__hover !default; // Black
+$color-link-focus: $color__link__hover !default; // Black
+$color-link-visited: $color__link !default; // Almost black
+
+// ----------------------------------------------------------------------------
+// BORDER COLORS
+// ----------------------------------------------------------------------------
+$color-border: $color__border !default; // Light grey
+$color-border-light: $color__background__primary !default; // Very light grey
+$color-border-bright: $color__background !default; // White
+$color-border-focus: $color__spotbox__tertiary !default; // Medium grey
+
+// ----------------------------------------------------------------------------
+// HEADER, FOOTER & NAVIGATION
+// ----------------------------------------------------------------------------
+$color-header-background: $color__background__primary !default; // Very light grey
+$color-footer-background: $color__background__footer !default; // Almost black
+$color-topmenu-background: $color__background__secondary !default; // Dark grey
+$color-subnav-background: $color__background__secondary !default; // Dark grey
+$color-page: $color__background !default; // White
+
+// ----------------------------------------------------------------------------
+// BUTTON COLORS
+// ----------------------------------------------------------------------------
+$button-primary-color: $color__button__text !default; // White
+$button-primary-bg: $color__button__background !default; // Dark grey
+$button-primary-border-color: $color__button__background !default; // Dark grey
+$button-primary-hover-bg: $color__button__background__hover !default; // Almost black
+$button-primary-hover-border-color: $color__button__background__hover !default; // Almost black
+$button-primary-active-bg: $color__button__background__hover !default; // Almost black
+$button-primary-active-border-color: $color__button__background__hover !default; // Almost black
+$button-primary-focus-bg: $color__button__background__hover !default; // Almost black
+$button-primary-focus-border-color: $color__button__background__hover !default; // Almost black
+$button-disabled-bg: $color-gray-pale !default; // Light grey
+
+// ----------------------------------------------------------------------------
+// ALERT & STATUS COLORS (mapped to generic grey scale variables)
+// ----------------------------------------------------------------------------
+$color-success: $color__spotbox__tertiary !default; // Medium grey
+$color-success-light: $color__background__primary !default; // Very light grey
+$color-warning: $color__background__tertiary !default; // Medium-dark grey
+$color-warning-light: $color__background__primary !default; // Very light grey
+$color-error: $color__background__secondary !default; // Dark grey
+$color-error-light: $color__background__primary !default; // Very light grey
+$color-info: $color__spotbox__tertiary !default; // Medium grey
+$color-info-light: $color__background__primary !default; // Very light grey
+
+$color-positive: $color__spotbox__tertiary !default; // Medium grey
+$color-negative: $color__background__secondary !default; // Dark grey
+$color-text-positive: $color__spotbox__tertiary !default; // Medium grey
+$color-text-negative: $color__background__secondary !default; // Dark grey
+
+// ----------------------------------------------------------------------------
+// SPOTBOX & COMPONENT COLORS
+// ----------------------------------------------------------------------------
+// Map DKFDS color variables used in spotboxes to our color scheme
+$color-green-001: $color__spotbox__primary !default; // Dark grey
+$color-green-002: $color__background__primary !default; // Very light grey
+$color-green-003: $color__spotbox__tertiary !default; // Medium grey
+$color-green-004: $color__background__primary !default; // Very light grey
+$color-green-005: $color__spotbox__tertiary !default; // Medium grey
+
+$color-orange-004: $color__background__tertiary !default; // Medium-dark grey
+$color-orange-005: $color__spotbox__secondary !default; // Medium-dark grey
+
+$color-blue-001: $color__spotbox__tertiary !default; // Medium grey
+$color-blue-002: $color__spotbox__tertiary !default; // Medium grey
+$color-blue-003: $color__background__secondary !default; // Dark grey
+$color-blue-004: $color__background__primary !default; // Very light grey
+$color-blue-005: $color__text__secondary !default; // Medium-dark grey
+$color-blue-006: $color__background__secondary !default; // Dark grey
+$color-blue-007: $color__text !default; // Almost black
+$color-blue-008: $color__spotbox__tertiary !default; // Medium grey
+
+$color-red-001: $color__background__secondary !default; // Dark grey
+$color-red-002: $color__background__primary !default; // Very light grey
+
+// ----------------------------------------------------------------------------
+// SPECIAL COLORS
+// ----------------------------------------------------------------------------
+$color-alt-background: $color__background__primary !default; // Very light grey
+$color-alt-background-hover: $color__background__primary !default; // Very light grey
+$color-alt-table-header: $color__spotbox__tertiary !default; // Medium grey
+$color-required: $color__background__secondary !default; // Dark grey
+
+// ----------------------------------------------------------------------------
+// NEUTRAL COLORS
+// ----------------------------------------------------------------------------
+$color-neutral: $color__background__primary !default; // Very light grey
+$color-neutral-darker: $color__text !default; // Almost black
+$color-neutral-darkest: $color__text !default; // Almost black
+$color-neutral-lightest: $color__spotbox__tertiary !default; // Medium grey
+
+// ----------------------------------------------------------------------------
+// FOCUS COLORS
+// ----------------------------------------------------------------------------
+$color-focus: $color__text__secondary !default; // Medium-dark grey
+
+// ----------------------------------------------------------------------------
+// DATA VISUALIZATION COLORS (mapped to grey scale)
+// ----------------------------------------------------------------------------
+// These are used for charts/graphs - map to grey scale variants
+$color-data-turquoise-001: $color__spotbox__tertiary !default;
+$color-data-turquoise-002: $color__background__primary !default;
+$color-data-turquoise-003: $color__background__primary !default;
+$color-data-turquoise-004: $color__background !default;
+
+$color-data-teal-001: $color__text__secondary !default;
+$color-data-teal-002: $color__spotbox__tertiary !default;
+$color-data-teal-003: $color__background__primary !default;
+$color-data-teal-004: $color__background !default;
+
+$color-data-orange-001: $color__spotbox__secondary !default;
+$color-data-orange-002: $color__background__tertiary !default;
+$color-data-orange-003: $color__background__primary !default;
+$color-data-orange-004: $color__background !default;
+
+$color-data-magenta-001: $color__background__secondary !default;
+$color-data-magenta-002: $color__text__secondary !default;
+$color-data-magenta-003: $color__spotbox__tertiary !default;
+$color-data-magenta-004: $color__background__primary !default;
+
+$color-data-purple-001: $color__text !default;
+$color-data-purple-002: $color__background__secondary !default;
+$color-data-purple-003: $color__text__secondary !default;
+$color-data-purple-004: $color__spotbox__tertiary !default;
+
+$color-data-violet-001: $color__background__secondary !default;
+$color-data-violet-002: $color__text__secondary !default;
+$color-data-violet-003: $color__spotbox__tertiary !default;
+$color-data-violet-004: $color__background__primary !default;
