@@ -843,6 +843,24 @@ body .page-container {
 .background-color--primary .paragraph-50-50-wrapper .text-side.text-side-black,
 .background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-black,
 .background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-black {
+  // Override list bullets to be dark (for light backgrounds)
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-long:not(.field--widget-text-textarea) ul li::before,
+  .field--type-text-long:not(.field--widget-text-textarea) ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before {
+    color: $color__bullet__primary !important; // Dark bullets on light background
+  }
+  
   // Override all link colors to be dark (for light backgrounds)
   a:not(.button):not(.btn):not(.cta-buttons a),
   h1 a:not(.button):not(.btn):not(.cta-buttons a),
@@ -904,6 +922,24 @@ body .page-container {
 .background-color--primary .paragraph-50-50-wrapper .text-side.text-side-white,
 .background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-white,
 .background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-white {
+  // Override list bullets to be light (for dark backgrounds)
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-long:not(.field--widget-text-textarea) ul li::before,
+  .field--type-text-long:not(.field--widget-text-textarea) ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before {
+    color: $color__bullet__secondary !important; // Light bullets on dark background
+  }
+  
   // Override all link colors to be light (for dark backgrounds)
   a:not(.button):not(.btn):not(.cta-buttons a),
   h1 a:not(.button):not(.btn):not(.cta-buttons a),
