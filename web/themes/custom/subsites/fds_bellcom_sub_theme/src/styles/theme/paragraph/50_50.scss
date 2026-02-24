@@ -132,6 +132,22 @@
         color: $color__text__light !important;
       }
       
+      // List bullets must be light on dark backgrounds
+      ul li::before,
+      ul li:before,
+      ol li::before,
+      ol li:before,
+      .field--type-text-long ul li::before,
+      .field--type-text-long ul li:before,
+      .field--type-text-with-summary ul li::before,
+      .field--type-text-with-summary ul li:before,
+      .accordion-content ul li::before,
+      .accordion-content ul li:before,
+      .field--name-field-os2web-page-keyword ul li::before,
+      .field--name-field-os2web-page-keyword ul li:before {
+        color: $color__bullet__secondary !important; // Light bullets on dark background
+      }
+      
       // All links (including in headings) must be light on dark backgrounds
       a:not(.button):not(.btn):not(.cta-buttons a),
       h1 a:not(.button):not(.btn):not(.cta-buttons a),
@@ -144,6 +160,14 @@
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
         
+        // Pseudo-elements (::before, ::after) must also be light
+        &::before,
+        &:before,
+        &::after,
+        &:after {
+          color: $color__text__light !important;
+        }
+        
         &:hover,
         &:focus {
           color: $color__text__light !important;
@@ -151,6 +175,14 @@
           text-decoration-color: rgba($color__text__light, 0.7);
           text-decoration-thickness: 1.5px;
           text-underline-offset: 2px;
+          
+          // Pseudo-elements on hover must also be light
+          &::before,
+          &:before,
+          &::after,
+          &:after {
+            color: $color__text__light !important;
+          }
         }
         
         &:focus {
@@ -168,6 +200,22 @@
         color: $color__text__dark !important;
       }
       
+      // List bullets must be dark on light backgrounds
+      ul li::before,
+      ul li:before,
+      ol li::before,
+      ol li:before,
+      .field--type-text-long ul li::before,
+      .field--type-text-long ul li:before,
+      .field--type-text-with-summary ul li::before,
+      .field--type-text-with-summary ul li:before,
+      .accordion-content ul li::before,
+      .accordion-content ul li:before,
+      .field--name-field-os2web-page-keyword ul li::before,
+      .field--name-field-os2web-page-keyword ul li:before {
+        color: $color__bullet__primary !important; // Dark bullets on light background
+      }
+      
       // All links (including in headings) must be dark on light backgrounds
       a:not(.button):not(.btn):not(.cta-buttons a),
       h1 a:not(.button):not(.btn):not(.cta-buttons a),
@@ -180,12 +228,28 @@
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
         
+        // Pseudo-elements (::before, ::after) must also be dark
+        &::before,
+        &:before,
+        &::after,
+        &:after {
+          color: $color__link !important;
+        }
+        
         &:hover,
         &:focus {
           color: $color__link__hover !important;
           text-decoration: underline;
           text-decoration-thickness: 1.5px;
           text-underline-offset: 2px;
+          
+          // Pseudo-elements on hover must also be dark
+          &::before,
+          &:before,
+          &::after,
+          &:after {
+            color: $color__link__hover !important;
+          }
         }
         
         &:focus {
@@ -210,6 +274,22 @@
     color: $color__text__light !important;
   }
   
+  // List bullets must be light on dark backgrounds
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before {
+    color: $color__bullet__secondary !important; // Light bullets on dark background
+  }
+  
   // All links (including in headings) must be light on dark backgrounds
   a:not(.button):not(.btn):not(.cta-buttons a),
   h1 a:not(.button):not(.btn):not(.cta-buttons a),
@@ -220,9 +300,25 @@
   h6 a:not(.button):not(.btn):not(.cta-buttons a) {
     color: $color__text__light !important;
     
+    // Pseudo-elements (::before, ::after) must also be light
+    &::before,
+    &:before,
+    &::after,
+    &:after {
+      color: $color__text__light !important;
+    }
+    
     &:hover,
     &:focus {
       color: $color__text__light !important;
+      
+      // Pseudo-elements on hover must also be light
+      &::before,
+      &:before,
+      &::after,
+      &:after {
+        color: $color__text__light !important;
+      }
     }
   }
 }
@@ -232,6 +328,22 @@
 .background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-black {
   h1, h2, h3, h4, h5, h6, p, li, span {
     color: $color__text__dark !important;
+  }
+  
+  // List bullets must be dark on light backgrounds
+  ul li::before,
+  ul li:before,
+  ol li::before,
+  ol li:before,
+  .field--type-text-long ul li::before,
+  .field--type-text-long ul li:before,
+  .field--type-text-with-summary ul li::before,
+  .field--type-text-with-summary ul li:before,
+  .accordion-content ul li::before,
+  .accordion-content ul li:before,
+  .field--name-field-os2web-page-keyword ul li::before,
+  .field--name-field-os2web-page-keyword ul li:before {
+    color: $color__bullet__primary !important; // Dark bullets on light background
   }
   
   // All links (including in headings) must be dark on light backgrounds
@@ -244,9 +356,25 @@
   h6 a:not(.button):not(.btn):not(.cta-buttons a) {
     color: $color__link !important;
     
+    // Pseudo-elements (::before, ::after) must also be dark
+    &::before,
+    &:before,
+    &::after,
+    &:after {
+      color: $color__link !important;
+    }
+    
     &:hover,
     &:focus {
       color: $color__link__hover !important;
+      
+      // Pseudo-elements on hover must also be dark
+      &::before,
+      &:before,
+      &::after,
+      &:after {
+        color: $color__link__hover !important;
+      }
     }
   }
 

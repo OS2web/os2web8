@@ -877,9 +877,25 @@ body .page-container {
   .field--name-field-os2web-cnt-heading h6 a:not(.button):not(.btn):not(.cta-buttons a) {
     color: $color__link !important;
     
+    // Pseudo-elements (::before, ::after) must also be dark
+    &::before,
+    &:before,
+    &::after,
+    &:after {
+      color: $color__link !important;
+    }
+    
     &:hover,
     &:focus {
       color: $color__link__hover !important;
+      
+      // Pseudo-elements on hover must also be dark
+      &::before,
+      &:before,
+      &::after,
+      &:after {
+        color: $color__link__hover !important;
+      }
     }
   }
 }
@@ -922,9 +938,25 @@ body .page-container {
   .field--name-field-os2web-cnt-heading h6 a:not(.button):not(.btn):not(.cta-buttons a) {
     color: $color__text__light !important;
     
+    // Pseudo-elements (::before, ::after) must also be light
+    &::before,
+    &:before,
+    &::after,
+    &:after {
+      color: $color__text__light !important;
+    }
+    
     &:hover,
     &:focus {
       color: $color__text__light !important;
+      
+      // Pseudo-elements on hover must also be light
+      &::before,
+      &:before,
+      &::after,
+      &:after {
+        color: $color__text__light !important;
+      }
     }
   }
 }
