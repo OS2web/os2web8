@@ -35,6 +35,12 @@
     const paragraphs = document.querySelectorAll('.documents-wrapper.edoc-only');
 
     paragraphs.forEach(function(paragraph) {
+      // Ensure all file/document links open in a new window
+      paragraph.querySelectorAll('a[href]').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+
       const showMoreButton = paragraph.querySelector('.show-more-files-edoc');
       let isExpanded = false; // Keep track of the state
 

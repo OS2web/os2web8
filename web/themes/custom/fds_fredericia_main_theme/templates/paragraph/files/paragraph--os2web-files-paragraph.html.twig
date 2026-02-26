@@ -62,6 +62,15 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Ensure all file links open in a new window
+    const filesWrapper = document.querySelector('.documents-wrapper.files-wrapper');
+    if (filesWrapper) {
+      filesWrapper.querySelectorAll('a[href]').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+    }
+
     const showMoreButton = document.getElementById('show-more-files');
     let isExpanded = false; // Keep track of the state
 
