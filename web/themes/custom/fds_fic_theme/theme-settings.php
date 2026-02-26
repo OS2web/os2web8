@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('FILE_STATUS_PERMANENT')) { define('FILE_STATUS_PERMANENT', 1); }
+
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormStateInterface;
 
