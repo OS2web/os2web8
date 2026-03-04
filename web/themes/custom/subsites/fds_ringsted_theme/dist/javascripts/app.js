@@ -3435,18 +3435,20 @@ document.addEventListener('DOMContentLoaded', function() {
 // Content reference mobile display.
 (function() {
   var selector = '.paragraph--type--os2web-content-reference .mobile-only .field--name-field-os2web-content-reference';
+  var containers = document.querySelectorAll(selector);
 
-  if (document.querySelector(selector) !== null) {
-
-    // Run tiny slider.
-    tns({
-      container: selector,
-      items: 1,
-      autoplay: true,
-      autoplayHoverPause: true,
-      gutter: 32,
-      rewind: true,
-    });
+  if (containers.length) {
+    // Run tiny slider for each matching container.
+    for (var i = 0; i < containers.length; i++) {
+      tns({
+        container: containers[i],
+        items: 1,
+        autoplay: true,
+        autoplayHoverPause: true,
+        gutter: 32,
+        rewind: true
+      });
+    }
   }
 })();
 
@@ -3505,52 +3507,56 @@ document.addEventListener('DOMContentLoaded', function() {
 // Tiny Slider for news slideshow.
 (function() {
   var selector = '.view-id-os2web_page_content.view-display-id-slider .view-content';
+  var containers = document.querySelectorAll(selector);
 
-  if (document.querySelector(selector) !== null) {
-
-    // Run tiny slider.
-    tns({
-      container: selector,
-      items: 1,
-      slideBy: 1,
-      autoplay: false,
-      autoplayHoverPause: true,
-      mouseDrag: true,
-      gutter: 32,
-      rewind: false,
-      responsive: {
-        768: {
-          items: 3,
-          slideBy: 3,
+  if (containers.length) {
+    // Run tiny slider for each matching container.
+    for (var i = 0; i < containers.length; i++) {
+      tns({
+        container: containers[i],
+        items: 1,
+        slideBy: 1,
+        autoplay: false,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        gutter: 32,
+        rewind: false,
+        responsive: {
+          768: {
+            items: 3,
+            slideBy: 3,
+          },
         },
-      },
-    });
+      });
+    }
   }
 })();
 
 // Tiny Slider for spotboxes slideshow.
 (function() {
   var selector = '.paragraph--type--os2web-spotbox-reference.paragraph--slider .field__items';
+  var containers = document.querySelectorAll(selector);
 
-  if (document.querySelector(selector) !== null) {
-
-    // Run tiny slider.
-    tns({
-      container: selector,
-      items: 1,
-      slideBy: 1,
-      autoplay: false,
-      autoplayHoverPause: true,
-      mouseDrag: true,
-      gutter: 5,
-      rewind: false,
-      responsive: {
-        768: {
-          items: 3,
-          slideBy: 3,
+  if (containers.length) {
+    // Run tiny slider for each matching container.
+    for (var i = 0; i < containers.length; i++) {
+      tns({
+        container: containers[i],
+        items: 1,
+        slideBy: 1,
+        autoplay: false,
+        autoplayHoverPause: true,
+        mouseDrag: true,
+        gutter: 5,
+        rewind: false,
+        responsive: {
+          768: {
+            items: 3,
+            slideBy: 3,
+          },
         },
-      },
-    });
+      });
+    }
   }
 })();
 
@@ -3659,27 +3665,31 @@ getDynamicPaddingsAndBulletOffset();
 
 (function($, Drupal, drupalSettings) {
   var selector = '.field--name-field-os2web-page-paragraph-bann';
-  var count = document.querySelectorAll('.field--name-field-os2web-page-paragraph-bann > .field__item');
-  if (document.querySelector(selector) !== null && count.length > 1) {
-    var items = count.length;
-    tns({
-      container: selector,
-      items: 1,
-      autoplay: true,
-      autoplayHoverPause: true,
-      autoplayButtonOutput: false,
-      gutter: 0,
-      rewind: false,
-      nav: true,
-      speed: 600,
-      controls: true,
-      center: true,
+  var wrappers = document.querySelectorAll(selector);
 
+  if (wrappers.length) {
+    wrappers.forEach(function(wrapper) {
+      var items = wrapper.querySelectorAll('> .field__item');
+
+      if (items.length > 1) {
+        tns({
+          container: wrapper,
+          items: 1,
+          autoplay: true,
+          autoplayHoverPause: true,
+          autoplayButtonOutput: false,
+          gutter: 0,
+          rewind: false,
+          nav: true,
+          speed: 600,
+          controls: true,
+          center: true,
+
+        });
+      }
     });
-
-
-    }
-  })(jQuery, Drupal, drupalSettings);
+  }
+})(jQuery, Drupal, drupalSettings);
 
 
 (function($, Drupal, drupalSettings) {
