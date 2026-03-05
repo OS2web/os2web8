@@ -221,14 +221,6 @@ body .page-container {
   }
 }
 
-.path-frontpage {
-
-  .layout-sidebar-left,
-  .layout-sidebar-right {
-    display: none;
-  }
-}
-
 .layout-sidebar-left,
 .layout-sidebar-right,
 .layout-content {
@@ -406,10 +398,6 @@ body {
 
   .section--social-icon-teasers {
     display: block;
-  }
-
-  .layout--hidden-on-sections {
-    display: none !important;
   }
 }
 
