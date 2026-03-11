@@ -12,6 +12,7 @@ javascripts:
   js:
     "https://unpkg.com/@popperjs/core@2": { type: external }
     "https://unpkg.com/tippy.js@6": { type: external }
+    "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js": { type: external, minified: true }
     dist/javascripts/app.js: {}
   dependencies:
     - core/drupal
