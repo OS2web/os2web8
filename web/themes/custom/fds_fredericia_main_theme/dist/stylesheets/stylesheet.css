@@ -19556,6 +19556,13 @@ a.entity-teaser {
           flex-direction: column;
   gap: 20px;
 }
+.page-teaser .page-teaser-body .page-teaser-title,
+.page-teaser .page-teaser-body .news-teaser-title, .page-teaser .news-teaser-body .page-teaser-title,
+.page-teaser .news-teaser-body .news-teaser-title, .news-teaser .page-teaser-body .page-teaser-title,
+.news-teaser .page-teaser-body .news-teaser-title, .news-teaser .news-teaser-body .page-teaser-title,
+.news-teaser .news-teaser-body .news-teaser-title {
+  margin: 0;
+}
 .page-teaser .page-teaser-body .field--name-field-os2web-page-heading h2, .page-teaser .page-teaser-body .field--name-field-os2web-page-heading h3, .page-teaser .page-teaser-body .field--name-field-os2web-news-heading h2, .page-teaser .page-teaser-body .field--name-field-os2web-news-heading h3, .page-teaser .news-teaser-body .field--name-field-os2web-page-heading h2, .page-teaser .news-teaser-body .field--name-field-os2web-page-heading h3, .page-teaser .news-teaser-body .field--name-field-os2web-news-heading h2, .page-teaser .news-teaser-body .field--name-field-os2web-news-heading h3, .news-teaser .page-teaser-body .field--name-field-os2web-page-heading h2, .news-teaser .page-teaser-body .field--name-field-os2web-page-heading h3, .news-teaser .page-teaser-body .field--name-field-os2web-news-heading h2, .news-teaser .page-teaser-body .field--name-field-os2web-news-heading h3, .news-teaser .news-teaser-body .field--name-field-os2web-page-heading h2, .news-teaser .news-teaser-body .field--name-field-os2web-page-heading h3, .news-teaser .news-teaser-body .field--name-field-os2web-news-heading h2, .news-teaser .news-teaser-body .field--name-field-os2web-news-heading h3 {
   margin: 0;
 }

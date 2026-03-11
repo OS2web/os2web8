@@ -144,6 +144,11 @@ a.entity-teaser {
     flex-direction: column;
     gap: 20px;
 
+    .page-teaser-title,
+    .news-teaser-title {
+      margin: 0;
+    }
+
     .field--name-field-os2web-page-heading, .field--name-field-os2web-news-heading {
       h2, h3 {
         margin: 0;
