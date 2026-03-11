@@ -299,16 +299,24 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
     if ($node->hasField('field_os2web_page_metatags') && !$node->get('field_os2web_page_metatags')->isEmpty()) {
       /** @var \Drupal\metatag\MetatagManagerInterface $metatag_manager */
       $metatag_manager = \Drupal::service('metatag.manager');
-      $tags = $metatag_manager->tagsFromEntity($node);
+      // Use defaults + token replacement so values match what's output in <head>.
+      // The returned structure is a simple key/value array (not html_head render arrays).
+      $tags = method_exists($metatag_manager, 'tagsFromEntityWithDefaults')
+        ? $metatag_manager->tagsFromEntityWithDefaults($node)
+        : $metatag_manager->tagsFromEntity($node);
+
+      $values = method_exists($metatag_manager, 'generateTokenValues')
+        ? $metatag_manager->generateTokenValues($tags, $node)
+        : $tags;
 
       // Title.
-      if (!empty($tags['title']['#attached']['html_head'][0][0]['#attributes']['content'])) {
-        $variables['meta_title'] = $tags['title']['#attached']['html_head'][0][0]['#attributes']['content'];
+      if (!empty($values['title']) && is_string($values['title'])) {
+        $variables['meta_title'] = $values['title'];
       }
 
       // Description.
-      if (!empty($tags['description']['#attached']['html_head'][0][0]['#attributes']['content'])) {
-        $variables['meta_description'] = $tags['description']['#attached']['html_head'][0][0]['#attributes']['content'];
+      if (!empty($values['description']) && is_string($values['description'])) {
+        $variables['meta_description'] = $values['description'];
       }
     }
   }
