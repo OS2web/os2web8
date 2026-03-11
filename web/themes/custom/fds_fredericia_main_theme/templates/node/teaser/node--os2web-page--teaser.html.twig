@@ -8,23 +8,42 @@
   view_mode ? view_mode|clean_class,
 ]
 %}
+
+{# Title: heading -> meta title -> node title #}
+{% set teaser_title %}
+  {% if content.field_os2web_page_heading is not empty %}
+    {{ content.field_os2web_page_heading }}
+  {% elseif meta_title %}
+    {{ meta_title }}
+  {% else %}
+    {{ node.label }}
+  {% endif %}
+{% endset %}
+
+{# Description: intro -> description -> meta description #}
 {% set descriptionRendered = content.field_os2web_page_description|render %}
 {% set descriptionText = descriptionRendered|striptags|trim|replace({'&#13;': ''}) %}
 {% set introText = content.field_os2web_page_intro|render|trim %}
 
-{% set pageTeaserText = introText is empty ? descriptionText : introText %}
+{% set pageTeaserText %}
+  {% if introText is not empty %}
+    {{ introText }}
+  {% elseif descriptionText is not empty %}
+    {{ descriptionText }}
+  {% elseif meta_description %}
+    {{ meta_description }}
+  {% endif %}
+{% endset %}
 
-
-
-
-
-<a href="{{ url }}" class="page-teaser" aria-label="{{ 'Read more about' | trans }} {{ node.field_os2web_page_heading.value }}">
+<a href="{{ url }}" class="page-teaser" aria-label="{{ 'Read more about' | trans }} {{ teaser_title|striptags }}">
   <i class="fa-solid fa-arrow-right"></i>
   <div class="page-teaser-body">
-    {{ content.field_os2web_page_heading }}
-    <div class="page-teaser-text">
-      {{ pageTeaserText | striptags }}
-    </div>
+    {{ teaser_title }}
+    {% if pageTeaserText is not empty %}
+      <div class="page-teaser-text">
+        {{ pageTeaserText|striptags }}
+      </div>
+    {% endif %}
     {% if menu_hierarchy %}
       <div class="my-breadcrumbs">
         {% for item in menu_hierarchy %}

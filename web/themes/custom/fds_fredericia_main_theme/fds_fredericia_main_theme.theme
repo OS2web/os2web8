@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\file\Entity\File;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\node\NodeInterface;
 
 
 
@@ -287,6 +288,29 @@ function fds_fredericia_main_theme_preprocess_node(array &$variables) {
       }
     }
     $variables['breadcrumb'] = $breadcrumb;
+  }
+
+
+  // Expose meta title/description for os2web_page teasers.
+  if ($variables['view_mode'] === 'teaser' && $node instanceof NodeInterface && $node->getType() === 'os2web_page') {
+    $variables['meta_title'] = NULL;
+    $variables['meta_description'] = NULL;
+
+    if ($node->hasField('field_os2web_page_metatags') && !$node->get('field_os2web_page_metatags')->isEmpty()) {
+      /** @var \Drupal\metatag\MetatagManagerInterface $metatag_manager */
+      $metatag_manager = \Drupal::service('metatag.manager');
+      $tags = $metatag_manager->tagsFromEntity($node);
+
+      // Title.
+      if (!empty($tags['title']['#attached']['html_head'][0][0]['#attributes']['content'])) {
+        $variables['meta_title'] = $tags['title']['#attached']['html_head'][0][0]['#attributes']['content'];
+      }
+
+      // Description.
+      if (!empty($tags['description']['#attached']['html_head'][0][0]['#attributes']['content'])) {
+        $variables['meta_description'] = $tags['description']['#attached']['html_head'][0][0]['#attributes']['content'];
+      }
+    }
   }
 
 
