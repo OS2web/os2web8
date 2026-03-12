@@ -18,7 +18,7 @@ $background_color__secondary: #4195b2;
 
 // $background_color__default: #eeeff4;
 
-$background_color__default_secondary: darken($background_color__default, 10%);
+$background_color__default_secondary: $background_color__default;
 
 
 // $background_color__primary: #012c4e;
@@ -26,13 +26,13 @@ $background_color__default_secondary: darken($background_color__default, 10%);
 
 
 $background_color__tertiary: lighten($background_color__secondary, 10%);
-$background_color__navigation: darken($background_color__primary, 10%);
+$background_color__navigation: $background_color__primary;
 $background_color__footer_primary: $background_color__navigation;
 $background_color__footer_secondary: lighten($background_color__navigation, 10%);
-$background_color__button: darken($background_color__default, 15%);
+$background_color__button: $background_color__default;
 $background_color__button_hover: $background_color__default;
 $color__link: #007ca3;
-$color__link__hover: darken($background_color__primary, 10%);
+$color__link__hover: $background_color__primary;
 $color__link_footer: lighten($background_color__tertiary, 50%);
 $color__bullets: $color__link;
 

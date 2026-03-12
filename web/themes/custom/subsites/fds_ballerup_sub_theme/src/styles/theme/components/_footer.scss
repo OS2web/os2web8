@@ -20,7 +20,7 @@
 // Styling
 // --------------------------------------------------
 .footer-branding {
-  background-color: $background_color__default;
+  background-color: $footer-color;
   padding: 20px;
   color: #FFF;
   text-transform: uppercase;
@@ -46,7 +46,7 @@ footer {
     padding-bottom: 30px;
 
     border-top: 0;
-    background-color: #243544 !important;
+    background-color: $footer-color !important;
 
     a, a:hover, a:visited, a:focus, a:active,
     .is-active > a,
@@ -171,7 +171,7 @@ footer {
 }
 
 // Touch
-.touchevents {}
+// (intentionally left blank)
 
 // No touch
-.no-touchevents {}
+// (intentionally left blank)
