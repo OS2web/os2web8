@@ -293,6 +293,9 @@ class MigrationHelper {
    *   Int if the local node is found. NULL otherwise.
    */
   static function getFieldLinks($link) {
+    // Replacing '/node' => 'node'.
+    $link['url'] = str_replace('/node', 'node', $link['url']);
+
     if (strpos($link['url'], 'node') === 0) {
       $urlParts = explode('/', $link['url']);
 
@@ -305,7 +308,8 @@ class MigrationHelper {
 
     $fieldLink = [
       'title' => $link['title'],
-      'url' => $link['url']
+      'url' => $link['url'],
+      'attributes' => '',
     ];
 
     return $fieldLink;
