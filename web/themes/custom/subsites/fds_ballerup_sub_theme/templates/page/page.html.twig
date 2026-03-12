@@ -89,7 +89,9 @@
     <div class="flexy-row">
       {{ page.breadcrumb }}
       <div class="flexy-spacer"></div>
-      {% include '@fds_ballerup_sub_theme/includes/action-buttons.html.twig' %}
+      {% if not is_front %}
+        {% include '@fds_ballerup_sub_theme/includes/action-buttons.html.twig' %}
+      {% endif %}
       {{ page.small_search }}
     </div>
   </div>
