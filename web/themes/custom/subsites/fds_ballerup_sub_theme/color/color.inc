@@ -27,8 +27,4 @@ $info = [
   'css' => [
     'dist/stylesheets/stylesheet.css',
   ],
-
-  'copy' => [
-    'logo.svg',
-  ],
 ];
