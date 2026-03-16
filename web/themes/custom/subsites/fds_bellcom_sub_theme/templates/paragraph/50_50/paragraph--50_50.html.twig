@@ -1,8 +1,9 @@
 
 {% set image_position_class = content.field_fifty_fifty_layout[0]['#markup'] == 'Billede højre/Tekst venstre' ? 'image-right' : 'image-left' %}
 {% set text_position_class = content.field_fifty_fifty_text_layout[0]['#markup'] == 'Center tekst alignment' ? 'text-align-center' : 'text-align-left' %}
-{% set selectedColor = content.field_fifty_fifty_bg_color['#items'].getString() %}
-{% set selectedButtonColor = content.field_fifty_fifty_btn_color['#items'].getString() %}
+{# Brug altid maskinnavnet direkte fra feltet i stedet for render-arrayet #}
+{% set selectedColor = paragraph.field_fifty_fifty_bg_color.value %}
+{% set selectedButtonColor = paragraph.field_fifty_fifty_btn_color.value %}
 {% set selectedBulletColor = paragraph.field_bullet_color.value %}
 
 {% set color_map = {
