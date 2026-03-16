@@ -586,6 +586,71 @@
   }
 }
 
+// ============================================================================
+// 50/50 PARAGRAPH – CTA BUTTONS (ensure selector matches rendered HTML)
+// ============================================================================
+
+.paragraph-50-50-wrapper .cta-buttons .field--name-field-fifty-fifty-link {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.paragraph-50-50-wrapper .cta-buttons .field--name-field-fifty-fifty-link .field__item a,
+.paragraph-50-50-wrapper .cta-buttons .field--name-field-fifty-fifty-link a {
+  border-radius: 4px;
+  transition: .3s ease;
+  font-weight: 600;
+  position: relative;
+  padding: 10px 50px 10px 10px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  text-decoration: none;
+}
+
+// White button with black text
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a,
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: $color__text__dark;
+}
+
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a:hover,
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a:hover {
+  background-color: rgba(#ffffff, 0.9);
+  border-color: rgba(#ffffff, 0.9);
+}
+
+// Grey button with white text
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link .field__item a,
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a {
+  background-color: #454545;
+  border-color: #454545;
+  color: $color__text__light;
+}
+
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link .field__item a:hover,
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a:hover {
+  background-color: rgba(#454545, 0.9);
+  border-color: rgba(#454545, 0.9);
+}
+
+// Black button with white text
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a,
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a {
+  background-color: #231f20;
+  border-color: #231f20;
+  color: $color__text__light;
+}
+
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a:hover,
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a:hover {
+  background-color: rgba(#231f20, 0.9);
+  border-color: rgba(#231f20, 0.9);
+}
+
 .primary-bullet .field--type-text-long ul li::before {
   content: '\f061';
   font-family: FontAwesome;
