@@ -1,9 +1,9 @@
 
 {% set image_position_class = content.field_fifty_fifty_layout[0]['#markup'] == 'Billede højre/Tekst venstre' ? 'image-right' : 'image-left' %}
 {% set text_position_class = content.field_fifty_fifty_text_layout[0]['#markup'] == 'Center tekst alignment' ? 'text-align-center' : 'text-align-left' %}
-{# Brug altid maskinnavnet direkte fra feltet i stedet for render-arrayet #}
-{% set selectedColor = paragraph.field_fifty_fifty_bg_color.value %}
-{% set selectedButtonColor = paragraph.field_fifty_fifty_btn_color.value %}
+{# Brug altid maskinnavnet direkte fra feltet i stedet for render-arrayet, og fald tilbage til tom streng hvis feltet er tomt #}
+{% set selectedColor = paragraph.field_fifty_fifty_bg_color.value|default('') %}
+{% set selectedButtonColor = paragraph.field_fifty_fifty_btn_color.value|default('') %}
 {% set selectedBulletColor = paragraph.field_bullet_color.value %}
 
 {% set color_map = {
