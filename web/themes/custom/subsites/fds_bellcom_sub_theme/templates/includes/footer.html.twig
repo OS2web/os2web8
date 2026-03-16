@@ -24,7 +24,20 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-3 footer-col">
+        {# Bestem om kontakt-kolonnen har noget indhold #}
+        {% set has_contact_column =
+          theme_settings.contact_information.business_owner_name or
+          theme_settings.contact_information.email or
+          theme_settings.contact_information.phone_readable or
+          theme_settings.contact_information.fax_readable or
+          (theme_settings.working_hours | filter(v => v != '')) is not empty or
+          theme_settings.contact_information.additional_information
+        %}
+
+        {# Hvis kontaktkolonnen er tom, skal de andre kolonner være col-sm-4 i stedet for col-sm-3 #}
+        {% set footer_col_class = has_contact_column ? 'col-12 col-sm-3 footer-col' : 'col-12 col-sm-4 footer-col' %}
+
+        <div class="{{ footer_col_class }}">
           <div class="block">
             {% if theme_settings.footer.footer_use_default_logo %}
               <img src="{{ base_path ~ directory }}/dist/images/logo--footer.png" alt="" class="logo logo--footer" />
@@ -65,8 +78,9 @@
           </div>
         </div>
 
-        <div class="col-12 col-sm-3 footer-col">
-          <div class="block">
+        {% if has_contact_column %}
+          <div class="col-12 col-sm-3 footer-col">
+            <div class="block">
             {% if theme_settings.contact_information.business_owner_name
               or theme_settings.contact_information.email
               or theme_settings.contact_information.phone_readable %}
@@ -180,14 +194,17 @@
                 {{ theme_settings.contact_information.additional_information }}
               </div>
             {% endif %}
+            </div>
           </div>
-        </div>
+        {% endif %}
 
-        <div class="col-12 col-sm-3 footer-col">
-          {{ page.footer_first }}
-        </div>
+        {% if page.footer_first %}
+          <div class="{{ footer_col_class }}">
+            {{ page.footer_first }}
+          </div>
+        {% endif %}
 
-        <div class="col-12 col-sm-3 footer-col">
+        <div class="{{ footer_col_class }}">
           <div class="social-icon-list">
 
             {% if theme_settings.social.facebook.active %}

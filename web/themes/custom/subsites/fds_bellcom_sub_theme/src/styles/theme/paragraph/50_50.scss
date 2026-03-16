@@ -487,24 +487,24 @@
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: $color__background; // #ffffff - white
-              border-color: $color__background;
+              background-color: #ffffff; // hardcoded white
+              border-color: #ffffff;
               color: $color__text__dark; // Black text on white background
 
               &:hover {
-                background-color: rgba($color__background, 0.9);
-                border-color: rgba($color__background, 0.9);
+                background-color: rgba(#ffffff, 0.9);
+                border-color: rgba(#ffffff, 0.9);
               }
             }
           }
           a {
-            background-color: $color__background; // #ffffff - white
-            border-color: $color__background;
+            background-color: #ffffff; // hardcoded white
+            border-color: #ffffff;
             color: $color__text__dark; // Black text on white background
 
             &:hover {
-              background-color: rgba($color__background, 0.9);
-              border-color: rgba($color__background, 0.9);
+              background-color: rgba(#ffffff, 0.9);
+              border-color: rgba(#ffffff, 0.9);
             }
           }
         }
@@ -515,24 +515,24 @@
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: $color__background__secondary; // #454545 - dark grey
-              border-color: $color__background__secondary;
+              background-color: #454545; // hardcoded dark grey
+              border-color: #454545;
               color: $color__text__light; // White text on grey background
 
               &:hover {
-                background-color: rgba($color__background__secondary, 0.9);
-                border-color: rgba($color__background__secondary, 0.9);
+                background-color: rgba(#454545, 0.9);
+                border-color: rgba(#454545, 0.9);
               }
             }
           }
           a {
-            background-color: $color__background__secondary; // #454545 - dark grey
-            border-color: $color__background__secondary;
+            background-color: #454545; // hardcoded dark grey
+            border-color: #454545;
             color: $color__text__light; // White text on grey background
 
             &:hover {
-              background-color: rgba($color__background__secondary, 0.9);
-              border-color: rgba($color__background__secondary, 0.9);
+              background-color: rgba(#454545, 0.9);
+              border-color: rgba(#454545, 0.9);
             }
           }
         }
@@ -543,24 +543,24 @@
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: $color__background__footer; // #231f20 - almost black
-              border-color: $color__background__footer;
+              background-color: #231f20; // hardcoded almost black
+              border-color: #231f20;
               color: $color__text__light; // White text on black background
 
               &:hover {
-                background-color: rgba($color__background__footer, 0.9);
-                border-color: rgba($color__background__footer, 0.9);
+                background-color: rgba(#231f20, 0.9);
+                border-color: rgba(#231f20, 0.9);
               }
             }
           }
           a {
-            background-color: $color__background__footer; // #231f20 - almost black
-            border-color: $color__background__footer;
+            background-color: #231f20; // hardcoded almost black
+            border-color: #231f20;
             color: $color__text__light; // White text on black background
 
             &:hover {
-              background-color: rgba($color__background__footer, 0.9);
-              border-color: rgba($color__background__footer, 0.9);
+              background-color: rgba(#231f20, 0.9);
+              border-color: rgba(#231f20, 0.9);
             }
           }
         }
