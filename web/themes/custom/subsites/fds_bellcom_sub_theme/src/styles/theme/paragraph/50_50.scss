@@ -93,7 +93,9 @@
     // Default: if neither text-side-white nor text-side-black is specified,
     // use dark text (assumes light background by default)
     // This ensures text is visible even if classes are missing
-    h1, h2, h3, h4, h5, h6, p, li, span {
+    color: $color__text__dark;
+
+    h1, h2, h3, h4, h5, h6, p, li {
       color: $color__text__dark;
     }
     
@@ -128,7 +130,9 @@
     &.text-side-white {
       // White text for dark backgrounds (image side is dark)
       // Must override general background color rules
-      h1, h2, h3, h4, h5, h6, p, li, span {
+      color: $color__text__light !important;
+
+      h1, h2, h3, h4, h5, h6, p, li {
         color: $color__text__light !important;
       }
       
@@ -198,7 +202,9 @@
     &.text-side-black {
       // Dark text for light backgrounds (image side is light)
       // Must override general background color rules
-      h1, h2, h3, h4, h5, h6, p, li, span {
+      color: $color__text__dark !important;
+
+      h1, h2, h3, h4, h5, h6, p, li {
         color: $color__text__dark !important;
       }
       
@@ -274,7 +280,9 @@
 .background-color--primary .paragraph-50-50-wrapper .text-side.text-side-white,
 .background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-white,
 .background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-white {
-  h1, h2, h3, h4, h5, h6, p, li, span {
+  color: $color__text__light !important;
+
+  h1, h2, h3, h4, h5, h6, p, li {
     color: $color__text__light !important;
   }
   
@@ -332,7 +340,9 @@
 .background-color--primary .paragraph-50-50-wrapper .text-side.text-side-black,
 .background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-black,
 .background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-black {
-  h1, h2, h3, h4, h5, h6, p, li, span {
+  color: $color__text__dark !important;
+
+  h1, h2, h3, h4, h5, h6, p, li {
     color: $color__text__dark !important;
   }
   
@@ -657,6 +667,14 @@
   align-items: center;
   width: fit-content;
   text-decoration: none;
+
+  // Never let global "span color" rules leak into button labels/icons.
+  &,
+  * ,
+  *::before,
+  *::after {
+    color: inherit !important;
+  }
 }
 
 // White button with black text
