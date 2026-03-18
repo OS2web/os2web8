@@ -155,13 +155,14 @@
       }
       
       // All links (including in headings) must be light on dark backgrounds
-      a:not(.button):not(.btn):not(.cta-buttons a),
-      h1 a:not(.button):not(.btn):not(.cta-buttons a),
-      h2 a:not(.button):not(.btn):not(.cta-buttons a),
-      h3 a:not(.button):not(.btn):not(.cta-buttons a),
-      h4 a:not(.button):not(.btn):not(.cta-buttons a),
-      h5 a:not(.button):not(.btn):not(.cta-buttons a),
-      h6 a:not(.button):not(.btn):not(.cta-buttons a) {
+      // Only style "content links" here (not CTA buttons).
+      .paragraph-50-50-description a:not(.button):not(.btn),
+      h1 a:not(.button):not(.btn),
+      h2 a:not(.button):not(.btn),
+      h3 a:not(.button):not(.btn),
+      h4 a:not(.button):not(.btn),
+      h5 a:not(.button):not(.btn),
+      h6 a:not(.button):not(.btn) {
         color: $color__text__light !important;
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -227,13 +228,14 @@
       }
       
       // All links (including in headings) must be dark on light backgrounds
-      a:not(.button):not(.btn):not(.cta-buttons a),
-      h1 a:not(.button):not(.btn):not(.cta-buttons a),
-      h2 a:not(.button):not(.btn):not(.cta-buttons a),
-      h3 a:not(.button):not(.btn):not(.cta-buttons a),
-      h4 a:not(.button):not(.btn):not(.cta-buttons a),
-      h5 a:not(.button):not(.btn):not(.cta-buttons a),
-      h6 a:not(.button):not(.btn):not(.cta-buttons a) {
+      // Only style "content links" here (not CTA buttons).
+      .paragraph-50-50-description a:not(.button):not(.btn),
+      h1 a:not(.button):not(.btn),
+      h2 a:not(.button):not(.btn),
+      h3 a:not(.button):not(.btn),
+      h4 a:not(.button):not(.btn),
+      h5 a:not(.button):not(.btn),
+      h6 a:not(.button):not(.btn) {
         color: $color__link !important;
         text-decoration: none;
         transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -305,13 +307,14 @@
   }
   
   // All links (including in headings) must be light on dark backgrounds
-  a:not(.button):not(.btn):not(.cta-buttons a),
-  h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  h6 a:not(.button):not(.btn):not(.cta-buttons a) {
+  // Only style "content links" here (not CTA buttons).
+  .paragraph-50-50-description a:not(.button):not(.btn),
+  h1 a:not(.button):not(.btn),
+  h2 a:not(.button):not(.btn),
+  h3 a:not(.button):not(.btn),
+  h4 a:not(.button):not(.btn),
+  h5 a:not(.button):not(.btn),
+  h6 a:not(.button):not(.btn) {
     color: $color__text__light !important;
     
     // Pseudo-elements (::before, ::after) must also be light
@@ -365,13 +368,14 @@
   }
   
   // All links (including in headings) must be dark on light backgrounds
-  a:not(.button):not(.btn):not(.cta-buttons a),
-  h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  h6 a:not(.button):not(.btn):not(.cta-buttons a) {
+  // Only style "content links" here (not CTA buttons).
+  .paragraph-50-50-description a:not(.button):not(.btn),
+  h1 a:not(.button):not(.btn),
+  h2 a:not(.button):not(.btn),
+  h3 a:not(.button):not(.btn),
+  h4 a:not(.button):not(.btn),
+  h5 a:not(.button):not(.btn),
+  h6 a:not(.button):not(.btn) {
     color: $color__link !important;
     
     // Pseudo-elements (::before, ::after) must also be dark
