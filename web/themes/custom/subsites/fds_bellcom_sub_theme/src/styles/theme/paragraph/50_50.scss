@@ -495,7 +495,7 @@
             a {
               background-color: #ffffff !important; // hardcoded white
               border-color: #ffffff !important;
-              color: $color__text__dark !important; // Black text on white background
+              color: #231f20 !important; // hardcoded black text on white background
 
               span {
                 color: inherit !important;
@@ -508,14 +508,14 @@
               &:hover {
                 background-color: rgba(#ffffff, 0.9) !important;
                 border-color: rgba(#ffffff, 0.9) !important;
-                color: $color__text__dark !important;
+                color: #231f20 !important;
               }
             }
           }
           a {
             background-color: #ffffff !important; // hardcoded white
             border-color: #ffffff !important;
-            color: $color__text__dark !important; // Black text on white background
+            color: #231f20 !important; // hardcoded black text on white background
 
             span {
               color: inherit !important;
@@ -528,7 +528,7 @@
             &:hover {
               background-color: rgba(#ffffff, 0.9) !important;
               border-color: rgba(#ffffff, 0.9) !important;
-              color: $color__text__dark !important;
+              color: #231f20 !important;
             }
           }
         }
@@ -541,7 +541,7 @@
             a {
               background-color: #454545 !important; // hardcoded dark grey
               border-color: #454545 !important;
-              color: $color__text__light !important; // White text on grey background
+              color: #ffffff !important; // hardcoded white text on grey background
 
               span {
                 color: inherit !important;
@@ -554,14 +554,14 @@
               &:hover {
                 background-color: rgba(#454545, 0.9) !important;
                 border-color: rgba(#454545, 0.9) !important;
-                color: $color__text__light !important;
+                color: #ffffff !important;
               }
             }
           }
           a {
             background-color: #454545 !important; // hardcoded dark grey
             border-color: #454545 !important;
-            color: $color__text__light !important; // White text on grey background
+            color: #ffffff !important; // hardcoded white text on grey background
 
             span {
               color: inherit !important;
@@ -574,7 +574,7 @@
             &:hover {
               background-color: rgba(#454545, 0.9) !important;
               border-color: rgba(#454545, 0.9) !important;
-              color: $color__text__light !important;
+              color: #ffffff !important;
             }
           }
         }
@@ -587,7 +587,7 @@
             a {
               background-color: #231f20 !important; // hardcoded almost black
               border-color: #231f20 !important;
-              color: $color__text__light !important; // White text on black background
+              color: #ffffff !important; // hardcoded white text on black background
 
               span {
                 color: inherit !important;
@@ -600,14 +600,14 @@
               &:hover {
                 background-color: rgba(#231f20, 0.9) !important;
                 border-color: rgba(#231f20, 0.9) !important;
-                color: $color__text__light !important;
+                color: #ffffff !important;
               }
             }
           }
           a {
             background-color: #231f20 !important; // hardcoded almost black
             border-color: #231f20 !important;
-            color: $color__text__light !important; // White text on black background
+            color: #ffffff !important; // hardcoded white text on black background
 
             span {
               color: inherit !important;
@@ -620,7 +620,7 @@
             &:hover {
               background-color: rgba(#231f20, 0.9) !important;
               border-color: rgba(#231f20, 0.9) !important;
-              color: $color__text__light !important;
+              color: #ffffff !important;
             }
           }
         }
@@ -682,7 +682,7 @@
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a {
   background-color: #ffffff !important;
   border-color: #ffffff !important;
-  color: $color__text__dark !important;
+  color: #231f20 !important;
 
   span {
     color: inherit !important;
@@ -697,7 +697,7 @@
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a:hover {
   background-color: rgba(#ffffff, 0.9) !important;
   border-color: rgba(#ffffff, 0.9) !important;
-  color: $color__text__dark !important;
+  color: #231f20 !important;
 }
 
 // Grey button with white text
@@ -705,7 +705,7 @@
 .paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a {
   background-color: #454545 !important;
   border-color: #454545 !important;
-  color: $color__text__light !important;
+  color: #ffffff !important;
 
   span {
     color: inherit !important;
@@ -720,7 +720,7 @@
 .paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a:hover {
   background-color: rgba(#454545, 0.9) !important;
   border-color: rgba(#454545, 0.9) !important;
-  color: $color__text__light !important;
+  color: #ffffff !important;
 }
 
 // Black button with white text
@@ -728,7 +728,7 @@
 .paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a {
   background-color: #231f20 !important;
   border-color: #231f20 !important;
-  color: $color__text__light !important;
+  color: #ffffff !important;
 
   span {
     color: inherit !important;
@@ -743,7 +743,7 @@
 .paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a:hover {
   background-color: rgba(#231f20, 0.9) !important;
   border-color: rgba(#231f20, 0.9) !important;
-  color: $color__text__light !important;
+  color: #ffffff !important;
 }
 
 .primary-bullet .field--type-text-long ul li::before {
