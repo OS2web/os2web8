@@ -401,7 +401,7 @@
             transition: .3s ease;
             font-weight: 600;
             position: relative;
-            padding: 10px 50px 10px 10px;
+            padding: 10px 20px;
             display: flex;
             align-items: center;
             width: fit-content;
@@ -429,8 +429,6 @@
             }
 
             &:hover {
-              background-color: $color__background__primary;
-              border-color: $color__background__primary;
               text-decoration: none;
             }
 
@@ -471,8 +469,6 @@
           }
 
           &:hover {
-            background-color: $color__background__primary;
-            border-color: $color__background__primary;
             text-decoration: none;
           }
 
@@ -487,24 +483,42 @@
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: #ffffff; // hardcoded white
-              border-color: #ffffff;
-              color: $color__text__dark; // Black text on white background
+              background-color: #ffffff !important; // hardcoded white
+              border-color: #ffffff !important;
+              color: $color__text__dark !important; // Black text on white background
+
+              span {
+                color: inherit !important;
+              }
+
+              &:after {
+                color: inherit !important;
+              }
 
               &:hover {
-                background-color: rgba(#ffffff, 0.9);
-                border-color: rgba(#ffffff, 0.9);
+                background-color: rgba(#ffffff, 0.9) !important;
+                border-color: rgba(#ffffff, 0.9) !important;
+                color: $color__text__dark !important;
               }
             }
           }
           a {
-            background-color: #ffffff; // hardcoded white
-            border-color: #ffffff;
-            color: $color__text__dark; // Black text on white background
+            background-color: #ffffff !important; // hardcoded white
+            border-color: #ffffff !important;
+            color: $color__text__dark !important; // Black text on white background
+
+            span {
+              color: inherit !important;
+            }
+
+            &:after {
+              color: inherit !important;
+            }
 
             &:hover {
-              background-color: rgba(#ffffff, 0.9);
-              border-color: rgba(#ffffff, 0.9);
+              background-color: rgba(#ffffff, 0.9) !important;
+              border-color: rgba(#ffffff, 0.9) !important;
+              color: $color__text__dark !important;
             }
           }
         }
@@ -515,24 +529,42 @@
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: #454545; // hardcoded dark grey
-              border-color: #454545;
-              color: $color__text__light; // White text on grey background
+              background-color: #454545 !important; // hardcoded dark grey
+              border-color: #454545 !important;
+              color: $color__text__light !important; // White text on grey background
+
+              span {
+                color: inherit !important;
+              }
+
+              &:after {
+                color: inherit !important;
+              }
 
               &:hover {
-                background-color: rgba(#454545, 0.9);
-                border-color: rgba(#454545, 0.9);
+                background-color: rgba(#454545, 0.9) !important;
+                border-color: rgba(#454545, 0.9) !important;
+                color: $color__text__light !important;
               }
             }
           }
           a {
-            background-color: #454545; // hardcoded dark grey
-            border-color: #454545;
-            color: $color__text__light; // White text on grey background
+            background-color: #454545 !important; // hardcoded dark grey
+            border-color: #454545 !important;
+            color: $color__text__light !important; // White text on grey background
+
+            span {
+              color: inherit !important;
+            }
+
+            &:after {
+              color: inherit !important;
+            }
 
             &:hover {
-              background-color: rgba(#454545, 0.9);
-              border-color: rgba(#454545, 0.9);
+              background-color: rgba(#454545, 0.9) !important;
+              border-color: rgba(#454545, 0.9) !important;
+              color: $color__text__light !important;
             }
           }
         }
@@ -543,24 +575,42 @@
         .field--name-field-fifty-fifty-link {
           .field__item {
             a {
-              background-color: #231f20; // hardcoded almost black
-              border-color: #231f20;
-              color: $color__text__light; // White text on black background
+              background-color: #231f20 !important; // hardcoded almost black
+              border-color: #231f20 !important;
+              color: $color__text__light !important; // White text on black background
+
+              span {
+                color: inherit !important;
+              }
+
+              &:after {
+                color: inherit !important;
+              }
 
               &:hover {
-                background-color: rgba(#231f20, 0.9);
-                border-color: rgba(#231f20, 0.9);
+                background-color: rgba(#231f20, 0.9) !important;
+                border-color: rgba(#231f20, 0.9) !important;
+                color: $color__text__light !important;
               }
             }
           }
           a {
-            background-color: #231f20; // hardcoded almost black
-            border-color: #231f20;
-            color: $color__text__light; // White text on black background
+            background-color: #231f20 !important; // hardcoded almost black
+            border-color: #231f20 !important;
+            color: $color__text__light !important; // White text on black background
+
+            span {
+              color: inherit !important;
+            }
+
+            &:after {
+              color: inherit !important;
+            }
 
             &:hover {
-              background-color: rgba(#231f20, 0.9);
-              border-color: rgba(#231f20, 0.9);
+              background-color: rgba(#231f20, 0.9) !important;
+              border-color: rgba(#231f20, 0.9) !important;
+              color: $color__text__light !important;
             }
           }
         }
@@ -612,43 +662,70 @@
 // White button with black text
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a,
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: $color__text__dark;
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: $color__text__dark !important;
+
+  span {
+    color: inherit !important;
+  }
+
+  &:after {
+    color: inherit !important;
+  }
 }
 
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a:hover,
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a:hover {
-  background-color: rgba(#ffffff, 0.9);
-  border-color: rgba(#ffffff, 0.9);
+  background-color: rgba(#ffffff, 0.9) !important;
+  border-color: rgba(#ffffff, 0.9) !important;
+  color: $color__text__dark !important;
 }
 
 // Grey button with white text
 .paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link .field__item a,
 .paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a {
-  background-color: #454545;
-  border-color: #454545;
-  color: $color__text__light;
+  background-color: #454545 !important;
+  border-color: #454545 !important;
+  color: $color__text__light !important;
+
+  span {
+    color: inherit !important;
+  }
+
+  &:after {
+    color: inherit !important;
+  }
 }
 
 .paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link .field__item a:hover,
 .paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a:hover {
-  background-color: rgba(#454545, 0.9);
-  border-color: rgba(#454545, 0.9);
+  background-color: rgba(#454545, 0.9) !important;
+  border-color: rgba(#454545, 0.9) !important;
+  color: $color__text__light !important;
 }
 
 // Black button with white text
 .paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a,
 .paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a {
-  background-color: #231f20;
-  border-color: #231f20;
-  color: $color__text__light;
+  background-color: #231f20 !important;
+  border-color: #231f20 !important;
+  color: $color__text__light !important;
+
+  span {
+    color: inherit !important;
+  }
+
+  &:after {
+    color: inherit !important;
+  }
 }
 
 .paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a:hover,
 .paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a:hover {
-  background-color: rgba(#231f20, 0.9);
-  border-color: rgba(#231f20, 0.9);
+  background-color: rgba(#231f20, 0.9) !important;
+  border-color: rgba(#231f20, 0.9) !important;
+  color: $color__text__light !important;
 }
 
 .primary-bullet .field--type-text-long ul li::before {
