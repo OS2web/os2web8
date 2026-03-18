@@ -99,7 +99,8 @@
       color: $color__text__dark;
     }
     
-    a:not(.button):not(.btn):not(.cta-buttons a) {
+    // Style regular content links (CTA buttons are styled separately)
+    .paragraph-50-50-description a:not(.button):not(.btn) {
       color: $color__link;
       text-decoration: none;
       transition: color 0.2s ease, text-decoration 0.2s ease;

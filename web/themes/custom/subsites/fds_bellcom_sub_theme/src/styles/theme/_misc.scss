@@ -49,7 +49,9 @@ p,
 li,
 .region-sidebar-second,
 .region-sidebar-left {
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header):not(.cta-buttons a):not(.menu a):not(.nav-primary a):not(.nav-secondary a):not(footer a):not(.footer a) {
+  // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
+  // Some browsers drop those parts, which can unexpectedly broaden matches.
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__link;
     text-decoration: none;
     transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -104,7 +106,8 @@ li,
 .background-color--tertiary,
 .spotbox--background-color-secondary,
 .spotbox--background-color-tertiary {
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header):not(.cta-buttons a):not(.menu a):not(.nav-primary a):not(.nav-secondary a) {
+  // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__text__light;
     transition: color 0.2s ease, text-decoration 0.2s ease;
     
@@ -153,7 +156,8 @@ li,
 // Links in light backgrounds (primary) - use dark text
 .background-color--primary,
 .spotbox--background-color-primary {
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header):not(.cta-buttons a):not(.menu a):not(.nav-primary a):not(.nav-secondary a) {
+  // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__link;
     transition: color 0.2s ease, text-decoration 0.2s ease;
     
@@ -530,17 +534,12 @@ body .page-container {
   color: $color__text__dark !important;
 
   // ALL text elements must be dark
-  // EXCEPT: 50/50 paragraph text-side (handled by text-side-white/black classes)
-  h1:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
-  h2:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
-  h3:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
-  h4:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
-  h5:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
-  h6:not(.paragraph-50-50-wrapper .text-side h1):not(.paragraph-50-50-wrapper .text-side h2):not(.paragraph-50-50-wrapper .text-side h3):not(.paragraph-50-50-wrapper .text-side h4):not(.paragraph-50-50-wrapper .text-side h5):not(.paragraph-50-50-wrapper .text-side h6),
-  p:not(.paragraph-50-50-wrapper .text-side p),
-  li:not(.paragraph-50-50-wrapper .text-side li),
-  span:not(.paragraph-50-50-wrapper .text-side span),
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
+  // 50/50 paragraph text-side colors are handled by the dedicated 50/50 exception
+  // block further down in this file. Avoid complex selectors inside `:not(...)`
+  // because they can be parsed inconsistently.
+  h1, h2, h3, h4, h5, h6,
+  p, li, span,
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]),
   .section-heading__title,
   .field--name-field-os2web-news-heading h1,
   .field--name-field-os2web-news-heading h2,
@@ -631,7 +630,7 @@ body .page-container {
   // EXCEPT: 50/50 paragraph text-side rules take precedence
   h1, h2, h3, h4, h5, h6, 
   p, li, span,
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]),
   .section-heading__title,
   
   // Bullets must be white on dark backgrounds
@@ -722,7 +721,7 @@ body .page-container {
   // EXCEPT: 50/50 paragraph text-side rules take precedence
   h1, h2, h3, h4, h5, h6, 
   p, li, span,
-  a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.paragraph-50-50-wrapper .text-side a),
+  a:not(.button):not(.btn):not(.spotbox):not([role="button"]),
   .section-heading__title,
   
   // Bullets must be white on dark backgrounds
@@ -851,84 +850,36 @@ body .page-container {
   }
 }
 
-// Override background color rules for 50/50 paragraph text-side-black (dark links on light)
-.background-color--primary .paragraph-50-50-wrapper .text-side.text-side-black,
-.background-color--secondary .paragraph-50-50-wrapper .text-side.text-side-black,
-.background-color--tertiary .paragraph-50-50-wrapper .text-side.text-side-black {
-  // Override list bullets to be dark (for light backgrounds)
-  ul li::before,
-  ul li:before,
-  ol li::before,
-  ol li:before,
-  .field--type-text-long ul li::before,
-  .field--type-text-long ul li:before,
-  .field--type-text-long:not(.field--widget-text-textarea) ul li::before,
-  .field--type-text-long:not(.field--widget-text-textarea) ul li:before,
-  .field--type-text-with-summary ul li::before,
-  .field--type-text-with-summary ul li:before,
-  .accordion-content ul li::before,
-  .accordion-content ul li:before,
-  .field--name-field-os2web-page-keyword ul li::before,
-  .field--name-field-os2web-page-keyword ul li:before {
-    color: $color__bullet__primary !important; // Dark bullets on light background
-  }
-  
-  // Override all link colors to be dark (for light backgrounds)
-  a:not(.button):not(.btn):not(.cta-buttons a),
-  h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h6 a:not(.button):not(.btn):not(.cta-buttons a) {
-    color: $color__link !important;
-    
-    // Pseudo-elements (::before, ::after) must also be dark
-    &::before,
-    &:before,
-    &::after,
-    &:after {
-      color: $color__link !important;
-    }
-    
-    &:hover,
-    &:focus {
-      color: $color__link__hover !important;
-      
-      // Pseudo-elements on hover must also be dark
-      &::before,
-      &:before,
-      &::after,
-      &:after {
-        color: $color__link__hover !important;
-      }
-    }
-  }
+// 50/50 CTA button variants must always win over background/link rules.
+// The CTA links do not necessarily carry `.button`/`.btn`, so they can be caught by
+// generic `a:not(.button):not(.btn)` rules unless we force the variant colors here.
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a,
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a {
+  color: #ffffff !important;
 }
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link a:hover,
+.paragraph-50-50-wrapper .cta-buttons.button-black .field--name-field-fifty-fifty-link .field__item a:hover {
+  color: #ffffff !important;
+}
+
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a,
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link .field__item a {
+  color: #ffffff !important;
+}
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link a:hover,
+.paragraph-50-50-wrapper .cta-buttons.button-grey .field--name-field-fifty-fifty-link .field__item a:hover {
+  color: #ffffff !important;
+}
+
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a,
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a {
+  color: #231f20 !important;
+}
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a:hover,
+.paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a:hover {
+  color: #231f20 !important;
+}
+
 
 // Override background color rules for 50/50 paragraph text-side-white (light links on dark)
 .background-color--primary .paragraph-50-50-wrapper .text-side.text-side-white,
@@ -953,37 +904,9 @@ body .page-container {
   }
   
   // Override all link colors to be light (for dark backgrounds)
-  a:not(.button):not(.btn):not(.cta-buttons a),
-  h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-news-heading h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-event-heading h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-page-heading h6 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h1 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h2 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h3 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h4 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h5 a:not(.button):not(.btn):not(.cta-buttons a),
-  .field--name-field-os2web-cnt-heading h6 a:not(.button):not(.btn):not(.cta-buttons a) {
+  // NOTE: Avoid `:not(.cta-buttons a)` (complex selector in :not()).
+  // Restrict link overrides to regular content links.
+  .paragraph-50-50-description a:not(.button):not(.btn) {
     color: $color__text__light !important;
     
     // Pseudo-elements (::before, ::after) must also be light
