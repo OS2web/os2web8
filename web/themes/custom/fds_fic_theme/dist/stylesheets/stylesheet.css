@@ -24069,9 +24069,6 @@ a {
   margin: 0;
   padding: 80px 0;
 }
-.entity-default--os2web-wrapper.background-color--secondary * {
-  color: white;
-}
 .entity-default--os2web-wrapper.background-color--secondary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
 }
@@ -24088,6 +24085,9 @@ a {
 }
 .entity-default--os2web-wrapper.background-color--tertiary .entity-default--os2web-factbox-paragraph {
   padding: 80px 0;
+}
+.entity-default--os2web-wrapper.background-color--tertiary * {
+  color: white;
 }
 .entity-default--os2web-wrapper.background-color--tertiary g {
   stroke: #fff;
