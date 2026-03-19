@@ -316,6 +316,68 @@
               }
             }
           }
+          a {
+            background-color: black;
+            border-color: black;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.9);
+              border-color: rgba(0, 0, 0, 0.9);
+            }
+          }
+        }
+      }
+      &.button-purple {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: #923a9b;
+              border-color: #923a9b;
+              color: #fff;
+
+              &:hover {
+                background-color: rgba(146, 58, 155, 0.9);
+                border-color: rgba(146, 58, 155, 0.9);
+              }
+            }
+          }
+          a {
+            background-color: #923a9b;
+            border-color: #923a9b;
+            color: #fff;
+
+            &:hover {
+              background-color: rgba(146, 58, 155, 0.9);
+              border-color: rgba(146, 58, 155, 0.9);
+            }
+          }
+        }
+      }
+      &.button-green {
+        .field--name-field-fifty-fifty-link {
+          .field__item {
+            a {
+              background-color: #55b03b;
+              border-color: #55b03b;
+              color: #000;
+
+              &:hover {
+                background-color: rgba(85, 176, 59, 0.9);
+                border-color: rgba(85, 176, 59, 0.9);
+              }
+            }
+          }
+          a {
+            background-color: #55b03b;
+            border-color: #55b03b;
+            color: #000;
+
+            &:hover {
+              background-color: rgba(85, 176, 59, 0.9);
+              border-color: rgba(85, 176, 59, 0.9);
+            }
+          }
         }
       }
     }

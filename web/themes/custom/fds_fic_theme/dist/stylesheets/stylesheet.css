@@ -23627,6 +23627,51 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   background-color: rgba(0, 0, 0, 0.9);
   border-color: rgba(0, 0, 0, 0.9);
 }
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-black .field--name-field-fifty-fifty-link a {
+  background-color: black;
+  border-color: black;
+  color: #fff;
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-black .field--name-field-fifty-fifty-link a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-color: rgba(0, 0, 0, 0.9);
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-purple .field--name-field-fifty-fifty-link .field__item a {
+  background-color: #923a9b;
+  border-color: #923a9b;
+  color: #fff;
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-purple .field--name-field-fifty-fifty-link .field__item a:hover {
+  background-color: rgba(146, 58, 155, 0.9);
+  border-color: rgba(146, 58, 155, 0.9);
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-purple .field--name-field-fifty-fifty-link a {
+  background-color: #923a9b;
+  border-color: #923a9b;
+  color: #fff;
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-purple .field--name-field-fifty-fifty-link a:hover {
+  background-color: rgba(146, 58, 155, 0.9);
+  border-color: rgba(146, 58, 155, 0.9);
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-green .field--name-field-fifty-fifty-link .field__item a {
+  background-color: #55b03b;
+  border-color: #55b03b;
+  color: #000;
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-green .field--name-field-fifty-fifty-link .field__item a:hover {
+  background-color: rgba(85, 176, 59, 0.9);
+  border-color: rgba(85, 176, 59, 0.9);
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-green .field--name-field-fifty-fifty-link a {
+  background-color: #55b03b;
+  border-color: #55b03b;
+  color: #000;
+}
+.paragraph-50-50-wrapper .text-side .cta-buttons.button-green .field--name-field-fifty-fifty-link a:hover {
+  background-color: rgba(85, 176, 59, 0.9);
+  border-color: rgba(85, 176, 59, 0.9);
+}
 .paragraph-50-50-wrapper .text-side .paragraph-50-50-description table {
   width: 100%;
 }
