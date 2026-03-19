@@ -287,6 +287,31 @@ function fds_fic_theme_preprocess_node(array &$variables) {
 
   $node = $variables['node'];
   $view_mode = $variables['elements']['#view_mode'];
+
+  // Node modal feature: only active in full view mode when explicitly enabled.
+  $variables['fic_node_modal_enabled'] = FALSE;
+  if ($view_mode === 'full' && $node->hasField('field_modal_enabled') && !$node->get('field_modal_enabled')->isEmpty()) {
+    $is_enabled = (int) $node->get('field_modal_enabled')->value === 1;
+    if ($is_enabled) {
+      $variables['fic_node_modal_enabled'] = TRUE;
+      $variables['fic_node_modal_id'] = 'fic-node-modal-' . $node->id();
+      $variables['fic_node_modal_heading_id'] = 'fic-node-modal-heading-' . $node->id();
+      $variables['fic_node_modal_heading'] = $node->hasField('field_modal_heading') && !$node->get('field_modal_heading')->isEmpty()
+        ? $node->get('field_modal_heading')->value
+        : $node->label();
+      $variables['fic_node_modal_auto_open'] = $node->hasField('field_modal_show_on_load') && !$node->get('field_modal_show_on_load')->isEmpty()
+        ? ((int) $node->get('field_modal_show_on_load')->value === 1)
+        : TRUE;
+      $variables['fic_node_modal_reopen_enabled'] = $node->hasField('field_modal_reopen_button') && !$node->get('field_modal_reopen_button')->isEmpty()
+        ? ((int) $node->get('field_modal_reopen_button')->value === 1)
+        : TRUE;
+      $variables['fic_node_modal_reopen_label'] = $node->hasField('field_modal_button_label') && !$node->get('field_modal_button_label')->isEmpty()
+        ? $node->get('field_modal_button_label')->value
+        : t('Open information');
+
+      $variables['#attached']['library'][] = 'fds_fic_theme/node_modal';
+    }
+  }
   if ($variables['view_mode'] == 'teaser' && $variables['node']->getType() == 'os2web_page' || $variables['node']->getType() == 'os2web_news')  {
           $variables['menu_hierarchy'] = fds_fic_theme_get_menu_hierarchy_for_node($variables['node']);
       }

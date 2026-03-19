@@ -57,7 +57,7 @@
       </div>
     {% endif %}
 
-    {{content | without('field_os2web_page_primaryimage') }}
+    {{ content | without('field_os2web_page_primaryimage', 'field_modal_enabled', 'field_modal_heading', 'field_modal_body', 'field_modal_show_on_load', 'field_modal_reopen_button', 'field_modal_button_label') }}
     {% if node.field_cta_links is not empty %}
       <div class="banner-content-links-wrapper">
         <div class="banner-content-links__inner-wrapper">
@@ -140,4 +140,47 @@
       <!-- END Print section markup -->
     {% endif %}
   </div>
+
+  {% if fic_node_modal_enabled %}
+    <div
+      class="fic-node-modal js-fic-node-modal"
+      data-auto-open="{{ fic_node_modal_auto_open ? '1' : '0' }}"
+      data-reopen-enabled="{{ fic_node_modal_reopen_enabled ? '1' : '0' }}"
+    >
+      <button
+        type="button"
+        class="fic-node-modal__reopen-btn js-fic-node-modal-reopen"
+        hidden
+      >
+        {{ fic_node_modal_reopen_label }}
+      </button>
+
+      <div class="fic-node-modal__backdrop js-fic-node-modal-backdrop" hidden></div>
+
+      <div
+        id="{{ fic_node_modal_id }}"
+        class="fic-node-modal__dialog js-fic-node-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="{{ fic_node_modal_heading_id }}"
+        hidden
+        tabindex="-1"
+      >
+        <button
+          type="button"
+          class="fic-node-modal__close js-fic-node-modal-close"
+          aria-label="{{ 'Close modal'|t }}"
+        >
+          &times;
+        </button>
+
+        <div class="fic-node-modal__content">
+          <h2 id="{{ fic_node_modal_heading_id }}" class="fic-node-modal__title">{{ fic_node_modal_heading }}</h2>
+          <div class="fic-node-modal__body">
+            {{ content.field_modal_body }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </article>

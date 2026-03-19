@@ -819,3 +819,68 @@ nav {
 
 // No touch
 .no-touchevents {}
+
+// Node modal component (os2web page full view).
+body.fic-node-modal-open {
+  overflow: hidden;
+}
+
+.fic-node-modal {
+  .fic-node-modal__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 9998;
+  }
+
+  .fic-node-modal__dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 720px);
+    max-height: 85vh;
+    overflow: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    padding: 32px 24px 24px;
+  }
+
+  .fic-node-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: 0;
+    background: transparent;
+    font-size: 32px;
+    line-height: 1;
+    color: #231f20;
+    cursor: pointer;
+  }
+
+  .fic-node-modal__title {
+    margin: 0 0 16px;
+    color: #231f20;
+  }
+
+  .fic-node-modal__body {
+    color: #231f20;
+  }
+
+  .fic-node-modal__reopen-btn {
+    position: fixed;
+    left: 16px;
+    bottom: 20px;
+    z-index: 9997;
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 16px;
+    background: #00335b;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+}
