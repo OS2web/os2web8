@@ -26,3 +26,28 @@
     margin-right: 6px !important;  
     background: url("../src/images/sprite.png") no-repeat -19px -48px !important;
 }
+
+
+.field--name-field-os2web-files-files .field__item .file {
+  display: block;
+  background-color: #fafafa;
+  padding: 30px;
+  border: 1px solid #d1d3d4;
+  margin-bottom: 15px;
+  padding-left: 0 !important;
+  background-image: none !important;
+  -webkit-box-shadow: 0 0 5px #00000029;
+  box-shadow: 0 0 5px #00000029;
+}
+
+.field--name-field-os2web-files-files .field__item .file a:hover:before {
+  content: '' !important;     
+    display: inline-block !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 50% !important;
+    width: 30px !important;
+    height: 19px !important;
+    margin-right: 6px !important;  
+    background: url("../src/images/sprite.png") no-repeat -19px -48px !important;
+}
