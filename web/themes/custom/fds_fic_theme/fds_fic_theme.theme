@@ -288,26 +288,31 @@ function fds_fic_theme_preprocess_node(array &$variables) {
   $node = $variables['node'];
   $view_mode = $variables['elements']['#view_mode'];
 
-  // Node modal feature: only active in full view mode when explicitly enabled.
+  // Node modal feature: supports menu-based inheritance for os2web pages.
   $variables['fic_node_modal_enabled'] = FALSE;
-  if ($view_mode === 'full' && $node->hasField('field_modal_enabled') && !$node->get('field_modal_enabled')->isEmpty()) {
-    $is_enabled = (int) $node->get('field_modal_enabled')->value === 1;
-    if ($is_enabled) {
+  if ($view_mode === 'full' && $node->getType() === 'os2web_page') {
+    $modal_source = _fds_fic_theme_get_modal_source_node($node);
+    if ($modal_source) {
       $variables['fic_node_modal_enabled'] = TRUE;
       $variables['fic_node_modal_id'] = 'fic-node-modal-' . $node->id();
       $variables['fic_node_modal_heading_id'] = 'fic-node-modal-heading-' . $node->id();
-      $variables['fic_node_modal_heading'] = $node->hasField('field_modal_heading') && !$node->get('field_modal_heading')->isEmpty()
-        ? $node->get('field_modal_heading')->value
-        : $node->label();
-      $variables['fic_node_modal_auto_open'] = $node->hasField('field_modal_show_on_load') && !$node->get('field_modal_show_on_load')->isEmpty()
-        ? ((int) $node->get('field_modal_show_on_load')->value === 1)
+      $variables['fic_node_modal_heading'] = $modal_source->hasField('field_modal_heading') && !$modal_source->get('field_modal_heading')->isEmpty()
+        ? $modal_source->get('field_modal_heading')->value
+        : $modal_source->label();
+      $variables['fic_node_modal_auto_open'] = $modal_source->hasField('field_modal_show_on_load') && !$modal_source->get('field_modal_show_on_load')->isEmpty()
+        ? ((int) $modal_source->get('field_modal_show_on_load')->value === 1)
         : TRUE;
-      $variables['fic_node_modal_reopen_enabled'] = $node->hasField('field_modal_reopen_button') && !$node->get('field_modal_reopen_button')->isEmpty()
-        ? ((int) $node->get('field_modal_reopen_button')->value === 1)
+      $variables['fic_node_modal_reopen_enabled'] = $modal_source->hasField('field_modal_reopen_button') && !$modal_source->get('field_modal_reopen_button')->isEmpty()
+        ? ((int) $modal_source->get('field_modal_reopen_button')->value === 1)
         : TRUE;
-      $variables['fic_node_modal_reopen_label'] = $node->hasField('field_modal_button_label') && !$node->get('field_modal_button_label')->isEmpty()
-        ? $node->get('field_modal_button_label')->value
+      $variables['fic_node_modal_reopen_label'] = $modal_source->hasField('field_modal_button_label') && !$modal_source->get('field_modal_button_label')->isEmpty()
+        ? $modal_source->get('field_modal_button_label')->value
         : t('Open information');
+      $variables['fic_node_modal_is_inherited'] = ((int) $modal_source->id() !== (int) $node->id());
+      $variables['fic_node_modal_source_nid'] = (int) $modal_source->id();
+      $variables['fic_node_modal_body_render'] = $modal_source->hasField('field_modal_body') && !$modal_source->get('field_modal_body')->isEmpty()
+        ? $modal_source->get('field_modal_body')->view(['label' => 'hidden'])
+        : [];
 
       $variables['#attached']['library'][] = 'fds_fic_theme/node_modal';
     }
@@ -413,6 +418,65 @@ function fds_fic_theme_preprocess_node(array &$variables) {
     }
 
 
+}
+
+/**
+ * Checks if a node has an enabled modal configuration.
+ */
+function _fds_fic_theme_node_has_enabled_modal(\Drupal\node\NodeInterface $node) {
+  return $node->hasField('field_modal_enabled')
+    && !$node->get('field_modal_enabled')->isEmpty()
+    && (int) $node->get('field_modal_enabled')->value === 1;
+}
+
+/**
+ * Resolves modal source node using current node then nearest menu parent.
+ */
+function _fds_fic_theme_get_modal_source_node(\Drupal\node\NodeInterface $node) {
+  if (_fds_fic_theme_node_has_enabled_modal($node)) {
+    return $node;
+  }
+
+  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $menu_links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()], 'main');
+
+  if (empty($menu_links)) {
+    return NULL;
+  }
+
+  // Ensure deterministic resolution when multiple menu links exist.
+  ksort($menu_links);
+  $menu_link = reset($menu_links);
+  $max_depth = 20;
+  $depth = 0;
+
+  while ($menu_link && $depth < $max_depth) {
+    $depth++;
+    $parent_plugin_id = $menu_link->getParent();
+    if (empty($parent_plugin_id)) {
+      break;
+    }
+
+    $parent_link = $menu_link_manager->createInstance($parent_plugin_id);
+    if (!$parent_link) {
+      break;
+    }
+
+    if ($parent_link->getRouteName() === 'entity.node.canonical') {
+      $route_parameters = $parent_link->getRouteParameters();
+      if (!empty($route_parameters['node'])) {
+        $parent_node = $node_storage->load((int) $route_parameters['node']);
+        if ($parent_node instanceof \Drupal\node\NodeInterface && _fds_fic_theme_node_has_enabled_modal($parent_node)) {
+          return $parent_node;
+        }
+      }
+    }
+
+    $menu_link = $parent_link;
+  }
+
+  return NULL;
 }
 
 function fds_fic_theme_get_menu_hierarchy_for_node($node) {
