@@ -437,6 +437,13 @@ function _fds_fic_theme_get_modal_source_node(\Drupal\node\NodeInterface $node) 
     return $node;
   }
 
+  // Allow editors to explicitly disable inherited modals on specific child pages.
+  if ($node->hasField('field_modal_disable_inheritance') && !$node->get('field_modal_disable_inheritance')->isEmpty()) {
+    if ((int) $node->get('field_modal_disable_inheritance')->value === 1) {
+      return NULL;
+    }
+  }
+
   $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
   $node_storage = \Drupal::entityTypeManager()->getStorage('node');
   $menu_links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()], 'main');
