@@ -1029,9 +1029,16 @@ function fds_fic_theme_preprocess_paragraph__os2web_menu_links_paragraph(array &
       $files = $items->referencedEntities();
       if (!empty($files)) {
         $file_entity = reset($files);
-        // If it's a valid File entity, create a file URL
+        // If it's a valid File entity, build an image-style URL.
         if ($file_entity instanceof \Drupal\file\FileInterface) {
-          $link_info['image_url'] = $file_entity->createFileUrl();
+          $image_style = \Drupal\image\Entity\ImageStyle::load('os2web_medium');
+          if ($image_style) {
+            $link_info['image_url'] = $image_style->buildUrl($file_entity->getFileUri());
+          }
+          else {
+            // Fallback if style is missing.
+            $link_info['image_url'] = $file_entity->createFileUrl();
+          }
         }
       }
     }
