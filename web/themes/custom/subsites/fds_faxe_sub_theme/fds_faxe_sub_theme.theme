@@ -35,7 +35,7 @@ function fds_faxe_sub_theme_preprocess_paragraph(array &$variables) {
   $paragraph = $variables['paragraph'];
   $parentBundle = $paragraph->bundle();
   if ($paragraph->bundle() == 'os2web_news_block') {
-    $variables['content']['news_count'] = 0;
+    $variables['content']['#news_count'] = 0;
 
     $values = $paragraph->get('field_os2web_news_par_section')->getValue();
     $section_target_ids = array();
@@ -48,7 +48,7 @@ function fds_faxe_sub_theme_preprocess_paragraph(array &$variables) {
     $view->setArguments($section_target_ids);
     $result = $view->execute();
     if ($result) {
-      $variables['content']['news_count'] = count($view->result);
+      $variables['content']['#news_count'] = count($view->result);
     }
   }
 }
