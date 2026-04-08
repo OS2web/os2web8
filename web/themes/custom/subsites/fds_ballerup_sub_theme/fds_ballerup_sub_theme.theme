@@ -30,8 +30,17 @@ function fds_ballerup_sub_theme_preprocess_page(array &$variables) {
  * Implements hook_page_attachments().
  */
 function fds_ballerup_sub_theme_page_attachments(array &$attachments) {
-  $brand_color = theme_get_setting('background_color__default');
-  if (!empty($brand_color) && preg_match('/^#[0-9a-fA-F]{6}$/', $brand_color)) {
+  $palette = theme_get_setting('palette');
+  $brand_color = '';
+
+  if (is_array($palette) && !empty($palette['background_color__default'])) {
+    $brand_color = $palette['background_color__default'];
+  }
+  elseif (!empty(theme_get_setting('background_color__default'))) {
+    $brand_color = theme_get_setting('background_color__default');
+  }
+
+  if (!empty($brand_color) && preg_match('/^#[0-9a-fA-F]{3,6}$/', $brand_color)) {
     $attachments['#attached']['html_head'][] = [
       [
         '#tag' => 'style',
