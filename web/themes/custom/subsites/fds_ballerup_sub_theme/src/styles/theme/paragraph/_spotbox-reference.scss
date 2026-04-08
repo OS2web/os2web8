@@ -56,7 +56,7 @@
     font-weight: 400;
     text-transform: uppercase;
     color: $color-white;
-    background-color: $background_color__default;;
+    background-color: var(--brand-color-exact, $background_color__default);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     .field--name-field-os2web-spotbox-heading {

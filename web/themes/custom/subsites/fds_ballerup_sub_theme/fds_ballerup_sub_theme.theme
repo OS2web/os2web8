@@ -27,6 +27,22 @@ function fds_ballerup_sub_theme_preprocess_page(array &$variables) {
 }
 
 /**
+ * Implements hook_page_attachments().
+ */
+function fds_ballerup_sub_theme_page_attachments(array &$attachments) {
+  $brand_color = theme_get_setting('background_color__default');
+  if (!empty($brand_color) && preg_match('/^#[0-9a-fA-F]{6}$/', $brand_color)) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'style',
+        '#value' => ':root{--brand-color-exact:' . $brand_color . ';}',
+      ],
+      'fds_ballerup_sub_theme_brand_color_exact',
+    ];
+  }
+}
+
+/**
  * Implements hook_form_system_theme_settings_alter().
  */
 function fds_ballerup_sub_theme_form_system_theme_settings_alter(array &$form, FormStateInterface $form_state) {

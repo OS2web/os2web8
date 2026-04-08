@@ -78,7 +78,7 @@
   }
 }
 .custom-header-row--desktop-navigation {
-  background-color: $background_color__default;
+  background-color: var(--brand-color-exact, $background_color__default);
   color: $color-white;
   height: auto;
   .menu {
