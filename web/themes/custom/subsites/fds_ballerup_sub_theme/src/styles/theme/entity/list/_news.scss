@@ -24,6 +24,7 @@ a.entity-list--os2web-news {
   max-width: unset;
   cursor: pointer;
   border-radius: 6px;
+
 }
 .entity-list--os2web-news {
   display: flex;
@@ -100,7 +101,7 @@ a.entity-list--os2web-news {
 @include media-breakpoint-up(sm) {
 
   .entity-list--os2web-news {
-    display: flex;
+    display: flex !important;
 
     flex-direction: row;
 
