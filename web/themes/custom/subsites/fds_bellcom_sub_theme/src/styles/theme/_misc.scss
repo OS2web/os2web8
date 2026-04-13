@@ -42,13 +42,11 @@ body .container-fluid {
 
 // Base link styles for regular content
 // Excludes: buttons, navigation, spotboxes, footer, and other special components
-.region-content,
-.paragraph,
-.field,
-p,
-li,
-.region-sidebar-second,
-.region-sidebar-left {
+// Only style editor-authored body text links (not navigation/admin links).
+.field--type-text-long,
+.field--type-text-with-summary,
+.field--name-body,
+.ck-content {
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   // Some browsers drop those parts, which can unexpectedly broaden matches.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
@@ -112,10 +110,22 @@ li,
 }
 
 // Links in dark backgrounds (secondary/tertiary) - use light text
-.background-color--secondary,
-.background-color--tertiary,
-.spotbox--background-color-secondary,
-.spotbox--background-color-tertiary {
+.background-color--secondary .field--type-text-long,
+.background-color--secondary .field--type-text-with-summary,
+.background-color--secondary .field--name-body,
+.background-color--secondary .ck-content,
+.background-color--tertiary .field--type-text-long,
+.background-color--tertiary .field--type-text-with-summary,
+.background-color--tertiary .field--name-body,
+.background-color--tertiary .ck-content,
+.spotbox--background-color-secondary .field--type-text-long,
+.spotbox--background-color-secondary .field--type-text-with-summary,
+.spotbox--background-color-secondary .field--name-body,
+.spotbox--background-color-secondary .ck-content,
+.spotbox--background-color-tertiary .field--type-text-long,
+.spotbox--background-color-tertiary .field--type-text-with-summary,
+.spotbox--background-color-tertiary .field--name-body,
+.spotbox--background-color-tertiary .ck-content {
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__text__light;
@@ -164,8 +174,14 @@ li,
 }
 
 // Links in light backgrounds (primary) - use dark text
-.background-color--primary,
-.spotbox--background-color-primary {
+.background-color--primary .field--type-text-long,
+.background-color--primary .field--type-text-with-summary,
+.background-color--primary .field--name-body,
+.background-color--primary .ck-content,
+.spotbox--background-color-primary .field--type-text-long,
+.spotbox--background-color-primary .field--type-text-with-summary,
+.spotbox--background-color-primary .field--name-body,
+.spotbox--background-color-primary .ck-content {
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__link;
