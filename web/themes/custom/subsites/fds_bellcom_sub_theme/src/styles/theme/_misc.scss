@@ -42,70 +42,90 @@ body .container-fluid {
 
 // Base link styles for regular content
 // Excludes: buttons, navigation, spotboxes, footer, and other special components
-.region-content,
-.paragraph,
-.field,
-p,
-li,
-.region-sidebar-second,
-.region-sidebar-left {
+// Only style editor-authored body text links (not navigation/admin links).
+.field--type-text-long,
+.field--type-text-with-summary,
+.field--name-body,
+.ck-content {
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   // Some browsers drop those parts, which can unexpectedly broaden matches.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
-    color: $color__link;
-    text-decoration: none;
+    color: #005ea5;
+    font-weight: $font-weight-normal;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
     transition: color 0.2s ease, text-decoration 0.2s ease;
     
     &:hover,
     &:focus {
-      color: $color__link__hover;
+      color: #003d73;
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
       text-underline-offset: 2px;
     }
     
     &:focus {
-      outline: 2px solid $color__link__hover;
+      outline: 2px solid #003d73;
       outline-offset: 2px;
       border-radius: 2px;
     }
     
     &:visited {
-      color: $color__link;
+      color: #4c2c92;
     }
     
     &:active {
-      color: $color__link__hover;
+      color: #003d73;
     }
   }
   
   // Field type link - should also have underline on hover
   .field--type-link a {
-    color: $color__link;
-    text-decoration: none;
+    color: #005ea5;
+    font-weight: $font-weight-normal;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
     transition: color 0.2s ease, text-decoration 0.2s ease;
     
     &:hover,
     &:focus {
-      color: $color__link__hover;
+      color: #003d73;
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
       text-underline-offset: 2px;
     }
     
     &:focus {
-      outline: 2px solid $color__link__hover;
+      outline: 2px solid #003d73;
       outline-offset: 2px;
       border-radius: 2px;
+    }
+
+    &:visited {
+      color: #4c2c92;
     }
   }
 }
 
 // Links in dark backgrounds (secondary/tertiary) - use light text
-.background-color--secondary,
-.background-color--tertiary,
-.spotbox--background-color-secondary,
-.spotbox--background-color-tertiary {
+.background-color--secondary .field--type-text-long,
+.background-color--secondary .field--type-text-with-summary,
+.background-color--secondary .field--name-body,
+.background-color--secondary .ck-content,
+.background-color--tertiary .field--type-text-long,
+.background-color--tertiary .field--type-text-with-summary,
+.background-color--tertiary .field--name-body,
+.background-color--tertiary .ck-content,
+.spotbox--background-color-secondary .field--type-text-long,
+.spotbox--background-color-secondary .field--type-text-with-summary,
+.spotbox--background-color-secondary .field--name-body,
+.spotbox--background-color-secondary .ck-content,
+.spotbox--background-color-tertiary .field--type-text-long,
+.spotbox--background-color-tertiary .field--type-text-with-summary,
+.spotbox--background-color-tertiary .field--name-body,
+.spotbox--background-color-tertiary .ck-content {
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__text__light;
@@ -154,8 +174,14 @@ li,
 }
 
 // Links in light backgrounds (primary) - use dark text
-.background-color--primary,
-.spotbox--background-color-primary {
+.background-color--primary .field--type-text-long,
+.background-color--primary .field--type-text-with-summary,
+.background-color--primary .field--name-body,
+.background-color--primary .ck-content,
+.spotbox--background-color-primary .field--type-text-long,
+.spotbox--background-color-primary .field--type-text-with-summary,
+.spotbox--background-color-primary .field--name-body,
+.spotbox--background-color-primary .ck-content {
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
     color: $color__link;
@@ -848,6 +874,13 @@ body .page-container {
   *::after {
     color: inherit !important;
   }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none !important;
+  }
 }
 
 // 50/50 CTA button variants must always win over background/link rules.
@@ -874,10 +907,12 @@ body .page-container {
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a,
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a {
   color: #231f20 !important;
+  border: 1px solid #747474 !important;
 }
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a:hover,
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a:hover {
   color: #231f20 !important;
+  border-color: #454545 !important;
 }
 
 
