@@ -72,9 +72,7 @@ $sidenav-list-dot-spacing: 22px;
         
         &:hover,
         &:focus {
-          text-decoration: underline;
-          text-decoration-thickness: 1.5px;
-          text-underline-offset: 2px;
+          text-decoration: none;
         }
         
         &:focus {

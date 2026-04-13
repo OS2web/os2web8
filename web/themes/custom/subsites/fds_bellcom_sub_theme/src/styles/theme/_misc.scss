@@ -52,7 +52,7 @@ li,
   // NOTE: Avoid complex selectors inside :not(...), e.g. `:not(.cta-buttons a)`.
   // Some browsers drop those parts, which can unexpectedly broaden matches.
   a:not(.button):not(.btn):not(.spotbox):not([role="button"]):not(.nav-link):not(.sidenav-list__link):not(.accordion__header) {
-    color: $color__link;
+    color: #005ea5;
     font-weight: $font-weight-normal;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -61,30 +61,30 @@ li,
     
     &:hover,
     &:focus {
-      color: $color__link__hover;
+      color: #003d73;
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
       text-underline-offset: 2px;
     }
     
     &:focus {
-      outline: 2px solid $color__link__hover;
+      outline: 2px solid #003d73;
       outline-offset: 2px;
       border-radius: 2px;
     }
     
     &:visited {
-      color: $color__link;
+      color: #4c2c92;
     }
     
     &:active {
-      color: $color__link__hover;
+      color: #003d73;
     }
   }
   
   // Field type link - should also have underline on hover
   .field--type-link a {
-    color: $color__link;
+    color: #005ea5;
     font-weight: $font-weight-normal;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -93,16 +93,20 @@ li,
     
     &:hover,
     &:focus {
-      color: $color__link__hover;
+      color: #003d73;
       text-decoration: underline;
       text-decoration-thickness: 1.5px;
       text-underline-offset: 2px;
     }
     
     &:focus {
-      outline: 2px solid $color__link__hover;
+      outline: 2px solid #003d73;
       outline-offset: 2px;
       border-radius: 2px;
+    }
+
+    &:visited {
+      color: #4c2c92;
     }
   }
 }
@@ -887,10 +891,12 @@ body .page-container {
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a,
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a {
   color: #231f20 !important;
+  border: 1px solid #747474 !important;
 }
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link a:hover,
 .paragraph-50-50-wrapper .cta-buttons.button-white .field--name-field-fifty-fifty-link .field__item a:hover {
   color: #231f20 !important;
+  border-color: #454545 !important;
 }
 
 

@@ -85,7 +85,7 @@
       transition: color 0.2s ease, text-decoration 0.2s ease;
 
       &.is-active, &:hover, &:focus {
-        text-decoration: underline;
+        text-decoration: none;
         text-decoration-thickness: 1.5px;
         text-underline-offset: 2px;
       }
@@ -118,7 +118,7 @@
       color: $color__text;
 
       &:hover, &:focus {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
