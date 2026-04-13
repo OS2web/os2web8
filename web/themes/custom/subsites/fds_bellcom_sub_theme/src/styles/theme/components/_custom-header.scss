@@ -81,17 +81,16 @@
     a {
       padding: 5px ($grid-gutter-width / 2);
       font-size: $small-font-size;
-      color: $background_color__navigation;
+      color: $color__navigation__text;
       transition: color 0.2s ease, text-decoration 0.2s ease;
 
       &.is-active, &:hover, &:focus {
         text-decoration: none;
-        text-decoration-thickness: 1.5px;
-        text-underline-offset: 2px;
+        color: $color__navigation__text__hover;
       }
       
       &:focus {
-        outline: 2px solid $background_color__navigation;
+        outline: 2px solid $color__navigation__text;
         outline-offset: 2px;
         border-radius: 2px;
       }

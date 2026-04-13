@@ -35,8 +35,6 @@ $sidenav-list-dot-spacing: 22px;
     border-bottom: 0;
 
     > li {
-      order: 2;
-
       border-top: 1px solid $color-neutral;
 
       background-color: rgba($color-neutral, .3);
@@ -92,14 +90,12 @@ $sidenav-list-dot-spacing: 22px;
       &.current {
         display: block !important;
 
-        order: 1;
-
         border-top: 0;
 
         background-color: $color-primary;
 
         > a {
-          color: $color__text__light;
+          color: $color-text;
         }
       }
     }
