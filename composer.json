@@ -108,7 +108,7 @@
         "drupal/photoswipe": "^5.0",
         "drupal/queue_mail": "^1.6",
         "drupal/queue_ui": "^3.1",
-        "drupal/quick_node_clone": "^1.18",
+        "drupal/quick_node_clone": "^1.22",
         "drupal/quickedit": "^2.0",
         "drupal/quicktabs": "^4.0",
         "drupal/redirect": "^1.10",
