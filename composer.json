@@ -60,7 +60,7 @@
         "drupal/custom_add_content": "^2.1",
         "drupal/date_popup": "^2.0",
         "drupal/easy_breadcrumb": "^2.0",
-        "drupal/editor_advanced_link": "^2.2",
+        "drupal/editor_advanced_link": "^2.3",
         "drupal/embed": "^1.9",
         "drupal/entity_browser": "^2.11",
         "drupal/entity_clone": "^2.1@beta",
