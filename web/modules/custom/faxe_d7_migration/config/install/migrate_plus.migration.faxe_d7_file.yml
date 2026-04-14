@@ -1,0 +1,32 @@
+id: faxe_d7_file
+label: Faxe D7 Files
+audit: true
+migration_tags:
+  - Drupal 7
+  - Content
+migration_group: faxe_d7
+source:
+  plugin: d7_file
+  constants:
+    source_base_path: ''
+process:
+  filename: filename
+  source_full_path:
+    - plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - filepath
+    - plugin: urlencode
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - uri
+  filemime: filemime
+  status: status
+  created: timestamp
+  changed: timestamp
+  uid: uid
+destination:
+  plugin: entity:file
