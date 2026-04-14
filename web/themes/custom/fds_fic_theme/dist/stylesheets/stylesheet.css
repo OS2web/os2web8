@@ -23404,6 +23404,9 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   -o-object-fit: cover;
      object-fit: cover;
 }
+.paragraph-50-50-wrapper .image-side .field--name-field-fifty-fifty-image {
+  width: 100%;
+}
 .paragraph-50-50-wrapper .image-side .media--type-os2web-video {
   height: 100%;
 }

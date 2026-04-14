@@ -32,6 +32,10 @@
     object-fit: cover; // Adjusts the size of the image to fill the container
   }
 
+  .image-side .field--name-field-fifty-fifty-image {
+    width: 100%;
+  }
+
   .image-side .media--type-os2web-video {
     height: 100%;
   }
