@@ -38,6 +38,7 @@ $sidenav-list-dot-spacing: 22px;
       border-top: 1px solid $color-neutral;
 
       background-color: rgba($color-neutral, .3);
+      border-radius: 2px;
 
       > .sidenav-sub_list {
         padding-top: 12px;
@@ -70,6 +71,7 @@ $sidenav-list-dot-spacing: 22px;
         
         &:hover,
         &:focus {
+          color: $color__link__hover;
           text-decoration: none;
         }
         
@@ -92,7 +94,7 @@ $sidenav-list-dot-spacing: 22px;
 
         border-top: 0;
 
-        background-color: $color-primary;
+        background-color: $color__background__primary;
 
         > a {
           color: $color-text;
@@ -102,13 +104,14 @@ $sidenav-list-dot-spacing: 22px;
   }
 
   .sidenav-sub_list {
-    background-color: $color-green-002;
+    background-color: $color__background__primary;
+    border-left: 3px solid $color__border;
 
     > li {
       border-top: 0;
 
       > a {
-        padding-left: $sidenav-list-spacing-left + $sidenav-list-dot-spacing;
+        padding-left: $sidenav-list-spacing-left + 8px;
       }
 
       &.active {
@@ -118,19 +121,8 @@ $sidenav-list-dot-spacing: 22px;
         }
       }
 
-      &:before {
-        top: 4px;
-        left: $sidenav-list-spacing-left;
-
-        content: "\2022" !important;
-
-        font-size: 22px;
-
-        color: $color-red-001;
-      }
-
       &:hover {
-        background-color: transparent;
+        background-color: rgba($color__background__secondary, .06);
       }
 
       &:last-child {
@@ -152,6 +144,7 @@ $sidenav-list-dot-spacing: 22px;
         
         &:hover,
         &:focus {
+          color: $color__link__hover;
           text-decoration: underline;
           text-decoration-thickness: 1.5px;
           text-underline-offset: 2px;
