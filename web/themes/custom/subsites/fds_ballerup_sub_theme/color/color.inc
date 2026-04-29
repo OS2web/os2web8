@@ -8,6 +8,8 @@ $info = [
     'background_color__default' => t('Background color - default'),
     'background_color__primary' => t('Background color - primary'),
     'background_color__secondary' => t('Background color - secondary (has white text)'),
+    'background_color__footer_branding' => t('Background color - footer branding (has white text)'),
+    'background_color__footer_primary' => t('Background color - footer primary (has white text)'),
   ],
 
   'schemes' => [
@@ -20,6 +22,8 @@ $info = [
         'background_color__default' => '#007ca3',
         'background_color__primary' => '#007ca3',
         'background_color__secondary' => '#4195b2',
+        'background_color__footer_branding' => '#1f2f3d',
+        'background_color__footer_primary' => '#243544',
       ],
     ],
   ],

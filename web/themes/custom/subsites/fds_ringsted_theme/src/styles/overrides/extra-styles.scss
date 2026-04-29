@@ -1900,3 +1900,7 @@ li:before {
 .field--name-field-os2web-page-description a {
   padding: 0 !important;
 }
+
+a:not(.button), ol:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.sidenav-list), p, ul:not(.accordion):not(.tabnav):not(.accordion-bordered):not(.nav-primary):not(.inline-list):not(.tabnav):not(.sidenav-list):not(.sidenav-sub_list) {
+  max-width: none;
+}

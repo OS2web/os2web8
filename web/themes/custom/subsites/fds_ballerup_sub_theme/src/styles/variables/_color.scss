@@ -27,7 +27,8 @@ $background_color__default_secondary: $background_color__default;
 
 $background_color__tertiary: lighten($background_color__secondary, 10%);
 $background_color__navigation: $background_color__primary;
-$background_color__footer_primary: $background_color__navigation;
+$background_color__footer_primary: #243544;
+$background_color__footer_branding: #1f2f3d;
 $background_color__footer_secondary: lighten($background_color__navigation, 10%);
 $background_color__button: $background_color__default;
 $background_color__button_hover: $background_color__default;
@@ -57,4 +58,5 @@ $gray-helper-bg-2: #333;
 $blue-primary: #295d6f;
 
 
-$footer-color: #243544;
+$footer-color: $background_color__footer_primary;
+$footer-branding-color: $background_color__footer_branding;
