@@ -14079,22 +14079,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hjemmeside.git",
-                "reference": "b03c35844ec7d54d31fe955fb51128d31f3e5aa6"
+                "reference": "e3bda905fba0c97c02a1d52658114a998e0bcc12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/b03c35844ec7d54d31fe955fb51128d31f3e5aa6",
-                "reference": "b03c35844ec7d54d31fe955fb51128d31f3e5aa6",
+                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/e3bda905fba0c97c02a1d52658114a998e0bcc12",
+                "reference": "e3bda905fba0c97c02a1d52658114a998e0bcc12",
                 "shasum": ""
             },
             "require": {
-                "drupal/chosen": "^4.0",
+                "drupal/chosen": "^4.0 || ^5.0",
                 "drupal/ckeditor_iframe": "^3.0@alpha",
                 "drupal/core": "*",
                 "drupal/easy_breadcrumb": "^2.0",
-                "drupal/editor_advanced_link": "2.x-dev@dev",
+                "drupal/editor_advanced_link": "^2.3",
                 "drupal/extlink": "^2.0",
-                "drupal/linkit": "^6.1",
+                "drupal/linkit": "^6.1 || ^7.0",
                 "drupal/metatag": "^2.0",
                 "drupal/pathauto": "^1.5",
                 "drupal/redirect": "^1.9",
@@ -14111,7 +14111,7 @@
                 "issues": "https://github.com/OS2web/os2web_hjemmeside/issues",
                 "source": "https://github.com/OS2web/os2web_hjemmeside/tree/drupal10"
             },
-            "time": "2024-11-11T09:36:12+00:00"
+            "time": "2026-04-14T14:00:32+00:00"
         },
         {
             "name": "os2web/os2web_kle",
