@@ -308,6 +308,13 @@ function fds_fic_theme_preprocess_node(array &$variables) {
       $variables['fic_node_modal_reopen_label'] = $modal_source->hasField('field_modal_button_label') && !$modal_source->get('field_modal_button_label')->isEmpty()
         ? $modal_source->get('field_modal_button_label')->value
         : t('Open information');
+      $variables['fic_node_modal_persistence_enabled'] = $modal_source->hasField('field_modal_persistence_enabled') && !$modal_source->get('field_modal_persistence_enabled')->isEmpty()
+        ? ((int) $modal_source->get('field_modal_persistence_enabled')->value === 1)
+        : TRUE;
+      $variables['fic_node_modal_persistence_days'] = $modal_source->hasField('field_modal_persistence_days') && !$modal_source->get('field_modal_persistence_days')->isEmpty()
+        ? max(1, (int) $modal_source->get('field_modal_persistence_days')->value)
+        : 30;
+      $variables['fic_node_modal_persistence_key'] = 'fic-node-modal-dismissed-' . (int) $modal_source->id();
       $variables['fic_node_modal_is_inherited'] = ((int) $modal_source->id() !== (int) $node->id());
       $variables['fic_node_modal_source_nid'] = (int) $modal_source->id();
       $variables['fic_node_modal_body_render'] = $modal_source->hasField('field_modal_body') && !$modal_source->get('field_modal_body')->isEmpty()
