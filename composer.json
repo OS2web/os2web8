@@ -243,7 +243,8 @@
                 "Provide a way for fields with computed or custom storage to decide how to impact entity queries." : "https://www.drupal.org/files/issues/2021-12-06/3025164-33.patch",
                 "TypeError: Argument 1 passed to Drupal\\Core\\File\\FileUrlGenerator::generateString() must be of the type string, null given" : "https://www.drupal.org/files/issues/2021-12-18/file-url-generator-3254245-34.patch",
                 "fix header tags can exceed HTTP Server limits and cause WSOD" : "https://www.drupal.org/files/issues/2021-12-28/x-drupal-cache-tags-can-exceed-http-server-limits-update-9.3.x.patch",
-                "3412244 - Comment form cause PHP warning on strip_tags" : "https://www.drupal.org/files/issues/2024-01-04/3412244.patch"
+                "3412244 - Comment form cause PHP warning on strip_tags" : "https://www.drupal.org/files/issues/2024-01-04/3412244.patch",
+                "SA-CORE-2026-004-9" : "https://www.drupal.org/files/issues/2026-05-20/SA-CORE-2026-004-9.5.patch"
             },
             "drupal/printable": {
                  "3214729 PDF filename is generated with it's location" : "./patches/3214729_pdf_filename_generated_with_its_location.patch"
