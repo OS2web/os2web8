@@ -604,30 +604,32 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 
 
-(function ($, Drupal) {
+(function ($, Drupal, once) {
   Drupal.behaviors.myFooterBehaviour = {
     attach: function (context, settings) {
-      $('body', context).once('footerToggle').each(function () {
-        if ($(this).has('footer.footer-alternativ-wrapper').length) {
-          $('footer.d-print-none').css('display', 'none');
+      $(once('footerToggle', 'body', context)).each(function () {
+        if ($(this).find('footer.footer-alternativ-wrapper').length) {
+          $('footer.d-print-none').hide();
         }
       });
     }
   };
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);
 
-(function ($, Drupal) {
+(function ($, Drupal, once) {
   Drupal.behaviors.showDefaultBannerBehavior = {
     attach: function (context, settings) {
-      $('body', context).once('bannerToggle').each(function () {
-        if (!$(this).has('#block-fds-fredericia-main-theme-paragraph-banner').length &&
-          !$(this).has('#block-fds-fredericia-main-theme-os2web-search-os2web-search-page-banner-search').length) {
-          $('.default-banner-wrapper').css('display', 'block');
+      $(once('bannerToggle', 'body', context)).each(function () {
+        if (
+            !$(this).find('#block-fds-fredericia-main-theme-paragraph-banner').length &&
+            !$(this).find('#block-fds-fredericia-main-theme-os2web-search-os2web-search-page-banner-search').length
+        ) {
+          $('.default-banner-wrapper').show();
         }
       });
     }
   };
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);
 
 document.addEventListener('DOMContentLoaded', function() {
   var showMoreButtons = document.querySelectorAll('.show-more-button-selfservice');
