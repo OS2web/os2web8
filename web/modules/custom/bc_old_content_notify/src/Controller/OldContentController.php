@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\bc_old_content_notify\Controller;
 
 use Drupal\node\NodeInterface;
@@ -8,16 +9,12 @@ class OldContentController {
 
   /**
    * Updates the moderation state of outdated content based on specific criteria.
-   *
-   * Calculates the time period for content to be considered outdated,
-   * and fetches nodes matching the outdated criteria.
-   *
-   * The moderation state of these nodes is then updated to a predefined value
-   * and saved as a new revision.
    */
   public static function contentModerationStateCheck() {
     $config = \Drupal::config('bc_old_content_notify.settings');
-    if (!$config->get('enabled')) return;
+    if (!$config->get('enabled')) {
+      return;
+    }
 
     // The default value is 120 days = 4 months.
     $outdatedDays = $config->get('days_since_last_edit') ?? 120;
@@ -55,34 +52,53 @@ class OldContentController {
 
   public static function notify() {
     $config = \Drupal::config('bc_old_content_notify.settings');
-    if (!$config->get('enabled')) return;
+    if (!$config->get('enabled')) {
+      return;
+    }
 
     $doRun = false;
     $last_start = \Drupal::keyValue('bc_old_content_notify_cron')->get('last_start');
 
-    if (empty($last_start)) $doRun = true;
+    if (empty($last_start)) {
+      $doRun = true;
+    }
     else {
-
       $next = null;
+
       switch ($config->get('run')) {
-        case 1 : $next = strtotime("+1 day", $last_start); break;
-        case 2 : $next = strtotime("+1 week", $last_start); break;
-        case 3 : $next = strtotime("+1 month", $last_start); break;
-        case 4 : $next = strtotime("+1 year", $last_start); break;
-        default: $next = null;
+        case 1:
+          $next = strtotime("+1 day", $last_start);
+          break;
+
+        case 2:
+          $next = strtotime("+1 week", $last_start);
+          break;
+
+        case 3:
+          $next = strtotime("+1 month", $last_start);
+          break;
+
+        case 4:
+          $next = strtotime("+1 year", $last_start);
+          break;
+
+        default:
+          $next = null;
       }
 
       if ($next && $next <= time()) {
         $doRun = true;
       }
-
     }
 
-    if (!$doRun) return;
+    if (!$doRun) {
+      return;
+    }
 
     \Drupal::keyValue('bc_old_content_notify_cron')->set('last_start', time());
 
-    $outdated = array();
+    $outdated = [];
+
     $nids = \Drupal::entityQuery('node')
       ->latestRevision()
       ->accessCheck(FALSE)
@@ -97,29 +113,57 @@ class OldContentController {
       $storage = \Drupal::entityTypeManager()->getStorage('node');
 
       foreach ($nids as $nid) {
+        /** @var \Drupal\node\NodeInterface|null $node */
         $node = $storage->load($nid);
-        if (!$node) {
+
+        if (!$node instanceof NodeInterface) {
           continue;
         }
 
-        $contentGroup = $node->get('field_indholdsgruppe')->isEmpty() ? null : $node->get('field_indholdsgruppe')->target_id;
+        $contentGroup = $node->get('field_indholdsgruppe')->isEmpty()
+          ? null
+          : $node->get('field_indholdsgruppe')->target_id;
 
-        if (!empty((int)$contentGroup)) {
-          $entites = $user_storage->getEditors($scheme, $contentGroup);
-          if (count($entites)) {
-            foreach ($entites as $userId => $userName) {
+        if (!empty((int) $contentGroup)) {
+          $entities = $user_storage->getEditors($scheme, $contentGroup);
+
+          if (count($entities)) {
+            foreach ($entities as $userId => $userName) {
               $user = User::load($userId);
-              if (!empty($user->get('mail')->value)) {
+
+              if ($user && !empty($user->get('mail')->value)) {
                 if (empty($outdated[$user->id()])) {
                   $outdated[$user->id()]['name'] = $user->get('name')->value;
                   $outdated[$user->id()]['email'] = $user->get('mail')->value;
-                  $outdated[$user->id()]['outdated'] = array();
+                  $outdated[$user->id()]['outdated'] = [];
                 }
 
-                $outdated[$user->id()]['outdated'][] = array(
-                  "title" => $node->label(),
-                  "link" => $node->toUrl()->setAbsolute(true)->toString()
-                );
+                $outdated[$user->id()]['outdated'][] = [
+                  'title' => $node->label(),
+		  'link' => $node->toUrl()->setAbsolute(TRUE)->toString(),
+  		  'author' => $node->getOwner()->label(),
+  		  'group' => !$node->get('field_indholdsgruppe')->isEmpty()
+    		    ? $node->get('field_indholdsgruppe')->entity->label()
+		    : '',
+         	  'html' => '
+            	    <tr style="border-bottom:1px solid #ddd;">
+              	      <td style="padding:6px;">
+                        <a href="' . $node->toUrl()->setAbsolute(TRUE)->toString() . '" target="_blank">
+                          ' . $node->label() . '
+                        </a>
+                      </td>
+                      <td style="padding:6px;">
+                        ' . $node->getOwner()->label() . '
+                      </td>
+                      <td style="padding:6px;">
+                        ' . (
+                          !$node->get('field_indholdsgruppe')->isEmpty()
+                            ? $node->get('field_indholdsgruppe')->entity->label()
+                            : '-'
+                        ) . '
+                      </td>
+                   </tr>',
+                ];
               }
             }
           }
@@ -131,19 +175,60 @@ class OldContentController {
       $mailManager = \Drupal::service('plugin.manager.mail');
       $langcode = 'da';
 
-      $params = array(
-        'subject' => 'En eller flere sider er foraeldet',
+      $params = [
+        'subject' => 'Månedligt overblik – forældede sider',
         'body' => null,
-        'headers' => array(
-          'Content-Type' => 'text/html; charset=UTF-8; format=flowed; delsp=yes'
-        )
-      );
+        'headers' => [
+          'Content-Type' => 'text/html; charset=UTF-8; format=flowed; delsp=yes',
+        ],
+      ];
+
+      // Tilpas dette link, hvis "Forældede sider"-overblikket har en anden URL.
+      $overview_link = \Drupal::request()->getSchemeAndHttpHost() . '/admin/content/foraeldede-sider';
 
       foreach ($outdated as $user) {
-        $body = '<p>Hej ' . $user['name'] . '</p>';
-        foreach ($user['outdated'] as $page) {
-          $body .= '<p>Siden <em>' . $page['title'] . '</em> er forældet. <a href="' . $page['link'] . '" target="_blank">Link</a></p>';
+        $body = '';
+
+        $body .= '<p>Kære webredaktør</p>';
+
+        $body .= '<p>Som en del af vores løbende kvalitetsarbejde får du her den månedlige oversigt over sider på hjemmesiden, som ikke har været opdateret inden for de seneste 365 dage.</p>';
+
+        $body .= '<p>Formålet er at sikre, at vores indhold altid er opdateret, korrekt og meningsfuldt for brugerne.</p>';
+
+        $body .= '<p>Vi beder dig derfor om at gennemgå siderne i listen herunder og vurdere, om de:</p>';
+
+        $body .= '<ul>';
+        $body .= '<li>skal opdateres</li>';
+        $body .= '<li>kan arkiveres eller slettes</li>';
+        $body .= '<li>fortsat er relevante, som de er</li>';
+        $body .= '</ul>';
+
+        $body .= '<p><a href="' . $overview_link . '" target="_blank">Gå direkte til ”Forældede sider” overblikket</a></p>';
+
+
+        $body .= '<p>Har du spørgsmål eller brug for hjælp, er du som altid velkommen til at kontakte os.</p>';
+
+        $body .= '<p>Tak for din indsats med at holde vores hjemmeside opdateret.</p>';
+
+        $body .= '<p>Venlig hilsen<br>Webteamet</p>';
+
+        if (!empty($user['outdated'])) {
+          $body .= '<h3>Forældede sider</h3>';
+          $body .= '<ul>';
+
+          foreach ($user['outdated'] as $page) {
+	    $body .= '<li>';
+	    $body .= '<a href="' . $page['link'] . '" target="_blank">' . $page['title'] . '</a>';
+	    $body .= ' — Forfatter: ' . $page['author'];
+
+	    if (!empty($page['group'])) {
+	      $body .= ' — Indholdsgruppe: ' . $page['group'];
+	    } 
+	  }
+
+          $body .= '</ul>';
         }
+
 
         $params['body'] = $body;
 
@@ -159,10 +244,15 @@ class OldContentController {
 
         if ($result['result'] !== true) {
           \Drupal::logger('bc_old_content_notify')->notice('old content email could not be sent to ' . $user['email']);
-        } else {
+        }
+        else {
           \Drupal::logger('bc_old_content_notify')->notice('old content email is sent to ' . $user['email']);
         }
+
+        // stan@bellcom.dk 22/12/2025 - stop after the first email.
+        return;
       }
     }
   }
+
 }

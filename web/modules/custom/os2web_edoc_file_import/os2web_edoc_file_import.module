@@ -1,29 +1,26 @@
 <?php
 
 use Drupal\Core\File\FileSystemInterface;
-use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_cron().
  */
 function os2web_edoc_file_import_cron() {
-  // Get the import path from configuration.
   $config = \Drupal::config('os2web_edoc_file_import.settings');
   $import_path = $config->get('import_path');
-  if (!file_exists($import_path)) {
-    \Drupal::logger('os2web_edoc_file_import')->error('The import path does not exist. (PATH: /var/www/edoc_filer)');
-    error_log("eDoc path does not exis. " . $import_path . "\n");
+
+  if (empty($import_path) || !file_exists($import_path)) {
+    \Drupal::logger('os2web_edoc_file_import')->error('The import path does not exist.');
     return;
   }
-  $xml_files = \Drupal::service('file_system')->scanDirectory($import_path, "/\.xml$/i", ['recurse' => FALSE]);
+
+  $xml_files = \Drupal::service('file_system')->scanDirectory($import_path, '/\.xml$/i', ['recurse' => FALSE]);
   foreach ($xml_files as $file) {
     os2web_edoc_file_import_process_file($file);
-    error_log("Importing file: " . print_r($file) . "\n");
   }
 }
-error_log("File: " . $file . "\n", 3, "/var/www/fredericia.dk/logs/php.log");
-error_log("Error message\n", 3, "/var/www/fredericia.dk/logs/php.log");
 
 /**
  * Checks if a case with the given CaseNumber exists.
@@ -35,37 +32,217 @@ error_log("Error message\n", 3, "/var/www/fredericia.dk/logs/php.log");
  *   The case node if found, or NULL if not.
  */
 function os2web_edoc_case_exists($caseNumber) {
-  $cases = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['type' => 'esdh_case', 'field_case_id' => $caseNumber]);
+  $cases = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+    'type' => 'esdh_case',
+    'field_case_id' => $caseNumber,
+  ]);
+
   return !empty($cases) ? reset($cases) : NULL;
+}
+
+/**
+ * Loads an eDoc document by FileID.
+ *
+ * @param string $file_id
+ *   The external FileID.
+ *
+ * @return \Drupal\node\Entity\Node|null
+ *   The document node if found.
+ */
+function os2web_edoc_file_import_load_document_by_file_id($file_id) {
+  $documents = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+    'type' => 'esdh_document',
+    'field_document_id' => $file_id,
+  ]);
+
+  return !empty($documents) ? reset($documents) : NULL;
+}
+
+/**
+ * Resolves the source file path from XML.
+ *
+ * @param \SimpleXMLElement $xml
+ *   The XML payload.
+ *
+ * @return string|null
+ *   Absolute local path if found, otherwise NULL.
+ */
+function os2web_edoc_file_import_resolve_source_filepath(\SimpleXMLElement $xml) {
+  $config = \Drupal::config('os2web_edoc_file_import.settings');
+  $import_path = rtrim((string) $config->get('import_path'), '/');
+  $file_name = (string) $xml->FileName;
+  $file_id = (string) $xml->FileID;
+
+  if ($import_path === '' || $file_id === '' || $file_name === '') {
+    return NULL;
+  }
+
+  $candidates = [
+    $import_path . '/Files/' . $file_id . '_' . $file_name,
+    $import_path . '/Files/' . $file_id . '_' . $file_name . '.pdf',
+  ];
+
+  foreach ($candidates as $candidate) {
+    if (file_exists($candidate)) {
+      return $candidate;
+    }
+  }
+
+  return NULL;
+}
+
+/**
+ * Deletes a physical local file if it exists.
+ *
+ * @param string|null $filepath
+ *   Absolute local path.
+ *
+ * @return bool
+ *   TRUE when the file is gone or was deleted, FALSE on failure.
+ */
+function os2web_edoc_file_import_delete_local_filepath($filepath) {
+  if (empty($filepath) || !file_exists($filepath)) {
+    return TRUE;
+  }
+
+  $result = @unlink($filepath);
+  if ($result) {
+    \Drupal::logger('os2web_edoc_file_import')->info('Deleted physical file from disk: @filepath', [
+      '@filepath' => $filepath,
+    ]);
+  }
+  else {
+    \Drupal::logger('os2web_edoc_file_import')->error('Could not delete physical file from disk: @filepath', [
+      '@filepath' => $filepath,
+    ]);
+  }
+
+  return $result;
+}
+
+/**
+ * Deletes a Drupal managed file entity and the underlying file, if present.
+ *
+ * @param \Drupal\file\Entity\File|null $file
+ *   The managed file.
+ *
+ * @return bool
+ *   TRUE when delete completed or file was absent, FALSE on failure.
+ */
+function os2web_edoc_file_import_delete_managed_file(?File $file) {
+  if (!$file) {
+    return TRUE;
+  }
+
+  $uri = $file->getFileUri();
+
+  try {
+    $file->delete();
+    \Drupal::logger('os2web_edoc_file_import')->info('Deleted managed file entity: @uri', [
+      '@uri' => $uri,
+    ]);
+  }
+  catch (\Throwable $e) {
+    \Drupal::logger('os2web_edoc_file_import')->error('Failed to delete managed file entity @uri: @message', [
+      '@uri' => $uri,
+      '@message' => $e->getMessage(),
+    ]);
+  }
+
+  try {
+    $realpath = \Drupal::service('file_system')->realpath($uri);
+    if (!empty($realpath) && file_exists($realpath)) {
+      os2web_edoc_file_import_delete_local_filepath($realpath);
+    }
+  }
+  catch (\Throwable $e) {
+    \Drupal::logger('os2web_edoc_file_import')->error('Failed to resolve/delete managed file path for @uri: @message', [
+      '@uri' => $uri,
+      '@message' => $e->getMessage(),
+    ]);
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+/**
+ * Finds or creates a temporary Drupal file entity for an eDoc source file.
+ *
+ * @param string $source_filepath
+ *   Absolute local source path.
+ * @param string $file_name
+ *   Original eDoc filename.
+ *
+ * @return \Drupal\file\Entity\File|null
+ *   Managed file entity or NULL on failure.
+ */
+function os2web_edoc_file_import_prepare_managed_file($source_filepath, $file_name) {
+  $edoc_public_directory = 'public://edoc_files';
+  $filename_naked = pathinfo($file_name, PATHINFO_FILENAME);
+  $destination_filename = $filename_naked . '.pdf';
+  $destination_uri = $edoc_public_directory . '/' . $destination_filename;
+
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $file_system->prepareDirectory($edoc_public_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+  $file_system->copy($source_filepath, $destination_uri, FileSystemInterface::EXISTS_REPLACE);
+
+  $files = \Drupal::entityTypeManager()->getStorage('file')->loadByProperties([
+    'uri' => $destination_uri,
+  ]);
+  $file = !empty($files) ? reset($files) : NULL;
+
+  if (!$file) {
+    $file = File::create([
+      'filename' => $destination_filename,
+      'uri' => $destination_uri,
+      'uid' => 1,
+    ]);
+  }
+  else {
+    $file->setFilename($destination_filename);
+  }
+
+  $file->setTemporary();
+  $file->save();
+
+  \Drupal::logger('os2web_edoc_file_import')->info('Prepared temporary file entity for URI: @uri', [
+    '@uri' => $destination_uri,
+  ]);
+
+  return $file;
 }
 
 /**
  * Creates or updates a case based on XML data.
  */
 function os2web_edoc_file_import_create_or_update_case($xml) {
-  $trans = \Drupal::transliteration(); // Transliteration service
+  $trans = \Drupal::transliteration();
   $caseNumber = (string) $xml->CaseNumber;
 
   $case = os2web_edoc_case_exists($caseNumber);
 
   if (!$case) {
-    // If case does not exist, create a new one.
     $case = Node::create([
       'type' => 'esdh_case',
       'title' => $trans->transliterate((string) $xml->CaseName),
       'field_case_id' => $caseNumber,
       'field_case_name' => $trans->transliterate((string) $xml->CaseName),
     ]);
-    \Drupal::logger('os2web_edoc_file_import')->info('Created new case: ' . $caseNumber);
-  } else {
-    // If case exists, update it.
+    \Drupal::logger('os2web_edoc_file_import')->info('Created new case: @case_number', [
+      '@case_number' => $caseNumber,
+    ]);
+  }
+  else {
     $case->setTitle($trans->transliterate((string) $xml->CaseName));
     $case->set('field_case_name', $trans->transliterate((string) $xml->CaseName));
-    \Drupal::logger('os2web_edoc_file_import')->info('Updated case: ' . $caseNumber);
+    \Drupal::logger('os2web_edoc_file_import')->info('Updated case: @case_number', [
+      '@case_number' => $caseNumber,
+    ]);
   }
 
   $case->save();
-  \Drupal::logger('os2web_edoc_file_import')->info('Saved case with ID: ' . $case->id());
 
   return $case;
 }
@@ -74,125 +251,134 @@ function os2web_edoc_file_import_create_or_update_case($xml) {
  * Creates or updates a document based on XML data.
  */
 function os2web_edoc_file_import_create_or_update_document($xml, $case = NULL, $update = FALSE) {
-  // Using transliteration to replace Danish chars.
   $trans = \Drupal::transliteration();
+  $file_id = (string) $xml->FileID;
+  $file_name = (string) $xml->FileName;
 
-  $document = NULL;
-  if ($update) {
-    $documents = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['type' => 'esdh_document', 'field_document_id' => (string) $xml->FileID]);
-    $document = reset($documents);
-    \Drupal::logger('os2web_edoc_file_import')->info('Loaded existing document for update: ' . (string) $xml->FileID);
-    error_log("Update document: " . print_r($xml->FileID) . "\n");
-  }
+  $document = $update ? os2web_edoc_file_import_load_document_by_file_id($file_id) : NULL;
 
   if (!$document) {
     $document = Node::create([
       'type' => 'esdh_document',
-      'title' => $trans->transliterate((string)$xml->FileName),
-      'field_document_id' => (string) $xml->FileID,
+      'title' => $trans->transliterate($file_name),
+      'field_document_id' => $file_id,
     ]);
   }
   else {
-    $document->setTitle($trans->transliterate((string) $xml->FileName));
-    \Drupal::logger('os2web_edoc_file_import')->info('Updated document: ' . (string) $xml->FileID);
+    $document->setTitle($trans->transliterate($file_name));
   }
 
-  $document->set('field_document_title', $trans->transliterate((string) $xml->FileName));
+  $document->set('field_document_title', $trans->transliterate($file_name));
   $document->set('field_case_id', (string) $xml->CaseNumber);
 
-  // Set case.
   if ($case) {
-    $document->set('field_case_reference', ['target_id' => $case->id(), 'target_type' => 'node']);
-    \Drupal::logger('os2web_edoc_file_import')->info('Linked document to case: ' . $case->id());
+    $document->set('field_case_reference', [
+      'target_id' => $case->id(),
+      'target_type' => 'node',
+    ]);
   }
 
-  // Attach the file to the node's file field
-  $config = \Drupal::config('os2web_edoc_file_import.settings');
-  $import_path = $config->get('import_path');
-  $fileName = (string) $xml->FileName;
-  $fileId = (string) $xml->FileID;
-
-  // Check if the file exists with the original name
-  $filepath = "$import_path/Files/$fileId" . '_' . $fileName;
-  if (!file_exists($filepath)) {
-    // Try adding .pdf if the original file doesn't exist
-    $filepath .= '.pdf';
+  $source_filepath = os2web_edoc_file_import_resolve_source_filepath($xml);
+  if (!$source_filepath) {
+    \Drupal::logger('os2web_edoc_file_import')->error('File not found for FileID @file_id and filename @file_name', [
+      '@file_id' => $file_id,
+      '@file_name' => $file_name,
+    ]);
+    return NULL;
   }
 
-  // Ensure only PDF files are processed
-  $ext = pathinfo($filepath, PATHINFO_EXTENSION);
+  $ext = pathinfo($source_filepath, PATHINFO_EXTENSION);
   if (strtolower($ext) !== 'pdf') {
-    \Drupal::logger('os2web_edoc_file_import')->warning('Skipped non-PDF file: ' . $filepath);
-    return;
-  }
-
-  if (file_exists($filepath)) {
-    $edocPublicDirectory = 'public://edoc_files';
-
-    // At this point we know that we have PDF file. Remove all other extensions, keep only .pdf
-    $filenameNaked = pathinfo($fileName, PATHINFO_FILENAME); // returns ma
-    $destinationFilename = $filenameNaked . '.pdf';
-    $destinationUri =  $edocPublicDirectory . '/' . $destinationFilename;
-
-    /** @var \Drupal\Core\File\FileSystemInterface $file_system */
-    $file_system = \Drupal::service('file_system');
-    $file_system->prepareDirectory($edocPublicDirectory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
-    $file_system->copy($filepath, $destinationUri, FileSystemInterface::EXISTS_REPLACE);
-
-    $file = File::create([
-      'filename' => $destinationFilename,
-      'uri' => $destinationUri,
-      'status' => 0,
-      'uid' => 1,
+    \Drupal::logger('os2web_edoc_file_import')->warning('Skipped non-PDF file: @filepath', [
+      '@filepath' => $source_filepath,
     ]);
-    $file->save();
-    \Drupal::logger('os2web_edoc_file_import')->info('Created file entity for document: ' . (string) $xml->FileID);
-  } else {
-    \Drupal::logger('os2web_edoc_file_import')->error('File not found: ' . $filepath);
-    return;
+    return NULL;
   }
 
-  if ($file) {
-    // Replacing file information.
-    $document->setTitle($file->getFilename());
-    $document->set('field_document_title', $trans->transliterate($file->getFilename()));
-    $document->set('field_case_file', [
-      'target_id' => $file->id(),
-      'display' => 1,
-      'description' => $file->getFilename(),
-    ]);
-    \Drupal::logger('os2web_edoc_file_import')->info('Assigned file to document: ' . (string) $xml->FileID);
+  $existing_file = NULL;
+  if (!$document->get('field_case_file')->isEmpty()) {
+    $existing_file = $document->get('field_case_file')->entity;
   }
 
-  \Drupal::logger('os2web_edoc_file_import')->info('Updated document: ' . (string) $xml->FileID);
+  $file = os2web_edoc_file_import_prepare_managed_file($source_filepath, $file_name);
+  if (!$file) {
+    return NULL;
+  }
+
+  if ($existing_file && $existing_file->id() !== $file->id()) {
+    os2web_edoc_file_import_delete_managed_file($existing_file);
+  }
+
+  $document->setTitle($file->getFilename());
+  $document->set('field_document_title', $trans->transliterate($file->getFilename()));
+  $document->set('field_case_file', [
+    'target_id' => $file->id(),
+    'display' => 1,
+    'description' => $file->getFilename(),
+  ]);
   $document->save();
 
   if ($case) {
-    // Update case to reference this document
     $case_documents = $case->get('field_case_documents')->getValue();
-    $case_documents[] = ['target_id' => $document->id()];
-    $case->set('field_case_documents', $case_documents);
-    $case->save();
-    \Drupal::logger('os2web_edoc_file_import')->info('Updated case to include document: ' . (string) $xml->FileID);
+    $existing_target_ids = array_column($case_documents, 'target_id');
+    if (!in_array($document->id(), $existing_target_ids, TRUE)) {
+      $case_documents[] = ['target_id' => $document->id()];
+      $case->set('field_case_documents', $case_documents);
+      $case->save();
+    }
   }
+
+  \Drupal::logger('os2web_edoc_file_import')->info('Created/updated document: @file_id', [
+    '@file_id' => $file_id,
+  ]);
 
   return $document;
 }
 
 /**
  * Deletes a document based on XML data.
+ *
+ * Physical source file deletion is attempted regardless of Drupal entity delete
+ * success.
  */
 function os2web_edoc_file_import_delete_document($xml) {
-  $documents = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['field_document_id' => (string) $xml->FileID]);
-  $document = reset($documents);
-  if ($document) {
-    $document->delete();
-    \Drupal::logger('os2web_edoc_file_import')->info('Deleted document: ' . (string) $xml->FileID);
-    error_log("Deleting : " . print_r($xml->FileID) . "\n");
-     } else {
-    \Drupal::logger('os2web_edoc_file_import')->warning('No document found to delete with FileID: ' . (string) $xml->FileID);
-   error_log("Nothing to delete: " . print_r($xml->FileID) . "\n");
-     }
+  $file_id = (string) $xml->FileID;
+  $source_filepath = os2web_edoc_file_import_resolve_source_filepath($xml);
+  $document = os2web_edoc_file_import_load_document_by_file_id($file_id);
+
+  try {
+    if ($document) {
+      $managed_file = NULL;
+      if (!$document->get('field_case_file')->isEmpty()) {
+        $managed_file = $document->get('field_case_file')->entity;
+      }
+
+      $document->delete();
+      \Drupal::logger('os2web_edoc_file_import')->info('Deleted document node: @file_id', [
+        '@file_id' => $file_id,
+      ]);
+
+      if ($managed_file) {
+        os2web_edoc_file_import_delete_managed_file($managed_file);
+      }
+    }
+    else {
+      \Drupal::logger('os2web_edoc_file_import')->warning('No document found to delete with FileID: @file_id', [
+        '@file_id' => $file_id,
+      ]);
+    }
+  }
+  catch (\Throwable $e) {
+    \Drupal::logger('os2web_edoc_file_import')->error('Drupal delete failed for FileID @file_id: @message', [
+      '@file_id' => $file_id,
+      '@message' => $e->getMessage(),
+    ]);
+  }
+  finally {
+    if ($source_filepath) {
+      os2web_edoc_file_import_delete_local_filepath($source_filepath);
+    }
+  }
 }
 
 /**
@@ -200,64 +386,57 @@ function os2web_edoc_file_import_delete_document($xml) {
  */
 function os2web_edoc_file_import_process_file($file) {
   $xml = simplexml_load_file($file->uri);
-  \Drupal::logger('os2web_edoc_file_import')->info('Loaded XML file: ' . $file->uri);
+  \Drupal::logger('os2web_edoc_file_import')->info('Loaded XML file: @uri', [
+    '@uri' => $file->uri,
+  ]);
 
-  // Debugging: Log the XML content
-  \Drupal::logger('os2web_edoc_file_import')->debug('XML content: ' . print_r($xml, TRUE));
-    error_log("Importing file 1: " . print_r($xml) . "\n");
+  if (!$xml) {
+    \Drupal::logger('os2web_edoc_file_import')->error('Could not parse XML file: @uri', [
+      '@uri' => $file->uri,
+    ]);
+    return;
+  }
 
-  $fileName = (string) $xml->FileName;
-    error_log("Importing file 2: " . $fileName . "\n");
-
-  // Handle create, update, delete based on XML content.
   if (!empty($xml->Created)) {
-    // Create a new case.
     if (!empty($xml->CaseNumber)) {
-      \Drupal::logger('os2web_edoc_file_import')->info('Creating or updating case with CaseNumber: ' . (string) $xml->CaseNumber);
       $case = os2web_edoc_file_import_create_or_update_case($xml);
-    error_log("Creating new case: " . $xml->CaseNumber . "\n");
     }
-    // Create a new document.
     if (!empty($xml->FileID)) {
-      \Drupal::logger('os2web_edoc_file_import')->info('Creating or updating document with FileID: ' . (string) $xml->FileID);
       os2web_edoc_file_import_create_or_update_document($xml, isset($case) ? $case : NULL);
-    error_log("Creating new doxcument: " . $xml->FileID . "\n");
     }
-  } elseif (!empty($xml->Updated)) {
-    // Update existing case or document.
+  }
+  elseif (!empty($xml->Updated)) {
     if (!empty($xml->CaseNumber)) {
-      \Drupal::logger('os2web_edoc_file_import')->info('Updating case with CaseNumber: ' . (string) $xml->CaseNumber . ' and FileID: ' . (string) $xml->FileID);
-      $case = os2web_edoc_file_import_create_or_update_case($xml, TRUE);
-    error_log("Updating case: " . $xml->CaseNumber . "\n");
+      $case = os2web_edoc_file_import_create_or_update_case($xml);
     }
     if (!empty($xml->FileID)) {
-      \Drupal::logger('os2web_edoc_file_import')->info('Updating document with FileID: ' . (string) $xml->FileID);
       os2web_edoc_file_import_create_or_update_document($xml, isset($case) ? $case : NULL, TRUE);
-    error_log("Updating file: " . $xml->FileID . "\n");
     }
-  } elseif (!empty($xml->Deleted)) {
-    // Delete existing document.
+  }
+  elseif (!empty($xml->Deleted)) {
     if (!empty($xml->FileID)) {
-      \Drupal::logger('os2web_edoc_file_import')->info('Deleting document with FileID: ' . (string) $xml->FileID);
       os2web_edoc_file_import_delete_document($xml);
-    error_log("Delete file: " . $xml->FileID . "\n");
     }
   }
 
-  // Moving XML after processed
   $processed_path = dirname($file->uri) . '/processed';
   if (!file_exists($processed_path)) {
     mkdir($processed_path, 0755, TRUE);
-    \Drupal::logger('os2web_edoc_file_import')->info('Created processed directory: ' . $processed_path);
+    \Drupal::logger('os2web_edoc_file_import')->info('Created processed directory: @path', [
+      '@path' => $processed_path,
+    ]);
   }
 
   $new_path = $processed_path . '/' . basename($file->uri);
   rename($file->uri, $new_path);
-  \Drupal::logger('os2web_edoc_file_import')->info('Moved file to processed directory: ' . $new_path);
+  \Drupal::logger('os2web_edoc_file_import')->info('Moved file to processed directory: @path', [
+    '@path' => $new_path,
+  ]);
 
-  // Delete the original file from the main folder (import folder)
   if (file_exists($file->uri)) {
     unlink($file->uri);
-    \Drupal::logger('os2web_edoc_file_import')->info('Deleted original file from main folder: ' . $file->uri);
+    \Drupal::logger('os2web_edoc_file_import')->info('Deleted original XML file from main folder: @uri', [
+      '@uri' => $file->uri,
+    ]);
   }
 }
