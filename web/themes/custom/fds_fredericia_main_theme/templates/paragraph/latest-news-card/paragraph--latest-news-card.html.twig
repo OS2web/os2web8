@@ -13,7 +13,11 @@
       <a href="{{ path('entity.node.canonical', {'node': article.nid.value}) }}" class="news-image-wrapper">
         {% set primaryImage = article.field_os2web_news_primaryimage.entity %}
         {% set mediaImage = article.field_os2web_news_media_img.entity %}
-        {% set placeholder_image_url = placeholder_images_urls[loop.index0 % placeholder_images_urls|length] %}
+        {# avoid modulo by 0 if list is empty #}
+        {% set placeholder_image_url = placeholder_images_urls|length > 0
+          ? placeholder_images_urls[loop.index0 % placeholder_images_urls|length]
+          : null
+        %}
 
         {# Check for primary image #}
         {% if primaryImage and primaryImage.fileuri %}
