@@ -39,7 +39,7 @@
         "drupal/action": "^0.2",
         "drupal/admin_audit_trail": "^1.0",
         "drupal/admin_toolbar": "^3.5",
-        "drupal/anonymous_subscriptions": "dev-drupal10",
+        "drupal/anonymous_subscriptions": "dev-drupal11",
         "drupal/autologout": "^1.4",
         "drupal/better_exposed_filters": "^7.0",
         "drupal/checklistapi": "^2.1",

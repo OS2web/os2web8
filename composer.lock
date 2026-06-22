@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7c06faae23cc03b275898879ab13c82",
+    "content-hash": "6eaaf76fe33d9f729b5ddd12df6837f9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1804,16 +1804,16 @@
         },
         {
             "name": "drupal/anonymous_subscriptions",
-            "version": "dev-drupal10",
+            "version": "dev-drupal11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bellcom/anonymous_subscriptions.git",
-                "reference": "6a139016b4a91cc80815701ff193be6ad5a4f912"
+                "reference": "0ae7dca13e7aecdf9c90e919d7a70c9f7b652248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/6a139016b4a91cc80815701ff193be6ad5a4f912",
-                "reference": "6a139016b4a91cc80815701ff193be6ad5a4f912",
+                "url": "https://api.github.com/repos/bellcom/anonymous_subscriptions/zipball/0ae7dca13e7aecdf9c90e919d7a70c9f7b652248",
+                "reference": "0ae7dca13e7aecdf9c90e919d7a70c9f7b652248",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1822,10 +1822,10 @@
             ],
             "description": "Provide Subscription functionality to anonymous users.",
             "support": {
-                "source": "https://github.com/bellcom/anonymous_subscriptions/tree/drupal10",
+                "source": "https://github.com/bellcom/anonymous_subscriptions/tree/drupal11",
                 "issues": "https://github.com/bellcom/anonymous_subscriptions/issues"
             },
-            "time": "2026-04-20T08:29:34+00:00"
+            "time": "2026-06-22T08:15:41+00:00"
         },
         {
             "name": "drupal/autologout",
