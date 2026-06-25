@@ -8650,20 +8650,20 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "1.18.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.18"
+                "reference": "8.x-1.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.18.zip",
-                "reference": "8.x-1.18",
-                "shasum": "594e2937ea5c95fc88b60420590c4d83f5cd71ee"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.21.zip",
+                "reference": "8.x-1.21",
+                "shasum": "5638fab65f5c9cf954ef369411b2ee64d41e21f9"
             },
             "require": {
-                "drupal/core": "^10.2 || ^11",
+                "drupal/core": "^10.3 || ^11",
                 "drupal/entity_reference_revisions": "~1.3"
             },
             "require-dev": {
@@ -8673,7 +8673,7 @@
                 "drupal/entity_usage": "2.x-dev",
                 "drupal/feeds": "^3",
                 "drupal/field_group": "3.x-dev",
-                "drupal/inline_entity_form": "1.x-dev",
+                "drupal/inline_entity_form": "^3",
                 "drupal/paragraphs-paragraphs_library": "*",
                 "drupal/replicate": "1.x-dev",
                 "drupal/search_api": "^1",
@@ -8685,8 +8685,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.18",
-                    "datestamp": "1723029144",
+                    "version": "8.x-1.21",
+                    "datestamp": "1782326108",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8703,7 +8703,7 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "Frans",
+                    "name": "frans",
                     "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
