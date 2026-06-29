@@ -23700,6 +23700,31 @@ a:not([class]):hover {
   right: 60px !important;
 }
 
+.simplesamlphp-auth-login-link {
+  background-color: #2b7533;
+  padding: 2px 14px 0px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+.simplesamlphp-auth-login-link:after {
+  content: "\f061";
+  font-family: "FontAwesome";
+  margin-left: 8px;
+}
+
 @media (min-width: 992px) {
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-from-date,
   #views-exposed-form-os2web-meetings-search-os2web-meetings-embed-search-from-to-dates .form-item-to-date {
