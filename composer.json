@@ -85,7 +85,7 @@
         "drupal/gdpr_dump": "^3.0",
         "drupal/image_effects": "^3.6",
         "drupal/image_widget_crop": "^2.4",
-        "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/inline_entity_form": "^3.0",
         "drupal/install_profile_generator": "^4.0@alpha",
         "drupal/link_field_autocomplete_filter": "^2.0",
         "drupal/linkit": "^6.1",
