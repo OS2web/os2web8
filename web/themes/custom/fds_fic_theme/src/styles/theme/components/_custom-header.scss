@@ -28,6 +28,54 @@ header {
 }
 
 .language-dropdown {
+  position: relative;
+
+  &--desktop {
+    display: none;
+
+    @media only screen and (min-width: 993px) {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    display: none;
+    margin: 20px 0;
+
+    @media only screen and (max-width: 992px) {
+      display: block;
+    }
+
+    .language-dropdown-toggle {
+      color: white;
+      font-size: 2rem;
+      font-weight: 600;
+
+      &:after {
+        color: white;
+      }
+    }
+
+    .language-dropdown-menu {
+      position: static;
+      width: auto;
+      align-items: flex-start;
+      background-color: transparent;
+      flex-direction: row;
+      gap: 15px;
+      margin-top: 10px;
+
+      li a {
+        color: white;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $background_color__primary;
+        }
+      }
+    }
+  }
+
   .language-dropdown-toggle {
     position: relative;
     background-color: transparent;

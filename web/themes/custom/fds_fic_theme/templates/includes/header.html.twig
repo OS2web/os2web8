@@ -67,6 +67,13 @@
               <div class="top-navigation-megamenu-mobile">
                 {{ page.header__top_navigation }}
               </div>
+              {% include '@fds_fic_theme/includes/language-picker.html.twig' with {
+                language_picker: language_picker,
+                language_links: language_links,
+                language_dropdown_label: language_dropdown_label,
+                variant: 'mobile',
+                menu_id: 'language-dropdown-menu--mobile',
+              } only %}
               <div class="megamenu-selvbetjening">
                 {{ page.header__selfservice }}
               </div>
@@ -78,28 +85,13 @@
 {#              <button class="visible-sm js-decrease-font-size">A-</button>#}
 {#              <button class="visible-sm js-increase-font-size">A+</button>#}
 {#            </div>#}
-          {#  <div class="language-dropdown">
-              <!-- The button displays the current language -->
-              <button
-                type="button"
-                class="language-dropdown-toggle"
-                aria-haspopup="true"
-                aria-expanded="false"
-                onclick="toggleLanguageDropdown(this, 'language-dropdown-menu')"
-              >
-                {{ language_dropdown_label }}
-              </button>
-
-              <!-- The hidden dropdown menu -->
-              <ul class="language-dropdown-menu" id="language-dropdown-menu" hidden>
-                <li>
-                  <a href="/da">DK</a>
-                </li>
-                <li>
-                  <a href="/en">EN</a>
-                </li>
-              </ul>
-            </div> #}
+            {% include '@fds_fic_theme/includes/language-picker.html.twig' with {
+              language_picker: language_picker,
+              language_links: language_links,
+              language_dropdown_label: language_dropdown_label,
+              variant: 'desktop',
+              menu_id: 'language-dropdown-menu--desktop',
+            } only %}
             <div class="search-btn-wrapper">
               <button id="nav-search" class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>

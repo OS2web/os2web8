@@ -1,0 +1,21 @@
+{% if language_picker and language_links %}
+  <div class="language-dropdown language-dropdown--{{ variant|default('desktop') }}">
+    <button
+      type="button"
+      class="language-dropdown-toggle"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="{{ 'Vælg sprog'|t }}"
+      onclick="toggleLanguageDropdown(this, '{{ menu_id }}')"
+    >
+      {{ language_dropdown_label }}
+    </button>
+    <ul class="language-dropdown-menu" id="{{ menu_id }}" hidden>
+      {% for link in language_links %}
+        <li>
+          <a href="{{ link.url }}" hreflang="{{ link.id }}" lang="{{ link.id }}"{% if link.active %} aria-current="true"{% endif %}>{{ link.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

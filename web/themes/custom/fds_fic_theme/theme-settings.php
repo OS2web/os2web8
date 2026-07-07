@@ -146,7 +146,18 @@ function fds_fic_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form
     '#description' => t('Teksten i knappen'),
   ];
 
+  $form['language'] = [
+    '#type' => 'details',
+    '#title' => t('Sprogvælger'),
+    '#group' => 'fds_base_theme',
+  ];
 
+  $form['language']['language_picker'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Vis sprogvælger i header'),
+    '#default_value' => theme_get_setting('language_picker'),
+    '#description' => t('Viser sprogvælgeren i headeren på desktop og i burger-menuen på mobil.'),
+  ];
 
 }
 
