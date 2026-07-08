@@ -156,7 +156,7 @@ function fds_fic_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form
     '#type' => 'checkbox',
     '#title' => t('Vis sprogvælger i header'),
     '#default_value' => theme_get_setting('language_picker'),
-    '#description' => t('Viser sprogvælgeren i headeren på desktop og i burger-menuen på mobil.'),
+    '#description' => t('Viser sprogvælgeren i headeren på alle skærmstørrelser.'),
   ];
 
 }
