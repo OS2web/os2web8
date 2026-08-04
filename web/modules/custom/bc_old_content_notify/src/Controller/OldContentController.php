@@ -22,7 +22,6 @@ class OldContentController {
 
     $nids = \Drupal::entityQuery('node')
       ->accessCheck(FALSE)
-      ->latestRevision()
       ->condition('status', 1)
       ->condition('type', 'os2web_page')
       ->condition('changed', $outdatePeriod, '<')
@@ -41,11 +40,16 @@ class OldContentController {
         continue;
       }
 
+      $target_moderation_state = $stateOutdated;
+
+      if ($node->get('moderation_state')->value === $target_moderation_state) {
+        continue;
+      }
+
       $node->setNewRevision(TRUE);
       $node->setRevisionTranslationAffected(TRUE);
       $node->isDefaultRevision(TRUE);
-      $node->set('moderation_state', $stateOutdated);
-
+      $node->set('moderation_state', $target_moderation_state);
       $node->save();
     }
   }
@@ -100,7 +104,6 @@ class OldContentController {
     $outdated = [];
 
     $nids = \Drupal::entityQuery('node')
-      ->latestRevision()
       ->accessCheck(FALSE)
       ->condition('type', 'os2web_page')
       ->addTag('bc_old_content_outdated_state')
@@ -140,12 +143,12 @@ class OldContentController {
 
                 $outdated[$user->id()]['outdated'][] = [
                   'title' => $node->label(),
-                  'link' => $node->toUrl()->setAbsolute(TRUE)->toString(),
-                  'author' => $node->getOwner()->label(),
-                  'group' => !$node->get('field_indholdsgruppe')->isEmpty()
-                    ? $node->get('field_indholdsgruppe')->entity->label()
-                    : '',
-                  'html' => '
+      'link' => $node->toUrl()->setAbsolute(TRUE)->toString(),
+        'author' => $node->getOwner()->label(),
+        'group' => !$node->get('field_indholdsgruppe')->isEmpty()
+            ? $node->get('field_indholdsgruppe')->entity->label()
+        : '',
+             'html' => '
             	    <tr style="border-bottom:1px solid #ddd;">
               	      <td style="padding:6px;">
                         <a href="' . $node->toUrl()->setAbsolute(TRUE)->toString() . '" target="_blank">
@@ -157,10 +160,10 @@ class OldContentController {
                       </td>
                       <td style="padding:6px;">
                         ' . (
-                    !$node->get('field_indholdsgruppe')->isEmpty()
-                      ? $node->get('field_indholdsgruppe')->entity->label()
-                      : '-'
-                    ) . '
+                          !$node->get('field_indholdsgruppe')->isEmpty()
+                            ? $node->get('field_indholdsgruppe')->entity->label()
+                            : '-'
+                        ) . '
                       </td>
                    </tr>',
                 ];
@@ -217,14 +220,14 @@ class OldContentController {
           $body .= '<ul>';
 
           foreach ($user['outdated'] as $page) {
-            $body .= '<li>';
-            $body .= '<a href="' . $page['link'] . '" target="_blank">' . $page['title'] . '</a>';
-            $body .= ' — Forfatter: ' . $page['author'];
+      $body .= '<li>';
+      $body .= '<a href="' . $page['link'] . '" target="_blank">' . $page['title'] . '</a>';
+      $body .= ' — Forfatter: ' . $page['author'];
 
-            if (!empty($page['group'])) {
-              $body .= ' — Indholdsgruppe: ' . $page['group'];
-            }
-          }
+      if (!empty($page['group'])) {
+        $body .= ' — Indholdsgruppe: ' . $page['group'];
+      }
+    }
 
           $body .= '</ul>';
         }
