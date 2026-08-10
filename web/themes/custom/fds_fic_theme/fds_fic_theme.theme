@@ -12,13 +12,6 @@ use Drupal\file\Entity\File;
 use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
- * Implements hook_page_attachments().
- */
-function fds_fic_theme_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'fds_fic_theme/silktide';
-}
-
-/**
  * Implements hook_theme_suggestions_page().
  */
 function fds_fic_theme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
