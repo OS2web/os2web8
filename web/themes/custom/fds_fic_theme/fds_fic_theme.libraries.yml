@@ -44,3 +44,15 @@ node_modal:
   dependencies:
     - core/drupal
     - core/once
+
+silktide:
+  version: 1.x
+  header: true
+  js:
+    'https://analytics.silktide.com/c8ab3924301499da17fb85fd78de58fd.js':
+      type: external
+      minified: true
+      preprocess: false
+      attributes:
+        defer: true
+    js/silktide-init.js: { preprocess: false }
