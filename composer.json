@@ -51,9 +51,9 @@
         "drupal/content_access": "^2.1@RC",
         "drupal/content_moderation_notifications": "^3.6",
         "drupal/cookieinformation": "^2.2",
-        "drupal/core-composer-scaffold": "11.3.12",
-        "drupal/core-project-message": "11.3.12",
-        "drupal/core-recommended": "11.3.12",
+        "drupal/core-composer-scaffold": "11.4.5",
+        "drupal/core-project-message": "11.4.5",
+        "drupal/core-recommended": "11.4.5",
         "drupal/crop": "^2.4",
         "drupal/css_editor": "^2.0",
         "drupal/csv_importer": "^2.2",
@@ -173,17 +173,18 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
+            "phpstan/extension-installer": true,
             "simplesamlphp/composer-module-installer": true,
-            "drupal/console-extend-plugin": true,
-            "cweagans/composer-patches": true,
-            "zaporylie/composer-drupal-optimizations": true,
+            "simplesamlphp/composer-xmlprovider-installer": true,
+            "symfony/runtime": true,
             "wikimedia/composer-merge-plugin": true,
-            "simplesamlphp/composer-xmlprovider-installer": true
+            "zaporylie/composer-drupal-optimizations": true
         },
         "sort-packages": true,
         "policy": {
@@ -198,6 +199,9 @@
         "patches": {
             "drupal/core": {
                 "fix views pager offset": "https://www.drupal.org/files/issues/2024-03-06/mr-4707-vs-10.2.x.patch"
+            },
+            "drupal/search_api_synonym": {
+                "3542593 - Fix dependency on Drupal Console, pages crash when there's no Drupal Console in the project\n": "https://git.drupalcode.org/project/search_api_synonym/-/merge_requests/32.diff"
             }
         },
         "drupal-scaffold": {
