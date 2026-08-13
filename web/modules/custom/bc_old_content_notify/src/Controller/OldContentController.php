@@ -177,6 +177,7 @@ class OldContentController {
     if (count($outdated) > 0) {
       $mailManager = \Drupal::service('plugin.manager.mail');
       $langcode = 'da';
+      $testRecipient = trim((string) $config->get('test_recipient'));
 
       $params = [
         'subject' => 'Månedligt overblik – forældede sider',
@@ -190,6 +191,8 @@ class OldContentController {
       $overview_link = \Drupal::request()->getSchemeAndHttpHost() . '/admin/content/foraeldede-sider';
 
       foreach ($outdated as $user) {
+        $recipient = $testRecipient !== '' ? $testRecipient : $user['email'];
+
         $body = '';
 
         $body .= '<p>Kære webredaktør</p>';
@@ -233,12 +236,19 @@ class OldContentController {
         }
 
 
+        if ($testRecipient !== '') {
+          $body = '<p><strong>TEST – oprindelig modtager: '
+            . htmlspecialchars($user['email'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')
+            . '</strong></p>' . $body;
+          $params['subject'] = '[TEST] Månedligt overblik – forældede sider';
+        }
+
         $params['body'] = $body;
 
         $result = $mailManager->mail(
           'bc_old_content_notify',
           'old_article',
-          $user['email'],
+          $recipient,
           $langcode,
           $params,
           null,
@@ -246,14 +256,15 @@ class OldContentController {
         );
 
         if ($result['result'] !== true) {
-          \Drupal::logger('bc_old_content_notify')->notice('old content email could not be sent to ' . $user['email']);
+          \Drupal::logger('bc_old_content_notify')->notice('old content email could not be sent to ' . $recipient);
         }
         else {
-          \Drupal::logger('bc_old_content_notify')->notice('old content email is sent to ' . $user['email']);
+          \Drupal::logger('bc_old_content_notify')->notice('old content email is sent to ' . $recipient);
         }
 
-        // stan@bellcom.dk 22/12/2025 - stop after the first email.
-        return;
+        if ($testRecipient !== '') {
+          break;
+        }
       }
     }
   }
