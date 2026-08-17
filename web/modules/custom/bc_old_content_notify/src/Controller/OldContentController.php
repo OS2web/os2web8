@@ -187,8 +187,14 @@ class OldContentController {
         ],
       ];
 
-      // Tilpas dette link, hvis "Forældede sider"-overblikket har en anden URL.
-      $overview_link = \Drupal::request()->getSchemeAndHttpHost() . '/admin/content/foraeldede-sider';
+      $overview_link = \Drupal\Core\Url::fromRoute(
+        'view.moderated_content.moderated_content',
+        [],
+        [
+          'absolute' => TRUE,
+          'language' => \Drupal::languageManager()->getDefaultLanguage(),
+        ]
+      )->toString();
 
       foreach ($outdated as $user) {
         $recipient = $testRecipient !== '' ? $testRecipient : $user['email'];
