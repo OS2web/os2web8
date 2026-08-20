@@ -4266,7 +4266,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
-                "reference": "06d0a2fcd74f397b9d893345008a617e478eb765"
+                "reference": "8fb5e79afe109763836cfdfd9aac7ec02e731785"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11.0"
@@ -4281,8 +4281,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "2.2.4+2-dev",
-                    "datestamp": "1723046148",
+                    "version": "2.2.5+1-dev",
+                    "datestamp": "1744703551",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4295,11 +4295,11 @@
             ],
             "authors": [
                 {
-                    "name": "DuaelFr",
+                    "name": "duaelfr",
                     "homepage": "https://www.drupal.org/user/931394"
                 },
                 {
-                    "name": "VladimirAus",
+                    "name": "vladimiraus",
                     "homepage": "https://www.drupal.org/user/673120"
                 }
             ],
