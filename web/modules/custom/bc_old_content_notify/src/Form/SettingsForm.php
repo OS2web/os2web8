@@ -51,6 +51,13 @@ class SettingsForm extends ConfigFormBase
       '#description' => $this->t('The number of days since the last edit date before the content is considered out of date.'),
     );
 
+    $form['form']['test_recipient'] = array(
+      '#type' => 'email',
+      '#title' => $this->t('Test recipient'),
+      '#default_value' => ($config->get('test_recipient') ?? ''),
+      '#description' => $this->t('If set, notifications are redirected to this address and only one test email is sent per run. Leave empty for normal delivery.'),
+    );
+
     return parent::buildForm($form, $form_state);
 
   }

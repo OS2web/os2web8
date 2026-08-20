@@ -22,7 +22,6 @@ class OldContentController {
 
     $nids = \Drupal::entityQuery('node')
       ->accessCheck(FALSE)
-      ->latestRevision()
       ->condition('status', 1)
       ->condition('type', 'os2web_page')
       ->condition('changed', $outdatePeriod, '<')
@@ -41,11 +40,16 @@ class OldContentController {
         continue;
       }
 
+      $target_moderation_state = $stateOutdated;
+
+      if ($node->get('moderation_state')->value === $target_moderation_state) {
+        continue;
+      }
+
       $node->setNewRevision(TRUE);
       $node->setRevisionTranslationAffected(TRUE);
       $node->isDefaultRevision(TRUE);
-      $node->set('moderation_state', $stateOutdated);
-
+      $node->set('moderation_state', $target_moderation_state);
       $node->save();
     }
   }
@@ -100,7 +104,6 @@ class OldContentController {
     $outdated = [];
 
     $nids = \Drupal::entityQuery('node')
-      ->latestRevision()
       ->accessCheck(FALSE)
       ->condition('type', 'os2web_page')
       ->addTag('bc_old_content_outdated_state')
@@ -140,12 +143,12 @@ class OldContentController {
 
                 $outdated[$user->id()]['outdated'][] = [
                   'title' => $node->label(),
-                  'link' => $node->toUrl()->setAbsolute(TRUE)->toString(),
-                  'author' => $node->getOwner()->label(),
-                  'group' => !$node->get('field_indholdsgruppe')->isEmpty()
-                    ? $node->get('field_indholdsgruppe')->entity->label()
-                    : '',
-                  'html' => '
+      'link' => $node->toUrl()->setAbsolute(TRUE)->toString(),
+        'author' => $node->getOwner()->label(),
+        'group' => !$node->get('field_indholdsgruppe')->isEmpty()
+            ? $node->get('field_indholdsgruppe')->entity->label()
+        : '',
+             'html' => '
             	    <tr style="border-bottom:1px solid #ddd;">
               	      <td style="padding:6px;">
                         <a href="' . $node->toUrl()->setAbsolute(TRUE)->toString() . '" target="_blank">
@@ -157,10 +160,10 @@ class OldContentController {
                       </td>
                       <td style="padding:6px;">
                         ' . (
-                    !$node->get('field_indholdsgruppe')->isEmpty()
-                      ? $node->get('field_indholdsgruppe')->entity->label()
-                      : '-'
-                    ) . '
+                          !$node->get('field_indholdsgruppe')->isEmpty()
+                            ? $node->get('field_indholdsgruppe')->entity->label()
+                            : '-'
+                        ) . '
                       </td>
                    </tr>',
                 ];
@@ -174,6 +177,7 @@ class OldContentController {
     if (count($outdated) > 0) {
       $mailManager = \Drupal::service('plugin.manager.mail');
       $langcode = 'da';
+      $testRecipient = trim((string) $config->get('test_recipient'));
 
       $params = [
         'subject' => 'Månedligt overblik – forældede sider',
@@ -183,10 +187,18 @@ class OldContentController {
         ],
       ];
 
-      // Tilpas dette link, hvis "Forældede sider"-overblikket har en anden URL.
-      $overview_link = \Drupal::request()->getSchemeAndHttpHost() . '/admin/content/foraeldede-sider';
+      $overview_link = \Drupal\Core\Url::fromRoute(
+        'view.moderated_content.moderated_content',
+        [],
+        [
+          'absolute' => TRUE,
+          'language' => \Drupal::languageManager()->getDefaultLanguage(),
+        ]
+      )->toString();
 
       foreach ($outdated as $user) {
+        $recipient = $testRecipient !== '' ? $testRecipient : $user['email'];
+
         $body = '';
 
         $body .= '<p>Kære webredaktør</p>';
@@ -217,25 +229,32 @@ class OldContentController {
           $body .= '<ul>';
 
           foreach ($user['outdated'] as $page) {
-            $body .= '<li>';
-            $body .= '<a href="' . $page['link'] . '" target="_blank">' . $page['title'] . '</a>';
-            $body .= ' — Forfatter: ' . $page['author'];
+      $body .= '<li>';
+      $body .= '<a href="' . $page['link'] . '" target="_blank">' . $page['title'] . '</a>';
+      $body .= ' — Forfatter: ' . $page['author'];
 
-            if (!empty($page['group'])) {
-              $body .= ' — Indholdsgruppe: ' . $page['group'];
-            }
-          }
+      if (!empty($page['group'])) {
+        $body .= ' — Indholdsgruppe: ' . $page['group'];
+      }
+    }
 
           $body .= '</ul>';
         }
 
+
+        if ($testRecipient !== '') {
+          $body = '<p><strong>TEST – oprindelig modtager: '
+            . htmlspecialchars($user['email'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')
+            . '</strong></p>' . $body;
+          $params['subject'] = '[TEST] Månedligt overblik – forældede sider';
+        }
 
         $params['body'] = $body;
 
         $result = $mailManager->mail(
           'bc_old_content_notify',
           'old_article',
-          $user['email'],
+          $recipient,
           $langcode,
           $params,
           null,
@@ -243,14 +262,15 @@ class OldContentController {
         );
 
         if ($result['result'] !== true) {
-          \Drupal::logger('bc_old_content_notify')->notice('old content email could not be sent to ' . $user['email']);
+          \Drupal::logger('bc_old_content_notify')->notice('old content email could not be sent to ' . $recipient);
         }
         else {
-          \Drupal::logger('bc_old_content_notify')->notice('old content email is sent to ' . $user['email']);
+          \Drupal::logger('bc_old_content_notify')->notice('old content email is sent to ' . $recipient);
         }
 
-        // stan@bellcom.dk 22/12/2025 - stop after the first email.
-        return;
+        if ($testRecipient !== '') {
+          break;
+        }
       }
     }
   }
