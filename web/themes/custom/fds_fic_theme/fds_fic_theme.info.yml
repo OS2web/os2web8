@@ -48,7 +48,6 @@ libraries:
   - 'fds_fic_theme/javascripts'
   - 'fds_fic_theme/swiper'
   - 'fds_fic_theme/navigate_back'
-  - 'fds_fic_theme/silktide'
 
 libraries-override:
    fds_base_theme/javascripts:

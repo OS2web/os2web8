@@ -146,6 +146,19 @@ function fds_fic_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form
     '#description' => t('Teksten i knappen'),
   ];
 
+  $form['silktide'] = [
+    '#type' => 'details',
+    '#title' => t('Silktide Analytics'),
+    '#open' => TRUE,
+  ];
+  $form['silktide']['silktide_script_src'] = [
+    '#type' => 'textfield',
+    '#title' => t('Silktide script-URL'),
+    '#default_value' => theme_get_setting('silktide_script_src'),
+    '#description' => t('Indsæt URL fra Silktide, fx https://analytics.silktide.com/xxxxxxxx.js. Hvert site skal have sit eget script. Lad feltet være tomt for at slå tracking fra.'),
+    '#maxlength' => 255,
+  ];
+
   $form['language'] = [
     '#type' => 'details',
     '#title' => t('Sprogvælger'),
