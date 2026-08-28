@@ -14654,12 +14654,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hjemmeside.git",
-                "reference": "e3bda905fba0c97c02a1d52658114a998e0bcc12"
+                "reference": "6054dc2eca125c7d5960e319716522c44ce4e54f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/e3bda905fba0c97c02a1d52658114a998e0bcc12",
-                "reference": "e3bda905fba0c97c02a1d52658114a998e0bcc12",
+                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/6054dc2eca125c7d5960e319716522c44ce4e54f",
+                "reference": "6054dc2eca125c7d5960e319716522c44ce4e54f",
                 "shasum": ""
             },
             "require": {
@@ -14673,7 +14673,7 @@
                 "drupal/metatag": "^2.0",
                 "drupal/pathauto": "^1.5",
                 "drupal/redirect": "^1.9",
-                "drupal/save_edit": "^1.7",
+                "drupal/save_edit": "^1.7 || ^2.1",
                 "drupal/textfield_counter": "^2.3"
             },
             "type": "drupal-module",
@@ -14686,7 +14686,7 @@
                 "issues": "https://github.com/OS2web/os2web_hjemmeside/issues",
                 "source": "https://github.com/OS2web/os2web_hjemmeside/tree/drupal10"
             },
-            "time": "2026-04-14T14:00:32+00:00"
+            "time": "2026-08-28T11:53:16+00:00"
         },
         {
             "name": "os2web/os2web_kle",
