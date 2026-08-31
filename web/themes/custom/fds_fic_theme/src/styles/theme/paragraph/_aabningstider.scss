@@ -6,6 +6,19 @@
 // |
 
 .paragraph-50-50-wrapper.paragraph--type--aabningstider {
+  // Text color is set on spans in 50/50; set it on the list so borders follow.
+  .text-side-white .aabningstider-hours {
+    color: #fff;
+  }
+
+  .text-side-black .aabningstider-hours {
+    color: #000;
+  }
+
+  .text-side-gray .aabningstider-hours {
+    color: #b2b2b3;
+  }
+
   .aabningstider-hours {
     width: 100%;
 
@@ -26,7 +39,6 @@
       margin: 0;
       padding: 0.75rem 0;
       border-bottom: 1px solid currentColor;
-      opacity: 0.95;
 
       &:last-child {
         border-bottom: 0;

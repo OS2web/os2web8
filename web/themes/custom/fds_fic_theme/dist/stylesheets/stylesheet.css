@@ -23731,6 +23731,15 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
           align-items: center;
 }
 
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .text-side-white .aabningstider-hours {
+  color: #fff;
+}
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .text-side-black .aabningstider-hours {
+  color: #000;
+}
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .text-side-gray .aabningstider-hours {
+  color: #b2b2b3;
+}
 .paragraph-50-50-wrapper.paragraph--type--aabningstider .aabningstider-hours {
   width: 100%;
 }
@@ -23756,7 +23765,6 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   margin: 0;
   padding: 0.75rem 0;
   border-bottom: 1px solid currentColor;
-  opacity: 0.95;
 }
 .paragraph-50-50-wrapper.paragraph--type--aabningstider .aabningstider-hours .office-hours__item:last-child {
   border-bottom: 0;
