@@ -2,7 +2,7 @@
 // | Åbningstider paragraph
 // |--------------------------------------------------------------------------
 // |
-// | Reuses .paragraph-50-50-wrapper styling. Small tweaks for office hours.
+// | Reuses .paragraph-50-50-wrapper styling. Office hours list layout.
 // |
 
 .paragraph-50-50-wrapper.paragraph--type--aabningstider {
@@ -19,9 +19,38 @@
 
     .office-hours__item {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1rem;
-      margin-bottom: 0.5rem;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      width: 100%;
+      margin: 0;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid currentColor;
+      opacity: 0.95;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      // Office Hours inserts empty <span><br></span> for line breaks — hide them.
+      > span:not(.office-hours__item-label):not(.office-hours__item-slots):not(.office-hours__item-comments) {
+        display: none;
+      }
+    }
+
+    .office-hours__item-label {
+      flex: 0 0 auto;
+      width: auto !important; // Override inline width from Office Hours formatter
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+    }
+
+    .office-hours__item-slots {
+      flex: 0 0 auto;
+      margin-left: auto;
+      text-align: right;
+      white-space: nowrap;
     }
   }
 }

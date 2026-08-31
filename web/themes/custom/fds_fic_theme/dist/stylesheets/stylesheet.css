@@ -23745,10 +23745,41 @@ a.entity-preview--os2web-registration, a.entity-preview--os2web-registration:hov
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.95;
+}
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .aabningstider-hours .office-hours__item:last-child {
+  border-bottom: 0;
+}
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .aabningstider-hours .office-hours__item > span:not(.office-hours__item-label):not(.office-hours__item-slots):not(.office-hours__item-comments) {
+  display: none;
+}
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .aabningstider-hours .office-hours__item-label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: auto !important;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.paragraph-50-50-wrapper.paragraph--type--aabningstider .aabningstider-hours .office-hours__item-slots {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .events-slider {
