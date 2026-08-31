@@ -16,22 +16,26 @@ use Drupal\Core\Datetime\DrupalDateTime;
  */
 function fds_fic_theme_preprocess_html(array &$variables) {
   $src = trim((string) theme_get_setting('silktide_script_src'));
-  if ($src === '' || !preg_match('#^https://analytics\.silktide\.com/[a-zA-Z0-9]+\.js$#', $src)) {
-    return;
+  if ($src !== '' && preg_match('#^https://analytics\.silktide\.com/[a-zA-Z0-9]+\.js$#', $src)) {
+    $variables['#attached']['html_head'][] = [
+      [
+        '#type' => 'html_tag',
+        '#tag' => 'script',
+        '#attributes' => [
+          'src' => $src,
+          'defer' => TRUE,
+        ],
+      ],
+      'silktide_analytics',
+    ];
+    $variables['#attached']['library'][] = 'fds_fic_theme/silktide';
   }
 
-  $variables['#attached']['html_head'][] = [
-    [
-      '#type' => 'html_tag',
-      '#tag' => 'script',
-      '#attributes' => [
-        'src' => $src,
-        'defer' => TRUE,
-      ],
-    ],
-    'silktide_analytics',
-  ];
-  $variables['#attached']['library'][] = 'fds_fic_theme/silktide';
+  $pixel_id = trim((string) theme_get_setting('facebook_pixel_id'));
+  if ($pixel_id !== '' && preg_match('/^\d{10,20}$/', $pixel_id)) {
+    $variables['#attached']['drupalSettings']['fds_fic_theme']['facebookPixelId'] = $pixel_id;
+    $variables['#attached']['library'][] = 'fds_fic_theme/facebook_pixel';
+  }
 }
 
 /**

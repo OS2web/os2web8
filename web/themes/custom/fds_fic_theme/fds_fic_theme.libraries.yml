@@ -50,3 +50,11 @@ silktide:
   header: true
   js:
     js/silktide-init.js: { preprocess: false }
+
+facebook_pixel:
+  version: 1.x
+  header: true
+  js:
+    js/facebook-pixel-init.js: { preprocess: false }
+  dependencies:
+    - core/drupalSettings

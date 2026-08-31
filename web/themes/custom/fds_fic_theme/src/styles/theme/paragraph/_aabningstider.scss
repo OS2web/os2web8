@@ -1,0 +1,27 @@
+// |--------------------------------------------------------------------------
+// | Åbningstider paragraph
+// |--------------------------------------------------------------------------
+// |
+// | Reuses .paragraph-50-50-wrapper styling. Small tweaks for office hours.
+// |
+
+.paragraph-50-50-wrapper.paragraph--type--aabningstider {
+  .aabningstider-hours {
+    width: 100%;
+
+    .office-hours,
+    .office-hours__item,
+    .office-hours__item-label,
+    .office-hours__item-slots,
+    .office-hours__item-comments {
+      color: inherit;
+    }
+
+    .office-hours__item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

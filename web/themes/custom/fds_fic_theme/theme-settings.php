@@ -159,6 +159,19 @@ function fds_fic_theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form
     '#maxlength' => 255,
   ];
 
+  $form['facebook_pixel'] = [
+    '#type' => 'details',
+    '#title' => t('Facebook Pixel'),
+    '#open' => TRUE,
+  ];
+  $form['facebook_pixel']['facebook_pixel_id'] = [
+    '#type' => 'textfield',
+    '#title' => t('Facebook Pixel ID'),
+    '#default_value' => theme_get_setting('facebook_pixel_id'),
+    '#description' => t('Indsæt Pixel ID fra Meta Events Manager. Hvert site skal have sit eget ID. Pixel loades kun efter marketing-samtykke via Cookie Information. Lad feltet være tomt for at slå tracking fra.'),
+    '#maxlength' => 20,
+  ];
+
   $form['language'] = [
     '#type' => 'details',
     '#title' => t('Sprogvælger'),
