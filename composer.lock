@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c626781b172a8fb5c88648814e9243d6",
+    "content-hash": "f23dd55e46b6f8180173d8c12b6d935e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3206,20 +3206,20 @@
         },
         {
             "name": "drupal/content_moderation_notifications",
-            "version": "3.6.0",
+            "version": "3.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/content_moderation_notifications.git",
-                "reference": "8.x-3.6"
+                "reference": "8.x-3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "f475721b95de8d0520053d3101c35c48ea22f61c"
+                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.9.zip",
+                "reference": "8.x-3.9",
+                "shasum": "b29c6c76547a23b4ba78fa2f7986a862e869a9c4"
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^9 || ^10 || ^11"
             },
             "require-dev": {
                 "drupal/token": "^1.0"
@@ -3227,8 +3227,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1695836640",
+                    "version": "8.x-3.9",
+                    "datestamp": "1787765751",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3241,12 +3241,20 @@
             ],
             "authors": [
                 {
+                    "name": "bkosborne",
+                    "homepage": "https://www.drupal.org/user/788032"
+                },
+                {
                     "name": "jhedstrom",
                     "homepage": "https://www.drupal.org/user/208732"
                 },
                 {
-                    "name": "Rob Holmes",
+                    "name": "rob holmes",
                     "homepage": "https://www.drupal.org/user/1774034"
+                },
+                {
+                    "name": "tyapchyc",
+                    "homepage": "https://www.drupal.org/user/3351412"
                 }
             ],
             "description": "Manage notifications for content moderation transitions.",
@@ -9118,97 +9126,6 @@
             }
         },
         {
-            "name": "drupal/protect_form_flood_control",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/protect_form_flood_control.git",
-                "reference": "1.1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/protect_form_flood_control-1.1.1.zip",
-                "reference": "1.1.1",
-                "shasum": "582d36bbd324df16663cdc3dcb66696f501a7458"
-            },
-            "require": {
-                "drupal/core": "^9.1 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.1.1",
-                    "datestamp": "1786015594",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "flocondetoile",
-                    "homepage": "https://www.drupal.org/user/2006064"
-                }
-            ],
-            "description": "Provide flood control protection on any form.",
-            "homepage": "https://www.drupal.org/project/protect_form_flood_control",
-            "support": {
-                "source": "https://git.drupalcode.org/project/protect_form_flood_control",
-                "issues": "https://www.drupal.org/project/issues/protect_form_flood_control"
-            }
-        },
-        {
-            "name": "drupal/protect_views_flood_control",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/protect_views_flood_control.git",
-                "reference": "1.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/protect_views_flood_control-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "5125a1817ff32316c917caca65e528de2ccf3320"
-            },
-            "require": {
-                "drupal/core": "^10 || ^11",
-                "drupal/protect_form_flood_control": "^1.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1770889459",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "scott_euser",
-                    "homepage": "https://www.drupal.org/user/3267594"
-                }
-            ],
-            "description": "Protect Views Exposed Forms with Flood Control.",
-            "homepage": "https://www.drupal.org/project/protect_views_flood_control",
-            "support": {
-                "source": "https://git.drupalcode.org/project/protect_views_flood_control",
-                "issues": "https://www.drupal.org/project/issues/protect_views_flood_control"
-            }
-        },
-        {
             "name": "drupal/queue_mail",
             "version": "1.6.0",
             "source": {
@@ -14737,12 +14654,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OS2web/os2web_hjemmeside.git",
-                "reference": "e3bda905fba0c97c02a1d52658114a998e0bcc12"
+                "reference": "6054dc2eca125c7d5960e319716522c44ce4e54f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/e3bda905fba0c97c02a1d52658114a998e0bcc12",
-                "reference": "e3bda905fba0c97c02a1d52658114a998e0bcc12",
+                "url": "https://api.github.com/repos/OS2web/os2web_hjemmeside/zipball/6054dc2eca125c7d5960e319716522c44ce4e54f",
+                "reference": "6054dc2eca125c7d5960e319716522c44ce4e54f",
                 "shasum": ""
             },
             "require": {
@@ -14756,7 +14673,7 @@
                 "drupal/metatag": "^2.0",
                 "drupal/pathauto": "^1.5",
                 "drupal/redirect": "^1.9",
-                "drupal/save_edit": "^1.7",
+                "drupal/save_edit": "^1.7 || ^2.1",
                 "drupal/textfield_counter": "^2.3"
             },
             "type": "drupal-module",
@@ -14769,7 +14686,7 @@
                 "issues": "https://github.com/OS2web/os2web_hjemmeside/issues",
                 "source": "https://github.com/OS2web/os2web_hjemmeside/tree/drupal10"
             },
-            "time": "2026-04-14T14:00:32+00:00"
+            "time": "2026-08-28T11:53:16+00:00"
         },
         {
             "name": "os2web/os2web_kle",
