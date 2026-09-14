@@ -197,6 +197,9 @@
         "patches": {
             "drupal/core": {
                 "fix views pager offset": "https://www.drupal.org/files/issues/2024-03-06/mr-4707-vs-10.2.x.patch"
+            },
+            "drupal/scheduler_content_moderation_integration": {
+                "test": "https://www.drupal.org/files/issues/2026-02-18/default-state-conditional-fields.patch"
             }
         },
         "drupal-scaffold": {
