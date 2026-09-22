@@ -2,73 +2,72 @@
 
 namespace Drupal\fic_office_hours;
 
+use Drupal\office_hours\OfficeHoursDateHelper;
 use Drupal\office_hours\OfficeHoursSeason;
 use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItem;
 use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface;
 
 /**
- * Filters Office Hours items so only the active season or normal week is shown.
- *
- * Office Hours' POST_FORMAT event result is not applied by the module, so this
- * filter mutates the item list in PRE_FORMAT (the supported extension point).
+ * Filters Office Hours display rows to active season or normal weekdays.
  */
 class OfficeHoursSeasonDisplayFilter {
 
   /**
-   * Filters an Office Hours item list for display.
+   * Filters already formatted Office Hours rows for display.
    *
+   * @param array $office_hours
+   *   Formatted rows from Office Hours (keyed by day number).
    * @param \Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface $items
-   *   The office hours items (mutated in place).
+   *   The original field item list (used to resolve active season dates).
    * @param int $timestamp
-   *   Unix timestamp representing "now" for the formatter.
+   *   Unix timestamp representing "now".
+   *
+   * @return array
+   *   Filtered rows.
    */
-  public function filter(OfficeHoursItemListInterface $items, int $timestamp): void {
-    if ($items->isEmpty()) {
-      return;
+  public function filterFormattedRows(array $office_hours, OfficeHoursItemListInterface $items, int $timestamp): array {
+    if ($office_hours === []) {
+      return $office_hours;
     }
 
     $active_season_id = $this->resolveActiveSeasonId($items, $timestamp);
-    $deltas_to_remove = [];
+    $filtered = [];
 
-    foreach ($items as $delta => $item) {
-      if (!$item instanceof OfficeHoursItem) {
+    foreach ($office_hours as $key => $info) {
+      if (!is_array($info)) {
         continue;
       }
 
-      // Always keep exception days / headers.
-      if ($item->isExceptionDay() || $item->isExceptionHeader()) {
+      $day = $info['day'] ?? $key;
+
+      // Always keep exception days.
+      if (OfficeHoursDateHelper::isExceptionDay($day)) {
+        $filtered[$key] = $info;
         continue;
       }
 
-      $season_id = (int) $item->getSeasonId();
+      // Never show season headers (also avoids OH label bug for day % 100 == 9).
+      if (OfficeHoursDateHelper::isSeasonHeader($day)) {
+        continue;
+      }
+
+      $season_id = (int) OfficeHoursDateHelper::getSeasonId($day);
 
       if ($active_season_id) {
-        // Active season: keep that season's weekdays only (no season header,
-        // so the list looks like a normal week that has been replaced).
-        if ($season_id !== $active_season_id || $item->isSeasonHeader()) {
-          $deltas_to_remove[] = $delta;
+        if ($season_id === $active_season_id) {
+          $filtered[$key] = $info;
         }
       }
-      // No active season: keep normal weekdays, drop all seasonal rows.
-      elseif ($season_id !== 0) {
-        $deltas_to_remove[] = $delta;
+      elseif ($season_id === 0) {
+        $filtered[$key] = $info;
       }
     }
 
-    foreach (array_reverse($deltas_to_remove) as $delta) {
-      $items->removeItem($delta);
-    }
+    return $filtered;
   }
 
   /**
    * Resolves the season ID that should replace normal hours right now.
-   *
-   * If multiple seasons contain the current timestamp, the one with the latest
-   * start date wins.
-   *
-   * Intentionally avoids ItemList::getSeasons() here: that method caches season
-   * metadata on the list. Calling it before we remove items would leave stale
-   * seasons in the formatter after filtering.
    *
    * @param \Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface $items
    *   The office hours items.
@@ -87,7 +86,7 @@ class OfficeHoursSeasonDisplayFilter {
       }
 
       $season = new OfficeHoursSeason($item);
-      if (!$season->id() || !$season->isInRange($timestamp, $timestamp)) {
+      if (!$season->id() || !$this->isTimestampInSeason($season, $timestamp)) {
         continue;
       }
 
@@ -97,6 +96,48 @@ class OfficeHoursSeasonDisplayFilter {
     }
 
     return $selected ? (int) $selected->id() : 0;
+  }
+
+  /**
+   * Checks whether a timestamp falls on a calendar day inside the season.
+   *
+   * Uses the site timezone and inclusive start/end dates.
+   *
+   * @param \Drupal\office_hours\OfficeHoursSeason $season
+   *   The season.
+   * @param int $timestamp
+   *   Unix timestamp representing "now".
+   *
+   * @return bool
+   *   TRUE if the timestamp's local date is within the season.
+   */
+  protected function isTimestampInSeason(OfficeHoursSeason $season, int $timestamp): bool {
+    $from = (int) $season->getFromDate();
+    $to = (int) $season->getToDate();
+    if ($from <= 0 || $to <= 0) {
+      return FALSE;
+    }
+
+    try {
+      $timezone_name = \Drupal::config('system.date')->get('timezone.default') ?: date_default_timezone_get();
+      $timezone = new \DateTimeZone($timezone_name);
+
+      $today = (new \DateTimeImmutable('@' . $timestamp))
+        ->setTimezone($timezone)
+        ->setTime(0, 0, 0);
+      $start = (new \DateTimeImmutable('@' . $from))
+        ->setTimezone($timezone)
+        ->setTime(0, 0, 0);
+      $end = (new \DateTimeImmutable('@' . $to))
+        ->setTimezone($timezone)
+        ->setTime(0, 0, 0);
+
+      return $today >= $start && $today <= $end;
+    }
+    catch (\Exception $e) {
+      // Fall back to Office Hours' own range check.
+      return $season->isInRange($timestamp, $timestamp);
+    }
   }
 
 }

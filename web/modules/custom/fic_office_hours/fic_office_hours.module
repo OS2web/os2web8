@@ -6,7 +6,9 @@
  */
 
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Render\Element;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface;
 
 /**
  * Implements hook_help().
@@ -23,8 +25,8 @@ function fic_office_hours_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_preprocess_field().
  *
- * Seasons switch on calendar dates, so cache the field at most until midnight.
- * (hook_field_formatter_view_alter does not exist in Drupal 8+.)
+ * Filters formatted Office Hours rows before the field is rendered, and limits
+ * cache lifetime to midnight so season switches can take effect.
  */
 function fic_office_hours_preprocess_field(array &$variables) {
   $field_type = $variables['field_type'] ?? $variables['element']['#field_type'] ?? NULL;
@@ -32,31 +34,99 @@ function fic_office_hours_preprocess_field(array &$variables) {
     return;
   }
 
-  $seconds_until_midnight = _fic_office_hours_seconds_until_midnight();
-  if ($seconds_until_midnight === NULL) {
+  $items = $variables['element']['#items'] ?? NULL;
+  if (!$items instanceof OfficeHoursItemListInterface) {
     return;
   }
 
-  if (empty($variables['items']) || !is_array($variables['items'])) {
-    return;
-  }
+  /** @var \Drupal\fic_office_hours\OfficeHoursSeasonDisplayFilter $filter */
+  $filter = \Drupal::service('fic_office_hours.season_display_filter');
+  $timestamp = \Drupal::time()->getRequestTime();
 
-  foreach ($variables['items'] as &$item) {
-    if (empty($item['content']) || !is_array($item['content'])) {
-      continue;
+  // Filter each formatter child that still has raw #office_hours rows.
+  if (!empty($variables['items']) && is_array($variables['items'])) {
+    foreach ($variables['items'] as &$item) {
+      if (empty($item['content']) || !is_array($item['content'])) {
+        continue;
+      }
+      _fic_office_hours_filter_render_element($item['content'], $items, $filter, $timestamp);
     }
-    _fic_office_hours_apply_max_age($item['content'], $seconds_until_midnight);
+    unset($item);
   }
-  unset($item);
+
+  // Also walk the original element children (status/schema siblings etc.).
+  foreach (Element::children($variables['element']) as $key) {
+    if (isset($variables['element'][$key]) && is_array($variables['element'][$key])) {
+      _fic_office_hours_filter_render_element($variables['element'][$key], $items, $filter, $timestamp);
+    }
+  }
+
+  $seconds_until_midnight = _fic_office_hours_seconds_until_midnight();
+  if ($seconds_until_midnight !== NULL && !empty($variables['items']) && is_array($variables['items'])) {
+    foreach ($variables['items'] as &$item) {
+      if (!empty($item['content']) && is_array($item['content'])) {
+        _fic_office_hours_apply_max_age($item['content'], $seconds_until_midnight);
+      }
+    }
+    unset($item);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for office_hours.
+ *
+ * Runs before office_hours' own preprocess (via module_implements_alter) so
+ * Twig items are built from the filtered row list.
+ */
+function fic_office_hours_preprocess_office_hours(array &$variables) {
+  $items = $variables['office_hours_field'] ?? NULL;
+  if (!$items instanceof OfficeHoursItemListInterface) {
+    return;
+  }
+  if (empty($variables['office_hours']) || !is_array($variables['office_hours'])) {
+    return;
+  }
+
+  /** @var \Drupal\fic_office_hours\OfficeHoursSeasonDisplayFilter $filter */
+  $filter = \Drupal::service('fic_office_hours.season_display_filter');
+  $variables['office_hours'] = $filter->filterFormattedRows(
+    $variables['office_hours'],
+    $items,
+    \Drupal::time()->getRequestTime()
+  );
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function fic_office_hours_module_implements_alter(array &$implementations, $hook) {
+  if ($hook !== 'preprocess_office_hours' || !isset($implementations['fic_office_hours'])) {
+    return;
+  }
+
+  // Ensure we filter #office_hours before office_hours builds Twig items.
+  $group = $implementations['fic_office_hours'];
+  unset($implementations['fic_office_hours']);
+  $implementations = ['fic_office_hours' => $group] + $implementations;
+}
+
+/**
+ * Recursively filters Office Hours render elements.
+ */
+function _fic_office_hours_filter_render_element(array &$element, OfficeHoursItemListInterface $items, $filter, int $timestamp): void {
+  if (isset($element['#office_hours']) && is_array($element['#office_hours'])) {
+    $element['#office_hours'] = $filter->filterFormattedRows($element['#office_hours'], $items, $timestamp);
+  }
+
+  foreach (Element::children($element) as $key) {
+    if (isset($element[$key]) && is_array($element[$key])) {
+      _fic_office_hours_filter_render_element($element[$key], $items, $filter, $timestamp);
+    }
+  }
 }
 
 /**
  * Applies a max-age ceiling to a render array.
- *
- * @param array $element
- *   Render array (passed by reference).
- * @param int $max_age
- *   Maximum age in seconds.
  */
 function _fic_office_hours_apply_max_age(array &$element, int $max_age): void {
   $existing = $element['#cache']['max-age'] ?? Cache::PERMANENT;
@@ -69,9 +139,6 @@ function _fic_office_hours_apply_max_age(array &$element, int $max_age): void {
 
 /**
  * Returns seconds remaining until the next site-local midnight.
- *
- * @return int|null
- *   Seconds until midnight, or NULL if it cannot be determined.
  */
 function _fic_office_hours_seconds_until_midnight(): ?int {
   try {
