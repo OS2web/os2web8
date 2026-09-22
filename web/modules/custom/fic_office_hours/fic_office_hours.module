@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Shows active Office Hours seasons instead of the normal weekday schedule.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fic_office_hours_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.fic_office_hours':
+      $output = '<p>' . t('When an Office Hours season is active (today is within its date range), this module hides the normal weekday hours and shows only that season\'s hours. When no season is active, normal weekday hours are shown and inactive seasons are hidden.') . '</p>';
+      $output .= '<p>' . t('Exception days are always kept. Overlapping seasons: the season with the latest start date wins.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ *
+ * Seasons switch on calendar dates, so cache the field at most until midnight.
+ * (hook_field_formatter_view_alter does not exist in Drupal 8+.)
+ */
+function fic_office_hours_preprocess_field(array &$variables) {
+  $field_type = $variables['field_type'] ?? $variables['element']['#field_type'] ?? NULL;
+  if ($field_type !== 'office_hours') {
+    return;
+  }
+
+  $seconds_until_midnight = _fic_office_hours_seconds_until_midnight();
+  if ($seconds_until_midnight === NULL) {
+    return;
+  }
+
+  if (empty($variables['items']) || !is_array($variables['items'])) {
+    return;
+  }
+
+  foreach ($variables['items'] as &$item) {
+    if (empty($item['content']) || !is_array($item['content'])) {
+      continue;
+    }
+    _fic_office_hours_apply_max_age($item['content'], $seconds_until_midnight);
+  }
+  unset($item);
+}
+
+/**
+ * Applies a max-age ceiling to a render array.
+ *
+ * @param array $element
+ *   Render array (passed by reference).
+ * @param int $max_age
+ *   Maximum age in seconds.
+ */
+function _fic_office_hours_apply_max_age(array &$element, int $max_age): void {
+  $existing = $element['#cache']['max-age'] ?? Cache::PERMANENT;
+  if ($existing === Cache::PERMANENT) {
+    $element['#cache']['max-age'] = $max_age;
+    return;
+  }
+  $element['#cache']['max-age'] = min((int) $existing, $max_age);
+}
+
+/**
+ * Returns seconds remaining until the next site-local midnight.
+ *
+ * @return int|null
+ *   Seconds until midnight, or NULL if it cannot be determined.
+ */
+function _fic_office_hours_seconds_until_midnight(): ?int {
+  try {
+    $drupal_timezone = \Drupal::config('system.date')->get('timezone.default');
+    $timezone_name = $drupal_timezone ?: date_default_timezone_get();
+    $timezone = new \DateTimeZone($timezone_name);
+    $now = new \DateTimeImmutable('now', $timezone);
+    $midnight = $now->modify('tomorrow')->setTime(0, 0, 0);
+    $seconds = $midnight->getTimestamp() - $now->getTimestamp();
+    return $seconds > 0 ? $seconds : 1;
+  }
+  catch (\Exception $e) {
+    return NULL;
+  }
+}

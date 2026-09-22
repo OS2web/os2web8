@@ -1,0 +1,7 @@
+name: 'FIC Office Hours'
+type: module
+description: 'Shows active season opening hours instead of normal weekdays while a season is in effect.'
+package: FIC
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - office_hours:office_hours
