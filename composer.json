@@ -54,9 +54,9 @@
         "drupal/content_access": "^2.0",
         "drupal/content_moderation_notifications": "^3.6",
         "drupal/cookieinformation": "^2.2",
-        "drupal/core-composer-scaffold": "10.6.11",
-        "drupal/core-project-message": "10.6.11",
-        "drupal/core-recommended": "10.6.11",
+        "drupal/core-composer-scaffold": "10.6.17",
+        "drupal/core-project-message": "10.6.17",
+        "drupal/core-recommended": "10.6.17",
         "drupal/crop": "^2.4",
         "drupal/css_editor": "^2.0",
         "drupal/csv_importer": "^1.16",
@@ -118,7 +118,7 @@
         "drupal/rules": "4.0.x-dev@dev",
         "drupal/save_edit": "^1.8",
         "drupal/scheduler": "^2.1",
-        "drupal/scheduler_content_moderation_integration": "dev-2.x",
+        "drupal/scheduler_content_moderation_integration": "^3.0",
         "drupal/scroll_top_button": "^2.0",
         "drupal/search_api": "^1.34",
         "drupal/search_api_attachments": "^9.0",
@@ -198,8 +198,8 @@
             "drupal/core": {
                 "fix views pager offset": "https://www.drupal.org/files/issues/2024-03-06/mr-4707-vs-10.2.x.patch"
             },
-            "drupal/scheduler_content_moderation_integration" : {
-                "3312463 - Scheduler fails if publish_state or unpublish_state are empty": "https://www.drupal.org/files/issues/2024-01-29/scheduler-fails-if-publish-state-or-unpublish-state-are-empty-3312463-22.patch"
+            "drupal/scheduler_content_moderation_integration": {
+                "test": "https://www.drupal.org/files/issues/2026-02-18/default-state-conditional-fields.patch"
             }
         },
         "drupal-scaffold": {
