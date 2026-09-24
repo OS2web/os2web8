@@ -8,9 +8,77 @@ use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItem;
 use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface;
 
 /**
- * Filters Office Hours display rows to active season or normal weekdays.
+ * Filters Office Hours so only active-season or normal weekdays are shown.
+ *
+ * Strategy:
+ * - In PRE_FORMAT, strip inactive seasons and (when a season is active) remap
+ *   that season's weekdays onto normal day numbers, removing the season header.
+ *   That avoids Office Hours formatting past/season-header rows (WSOD / key 9).
+ * - filterFormattedRows() remains as a display safety net in preprocess.
  */
 class OfficeHoursSeasonDisplayFilter {
+
+  /**
+   * Prepares field items before Office Hours formats them.
+   *
+   * @param \Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface $items
+   *   The office hours items (mutated in place).
+   * @param int $timestamp
+   *   Unix timestamp representing "now".
+   */
+  public function prepareItemsForFormatting(OfficeHoursItemListInterface $items, int $timestamp): void {
+    if ($items->isEmpty()) {
+      return;
+    }
+
+    $active_season_id = $this->resolveActiveSeasonId($items, $timestamp);
+    $deltas_to_remove = [];
+
+    foreach ($items as $delta => $item) {
+      if (!$item instanceof OfficeHoursItem) {
+        continue;
+      }
+
+      if ($item->isExceptionDay() || $item->isExceptionHeader()) {
+        continue;
+      }
+
+      $season_id = (int) $item->getSeasonId();
+
+      if ($active_season_id) {
+        // Drop season headers entirely (OH cannot safely label day % 100 == 9).
+        if ($item->isSeasonHeader()) {
+          $deltas_to_remove[] = $delta;
+          continue;
+        }
+
+        if ($season_id === $active_season_id) {
+          // Promote active season slots to normal weekday numbers.
+          $weekday = (int) OfficeHoursDateHelper::getWeekday($item->day);
+          if ($weekday >= 0 && $weekday <= 6) {
+            $item->set('day', $weekday);
+          }
+          else {
+            $deltas_to_remove[] = $delta;
+          }
+          continue;
+        }
+
+        // Remove normal weekdays and other seasons while a season is active.
+        $deltas_to_remove[] = $delta;
+        continue;
+      }
+
+      // No active season: remove all seasonal rows; keep normal weekdays.
+      if ($season_id !== 0) {
+        $deltas_to_remove[] = $delta;
+      }
+    }
+
+    foreach (array_reverse($deltas_to_remove) as $delta) {
+      $items->removeItem($delta);
+    }
+  }
 
   /**
    * Filters already formatted Office Hours rows for display.
@@ -30,6 +98,8 @@ class OfficeHoursSeasonDisplayFilter {
       return $office_hours;
     }
 
+    // After prepareItemsForFormatting(), rows should already be correct.
+    // Still strip any leftover season headers / inactive season rows.
     $active_season_id = $this->resolveActiveSeasonId($items, $timestamp);
     $filtered = [];
 
@@ -40,25 +110,23 @@ class OfficeHoursSeasonDisplayFilter {
 
       $day = $info['day'] ?? $key;
 
-      // Always keep exception days.
       if (OfficeHoursDateHelper::isExceptionDay($day)) {
         $filtered[$key] = $info;
         continue;
       }
 
-      // Never show season headers (also avoids OH label bug for day % 100 == 9).
       if (OfficeHoursDateHelper::isSeasonHeader($day)) {
         continue;
       }
 
       $season_id = (int) OfficeHoursDateHelper::getSeasonId($day);
 
-      if ($active_season_id) {
-        if ($season_id === $active_season_id) {
-          $filtered[$key] = $info;
-        }
+      // Items were remapped to weekdays when a season is active, so season_id
+      // is 0 in that case. Keep weekday rows; drop any leftover seasonal rows.
+      if ($season_id === 0) {
+        $filtered[$key] = $info;
       }
-      elseif ($season_id === 0) {
+      elseif ($active_season_id && $season_id === $active_season_id) {
         $filtered[$key] = $info;
       }
     }
@@ -90,7 +158,7 @@ class OfficeHoursSeasonDisplayFilter {
         continue;
       }
 
-      if ($selected === NULL || $season->getFromDate() >= $selected->getFromDate()) {
+      if ($selected === NULL || (int) $season->getFromDate() >= (int) $selected->getFromDate()) {
         $selected = $season;
       }
     }
@@ -100,8 +168,6 @@ class OfficeHoursSeasonDisplayFilter {
 
   /**
    * Checks whether a timestamp falls on a calendar day inside the season.
-   *
-   * Uses the site timezone and inclusive start/end dates.
    *
    * @param \Drupal\office_hours\OfficeHoursSeason $season
    *   The season.
@@ -135,7 +201,6 @@ class OfficeHoursSeasonDisplayFilter {
       return $today >= $start && $today <= $end;
     }
     catch (\Exception $e) {
-      // Fall back to Office Hours' own range check.
       return $season->isInRange($timestamp, $timestamp);
     }
   }
