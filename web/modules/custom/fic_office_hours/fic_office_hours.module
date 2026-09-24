@@ -11,6 +11,18 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface;
 
 /**
+ * Implements hook_field_info_alter().
+ *
+ * Use our item list so season cleanup runs before Office Hours formats rows,
+ * without patching the contrib module.
+ */
+function fic_office_hours_field_info_alter(array &$info) {
+  if (isset($info['office_hours'])) {
+    $info['office_hours']['list_class'] = '\Drupal\fic_office_hours\Plugin\Field\FieldType\FicOfficeHoursItemList';
+  }
+}
+
+/**
  * Implements hook_help().
  */
 function fic_office_hours_help($route_name, RouteMatchInterface $route_match) {

@@ -11,9 +11,9 @@ use Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface;
  * Filters Office Hours so only active-season or normal weekdays are shown.
  *
  * Strategy:
- * - In PRE_FORMAT, strip inactive seasons and (when a season is active) remap
- *   that season's weekdays onto normal day numbers, removing the season header.
- *   That avoids Office Hours formatting past/season-header rows (WSOD / key 9).
+ * - Via custom list_class, strip inactive seasons and (when a season is
+ *   active) remap that season's weekdays onto normal day numbers, removing
+ *   the season header — before Office Hours formats rows.
  * - filterFormattedRows() remains as a display safety net in preprocess.
  */
 class OfficeHoursSeasonDisplayFilter {
@@ -132,6 +132,34 @@ class OfficeHoursSeasonDisplayFilter {
     }
 
     return $filtered;
+  }
+
+  /**
+   * Removes every seasonal item (headers + season weekdays).
+   *
+   * Used as a last-resort recovery when contrib formatting still throws.
+   *
+   * @param \Drupal\office_hours\Plugin\Field\FieldType\OfficeHoursItemListInterface $items
+   *   The office hours items (mutated in place).
+   */
+  public function stripAllSeasonItems(OfficeHoursItemListInterface $items): void {
+    $deltas_to_remove = [];
+
+    foreach ($items as $delta => $item) {
+      if (!$item instanceof OfficeHoursItem) {
+        continue;
+      }
+      if ($item->isExceptionDay() || $item->isExceptionHeader()) {
+        continue;
+      }
+      if ((int) $item->getSeasonId() !== 0 || $item->isSeasonHeader()) {
+        $deltas_to_remove[] = $delta;
+      }
+    }
+
+    foreach (array_reverse($deltas_to_remove) as $delta) {
+      $items->removeItem($delta);
+    }
   }
 
   /**
