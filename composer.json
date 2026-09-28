@@ -44,6 +44,7 @@
         "drupal/better_exposed_filters": "^7.0",
         "drupal/checklistapi": "^2.1",
         "drupal/chosen": "^4.0",
+        "drupal/ckeditor5_bookmark": "^1.0",
         "drupal/ckeditor_iframe": "^3.0@alpha",
         "drupal/classy": "^2.0",
         "drupal/color": "^2.0@alpha",
