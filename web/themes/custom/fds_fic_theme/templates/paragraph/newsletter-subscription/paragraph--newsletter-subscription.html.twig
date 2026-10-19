@@ -37,17 +37,21 @@
         </div>
       {% endif %}
 
-      <form class="nyhedsbrev-form" action="https://fredericia.uxmail.io/handlers/post/" method="post">
-        <input type="hidden" name="action" value="subscribe">
-        <input type="hidden" name="lists" value="85204">
-        <input type="hidden" name="success_url" value="/succes-nyhedsbrev">
-        <input type="hidden" name="failure_url" value="/fejl-nyhedsbrev">
-        <input type="hidden" name="optin_scheme" value="double">
+      <form class="nyhedsbrev-form" id="page-form" method="post" action="https://app.ubivox.com/subscribe/5611/578" role="form">
+        <input type="hidden" name="accept_terms" value="true">
 
         <div class="newsletter-subscription__form-wrapper">
           <div class="newsletter-subscription__input">
-            <label for="email_address_id" class="visually-hidden">E-mail adresse</label>
-            <input type="text" name="email_address" id="email_address_id" placeholder="Din e-mail">
+            <label for="field-email" class="visually-hidden">E-mail</label>
+            <input
+              id="field-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              value=""
+              placeholder="Din e-mail"
+              required
+            >
           </div>
 
           <div class="newsletter-subscription__submit">
