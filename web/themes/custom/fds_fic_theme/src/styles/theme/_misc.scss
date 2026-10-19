@@ -74,15 +74,26 @@ a {
         * {
           color: black;
         }
-  }
-
-  .newsletter-content-wrapper {
-    .newsletter-subscription__description {
-      * {
-        color: black;
       }
-    }
-  }
+
+      .newsletter-content-wrapper {
+        .newsletter-subscription__description {
+          * {
+            color: black;
+          }
+        }
+
+        .newsletter-subscription__input {
+          input {
+            color: #000;
+            background-color: #fff;
+
+            &::placeholder {
+              color: #666;
+            }
+          }
+        }
+      }
     }
   }
 }

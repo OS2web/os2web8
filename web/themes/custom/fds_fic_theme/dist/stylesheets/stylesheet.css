@@ -19833,6 +19833,23 @@ ul.related-links a:hover {
   border-radius: 4px;
   font-size: 1.5rem;
   height: 45px;
+  color: #000;
+  background-color: #fff;
+}
+.newsletter-subscription__input input::-webkit-input-placeholder {
+  color: #666;
+}
+.newsletter-subscription__input input::-moz-placeholder {
+  color: #666;
+}
+.newsletter-subscription__input input:-ms-input-placeholder {
+  color: #666;
+}
+.newsletter-subscription__input input::-ms-input-placeholder {
+  color: #666;
+}
+.newsletter-subscription__input input::placeholder {
+  color: #666;
 }
 .newsletter-subscription__input input:focus {
   outline: none;
@@ -24165,6 +24182,25 @@ a {
 }
 .entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__description * {
   color: black;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__input input {
+  color: #000;
+  background-color: #fff;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__input input::-webkit-input-placeholder {
+  color: #666;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__input input::-moz-placeholder {
+  color: #666;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__input input:-ms-input-placeholder {
+  color: #666;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__input input::-ms-input-placeholder {
+  color: #666;
+}
+.entity-default--os2web-wrapper.background-color--tertiary .paragraph--type--newsletter-subscription .newsletter-subscription__container .newsletter-content-wrapper .newsletter-subscription__input input::placeholder {
+  color: #666;
 }
 
 .entity-default--os2web-wrapper.background-color--quaternary {
