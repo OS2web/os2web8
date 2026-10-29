@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85b1ebdda444f3c6d1b8cbc1a688ad81",
+    "content-hash": "2d0e53f3b03659f87ae98619135e5fdc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3602,29 +3602,31 @@
         },
         {
             "name": "drupal/easy_breadcrumb",
-            "version": "2.0.10",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/easy_breadcrumb.git",
-                "reference": "2.0.10"
+                "reference": "2.0.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-2.0.10.zip",
-                "reference": "2.0.10",
-                "shasum": "a55c793c1f59be1a4866972998b50ced21bfbcb0"
+                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-2.0.11.zip",
+                "reference": "2.0.11",
+                "shasum": "02ff0687f1d6d94238d3e47fdb6cb240fecf2626"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10 || ^11"
             },
             "require-dev": {
+                "drupal/cva": "^1",
+                "drupal/mercury": "^1.0.5",
                 "drush/drush": "^13"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.10",
-                    "datestamp": "1787942208",
+                    "version": "2.0.11",
+                    "datestamp": "1791390966",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4953,17 +4955,17 @@
         },
         {
             "name": "drupal/field_permissions",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_permissions.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_permissions-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "f8bf0c89dc795e1c4eee44a1c692a142dbeeaca8"
+                "url": "https://ftp.drupal.org/files/projects/field_permissions-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "7ae3733593b4ffaee5430a528d2ee8a4256abfe5"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -4971,8 +4973,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1768131948",
+                    "version": "8.x-1.6",
+                    "datestamp": "1793215525",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9932,49 +9934,37 @@
         },
         {
             "name": "drupal/stage_file_proxy",
-            "version": "dev-3.0.x",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
-                "reference": "bc70de60832a9976cfab0c6e7ec299da668c85bc"
+                "reference": "4.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "eeec55fa886fb579fcf980ea7f8c372f6c41def5"
             },
             "require": {
-                "drupal/core": "^10 || ^11",
-                "php": ">=8.1"
-            },
-            "conflict": {
-                "drush/drush": "<12"
+                "drupal/core": "^11.3 || ^12.0"
             },
             "require-dev": {
-                "drupal/coder": "^8.3",
-                "drush/drush": ">=12"
+                "drupal/imageapi_optimize_webp": "*",
+                "drush/drush": "*"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.0.x": "3.0.x-dev"
-                },
                 "drupal": {
-                    "version": "3.0.0-alpha2+5-dev",
-                    "datestamp": "1744733693",
+                    "version": "4.0.1",
+                    "datestamp": "1793215482",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
-            "scripts": {
-                "phpcs": [
-                    "vendor/bin/phpcs -p ."
-                ],
-                "phpcbf": [
-                    "vendor/bin/phpcbf -p ."
-                ],
-                "test": [
-                    "@phpcs"
-                ]
-            },
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -21668,7 +21658,6 @@
         "drupal/pathologic": 15,
         "drupal/rules": 20,
         "drupal/search_api_synonym": 10,
-        "drupal/stage_file_proxy": 20,
         "drupal/tamper": 15,
         "drupal/webform": 10,
         "os2core/os2core": 20,
