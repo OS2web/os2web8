@@ -1,0 +1,7 @@
+name: 'RK Muni'
+type: module
+description: 'Adding Muni chatbot to the website by adding provided JS inside header'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+version: "1.0"
+project: "rk_muni"

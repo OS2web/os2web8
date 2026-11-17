@@ -1,0 +1,7 @@
+rk_muni.settings:
+  path: '/admin/config/rk-muni'
+  defaults:
+    _form: '\Drupal\rk_muni\Form\RkMuniSettingsForm'
+    _title: 'RK Muni settings'
+  requirements:
+    _permission: 'administer site configuration'

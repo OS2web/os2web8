@@ -1,0 +1,6 @@
+rk_muni.settings:
+  title: 'RK Muni'
+  description: 'Settings for RK Muni'
+  parent: system.admin_config_system
+  route_name: rk_muni.settings
+  weight: 100

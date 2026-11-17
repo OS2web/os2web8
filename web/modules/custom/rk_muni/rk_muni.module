@@ -1,0 +1,40 @@
+<?php
+
+
+/**
+ * @file
+ * Primary module hooks for RK Muni module.
+ */
+
+use Drupal\Core\Render\Markup;
+
+function rk_muni_page_attachments(array &$attachments) {
+
+
+  // Check if on admin page. if yes, then dont apply the chatbot
+  $isAdminRoute = \Drupal::service('router.admin_context')->isAdminRoute();
+
+  if ($isAdminRoute) {
+    return;
+  }
+
+  // Getting settings code for this specific module
+  $settings = \Drupal::config('rk_muni.settings');
+  $muniIsEnabled = $settings->get('rk_muni_script_settings_form_enabled');
+  $muniScriptCode = $settings->get('rk_muni_script_settings_form_script_code');
+
+  // check that the user has provided the script header code
+  if ($muniIsEnabled && !empty($muniScriptCode)) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#type' => 'inline_template',
+        '#template' => '{{ code|raw }}',
+        '#context' => [
+          'code' => $muniScriptCode,
+        ],
+      ],
+      'rk_muni_script_code',
+    ];
+  }
+
+}
