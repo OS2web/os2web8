@@ -105,6 +105,9 @@
                       background-color: transparent;
                       border: 0;
                       width: 50px;
+                      color: transparent;
+                      text-indent: -9999px;
+                      overflow: hidden;
                     }
 
                     &:after {

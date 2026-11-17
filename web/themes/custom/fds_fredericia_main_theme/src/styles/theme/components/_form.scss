@@ -295,6 +295,14 @@ form#views-exposed-form-os2web-meetings-search-page-os2web-meeetings-search-page
   }
 }
 
+// Keep accessible submit value ("Søg") for AT/WAVE, but hide it visually.
+.search-input__button {
+  color: transparent !important;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
