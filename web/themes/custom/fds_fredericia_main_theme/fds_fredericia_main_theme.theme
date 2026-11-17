@@ -125,6 +125,31 @@ function fds_fredericia_main_theme_form_search_block_form_alter(&$form, FormStat
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter() for views_exposed_form.
+ *
+ * os2web_search removes the search label and empties the submit value for
+ * styling. Restore accessible names without changing the visual design.
+ */
+function fds_fredericia_main_theme_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if (($form['#id'] ?? '') !== 'views-exposed-form-os2web-search-os2web-search-page') {
+    return;
+  }
+
+  if (isset($form['sq'])) {
+    $label = t('Indtast søgeord');
+    $form['sq']['#title'] = $label;
+    $form['sq']['#title_display'] = 'invisible';
+    $form['sq']['#attributes']['aria-label'] = $label;
+  }
+
+  if (isset($form['actions']['submit'])) {
+    $submit_label = t('Søg');
+    $form['actions']['submit']['#value'] = $submit_label;
+    $form['actions']['submit']['#attributes']['aria-label'] = $submit_label;
+  }
+}
+
+/**
  * Implements hook_form_search_form_alter().
  */
 function fds_fredericia_main_theme_form_search_form_alter(&$form, FormStateInterface $form_state) {

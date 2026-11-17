@@ -16,7 +16,7 @@ javascripts:
     js/slideshow.js: {}
     js/accordion.js: {}
     dist/javascripts/app.js: {}
-    'https://cdhsign.dk/cdh_player.js': { type: external }
+    src/javascripts/a11y.js: {}
 
 navigate_back:
   version: 1.2
