@@ -12562,16 +12562,16 @@
         },
         {
             "name": "gettext/gettext",
-            "version": "v5.7.3",
+            "version": "v5.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-gettext/Gettext.git",
-                "reference": "95820f020e4f2f05e0bbaa5603e4c6ec3edc50f1"
+                "reference": "543d1a4f1000400e121c54b3d23142388ac4e6f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-gettext/Gettext/zipball/95820f020e4f2f05e0bbaa5603e4c6ec3edc50f1",
-                "reference": "95820f020e4f2f05e0bbaa5603e4c6ec3edc50f1",
+                "url": "https://api.github.com/repos/php-gettext/Gettext/zipball/543d1a4f1000400e121c54b3d23142388ac4e6f3",
+                "reference": "543d1a4f1000400e121c54b3d23142388ac4e6f3",
                 "shasum": ""
             },
             "require": {
@@ -12582,7 +12582,9 @@
                 "brick/varexporter": "^0.3.5",
                 "friendsofphp/php-cs-fixer": "^3.2",
                 "oscarotero/php-cs-fixer-config": "^2.0",
+                "phpstan/phpstan": "^1|^2",
                 "phpunit/phpunit": "^8.0|^9.0",
+                "rector/rector": "^1|^2",
                 "squizlabs/php_codesniffer": "^3.0"
             },
             "type": "library",
@@ -12616,7 +12618,7 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/php-gettext/Gettext/issues",
-                "source": "https://github.com/php-gettext/Gettext/tree/v5.7.3"
+                "source": "https://github.com/php-gettext/Gettext/tree/v5.7.4"
             },
             "funding": [
                 {
@@ -12632,7 +12634,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-12-01T10:18:08+00:00"
+            "time": "2026-11-20T19:26:10+00:00"
         },
         {
             "name": "gettext/languages",
@@ -12957,22 +12959,22 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.16.3",
+            "version": "7.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "c88a78082757dd5a0c44191651535259fcb6e605"
+                "reference": "f61ba5ea0a55032a55ddbb72cab7d307c1043654"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c88a78082757dd5a0c44191651535259fcb6e605",
-                "reference": "c88a78082757dd5a0c44191651535259fcb6e605",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f61ba5ea0a55032a55ddbb72cab7d307c1043654",
+                "reference": "f61ba5ea0a55032a55ddbb72cab7d307c1043654",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^2.6",
-                "guzzlehttp/psr7": "^2.13.4",
+                "guzzlehttp/promises": "^2.6.2",
+                "guzzlehttp/psr7": "^2.13.6",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0",
                 "symfony/deprecation-contracts": "^2.5 || ^3.0",
@@ -13065,7 +13067,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.16.3"
+                "source": "https://github.com/guzzle/guzzle/tree/7.17.0"
             },
             "funding": [
                 {
@@ -13081,20 +13083,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-17T16:23:09+00:00"
+            "time": "2026-11-22T16:49:11+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.6.0",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "3d88c829bd5f13d13847b39067dbf09a60af2154"
+                "reference": "72e93ed2b1f3d8c09d1460c950bd5726face7ccd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/3d88c829bd5f13d13847b39067dbf09a60af2154",
-                "reference": "3d88c829bd5f13d13847b39067dbf09a60af2154",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/72e93ed2b1f3d8c09d1460c950bd5726face7ccd",
+                "reference": "72e93ed2b1f3d8c09d1460c950bd5726face7ccd",
                 "shasum": ""
             },
             "require": {
@@ -13149,7 +13151,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.6.0"
+                "source": "https://github.com/guzzle/promises/tree/2.6.2"
             },
             "funding": [
                 {
@@ -13165,20 +13167,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-18T12:46:59+00:00"
+            "time": "2026-11-21T03:45:23+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.13.4",
+            "version": "2.13.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "ad5e3f872690e1151e1171de2963150fc45ea1e3"
+                "reference": "2bd3dccf56e99cdacf74b1ad5e06a08a5a7739f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/ad5e3f872690e1151e1171de2963150fc45ea1e3",
-                "reference": "ad5e3f872690e1151e1171de2963150fc45ea1e3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/2bd3dccf56e99cdacf74b1ad5e06a08a5a7739f2",
+                "reference": "2bd3dccf56e99cdacf74b1ad5e06a08a5a7739f2",
                 "shasum": ""
             },
             "require": {
@@ -13268,7 +13270,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.13.4"
+                "source": "https://github.com/guzzle/psr7/tree/2.13.6"
             },
             "funding": [
                 {
@@ -13284,7 +13286,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-17T16:15:51+00:00"
+            "time": "2026-11-21T23:48:40+00:00"
         },
         {
             "name": "halaxa/json-machine",
@@ -16725,16 +16727,16 @@
         },
         {
             "name": "simplesamlphp/assert",
-            "version": "v1.8.4",
+            "version": "v1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/assert.git",
-                "reference": "7250fb858b025032590078fc4cc52a4c1b634dbb"
+                "reference": "8195c96828e98dbb281a0a6520b6918b43935081"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/assert/zipball/7250fb858b025032590078fc4cc52a4c1b634dbb",
-                "reference": "7250fb858b025032590078fc4cc52a4c1b634dbb",
+                "url": "https://api.github.com/repos/simplesamlphp/assert/zipball/8195c96828e98dbb281a0a6520b6918b43935081",
+                "reference": "8195c96828e98dbb281a0a6520b6918b43935081",
                 "shasum": ""
             },
             "require": {
@@ -16742,9 +16744,9 @@
                 "ext-filter": "*",
                 "ext-pcre": "*",
                 "ext-spl": "*",
-                "guzzlehttp/psr7": "~2.7",
+                "guzzlehttp/psr7": "~2.8 || ^3.0",
                 "php": "^8.1",
-                "webmozart/assert": "~1.11.0"
+                "webmozart/assert": "~1.12"
             },
             "require-dev": {
                 "ext-intl": "*",
@@ -16778,9 +16780,9 @@
             "description": "A wrapper around webmozart/assert to make it useful beyond checking method arguments",
             "support": {
                 "issues": "https://github.com/simplesamlphp/assert/issues",
-                "source": "https://github.com/simplesamlphp/assert/tree/v1.8.4"
+                "source": "https://github.com/simplesamlphp/assert/tree/v1.8.5"
             },
-            "time": "2026-03-18T11:27:23+00:00"
+            "time": "2026-11-22T09:57:21+00:00"
         },
         {
             "name": "simplesamlphp/composer-module-installer",
@@ -16869,16 +16871,16 @@
         },
         {
             "name": "simplesamlphp/saml2",
-            "version": "v5.0.8",
+            "version": "v5.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "cbabcedf147929e31ffd7b4bbce4206c1693c67a"
+                "reference": "f398f8c20541c1aa27d6d263ae5537919c2b77ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/cbabcedf147929e31ffd7b4bbce4206c1693c67a",
-                "reference": "cbabcedf147929e31ffd7b4bbce4206c1693c67a",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/f398f8c20541c1aa27d6d263ae5537919c2b77ba",
+                "reference": "f398f8c20541c1aa27d6d263ae5537919c2b77ba",
                 "shasum": ""
             },
             "require": {
@@ -16895,9 +16897,9 @@
                 "psr/http-message": "~2.0",
                 "psr/log": "~2.3.1 || ~3.0.0",
                 "simplesamlphp/assert": "~1.8.1",
-                "simplesamlphp/xml-common": "~1.25.0",
-                "simplesamlphp/xml-security": "~1.13.8",
-                "simplesamlphp/xml-soap": "~1.7.0"
+                "simplesamlphp/xml-common": "~1.27",
+                "simplesamlphp/xml-security": "~1.13",
+                "simplesamlphp/xml-soap": "~1.7"
             },
             "require-dev": {
                 "beste/clock": "~3.0.0",
@@ -16934,22 +16936,22 @@
             "description": "SAML2 PHP library from SimpleSAMLphp",
             "support": {
                 "issues": "https://github.com/simplesamlphp/saml2/issues",
-                "source": "https://github.com/simplesamlphp/saml2/tree/v5.0.8"
+                "source": "https://github.com/simplesamlphp/saml2/tree/v5.0.13"
             },
-            "time": "2026-07-06T22:25:38+00:00"
+            "time": "2026-11-22T22:52:35+00:00"
         },
         {
             "name": "simplesamlphp/saml2-legacy",
-            "version": "v4.19.4",
+            "version": "v4.19.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2-legacy.git",
-                "reference": "9b41a0188aa288ddcc5f0bf6244bcebd0ed808b4"
+                "reference": "ecd178254fc8d76bbad89471b28b63966606a750"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2-legacy/zipball/9b41a0188aa288ddcc5f0bf6244bcebd0ed808b4",
-                "reference": "9b41a0188aa288ddcc5f0bf6244bcebd0ed808b4",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2-legacy/zipball/ecd178254fc8d76bbad89471b28b63966606a750",
+                "reference": "ecd178254fc8d76bbad89471b28b63966606a750",
                 "shasum": ""
             },
             "require": {
@@ -16994,22 +16996,22 @@
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
             "support": {
-                "source": "https://github.com/simplesamlphp/saml2-legacy/tree/v4.19.4"
+                "source": "https://github.com/simplesamlphp/saml2-legacy/tree/v4.19.9"
             },
-            "time": "2026-11-05T20:35:34+00:00"
+            "time": "2026-11-22T23:18:41+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp",
-            "version": "v2.4.9.3",
+            "version": "2.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp.git",
-                "reference": "6a6102a7fa4451ffeeb9f92b3a2989bb2d277018"
+                "reference": "995d423e15e1777b297cd64de4b9896813c19c40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/6a6102a7fa4451ffeeb9f92b3a2989bb2d277018",
-                "reference": "6a6102a7fa4451ffeeb9f92b3a2989bb2d277018",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/995d423e15e1777b297cd64de4b9896813c19c40",
+                "reference": "995d423e15e1777b297cd64de4b9896813c19c40",
                 "shasum": ""
             },
             "require": {
@@ -17128,7 +17130,7 @@
                 "issues": "https://github.com/simplesamlphp/simplesamlphp/issues",
                 "source": "https://github.com/simplesamlphp/simplesamlphp"
             },
-            "time": "2026-08-09T19:28:31+00:00"
+            "time": "2026-11-09T21:53:29+00:00"
         },
         {
             "name": "simplesamlphp/simplesamlphp-assets-base",
@@ -17168,16 +17170,16 @@
         },
         {
             "name": "simplesamlphp/xml-common",
-            "version": "v1.25.1",
+            "version": "v1.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/xml-common.git",
-                "reference": "999603aa521d91e17b562bb0b498513af80eb190"
+                "reference": "b50b2d57d0bc9f280beb666b51558dc172dbcf71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/xml-common/zipball/999603aa521d91e17b562bb0b498513af80eb190",
-                "reference": "999603aa521d91e17b562bb0b498513af80eb190",
+                "url": "https://api.github.com/repos/simplesamlphp/xml-common/zipball/b50b2d57d0bc9f280beb666b51558dc172dbcf71",
+                "reference": "b50b2d57d0bc9f280beb666b51558dc172dbcf71",
                 "shasum": ""
             },
             "require": {
@@ -17225,20 +17227,20 @@
                 "issues": "https://github.com/simplesamlphp/xml-common/issues",
                 "source": "https://github.com/simplesamlphp/xml-common"
             },
-            "time": "2025-06-29T13:05:44+00:00"
+            "time": "2026-11-16T21:42:40+00:00"
         },
         {
             "name": "simplesamlphp/xml-security",
-            "version": "v1.13.9",
+            "version": "v1.13.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/xml-security.git",
-                "reference": "16a5cf4a107e1b607337ff5af5fb4051fcc23ba0"
+                "reference": "58c98e412fe95489fab33e02483069f3bbe1606a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/xml-security/zipball/16a5cf4a107e1b607337ff5af5fb4051fcc23ba0",
-                "reference": "16a5cf4a107e1b607337ff5af5fb4051fcc23ba0",
+                "url": "https://api.github.com/repos/simplesamlphp/xml-security/zipball/58c98e412fe95489fab33e02483069f3bbe1606a",
+                "reference": "58c98e412fe95489fab33e02483069f3bbe1606a",
                 "shasum": ""
             },
             "require": {
@@ -17249,8 +17251,8 @@
                 "ext-pcre": "*",
                 "ext-spl": "*",
                 "php": "^8.1",
-                "simplesamlphp/assert": "~1.8.1",
-                "simplesamlphp/xml-common": "~1.25.0"
+                "simplesamlphp/assert": "~1.8",
+                "simplesamlphp/xml-common": "~1.27"
             },
             "require-dev": {
                 "simplesamlphp/simplesamlphp-test-framework": "~1.9.2"
@@ -17287,30 +17289,30 @@
             ],
             "support": {
                 "issues": "https://github.com/simplesamlphp/xml-security/issues",
-                "source": "https://github.com/simplesamlphp/xml-security/tree/v1.13.9"
+                "source": "https://github.com/simplesamlphp/xml-security/tree/v1.13.11"
             },
-            "time": "2026-03-13T15:41:00+00:00"
+            "time": "2026-11-21T19:48:44+00:00"
         },
         {
             "name": "simplesamlphp/xml-soap",
-            "version": "v1.7.1",
+            "version": "v1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/xml-soap.git",
-                "reference": "ca1ee4ea29c62fa66fc30d040b4013b4543f4f76"
+                "reference": "fcaf5ec6ac92a90a9253d220d041614cf91faed9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/xml-soap/zipball/ca1ee4ea29c62fa66fc30d040b4013b4543f4f76",
-                "reference": "ca1ee4ea29c62fa66fc30d040b4013b4543f4f76",
+                "url": "https://api.github.com/repos/simplesamlphp/xml-soap/zipball/fcaf5ec6ac92a90a9253d220d041614cf91faed9",
+                "reference": "fcaf5ec6ac92a90a9253d220d041614cf91faed9",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-pcre": "*",
                 "php": "^8.1",
-                "simplesamlphp/assert": "~1.8.1",
-                "simplesamlphp/xml-common": "~1.25.0"
+                "simplesamlphp/assert": "~1.8",
+                "simplesamlphp/xml-common": "~1.27"
             },
             "require-dev": {
                 "simplesamlphp/simplesamlphp-test-framework": "~1.9.2"
@@ -17339,9 +17341,9 @@
             "description": "SimpleSAMLphp library for XML SOAP",
             "support": {
                 "issues": "https://github.com/simplesamlphp/xml-soap/issues",
-                "source": "https://github.com/simplesamlphp/xml-soap/tree/v1.7.1"
+                "source": "https://github.com/simplesamlphp/xml-soap/tree/v1.7.2"
             },
-            "time": "2025-06-03T21:07:04+00:00"
+            "time": "2026-10-24T18:32:33+00:00"
         },
         {
             "name": "softcreatr/jsonpath",
@@ -21713,28 +21715,28 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.11.0",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
+                "reference": "9be6926d8b485f55b9229203f962b51ed377ba68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9be6926d8b485f55b9229203f962b51ed377ba68",
+                "reference": "9be6926d8b485f55b9229203f962b51ed377ba68",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
+                "ext-date": "*",
+                "ext-filter": "*",
                 "php": "^7.2 || ^8.0"
             },
-            "conflict": {
-                "phpstan/phpstan": "<0.12.20",
-                "vimeo/psalm": "<4.6.1 || 4.6.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5.13"
+            "suggest": {
+                "ext-intl": "",
+                "ext-simplexml": "",
+                "ext-spl": ""
             },
             "type": "library",
             "extra": {
@@ -21765,9 +21767,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
+                "source": "https://github.com/webmozarts/assert/tree/1.12.1"
             },
-            "time": "2022-06-03T18:03:27+00:00"
+            "time": "2025-10-29T15:56:20+00:00"
         },
         {
             "name": "webmozart/path-util",
